@@ -13,7 +13,7 @@ export const SUBJECTS=[
  {id:'arte',name:'Arte',icon:'◒',color:'#bf6b58',group:'Linguagens'},
  {id:'educacao-fisica',name:'Educação Física',icon:'↟',color:'#688843',group:'Linguagens'}
 ];
-export const NAV=[['home','◈','Minha jornada'],['train','▷','Treinar'],['cards','▱','Memorizar'],['errors','⊞','Cofre dos erros'],['map','⌘','Programa 2027'],['books','▤','Leituras'],['stats','↗','Evolução'],['favorites','☆','Favoritos']];
+export const NAV=[['home','◈','Minha jornada'],['train','▷','Treinar'],['cards','▱','Memorizar'],['errors','⊞','Cofre dos erros'],['map','⌘','Programa 2027'],['books','▤','Leituras'],['stats','↗','Evolução'],['favorites','☆','Favoritos'],['settings','⚙','Configurações']];
 export const DIFFICULTIES=['','Fácil','Média','Difícil','Muito difícil'];
 export const QUESTION_TYPES={choice:'Múltipla escolha',boolean:'Verdadeiro ou falso',numeric:'Resposta numérica',order:'Ordenação',match:'Associação',text:'Resposta curta'};
 export const CONFIDENCE={sure:'Tenho certeza',think:'Acho que sei',guess:'Estou chutando'};

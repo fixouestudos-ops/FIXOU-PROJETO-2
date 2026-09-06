@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const file='src/controller.js';
+let s=fs.readFileSync(file,'utf8');
+const change="document.addEventListener('change',event=>{\n const el=event.target;\n";
+const changeInsert="document.addEventListener('change',event=>{\n const el=event.target;\n if(el.dataset.setting){let value=el.type==='checkbox'?el.checked:el.value;if(el.dataset.setting==='dailyCount'&&value==='custom'){const asked=Number(window.prompt('Quantas questões por dia?',String(state.settings.dailyCustom||50)));if(!Number.isInteger(asked)||asked<5||asked>200)return;value=asked;}if(el.dataset.setting==='dailyCount'||el.dataset.setting==='dailyMinutes')value=Number(value);if(el.dataset.setting==='fontScale')value=Number(value);state.settings[el.dataset.setting]=value;if(el.dataset.setting==='dailyCount')state.settings.dailyCustom=value;applyPreferences();saveProgress();render();toast('Preferência salva.');return;}\n";
+if(!s.includes("if(el.dataset.setting)"))s=s.replace(change,changeInsert);
+const submit="const form=event.target;if(!['profile-form','onboarding-form','map-search-form','global-search-form'].includes(form.id))return;";
+const submitNew="const form=event.target;if(!['profile-form','onboarding-form','map-search-form','global-search-form','support-form'].includes(form.id))return;";
+s=s.replace(submit,submitNew);
+const marker=" if(form.id==='profile-form'||form.id==='onboarding-form')";
+const support=" if(form.id==='support-form'){const ticket={report_id:'sup-'+uid(),user_id:state.profile?.name||'local',nome:String(data.get('name')||''),email:String(data.get('email')||''),categoria:String(data.get('category')||''),assunto:String(data.get('subject')||''),mensagem:String(data.get('message')||''),status:'Aberto',created_at:new Date().toISOString()};try{const key='fixou:support:v1',items=JSON.parse(localStorage.getItem(key)||'[]');items.push(ticket);localStorage.setItem(key,JSON.stringify(items));}catch{}closeModal();toast('Obrigado! Recebemos sua mensagem.');return;}\n";
+if(!s.includes("form.id==='support-form'"))s=s.replace(marker,support+marker);
+fs.writeFileSync(file,s);
+console.log('Preferências e suporte conectados.');

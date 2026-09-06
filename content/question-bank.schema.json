@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fixou.local/schemas/question-bank.json",
+  "title": "FIXOU question bank",
+  "type": "object",
+  "required": ["version", "concepts", "questions"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "concepts": {"type": "array", "items": {"$ref": "#/$defs/concept"}},
+    "questions": {"type": "array", "items": {"$ref": "#/$defs/question"}}
+  },
+  "$defs": {
+    "concept": {
+      "type": "object",
+      "required": ["id", "discipline", "topic", "subtopic", "summary", "officialIds"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "discipline": {"type": "string", "minLength": 1},
+        "topic": {"type": "string", "minLength": 1},
+        "subtopic": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 20},
+        "officialIds": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": ["id", "conceptId", "difficulty", "type", "prompt", "explanation", "discipline", "topic", "subtopic", "source", "year", "officialIds"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "conceptId": {"type": "string", "minLength": 1},
+        "difficulty": {"type": "integer", "minimum": 1, "maximum": 4},
+        "type": {"enum": ["choice", "boolean", "numeric", "text", "order", "match"]},
+        "prompt": {"type": "string", "minLength": 20},
+        "explanation": {"type": "string", "minLength": 20},
+        "discipline": {"type": "string", "minLength": 1},
+        "topic": {"type": "string", "minLength": 1},
+        "subtopic": {"type": "string", "minLength": 1},
+        "source": {"type": "string", "minLength": 1},
+        "year": {"type": "integer", "minimum": 1900},
+        "officialIds": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "contentTrack": {"type": "string"},
+        "diagram": {"type": "object"}
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "questionSchema": "../question-bank.schema.json",
+  "targetQuestionsPerTopic": 100,
+  "plannedBatchSize": 20,
+  "deduplicationKey": "id",
+  "batches": [
+    {
+      "id": "core-338",
+      "file": "../bank.json",
+      "status": "active",
+      "questionCount": 338,
+      "scope": "Banco autoral atual, organizado por disciplina, tópico e subtópico"
+    }
+  ],
+  "plannedTracks": [
+    {"id": "biologia-foco", "target": 100, "status": "expansion-ready"},
+    {"id": "geometria-plana", "target": 100, "status": "expansion-ready"},
+    {"id": "fisica-foco", "target": 100, "status": "expansion-ready"},
+    {"id": "geomorfologia", "target": 100, "status": "expansion-ready"}
+  ]
+}

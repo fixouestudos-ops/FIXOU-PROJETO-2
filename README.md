@@ -1,6 +1,6 @@
-# FUVEST Mastery
+# FIXOU
 
-Aplicativo independente de estudo para o Vestibular FUVEST 2027. Primeira versão funcional, com conteúdo autoral e interface em português. Não é um produto oficial da FUVEST.
+Aplicativo independente de estudo para o Vestibular FUVEST 2027. A marca oficial do projeto é **FIXOU — estudo que fica**. O conteúdo é autoral e a plataforma não é um produto oficial da FUVEST.
 
 ## Abrir e estudar
 
@@ -26,10 +26,13 @@ Abra http://127.0.0.1:4187. Não há dependências para instalar. `npm test` exe
 - 50 flashcards, repetição espaçada, busca, favoritos, estatísticas semanais e mensais.
 - Mapa do programa oficial completo e fichas das nove leituras obrigatórias de 2027.
 - Salvamento automático local, retomada de quizzes, exportação e importação de backups.
+- Programa 2027 organizado em disciplina → tópico → subtópico, com contagem por trilha e atalho direto para treinar cada recorte.
+- Aba Configurações com tema claro/escuro/sistema, tamanho do texto, alto contraste, redução de movimento, metas de estudo e suporte.
+- Reporte de problema em cada questão; os reportes e chamados ficam registrados localmente até a conexão com um backend.
 
 ## Seu progresso
 
-O progresso fica **neste navegador, neste endereço**, usando a chave `fuvest-mastery:2027:v1`. Não há conta de estudante na nuvem nem sincronização entre dispositivos. Limpar os dados do navegador ou usar navegação anônima pode remover o progresso. O acesso privado do site, quando publicado, não sincroniza os estudos.
+O progresso fica **neste navegador, neste endereço**, usando a chave `fixou:2027:v1`. Versões antigas usando `fuvest-mastery:2027:v1` são migradas na primeira abertura. Não há conta de estudante na nuvem nem sincronização entre dispositivos. Limpar os dados do navegador ou usar navegação anônima pode remover o progresso. O acesso privado do site, quando publicado, não sincroniza os estudos.
 
 Use **Perfil → Exportar progresso** regularmente. Para mudar de computador, navegador ou endereço, exporte no antigo e importe no novo. A importação valida o arquivo e pede confirmação antes da substituição; mantém-se uma cópia local anterior para recuperação de corrupção. Se o navegador bloquear o armazenamento, uma mensagem orienta a exportar antes de sair.
 
@@ -72,10 +75,12 @@ O guia consultado informa 80 questões e cinco horas na primeira fase de 2027. R
 | `scripts/` | Servidor e build sem bibliotecas externas |
 | `tests/` | Testes automatizados de integridade e comportamento |
 
+O banco já possui um contrato em `content/question-bank.schema.json` e um manifesto de lotes em `content/question-batches/manifest.json`. Cada lote pode ser validado antes de entrar no catálogo; o validador confere IDs únicos, referências curriculares, metadados de vestibular/ano e a hierarquia disciplina → tópico → subtópico. O lote atual continua em `content/bank.json` para manter a distribuição pronta e compatível, enquanto novos lotes podem ser incorporados gradualmente sem despejar milhares de questões na interface.
+
 O código-fonte é modular. O único HTML de distribuição é gerado para facilitar a abertura e a hospedagem, sem transformar o código-fonte em um arquivo monolítico.
 
 ## Próximas etapas do plano original
 
 Após esta primeira versão: ampliar o banco e a revisão pedagógica; avaliação conceitual por IA com serviço seguro; Boss semanal; simulado completo de 80 questões sem feedback durante a prova; editor e avaliação de redação; exercícios da segunda fase; importação de materiais pessoais e eventual sincronização de dados. Esses modos não são simulados por botões sem função nesta entrega.
 
-Para hospedagem estática, publique o conteúdo de `dist/`. O aplicativo não necessita de servidor de API, chave de IA ou banco de dados remoto nesta etapa.
+Para hospedagem estática, publique o conteúdo de `dist/`. O aplicativo não necessita de servidor de API, chave de IA ou banco de dados remoto para estudar offline. Autenticação, sincronização entre dispositivos, fila compartilhada de reportes, painel administrativo e envio de chamados para a equipe ainda exigem um backend ou serviço externo; nesta etapa os dados são armazenados localmente e o e-mail `fixouestudos@gmail.com` continua disponível como canal de suporte.
