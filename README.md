@@ -17,7 +17,8 @@ Abra http://127.0.0.1:4187. Não há dependências para instalar. `npm test` exe
 ## O que está funcionando
 
 - Perfil, objetivo, meta diária, XP, níveis, dias consecutivos e conquistas.
-- 100 questões originais distribuídas por 13 disciplinas, 50 conceitos e duas situações diferentes por conceito.
+- 338 questões originais distribuídas por 13 disciplinas e 169 conceitos, com duas situações diferentes por conceito.
+- Trilhas ampliadas: 50 questões de Biologia nos focos pedidos; 84 de Geometria plana com diagramas visuais; 60 de Energia, dinâmica e trabalho; e 54 de Geomorfologia.
 - Múltipla escolha, verdadeiro ou falso, resposta numérica, ordenação, associação e resposta curta.
 - Confiança antes da resposta, explicações, domínio estimado por conceito e histórico.
 - Treino do Dia, quiz adaptativo, filtros, Relâmpago de 60 segundos e Sobrevivência com três vidas.
@@ -38,7 +39,7 @@ Quizzes salvam cada resposta e também o rascunho da questão em andamento. No R
 
 O domínio de 0 a 100 é uma **estimativa pedagógica**, não uma nota oficial, previsão de aprovação ou diagnóstico validado. Combina acertos, erros, confiança, dificuldade, tempo, desempenho recente, variedade e dias distintos. Uma única questão limita a estimativa a 35%; um único dia, a 55%; dois dias, a 80%. Chutes corretos não constroem domínio alto. Erros com certeza recebem maior prioridade nos momentos de recuperação.
 
-A seleção adaptativa tenta distribuir 40% de fraquezas, 30% de revisões, 20% de conceitos novos e 10% de retenção, com substituição quando um grupo não tem questões disponíveis. Prioriza outra variação do conceito e evita repetir um enunciado na mesma sessão. O banco inicial oferece apenas duas variações por conceito; expansão do banco melhorará essa diversidade.
+A seleção adaptativa tenta distribuir 40% de fraquezas, 30% de revisões, 20% de conceitos novos e 10% de retenção, com substituição quando um grupo não tem questões disponíveis. Prioriza outra variação do conceito e evita repetir um enunciado na mesma sessão. O banco mantém duas variações autorais por conceito e agora inclui evolução biológica, especiação, ecologia, interações, biomas, geometria plana, energia, dinâmica, trabalho e geomorfologia. Os diagramas geométricos são desenhados no próprio aplicativo.
 
 A agenda de memória é inspirada em repetição espaçada, com avaliações Esqueci, Difícil, Lembrei e Fácil: esquecimento retorna em 10 minutos; acertos consistentes aumentam os intervalos até 365 dias; chute correto retorna em até um dia. Praticar antes do vencimento não adia continuamente a revisão. XP de uma mesma questão correta não se repete no mesmo dia, e recompensas de cartões também têm limite diário.
 
@@ -48,7 +49,7 @@ Respostas curtas são corrigidas por respostas aceitas, com normalização de ac
 
 O mapa guarda 529 ocorrências de objetos de conhecimento (502 textos distintos), quatro orientações de redação e referências às páginas e habilidades. Repetições entre competências são preservadas nos dados. A trilha Literatura é uma organização pedagógica de objetos de Língua Portuguesa.
 
-O mapa cobre o programa; **as 100 questões cobrem uma seleção de 50 conceitos**, não todo o programa. A interface identifica objetos sem exercício. As fichas são sínteses autorais de estudo e não substituem a leitura integral dos livros.
+O mapa cobre o programa; **as 338 questões cobrem uma seleção de 169 conceitos**, não todo o programa. A interface identifica objetos sem exercício. As fichas são sínteses autorais de estudo e não substituem a leitura integral dos livros.
 
 - [Programa oficial FUVEST 2027](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf)
 - [Guia de Provas FUVEST 2027](https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf)

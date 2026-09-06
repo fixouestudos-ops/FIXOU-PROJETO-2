@@ -6,7 +6,8 @@ A retomada começou pela inspeção dos arquivos existentes, validação dos JSO
 
 15 testes de comportamento e integridade passam em `npm test`. Abrangem:
 
-- 100 IDs de questões únicos, 13 disciplinas, duas questões por conceito e referências existentes no mapa;
+- 338 IDs de questões únicos, 13 disciplinas, duas questões por conceito e referências existentes no mapa;
+- mínimos de conteúdo: 50 Biologia, 84 Geometria plana com diagramas, 60 Energia/dinâmica/trabalho e 54 Geomorfologia;
 - todos os formatos e respostas esperadas, alternativas distintas e explicações presentes;
 - perfil, exportação, importação, recuperação de cópia anterior e rejeição de backups incompletos;
 - XP, proteção contra repetição de recompensa, domínio, falso domínio, revisão e estatísticas;
@@ -14,7 +15,7 @@ A retomada começou pela inspeção dos arquivos existentes, validação dos JSO
 - intervalos de memória, antecipação após chute e preservação da recompensa diária do cartão;
 - sequência por dias de calendário, filtros, variações e prioridade de falso domínio;
 - três vidas, prazo do Relâmpago e finalização sem duplicar registros;
-- simulação de 100 respostas e reimportação do histórico completo.
+- simulação de todo o banco (338 respostas) e reimportação do histórico completo.
 
 O build passa pela análise sintática do JavaScript agrupado. Não há dependências externas de JavaScript para instalar.
 
@@ -45,7 +46,7 @@ Executados no navegador do aplicativo, usando tanto o código modular quanto `di
 | Celular | 390 × 844: home, menu, questões e mapa sem rolagem horizontal da página |
 | Console | Nenhum erro ou aviso de aplicação observado nos fluxos testados |
 
-Foram corrigidos: integração de menus e botões, build ausente, declaração inválida no layout de livros, perda de marcador de recompensa nas revisões, prioridade insuficiente de falso domínio, aceitação de backups estruturalmente incompletos e contraste de textos auxiliares. A versão de distribuição agrupa o conteúdo e não carrega arquivos JavaScript externos.
+Foram corrigidos: integração de menus e botões, build ausente, declaração inválida no layout de livros, perda de marcador de recompensa nas revisões, prioridade insuficiente de falso domínio, aceitação de backups estruturalmente incompletos, contraste de textos auxiliares e renderização visual de diagramas geométricos. A versão de distribuição agrupa o conteúdo e não carrega arquivos JavaScript externos.
 
 ## Limites desta validação
 

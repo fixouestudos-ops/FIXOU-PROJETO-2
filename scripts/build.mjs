@@ -5,7 +5,8 @@ import vm from 'node:vm';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const bank=JSON.parse(read('content/bank.json')),curriculum=JSON.parse(read('content/curriculum.json')),books=JSON.parse(read('content/books.json'));
-if(bank.questions.length!==100||new Set(bank.questions.map(q=>q.id)).size!==100)throw new Error('O banco deve conter 100 questões únicas.');
+const tracks={biologia:bank.questions.filter(q=>q.contentTrack==='biologia-foco').length,geometriaPlana:bank.questions.filter(q=>q.contentTrack==='geometria-plana').length,fisicaFoco:bank.questions.filter(q=>q.contentTrack==='fisica-foco').length,geomorfologia:bank.questions.filter(q=>q.contentTrack==='geomorfologia').length};
+if(bank.questions.length<300||new Set(bank.questions.map(q=>q.id)).size!==bank.questions.length||tracks.biologia<40||tracks.geometriaPlana<70||tracks.fisicaFoco<50||tracks.geomorfologia<50)throw new Error('O banco complementar não atingiu os mínimos de conteúdo.');
 for(const c of bank.concepts)if(!c.officialIds.every(id=>curriculum.objects.some(o=>o.id===id)))throw new Error('Origem curricular inválida: '+c.id);
 const catalog=`export const BANK=${JSON.stringify(bank)};\nexport const CURRICULUM=${JSON.stringify(curriculum)};\nexport const BOOKS=${JSON.stringify(books)};\n`;
 fs.writeFileSync(path.join(root,'src/catalog.js'),catalog);
@@ -14,4 +15,4 @@ const code=files.map(f=>read(f).replace(/^import\s+.*?;\s*$/gm,'').replace(/^exp
 const bundle=`(()=>{'use strict';\n${code}\n})();`;new vm.Script(bundle,{filename:'fuvest-mastery.js'});
 const css=read('styles/app.css');const html=read('index.html').replace('<link rel="stylesheet" href="styles/app.css">',()=>`<style>${css}</style>`).replace('<script type="module" src="src/main.js"></script>',()=>`<script>${bundle.replace(/<\/script/gi,'<\\/script')}</script>`);
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join(root,'dist/index.html'),html);
-console.log('Build OK · 100 questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');
+console.log('Build OK · '+bank.questions.length+' questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');
