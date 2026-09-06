@@ -47,7 +47,7 @@ Respostas curtas são corrigidas por respostas aceitas, com normalização de ac
 
 ## Conteúdo e fontes
 
-O mapa guarda 529 ocorrências de objetos de conhecimento (502 textos distintos), quatro orientações de redação e referências às páginas e habilidades. Repetições entre competências são preservadas nos dados. A trilha Literatura é uma organização pedagógica de objetos de Língua Portuguesa.
+O mapa guarda 533 ocorrências de objetos de conhecimento (502 textos distintos), quatro orientações de redação e referências às páginas e habilidades. Repetições entre competências são preservadas nos dados. A trilha Literatura é uma organização pedagógica de objetos de Língua Portuguesa.
 
 O mapa cobre o programa; **as 338 questões cobrem uma seleção de 169 conceitos**, não todo o programa. A interface identifica objetos sem exercício. As fichas são sínteses autorais de estudo e não substituem a leitura integral dos livros.
 
