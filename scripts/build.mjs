@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import vm from 'node:vm';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const bank=JSON.parse(read('content/bank.json')),curriculum=JSON.parse(read('content/curriculum.json')),books=JSON.parse(read('content/books.json'));
+if(bank.questions.length!==100||new Set(bank.questions.map(q=>q.id)).size!==100)throw new Error('O banco deve conter 100 questões únicas.');
+for(const c of bank.concepts)if(!c.officialIds.every(id=>curriculum.objects.some(o=>o.id===id)))throw new Error('Origem curricular inválida: '+c.id);
+const catalog=`export const BANK=${JSON.stringify(bank)};\nexport const CURRICULUM=${JSON.stringify(curriculum)};\nexport const BOOKS=${JSON.stringify(books)};\n`;
+fs.writeFileSync(path.join(root,'src/catalog.js'),catalog);
+const files=['src/catalog.js','src/config.js','src/utils.js','src/save.js','src/reviews.js','src/mastery.js','src/gamification.js','src/statistics.js','src/training.js','src/components.js','src/screens.js','src/screens-library.js','src/screens-profile.js','src/session-view.js','src/controller.js','src/main.js'];
+const code=files.map(f=>read(f).replace(/^import\s+.*?;\s*$/gm,'').replace(/^export\s+/gm,'')).join('\n');
+const bundle=`(()=>{'use strict';\n${code}\n})();`;new vm.Script(bundle,{filename:'fuvest-mastery.js'});
+const css=read('styles/app.css');const html=read('index.html').replace('<link rel="stylesheet" href="styles/app.css">',()=>`<style>${css}</style>`).replace('<script type="module" src="src/main.js"></script>',()=>`<script>${bundle.replace(/<\/script/gi,'<\\/script')}</script>`);
+fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join(root,'dist/index.html'),html);
+console.log('Build OK · 100 questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');

@@ -1,0 +1,8 @@
+{
+  "name": "fuvest-mastery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Projeto independente de aprendizagem para a FUVEST 2027",
+  "scripts": { "build": "node scripts/build.mjs", "start": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs" }
+}

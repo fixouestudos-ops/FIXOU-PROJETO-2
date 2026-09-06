@@ -1,0 +1,4154 @@
+{
+  "version": 1,
+  "source": "Questão original — estilo FUVEST",
+  "year": 2027,
+  "concepts": [
+    {
+      "id": "mat-funcao-quadratica",
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Modelagem e otimização quadrática",
+      "officialIds": [
+        "of-161",
+        "of-171"
+      ],
+      "summary": "Uma função f(x)=ax²+bx+c, com a diferente de zero, tem vértice em x=-b/(2a). Quando a<0, o vértice fornece o máximo, desde que pertença ao domínio permitido pelo problema. Traduzir as restrições em uma única variável é parte essencial da modelagem.",
+      "flashcard": {
+        "front": "Como encontrar e validar o máximo em um problema modelado por uma função quadrática?",
+        "back": "Escreva a grandeza a otimizar em função de uma variável; determine o domínio; se a<0, calcule x=-b/(2a) e verifique se esse valor é admissível. Compare também os extremos do domínio quando necessário."
+      }
+    },
+    {
+      "id": "mat-decaimento-exponencial",
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Decaimento exponencial e limiares",
+      "officialIds": [
+        "of-166",
+        "of-167",
+        "of-171"
+      ],
+      "summary": "Quando uma quantidade perde a mesma fração a cada intervalo, seu valor é Q(t)=Q₀·aᵗ, com 0<a<1 e unidades de tempo coerentes. Em processos discretos, atingir um limiar exige verificar o primeiro número inteiro de etapas que satisfaz a desigualdade.",
+      "flashcard": {
+        "front": "Como distinguir perda percentual constante de perda de quantidade constante?",
+        "back": "Perda percentual constante multiplica o valor anterior pelo mesmo fator e produz decaimento exponencial. Perda de quantidade constante subtrai sempre o mesmo valor e produz uma função afim."
+      }
+    },
+    {
+      "id": "mat-probabilidade-condicional",
+      "discipline": "matematica",
+      "topic": "Probabilidade",
+      "subtopic": "Restrição do espaço amostral",
+      "officialIds": [
+        "of-190",
+        "of-193",
+        "of-194"
+      ],
+      "summary": "Uma informação já conhecida restringe o espaço amostral: P(A|B)=P(A∩B)/P(B), se P(B)>0. Probabilidades de origem de um resultado devem considerar tanto a frequência de cada origem quanto a chance de ela produzir esse resultado.",
+      "flashcard": {
+        "front": "O que muda no cálculo de probabilidade quando uma condição B já é conhecida?",
+        "back": "O universo de referência passa a ser B. Conte ou some apenas os resultados compatíveis com B; entre eles, determine a parcela que também satisfaz A."
+      }
+    },
+    {
+      "id": "mat-volumes-semelhanca",
+      "discipline": "matematica",
+      "topic": "Geometria espacial",
+      "subtopic": "Volumes, deslocamento e semelhança",
+      "officialIds": [
+        "of-178",
+        "of-186"
+      ],
+      "summary": "O volume de um cilindro é πr²h, o de um cone é πr²h/3 e o de uma esfera é 4πr³/3. Em sólidos semelhantes, comprimentos variam com k, áreas com k² e volumes com k³. Um corpo totalmente submerso desloca um volume de líquido igual ao seu próprio volume.",
+      "flashcard": {
+        "front": "Por que reduzir pela metade a altura de uma região cônica semelhante não reduz seu volume apenas pela metade?",
+        "back": "A semelhança também reduz o raio pela metade. Como o volume depende de r²h, o fator total é (1/2)³=1/8."
+      }
+    },
+    {
+      "id": "mat-distancias-lugares-geometricos",
+      "discipline": "matematica",
+      "topic": "Geometria analítica",
+      "subtopic": "Distância e equidistância no plano",
+      "officialIds": [
+        "of-151",
+        "of-152"
+      ],
+      "summary": "A menor distância entre um ponto e uma reta é medida por um segmento perpendicular à reta. Os pontos equidistantes de dois pontos fixos pertencem à mediatriz do segmento que os une. Equações dessas condições permitem localizar interseções e posições possíveis.",
+      "flashcard": {
+        "front": "Qual lugar geométrico reúne os pontos equidistantes de dois pontos distintos?",
+        "back": "A mediatriz do segmento entre eles: uma reta perpendicular ao segmento que passa por seu ponto médio. Intersecte essa reta com outras restrições de posição do problema."
+      }
+    },
+    {
+      "id": "mat-estatistica-transformacoes",
+      "discipline": "matematica",
+      "topic": "Estatística",
+      "subtopic": "Tendência central, dispersão e valores extremos",
+      "officialIds": [
+        "of-196",
+        "of-197"
+      ],
+      "summary": "A média usa todos os valores e pode variar bastante com um extremo; a mediana depende das posições centrais da lista ordenada. Somar uma constante a todos os dados desloca média e mediana por essa constante, preservando desvios em relação à média, variância e desvio-padrão.",
+      "flashcard": {
+        "front": "O que acontece com média e desvio-padrão quando a mesma constante é somada a todas as observações?",
+        "back": "A média aumenta por essa constante. O desvio-padrão permanece igual porque cada observação e a média se deslocam igualmente, preservando os desvios."
+      }
+    },
+    {
+      "id": "fis-energia-trabalho-potencia",
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Energia, trabalho e rendimento",
+      "officialIds": [
+        "of-199"
+      ],
+      "summary": "O trabalho da força resultante altera a energia cinética. Em um sistema sem dissipação, a energia mecânica se conserva; com atrito, parte é convertida em energia interna. Potência é energia por tempo e rendimento é a razão entre potência útil e potência recebida.",
+      "flashcard": {
+        "front": "Como relacionar energia útil, tempo de operação e rendimento de uma máquina?",
+        "back": "Calcule Pútil=Eútil/Δt. Se o rendimento é η=Pútil/Pentrada, então Pentrada=Pútil/η. Um rendimento menor exige maior potência recebida para a mesma tarefa."
+      }
+    },
+    {
+      "id": "fis-momento-linear",
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Colisões e fragmentação",
+      "officialIds": [
+        "of-200",
+        "of-202"
+      ],
+      "summary": "Quando o impulso externo é desprezível, a soma vetorial dos momentos lineares antes e depois de uma interação é a mesma. Colisões com união dos corpos não conservam, em geral, a energia cinética. Fragmentos de um corpo inicialmente parado precisam ter momentos que se anulem.",
+      "flashcard": {
+        "front": "Qual conservação pode ser usada em uma colisão inelástica de um sistema isolado?",
+        "back": "Conserva-se o momento linear total, incluindo os sinais ou direções das velocidades. A energia cinética pode diminuir e converter-se em deformação, som e energia interna."
+      }
+    },
+    {
+      "id": "fis-calorimetria-equilibrio",
+      "discipline": "fisica",
+      "topic": "Termologia",
+      "subtopic": "Equilíbrio térmico e mudança de fase",
+      "officialIds": [
+        "of-203",
+        "of-204"
+      ],
+      "summary": "Em um recipiente termicamente isolado, o calor cedido por partes do sistema iguala o recebido pelas outras. Sem mudança de fase, Q=mcΔT; em uma mudança de fase à temperatura constante, Q=mL. É preciso verificar se a energia disponível completa a mudança de fase.",
+      "flashcard": {
+        "front": "Por que misturas com gelo exigem mais de uma etapa no balanço térmico?",
+        "back": "Antes de elevar a temperatura da água formada, é necessário fornecer calor latente para fundir o gelo. Verifique se todo ele derrete; só então calcule a temperatura final acima de 0 °C."
+      }
+    },
+    {
+      "id": "fis-circuitos-resistivos",
+      "discipline": "fisica",
+      "topic": "Eletricidade",
+      "subtopic": "Associações de resistores e potência",
+      "officialIds": [
+        "of-209",
+        "of-211"
+      ],
+      "summary": "Resistores em série recebem a mesma corrente; em paralelo, a mesma tensão. A resistência equivalente em série é a soma das resistências; em paralelo, somam-se seus inversos. Para um resistor ôhmico, U=Ri e P=Ui=U²/R.",
+      "flashcard": {
+        "front": "Qual grandeza é comum aos resistores em série e qual é comum aos resistores em paralelo?",
+        "back": "Em série, a corrente é comum e as tensões se somam. Em paralelo, a tensão é comum e as correntes dos ramos se somam."
+      }
+    },
+    {
+      "id": "fis-ondas-frequencia-comprimento",
+      "discipline": "fisica",
+      "topic": "Ondulatória",
+      "subtopic": "Propagação e ondas estacionárias",
+      "officialIds": [
+        "of-288"
+      ],
+      "summary": "A velocidade de uma onda satisfaz v=λf. Na passagem entre meios estacionários, a frequência imposta pela fonte permanece e o comprimento de onda se ajusta à velocidade. Em uma corda fixa nas duas extremidades, as frequências permitidas são fn=nv/(2L).",
+      "flashcard": {
+        "front": "Se uma onda passa para um meio em que sua velocidade é menor, o que acontece com a frequência e o comprimento de onda?",
+        "back": "A frequência permanece igual à da fonte. Como λ=v/f, o comprimento de onda diminui na mesma proporção que a velocidade."
+      }
+    },
+    {
+      "id": "qui-arrhenius",
+      "discipline": "quimica",
+      "topic": "Ácidos, bases e sais",
+      "subtopic": "Arrhenius, ionização e neutralização",
+      "officialIds": [
+        "of-231",
+        "of-257"
+      ],
+      "summary": "Na descrição de Arrhenius, ácidos originam H⁺ em solução aquosa, representado de forma mais explícita por H₃O⁺, e bases liberam OH⁻. Compostos moleculares podem formar íons por ionização; compostos iônicos solúveis se dissociam. A neutralização combina quantidades equivalentes de H₃O⁺ e OH⁻ para formar água.",
+      "flashcard": {
+        "front": "Como a teoria de Arrhenius identifica ácidos e bases e orienta uma neutralização?",
+        "back": "Em água, o ácido aumenta H₃O⁺ e a base fornece OH⁻. Na neutralização completa, iguale os mols de H₃O⁺ aos mols de OH⁻, levando em conta quantos desses íons cada unidade de soluto fornece."
+      }
+    },
+    {
+      "id": "qui-estequiometria-rendimento",
+      "discipline": "quimica",
+      "topic": "Transformações químicas",
+      "subtopic": "Reagente limitante, pureza e rendimento",
+      "officialIds": [
+        "of-214",
+        "of-217"
+      ],
+      "summary": "Uma equação balanceada relaciona quantidades de matéria por seus coeficientes. Compare a razão entre mols disponíveis e coeficiente para identificar o reagente limitante. A pureza determina a massa efetivamente reativa; o rendimento compara a produção real à produção teórica.",
+      "flashcard": {
+        "front": "Como organizar um cálculo que envolve pureza e rendimento?",
+        "back": "Primeiro encontre a massa de reagente puro. Converta-a em mols, aplique a proporção da equação balanceada e obtenha a produção teórica. Multiplique essa produção pela fração correspondente ao rendimento."
+      }
+    },
+    {
+      "id": "qui-equilibrio-deslocamento",
+      "discipline": "quimica",
+      "topic": "Equilíbrio químico",
+      "subtopic": "Pressão, temperatura e quociente reacional",
+      "officialIds": [
+        "of-220",
+        "of-219"
+      ],
+      "summary": "O quociente reacional Q tem a forma da expressão de K, mas usa concentrações do instante considerado. Se Q<K, predomina a evolução direta; se Q>K, a inversa. A temperatura altera K; a compressão favorece o lado com menos mols gasosos quando eles diferem.",
+      "flashcard": {
+        "front": "O que a comparação entre Q e K informa após uma perturbação do equilíbrio?",
+        "back": "Q<K indica evolução líquida para os produtos; Q>K, para os reagentes; Q=K, equilíbrio. A previsão vale para a reação escrita e para K na temperatura considerada."
+      }
+    },
+    {
+      "id": "qui-eletroquimica",
+      "discipline": "quimica",
+      "topic": "Eletroquímica",
+      "subtopic": "Pilhas e eletrólise quantitativa",
+      "officialIds": [
+        "of-215"
+      ],
+      "summary": "Oxidação perde elétrons e redução os recebe. Em uma pilha, elétrons percorrem o circuito externo do ânodo ao cátodo; a diferença de potencial padrão é E°cátodo−E°ânodo, usando potenciais de redução. Na eletrólise, Q/F fornece os mols de elétrons transferidos.",
+      "flashcard": {
+        "front": "Como ligar a carga elétrica transferida à quantidade de metal depositada por eletrólise?",
+        "back": "Calcule n(elétrons)=Q/F. Pela semirreação, divida pelo número de elétrons necessário para formar um átomo de metal e multiplique a quantidade de metal por sua massa molar."
+      }
+    },
+    {
+      "id": "qui-interacoes-polaridade",
+      "discipline": "quimica",
+      "topic": "Estrutura e propriedades",
+      "subtopic": "Interações intermoleculares e solubilidade",
+      "officialIds": [
+        "of-294",
+        "of-297",
+        "of-298"
+      ],
+      "summary": "As propriedades de uma substância dependem de sua estrutura e das interações entre partículas. Ligações de hidrogênio podem elevar a temperatura de ebulição de moléculas comparáveis. A solubilidade depende do balanço entre interações soluto-soluto, solvente-solvente e soluto-solvente.",
+      "flashcard": {
+        "front": "Como grupos O–H podem influenciar a ebulição de moléculas de massas semelhantes?",
+        "back": "Eles permitem ligações de hidrogênio entre moléculas que tenham sítios adequados de interação. Separar essas moléculas tende a exigir mais energia, elevando a temperatura de ebulição em comparações apropriadas."
+      }
+    },
+    {
+      "id": "bio-segregacao-heranca",
+      "discipline": "biologia",
+      "topic": "Genética",
+      "subtopic": "Meiose e segregação dos alelos",
+      "officialIds": [
+        "of-235",
+        "of-238",
+        "of-240"
+      ],
+      "summary": "A separação dos cromossomos homólogos na meiose I explica a segregação dos alelos. Pares de genes em cromossomos distintos podem segregar independentemente. A não disjunção altera o número de cromossomos nos gametas, com consequências que dependem da divisão em que ocorre.",
+      "flashcard": {
+        "front": "Como diferem os resultados de uma não disjunção na meiose I e na meiose II?",
+        "back": "Para um par afetado, a falha na meiose I produz, após uma meiose II normal, dois gametas n+1 e dois n−1. Uma falha em uma das células da meiose II produz dois gametas normais, um n+1 e um n−1."
+      }
+    },
+    {
+      "id": "bio-selecao-variabilidade",
+      "discipline": "biologia",
+      "topic": "Evolução",
+      "subtopic": "Seleção natural e deriva genética",
+      "officialIds": [
+        "of-260",
+        "of-261"
+      ],
+      "summary": "A seleção natural altera frequências de variantes hereditárias quando elas afetam sobrevivência ou reprodução no ambiente. Mutações não surgem porque o organismo necessita delas. Frequências também podem mudar ao acaso, especialmente após uma redução populacional, pelo processo de deriva genética.",
+      "flashcard": {
+        "front": "Toda mudança na frequência de um alelo demonstra adaptação por seleção natural?",
+        "back": "Não. A deriva genética também muda frequências por amostragem aleatória. Para sustentar seleção, é preciso relacionar diferenças hereditárias a diferenças de sucesso reprodutivo no ambiente."
+      }
+    },
+    {
+      "id": "bio-metabolismo-energetico",
+      "discipline": "biologia",
+      "topic": "Biologia celular",
+      "subtopic": "Fermentação e fotossíntese",
+      "officialIds": [
+        "of-233",
+        "of-234"
+      ],
+      "summary": "A glicólise produz ATP e reduz NAD⁺. Na fermentação, a regeneração de NAD⁺ permite a continuidade da glicólise sem uso de oxigênio como aceptor final. Na fotossíntese oxigênica, o O₂ liberado provém da água; o CO₂ fornece carbono para a síntese de matéria orgânica.",
+      "flashcard": {
+        "front": "Qual é o papel da fermentação na manutenção da produção de ATP pela glicólise?",
+        "back": "Regenerar NAD⁺ a partir de NADH. O NAD⁺ volta a receber elétrons na glicólise, permitindo que ela continue produzindo ATP por fosforilação em nível de substrato."
+      }
+    },
+    {
+      "id": "bio-fluxo-energia-eutrofizacao",
+      "discipline": "biologia",
+      "topic": "Ecologia",
+      "subtopic": "Fluxo de energia e alterações aquáticas",
+      "officialIds": [
+        "of-268",
+        "of-270",
+        "of-271"
+      ],
+      "summary": "A energia disponível diminui ao longo dos níveis tróficos porque parte é usada no metabolismo e dissipada como calor. A entrada excessiva de nutrientes pode estimular algas; o acúmulo de matéria orgânica e sua decomposição aeróbia podem reduzir o oxigênio dissolvido.",
+      "flashcard": {
+        "front": "Como o excesso de nutrientes pode resultar em falta de oxigênio em um lago?",
+        "back": "Nutrientes estimulam a produção de biomassa. O aumento de matéria orgânica disponível intensifica a atividade de decompositores aeróbios, que consomem oxigênio dissolvido e podem causar hipóxia."
+      }
+    },
+    {
+      "id": "bio-plantas-ambiente-terrestre",
+      "discipline": "biologia",
+      "topic": "Botânica",
+      "subtopic": "Reprodução e economia de água",
+      "officialIds": [
+        "of-264"
+      ],
+      "summary": "Adaptações como cutícula e controle estomático ajudam plantas a regular a perda de água. Fechar estômatos também restringe a entrada de CO₂. Nas plantas com sementes, o pólen e o tubo polínico participam da reprodução sem depender de uma película externa de água para o deslocamento dos gametas masculinos.",
+      "flashcard": {
+        "front": "Qual é o custo fotossintético de fechar os estômatos durante a seca?",
+        "back": "O fechamento reduz a transpiração, mas também dificulta a entrada de CO₂. A menor disponibilidade de CO₂ pode limitar a fixação de carbono, dependendo das demais condições."
+      }
+    },
+    {
+      "id": "por-001",
+      "discipline": "portugues",
+      "topic": "Leitura e argumentação",
+      "subtopic": "Coesão e relações lógico-discursivas",
+      "officialIds": [
+        "of-022",
+        "of-023"
+      ],
+      "summary": "Conectivos orientam relações entre enunciados. Uma concessão mantém uma conclusão apesar de uma expectativa contrária; uma conclusão decorre dos argumentos anteriores. A interpretação depende da relação produzida no contexto.",
+      "flashcard": {
+        "front": "Como distinguir concessão de conclusão na articulação de um texto?",
+        "back": "A concessão apresenta um obstáculo que não impede o fato principal; a conclusão apresenta uma consequência inferida dos enunciados anteriores. Compare: embora chovesse, saiu; chovia, portanto levou guarda-chuva."
+      }
+    },
+    {
+      "id": "por-002",
+      "discipline": "portugues",
+      "topic": "Enunciação",
+      "subtopic": "Modalização epistêmica e deôntica",
+      "officialIds": [
+        "of-032",
+        "of-033"
+      ],
+      "summary": "A modalização marca a atitude do enunciador. A epistêmica expressa certeza, hipótese ou probabilidade; a deôntica expressa obrigação, permissão ou proibição. Um mesmo verbo pode assumir valores diferentes conforme o contexto.",
+      "flashcard": {
+        "front": "Que pergunta ajuda a diferenciar modalização epistêmica e deôntica?",
+        "back": "Pergunte se a expressão avalia a probabilidade de algo ser verdadeiro (epistêmica) ou regula uma conduta como permitida, obrigatória ou proibida (deôntica)."
+      }
+    },
+    {
+      "id": "por-003",
+      "discipline": "portugues",
+      "topic": "Língua e sociedade",
+      "subtopic": "Variação linguística e adequação",
+      "officialIds": [
+        "of-041",
+        "of-035"
+      ],
+      "summary": "As variedades linguísticas são sistemáticas e se relacionam a fatores regionais, sociais e situacionais. A adequação considera interlocutores, finalidade e gênero. Dominar a norma-padrão amplia recursos de participação sem tornar inferiores outras variedades.",
+      "flashcard": {
+        "front": "Por que adequação linguística não equivale a hierarquizar os falantes?",
+        "back": "A adequação avalia escolhas para uma situação comunicativa. Variedades possuem regularidades próprias; diferenças em relação à norma-padrão não medem inteligência nem valor social de quem fala."
+      }
+    },
+    {
+      "id": "por-004",
+      "discipline": "portugues",
+      "topic": "Relações entre textos",
+      "subtopic": "Paráfrase, paródia e intertextualidade",
+      "officialIds": [
+        "of-024",
+        "of-025"
+      ],
+      "summary": "A intertextualidade ocorre quando um texto retoma outro. A paráfrase reformula preservando o núcleo do sentido; a paródia transforma uma referência reconhecível para produzir deslocamento crítico, humorístico ou satírico.",
+      "flashcard": {
+        "front": "O que diferencia a paráfrase da paródia?",
+        "back": "A paráfrase mantém o núcleo de sentido da formulação retomada. A paródia modifica esse núcleo ou sua orientação, produzindo um novo efeito a partir do reconhecimento da referência."
+      }
+    },
+    {
+      "id": "his-001",
+      "discipline": "historia",
+      "topic": "Antiguidade e política",
+      "subtopic": "Cidadania e democracia ateniense",
+      "officialIds": [
+        "of-389",
+        "of-392"
+      ],
+      "summary": "Na democracia ateniense clássica, cidadãos participavam diretamente de decisões da pólis, mas a cidadania excluía mulheres, pessoas escravizadas e estrangeiros residentes. Participação direta e universalidade do direito político são dimensões distintas.",
+      "flashcard": {
+        "front": "Como a democracia ateniense podia ser direta e socialmente restrita?",
+        "back": "Os cidadãos podiam deliberar diretamente na assembleia, mas apenas uma parcela dos habitantes era cidadã. Mulheres, escravizados e metecos não tinham os mesmos direitos políticos."
+      }
+    },
+    {
+      "id": "his-002",
+      "discipline": "historia",
+      "topic": "Capitalismo e trabalho",
+      "subtopic": "Industrialização e organização da produção",
+      "officialIds": [
+        "of-367",
+        "of-374",
+        "of-398"
+      ],
+      "summary": "A industrialização ampliou a mecanização e a concentração de trabalhadores em fábricas, fortalecendo o controle patronal do ritmo produtivo. Taylorismo e fordismo aprofundaram a padronização; a produção flexível adotou outras formas de coordenação e estoque.",
+      "flashcard": {
+        "front": "Qual relação existe entre organização técnica da produção e controle do trabalho?",
+        "back": "Máquinas, divisão de tarefas, linhas de montagem e sistemas de gestão distribuem funções e estabelecem ritmos. Sua análise deve considerar produtividade, autonomia dos trabalhadores e relações de poder."
+      }
+    },
+    {
+      "id": "his-003",
+      "discipline": "historia",
+      "topic": "Brasil escravista e pós-abolição",
+      "subtopic": "Resistência e limites da emancipação jurídica",
+      "officialIds": [
+        "of-382",
+        "of-386",
+        "of-387"
+      ],
+      "summary": "A população escravizada participou da luta contra a escravidão por fugas, quilombos, negociações e ações coletivas. A abolição jurídica de 1888 encerrou a instituição legal, mas não eliminou as desigualdades de acesso à terra, ao trabalho e à cidadania.",
+      "flashcard": {
+        "front": "Por que a abolição legal não pode ser confundida com igualdade social imediata?",
+        "back": "O fim jurídico da escravidão não redistribuiu automaticamente terra, riqueza e oportunidades. A população liberta continuou enfrentando desigualdades e discriminação enquanto construía estratégias de autonomia."
+      }
+    },
+    {
+      "id": "his-004",
+      "discipline": "historia",
+      "topic": "Brasil republicano",
+      "subtopic": "Coronelismo e transformação da cidadania",
+      "officialIds": [
+        "of-402",
+        "of-381",
+        "of-388"
+      ],
+      "summary": "O coronelismo articulou poderes locais e governos estaduais durante a Primeira República, mobilizando dependências econômicas, favores e controle eleitoral. A história dos direitos políticos posteriores combina ampliação de participação e rupturas autoritárias.",
+      "flashcard": {
+        "front": "Como dependência econômica e poder eleitoral se relacionavam no coronelismo?",
+        "back": "Chefes locais podiam converter controle de recursos, empregos e favores em influência sobre votos. As relações com autoridades estaduais ajudavam a sustentar essa rede de poder."
+      }
+    },
+    {
+      "id": "geo-001",
+      "discipline": "geografia",
+      "topic": "Cartografia",
+      "subtopic": "Escala e interpretação de mapas temáticos",
+      "officialIds": [
+        "of-327",
+        "of-333"
+      ],
+      "summary": "A escala numérica relaciona distâncias no mapa e no terreno usando a mesma unidade. Mapas temáticos exigem atenção à legenda, ao indicador e ao recorte espacial: número absoluto e taxa representam aspectos distintos de um fenômeno.",
+      "flashcard": {
+        "front": "Quais verificações básicas evitam erros ao comparar mapas temáticos?",
+        "back": "Confira escala, unidade, legenda, período, limites territoriais e se o indicador é absoluto ou relativo. Um total elevado pode decorrer do tamanho da população, sem indicar taxa elevada."
+      }
+    },
+    {
+      "id": "geo-002",
+      "discipline": "geografia",
+      "topic": "Geografia da população",
+      "subtopic": "Transição demográfica e estrutura etária",
+      "officialIds": [
+        "of-332",
+        "of-357",
+        "of-362"
+      ],
+      "summary": "Na transição demográfica, a mortalidade costuma cair antes da natalidade, elevando temporariamente o crescimento natural. Com a queda posterior da fecundidade e o aumento da sobrevivência, a estrutura etária envelhece. Migrações também modificam a população total.",
+      "flashcard": {
+        "front": "Por que queda da mortalidade e queda da natalidade produzem efeitos distintos no crescimento natural?",
+        "back": "A queda da mortalidade, com natalidade elevada, amplia a diferença entre nascimentos e mortes. A queda da natalidade reduz essa diferença. Crescimento natural não inclui o saldo migratório."
+      }
+    },
+    {
+      "id": "geo-003",
+      "discipline": "geografia",
+      "topic": "Geografia socioambiental",
+      "subtopic": "Risco, vulnerabilidade e segregação urbana",
+      "officialIds": [
+        "of-324",
+        "of-335",
+        "of-338",
+        "of-339"
+      ],
+      "summary": "O desastre resulta da interação entre ameaça, exposição e vulnerabilidade. Uma chuva intensa tem consequências diferentes conforme moradia, drenagem, renda e capacidade de resposta. Planejamento urbano e infraestrutura podem reduzir o risco.",
+      "flashcard": {
+        "front": "Por que o mesmo evento de chuva pode causar impactos sociais muito diferentes?",
+        "back": "Os impactos dependem da exposição e da vulnerabilidade: localização das moradias, qualidade construtiva, drenagem, serviços e capacidade de prevenção e recuperação distribuem o risco de forma desigual."
+      }
+    },
+    {
+      "id": "fil-001",
+      "discipline": "filosofia",
+      "topic": "Argumentação filosófica",
+      "subtopic": "Validade dedutiva e falácias formais",
+      "officialIds": [
+        "of-320"
+      ],
+      "summary": "Um argumento dedutivo é válido quando não é possível que suas premissas sejam verdadeiras e sua conclusão falsa. Validade diz respeito à relação lógica; não garante que as premissas correspondam aos fatos. Afirmar o consequente não preserva essa relação.",
+      "flashcard": {
+        "front": "Qual é a diferença entre validade de um argumento e verdade de uma afirmação?",
+        "back": "Verdade é uma propriedade de afirmações. Validade é uma relação entre premissas e conclusão: se as premissas forem verdadeiras, a conclusão necessariamente será verdadeira."
+      }
+    },
+    {
+      "id": "fil-002",
+      "discipline": "filosofia",
+      "topic": "Epistemologia",
+      "subtopic": "Experiência, indução e justificação",
+      "officialIds": [
+        "of-317"
+      ],
+      "summary": "O empirismo atribui papel central à experiência na origem ou justificação do conhecimento. A indução projeta regularidades observadas para casos não observados, mas suas conclusões não decorrem com necessidade lógica das observações passadas.",
+      "flashcard": {
+        "front": "Qual limite lógico acompanha a generalização indutiva?",
+        "back": "Um conjunto finito de observações não demonstra necessariamente uma afirmação universal. Novos casos podem contrariar a regularidade, embora ela tenha apoio empírico e utilidade explicativa."
+      }
+    },
+    {
+      "id": "fil-003",
+      "discipline": "filosofia",
+      "topic": "Ética",
+      "subtopic": "Dever e avaliação das consequências",
+      "officialIds": [
+        "of-318"
+      ],
+      "summary": "Teorias deontológicas avaliam ações por deveres e princípios; teorias consequencialistas avaliam os efeitos das alternativas. Em Kant, a máxima deve poder valer como lei universal, e pessoas devem ser tratadas também como fins em si mesmas.",
+      "flashcard": {
+        "front": "Como diferem uma justificação pelo dever e uma pelas consequências?",
+        "back": "A primeira pergunta se a ação respeita um princípio obrigatório. A segunda compara resultados esperados. Em uma situação concreta, podem recomendar a mesma ação por razões distintas."
+      }
+    },
+    {
+      "id": "soc-001",
+      "discipline": "sociologia",
+      "topic": "Indivíduo e sociedade",
+      "subtopic": "Socialização e instituições",
+      "officialIds": [
+        "of-409",
+        "of-410"
+      ],
+      "summary": "A socialização é o processo de aprender e reelaborar normas, valores e papéis sociais. Família, escola, trabalho e grupos de pares participam dele. O processo continua ao longo da vida e envolve tanto reprodução quanto negociação das normas.",
+      "flashcard": {
+        "front": "Por que a socialização não termina na infância?",
+        "back": "Novos grupos e instituições apresentam expectativas, linguagens e papéis ao longo da vida. As pessoas aprendem, negociam e podem transformar essas normas em novas situações sociais."
+      }
+    },
+    {
+      "id": "soc-002",
+      "discipline": "sociologia",
+      "topic": "Trabalho e organização social",
+      "subtopic": "Divisão do trabalho e solidariedade em Durkheim",
+      "officialIds": [
+        "of-411"
+      ],
+      "summary": "Para Durkheim, a solidariedade mecânica se associa à semelhança entre membros e à força das crenças comuns; a orgânica se associa à diferenciação de funções e à interdependência. Anomia designa insuficiência da regulação social, não simples ausência de pessoas obedientes.",
+      "flashcard": {
+        "front": "De onde vem a coesão nas solidariedades mecânica e orgânica?",
+        "back": "Na mecânica, predominam semelhanças e crenças coletivas compartilhadas. Na orgânica, a especialização torna indivíduos e grupos dependentes das funções uns dos outros."
+      }
+    },
+    {
+      "id": "ing-001",
+      "discipline": "ingles",
+      "topic": "Reading comprehension",
+      "subtopic": "Inferência e alcance das evidências",
+      "officialIds": [
+        "of-009",
+        "of-016",
+        "of-017"
+      ],
+      "summary": "Ler criticamente exige distinguir o que o texto afirma, sugere e não permite concluir. Ressalvas e limitações da amostra delimitam a força de uma explicação, especialmente em textos de divulgação científica.",
+      "flashcard": {
+        "front": "How do limitations in a study affect the claims a reader may make?",
+        "back": "They restrict the scope and certainty of a conclusion. An observed association alone does not establish causation, and a narrow sample does not automatically represent a broader population."
+      }
+    },
+    {
+      "id": "ing-002",
+      "discipline": "ingles",
+      "topic": "Vocabulary in context",
+      "subtopic": "Cognatos e falsos cognatos",
+      "officialIds": [
+        "of-013",
+        "of-009"
+      ],
+      "summary": "Semelhança gráfica entre inglês e português nem sempre implica equivalência de sentido. O contexto ajuda a reconhecer falsos cognatos: actually pode significar na verdade, e library corresponde a biblioteca.",
+      "flashcard": {
+        "front": "How can context help identify a false cognate?",
+        "back": "Use the surrounding actions and contrasts to test a possible meaning. If a similar-looking Portuguese word makes the sentence incoherent, consider a different English meaning."
+      }
+    },
+    {
+      "id": "art-001",
+      "discipline": "arte",
+      "topic": "Arte e cultura",
+      "subtopic": "Patrimônio cultural material e imaterial",
+      "officialIds": [
+        "of-006",
+        "of-005"
+      ],
+      "summary": "O patrimônio cultural inclui objetos e construções, mas também práticas, conhecimentos e formas de expressão. Preservação envolve documentação, participação das comunidades e condições de transmissão; manifestações vivas podem se transformar.",
+      "flashcard": {
+        "front": "Por que preservar uma manifestação cultural envolve mais que guardar seus objetos?",
+        "back": "Porque técnicas, repertórios, sentidos e modos de transmissão dependem de pessoas e relações sociais. Conservar objetos pode ajudar, mas não substitui a continuidade da prática e a participação de seus detentores."
+      }
+    },
+    {
+      "id": "edf-001",
+      "discipline": "educacao-fisica",
+      "topic": "Práticas corporais e cidadania",
+      "subtopic": "Acesso, equidade e convivência",
+      "officialIds": [
+        "of-048",
+        "of-049",
+        "of-076",
+        "of-077"
+      ],
+      "summary": "O direito às práticas corporais requer condições efetivas de participação. Equidade considera barreiras e necessidades diferentes, podendo exigir adaptação de regras, materiais, espaços e horários. Democratizar o acesso também envolve combater estereótipos e ouvir os participantes.",
+      "flashcard": {
+        "front": "Por que tratar todos de maneira idêntica pode não garantir participação equitativa em práticas corporais?",
+        "back": "As pessoas enfrentam barreiras diferentes. Ajustes de recursos, regras e espaços podem ampliar oportunidades reais, mantendo objetivos pedagógicos e reconhecendo necessidades dos participantes."
+      }
+    },
+    {
+      "id": "lit-opusculo-humanitario",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Opúsculo Humanitário",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "Educação e cidadania são articuladas por argumentação histórica e crítica.",
+      "flashcard": {
+        "front": "Como a forma ensaística sustenta a tese educacional?",
+        "back": "A voz autoral interpela a sociedade e mobiliza exemplos para persuadir."
+      }
+    },
+    {
+      "id": "lit-nebulosas",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Nebulosas",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "Lirismo e denúncia social integram a poesia romântica de Narcisa.",
+      "flashcard": {
+        "front": "Por que evitar reduzir Nebulosas ao abolicionismo?",
+        "back": "A obra também trabalha memória, natureza e afetos, sem separar rigidamente essas dimensões."
+      }
+    },
+    {
+      "id": "lit-memorias-de-martha",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Memórias de Martha",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "A formação profissional de Martha convive com hierarquias sociais.",
+      "flashcard": {
+        "front": "Qual o efeito da memória em primeira pessoa?",
+        "back": "A experiência chega filtrada pelos julgamentos e pela posição da narradora."
+      }
+    },
+    {
+      "id": "lit-caminho-de-pedras",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Caminho de pedras",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "A experiência de Noemi une emancipação íntima e conflito coletivo.",
+      "flashcard": {
+        "front": "Por que amor e política devem ser lidos juntos?",
+        "back": "Ambos expõem limites impostos às escolhas e à participação das mulheres."
+      }
+    },
+    {
+      "id": "lit-paixao-segundo-gh",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A paixão segundo G.H.",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "G.H. tenta compreender, pela narrativa, uma experiência que desorganizou suas certezas.",
+      "flashcard": {
+        "front": "Como os tempos de viver e narrar se relacionam?",
+        "back": "O presente da escrita reelabora a experiência do dia anterior."
+      }
+    },
+    {
+      "id": "lit-geografia",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Geografia",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "Os espaços poéticos relacionam percepção, história e reflexão ética.",
+      "flashcard": {
+        "front": "O título Geografia implica descrição neutra dos lugares?",
+        "back": "Não; os poemas constroem sentidos para o espaço por meio da linguagem."
+      }
+    },
+    {
+      "id": "lit-balada-de-amor-ao-vento",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Balada de amor ao vento",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "A trajetória de Sarnau exige considerar gênero, cultura e condições materiais.",
+      "flashcard": {
+        "front": "Por que a agência de Sarnau não equivale à liberdade plena?",
+        "back": "Suas decisões ocorrem em relações sociais que restringem suas alternativas."
+      }
+    },
+    {
+      "id": "lit-cancao-para-ninar-menino-grande",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Canção para ninar menino grande",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "Relatos de mulheres desestabilizam a centralidade masculina de Fio Jasmim.",
+      "flashcard": {
+        "front": "O que diferencia protagonismo do poder de narrar?",
+        "back": "Um personagem pode ligar episódios enquanto outras vozes definem seus sentidos."
+      }
+    },
+    {
+      "id": "lit-visao-das-plantas",
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A visão das plantas",
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "summary": "A delicadeza do jardim e a violência colonial permanecem em tensão.",
+      "flashcard": {
+        "front": "Por que florescer não significa absolver?",
+        "back": "A vitalidade da natureza não constitui julgamento moral dos atos humanos."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "mat-funcao-quadratica-a",
+      "conceptId": "mat-funcao-quadratica",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um cinema vende 100 ingressos por sessão quando cobra R$ 50 por ingresso. Um estudo estima que, para cada real de desconto, serão vendidos 10 ingressos adicionais. Admita que essa relação seja válida para descontos inteiros de R$ 0 a R$ 30 e que haja lugares suficientes. Qual é a maior receita prevista por sessão?",
+      "options": [
+        "R$ 7.000",
+        "R$ 8.000",
+        "R$ 9.000",
+        "R$ 10.000",
+        "R$ 12.500"
+      ],
+      "answer": 2,
+      "explanation": "Se x é o desconto, a receita é R(x)=(50−x)(100+10x)=5000+400x−10x². A parábola tem concavidade para baixo e vértice em x=−400/(−20)=20, admissível no domínio. O preço será R$ 30 e a venda, de 300 ingressos: R=30·300=R$ 9.000.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "autoral",
+        "modelagem",
+        "maximo"
+      ],
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Modelagem e otimização quadrática",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-161",
+        "of-171"
+      ],
+      "conceptsTested": [
+        "Modelagem e otimização quadrática"
+      ]
+    },
+    {
+      "id": "mat-funcao-quadratica-b",
+      "conceptId": "mat-funcao-quadratica",
+      "difficulty": 2,
+      "type": "numeric",
+      "prompt": "Uma horta retangular será construída junto a um muro reto. Há 60 m de cerca para os outros três lados; o lado junto ao muro dispensa cerca. Admitindo dimensões reais positivas e muro suficientemente longo, qual é a maior área possível, em m²? Digite apenas o número.",
+      "answer": 450,
+      "explanation": "Se x é cada lado perpendicular ao muro, o terceiro lado mede 60−2x. A área é A(x)=x(60−2x), com 0<x<30. O vértice ocorre em x=15 m, deixando 30 m para o outro lado. Portanto, a área máxima é 15·30=450 m².",
+      "estimatedSeconds": 120,
+      "tags": [
+        "autoral",
+        "geometria",
+        "maximo"
+      ],
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Modelagem e otimização quadrática",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-161",
+        "of-171"
+      ],
+      "conceptsTested": [
+        "Modelagem e otimização quadrática"
+      ]
+    },
+    {
+      "id": "mat-decaimento-exponencial-a",
+      "conceptId": "mat-decaimento-exponencial",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Cada passagem de uma amostra por um filtro remove 20% da massa de um contaminante que ainda está presente. Uma amostra contém inicialmente 625 mg desse contaminante. Qual é o menor número de passagens completas necessário para que a massa restante seja inferior a 250 mg?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Cada passagem mantém 80% da massa anterior, logo M(n)=625·0,8ⁿ. Após quatro passagens, M=256 mg, ainda acima de 250 mg. Após cinco, M=204,8 mg. Como a sequência é decrescente, cinco é o primeiro número de passagens que satisfaz a condição.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "porcentagem",
+        "limiar"
+      ],
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Decaimento exponencial e limiares",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-166",
+        "of-167",
+        "of-171"
+      ],
+      "conceptsTested": [
+        "Decaimento exponencial e limiares"
+      ]
+    },
+    {
+      "id": "mat-decaimento-exponencial-b",
+      "conceptId": "mat-decaimento-exponencial",
+      "difficulty": 1,
+      "type": "numeric",
+      "prompt": "Em um ensaio, a intensidade de fluorescência de um marcador decai segundo I(t)=160·(1/2)^(t/3), com t em horas e I em unidades arbitrárias. Quantas horas decorrem até a intensidade atingir 20 unidades? Digite apenas o número.",
+      "answer": 9,
+      "explanation": "A razão entre a intensidade final e a inicial é 20/160=1/8=(1/2)³. Portanto, t/3=3 e t=9 horas. São três intervalos de redução à metade, cada um com duração de três horas.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "autoral",
+        "meia-vida",
+        "equacao-exponencial"
+      ],
+      "discipline": "matematica",
+      "topic": "Funções",
+      "subtopic": "Decaimento exponencial e limiares",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-166",
+        "of-167",
+        "of-171"
+      ],
+      "conceptsTested": [
+        "Decaimento exponencial e limiares"
+      ]
+    },
+    {
+      "id": "mat-probabilidade-condicional-a",
+      "conceptId": "mat-probabilidade-condicional",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em uma fábrica, a máquina A produz 60% das peças e a máquina B, 40%. Entre as peças de A, 2% são defeituosas; entre as de B, 5%. Uma peça escolhida ao acaso entre toda a produção apresentou defeito. Qual é a probabilidade de ela ter sido produzida por B?",
+      "options": [
+        "40%",
+        "50%",
+        "62,5%",
+        "80%",
+        "95%"
+      ],
+      "answer": 2,
+      "explanation": "Em um lote representativo de 1.000 peças, A produziria 600, com 12 defeituosas, e B produziria 400, com 20 defeituosas. Entre as 32 peças defeituosas, 20 viriam de B. Assim, P(B|defeito)=20/32=5/8=62,5%.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "autoral",
+        "probabilidade-condicional",
+        "taxas"
+      ],
+      "discipline": "matematica",
+      "topic": "Probabilidade",
+      "subtopic": "Restrição do espaço amostral",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-190",
+        "of-193",
+        "of-194"
+      ],
+      "conceptsTested": [
+        "Restrição do espaço amostral"
+      ]
+    },
+    {
+      "id": "mat-probabilidade-condicional-b",
+      "conceptId": "mat-probabilidade-condicional",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma caixa contém três fichas vermelhas e duas azuis, todas distinguíveis e igualmente propensas a serem sorteadas. Duas fichas são retiradas juntas ao acaso. Sabendo que pelo menos uma das fichas retiradas é vermelha, qual é a probabilidade de a outra ser azul, isto é, de haver exatamente uma ficha de cada cor?",
+      "options": [
+        "1/3",
+        "1/2",
+        "3/5",
+        "2/3",
+        "3/4"
+      ],
+      "answer": 3,
+      "explanation": "Há C(5,2)=10 pares equiprováveis. A condição exclui apenas o par formado pelas duas fichas azuis, restando nove pares. Pares com uma ficha de cada cor são 3·2=6. A probabilidade condicional é 6/9=2/3.",
+      "estimatedSeconds": 140,
+      "tags": [
+        "autoral",
+        "combinatoria",
+        "probabilidade-condicional"
+      ],
+      "discipline": "matematica",
+      "topic": "Probabilidade",
+      "subtopic": "Restrição do espaço amostral",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-190",
+        "of-193",
+        "of-194"
+      ],
+      "conceptsTested": [
+        "Restrição do espaço amostral"
+      ]
+    },
+    {
+      "id": "mat-volumes-semelhanca-a",
+      "conceptId": "mat-volumes-semelhanca",
+      "difficulty": 2,
+      "type": "numeric",
+      "prompt": "Uma esfera maciça de raio 3 cm é totalmente submersa em um recipiente cilíndrico de raio interno 6 cm, sem derramamento de água. Despreze o volume do suporte que mantém a esfera submersa. De quantos centímetros sobe o nível da água? Digite apenas o número.",
+      "answer": 1,
+      "explanation": "O volume deslocado é o da esfera: (4/3)π·3³=36π cm³. A seção do recipiente tem área π·6²=36π cm². Como volume deslocado=área da seção·elevação, a elevação é 36π/(36π)=1 cm.",
+      "estimatedSeconds": 105,
+      "tags": [
+        "autoral",
+        "esfera",
+        "cilindro"
+      ],
+      "discipline": "matematica",
+      "topic": "Geometria espacial",
+      "subtopic": "Volumes, deslocamento e semelhança",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-178",
+        "of-186"
+      ],
+      "conceptsTested": [
+        "Volumes, deslocamento e semelhança"
+      ]
+    },
+    {
+      "id": "mat-volumes-semelhanca-b",
+      "conceptId": "mat-volumes-semelhanca",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um reservatório tem a forma de um cone circular reto, com vértice para baixo, altura de 6 m e raio superior de 3 m. A água ocupa uma altura de 3 m, medida a partir do vértice. Que fração da capacidade total do reservatório está ocupada?",
+      "options": [
+        "1/8",
+        "1/4",
+        "1/3",
+        "1/2",
+        "3/4"
+      ],
+      "answer": 0,
+      "explanation": "A região ocupada pela água é um cone semelhante ao reservatório. A razão linear é 3/6=1/2, de modo que seu raio também é metade do raio superior. A razão entre os volumes é o cubo da razão linear: (1/2)³=1/8.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "cone",
+        "semelhanca"
+      ],
+      "discipline": "matematica",
+      "topic": "Geometria espacial",
+      "subtopic": "Volumes, deslocamento e semelhança",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-178",
+        "of-186"
+      ],
+      "conceptsTested": [
+        "Volumes, deslocamento e semelhança"
+      ]
+    },
+    {
+      "id": "mat-distancias-lugares-geometricos-a",
+      "conceptId": "mat-distancias-lugares-geometricos",
+      "difficulty": 2,
+      "type": "numeric",
+      "prompt": "Em um mapa cartesiano com distâncias medidas em quilômetros, uma estação está na origem e uma estrada retilínea é representada por 3x+4y−20=0. Um cabo deve ligar a estação a algum ponto da estrada pelo trajeto retilíneo mais curto. Qual é o comprimento desse cabo, em quilômetros? Digite apenas o número.",
+      "answer": 4,
+      "explanation": "A distância mínima é a perpendicular da origem à estrada. Para a reta ax+by+c=0 e o ponto (x₀,y₀), d=|ax₀+by₀+c|/√(a²+b²). Aqui, d=20/√(9+16)=20/5=4 km.",
+      "estimatedSeconds": 105,
+      "tags": [
+        "autoral",
+        "distancia-ponto-reta",
+        "otimizacao"
+      ],
+      "discipline": "matematica",
+      "topic": "Geometria analítica",
+      "subtopic": "Distância e equidistância no plano",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-151",
+        "of-152"
+      ],
+      "conceptsTested": [
+        "Distância e equidistância no plano"
+      ]
+    },
+    {
+      "id": "mat-distancias-lugares-geometricos-b",
+      "conceptId": "mat-distancias-lugares-geometricos",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Duas comunidades estão nos pontos A=(0,0) e B=(8,0) de um mapa cartesiano. Uma antena deve ser instalada sobre a estrada y=x−1 e ficar à mesma distância das duas comunidades. Em que ponto ela deve ser instalada?",
+      "options": [
+        "(3,2)",
+        "(4,3)",
+        "(4,4)",
+        "(5,4)",
+        "(8,7)"
+      ],
+      "answer": 1,
+      "explanation": "Os pontos equidistantes de A e B pertencem à mediatriz de AB. Como AB é horizontal e seu ponto médio é (4,0), essa mediatriz é x=4. Na estrada, y=4−1=3. A interseção é (4,3).",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "mediatriz",
+        "intersecao"
+      ],
+      "discipline": "matematica",
+      "topic": "Geometria analítica",
+      "subtopic": "Distância e equidistância no plano",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-151",
+        "of-152"
+      ],
+      "conceptsTested": [
+        "Distância e equidistância no plano"
+      ]
+    },
+    {
+      "id": "mat-estatistica-transformacoes-a",
+      "conceptId": "mat-estatistica-transformacoes",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Quatro bolsas mensais de um programa têm valores de 2, 2, 3 e 3 milhares de reais. O programa incorpora uma quinta bolsa, de 20 milhares de reais. Quais passam a ser, respectivamente, a média e a mediana dos cinco valores, em milhares de reais?",
+      "options": [
+        "2,5 e 3",
+        "3 e 6",
+        "4 e 2,5",
+        "6 e 2,5",
+        "6 e 3"
+      ],
+      "answer": 4,
+      "explanation": "A soma dos cinco valores é 2+2+3+3+20=30, então a média é 30/5=6. A lista já está ordenada e seu terceiro valor é 3, a mediana. A bolsa extrema aumenta a média muito mais do que a mediana.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "autoral",
+        "media",
+        "mediana"
+      ],
+      "discipline": "matematica",
+      "topic": "Estatística",
+      "subtopic": "Tendência central, dispersão e valores extremos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-196",
+        "of-197"
+      ],
+      "conceptsTested": [
+        "Tendência central, dispersão e valores extremos"
+      ]
+    },
+    {
+      "id": "mat-estatistica-transformacoes-b",
+      "conceptId": "mat-estatistica-transformacoes",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um sensor registrou uma série de temperaturas cuja média era 18 °C e cujo desvio-padrão era 2 °C. Descobriu-se que o aparelho subestimava todas as leituras em exatamente 10 °C. Após somar 10 °C a cada leitura, quais são a média e o desvio-padrão corrigidos?",
+      "options": [
+        "18 °C e 12 °C",
+        "28 °C e 12 °C",
+        "28 °C e 20 °C",
+        "180 °C e 20 °C",
+        "28 °C e 2 °C"
+      ],
+      "answer": 4,
+      "explanation": "A adição de 10 a cada dado também acrescenta 10 à média, que passa a 28 °C. Cada desvio em relação à média permanece igual: (xi+10)−(18+10)=xi−18. Portanto, o desvio-padrão continua sendo 2 °C.",
+      "estimatedSeconds": 90,
+      "tags": [
+        "autoral",
+        "dispersao",
+        "transformacao-dos-dados"
+      ],
+      "discipline": "matematica",
+      "topic": "Estatística",
+      "subtopic": "Tendência central, dispersão e valores extremos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-196",
+        "of-197"
+      ],
+      "conceptsTested": [
+        "Tendência central, dispersão e valores extremos"
+      ]
+    },
+    {
+      "id": "fis-energia-trabalho-potencia-a",
+      "conceptId": "fis-energia-trabalho-potencia",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um bloco de 2 kg parte do repouso e desce uma pista sem atrito, com desnível de 5 m. Ao alcançar o trecho horizontal, passa a sofrer uma força de atrito constante de 10 N até parar. Considere g=10 m/s². Que distância ele percorre no trecho horizontal?",
+      "options": [
+        "2 m",
+        "5 m",
+        "10 m",
+        "20 m",
+        "50 m"
+      ],
+      "answer": 2,
+      "explanation": "Na descida sem atrito, a energia potencial mgh=2·10·5=100 J transforma-se em energia cinética. No trecho horizontal, o trabalho do atrito retira esses 100 J: 10·d=100. Assim, d=10 m.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "energia-mecanica",
+        "atrito"
+      ],
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Energia, trabalho e rendimento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-199"
+      ],
+      "conceptsTested": [
+        "Energia, trabalho e rendimento"
+      ]
+    },
+    {
+      "id": "fis-energia-trabalho-potencia-b",
+      "conceptId": "fis-energia-trabalho-potencia",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma bomba eleva 600 kg de água por uma diferença de altura de 10 m em 30 s. A água entra e sai com velocidades de mesmo módulo. O rendimento da bomba é 50%. Considere g=10 m/s². Qual é a potência recebida pela bomba?",
+      "options": [
+        "1 kW",
+        "2 kW",
+        "3 kW",
+        "4 kW",
+        "6 kW"
+      ],
+      "answer": 3,
+      "explanation": "A energia útil é mgh=600·10·10=60.000 J. A potência útil é 60.000/30=2.000 W. Como η=Pútil/Pentrada=0,5, a potência recebida é 2.000/0,5=4.000 W=4 kW.",
+      "estimatedSeconds": 115,
+      "tags": [
+        "autoral",
+        "potencia",
+        "rendimento"
+      ],
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Energia, trabalho e rendimento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-199"
+      ],
+      "conceptsTested": [
+        "Energia, trabalho e rendimento"
+      ]
+    },
+    {
+      "id": "fis-momento-linear-a",
+      "conceptId": "fis-momento-linear",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em um trilho horizontal, um carrinho de 2 kg a 6 m/s colide com outro de 1 kg inicialmente parado. Eles ficam unidos. Despreze o impulso das forças externas durante a colisão. Qual é a redução da energia cinética total nessa colisão?",
+      "options": [
+        "3 J",
+        "9 J",
+        "12 J",
+        "18 J",
+        "27 J"
+      ],
+      "answer": 2,
+      "explanation": "A conservação do momento fornece 2·6=(2+1)v, logo v=4 m/s. A energia cinética inicial é (1/2)·2·6²=36 J e a final é (1/2)·3·4²=24 J. A redução é 36−24=12 J, convertidos em outras formas de energia.",
+      "estimatedSeconds": 155,
+      "tags": [
+        "autoral",
+        "colisao-inelastica",
+        "energia-cinetica"
+      ],
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Colisões e fragmentação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-200",
+        "of-202"
+      ],
+      "conceptsTested": [
+        "Colisões e fragmentação"
+      ]
+    },
+    {
+      "id": "fis-momento-linear-b",
+      "conceptId": "fis-momento-linear",
+      "difficulty": 2,
+      "type": "numeric",
+      "prompt": "Um dispositivo de 6 kg inicialmente em repouso se separa em dois fragmentos sobre uma superfície horizontal sem atrito. Um fragmento de 2 kg sai a +9 m/s. Despreze qualquer impulso externo horizontal e considere positivo o sentido desse fragmento. Qual é a velocidade do fragmento de 4 kg, em m/s? Digite o número com seu sinal.",
+      "answer": -4.5,
+      "explanation": "O momento horizontal inicial é zero, portanto os momentos dos fragmentos devem somar zero: 2·9+4v=0. Assim, v=−18/4=−4,5 m/s. O sinal negativo indica movimento no sentido oposto ao fragmento de 2 kg.",
+      "estimatedSeconds": 95,
+      "tags": [
+        "autoral",
+        "fragmentacao",
+        "vetores"
+      ],
+      "discipline": "fisica",
+      "topic": "Mecânica",
+      "subtopic": "Colisões e fragmentação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-200",
+        "of-202"
+      ],
+      "conceptsTested": [
+        "Colisões e fragmentação"
+      ]
+    },
+    {
+      "id": "fis-calorimetria-equilibrio-a",
+      "conceptId": "fis-calorimetria-equilibrio",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em um recipiente termicamente isolado e de capacidade térmica desprezível, misturam-se 200 g de água a 80 °C com 300 g de água a 20 °C. Admita calor específico constante e ausência de evaporação. Qual é a temperatura de equilíbrio?",
+      "options": [
+        "32 °C",
+        "40 °C",
+        "44 °C",
+        "50 °C",
+        "60 °C"
+      ],
+      "answer": 2,
+      "explanation": "A água quente cede o calor recebido pela fria: 200c(80−T)=300c(T−20). Cancelando c, resulta 16.000−200T=300T−6.000 e T=22.000/500=44 °C. A média deve ser ponderada pelas massas, que são diferentes.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "trocas-de-calor",
+        "equilibrio-termico"
+      ],
+      "discipline": "fisica",
+      "topic": "Termologia",
+      "subtopic": "Equilíbrio térmico e mudança de fase",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-203",
+        "of-204"
+      ],
+      "conceptsTested": [
+        "Equilíbrio térmico e mudança de fase"
+      ]
+    },
+    {
+      "id": "fis-calorimetria-equilibrio-b",
+      "conceptId": "fis-calorimetria-equilibrio",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um recipiente isolado, de capacidade térmica desprezível, contém 100 g de água a 30 °C. Acrescentam-se 10 g de gelo a 0 °C. Considere calor específico da água igual a 1 cal/(g·°C), calor latente de fusão do gelo igual a 80 cal/g e ausência de evaporação. Qual é a temperatura final de equilíbrio?",
+      "options": [
+        "0 °C",
+        "10 °C",
+        "20 °C",
+        "22 °C",
+        "30 °C"
+      ],
+      "answer": 2,
+      "explanation": "A água poderia ceder 100·1·30=3.000 cal até chegar a 0 °C, mais que as 10·80=800 cal necessárias para fundir todo o gelo. Logo, a temperatura final é positiva. O balanço é 100(30−T)=800+10T, pois a água formada também aquece. Assim, 2.200=110T e T=20 °C.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "autoral",
+        "calor-latente",
+        "balanco-termico"
+      ],
+      "discipline": "fisica",
+      "topic": "Termologia",
+      "subtopic": "Equilíbrio térmico e mudança de fase",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-203",
+        "of-204"
+      ],
+      "conceptsTested": [
+        "Equilíbrio térmico e mudança de fase"
+      ]
+    },
+    {
+      "id": "fis-circuitos-resistivos-a",
+      "conceptId": "fis-circuitos-resistivos",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma fonte ideal de 12 V alimenta um resistor de 4 Ω em série com uma associação em paralelo de resistores de 6 Ω e 3 Ω. Todos os resistores são ôhmicos. Qual é a corrente que passa pelo resistor de 3 Ω?",
+      "options": [
+        "1/3 A",
+        "2/3 A",
+        "1 A",
+        "4/3 A",
+        "2 A"
+      ],
+      "answer": 3,
+      "explanation": "A associação em paralelo equivale a (6·3)/(6+3)=2 Ω. A resistência total é 4+2=6 Ω e a corrente total é 12/6=2 A. A tensão sobre o paralelo é 2·2=4 V. No ramo de 3 Ω, a corrente é 4/3 A; a corrente total se divide entre os ramos.",
+      "estimatedSeconds": 165,
+      "tags": [
+        "autoral",
+        "associacao-mista",
+        "lei-de-ohm"
+      ],
+      "discipline": "fisica",
+      "topic": "Eletricidade",
+      "subtopic": "Associações de resistores e potência",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-209",
+        "of-211"
+      ],
+      "conceptsTested": [
+        "Associações de resistores e potência"
+      ]
+    },
+    {
+      "id": "fis-circuitos-resistivos-b",
+      "conceptId": "fis-circuitos-resistivos",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Dois aquecedores ôhmicos idênticos, cada um com resistência constante de 6 Ω, estavam ligados em paralelo a uma fonte ideal de 12 V. Eles são reconectados em série à mesma fonte. Qual passa a ser a potência elétrica total dissipada pelo conjunto?",
+      "options": [
+        "6 W",
+        "12 W",
+        "24 W",
+        "48 W",
+        "96 W"
+      ],
+      "answer": 1,
+      "explanation": "Na nova ligação em série, a resistência equivalente é 6+6=12 Ω. Sob 12 V, a potência total é U²/Req=144/12=12 W. Antes, o paralelo equivalia a 3 Ω e dissipava 48 W; a mudança reduz a potência a um quarto.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "potencia-eletrica",
+        "serie-paralelo"
+      ],
+      "discipline": "fisica",
+      "topic": "Eletricidade",
+      "subtopic": "Associações de resistores e potência",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-209",
+        "of-211"
+      ],
+      "conceptsTested": [
+        "Associações de resistores e potência"
+      ]
+    },
+    {
+      "id": "fis-ondas-frequencia-comprimento-a",
+      "conceptId": "fis-ondas-frequencia-comprimento",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um vibrador produz ondas de frequência 20 Hz em uma cuba de água. Na região profunda, a velocidade é 0,80 m/s; na região rasa, é 0,50 m/s. A fonte e a fronteira entre regiões permanecem em repouso. Quais são a frequência e o comprimento de onda na região rasa?",
+      "options": [
+        "20 Hz e 0,025 m",
+        "32 Hz e 0,025 m",
+        "20 Hz e 0,040 m",
+        "12,5 Hz e 0,040 m",
+        "32 Hz e 0,040 m"
+      ],
+      "answer": 0,
+      "explanation": "A frequência é fixada pela fonte e permanece 20 Hz ao atravessar a fronteira estacionária. O comprimento de onda na região rasa é λ=v/f=0,50/20=0,025 m. A redução de velocidade modifica λ, não a frequência.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "refracao",
+        "relacao-fundamental"
+      ],
+      "discipline": "fisica",
+      "topic": "Ondulatória",
+      "subtopic": "Propagação e ondas estacionárias",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-288"
+      ],
+      "conceptsTested": [
+        "Propagação e ondas estacionárias"
+      ]
+    },
+    {
+      "id": "fis-ondas-frequencia-comprimento-b",
+      "conceptId": "fis-ondas-frequencia-comprimento",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "O trecho vibrante de uma corda, fixo nas duas extremidades, mede 0,80 m e tem frequência fundamental de 100 Hz. Mantendo a tensão e a densidade linear da corda, reduz-se o comprimento vibrante para 0,50 m. Qual é a nova frequência fundamental?",
+      "options": [
+        "62,5 Hz",
+        "100 Hz",
+        "125 Hz",
+        "160 Hz",
+        "200 Hz"
+      ],
+      "answer": 3,
+      "explanation": "Para a fundamental, f=v/(2L). Como tensão e densidade linear permanecem iguais, a velocidade também permanece. Logo, f₂/f₁=L₁/L₂=0,80/0,50=1,6. A nova frequência é 100·1,6=160 Hz.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "cordas",
+        "ondas-estacionarias"
+      ],
+      "discipline": "fisica",
+      "topic": "Ondulatória",
+      "subtopic": "Propagação e ondas estacionárias",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-288"
+      ],
+      "conceptsTested": [
+        "Propagação e ondas estacionárias"
+      ]
+    },
+    {
+      "id": "qui-arrhenius-a",
+      "conceptId": "qui-arrhenius",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em um experimento, HCl gasoso é dissolvido em água em um frasco, e NaCl sólido é dissolvido em água em outro. As duas soluções conduzem corrente elétrica, mas apenas a primeira apresenta caráter ácido. Qual explicação é compatível com Arrhenius e com a natureza inicial dos solutos?",
+      "options": [
+        "O HCl molecular ioniza em água, formando H₃O⁺ e Cl⁻; o NaCl se dissocia em Na⁺ e Cl⁻.",
+        "O HCl apenas se dispersa como moléculas neutras; o NaCl forma H₃O⁺ e Cl⁻.",
+        "Ambos são ácidos de Arrhenius, pois toda solução condutora é ácida.",
+        "O HCl fornece OH⁻ à água; o NaCl fornece H₃O⁺ à água.",
+        "A corrente nas duas soluções é transportada exclusivamente por elétrons livres, como nos metais."
+      ],
+      "answer": 0,
+      "explanation": "O HCl é molecular e reage com a água: HCl+H₂O→H₃O⁺+Cl⁻. A formação de H₃O⁺ explica o caráter ácido. No NaCl, os íons já compõem o sólido e se separam na dissolução: NaCl→Na⁺+Cl⁻. Os íons móveis explicam a condução; conduzir eletricidade, por si só, não caracteriza um ácido.",
+      "estimatedSeconds": 125,
+      "tags": [
+        "autoral",
+        "arrhenius",
+        "ionizacao",
+        "dissociacao"
+      ],
+      "discipline": "quimica",
+      "topic": "Ácidos, bases e sais",
+      "subtopic": "Arrhenius, ionização e neutralização",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-231",
+        "of-257"
+      ],
+      "conceptsTested": [
+        "Arrhenius, ionização e neutralização"
+      ]
+    },
+    {
+      "id": "qui-arrhenius-b",
+      "conceptId": "qui-arrhenius",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma amostra de 20,0 mL de HCl aquoso 0,150 mol/L será neutralizada com uma solução aquosa de Ca(OH)₂ 0,0100 mol/L. Admita solutos completamente ionizados ou dissociados e ausência de outras reações. Qual volume da solução básica fornece exatamente a quantidade necessária de OH⁻?",
+      "options": [
+        "50,0 mL",
+        "75,0 mL",
+        "100 mL",
+        "150 mL",
+        "300 mL"
+      ],
+      "answer": 3,
+      "explanation": "O HCl fornece 0,0200·0,150=0,00300 mol de H₃O⁺. Cada mol de Ca(OH)₂ fornece dois mols de OH⁻, então a solução básica contém 0,0200 mol de OH⁻ por litro. Como H₃O⁺ e OH⁻ reagem na proporção 1:1, V=0,00300/0,0200=0,150 L=150 mL.",
+      "estimatedSeconds": 135,
+      "tags": [
+        "autoral",
+        "arrhenius",
+        "neutralizacao",
+        "concentracao"
+      ],
+      "discipline": "quimica",
+      "topic": "Ácidos, bases e sais",
+      "subtopic": "Arrhenius, ionização e neutralização",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-231",
+        "of-257"
+      ],
+      "conceptsTested": [
+        "Arrhenius, ionização e neutralização"
+      ]
+    },
+    {
+      "id": "qui-estequiometria-rendimento-a",
+      "conceptId": "qui-estequiometria-rendimento",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em um recipiente, 4,8 g de magnésio puro reagem com uma solução que contém 0,30 mol de HCl, segundo Mg+2 HCl→MgCl₂+H₂. Considere massas molares Mg=24 g/mol e H₂=2,0 g/mol, reação completa e nenhuma reação paralela. Qual é a massa máxima de H₂ produzida?",
+      "options": [
+        "0,20 g",
+        "0,30 g",
+        "0,40 g",
+        "0,60 g",
+        "1,20 g"
+      ],
+      "answer": 1,
+      "explanation": "Há 4,8/24=0,20 mol de Mg, que exigiria 0,40 mol de HCl para reagir totalmente. Como existem apenas 0,30 mol de HCl, ele é o limitante. Pela equação, formam-se 0,30/2=0,15 mol de H₂, correspondentes a 0,15·2,0=0,30 g.",
+      "estimatedSeconds": 135,
+      "tags": [
+        "autoral",
+        "reagente-limitante",
+        "mol"
+      ],
+      "discipline": "quimica",
+      "topic": "Transformações químicas",
+      "subtopic": "Reagente limitante, pureza e rendimento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-214",
+        "of-217"
+      ],
+      "conceptsTested": [
+        "Reagente limitante, pureza e rendimento"
+      ]
+    },
+    {
+      "id": "qui-estequiometria-rendimento-b",
+      "conceptId": "qui-estequiometria-rendimento",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma amostra de calcário de 125 g contém 80% de CaCO₃ em massa; as impurezas não liberam gases no ensaio. Ela é aquecida para produzir CO₂ pela reação CaCO₃→CaO+CO₂. A massa de CO₂ recolhida corresponde a 80% da produção teórica. Dados: M(CaCO₃)=100 g/mol e M(CO₂)=44 g/mol. Qual é a massa de CO₂ recolhida?",
+      "options": [
+        "28,2 g",
+        "35,2 g",
+        "44,0 g",
+        "55,0 g",
+        "70,4 g"
+      ],
+      "answer": 1,
+      "explanation": "A massa de CaCO₃ puro é 125·0,80=100 g, ou 1 mol. Pela proporção 1:1, a produção teórica é 1 mol de CO₂, equivalente a 44 g. Recolhendo 80% desse valor, obtêm-se 44·0,80=35,2 g. Pureza e rendimento atuam em etapas distintas do cálculo.",
+      "estimatedSeconds": 140,
+      "tags": [
+        "autoral",
+        "pureza",
+        "rendimento"
+      ],
+      "discipline": "quimica",
+      "topic": "Transformações químicas",
+      "subtopic": "Reagente limitante, pureza e rendimento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-214",
+        "of-217"
+      ],
+      "conceptsTested": [
+        "Reagente limitante, pureza e rendimento"
+      ]
+    },
+    {
+      "id": "qui-equilibrio-deslocamento-a",
+      "conceptId": "qui-equilibrio-deslocamento",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Considere o equilíbrio gasoso N₂(g)+3 H₂(g)⇌2 NH₃(g), cuja reação direta é exotérmica. Partindo de uma mistura em equilíbrio, quais mudanças, consideradas pelo efeito sobre a composição de equilíbrio, favorecem ambas a formação de NH₃? Admita tempo suficiente para atingir o novo equilíbrio.",
+      "options": [
+        "Aumentar o volume e aumentar a temperatura.",
+        "Diminuir o volume e diminuir a temperatura.",
+        "Aumentar o volume e diminuir a pressão por expansão.",
+        "Adicionar catalisador e aumentar a temperatura.",
+        "Diminuir o volume e adicionar catalisador, pois este aumenta a constante de equilíbrio."
+      ],
+      "answer": 1,
+      "explanation": "A compressão favorece o lado com menor quantidade de matéria gasosa: dois mols nos produtos contra quatro nos reagentes. A diminuição da temperatura favorece a direção exotérmica, também a direta. O catalisador acelera a chegada ao equilíbrio, mas não altera sua constante nem a composição final para uma dada temperatura.",
+      "estimatedSeconds": 115,
+      "tags": [
+        "autoral",
+        "le-chatelier",
+        "pressao",
+        "temperatura"
+      ],
+      "discipline": "quimica",
+      "topic": "Equilíbrio químico",
+      "subtopic": "Pressão, temperatura e quociente reacional",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-220",
+        "of-219"
+      ],
+      "conceptsTested": [
+        "Pressão, temperatura e quociente reacional"
+      ]
+    },
+    {
+      "id": "qui-equilibrio-deslocamento-b",
+      "conceptId": "qui-equilibrio-deslocamento",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Para 2 NO₂(g)⇌N₂O₄(g), uma mistura em equilíbrio tem [NO₂]=0,20 mol/L e [N₂O₄]=0,40 mol/L. Injeta-se NO₂ rapidamente, mantendo temperatura e volume, de modo que, imediatamente após a injeção, [NO₂]=0,40 mol/L e [N₂O₄] ainda é 0,40 mol/L. Comparando Qc=[N₂O₄]/[NO₂]² com Kc, qual evolução líquida é prevista?",
+      "options": [
+        "Qc<Kc; consumo de NO₂ e formação de N₂O₄.",
+        "Qc>Kc; consumo de NO₂ e formação de N₂O₄.",
+        "Qc<Kc; consumo de N₂O₄ e formação de NO₂.",
+        "Qc=Kc; nenhuma evolução líquida ocorre.",
+        "Qc>Kc; consumo de N₂O₄ e formação de NO₂."
+      ],
+      "answer": 0,
+      "explanation": "Antes da injeção, Kc=0,40/(0,20)²=10, usando as concentrações em mol/L. Logo após a injeção, Qc=0,40/(0,40)²=2,5. Como a temperatura não mudou, Kc permanece 10. Qc<Kc indica evolução direta, consumindo NO₂ e formando N₂O₄ até restabelecer a razão de equilíbrio.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "autoral",
+        "quociente-reacional",
+        "equilibrio"
+      ],
+      "discipline": "quimica",
+      "topic": "Equilíbrio químico",
+      "subtopic": "Pressão, temperatura e quociente reacional",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-220",
+        "of-219"
+      ],
+      "conceptsTested": [
+        "Pressão, temperatura e quociente reacional"
+      ]
+    },
+    {
+      "id": "qui-eletroquimica-a",
+      "conceptId": "qui-eletroquimica",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma pilha opera em condições padrão com os pares Zn²⁺/Zn e Cu²⁺/Cu, cujos potenciais padrão de redução são −0,76 V e +0,34 V, respectivamente. Qual alternativa descreve corretamente o fluxo de elétrons no circuito externo e a diferença de potencial padrão da pilha?",
+      "options": [
+        "Do cobre para o zinco; 1,10 V.",
+        "Do zinco para o cobre; 0,42 V.",
+        "Do zinco para o cobre; −1,10 V.",
+        "Do cobre para o zinco; 0,42 V.",
+        "Do zinco para o cobre; 1,10 V."
+      ],
+      "answer": 4,
+      "explanation": "O par Cu²⁺/Cu tem maior potencial de redução e constitui o cátodo. O zinco sofre oxidação no ânodo, liberando elétrons que seguem ao eletrodo de cobre pelo circuito externo. A diferença de potencial é 0,34−(−0,76)=1,10 V.",
+      "estimatedSeconds": 115,
+      "tags": [
+        "autoral",
+        "pilha",
+        "potenciais"
+      ],
+      "discipline": "quimica",
+      "topic": "Eletroquímica",
+      "subtopic": "Pilhas e eletrólise quantitativa",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-215"
+      ],
+      "conceptsTested": [
+        "Pilhas e eletrólise quantitativa"
+      ]
+    },
+    {
+      "id": "qui-eletroquimica-b",
+      "conceptId": "qui-eletroquimica",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma peça é revestida de cobre por eletrólise de uma solução contendo Cu²⁺. Passa pelo circuito uma carga de 9.650 C, e toda a carga catódica é usada na reação Cu²⁺+2 e⁻→Cu. Use F=96.500 C/mol de elétrons e M(Cu)=63,5 g/mol. Qual massa de cobre é depositada?",
+      "options": [
+        "1,5875 g",
+        "3,175 g",
+        "6,35 g",
+        "12,7 g",
+        "63,5 g"
+      ],
+      "answer": 1,
+      "explanation": "A carga corresponde a 9.650/96.500=0,100 mol de elétrons. Cada mol de cobre exige dois mols de elétrons, portanto são depositados 0,0500 mol de Cu. A massa é 0,0500·63,5=3,175 g.",
+      "estimatedSeconds": 120,
+      "tags": [
+        "autoral",
+        "eletrolise",
+        "lei-de-faraday"
+      ],
+      "discipline": "quimica",
+      "topic": "Eletroquímica",
+      "subtopic": "Pilhas e eletrólise quantitativa",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-215"
+      ],
+      "conceptsTested": [
+        "Pilhas e eletrólise quantitativa"
+      ]
+    },
+    {
+      "id": "qui-interacoes-polaridade-a",
+      "conceptId": "qui-interacoes-polaridade",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Etanol, CH₃CH₂OH, e dimetiléter, CH₃OCH₃, têm a mesma fórmula molecular e a mesma massa molar. Em uma comparação à mesma pressão, o etanol apresenta temperatura de ebulição bem maior. Qual característica explica principalmente essa diferença?",
+      "options": [
+        "O etanol possui ligações iônicas entre carbono e oxigênio.",
+        "O dimetiléter não apresenta nenhuma interação entre suas moléculas.",
+        "O dimetiléter precisa romper todas as ligações covalentes ao entrar em ebulição.",
+        "As moléculas de etanol têm maior massa molar que as de dimetiléter.",
+        "O etanol forma ligações de hidrogênio entre suas próprias moléculas por meio do grupo O–H."
+      ],
+      "answer": 4,
+      "explanation": "O grupo O–H do etanol permite que suas moléculas doem e aceitem ligações de hidrogênio entre si. O dimetiléter tem oxigênio, mas não possui hidrogênio ligado a O, N ou F para doar esse tipo de interação entre suas próprias moléculas. A ebulição separa moléculas, sem exigir a quebra de todas as ligações covalentes internas.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "ligacao-de-hidrogenio",
+        "ebulicao"
+      ],
+      "discipline": "quimica",
+      "topic": "Estrutura e propriedades",
+      "subtopic": "Interações intermoleculares e solubilidade",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-294",
+        "of-297",
+        "of-298"
+      ],
+      "conceptsTested": [
+        "Interações intermoleculares e solubilidade"
+      ]
+    },
+    {
+      "id": "qui-interacoes-polaridade-b",
+      "conceptId": "qui-interacoes-polaridade",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em uma extração, uma solução diluída de iodo molecular, I₂, em água é agitada com hexano. Após a separação das fases, observa-se que a maior parte do I₂ está na fase de hexano. Desconsidere reações químicas. Qual interpretação molecular é mais adequada?",
+      "options": [
+        "O I₂ é um sal iônico que se dissocia em íons no hexano.",
+        "O hexano é mais polar que a água e, por isso, retém qualquer soluto.",
+        "A transferência exige converter todas as moléculas de I₂ em átomos isolados.",
+        "As moléculas apolares de I₂ são mais bem solvatadas no meio apolar do hexano, sobretudo por interações de dispersão.",
+        "A água não possui interações intermoleculares, enquanto o hexano forma ligações de hidrogênio."
+      ],
+      "answer": 3,
+      "explanation": "I₂ e hexano são apolares e interagem principalmente por forças de dispersão. A entrada de I₂ na água não compensa tão favoravelmente a reorganização da rede de interações da água. A distribuição observada decorre do balanço de interações nos dois solventes, sem ionização ou quebra de I₂.",
+      "estimatedSeconds": 120,
+      "tags": [
+        "autoral",
+        "polaridade",
+        "solubilidade"
+      ],
+      "discipline": "quimica",
+      "topic": "Estrutura e propriedades",
+      "subtopic": "Interações intermoleculares e solubilidade",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-294",
+        "of-297",
+        "of-298"
+      ],
+      "conceptsTested": [
+        "Interações intermoleculares e solubilidade"
+      ]
+    },
+    {
+      "id": "bio-segregacao-heranca-a",
+      "conceptId": "bio-segregacao-heranca",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em uma planta, os genes A/a e B/b estão em pares de cromossomos distintos e apresentam dominância completa. Uma planta AaBb é cruzada com uma planta aabb. Desconsidere seleção entre descendentes. Qual é a probabilidade de um descendente apresentar o caráter dominante de A e o caráter recessivo de b?",
+      "options": [
+        "1/16",
+        "1/8",
+        "1/4",
+        "1/2",
+        "3/4"
+      ],
+      "answer": 2,
+      "explanation": "No cruzamento Aa×aa, a probabilidade de apresentar o caráter dominante é 1/2. Em Bb×bb, a probabilidade do caráter recessivo, bb, também é 1/2. Como os genes segregam independentemente, a probabilidade conjunta é (1/2)·(1/2)=1/4, correspondente ao genótipo Aabb.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "segregacao-independente",
+        "cruzamento-teste"
+      ],
+      "discipline": "biologia",
+      "topic": "Genética",
+      "subtopic": "Meiose e segregação dos alelos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-235",
+        "of-238",
+        "of-240"
+      ],
+      "conceptsTested": [
+        "Meiose e segregação dos alelos"
+      ]
+    },
+    {
+      "id": "bio-segregacao-heranca-b",
+      "conceptId": "bio-segregacao-heranca",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma célula com 2n=6 inicia a meiose. Na meiose I, apenas um par de cromossomos homólogos não se separa, seguindo ambos para a mesma célula-filha. Os demais pares segregam normalmente, e a meiose II ocorre sem falhas. Contando cromossomos pelos centrômeros, quais são os números de cromossomos dos quatro produtos finais?",
+      "options": [
+        "3, 3, 3 e 3",
+        "4, 3, 3 e 2",
+        "4, 4, 3 e 3",
+        "6, 6, 0 e 0",
+        "4, 4, 2 e 2"
+      ],
+      "answer": 4,
+      "explanation": "O número haploide normal é n=3. Após a não disjunção na meiose I, uma célula recebe quatro cromossomos e a outra, dois, ainda duplicados. A meiose II separa suas cromátides normalmente. Assim, a primeira origina dois produtos com quatro cromossomos e a segunda, dois com dois: n+1, n+1, n−1 e n−1.",
+      "estimatedSeconds": 140,
+      "tags": [
+        "autoral",
+        "meiose",
+        "nao-disjuncao"
+      ],
+      "discipline": "biologia",
+      "topic": "Genética",
+      "subtopic": "Meiose e segregação dos alelos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-235",
+        "of-238",
+        "of-240"
+      ],
+      "conceptsTested": [
+        "Meiose e segregação dos alelos"
+      ]
+    },
+    {
+      "id": "bio-selecao-variabilidade-a",
+      "conceptId": "bio-selecao-variabilidade",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Antes da aplicação de um inseticida, uma pequena parcela de uma população de insetos já possuía uma variante hereditária que conferia resistência. Após várias gerações sob aplicação do produto, a frequência dessa variante aumentou. Qual explicação corresponde à seleção natural?",
+      "options": [
+        "Os indivíduos resistentes sobreviveram e deixaram, em média, mais descendentes, elevando a frequência da variante preexistente.",
+        "O inseticida fez todos os insetos produzirem deliberadamente a variante necessária.",
+        "Cada inseto sensível se transformou em resistente durante sua vida e transmitiu obrigatoriamente essa transformação.",
+        "A resistência prova que as mutações surgem sempre em resposta à utilidade futura.",
+        "A frequência aumentou porque todas as variantes hereditárias conferem o mesmo sucesso reprodutivo em qualquer ambiente."
+      ],
+      "answer": 0,
+      "explanation": "A variação hereditária já existia antes da exposição. O inseticida altera as condições de sobrevivência e reprodução, favorecendo os portadores da resistência. O aumento da frequência ocorre entre gerações pelo sucesso reprodutivo diferencial, sem exigir mutações dirigidas pela necessidade.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "selecao-natural",
+        "resistencia"
+      ],
+      "discipline": "biologia",
+      "topic": "Evolução",
+      "subtopic": "Seleção natural e deriva genética",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-260",
+        "of-261"
+      ],
+      "conceptsTested": [
+        "Seleção natural e deriva genética"
+      ]
+    },
+    {
+      "id": "bio-selecao-variabilidade-b",
+      "conceptId": "bio-selecao-variabilidade",
+      "difficulty": 2,
+      "type": "boolean",
+      "prompt": "Uma enchente reduz uma população de plantas a poucos indivíduos. A sobrevivência, nesse evento, independeu dos alelos de um marcador neutro estudado. Entre os sobreviventes, um dos alelos tornou-se mais frequente por acaso. Julgue: essa mudança de frequência é compatível com deriva genética associada a um gargalo populacional.",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 0,
+      "explanation": "A afirmação é verdadeira. Como a sobrevivência independeu do marcador, a mudança descrita resultou de amostragem aleatória, característica da deriva genética. A forte redução no número de indivíduos constitui um gargalo populacional. O aumento da frequência, isoladamente, não demonstra vantagem adaptativa.",
+      "estimatedSeconds": 90,
+      "tags": [
+        "autoral",
+        "deriva-genetica",
+        "gargalo-populacional"
+      ],
+      "discipline": "biologia",
+      "topic": "Evolução",
+      "subtopic": "Seleção natural e deriva genética",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-260",
+        "of-261"
+      ],
+      "conceptsTested": [
+        "Seleção natural e deriva genética"
+      ]
+    },
+    {
+      "id": "bio-metabolismo-energetico-a",
+      "conceptId": "bio-metabolismo-energetico",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em uma massa de pão, leveduras continuam consumindo glicose e produzindo ATP quando o oxigênio disponível se esgota. Elas passam a liberar etanol e CO₂. Qual função da fermentação alcoólica permite a continuidade da produção de ATP pela glicólise?",
+      "options": [
+        "Produzir oxigênio para a cadeia respiratória mitocondrial.",
+        "Fixar o CO₂ liberado em moléculas de glicose pelo ciclo de Calvin.",
+        "Utilizar a água como aceptor final de elétrons para realizar fosforilação oxidativa.",
+        "Substituir todas as enzimas da glicólise por enzimas dos cloroplastos.",
+        "Regenerar NAD⁺ a partir de NADH, mantendo disponível o aceptor de elétrons usado na glicólise."
+      ],
+      "answer": 4,
+      "explanation": "A glicólise precisa de NAD⁺ para oxidar um de seus intermediários. Sem regeneração, esse aceptor se esgotaria. Na fermentação alcoólica, a redução do acetaldeído a etanol reoxida NADH a NAD⁺, permitindo que a glicólise continue produzindo ATP por fosforilação em nível de substrato.",
+      "estimatedSeconds": 125,
+      "tags": [
+        "autoral",
+        "fermentacao",
+        "nad",
+        "glicolise"
+      ],
+      "discipline": "biologia",
+      "topic": "Biologia celular",
+      "subtopic": "Fermentação e fotossíntese",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-233",
+        "of-234"
+      ],
+      "conceptsTested": [
+        "Fermentação e fotossíntese"
+      ]
+    },
+    {
+      "id": "bio-metabolismo-energetico-b",
+      "conceptId": "bio-metabolismo-energetico",
+      "difficulty": 2,
+      "type": "boolean",
+      "prompt": "Em dois cultivos de algas sob luz, marca-se com um isótopo de oxigênio a água do primeiro e o CO₂ do segundo. Julgue a previsão, considerando apenas a origem direta do O₂ na fotossíntese e desconsiderando trocas isotópicas posteriores: o O₂ liberado imediatamente será marcado no cultivo que recebeu CO₂ marcado, pois o oxigênio gasoso da fotossíntese vem da quebra do CO₂.",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 1,
+      "explanation": "A previsão é falsa. O O₂ da fotossíntese oxigênica provém da oxidação da água nas reações luminosas. Portanto, a marcação direta do O₂ acompanha a água marcada. O CO₂ fornece principalmente o carbono incorporado à matéria orgânica; seus oxigênios não são a origem direta do O₂ liberado.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "fotossintese",
+        "tracador-isotopico"
+      ],
+      "discipline": "biologia",
+      "topic": "Biologia celular",
+      "subtopic": "Fermentação e fotossíntese",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-233",
+        "of-234"
+      ],
+      "conceptsTested": [
+        "Fermentação e fotossíntese"
+      ]
+    },
+    {
+      "id": "bio-fluxo-energia-eutrofizacao-a",
+      "conceptId": "bio-fluxo-energia-eutrofizacao",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em uma cadeia simplificada formada por capim, gafanhotos, sapos e serpentes, a produção líquida do capim disponibiliza 20.000 kJ em certo período. Admita que 10% da energia disponível em cada nível seja incorporada à produção do nível seguinte. Quanta energia será incorporada à produção das serpentes nesse período?",
+      "options": [
+        "2 kJ",
+        "20 kJ",
+        "200 kJ",
+        "2.000 kJ",
+        "18.000 kJ"
+      ],
+      "answer": 1,
+      "explanation": "Há três transferências: capim→gafanhotos, gafanhotos→sapos e sapos→serpentes. A energia passa de 20.000 para 2.000, depois para 200 e finalmente para 20 kJ. Deve-se aplicar a eficiência a cada transferência, não apenas uma vez à cadeia inteira.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "autoral",
+        "niveis-troficos",
+        "eficiencia-ecologica"
+      ],
+      "discipline": "biologia",
+      "topic": "Ecologia",
+      "subtopic": "Fluxo de energia e alterações aquáticas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-268",
+        "of-270",
+        "of-271"
+      ],
+      "conceptsTested": [
+        "Fluxo de energia e alterações aquáticas"
+      ]
+    },
+    {
+      "id": "bio-fluxo-energia-eutrofizacao-b",
+      "conceptId": "bio-fluxo-energia-eutrofizacao",
+      "difficulty": 2,
+      "type": "order",
+      "prompt": "Um lago recebe esgoto rico em nutrientes e desenvolve um episódio de eutrofização. Ordene os eventos abaixo para reconstruir a cadeia causal descrita, desde a entrada de nutrientes até o consumo de oxigênio pela decomposição da biomassa algal acumulada.",
+      "options": [
+        "Intensificação da decomposição aeróbia dessa biomassa, com consumo de oxigênio dissolvido.",
+        "Entrada de esgoto rico em nutrientes no lago.",
+        "Acúmulo de biomassa algal morta após a proliferação.",
+        "Proliferação intensa de algas favorecida pelos nutrientes."
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "A entrada de nutrientes favorece a proliferação de algas. A morte de parte dessa biomassa amplia a oferta de matéria orgânica aos decompositores. A decomposição aeróbia consome oxigênio dissolvido, podendo provocar hipóxia. A ordem representa essa cadeia causal; processos ecológicos podem se sobrepor no tempo.",
+      "estimatedSeconds": 115,
+      "tags": [
+        "autoral",
+        "eutrofizacao",
+        "decomposicao"
+      ],
+      "discipline": "biologia",
+      "topic": "Ecologia",
+      "subtopic": "Fluxo de energia e alterações aquáticas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-268",
+        "of-270",
+        "of-271"
+      ],
+      "conceptsTested": [
+        "Fluxo de energia e alterações aquáticas"
+      ]
+    },
+    {
+      "id": "bio-plantas-ambiente-terrestre-a",
+      "conceptId": "bio-plantas-ambiente-terrestre",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Ao comparar musgos e pinheiros, uma estudante observa que a fecundação dos musgos depende de uma película externa de água para o deslocamento dos gametas masculinos, enquanto a dos pinheiros não apresenta essa exigência. Qual característica dos pinheiros explica diretamente essa diferença?",
+      "options": [
+        "A ausência de gametas masculinos em todas as plantas com sementes.",
+        "A transformação direta de raízes em embriões sem fecundação.",
+        "A substituição de todos os tecidos reprodutivos por vasos condutores.",
+        "A presença de flores com ovário envolvendo os óvulos.",
+        "O transporte do gametófito masculino pelo pólen e a condução dos gametas pelo tubo polínico."
+      ],
+      "answer": 4,
+      "explanation": "O grão de pólen contém o gametófito masculino e pode chegar ao óvulo sem uma película externa de água. Após germinar, o tubo polínico conduz os gametas masculinos até a região de fecundação. Pinheiros são gimnospermas, portanto a explicação não envolve flores com ovário.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "autoral",
+        "polen",
+        "adaptacao-terrestre"
+      ],
+      "discipline": "biologia",
+      "topic": "Botânica",
+      "subtopic": "Reprodução e economia de água",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-264"
+      ],
+      "conceptsTested": [
+        "Reprodução e economia de água"
+      ]
+    },
+    {
+      "id": "bio-plantas-ambiente-terrestre-b",
+      "conceptId": "bio-plantas-ambiente-terrestre",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em um experimento com uma planta C3 sob iluminação constante, a redução da água disponível no solo provoca fechamento dos estômatos. Mantidas as demais condições, qual combinação descreve uma consequência imediata desse fechamento e um possível efeito sobre a fotossíntese?",
+      "options": [
+        "Redução da transpiração e restrição à entrada de CO₂, que pode limitar a fixação de carbono.",
+        "Aumento da transpiração e maior entrada de CO₂.",
+        "Interrupção da perda de água e aumento obrigatório da fotossíntese em qualquer condição.",
+        "Aumento da absorção de luz pela clorofila e produção de CO₂ pelos estômatos.",
+        "Conversão dos estômatos em raízes, permitindo absorção de água do ar."
+      ],
+      "answer": 0,
+      "explanation": "Os estômatos são vias tanto de saída de vapor de água quanto de entrada de CO₂. Seu fechamento diminui a transpiração e ajuda a conservar água, mas restringe a difusão de CO₂ para o interior da folha. Em uma planta C3, essa redução pode limitar a carboxilação e a fixação líquida de carbono.",
+      "estimatedSeconds": 105,
+      "tags": [
+        "autoral",
+        "estomatos",
+        "transpiracao",
+        "fotossintese"
+      ],
+      "discipline": "biologia",
+      "topic": "Botânica",
+      "subtopic": "Reprodução e economia de água",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-264"
+      ],
+      "conceptsTested": [
+        "Reprodução e economia de água"
+      ]
+    },
+    {
+      "id": "por-001-a",
+      "conceptId": "por-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Leia o trecho original: ‘A biblioteca ampliou o horário de atendimento. Embora essa medida facilite o acesso, ela não resolve a escassez de livros.’ A oração iniciada por ‘embora’",
+      "options": [
+        "apresenta a causa suficiente da escassez de livros.",
+        "estabelece uma condição necessária para ampliar o horário.",
+        "reconhece um benefício que não invalida a crítica apresentada.",
+        "conclui que o horário ampliado deve ser imediatamente suspenso.",
+        "explica por que o acesso se tornou mais difícil."
+      ],
+      "answer": 2,
+      "explanation": "A oração concessiva reconhece que ampliar o horário facilita o acesso. O autor mantém, apesar desse benefício, a avaliação de que a escassez permanece. Não há afirmação de que a medida causa a escassez ou deva ser suspensa.",
+      "estimatedSeconds": 65,
+      "tags": [
+        "coesao",
+        "concessao",
+        "leitura"
+      ],
+      "discipline": "portugues",
+      "topic": "Leitura e argumentação",
+      "subtopic": "Coesão e relações lógico-discursivas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-022",
+        "of-023"
+      ],
+      "conceptsTested": [
+        "Coesão e relações lógico-discursivas"
+      ]
+    },
+    {
+      "id": "por-001-b",
+      "conceptId": "por-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em ‘Os ônibus passaram a circular com maior frequência; por isso, o tempo médio de espera caiu’, qual substituição mantém a relação argumentativa e a coerência do período?",
+      "options": [
+        "portanto",
+        "apesar disso",
+        "em contrapartida",
+        "ainda assim",
+        "por outro lado"
+      ],
+      "answer": 0,
+      "explanation": "‘Por isso’ introduz uma consequência da maior frequência dos ônibus. ‘Portanto’ preserva essa conclusão. As demais expressões introduziriam oposição, concessão ou contraste sem apoio no encadeamento apresentado.",
+      "estimatedSeconds": 50,
+      "tags": [
+        "conclusao",
+        "conectivos",
+        "coesao"
+      ],
+      "discipline": "portugues",
+      "topic": "Leitura e argumentação",
+      "subtopic": "Coesão e relações lógico-discursivas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-022",
+        "of-023"
+      ],
+      "conceptsTested": [
+        "Coesão e relações lógico-discursivas"
+      ]
+    },
+    {
+      "id": "por-002-a",
+      "conceptId": "por-002",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Compare duas frases originais: I. ‘Pelos dados disponíveis, a queda no consumo deve continuar.’ II. ‘Segundo o regulamento, o visitante deve apresentar o ingresso.’ O verbo ‘dever’ expressa, respectivamente,",
+      "options": [
+        "obrigação e hipótese.",
+        "permissão e certeza absoluta.",
+        "desejo e proibição.",
+        "probabilidade e obrigação.",
+        "certeza absoluta e recomendação facultativa."
+      ],
+      "answer": 3,
+      "explanation": "Em I, os dados sustentam uma previsão provável, e não uma obrigação do consumo. Em II, a referência ao regulamento estabelece uma exigência para a conduta do visitante. O mesmo verbo recebe valor epistêmico e deôntico conforme o contexto.",
+      "estimatedSeconds": 70,
+      "tags": [
+        "modalizacao",
+        "epistemica",
+        "deontica"
+      ],
+      "discipline": "portugues",
+      "topic": "Enunciação",
+      "subtopic": "Modalização epistêmica e deôntica",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-032",
+        "of-033"
+      ],
+      "conceptsTested": [
+        "Modalização epistêmica e deôntica"
+      ]
+    },
+    {
+      "id": "por-002-b",
+      "conceptId": "por-002",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um relatório contém a frase: ‘A alteração pode ter contribuído para a redução das filas.’ Na revisão, ela é substituída por ‘A alteração foi a única causa da redução das filas.’ A mudança",
+      "options": [
+        "apenas torna mais formal uma conclusão com o mesmo grau de certeza.",
+        "transforma uma hipótese parcial em uma afirmação causal categórica e exclusiva.",
+        "reduz a responsabilidade do autor pela relação causal afirmada.",
+        "troca uma obrigação administrativa por uma possibilidade de execução.",
+        "preserva o caráter hipotético por manter a referência ao passado."
+      ],
+      "answer": 1,
+      "explanation": "‘Pode ter contribuído’ apresenta possibilidade e admite outros fatores. ‘Foi a única causa’ afirma a relação como certa e exclui causas adicionais. A revisão aumenta simultaneamente o grau de compromisso e o alcance causal da afirmação.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "modalizacao",
+        "leitura-critica",
+        "certeza"
+      ],
+      "discipline": "portugues",
+      "topic": "Enunciação",
+      "subtopic": "Modalização epistêmica e deôntica",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-032",
+        "of-033"
+      ],
+      "conceptsTested": [
+        "Modalização epistêmica e deôntica"
+      ]
+    },
+    {
+      "id": "por-003-a",
+      "conceptId": "por-003",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma estudante escreve ‘a gente vai apresentar os resultados’ em uma mensagem ao grupo e ‘apresentaremos os resultados’ no resumo de um congresso. A comparação permite concluir que",
+      "options": [
+        "a primeira construção impede a transmissão de uma informação precisa.",
+        "as duas construções pertencem necessariamente a regiões diferentes do país.",
+        "o emprego da primeira construção comprova desconhecimento da segunda.",
+        "somente a flexão em primeira pessoa do plural pode expressar ação coletiva.",
+        "a estudante seleciona recursos diferentes conforme gênero e situação de comunicação."
+      ],
+      "answer": 4,
+      "explanation": "As duas construções expressam ação de um grupo. A escolha entre elas pode responder ao grau de formalidade e às convenções do gênero. A alternância observada evidencia um repertório de escolhas, sem demonstrar incapacidade linguística.",
+      "estimatedSeconds": 65,
+      "tags": [
+        "variacao-linguistica",
+        "adequacao",
+        "generos"
+      ],
+      "discipline": "portugues",
+      "topic": "Língua e sociedade",
+      "subtopic": "Variação linguística e adequação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-041",
+        "of-035"
+      ],
+      "conceptsTested": [
+        "Variação linguística e adequação"
+      ]
+    },
+    {
+      "id": "por-003-b",
+      "conceptId": "por-003",
+      "difficulty": 2,
+      "type": "boolean",
+      "prompt": "Em uma pesquisa sobre fala cotidiana, formas diferentes da norma-padrão aparecem de modo recorrente entre falantes de uma comunidade. Julgue: essa recorrência autoriza classificá-las, por si só, como sinais de incapacidade dos falantes para organizar o pensamento.",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 1,
+      "explanation": "A recorrência pode indicar regularidades de uma variedade linguística. A distância em relação à norma-padrão não mede capacidade de raciocínio. A análise deve distinguir descrição do uso, convenções de escrita formal e preconceito contra grupos de falantes.",
+      "estimatedSeconds": 60,
+      "tags": [
+        "variacao-linguistica",
+        "preconceito-linguistico"
+      ],
+      "discipline": "portugues",
+      "topic": "Língua e sociedade",
+      "subtopic": "Variação linguística e adequação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-041",
+        "of-035"
+      ],
+      "conceptsTested": [
+        "Variação linguística e adequação"
+      ]
+    },
+    {
+      "id": "por-004-a",
+      "conceptId": "por-004",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma campanha de uma escola usa o provérbio ‘Quem espera sempre alcança’ como referência e cria o slogan original ‘Quem espera o sinal abrir sempre atravessa com mais segurança’. A retomada",
+      "options": [
+        "é citação literal, pois conserva integralmente o provérbio.",
+        "elimina a relação entre textos porque altera palavras do original.",
+        "utiliza uma formulação reconhecível para deslocá-la ao tema da segurança viária.",
+        "preserva exatamente a tese de que basta aguardar para atingir qualquer objetivo.",
+        "constitui apenas uma definição técnica de travessia, sem efeito intertextual."
+      ],
+      "answer": 2,
+      "explanation": "A estrutura ‘Quem espera...’ convoca a memória do provérbio, enquanto o complemento a direciona à travessia. A transformação produz um novo sentido persuasivo; a existência de intertextualidade não depende de repetição integral.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "intertextualidade",
+        "recontextualizacao",
+        "publicidade"
+      ],
+      "discipline": "portugues",
+      "topic": "Relações entre textos",
+      "subtopic": "Paráfrase, paródia e intertextualidade",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-024",
+        "of-025"
+      ],
+      "conceptsTested": [
+        "Paráfrase, paródia e intertextualidade"
+      ]
+    },
+    {
+      "id": "por-004-b",
+      "conceptId": "por-004",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Considere o enunciado original: ‘Abrir novos espaços de leitura amplia as oportunidades de encontro com os livros.’ Qual reformulação funciona como paráfrase, preservando seu núcleo de sentido?",
+      "options": [
+        "A criação de lugares destinados à leitura aumenta as possibilidades de contato com livros.",
+        "A abertura de bibliotecas garante que todos se tornem leitores frequentes.",
+        "A leitura só pode ocorrer em locais construídos especificamente para essa finalidade.",
+        "Multiplicar salas de leitura dispensa a oferta de livros em outros espaços.",
+        "O contato com livros deve preceder a criação de novos locais de leitura."
+      ],
+      "answer": 0,
+      "explanation": "A alternativa correta reformula ‘abrir novos espaços’ e ‘ampliar oportunidades’ sem acrescentar garantias, exclusividade ou obrigação. As outras alteram o alcance da tese por meio de ‘todos’, ‘só’, ‘dispensa’ ou ‘deve’.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "parafrase",
+        "alcance-da-afirmacao",
+        "intertextualidade"
+      ],
+      "discipline": "portugues",
+      "topic": "Relações entre textos",
+      "subtopic": "Paráfrase, paródia e intertextualidade",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-024",
+        "of-025"
+      ],
+      "conceptsTested": [
+        "Paráfrase, paródia e intertextualidade"
+      ]
+    },
+    {
+      "id": "his-001-a",
+      "conceptId": "his-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um painel de exposição afirma: ‘Em Atenas, no século V a.C., os cidadãos podiam deliberar na assembleia, mas numerosos habitantes não tinham direitos políticos.’ Essa combinação evidencia",
+      "options": [
+        "representação parlamentar eleita por sufrágio universal.",
+        "igualdade política entre cidadãos, metecos e pessoas escravizadas.",
+        "ausência de decisões coletivas por inexistir cidadania universal.",
+        "participação direta de um corpo cívico socialmente limitado.",
+        "identidade entre a cidadania ateniense e a cidadania brasileira contemporânea."
+      ],
+      "answer": 3,
+      "explanation": "A participação dos cidadãos era direta em instituições como a assembleia. O corpo cívico, porém, excluía mulheres, metecos e escravizados. A restrição de quem participa não transforma automaticamente a democracia direta em representativa.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "atenas",
+        "cidadania",
+        "democracia"
+      ],
+      "discipline": "historia",
+      "topic": "Antiguidade e política",
+      "subtopic": "Cidadania e democracia ateniense",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-389",
+        "of-392"
+      ],
+      "conceptsTested": [
+        "Cidadania e democracia ateniense"
+      ]
+    },
+    {
+      "id": "his-001-b",
+      "conceptId": "his-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Ao comparar Atenas clássica com democracias representativas modernas, um estudante usa dois critérios: quem pode participar e como as decisões são tomadas. Essa distinção é necessária porque",
+      "options": [
+        "o sorteio de cargos, onde existe, garante a participação de todos os habitantes.",
+        "a extensão da cidadania e a forma de participação são dimensões diferentes da organização política.",
+        "eleições e assembleias têm sempre as mesmas regras de inclusão social.",
+        "toda democracia direta exige que mulheres e estrangeiros sejam excluídos.",
+        "a existência de representantes elimina qualquer participação política dos cidadãos."
+      ],
+      "answer": 1,
+      "explanation": "‘Quem participa’ trata da inclusão no corpo de cidadãos; ‘como participa’ trata dos mecanismos decisórios. Atenas permite observar participação direta com cidadania restrita, sem transformar essa combinação histórica em necessidade de toda democracia direta.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "democracia-direta",
+        "representacao",
+        "comparacao-historica"
+      ],
+      "discipline": "historia",
+      "topic": "Antiguidade e política",
+      "subtopic": "Cidadania e democracia ateniense",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-389",
+        "of-392"
+      ],
+      "conceptsTested": [
+        "Cidadania e democracia ateniense"
+      ]
+    },
+    {
+      "id": "his-002-a",
+      "conceptId": "his-002",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em uma oficina, um artesão organizava várias etapas de produção. Em uma fábrica industrial, cada trabalhador passou a executar uma operação repetida, vinculada ao ritmo de máquinas e supervisores. A transformação descrita favoreceu",
+      "options": [
+        "o retorno à organização doméstica autônoma da produção.",
+        "a eliminação da divisão técnica do trabalho entre trabalhadores.",
+        "a substituição do trabalho assalariado por obrigações servis.",
+        "a redução necessária da capacidade produtiva pela especialização.",
+        "a ampliação do controle patronal sobre tarefas e ritmo de trabalho."
+      ],
+      "answer": 4,
+      "explanation": "A concentração fabril e a fragmentação das tarefas permitiram coordenar a produção e controlar o tempo dos trabalhadores. Especialização não equivale a autonomia, nem implica queda necessária de produtividade ou retorno à servidão.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "revolucao-industrial",
+        "trabalho",
+        "fabrica"
+      ],
+      "discipline": "historia",
+      "topic": "Capitalismo e trabalho",
+      "subtopic": "Industrialização e organização da produção",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-367",
+        "of-374",
+        "of-398"
+      ],
+      "conceptsTested": [
+        "Industrialização e organização da produção"
+      ]
+    },
+    {
+      "id": "his-002-b",
+      "conceptId": "his-002",
+      "difficulty": 3,
+      "type": "order",
+      "prompt": "Ordene as transformações produtivas segundo sua emergência histórica, da mais antiga à mais recente. Considere a formação dos modelos, sem supor que um tenha eliminado completamente os anteriores.",
+      "options": [
+        "Difusão da produção flexível associada ao toyotismo na segunda metade do século XX.",
+        "Expansão do sistema fabril mecanizado na Revolução Industrial britânica, a partir do século XVIII.",
+        "Implantação da linha de montagem móvel fordista, no início do século XX.",
+        "Formulação da administração científica taylorista, entre o fim do século XIX e o início do XX."
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "O sistema fabril da industrialização britânica antecedeu a administração científica de Taylor. A linha de montagem móvel fordista aprofundou a padronização no início do século XX. A produção flexível associada ao toyotismo se desenvolveu e difundiu posteriormente. Os modelos podem coexistir.",
+      "estimatedSeconds": 95,
+      "tags": [
+        "cronologia",
+        "industrializacao",
+        "organizacao-do-trabalho"
+      ],
+      "discipline": "historia",
+      "topic": "Capitalismo e trabalho",
+      "subtopic": "Industrialização e organização da produção",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-367",
+        "of-374",
+        "of-398"
+      ],
+      "conceptsTested": [
+        "Industrialização e organização da produção"
+      ]
+    },
+    {
+      "id": "his-003-a",
+      "conceptId": "his-003",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma pesquisa reúne registros de fugas, formação de quilombos, negociações de alforria e mobilização abolicionista. Consideradas em conjunto, essas evidências permitem interpretar o fim da escravidão no Brasil como",
+      "options": [
+        "resultado de uma única decisão parlamentar sem participação social.",
+        "processo encerrado antes de 1888 pela completa generalização do trabalho livre.",
+        "processo de conflitos no qual pessoas escravizadas e outros agentes atuaram de formas variadas.",
+        "mudança provocada exclusivamente pela substituição imediata de todo trabalho manual por máquinas.",
+        "acordo uniforme entre proprietários e escravizados, sem resistências."
+      ],
+      "answer": 2,
+      "explanation": "As evidências mostram ações distintas de resistência e disputa, tornando inadequada a imagem de pessoas escravizadas como receptoras passivas da liberdade. Reconhecer essa agência não exige negar a atuação de outros grupos ou das instituições.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "abolicao",
+        "resistencia",
+        "agencia-historica"
+      ],
+      "discipline": "historia",
+      "topic": "Brasil escravista e pós-abolição",
+      "subtopic": "Resistência e limites da emancipação jurídica",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-382",
+        "of-386",
+        "of-387"
+      ],
+      "conceptsTested": [
+        "Resistência e limites da emancipação jurídica"
+      ]
+    },
+    {
+      "id": "his-003-b",
+      "conceptId": "his-003",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um texto didático distingue o fim legal da escravidão, em 1888, da persistência de dificuldades de acesso à terra, à escolarização e ao trabalho remunerado. Essa distinção indica que",
+      "options": [
+        "a emancipação jurídica não implicou redistribuição automática das condições materiais de vida.",
+        "a lei de 1888 restabeleceu juridicamente o trabalho escravo sob outro nome.",
+        "nenhuma pessoa liberta construiu iniciativas de autonomia após a abolição.",
+        "os conflitos sociais do pós-abolição decorreram apenas de escolhas individuais.",
+        "a liberdade civil e a desigualdade econômica não podem coexistir historicamente."
+      ],
+      "answer": 0,
+      "explanation": "A lei extinguiu a condição jurídica de escravizado, mas isso não transformou automaticamente a distribuição de terra, recursos e oportunidades. Essa diferença ajuda a analisar a desigualdade sem apagar as iniciativas sociais e políticas da população liberta.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "pos-abolicao",
+        "desigualdade",
+        "cidadania"
+      ],
+      "discipline": "historia",
+      "topic": "Brasil escravista e pós-abolição",
+      "subtopic": "Resistência e limites da emancipação jurídica",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-382",
+        "of-386",
+        "of-387"
+      ],
+      "conceptsTested": [
+        "Resistência e limites da emancipação jurídica"
+      ]
+    },
+    {
+      "id": "his-004-a",
+      "conceptId": "his-004",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Na Primeira República, um chefe local intermediava empregos e acesso a autoridades e, em troca, esperava apoio eleitoral. A situação exemplifica um mecanismo do coronelismo porque",
+      "options": [
+        "separava integralmente recursos privados e poder público.",
+        "dependia de partidos organizados exclusivamente por programas nacionais.",
+        "tornava os eleitores economicamente independentes dos poderes locais.",
+        "convertia relações de dependência e favores em influência sobre a representação política.",
+        "atribuía automaticamente cargos militares a todos os proprietários rurais."
+      ],
+      "answer": 3,
+      "explanation": "O coronelismo articulava poder local e estruturas estaduais por meio de dependências, favores e controle eleitoral. O título ‘coronel’ não explica sozinho o fenômeno: o mecanismo relevante é a transformação de poder social e econômico em influência política.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "primeira-republica",
+        "coronelismo",
+        "clientelismo"
+      ],
+      "discipline": "historia",
+      "topic": "Brasil republicano",
+      "subtopic": "Coronelismo e transformação da cidadania",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-402",
+        "of-381",
+        "of-388"
+      ],
+      "conceptsTested": [
+        "Coronelismo e transformação da cidadania"
+      ]
+    },
+    {
+      "id": "his-004-b",
+      "conceptId": "his-004",
+      "difficulty": 2,
+      "type": "order",
+      "prompt": "Ordene os marcos brasileiros do mais antigo ao mais recente para construir uma linha do tempo sobre regimes políticos e direitos de cidadania.",
+      "options": [
+        "Promulgação da Constituição de 1988.",
+        "Proclamação da República.",
+        "Golpe civil-militar que iniciou a ditadura em 1964.",
+        "Código Eleitoral de 1932, que reconheceu o voto feminino."
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "A República foi proclamada em 1889; o Código Eleitoral de 1932 reconheceu o voto feminino; o golpe de 1964 iniciou uma ditadura; a Constituição de 1988 consolidou a reorganização democrática. A sequência evidencia que a ampliação de direitos não ocorreu sem rupturas.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "cronologia",
+        "brasil-republicano",
+        "direitos-politicos"
+      ],
+      "discipline": "historia",
+      "topic": "Brasil republicano",
+      "subtopic": "Coronelismo e transformação da cidadania",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-402",
+        "of-381",
+        "of-388"
+      ],
+      "conceptsTested": [
+        "Coronelismo e transformação da cidadania"
+      ]
+    },
+    {
+      "id": "geo-001-a",
+      "conceptId": "geo-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em um mapa de escala 1:250.000, dois pontos estão separados por 3,2 cm em linha reta. Qual é a distância correspondente no terreno, também em linha reta?",
+      "options": [
+        "0,8 km",
+        "8 km",
+        "80 km",
+        "800 km",
+        "1,28 km"
+      ],
+      "answer": 1,
+      "explanation": "Cada centímetro representa 250.000 cm, equivalentes a 2,5 km. Portanto, 3,2 × 2,5 = 8 km. A escala fornece a distância representada; ela não determina, por si, o comprimento de um trajeto por ruas.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "escala",
+        "cartografia",
+        "conversao-de-unidades"
+      ],
+      "discipline": "geografia",
+      "topic": "Cartografia",
+      "subtopic": "Escala e interpretação de mapas temáticos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-327",
+        "of-333"
+      ],
+      "conceptsTested": [
+        "Escala e interpretação de mapas temáticos"
+      ]
+    },
+    {
+      "id": "geo-001-b",
+      "conceptId": "geo-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Dois municípios registraram, em um ano, 400 e 100 ocorrências de um mesmo evento. Suas populações eram, respectivamente, 200 mil e 20 mil habitantes. Um mapa destinado a comparar a frequência relativa deve representar",
+      "options": [
+        "apenas os totais, que mostram maior frequência relativa no primeiro município.",
+        "a área territorial, pois ela substitui a informação sobre a população.",
+        "a soma das ocorrências, atribuindo o mesmo valor aos dois municípios.",
+        "o número de habitantes, independentemente das ocorrências.",
+        "taxas de 200 e 500 ocorrências por 100 mil habitantes, respectivamente."
+      ],
+      "answer": 4,
+      "explanation": "As taxas são 400/200.000 × 100.000 = 200 e 100/20.000 × 100.000 = 500. O segundo município tem menos ocorrências absolutas, mas maior frequência em relação à população. Total e taxa respondem a perguntas diferentes.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "mapas-tematicos",
+        "indicadores",
+        "taxas"
+      ],
+      "discipline": "geografia",
+      "topic": "Cartografia",
+      "subtopic": "Escala e interpretação de mapas temáticos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-327",
+        "of-333"
+      ],
+      "conceptsTested": [
+        "Escala e interpretação de mapas temáticos"
+      ]
+    },
+    {
+      "id": "geo-002-a",
+      "conceptId": "geo-002",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em uma população hipotética sem migrações, a mortalidade caiu rapidamente, enquanto a natalidade permaneceu elevada por algumas décadas. Na etapa inicial descrita, espera-se",
+      "options": [
+        "crescimento natural negativo devido à redução das mortes.",
+        "redução imediata do número de habitantes por aumento da sobrevivência.",
+        "elevação do crescimento natural pela ampliação da diferença entre nascimentos e mortes.",
+        "igualdade necessária entre população jovem e idosa.",
+        "queda automática da natalidade no mesmo ritmo da mortalidade."
+      ],
+      "answer": 2,
+      "explanation": "Crescimento natural é a diferença entre nascimentos e mortes. Se as mortes diminuem e os nascimentos permanecem elevados, a diferença aumenta. A queda da fecundidade pode ocorrer depois, e a estrutura etária não se torna equilibrada automaticamente.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "transicao-demografica",
+        "crescimento-natural",
+        "populacao"
+      ],
+      "discipline": "geografia",
+      "topic": "Geografia da população",
+      "subtopic": "Transição demográfica e estrutura etária",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-332",
+        "of-357",
+        "of-362"
+      ],
+      "conceptsTested": [
+        "Transição demográfica e estrutura etária"
+      ]
+    },
+    {
+      "id": "geo-002-b",
+      "conceptId": "geo-002",
+      "difficulty": 2,
+      "type": "match",
+      "prompt": "Associe cada indicador demográfico à operação que o define. Considere os fluxos registrados em um mesmo período e território.",
+      "matchLeft": [
+        "Crescimento natural, em número de pessoas",
+        "Saldo migratório, em número de pessoas",
+        "Variação total da população"
+      ],
+      "options": [
+        "Imigrantes menos emigrantes",
+        "Crescimento natural mais saldo migratório",
+        "Nascimentos menos mortes"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "O crescimento natural depende de nascimentos e mortes. O saldo migratório depende de entradas e saídas. A soma dos dois componentes determina a variação populacional no período, permitindo distinguir mudança por reprodução e por deslocamentos.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "demografia",
+        "indicadores",
+        "migracao"
+      ],
+      "discipline": "geografia",
+      "topic": "Geografia da população",
+      "subtopic": "Transição demográfica e estrutura etária",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-332",
+        "of-357",
+        "of-362"
+      ],
+      "conceptsTested": [
+        "Transição demográfica e estrutura etária"
+      ]
+    },
+    {
+      "id": "geo-003-a",
+      "conceptId": "geo-003",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma tempestade atingiu dois bairros com intensidade semelhante. No primeiro, havia drenagem adequada e moradias fora da planície de inundação; no segundo, faltavam infraestrutura e alternativas habitacionais. O segundo sofreu perdas muito maiores. O contraste demonstra",
+      "options": [
+        "a interação entre ameaça natural, exposição e vulnerabilidade social na produção do desastre.",
+        "que a intensidade da chuva determina sozinha todas as perdas.",
+        "que a localização das moradias é independente do acesso à renda e aos serviços.",
+        "que intervenções de infraestrutura não alteram riscos de inundação.",
+        "a impossibilidade de reduzir perdas sem impedir a ocorrência de chuvas."
+      ],
+      "answer": 0,
+      "explanation": "A ameaça foi semelhante, mas exposição e capacidade de proteção eram diferentes. A distribuição desigual de moradias e infraestrutura ajuda a explicar as perdas. Redução do risco envolve condições urbanas e sociais, não apenas a previsão da chuva.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "risco",
+        "vulnerabilidade",
+        "segregacao-socioespacial"
+      ],
+      "discipline": "geografia",
+      "topic": "Geografia socioambiental",
+      "subtopic": "Risco, vulnerabilidade e segregação urbana",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-324",
+        "of-335",
+        "of-338",
+        "of-339"
+      ],
+      "conceptsTested": [
+        "Risco, vulnerabilidade e segregação urbana"
+      ]
+    },
+    {
+      "id": "geo-003-b",
+      "conceptId": "geo-003",
+      "difficulty": 4,
+      "type": "choice",
+      "prompt": "Um município canalizou um córrego e acelerou o escoamento da água em um trecho. As inundações diminuíram ali, mas se intensificaram em bairros a jusante. Qual conclusão é mais consistente com uma análise da bacia hidrográfica?",
+      "options": [
+        "Toda canalização reduz igualmente o risco em todos os pontos da bacia.",
+        "A solução de um problema local dispensa observar fluxos entre áreas conectadas.",
+        "O aumento de ocorrências a jusante prova que a chuva deixou de interferir nas cheias.",
+        "Uma intervenção local pode transferir ou ampliar riscos em outras áreas conectadas pelo escoamento.",
+        "O comportamento de um córrego independe da impermeabilização de sua área de drenagem."
+      ],
+      "answer": 3,
+      "explanation": "A água circula por uma rede integrada. Acelerar o escoamento em um trecho pode elevar os picos de vazão a jusante, transferindo impactos. Por isso, o planejamento precisa considerar a bacia e a distribuição social do risco, além do benefício local.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "bacia-hidrografica",
+        "planejamento",
+        "escalas",
+        "risco"
+      ],
+      "discipline": "geografia",
+      "topic": "Geografia socioambiental",
+      "subtopic": "Risco, vulnerabilidade e segregação urbana",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-324",
+        "of-335",
+        "of-338",
+        "of-339"
+      ],
+      "conceptsTested": [
+        "Risco, vulnerabilidade e segregação urbana"
+      ]
+    },
+    {
+      "id": "fil-001-a",
+      "conceptId": "fil-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um argumento afirma: ‘Se o museu está fechado, o portão está trancado. O portão está trancado. Logo, o museu está fechado.’ Sem acrescentar outras premissas, a conclusão",
+      "options": [
+        "é necessária, porque repete uma informação presente na primeira premissa.",
+        "não é garantida, pois o portão pode estar trancado por outra razão mesmo com o museu aberto.",
+        "é necessariamente falsa, porque a primeira premissa impede portões trancados.",
+        "é válida apenas porque trata de uma situação cotidiana observável.",
+        "é uma definição do significado de museu, sem relação com inferência."
+      ],
+      "answer": 1,
+      "explanation": "A forma é ‘se P, então Q; Q; logo P’, conhecida como afirmação do consequente. A primeira premissa não diz que somente o fechamento do museu pode trancar o portão. Assim, as premissas podem ser verdadeiras e a conclusão falsa.",
+      "estimatedSeconds": 90,
+      "tags": [
+        "logica",
+        "validade",
+        "afirmacao-do-consequente"
+      ],
+      "discipline": "filosofia",
+      "topic": "Argumentação filosófica",
+      "subtopic": "Validade dedutiva e falácias formais",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-320"
+      ],
+      "conceptsTested": [
+        "Validade dedutiva e falácias formais"
+      ]
+    },
+    {
+      "id": "fil-001-b",
+      "conceptId": "fil-001",
+      "difficulty": 3,
+      "type": "boolean",
+      "prompt": "Considere a forma: ‘Todos os A são B. Nenhum B é C. Logo, nenhum A é C.’ Julgue: a inferência é dedutivamente válida mesmo antes de verificarmos se as premissas são verdadeiras em uma situação real.",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 0,
+      "explanation": "Se A está inteiramente incluído em B e B não tem elementos em comum com C, A também não pode ter elementos em comum com C. Essa relação garante a validade formal. A verdade factual das premissas exige uma investigação separada.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "silogismo",
+        "validade",
+        "deducao"
+      ],
+      "discipline": "filosofia",
+      "topic": "Argumentação filosófica",
+      "subtopic": "Validade dedutiva e falácias formais",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-320"
+      ],
+      "conceptsTested": [
+        "Validade dedutiva e falácias formais"
+      ]
+    },
+    {
+      "id": "fil-002-a",
+      "conceptId": "fil-002",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma pesquisadora observou que todas as amostras de certo material se dilataram ao serem aquecidas e concluiu que qualquer amostra desse material se dilatará nas mesmas condições. Do ponto de vista da indução, a conclusão",
+      "options": [
+        "é uma contradição, pois observações jamais apoiam generalizações.",
+        "é dedutivamente necessária porque o número de observações foi finito.",
+        "independe das observações, que não participam de sua justificação.",
+        "é verdadeira por definição, qualquer que seja o comportamento do material.",
+        "vai além dos casos observados e permanece revisável diante de novas evidências."
+      ],
+      "answer": 4,
+      "explanation": "A generalização aplica aos casos ainda não observados uma regularidade encontrada na experiência. As observações podem dar apoio à hipótese, mas não tornam logicamente impossível um caso contrário. Trata-se de uma inferência ampliativa e revisável.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "inducao",
+        "epistemologia",
+        "evidencia"
+      ],
+      "discipline": "filosofia",
+      "topic": "Epistemologia",
+      "subtopic": "Experiência, indução e justificação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-317"
+      ],
+      "conceptsTested": [
+        "Experiência, indução e justificação"
+      ]
+    },
+    {
+      "id": "fil-002-b",
+      "conceptId": "fil-002",
+      "difficulty": 1,
+      "type": "text",
+      "prompt": "Em um debate, uma posição filosófica atribui papel central à experiência sensível na origem e na justificação do conhecimento. Qual é o nome tradicional dessa corrente? Responda com uma palavra.",
+      "answer": "empirismo",
+      "acceptedAnswers": [
+        "empirismo",
+        "empiricism"
+      ],
+      "explanation": "Empirismo é a corrente que atribui papel central à experiência no conhecimento. Isso não significa que todos os empiristas neguem qualquer uso da razão; a questão trata da função atribuída à experiência.",
+      "estimatedSeconds": 45,
+      "tags": [
+        "empirismo",
+        "epistemologia",
+        "conceito"
+      ],
+      "discipline": "filosofia",
+      "topic": "Epistemologia",
+      "subtopic": "Experiência, indução e justificação",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-317"
+      ],
+      "conceptsTested": [
+        "Experiência, indução e justificação"
+      ]
+    },
+    {
+      "id": "fil-003-a",
+      "conceptId": "fil-003",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma pessoa rejeita a máxima ‘posso fazer uma promessa falsa sempre que isso me trouxer vantagem’, argumentando que sua universalização destruiria a confiança pressuposta pela prática de prometer. Essa justificação se aproxima de",
+      "options": [
+        "um cálculo que escolhe qualquer ação capaz de produzir lucro individual.",
+        "uma ética que faz a validade da norma depender somente do costume local.",
+        "uma avaliação kantiana da possibilidade de universalizar a máxima da ação.",
+        "uma teoria que considera todo desejo individual fonte suficiente de dever.",
+        "uma explicação causal que dispensa avaliar moralmente a conduta."
+      ],
+      "answer": 2,
+      "explanation": "A análise testa a máxima como regra universal. Se todos pudessem prometer falsamente por vantagem, a confiança necessária à promessa seria minada. O critério apresentado é a universalização, e não o lucro individual ou a aceitação do costume.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "kant",
+        "dever",
+        "universalizacao"
+      ],
+      "discipline": "filosofia",
+      "topic": "Ética",
+      "subtopic": "Dever e avaliação das consequências",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-318"
+      ],
+      "conceptsTested": [
+        "Dever e avaliação das consequências"
+      ]
+    },
+    {
+      "id": "fil-003-b",
+      "conceptId": "fil-003",
+      "difficulty": 4,
+      "type": "choice",
+      "prompt": "Dois conselheiros apoiam a mesma política de distribuição de alimentos. O primeiro sustenta que ela respeita o dever de tratar cada pessoa como um fim; o segundo, que ela produz o maior benefício agregado entre as alternativas disponíveis. A comparação mostra que",
+      "options": [
+        "a coincidência da decisão é compatível com fundamentos morais distintos, centrados em deveres e em consequências.",
+        "o primeiro argumento é consequencialista porque menciona pessoas.",
+        "o segundo argumento avalia exclusivamente a intenção do agente, sem considerar resultados.",
+        "fundamentos morais diferentes impedem necessariamente qualquer decisão comum.",
+        "a referência ao benefício agregado é suficiente para caracterizar uma ética do dever kantiana."
+      ],
+      "answer": 0,
+      "explanation": "A primeira razão se apoia em um princípio sobre como tratar pessoas; a segunda compara efeitos das alternativas. O acordo sobre uma medida não apaga a diferença entre os critérios morais, que podem divergir em outras situações.",
+      "estimatedSeconds": 100,
+      "tags": [
+        "etica",
+        "deontologia",
+        "consequencialismo"
+      ],
+      "discipline": "filosofia",
+      "topic": "Ética",
+      "subtopic": "Dever e avaliação das consequências",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-318"
+      ],
+      "conceptsTested": [
+        "Dever e avaliação das consequências"
+      ]
+    },
+    {
+      "id": "soc-001-a",
+      "conceptId": "soc-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Ao começar um trabalho, uma pessoa aprende vocabulário profissional, expectativas de cooperação e formas de interação que desconhecia. A sociologia interpreta esse processo como",
+      "options": [
+        "transmissão biológica de competências adquiridas por uma instituição.",
+        "prova de que normas sociais só são aprendidas antes da adolescência.",
+        "eliminação da identidade anterior pela entrada em qualquer novo grupo.",
+        "continuidade da socialização em uma nova instituição e situação de vida.",
+        "isolamento social, pois o aprendizado ocorreu fora da família."
+      ],
+      "answer": 3,
+      "explanation": "A socialização continua quando pessoas ingressam em novos grupos e assumem papéis. Aprender normas profissionais exemplifica esse processo além da infância. A nova experiência não apaga necessariamente aprendizagens e identidades anteriores.",
+      "estimatedSeconds": 65,
+      "tags": [
+        "socializacao",
+        "instituicoes",
+        "papeis-sociais"
+      ],
+      "discipline": "sociologia",
+      "topic": "Indivíduo e sociedade",
+      "subtopic": "Socialização e instituições",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-409",
+        "of-410"
+      ],
+      "conceptsTested": [
+        "Socialização e instituições"
+      ]
+    },
+    {
+      "id": "soc-001-b",
+      "conceptId": "soc-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Estudantes aprenderam as regras de uma escola, organizaram um grêmio e negociaram mudanças nas normas de convivência. O caso sugere que a socialização",
+      "options": [
+        "consiste na aceitação automática e definitiva de todas as regras recebidas.",
+        "pode combinar aprendizagem de normas e atuação dos sujeitos na sua transformação.",
+        "ocorre somente quando as regras são transmitidas pela família.",
+        "deixa de existir assim que aparece qualquer conflito institucional.",
+        "depende de ausência de valores coletivos para produzir participação."
+      ],
+      "answer": 1,
+      "explanation": "Os estudantes incorporaram conhecimentos sobre a instituição e os utilizaram para agir coletivamente. Socialização não exige passividade: normas podem ser interpretadas, disputadas e transformadas por sujeitos socializados.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "socializacao",
+        "agencia",
+        "escola"
+      ],
+      "discipline": "sociologia",
+      "topic": "Indivíduo e sociedade",
+      "subtopic": "Socialização e instituições",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-409",
+        "of-410"
+      ],
+      "conceptsTested": [
+        "Socialização e instituições"
+      ]
+    },
+    {
+      "id": "soc-002-a",
+      "conceptId": "soc-002",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em um hospital, equipes de limpeza, enfermagem, manutenção, administração e medicina executam funções distintas, mas dependem umas das outras. Considerando a teoria de Durkheim, a situação ilustra principalmente",
+      "options": [
+        "solidariedade mecânica fundada na identidade de todas as ocupações.",
+        "ausência de coesão devido à existência de especialização.",
+        "redução de todas as relações sociais a preferências individuais isoladas.",
+        "anomia definida como qualquer diferença entre profissões.",
+        "solidariedade orgânica associada à interdependência produzida pela divisão do trabalho."
+      ],
+      "answer": 4,
+      "explanation": "A especialização diferencia funções e, ao mesmo tempo, cria dependência recíproca. Esse é o fundamento da solidariedade orgânica em Durkheim. Diferenciação não equivale por si só à anomia, que envolve problemas de regulação social.",
+      "estimatedSeconds": 80,
+      "tags": [
+        "durkheim",
+        "solidariedade-organica",
+        "divisao-do-trabalho"
+      ],
+      "discipline": "sociologia",
+      "topic": "Trabalho e organização social",
+      "subtopic": "Divisão do trabalho e solidariedade em Durkheim",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-411"
+      ],
+      "conceptsTested": [
+        "Divisão do trabalho e solidariedade em Durkheim"
+      ]
+    },
+    {
+      "id": "soc-002-b",
+      "conceptId": "soc-002",
+      "difficulty": 3,
+      "type": "match",
+      "prompt": "Associe os conceitos de Durkheim às situações que os exemplificam de maneira mais direta.",
+      "matchLeft": [
+        "Solidariedade mecânica",
+        "Solidariedade orgânica",
+        "Anomia"
+      ],
+      "options": [
+        "Transformações aceleradas enfraquecem as referências que regulavam expectativas e condutas.",
+        "A coesão se apoia sobretudo em crenças compartilhadas e semelhanças entre os membros.",
+        "Funções especializadas criam dependência recíproca entre grupos e indivíduos."
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Semelhança e crenças comuns caracterizam a base da solidariedade mecânica. Diferenciação funcional e interdependência caracterizam a orgânica. Anomia se refere à insuficiência ou desorganização da regulação, e não a uma terceira modalidade de solidariedade.",
+      "estimatedSeconds": 90,
+      "tags": [
+        "durkheim",
+        "anomia",
+        "solidariedade"
+      ],
+      "discipline": "sociologia",
+      "topic": "Trabalho e organização social",
+      "subtopic": "Divisão do trabalho e solidariedade em Durkheim",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-411"
+      ],
+      "conceptsTested": [
+        "Divisão do trabalho e solidariedade em Durkheim"
+      ]
+    },
+    {
+      "id": "ing-001-a",
+      "conceptId": "ing-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Read the original excerpt: ‘After the school planted trees around the playground, students reported feeling more comfortable outdoors. The survey did not measure temperature, and no comparison school was included.’ Which conclusion is best supported by the excerpt?",
+      "options": [
+        "The survey established how many degrees the playground cooled.",
+        "Trees caused identical effects at every school in the region.",
+        "Students reported an improvement, but the study cannot isolate its cause or quantify cooling.",
+        "The report demonstrates that students did not notice the intervention.",
+        "The absence of a comparison school proves that the reported change did not occur."
+      ],
+      "answer": 2,
+      "explanation": "O texto informa uma melhora percebida e explicita duas limitações. Sem medição térmica, não há quantificação do resfriamento; sem comparação, não se isola o efeito da intervenção. Essas limitações não anulam o fato de os estudantes terem relatado maior conforto.",
+      "estimatedSeconds": 110,
+      "tags": [
+        "reading",
+        "evidence",
+        "scientific-literacy"
+      ],
+      "discipline": "ingles",
+      "topic": "Reading comprehension",
+      "subtopic": "Inferência e alcance das evidências",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-009",
+        "of-016",
+        "of-017"
+      ],
+      "conceptsTested": [
+        "Inferência e alcance das evidências"
+      ]
+    },
+    {
+      "id": "ing-001-b",
+      "conceptId": "ing-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Read the original excerpt: ‘The new online service saved time for users who already had reliable internet access. However, residents with unstable connections often had to visit the office anyway.’ The word ‘However’ introduces",
+      "options": [
+        "a limitation to the benefit described in the previous sentence.",
+        "the cause of reliable internet access among all residents.",
+        "an example showing that the service benefited every resident equally.",
+        "a conclusion that no user saved time with the online service.",
+        "a chronological step required to establish an internet connection."
+      ],
+      "answer": 0,
+      "explanation": "‘However’ estabelece contraste: o benefício alcançou usuários com acesso confiável, enquanto outros continuaram precisando de atendimento presencial. A segunda frase limita a abrangência da primeira sem negar que alguns usuários economizaram tempo.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "reading",
+        "contrast",
+        "scope"
+      ],
+      "discipline": "ingles",
+      "topic": "Reading comprehension",
+      "subtopic": "Inferência e alcance das evidências",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-009",
+        "of-016",
+        "of-017"
+      ],
+      "conceptsTested": [
+        "Inferência e alcance das evidências"
+      ]
+    },
+    {
+      "id": "ing-002-a",
+      "conceptId": "ing-002",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Read the original dialogue: ‘I thought the workshop was online.’ ‘Actually, it will take place at the community center.’ In this context, ‘Actually’ means",
+      "options": [
+        "Atualmente, indicando a época em que a oficina costumava acontecer.",
+        "Eventualmente, apresentando uma possibilidade ainda não definida.",
+        "Rapidamente, indicando a velocidade de realização da oficina.",
+        "Na verdade, introduzindo uma correção à informação anterior.",
+        "Finalmente, marcando o último evento de uma sequência."
+      ],
+      "answer": 3,
+      "explanation": "A segunda fala corrige a suposição de que a oficina seria on-line. ‘Actually’ funciona como ‘na verdade’ ou ‘na realidade’. A semelhança com ‘atualmente’ pode induzir uma tradução que não corresponde à relação entre as falas.",
+      "estimatedSeconds": 65,
+      "tags": [
+        "false-friends",
+        "vocabulary",
+        "actually"
+      ],
+      "discipline": "ingles",
+      "topic": "Vocabulary in context",
+      "subtopic": "Cognatos e falsos cognatos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-013",
+        "of-009"
+      ],
+      "conceptsTested": [
+        "Cognatos e falsos cognatos"
+      ]
+    },
+    {
+      "id": "ing-002-b",
+      "conceptId": "ing-002",
+      "difficulty": 1,
+      "type": "text",
+      "prompt": "Read the original sentence: ‘She borrowed three novels from the public library and returned them two weeks later.’ Traduza apenas ‘library’ para o português, usando uma palavra.",
+      "answer": "biblioteca",
+      "acceptedAnswers": [
+        "biblioteca"
+      ],
+      "explanation": "‘Library’ significa ‘biblioteca’. O empréstimo e a devolução dos romances confirmam o sentido no contexto. ‘Livraria’ corresponde a ‘bookshop’ ou ‘bookstore’, estabelecimentos voltados à venda de livros.",
+      "estimatedSeconds": 45,
+      "tags": [
+        "false-friends",
+        "library",
+        "context"
+      ],
+      "discipline": "ingles",
+      "topic": "Vocabulary in context",
+      "subtopic": "Cognatos e falsos cognatos",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-013",
+        "of-009"
+      ],
+      "conceptsTested": [
+        "Cognatos e falsos cognatos"
+      ]
+    },
+    {
+      "id": "art-001-a",
+      "conceptId": "art-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um museu guarda instrumentos usados em uma celebração, enquanto mestres da comunidade ensinam a jovens seus ritmos, movimentos e significados. A relação entre essas ações evidencia que",
+      "options": [
+        "o patrimônio imaterial dispensa pessoas que transmitam saberes.",
+        "objetos materiais e conhecimentos vivos podem integrar dimensões relacionadas do patrimônio cultural.",
+        "a conservação dos instrumentos substitui integralmente a continuidade da celebração.",
+        "práticas culturais perdem seu valor patrimonial quando envolvem música e dança.",
+        "apenas objetos produzidos por artistas reconhecidos podem ter valor cultural."
+      ],
+      "answer": 1,
+      "explanation": "Os instrumentos integram a dimensão material; os saberes e modos de fazer integram a dimensão imaterial. A guarda dos objetos e a transmissão comunitária podem se complementar, mas uma não substitui automaticamente a outra.",
+      "estimatedSeconds": 70,
+      "tags": [
+        "patrimonio",
+        "material",
+        "imaterial"
+      ],
+      "discipline": "arte",
+      "topic": "Arte e cultura",
+      "subtopic": "Patrimônio cultural material e imaterial",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-006",
+        "of-005"
+      ],
+      "conceptsTested": [
+        "Patrimônio cultural material e imaterial"
+      ]
+    },
+    {
+      "id": "art-001-b",
+      "conceptId": "art-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Uma comunidade adapta os horários e incorpora novos participantes a uma manifestação transmitida há gerações. Para planejar sua preservação, uma instituição cultural deve considerar que",
+      "options": [
+        "qualquer mudança torna a manifestação destituída de valor histórico.",
+        "a preservação exige transferir todas as decisões para especialistas externos.",
+        "o registro audiovisual torna dispensáveis as condições sociais de continuidade.",
+        "apenas a reprodução de uma versão escolhida do passado mantém a prática culturalmente relevante.",
+        "a manifestação é uma prática viva, e seus participantes devem integrar decisões sobre transmissão e transformação."
+      ],
+      "answer": 4,
+      "explanation": "A continuidade cultural envolve transmissão e reelaboração. Preservar uma prática viva requer participação de seus detentores e condições para sua realização. Documentação e conhecimento especializado podem ajudar sem congelar uma versão ou substituir a comunidade.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "patrimonio-vivo",
+        "mediacao-cultural",
+        "comunidade"
+      ],
+      "discipline": "arte",
+      "topic": "Arte e cultura",
+      "subtopic": "Patrimônio cultural material e imaterial",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-006",
+        "of-005"
+      ],
+      "conceptsTested": [
+        "Patrimônio cultural material e imaterial"
+      ]
+    },
+    {
+      "id": "edf-001-a",
+      "conceptId": "edf-001",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Em uma aula de jogos coletivos, a professora consulta os participantes e ajusta materiais, dimensões do espaço e regras para permitir a participação de estudantes com diferentes condições de mobilidade. A ação expressa",
+      "options": [
+        "abandono de objetivos pedagógicos sempre que as regras são modificadas.",
+        "avaliação da aprendizagem exclusivamente pelo desempenho dos mais rápidos.",
+        "equidade, ao enfrentar barreiras distintas para ampliar a participação efetiva.",
+        "igualdade de oportunidades obtida apenas pela imposição de tarefas idênticas.",
+        "substituição necessária de toda prática coletiva por atividade individual."
+      ],
+      "answer": 2,
+      "explanation": "Ajustes podem manter os objetivos do jogo e ampliar oportunidades reais de participação. A equidade considera necessidades e barreiras diferentes, em vez de supor que regras idênticas produzem condições equivalentes para todos.",
+      "estimatedSeconds": 75,
+      "tags": [
+        "equidade",
+        "inclusao",
+        "praticas-corporais"
+      ],
+      "discipline": "educacao-fisica",
+      "topic": "Práticas corporais e cidadania",
+      "subtopic": "Acesso, equidade e convivência",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-048",
+        "of-049",
+        "of-076",
+        "of-077"
+      ],
+      "conceptsTested": [
+        "Acesso, equidade e convivência"
+      ]
+    },
+    {
+      "id": "edf-001-b",
+      "conceptId": "edf-001",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um centro esportivo gratuito verificou baixa participação de moradores que trabalham até a noite. Antes de concluir que eles não se interessam por atividade física, qual medida permite enfrentar uma barreira indicada pela situação?",
+      "options": [
+        "Consultar os moradores e testar horários compatíveis com suas rotinas, acompanhando a participação.",
+        "Manter apenas horários comerciais, pois gratuidade assegura acesso efetivo em qualquer condição.",
+        "Selecionar somente participantes com experiência para elevar o desempenho médio do centro.",
+        "Interpretar a ausência como escolha individual, sem investigar as condições de acesso.",
+        "Priorizar novas campanhas publicitárias sem avaliar se os interessados conseguem comparecer."
+      ],
+      "answer": 0,
+      "explanation": "O enunciado aponta incompatibilidade de horários como possível barreira. Escuta e experimentação de horários permitem testar essa hipótese e ampliar acesso. A gratuidade remove um custo, mas não elimina restrições de tempo e outras condições de participação.",
+      "estimatedSeconds": 85,
+      "tags": [
+        "acesso",
+        "politicas-publicas",
+        "praticas-corporais"
+      ],
+      "discipline": "educacao-fisica",
+      "topic": "Práticas corporais e cidadania",
+      "subtopic": "Acesso, equidade e convivência",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-048",
+        "of-049",
+        "of-076",
+        "of-077"
+      ],
+      "conceptsTested": [
+        "Acesso, equidade e convivência"
+      ]
+    },
+    {
+      "id": "lit-opusculo-humanitario-a",
+      "conceptId": "lit-opusculo-humanitario",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em Opúsculo Humanitário, a defesa da educação feminina é dirigida a uma sociedade que se considera civilizada. Qual relação argumentativa torna essa interpelação crítica?",
+      "options": [
+        "A instrução é apresentada como recompensa posterior ao progresso econômico.",
+        "A educação de meninas serve para afastá-las das discussões coletivas.",
+        "A exclusão educacional contradiz o ideal de civilização proclamado pela sociedade.",
+        "A autoridade científica substitui a necessidade de discutir direitos sociais.",
+        "A comparação histórica estabelece que todos os povos educam mulheres igualmente."
+      ],
+      "answer": 2,
+      "explanation": "A tese confronta a autoimagem civilizada do país com a exclusão das mulheres da formação intelectual.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "argumentação",
+        "educação",
+        "contexto"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Opúsculo Humanitário",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Opúsculo Humanitário"
+      ]
+    },
+    {
+      "id": "lit-opusculo-humanitario-b",
+      "conceptId": "lit-opusculo-humanitario",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um estudo aproxima Opúsculo Humanitário e Memórias de Martha pelo tema da educação. Qual comparação preserva a diferença entre suas formas literárias?",
+      "options": [
+        "O ensaio defende uma tese; o romance encena uma trajetória individual atravessada por condições sociais.",
+        "As duas obras sustentam suas teses por narradores ficcionais com trajetórias escolares semelhantes.",
+        "O ensaio relata memórias pessoais; o romance organiza demonstrações sem personagens.",
+        "As duas obras abandonam a experiência social e tratam a escola como assunto privado.",
+        "O ensaio rejeita generalizações históricas; o romance dispensa o ponto de vista individual."
+      ],
+      "answer": 0,
+      "explanation": "A aproximação temática não apaga os procedimentos: argumentação ensaística e narrativa de formação produzem sentidos distintos.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "comparação",
+        "gênero literário",
+        "educação"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Opúsculo Humanitário",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Opúsculo Humanitário"
+      ]
+    },
+    {
+      "id": "lit-nebulosas-a",
+      "conceptId": "lit-nebulosas",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Uma leitura de Nebulosas separa poemas de afeto e natureza dos poemas de crítica social e conclui que somente os últimos pertencem ao Romantismo. Qual revisão é mais adequada?",
+      "options": [
+        "Classificar os poemas íntimos como realistas, porque utilizam lembranças pessoais.",
+        "Considerar a natureza um tema incompatível com projetos de identidade nacional.",
+        "Entender a denúncia política como abandono completo da linguagem poética.",
+        "Reconhecer que lirismo, paisagem e liberdade integram diferentes vertentes românticas.",
+        "Substituir a categoria Romantismo por uma classificação exclusivamente biográfica."
+      ],
+      "answer": 3,
+      "explanation": "O Romantismo reúne vertentes íntimas e sociais; a diversidade do livro não exige expulsar dele a poesia afetiva.",
+      "estimatedSeconds": 120,
+      "tags": [
+        "Romantismo",
+        "lirismo",
+        "crítica social"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Nebulosas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Nebulosas"
+      ]
+    },
+    {
+      "id": "lit-nebulosas-b",
+      "conceptId": "lit-nebulosas",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Ao comparar a natureza em Nebulosas e Geografia, um leitor identifica paisagens ligadas a valores humanos. Qual procedimento crítico dá continuidade consistente à comparação?",
+      "options": [
+        "Tomar a presença do mar como prova de que os livros pertencem à mesma escola.",
+        "Examinar como cada construção do espaço se relaciona com seu contexto histórico e sua linguagem.",
+        "Tratar as paisagens como documentos objetivos que dispensam análise do eu lírico.",
+        "Transferir diretamente a crítica ao salazarismo para todos os poemas de Narcisa.",
+        "Reduzir as imagens naturais a confissões biográficas idênticas das duas autoras."
+      ],
+      "answer": 1,
+      "explanation": "A comparação aproxima funções poéticas do espaço, mas preserva diferenças entre o século XIX brasileiro e o Portugal do século XX.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "comparação",
+        "espaço",
+        "contexto"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Nebulosas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Nebulosas"
+      ]
+    },
+    {
+      "id": "lit-memorias-de-martha-a",
+      "conceptId": "lit-memorias-de-martha",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em Memórias de Martha, a narradora pertence à população empobrecida do cortiço, mas não se identifica plenamente com seus moradores. O que essa tensão exige do leitor?",
+      "options": [
+        "Tomar os juízos da narradora como comprovações neutras sobre todos os moradores.",
+        "Concluir que a primeira pessoa impede qualquer observação social relevante.",
+        "Considerar que a pobreza elimina diferenças e hierarquias entre os personagens.",
+        "Ler os preconceitos da narradora como posições necessariamente endossadas pela autora.",
+        "Distinguir a experiência da pobreza dos julgamentos de classe produzidos por quem a narra."
+      ],
+      "answer": 4,
+      "explanation": "A narradora pode sofrer exclusão e, simultaneamente, reproduzir hierarquias. O ponto de vista precisa ser analisado.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "narrador",
+        "classe",
+        "leitura crítica"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Memórias de Martha",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Memórias de Martha"
+      ]
+    },
+    {
+      "id": "lit-memorias-de-martha-b",
+      "conceptId": "lit-memorias-de-martha",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Martha conquista uma profissão, mas seu casamento responde a convenções que não coincidem com seus desejos. Que conclusão articula esses dois aspectos do romance?",
+      "options": [
+        "O trabalho aparece como obstáculo necessário a qualquer vínculo afetivo.",
+        "A ascensão profissional torna irrelevantes os conflitos familiares narrados.",
+        "A autonomia econômica amplia possibilidades sem eliminar todas as formas de sujeição.",
+        "O casamento demonstra que a educação não produziu mudança alguma em sua vida.",
+        "A carreira e a vida afetiva pertencem a histórias sem relação temática."
+      ],
+      "answer": 2,
+      "explanation": "O romance permite distinguir conquista financeira de liberdade integral: as convenções continuam a limitar decisões íntimas.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "formação",
+        "gênero",
+        "autonomia"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Memórias de Martha",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Memórias de Martha"
+      ]
+    },
+    {
+      "id": "lit-caminho-de-pedras-a",
+      "conceptId": "lit-caminho-de-pedras",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em Caminho de pedras, Noemi retoca fotografias e depois perde o emprego por causa do julgamento social de sua separação. Qual leitura relaciona o trabalho da personagem ao conflito do romance?",
+      "options": [
+        "O retoque comprova que a protagonista pode modificar a sociedade com a mesma facilidade.",
+        "A fabricação de imagens aceitáveis contrasta com a dureza das normas impostas à sua própria vida.",
+        "A atividade fotográfica elimina a necessidade de interpretar os conflitos políticos.",
+        "O emprego simboliza uma neutralidade profissional preservada de critérios morais.",
+        "A demissão confirma a incapacidade técnica de Noemi para trabalhar com imagens."
+      ],
+      "answer": 1,
+      "explanation": "O contraste põe em relação aparência social e experiência vivida; a punição decorre do moralismo, não da competência profissional.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "símbolo",
+        "trabalho",
+        "gênero"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Caminho de pedras",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Caminho de pedras"
+      ]
+    },
+    {
+      "id": "lit-caminho-de-pedras-b",
+      "conceptId": "lit-caminho-de-pedras",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um comentário afirma que a crítica a procedimentos dos militantes, em Caminho de pedras, torna o romance contrário a toda transformação social. Qual elemento enfraquece essa conclusão?",
+      "options": [
+        "A presença de diálogos transforma qualquer conflito ideológico em mero entretenimento.",
+        "O interesse amoroso de Noemi elimina sua participação na vida coletiva.",
+        "A ambientação urbana impede relacionar o livro às desigualdades brasileiras.",
+        "A narrativa combina tensões da organização política com a persistência da busca por justiça.",
+        "A perseguição estatal é representada como episódio sem efeitos sobre os personagens."
+      ],
+      "answer": 3,
+      "explanation": "A crítica interna não equivale à rejeição da luta social. O romance articula desencanto, conflito e continuidade da resistência.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "política",
+        "interpretação",
+        "romance social"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Caminho de pedras",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Caminho de pedras"
+      ]
+    },
+    {
+      "id": "lit-paixao-segundo-gh-a",
+      "conceptId": "lit-paixao-segundo-gh",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "G.H. conta no presente uma experiência do dia anterior e procura compreender o que viveu. Que efeito decorre dessa distância entre experiência e narração?",
+      "options": [
+        "O ato de narrar participa da elaboração do sentido, em vez de apenas registrar fatos já compreendidos.",
+        "A narradora adquire automaticamente conhecimento completo do passado.",
+        "O intervalo transforma G.H. em observadora externa aos acontecimentos.",
+        "A experiência perde relevância porque a ação principal ocorre durante a escrita.",
+        "A existência de dois tempos converte o relato ficcional em documento autobiográfico."
+      ],
+      "answer": 0,
+      "explanation": "A rememoração é uma atividade de compreensão: o sentido se constrói no discurso, com hesitações e revisões.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "tempo",
+        "narrador",
+        "metalinguagem"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A paixão segundo G.H.",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "A paixão segundo G.H."
+      ]
+    },
+    {
+      "id": "lit-paixao-segundo-gh-b",
+      "conceptId": "lit-paixao-segundo-gh",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Antes de entrar no quarto de Janair, G.H. prevê sujeira; encontra um espaço organizado segundo uma lógica que desconhecia. Por que a surpresa tem alcance social?",
+      "options": [
+        "Revela que o quarto permite restaurar imediatamente a relação anterior entre patroa e empregada.",
+        "Comprova que a organização material de uma casa dispensa relações de poder.",
+        "Desloca Janair para uma função decorativa sem influência na crise da narradora.",
+        "Estabelece que a condição de artista protege G.H. contra qualquer preconceito.",
+        "Abala a pretensão de G.H. de conhecer e definir a pessoa que trabalhava para ela."
+      ],
+      "answer": 4,
+      "explanation": "O espaço revela autonomia de Janair e expõe os limites do olhar da patroa, atravessado por hierarquias sociais e raciais.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "alteridade",
+        "espaço",
+        "classe"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A paixão segundo G.H.",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "A paixão segundo G.H."
+      ]
+    },
+    {
+      "id": "lit-geografia-a",
+      "conceptId": "lit-geografia",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Geografia contrapõe imagens do Brasil e de Portugal, recorrendo a referências culturais. Uma leitura percebe admiração pelo Brasil e conclui que o olhar poético está livre de qualquer idealização. Qual ressalva é necessária?",
+      "options": [
+        "A admiração por outro país exige que o poema abandone sua construção imaginativa.",
+        "A oposição à ditadura portuguesa torna impossível qualquer referência cultural brasileira.",
+        "A homenagem pode coexistir com imagens idealizadas e marcas de uma perspectiva colonial.",
+        "A presença de referências brasileiras converte os poemas em descrições sociológicas neutras.",
+        "A idealização de um espaço impede que o livro contenha preocupações éticas."
+      ],
+      "answer": 2,
+      "explanation": "Admiração e idealização não se excluem; o leitor precisa avaliar como o espaço é construído e situado historicamente.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "colonialismo",
+        "espaço",
+        "leitura crítica"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Geografia",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Geografia"
+      ]
+    },
+    {
+      "id": "lit-geografia-b",
+      "conceptId": "lit-geografia",
+      "difficulty": 2,
+      "type": "choice",
+      "prompt": "Um roteiro propõe estudar Geografia somente pela identificação dos lugares mencionados. Qual ampliação permite analisar propriamente sua linguagem poética?",
+      "options": [
+        "Relacionar as imagens espaciais à percepção, aos valores e à reflexão sobre o próprio poema.",
+        "Substituir a leitura dos versos pelo levantamento das coordenadas dos lugares.",
+        "Ordenar os poemas como capítulos de uma única aventura de viagem.",
+        "Tratar cada referência clássica como prova de afastamento do presente histórico.",
+        "Associar toda voz em primeira pessoa diretamente a um episódio biográfico comprovado."
+      ],
+      "answer": 0,
+      "explanation": "O espaço funciona como construção verbal e experiência humana; localizar lugares é insuficiente para explicar os efeitos poéticos.",
+      "estimatedSeconds": 120,
+      "tags": [
+        "linguagem",
+        "metalinguagem",
+        "espaço"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Geografia",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Geografia"
+      ]
+    },
+    {
+      "id": "lit-balada-de-amor-ao-vento-a",
+      "conceptId": "lit-balada-de-amor-ao-vento",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Ao analisar a reaproximação de Sarnau e Mwando em Balada de amor ao vento, um leitor considera a necessidade de apoio para criar os filhos. Como esse dado altera uma leitura centrada apenas no amor?",
+      "options": [
+        "Transforma todas as decisões de Sarnau em transações sem dimensão afetiva.",
+        "Demonstra que o retorno resolve definitivamente as desigualdades de gênero.",
+        "Permite atribuir à protagonista responsabilidade exclusiva por sua vulnerabilidade.",
+        "Mostra que desejos e decisões se desenvolvem sob pressões materiais e sociais.",
+        "Impede reconhecer qualquer capacidade de negociação por parte de Sarnau."
+      ],
+      "answer": 3,
+      "explanation": "A agência de Sarnau existe sob restrições. Considerar o sustento dos filhos evita reduzir a decisão a reconciliação romântica.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "agência",
+        "maternidade",
+        "contexto"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Balada de amor ao vento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Balada de amor ao vento"
+      ]
+    },
+    {
+      "id": "lit-balada-de-amor-ao-vento-b",
+      "conceptId": "lit-balada-de-amor-ao-vento",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Balada de amor ao vento representa conflitos entre referências cristãs e tradições locais, incluindo formas de casamento. Qual interpretação evita uma oposição simplificadora entre culturas?",
+      "options": [
+        "Considerar a monogamia cristã garantia suficiente de igualdade para as personagens.",
+        "Investigar como práticas distintas podem sustentar relações desiguais entre homens e mulheres.",
+        "Atribuir todos os conflitos a uma cultura moçambicana uniforme e imutável.",
+        "Ler a poligamia como tema sem relação com condições econômicas ou poder.",
+        "Tratar a colonização como cenário sem influência nas escolhas das personagens."
+      ],
+      "answer": 1,
+      "explanation": "A oposição entre práticas matrimoniais não corresponde automaticamente à oposição entre opressão e liberdade; importa examinar relações concretas.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "cultura",
+        "gênero",
+        "colonialismo"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Balada de amor ao vento",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Balada de amor ao vento"
+      ]
+    },
+    {
+      "id": "lit-cancao-para-ninar-menino-grande-a",
+      "conceptId": "lit-cancao-para-ninar-menino-grande",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em Canção para ninar menino grande, Fio Jasmim liga diferentes histórias, enquanto a narradora recolhe relatos de mulheres. Qual efeito decorre dessa organização?",
+      "options": [
+        "As perspectivas femininas confirmam um retrato único e estável do conquistador.",
+        "A centralidade de Fio nos encontros lhe garante controle sobre o relato.",
+        "As experiências das mulheres funcionam apenas como provas de sua virilidade.",
+        "A diversidade de relatos impede qualquer ligação entre os episódios.",
+        "O homem que conecta o enredo é reinterpretado por vozes que ele não controla."
+      ],
+      "answer": 4,
+      "explanation": "A estrutura desloca o poder de atribuir sentido: as mulheres possuem histórias próprias e compõem uma visão plural de Fio.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "vozes narrativas",
+        "gênero",
+        "estrutura"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Canção para ninar menino grande",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Canção para ninar menino grande"
+      ]
+    },
+    {
+      "id": "lit-cancao-para-ninar-menino-grande-b",
+      "conceptId": "lit-cancao-para-ninar-menino-grande",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Fio Jasmim viaja por profissão; Tina transforma sua relação com ele e decide partir. Qual distinção dá força crítica a esse contraste?",
+      "options": [
+        "O deslocamento geográfico assegura por si só maturidade afetiva.",
+        "A permanência amorosa é sempre sinal de dependência econômica.",
+        "A mobilidade espacial pode coexistir com imobilidade afetiva, enquanto partir pode expressar autonomia.",
+        "A viagem profissional equivale necessariamente à liberdade de todas as pessoas envolvidas.",
+        "A decisão de Tina apaga os efeitos anteriores da relação."
+      ],
+      "answer": 2,
+      "explanation": "Circular por muitos lugares não garante transformação pessoal. O contraste permite avaliar a liberdade pelas relações e escolhas.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "autonomia",
+        "espaço",
+        "afeto"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "Canção para ninar menino grande",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "Canção para ninar menino grande"
+      ]
+    },
+    {
+      "id": "lit-visao-das-plantas-a",
+      "conceptId": "lit-visao-das-plantas",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Em A visão das plantas, o jardim floresce sob os cuidados de um homem envolvido em violência colonial. Qual conclusão respeita a tensão criada por esse contraste?",
+      "options": [
+        "A vitalidade vegetal funciona como certificado de inocência concedido pela natureza.",
+        "O cuidado presente não equivale à reparação nem elimina a responsabilidade pelo passado.",
+        "A habilidade do jardineiro demonstra que a violência foi apenas um rumor dos vizinhos.",
+        "A beleza do jardim torna dispensável qualquer julgamento do leitor.",
+        "A oposição entre delicadeza e brutalidade comprova a existência de dois protagonistas distintos."
+      ],
+      "answer": 1,
+      "explanation": "A natureza não funciona como tribunal moral. A delicadeza convive com um passado que continua a exigir reflexão ética.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "ética",
+        "natureza",
+        "colonialismo"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A visão das plantas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "A visão das plantas"
+      ]
+    },
+    {
+      "id": "lit-visao-das-plantas-b",
+      "conceptId": "lit-visao-das-plantas",
+      "difficulty": 3,
+      "type": "choice",
+      "prompt": "Um leitor sente compaixão por Celestino envelhecido, mas reconhece a gravidade de suas ações anteriores. Qual postura interpreta melhor a experiência proposta por A visão das plantas?",
+      "options": [
+        "Substituir a análise histórica pela simpatia despertada pela velhice.",
+        "Recusar qualquer acesso à interioridade de quem praticou violência.",
+        "Concluir que a ausência de condenação explícita do narrador significa aprovação.",
+        "Sustentar a tensão entre compreender a subjetividade e avaliar a responsabilidade pelos atos.",
+        "Tomar as lembranças como prova de uma reparação já concluída."
+      ],
+      "answer": 3,
+      "explanation": "Compreender a interioridade de uma personagem não exige absolvê-la. O contraste mobiliza o julgamento ético do leitor.",
+      "estimatedSeconds": 150,
+      "tags": [
+        "narrador",
+        "ética",
+        "memória"
+      ],
+      "discipline": "literatura",
+      "topic": "Leituras obrigatórias",
+      "subtopic": "A visão das plantas",
+      "source": "Questão original — estilo FUVEST",
+      "year": 2027,
+      "officialIds": [
+        "of-104",
+        "of-103"
+      ],
+      "conceptsTested": [
+        "A visão das plantas"
+      ]
+    }
+  ]
+}

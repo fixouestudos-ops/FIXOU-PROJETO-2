@@ -1,0 +1,13 @@
+export const DAY = 86400000;
+export const clamp = (n,min,max) => Math.max(min,Math.min(max,n));
+export const todayKey = (now=Date.now()) => {const d=new Date(now);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+export const dateNumber = key => Date.parse(key+'T12:00:00Z')/DAY;
+export const escapeHTML = value => String(value??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+export const normalize = s => String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[.!?;,]+$/,'').replace(/\s+/g,' ').trim();
+export const sum = values => values.reduce((a,b)=>a+b,0);
+export const formatNumber = n => Number(n).toLocaleString('pt-BR');
+export const formatTime = seconds => {const s=Math.max(0,Math.round(seconds));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;};
+export const formatDate = time => new Date(time).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+export const relativeDue = (time,now=Date.now()) => {if(time<=now)return 'Agora';const mins=Math.ceil((time-now)/60000);if(mins<60)return `Em ${mins} min`;const hours=Math.ceil(mins/60);if(hours<24)return `Em ${hours} h`;const days=Math.ceil((time-now)/DAY);return `Em ${days} ${days===1?'dia':'dias'}`;};
+export const seedHash = s => [...s].reduce((h,c)=>(Math.imul(h,31)+c.charCodeAt(0))|0,7)>>>0;
+export const uid = () => globalThis.crypto?.randomUUID?.() || Date.now().toString(36)+Math.random().toString(36).slice(2);

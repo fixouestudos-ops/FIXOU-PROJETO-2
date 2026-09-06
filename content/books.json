@@ -1,0 +1,214 @@
+[
+  {
+    "id": "opusculo-humanitario",
+    "title": "Opúsculo Humanitário",
+    "author": "Nísia Floresta",
+    "year": 1853,
+    "context": "Educadora e ensaísta potiguar; Brasil imperial e exclusão educacional feminina.",
+    "structure": "62 capítulos ensaísticos curtos.",
+    "narrator": "Voz argumentativa da ensaísta; não há narrador ficcional.",
+    "characters": [],
+    "themes": [
+      "educação feminina",
+      "cidadania",
+      "crítica social"
+    ],
+    "style": "Interpelações ao leitor, perguntas retóricas e exemplos históricos.",
+    "interpretation": "A educação das mulheres aparece como condição do progresso coletivo.",
+    "comparison": "Memórias de Martha dramatiza efeitos e limites sociais da educação.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-opusculo-humanitario-reune-reflexoes-de-precursora-do-pensamento-feminista-no-brasil/"
+  },
+  {
+    "id": "nebulosas",
+    "title": "Nebulosas",
+    "author": "Narcisa Amália",
+    "year": 1872,
+    "context": "Poeta e jornalista do Romantismo brasileiro, vinculada ao abolicionismo.",
+    "structure": "44 poemas em três conjuntos: abertura, lirismo e poesia social.",
+    "narrator": "Vozes líricas; não há narrador único de romance.",
+    "characters": [],
+    "themes": [
+      "natureza",
+      "afetos",
+      "memória",
+      "abolição",
+      "liberdade"
+    ],
+    "style": "Imagens noturnas, epígrafes literárias e retórica condoreira.",
+    "interpretation": "A dimensão íntima convive com a denúncia política.",
+    "comparison": "Geografia também articula espaço e ética, em outro contexto histórico.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-nebulosas-reune-poemas-abolicionistas-e-romanticos-marcados-por-critica-social/"
+  },
+  {
+    "id": "memorias-de-martha",
+    "title": "Memórias de Martha",
+    "author": "Júlia Lopes de Almeida",
+    "year": 1899,
+    "context": "Autora brasileira; folhetim de 1888–1889, publicado em livro em 1899.",
+    "structure": "Romance de formação situado em um cortiço carioca.",
+    "narrator": "Martha adulta recorda sua formação em primeira pessoa.",
+    "characters": [
+      "Martha, filha e narradora",
+      "Martha, mãe e lavadeira",
+      "Mathilde, colega"
+    ],
+    "themes": [
+      "educação",
+      "trabalho",
+      "gênero",
+      "classe",
+      "racismo"
+    ],
+    "style": "Prosa direta, memória e observação social realista.",
+    "interpretation": "A conquista profissional não elimina constrangimentos afetivos e sociais.",
+    "comparison": "Dialoga com a defesa educacional de Opúsculo Humanitário.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-memorias-de-marta-traz-analise-politica-e-sociologica-do-brasil-pos-abolicao/"
+  },
+  {
+    "id": "caminho-de-pedras",
+    "title": "Caminho de pedras",
+    "author": "Rachel de Queiroz",
+    "year": 1937,
+    "context": "Romancista brasileira; trabalhadores de Fortaleza sob repressão na Era Vargas.",
+    "structure": "Conflitos políticos e amorosos se entrecruzam.",
+    "narrator": "Terceira pessoa, com investigação dos dilemas psicológicos.",
+    "characters": [
+      "Noemi",
+      "Roberto",
+      "João Jaques"
+    ],
+    "themes": [
+      "trabalho",
+      "militância",
+      "desejo",
+      "maternidade",
+      "emancipação"
+    ],
+    "style": "Diálogos cotidianos, ritmo ágil e descrições econômicas.",
+    "interpretation": "A busca de autonomia enfrenta moralismo e repressão política.",
+    "comparison": "Como Canção para ninar menino grande, problematiza relações de gênero.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-caminho-de-pedras-retrata-a-resistencia-das-mulheres-na-politica-e-no-amor/"
+  },
+  {
+    "id": "paixao-segundo-gh",
+    "title": "A paixão segundo G.H.",
+    "author": "Clarice Lispector",
+    "year": 1964,
+    "context": "Quinto romance da escritora brasileira; crise de uma escultora abastada.",
+    "structure": "33 fragmentos articulam experiência e rememoração.",
+    "narrator": "G.H. narra em primeira pessoa o vivido no dia anterior.",
+    "characters": [
+      "G.H.",
+      "Janair",
+      "a barata"
+    ],
+    "themes": [
+      "alteridade",
+      "existência",
+      "classe",
+      "raça",
+      "linguagem"
+    ],
+    "style": "Imagens intensas e reflexão sobre o próprio narrar.",
+    "interpretation": "O quarto de Janair rompe certezas sociais e existenciais.",
+    "comparison": "A visão das plantas também tensiona relações humanas com outros seres.",
+    "sourceUrl": "https://jornal.usp.br/universidade/a-paixao-segundo-g-h-de-clarice-lispector-uma-historia-entre-sonhos-buscas-e-conflitos/"
+  },
+  {
+    "id": "geografia",
+    "title": "Geografia",
+    "author": "Sophia de Mello Breyner Andresen",
+    "year": 1967,
+    "context": "Poeta portuguesa; publicação durante o salazarismo e as guerras coloniais.",
+    "structure": "60 poemas em sete partes, incluindo uma seção dedicada ao Brasil.",
+    "narrator": "Eu lírico variável; não há enredo contínuo.",
+    "characters": [],
+    "themes": [
+      "espaço",
+      "mar",
+      "justiça",
+      "amor",
+      "fazer poético"
+    ],
+    "style": "Imagens sensoriais e diálogo com referências culturais.",
+    "interpretation": "As paisagens produzem relações entre experiência, linguagem e ética.",
+    "comparison": "Com Nebulosas, permite examinar natureza e história sem igualar contextos.",
+    "sourceUrl": "https://jornal.usp.br/universidade/geografia-leitura-obrigatoria-da-fuvest-traz-a-contemplacao-da-natureza-e-a-dimensao-humana/"
+  },
+  {
+    "id": "balada-de-amor-ao-vento",
+    "title": "Balada de amor ao vento",
+    "author": "Paulina Chiziane",
+    "year": 1990,
+    "context": "Primeiro romance publicado por uma mulher em Moçambique; contexto pós-independência.",
+    "structure": "Encontros e separações, com retorno memorial à juventude.",
+    "narrator": "Predomina a primeira pessoa de Sarnau; há mudanças de perspectiva.",
+    "characters": [
+      "Sarnau",
+      "Mwando",
+      "Ninguila"
+    ],
+    "themes": [
+      "patriarcado",
+      "maternidade",
+      "abandono",
+      "colonialismo",
+      "tradições"
+    ],
+    "style": "Narração poética que integra conflitos culturais ao enredo.",
+    "interpretation": "Escolhas afetivas também respondem à vulnerabilidade material.",
+    "comparison": "Canção para ninar menino grande permite comparar abandono e autonomia.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-balada-de-amor-ao-vento-destaca-o-protagonismo-feminino-na-busca-por-liberdade/"
+  },
+  {
+    "id": "cancao-para-ninar-menino-grande",
+    "title": "Canção para ninar menino grande",
+    "author": "Conceição Evaristo",
+    "year": 2018,
+    "context": "Escritora brasileira; edição ampliada de 2022 amplia vozes femininas.",
+    "structure": "16 capítulos, introdução e posfácio na edição analisada.",
+    "narrator": "Voz que recolhe relatos femininos e explicita sua participação na escrita.",
+    "characters": [
+      "Fio Jasmim",
+      "Pérola Maria",
+      "Juventina/Tina",
+      "Neide"
+    ],
+    "themes": [
+      "masculinidade",
+      "racismo",
+      "afeto",
+      "abandono",
+      "escrevivência"
+    ],
+    "style": "Pluralidade de vozes, memória e invenção.",
+    "interpretation": "As mulheres ganham centralidade narrativa para além do conquistador.",
+    "comparison": "Com Balada de amor ao vento, examina dependência e autonomia afetiva.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-cancao-para-ninar-menino-grande-explora-construcao-da-sociedade-patriarcal-brasileira/"
+  },
+  {
+    "id": "visao-das-plantas",
+    "title": "A visão das plantas",
+    "author": "Djaimilia Pereira de Almeida",
+    "year": 2019,
+    "context": "Escritora nascida em Angola e criada em Portugal; memória colonial.",
+    "structure": "Retorno de Celestino à casa e cultivo do jardim entre lembranças.",
+    "narrator": "Terceira pessoa, com acesso à interioridade do protagonista.",
+    "characters": [
+      "Celestino",
+      "Padre Alfredo",
+      "vizinhos e crianças"
+    ],
+    "themes": [
+      "escravidão",
+      "violência",
+      "memória",
+      "natureza",
+      "responsabilidade"
+    ],
+    "style": "Prosa sensorial e contraste entre brutalidade e delicadeza.",
+    "interpretation": "O cuidado vegetal não resolve a responsabilidade pelo passado.",
+    "comparison": "G.H. também aproxima reflexão existencial e seres não humanos.",
+    "sourceUrl": "https://jornal.usp.br/universidade/livros-da-fuvest-2026-em-a-visao-das-plantas-o-jardim-e-metafora-para-abordar-a-violencia-do-colonialismo/"
+  }
+]
