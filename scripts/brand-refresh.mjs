@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+const file='src/controller.js';
+let s=fs.readFileSync(file,'utf8');
+s=s.replace('<a class="brand" href="#home"><span class="brand-mark">M</span><span>FUVEST<strong>mastery<span class="brand-dot">.</span></strong></span></a>','<a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a>');
+s=s.replace('FUVEST Mastery · Estudo independente, conteúdo autoral.','FIXOU · Estudo que fica · conteúdo autoral para a FUVEST 2027.');
+s=s.replace('<span class="brand-mark">M</span><div class="eyebrow modal-eyebrow">','<img class="modal-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"><div class="eyebrow modal-eyebrow">');
+s=s.replace('document.title=`${title} · FUVEST Mastery`;','document.title=`${title} · FIXOU`;');
+fs.writeFileSync(file,s);
+const cssFile='styles/app.css';
+let css=fs.readFileSync(cssFile,'utf8');
+css=css.replace('--bg:#f5f6fa','--bg:#f3f7fb').replace('--surface:#fff','--surface:#fff').replace('--ink:#202337','--ink:#12243d').replace('--muted:#6e7389','--muted:#66768b').replace('--purple:#6550d6','--purple:#123b63').replace('--purple-soft:#f0edff','--purple-soft:#e7f0f8').replace('--border:#e7e9f0','--border:#dce6f0').replace('--mint:#e3f6ee','--mint:#e6f6f0').replace('--navy:#191d36','--navy:#102a45');
+if(!css.includes('.brand-logo{')) css+='\n.brand{display:block;margin:0 0 28px 0;padding:0}.brand-logo{display:block;width:132px;height:145px;object-fit:contain;background:#fff;border-radius:12px;box-shadow:0 8px 24px #102a4512}.brand:hover{color:inherit}.modal-logo{display:block;width:150px;height:auto;margin:0 auto 17px;border-radius:12px}.primary{background:#f8b52f;color:#102a45;box-shadow:0 6px 16px #f8b52f2b}.primary:hover{background:#e9a51e;color:#102a45;box-shadow:0 8px 20px #f8b52f44}.primary.light{background:#ffe19a;color:#102a45}.today-card{background:#102a45}.streak-chip{background:#fff3ce;color:#85611a}.nav-item.active{color:#123b63;background:#e7f0f8}.nav-item:hover{background:#f2f7fb}.subject-card:hover{border-color:#a8c4db}.track-count{color:#123b63}@media(max-width:980px){.brand-logo{width:120px;height:132px}}\n';
+fs.writeFileSync(cssFile,css);
+const htmlFile='index.html';
+let html=fs.readFileSync(htmlFile,'utf8').replace('FUVEST Mastery — Seu espaço de estudo','FIXOU — Estudo que fica · FUVEST 2027').replace('Ative o JavaScript do navegador para usar o FUVEST Mastery.','Ative o JavaScript do navegador para usar o FIXOU.');
+fs.writeFileSync(htmlFile,html);
+console.log('Marca FIXOU aplicada ao layout.');
