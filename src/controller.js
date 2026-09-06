@@ -12,11 +12,12 @@ import {errorsScreen,mapScreen,booksScreen,favoritesScreen,searchScreen} from '.
 import {statsScreen,profileScreen} from './screens-profile.js';
 import {settingsScreen} from './screens-settings.js';
 import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
+import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES} from './session-builder.js';
 
 const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null;
-const ui={route:'home',filters:{},cardFilters:{},errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false};
+const ui={route:'home',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false};
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
 function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
@@ -37,7 +38,7 @@ function closeModal(){modalElement.close();afterConfirm=null;}
 function ensureProfile(action){if(state.profile?.name){action();return;}afterProfile=action;openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><img class="modal-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"><div class="eyebrow modal-eyebrow">SUA JORNADA COMEÇA AQUI</div><h2 id="modal-title">Como podemos chamar você?</h2><p>Vamos guardar sua evolução e preparar seu primeiro treino.</p><form id="onboarding-form" class="form-stack"><label>Seu nome<input name="name" required maxlength="40" autocomplete="given-name" placeholder="Digite seu nome" autofocus></label><label>Seu objetivo <span class="meta">(opcional)</span><input name="goal" maxlength="100" placeholder="Ex.: Medicina na USP"></label><button class="primary" type="submit">Começar minha jornada →</button><p class="note">Seu progresso é salvo neste navegador. Você pode exportar um backup a qualquer momento no Perfil.</p></form>`);}
 function confirmAction(title,text,action,label='Continuar'){afterConfirm=action;openModal(`<h2 id="modal-title">${title}</h2><p class="modal-copy">${text}</p><div class="modal-actions">${button('Voltar','close-modal')}${button(label,'confirm-modal','','primary')}</div>`);}
 function launch(mode='adaptive',filters={},questionId=null){ensureProfile(()=>{
- const start=()=>{session=createSession(state,BANK,mode,{...filters});const matching=BANK.questions.filter(q=>matchesQuestion(q,conceptById(BANK,q.conceptId),filters,state));session.limit=Math.min(session.limit,matching.length);if(questionId)session.limit=1;state.activeSession=session;if(mode==='daily')state.daily={date:todayKey(),sessionId:session.id,items:[],completed:false};advance(questionId);go('quiz');};
+ const start=()=>{session=createSession(state,BANK,mode,{...filters});const matching=BANK.questions.filter(q=>matchesQuestion(q,conceptById(BANK,q.conceptId),filters,state));const requested=filters.quantity==='all'?matching.length:Number(filters.quantity);if(Number.isFinite(requested)&&requested>0)session.limit=Math.min(requested,matching.length);else session.limit=Math.min(session.limit,matching.length);if(questionId)session.limit=1;state.activeSession=session;if(mode==='daily')state.daily={date:todayKey(),sessionId:session.id,items:[],completed:false};advance(questionId);go('quiz');};
  if(state.activeSession&&!state.activeSession.finished){confirmAction('Você tem um treino em andamento','As respostas já enviadas estão salvas. Você pode encerrar essa sessão para começar outra.',()=>{finishSession(state,state.activeSession);start();},'Encerrar e começar outro');}else start();
  });}
 function advance(forcedId=null){
@@ -56,7 +57,7 @@ function submitAnswer(){if(!session||session.finished||session.feedback)return;c
  if(!attempt)return;saveProgress();render();document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function updateDraft(){saveProgress();const q=questionById(BANK,session.currentId),submit=document.querySelector('[data-action="submit-answer"]');if(submit)submit.disabled=!canSubmitDraft(q,session.draft);}
-function startCards(kind,id){ensureProfile(()=>{let concepts=kind==='one'?BANK.concepts.filter(c=>c.id===id):kind==='due'?dueConcepts(state,BANK.concepts):BANK.concepts.filter(c=>(!ui.cardFilters.discipline||c.discipline===ui.cardFilters.discipline)&&(!ui.cardFilters.status||ui.cardFilters.status==='new'&&!state.reviews[c.id]||ui.cardFilters.status==='due'&&isDue(state,c.id)||ui.cardFilters.status==='favorites'&&state.favorites.includes('c:'+c.id)));
+function startCards(kind,id){ensureProfile(()=>{const flashConcepts=BANK.concepts.filter(c=>c.flashcard);let concepts=kind==='one'?flashConcepts.filter(c=>c.id===id):kind==='due'?dueConcepts(state,flashConcepts):flashConcepts.filter(c=>{const status=ui.cardFilters.status;return (!ui.cardFilters.discipline||c.discipline===ui.cardFilters.discipline)&&(!ui.cardFilters.topic||c.topic===ui.cardFilters.topic)&&(!status||status==='new'&&!state.reviews[c.id]||status==='due'&&isDue(state,c.id)||status==='favorites'&&state.favorites.includes('c:'+c.id));});
  if(!concepts.length){toast('Nenhum cartão nesta seleção.');return;}flash={ids:concepts.map(c=>c.id),currentId:concepts[0].id,index:0,revealed:false,seconds:0};go('cards');});}
 function rateCard(rating){if(!flash?.revealed)return;const id=flash.currentId,previous=state.reviews[id],now=Date.now(),due=!previous||isDue(state,id,now);
  if(due||rating==='forgot')state.reviews[id]=scheduleReview(previous,rating,now);
@@ -72,6 +73,11 @@ function handleAction(action,id,element){
  if(action==='close-modal'){closeModal();afterProfile=null;return;}
  if(action==='confirm-modal'){const fn=afterConfirm;closeModal();fn?.();return;}
  if(action==='start'){launch(id,id==='practice'?ui.filters:{});return;}
+ if(action==='start-session'){const builder=cleanSessionBuilder(BANK,ui.sessionBuilder);ui.sessionBuilder=builder;if(!builder.subjects.length){toast('Escolha pelo menos uma disciplina para começar.');render();return;}if(!builder.topics.length){toast('Escolha pelo menos um assunto para começar.');render();return;}if(!builder.difficulties.length){toast('Escolha pelo menos uma dificuldade para começar.');render();return;}const filters=builderFilters(builder),available=BANK.questions.filter(q=>matchesQuestion(q,conceptById(BANK,q.conceptId),filters,state));if(!available.length){toast('Nenhuma questão combina com essa seleção.');render();return;}const requested=builder.quantity==='all'?available.length:Number(builder.quantity);if(requested>available.length)toast(`Há ${available.length} questões disponíveis; a sessão usará todas elas.`);launch('practice',filters);return;}
+ if(action==='session-select-all-subjects'){const subjects=sessionSubjects(BANK).map(s=>s.id);ui.sessionBuilder={...ui.sessionBuilder,subjects,topics:sessionTopicKeys(BANK,subjects)};render();return;}
+ if(action==='session-clear-subjects'){ui.sessionBuilder={...ui.sessionBuilder,subjects:[],topics:[]};render();return;}
+ if(action==='session-select-all-topics'){const subjects=ui.sessionBuilder.subjects||[];ui.sessionBuilder={...ui.sessionBuilder,topics:sessionTopicKeys(BANK,subjects)};render();return;}
+ if(action==='session-clear-topics'){ui.sessionBuilder={...ui.sessionBuilder,topics:[]};render();return;}
  if(action==='resume'){session=state.activeSession;if(session){if(session.endsAt&&Date.now()>=session.endsAt)complete();go('quiz');}return;}
  if(action==='pause-session'){if(session?.mode==='lightning'){confirmAction('Encerrar o Relâmpago?','O cronômetro não pausa neste modo. Seu resultado será registrado agora.',()=>{complete();go('home');},'Encerrar desafio');}else{saveProgress();go('home');toast('Treino pausado e salvo.');}return;}
  if(action==='finish-session'){complete();return;}
@@ -111,8 +117,12 @@ document.addEventListener('input',event=>{if(event.target.id==='written-answer'&
 document.addEventListener('change',event=>{
  const el=event.target;
  if(el.dataset.setting){let value=el.type==='checkbox'?el.checked:el.value;if(el.dataset.setting==='dailyCount'&&value==='custom'){const asked=Number(window.prompt('Quantas questões por dia?',String(state.settings.dailyCustom||50)));if(!Number.isInteger(asked)||asked<5||asked>200)return;value=asked;}if(el.dataset.setting==='dailyCount'||el.dataset.setting==='dailyMinutes')value=Number(value);if(el.dataset.setting==='fontScale')value=Number(value);state.settings[el.dataset.setting]=value;if(el.dataset.setting==='dailyCount')state.settings.dailyCustom=value;applyPreferences();saveProgress();render();toast('Preferência salva.');return;}
- if(el.dataset.filter){const key=el.dataset.filter;ui.filters[key]=el.value;if(key==='discipline'){ui.filters.topic='';ui.filters.subtopic='';}if(key==='topic')ui.filters.subtopic='';render();}
- else if(el.dataset.cardFilter){ui.cardFilters[el.dataset.cardFilter]=el.value;render();}
+ if(el.dataset.sessionSubject){const id=el.dataset.sessionSubject,subjects=new Set(ui.sessionBuilder.subjects||[]);if(el.checked)subjects.add(id);else subjects.delete(id);const next=[...subjects],validTopics=new Set(sessionTopicKeys(BANK,next));ui.sessionBuilder=cleanSessionBuilder(BANK,{...ui.sessionBuilder,subjects:next,topics:(ui.sessionBuilder.topics||[]).filter(key=>validTopics.has(key))});render();}
+ else if(el.dataset.sessionTopic){const key=decodeURIComponent(el.dataset.sessionTopic),topics=new Set(ui.sessionBuilder.topics||[]);if(el.checked)topics.add(key);else topics.delete(key);ui.sessionBuilder={...ui.sessionBuilder,topics:[...topics]};render();}
+ else if(el.dataset.sessionDifficulty){const n=Number(el.dataset.sessionDifficulty),difficulties=new Set(ui.sessionBuilder.difficulties||[]);if(el.checked)difficulties.add(n);else difficulties.delete(n);ui.sessionBuilder={...ui.sessionBuilder,difficulties:[...difficulties].sort((a,b)=>a-b)};render();}
+ else if(el.dataset.sessionQuantity){ui.sessionBuilder={...ui.sessionBuilder,quantity:SESSION_QUANTITIES.includes(el.value==='all'?'all':Number(el.value))?(el.value==='all'?'all':Number(el.value)):20};render();}
+ else if(el.dataset.filter){const key=el.dataset.filter;ui.filters[key]=el.value;if(key==='discipline'){ui.filters.topic='';ui.filters.subtopic='';}if(key==='topic')ui.filters.subtopic='';render();}
+ else if(el.dataset.cardFilter){ui.cardFilters[el.dataset.cardFilter]=el.value;if(el.dataset.cardFilter==='discipline')ui.cardFilters.topic='';render();}
  else if(el.dataset.match!==undefined&&session&&!session.feedback){session.draft.match[Number(el.dataset.match)]=el.value===''?-1:Number(el.value);updateDraft();}
  else if(el.id==='error-filter'){ui.errorFilter=el.value;render();}
  else if(el.id==='map-discipline'){ui.mapDiscipline=el.value;render();}

@@ -3,7 +3,11 @@ import {masteryValue,updateMastery,conceptWeakness} from './mastery.js';
 import {isDue,reviewFromAnswer} from './reviews.js';
 import {answerXP,addActivity,unlockAchievements} from './gamification.js';
 export function matchesQuestion(q,c,filters,state,now=Date.now()){
- const f=filters||{};if(f.discipline&&c.discipline!==f.discipline)return false;if(f.topic&&c.topic!==f.topic)return false;if(f.subtopic&&c.id!==f.subtopic)return false;if(f.difficulty&&q.difficulty!==Number(f.difficulty))return false;if(f.type&&q.type!==f.type)return false;
+ const f=filters||{};
+ if(f.disciplines?.length&&!f.disciplines.includes(c.discipline))return false;
+ if(f.topics?.length&&!f.topics.includes(`${c.discipline}|${c.topic}`))return false;
+ if(f.difficulties?.length&&!f.difficulties.includes(Number(q.difficulty)))return false;
+ if(f.discipline&&c.discipline!==f.discipline)return false;if(f.topic&&c.topic!==f.topic)return false;if(f.subtopic&&c.id!==f.subtopic)return false;if(f.difficulty&&q.difficulty!==Number(f.difficulty))return false;if(f.type&&q.type!==f.type)return false;
  if(f.status==='new'&&state.history.some(h=>h.questionId===q.id))return false;if(f.status==='wrong'&&!Object.values(state.errors).some(e=>e.conceptId===c.id&&!e.resolved))return false;if(f.status==='due'&&!isDue(state,c.id,now))return false;if(f.status==='favorites'&&!state.favorites.includes('q:'+q.id))return false;
  if(f.search&&!normalize([q.prompt,q.explanation,c.topic,c.subtopic,...(q.tags||[])].join(' ')).includes(normalize(f.search)))return false;return true;
 }
