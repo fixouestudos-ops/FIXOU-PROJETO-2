@@ -319,6 +319,38 @@ function conceptLine(state,c){const m=masteryValue(state.concepts[c.id],state.re
 function errorCard(state,bank,curriculum,error){const q=questionById(bank,error.questionId);if(!q)return '';const c=conceptById(bank,q.conceptId);const count=Object.values(state.errors).filter(e=>e.conceptId===c.id).reduce((s,e)=>s+e.count,0);return `<article class="error-card ${error.resolved?'resolved':''}"><div class="row"><span class="tag">${subjectById(c.discipline).name} · ${escapeHTML(c.subtopic)}</span><span class="tag ${error.resolved?'success':error.falseConfidence?'danger':'warning'}">${error.resolved?'Superado':error.falseConfidence?'Falso domínio':'Revisar conceito'}</span></div><h3>${escapeHTML(q.prompt)}</h3><div class="answer-comparison"><div><small>Sua resposta</small><p>${escapeHTML(answerText(q,error.answer))}</p></div><div><small>Resposta correta</small><p>${escapeHTML(answerText(q,q.answer))}</p></div></div><details><summary>Entender este erro</summary><p>${escapeHTML(q.explanation)}</p>${sourceTrail(c,curriculum)}</details><div class="row wrap"><span class="meta">${formatDate(error.lastAt)} · ${count} erro${count!==1?'s':''} neste conceito · ${CONFIDENCE[error.confidence]}</span>${button('Praticar outra abordagem →','variation',c.id,'text-button')}</div></article>`;}
 
 
+// The first release of the session builder intentionally exposes the subjects
+// with the richest question coverage. The rest of the bank remains available
+// through the existing quick filters and curriculum screens.
+const SESSION_DISCIPLINES=['matematica','fisica','quimica','biologia','historia','geografia'];
+const SESSION_QUANTITIES=[5,10,20,30,50,'all'];
+
+function sessionSubjects(bank){
+ return SESSION_DISCIPLINES.map(id=>SUBJECTS.find(s=>s.id===id)).filter(Boolean).filter(s=>bank.concepts.some(c=>c.discipline===s.id));
+}
+function sessionTopicKeys(bank,subjects=SESSION_DISCIPLINES){
+ const allowed=new Set(subjects);return [...new Set(bank.concepts.filter(c=>allowed.has(c.discipline)).map(c=>`${c.discipline}|${c.topic}`))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+}
+function defaultSessionBuilder(bank){
+ const subjects=sessionSubjects(bank).map(s=>s.id);
+ return {subjects,topics:sessionTopicKeys(bank,subjects),difficulties:[1,2,3,4],quantity:20};
+}
+function cleanSessionBuilder(bank,builder){
+ const available=new Set(sessionSubjects(bank).map(s=>s.id));
+ const subjects=[...(builder?.subjects||[])].filter(id=>available.has(id));
+ const topics=new Set(sessionTopicKeys(bank,subjects));
+ const selectedTopics=[...(builder?.topics||[])].filter(key=>topics.has(key));
+ const difficulties=[...(builder?.difficulties||[])].map(Number).filter(n=>n>=1&&n<=4).filter((n,i,a)=>a.indexOf(n)===i).sort((a,b)=>a-b);
+ const quantity=SESSION_QUANTITIES.includes(builder?.quantity)?builder.quantity:20;
+ return {subjects,topics:selectedTopics,difficulties,quantity};
+}
+function builderFilters(builder){
+ return {disciplines:[...builder.subjects],topics:[...builder.topics],difficulties:[...builder.difficulties],quantity:builder.quantity};
+}
+function topicLabel(key){return String(key).split('|').slice(1).join('|');}
+function subjectIdFromTopic(key){return String(key).split('|')[0];}
+
+
 
 
 
