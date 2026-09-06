@@ -28,7 +28,8 @@ Abra http://127.0.0.1:4187. Não há dependências para instalar. `npm test` exe
 - Salvamento automático local, retomada de quizzes, exportação e importação de backups.
 - Programa 2027 organizado em disciplina → tópico → subtópico, com contagem por trilha e atalho direto para treinar cada recorte.
 - Aba Configurações com tema claro/escuro/sistema, tamanho do texto, alto contraste, redução de movimento, metas de estudo e suporte.
-- Reporte de problema em cada questão; os reportes e chamados ficam registrados localmente até a conexão com um backend.
+- Reporte de problema em cada questão; os reportes ficam registrados localmente até a conexão com um backend.
+- Formulário de suporte conectado ao endpoint `/api/support`, com envio transacional para `fixouestudos@gmail.com` quando `RESEND_API_KEY` está configurada no ambiente hospedado.
 
 ## Seu progresso
 
@@ -83,4 +84,4 @@ O código-fonte é modular. O único HTML de distribuição é gerado para facil
 
 Após esta primeira versão: ampliar o banco e a revisão pedagógica; avaliação conceitual por IA com serviço seguro; Boss semanal; simulado completo de 80 questões sem feedback durante a prova; editor e avaliação de redação; exercícios da segunda fase; importação de materiais pessoais e eventual sincronização de dados. Esses modos não são simulados por botões sem função nesta entrega.
 
-Para hospedagem estática, publique o conteúdo de `dist/`. O aplicativo não necessita de servidor de API, chave de IA ou banco de dados remoto para estudar offline. Autenticação, sincronização entre dispositivos, fila compartilhada de reportes, painel administrativo e envio de chamados para a equipe ainda exigem um backend ou serviço externo; nesta etapa os dados são armazenados localmente e o e-mail `fixouestudos@gmail.com` continua disponível como canal de suporte.
+O site publicado usa um Worker para o endpoint de suporte. Configure os segredos de ambiente `RESEND_API_KEY` e, se necessário, `SUPPORT_FROM_EMAIL` pelo provedor de hospedagem; o destinatário padrão é `fixouestudos@gmail.com`. Sem a chave, o formulário preserva o chamado localmente e orienta o estudante a usar o e-mail direto. Autenticação, sincronização entre dispositivos, fila compartilhada de reportes e painel administrativo ainda exigem serviços adicionais.
