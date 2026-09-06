@@ -6,4 +6,9 @@ const replacements=[
  ['src/screens-library.js','O banco de 100 questões ainda não tem um exercício específico para ele.','O banco atual ainda não tem um exercício específico para ele.']
 ];
 for(const [file,from,to] of replacements){const p=fs.readFileSync(file,'utf8');if(!p.includes(from)) continue;fs.writeFileSync(file,p.replaceAll(from,to));}
+const mapFile='src/screens-library.js';
+let map=fs.readFileSync(mapFile,'utf8');
+const mapMarker='</div><form class="search-form" id="map-search-form">';
+if(!map.includes('${bankTrackSummary(bank)}')) map=map.replace(mapMarker,'</div>${bankTrackSummary(bank)}<form class="search-form" id="map-search-form">');
+fs.writeFileSync(mapFile,map);
 console.log('Textos dinâmicos atualizados.');

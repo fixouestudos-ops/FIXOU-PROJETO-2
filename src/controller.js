@@ -81,6 +81,7 @@ function handleAction(action,id,element){
  if(action==='question'){const q=questionById(BANK,id);if(q)launch('practice',{subtopic:q.conceptId},id);return;}
  if(action==='variation'){closeModal();launch('practice',{subtopic:id});return;}
  if(action==='subject'){ui.filters={discipline:id};go('train');return;}
+ if(action==='track'){const [kind,value]=String(id||'').split('|');ui.filters=kind==='discipline'?{discipline:value}:{topic:value};go('train');return;}
  if(action==='concept'){showConcept(id);return;}
  if(action==='clear-filters'){ui.filters={};render();return;}
  if(action==='search'){go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);return;}
