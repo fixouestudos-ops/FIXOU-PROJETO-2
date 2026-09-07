@@ -11,7 +11,7 @@ if(bank.questions.filter(q=>q.discipline==='biologia').length!==50||new Set(bank
 for(const c of bank.concepts)if(!c.officialIds.every(id=>curriculum.objects.some(o=>o.id===id)))throw new Error('Origem curricular inválida: '+c.id);
 const catalog=`export const BANK=${JSON.stringify(bank)};\nexport const CURRICULUM=${JSON.stringify(curriculum)};\nexport const BOOKS=${JSON.stringify(books)};\n`;
 fs.writeFileSync(path.join(root,'src/catalog.js'),catalog);
-const files=['src/catalog.js','src/config.js','src/utils.js','src/save.js','src/reviews.js','src/mastery.js','src/gamification.js','src/statistics.js','src/training.js','src/components.js','src/session-builder.js','src/screens.js','src/screens-library.js','src/screens-profile.js','src/screens-settings.js','src/session-view.js','src/controller.js','src/main.js'];
+const files=['src/catalog.js','src/config.js','src/utils.js','src/save.js','src/account.js','src/reviews.js','src/mastery.js','src/gamification.js','src/statistics.js','src/training.js','src/components.js','src/session-builder.js','src/screens.js','src/screens-library.js','src/screens-profile.js','src/screens-settings.js','src/session-view.js','src/controller.js','src/main.js'];
 const bundled=new Set(files.map(f=>path.normalize(f)));
 for(const file of files){
  const imports=[...read(file).matchAll(/from\s+['"](.+?)['"]/g)].map(match=>match[1]).filter(specifier=>specifier.startsWith('.'));
@@ -27,3 +27,4 @@ fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join
 fs.mkdirSync(path.join(root,'dist/assets'),{recursive:true});fs.copyFileSync(path.join(root,'assets/fixou-logo.png'),path.join(root,'dist/assets/fixou-logo.png'));
 fs.mkdirSync(path.join(root,'dist/server'),{recursive:true});const logoBase64=fs.readFileSync(path.join(root,'assets/fixou-logo.png')).toString('base64');const worker=read('server/index.mjs').replace("'__FIXOU_INDEX_HTML__'",JSON.stringify(html)).replace("'__FIXOU_LOGO_BASE64__'",JSON.stringify(logoBase64));fs.writeFileSync(path.join(root,'dist/server/index.js'),worker);
 console.log('Build OK · '+bank.questions.length+' questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');
+
