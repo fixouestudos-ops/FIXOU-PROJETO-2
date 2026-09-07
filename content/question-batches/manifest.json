@@ -19,6 +19,17 @@
       "questionCount": 20,
       "flashcardCount": 20,
       "scope": "Física L1 · questões e flashcards originais FIXOU"
+    },
+    {
+      "id": "physics-licensed-all-volumes",
+      "file": "physics-licensed-all-volumes.json",
+      "status": "active_with_review_queue",
+      "questionCount": 3314,
+      "activeQuestionCount": 532,
+      "needsReviewCount": 2782,
+      "answerEntryCount": 3481,
+      "parsePendingCount": 526,
+      "scope": "Física L1, L2, L3 e L4 · questões objetivas e discursivas licenciadas com vínculo ao gabarito"
     }
   ],
   "plannedTracks": []

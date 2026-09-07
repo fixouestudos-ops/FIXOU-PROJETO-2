@@ -17,10 +17,12 @@ for(const q of bank.questions){
   if(q.sourceType!==undefined&&!['licensed_material','fixou_original'].includes(q.sourceType))fail('sourceType inválido em '+q.id);
   const c=concepts.get(q.conceptId);if(!c)fail('Conceito ausente em '+q.id);if(c.discipline!==q.discipline||c.topic!==q.topic||c.subtopic!==q.subtopic)fail('Hierarquia divergente em '+q.id);
   if(!Array.isArray(q.officialIds)||q.officialIds.length===0||q.officialIds.some(id=>!curriculum.objects.some(o=>o.id===id)))fail('Referência curricular inválida em '+q.id);
-  if(q.type==='choice'&&(!Array.isArray(q.options)||q.options.length<2||new Set(q.options).size!==q.options.length||!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length))fail('Alternativas inválidas em '+q.id);
+  if(q.type==='choice'&&(!Array.isArray(q.options)||q.options.length<2||(!q.needsReview&&new Set(q.options).size!==q.options.length)||!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length))fail('Alternativas inválidas em '+q.id);
   if(q.sourceType==='licensed_material'){
     if(!Number.isInteger(q.questionNumber)||q.questionNumber<1||q.answerKeyQuestionNumber!==q.questionNumber)fail('Vínculo questão-gabarito inválido em '+q.id);
-    const expected='ABCDE'[q.answer];if(q.answerKeyLetter!==expected)fail('Alternativa divergente do gabarito em '+q.id);
+    if(q.type==='choice'){
+      const expected='ABCDE'[q.answer];if(q.answerKeyLetter!==expected)fail('Alternativa divergente do gabarito em '+q.id);
+    }else if(typeof q.answerKeyText!=='string'||q.answerKeyText.trim().length<1)fail('Resposta textual ausente em '+q.id);
   }
   if(q.imageAssets!==undefined&&(!Array.isArray(q.imageAssets)||q.imageAssets.some(asset=>typeof asset!=='string'||asset.includes('..')||!fs.existsSync(path.join(root,asset)))))fail('Asset de imagem inválido em '+q.id);
 }

@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-09-07",
+  "authorizationType": "user_declared_reproduction_authorization",
+  "scope": [
+    "PV Física L1",
+    "PV Física L2",
+    "PV Física L3",
+    "PV Física L4",
+    "gabaritos e imagens necessários às questões"
+  ],
+  "statement": "O usuário declarou possuir autorização e solicitou a reprodução integral das questões dos livros enviados.",
+  "validationPolicy": "Toda questão deve manter volume, frente, capítulo, seção, número original e vínculo com o gabarito. Itens ambíguos permanecem em needsReview e não afetam domínio ou confiança."
+}
