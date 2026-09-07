@@ -6,8 +6,8 @@ import {matchesQuestion} from '../src/training.js';
 import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionTopicKeys} from '../src/session-builder.js';
 const bank=JSON.parse(fs.readFileSync(new URL('../content/bank.json',import.meta.url),'utf8'));
 const concepts=Object.fromEntries(bank.concepts.map(c=>[c.id,c]));
-test('sessão personalizada começa com seis disciplinas, assuntos e dificuldades selecionados',()=>{
- const b=defaultSessionBuilder(bank);assert.deepEqual(b.subjects,['matematica','fisica','quimica','biologia','historia','geografia']);assert.ok(b.topics.length>0);assert.deepEqual(b.difficulties,[1,2,3,4]);assert.equal(b.quantity,20);
+test('sessão personalizada começa apenas com disciplinas que possuem questões publicáveis',()=>{
+ const b=defaultSessionBuilder(bank);assert.deepEqual(b.subjects,['fisica','biologia']);assert.ok(b.topics.length>0);assert.deepEqual(b.difficulties,[1,2,3,4]);assert.equal(b.quantity,20);
 });
 test('sessão personalizada remove assuntos de disciplinas desmarcadas e preserva opções válidas',()=>{
  const all=defaultSessionBuilder(bank),only=cleanSessionBuilder(bank,{...all,subjects:['biologia'],topics:all.topics,difficulties:[2,4],quantity:50});assert.deepEqual(only.subjects,['biologia']);assert.ok(only.topics.every(key=>key.startsWith('biologia|')));assert.deepEqual(only.difficulties,[2,4]);assert.equal(only.quantity,50);assert.deepEqual(builderFilters(only).disciplines,['biologia']);

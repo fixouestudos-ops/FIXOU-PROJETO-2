@@ -6,17 +6,20 @@
   "deduplicationKey": "id",
   "batches": [
     {
-      "id": "core-338",
+      "id": "biology-preserved-50",
       "file": "../bank.json",
       "status": "active",
-      "questionCount": 338,
-      "scope": "Banco autoral atual, organizado por disciplina, tópico e subtópico"
+      "questionCount": 50,
+      "scope": "Questões de Biologia preservadas da base anterior"
+    },
+    {
+      "id": "physics-l1-batch-01",
+      "file": "../bank.json",
+      "status": "active",
+      "questionCount": 20,
+      "flashcardCount": 20,
+      "scope": "Física L1 · questões e flashcards originais FIXOU"
     }
   ],
-  "plannedTracks": [
-    {"id": "biologia-foco", "target": 100, "status": "expansion-ready"},
-    {"id": "geometria-plana", "target": 100, "status": "expansion-ready"},
-    {"id": "fisica-foco", "target": 100, "status": "expansion-ready"},
-    {"id": "geomorfologia", "target": 100, "status": "expansion-ready"}
-  ]
+  "plannedTracks": []
 }

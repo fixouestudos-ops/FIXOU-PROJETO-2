@@ -1,15 +1,12 @@
 import {SUBJECTS} from './config.js';
 
-// The first release of the session builder intentionally exposes the subjects
-// with the richest question coverage. The rest of the bank remains available
-// through the existing quick filters and curriculum screens.
-export const SESSION_DISCIPLINES=['matematica','fisica','quimica','biologia','historia','geografia'];
+// Somente disciplinas com questões publicáveis aparecem no construtor.
 export const SESSION_QUANTITIES=[5,10,20,30,50,'all'];
 
 export function sessionSubjects(bank){
- return SESSION_DISCIPLINES.map(id=>SUBJECTS.find(s=>s.id===id)).filter(Boolean).filter(s=>bank.concepts.some(c=>c.discipline===s.id));
+ return SUBJECTS.filter(s=>bank.questions.some(q=>q.discipline===s.id&&!q.needsReview));
 }
-export function sessionTopicKeys(bank,subjects=SESSION_DISCIPLINES){
+export function sessionTopicKeys(bank,subjects=sessionSubjects(bank).map(s=>s.id)){
  const allowed=new Set(subjects);return [...new Set(bank.concepts.filter(c=>allowed.has(c.discipline)).map(c=>`${c.discipline}|${c.topic}`))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
 }
 export function defaultSessionBuilder(bank){

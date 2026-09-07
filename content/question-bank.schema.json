@@ -39,7 +39,11 @@
         "year": {"type": "integer", "minimum": 1900},
         "officialIds": {"type": "array", "items": {"type": "string"}, "minItems": 1},
         "contentTrack": {"type": "string"},
-        "diagram": {"type": "object"}
+        "diagram": {"type": "object"},
+        "needsReview": {"type": "boolean"},
+        "sourceType": {"enum": ["licensed_material", "fixou_original"]},
+        "sourceReference": {"type": "string"},
+        "imageAssets": {"type": "array", "items": {"type": "string"}}
       }
     }
   }

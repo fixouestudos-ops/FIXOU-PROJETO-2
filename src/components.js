@@ -7,15 +7,18 @@ export const questionById = (bank,id) => bank.questions.find(q=>q.id===id);
 export const safeLink = url => {try{const u=new URL(url);return u.protocol==='https:'?escapeHTML(u.href):'#';}catch{return '#';}};
 export function diagramSVG(diagram){
  if(!diagram)return '';
- const labels=(diagram.labels||[]).map((label,i)=>`<text x="${28+i*54}" y="24" class="diagram-label">${escapeHTML(label)}</text>`).join('');
+ let labels=(diagram.labels||[]).map((label,i)=>`<text x="${28+i*54}" y="24" class="diagram-label">${escapeHTML(label)}</text>`).join('');
  let shape;
- if(['circle','circle-angle','circle-coordinate','annulus','chord','tangent','two-circles'].includes(diagram.type))shape=diagram.type==='annulus'?'<circle cx="110" cy="74" r="45"/><circle cx="110" cy="74" r="23"/>':diagram.type==='two-circles'?'<circle cx="86" cy="75" r="30"/><circle cx="154" cy="75" r="20"/>':'<circle cx="120" cy="74" r="43"/><line x1="120" y1="74" x2="163" y2="74"/>';
+ let aria='Diagrama da questão';
+ if(diagram.type==='motion-line'){shape='<line x1="35" y1="82" x2="225" y2="82"/><path d="M35 82 L46 75 M35 82 L46 89 M225 82 L214 75 M225 82 L214 89"/><circle cx="35" cy="82" r="5"/><circle cx="190" cy="82" r="5"/><circle cx="86" cy="82" r="5"/>';labels='<text x="28" y="108" class="diagram-label">O</text><text x="112" y="65" class="diagram-label">60 m →</text><text x="91" y="108" class="diagram-label">← 40 m</text>';aria='Percurso em linha reta: sessenta metros para leste e quarenta metros para oeste';}
+ else if(diagram.type==='velocity-graph'){shape='<line x1="45" y1="112" x2="228" y2="112"/><line x1="45" y1="112" x2="45" y2="28"/><path d="M228 112 L218 106 M228 112 L218 118 M45 28 L39 38 M45 28 L51 38"/><path d="M45 55 L190 55 L190 112" class="diagram-area"/><line x1="45" y1="55" x2="190" y2="55"/><line x1="190" y1="55" x2="190" y2="112"/>';labels='<text x="25" y="34" class="diagram-label">v</text><text x="25" y="59" class="diagram-label">6</text><text x="224" y="130" class="diagram-label">t</text><text x="185" y="130" class="diagram-label">5</text>';aria='Gráfico de velocidade por tempo: seis metros por segundo entre zero e cinco segundos';}
+ else if(['circle','circle-angle','circle-coordinate','annulus','chord','tangent','two-circles'].includes(diagram.type))shape=diagram.type==='annulus'?'<circle cx="110" cy="74" r="45"/><circle cx="110" cy="74" r="23"/>':diagram.type==='two-circles'?'<circle cx="86" cy="75" r="30"/><circle cx="154" cy="75" r="20"/>':'<circle cx="120" cy="74" r="43"/><line x1="120" y1="74" x2="163" y2="74"/>';
  else if(['rectangle','square','parallelogram','composite','quadrilateral'].includes(diagram.type))shape='<path d="M55 110 L55 45 L205 45 L205 110 Z"/><line x1="55" y1="110" x2="205" y2="45"/>';
  else if(['line','perpendicular','parallel-lines','translation','rotation','symmetry'].includes(diagram.type))shape='<line x1="35" y1="105" x2="230" y2="42"/><line x1="80" y1="118" x2="80" y2="30"/><circle cx="120" cy="78" r="4"/>';
  else if(['trapezoid','regular-polygon','polygon','polygon-coordinate','tiling'].includes(diagram.type))shape='<path d="M60 105 L92 45 L178 45 L210 105 Z"/><line x1="92" y1="45" x2="178" y2="105"/>';
  else if(['rhombus','kite','homothety'].includes(diagram.type))shape='<path d="M125 35 L190 78 L125 118 L60 78 Z"/><line x1="60" y1="78" x2="190" y2="78"/><line x1="125" y1="35" x2="125" y2="118"/>';
  else shape='<path d="M125 30 L210 108 L45 108 Z"/><line x1="125" y1="30" x2="125" y2="108"/>';
- return `<svg class="question-diagram" viewBox="0 0 260 140" role="img" aria-label="Diagrama geométrico">${shape}${labels}</svg>`;
+ return `<svg class="question-diagram" viewBox="0 0 260 140" role="img" aria-label="${aria}">${shape}${labels}</svg>`;
 }
 export const titleBlock = (eyebrow,title,subtitle='',extra='') => `<div class="page-heading"><div><div class="eyebrow">${eyebrow}</div><h1>${title}<span>.</span></h1>${subtitle?`<p>${subtitle}</p>`:''}</div>${extra}</div>`;
 export const bar = (value,label='Domínio') => `<div class="progress" role="progressbar" aria-label="${escapeHTML(label)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${clamp(value,0,100)}"><span style="width:${clamp(value,0,100)}%"></span></div>`;

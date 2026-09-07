@@ -1,0 +1,23 @@
+{
+  "batchId": "physics-l1-batch-01",
+  "completedAt": "2026-09-07",
+  "material": {
+    "driveFileId": "1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
+    "title": "PV Física – L1.pdf",
+    "bytes": 53239983
+  },
+  "copyrightMode": "reference_only",
+  "licensedQuestionsImported": 0,
+  "originalQuestionsCreated": 20,
+  "originalFlashcardsCreated": 20,
+  "questionsNeedsReview": 0,
+  "bookImagesReused": 0,
+  "originalDiagramsCreated": 2,
+  "duplicateRecordsCreated": 0,
+  "topics": {
+    "cinematica": 9,
+    "eletrostatica": 6,
+    "termologia": 5
+  },
+  "note": "O material informa que a reprodução é proibida. Os exercícios, textos, imagens e gabaritos do livro não foram copiados. O conteúdo acadêmico foi usado apenas como referência para itens autorais."
+}
