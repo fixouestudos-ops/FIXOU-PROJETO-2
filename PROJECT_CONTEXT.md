@@ -14,7 +14,7 @@ O primeiro owner é criado por POST /api/admin/bootstrap, somente quando ainda n
 
 ## Progresso, perfil e avatar
 
-src/save.js mantém cache local, valida backups e preserva preferências. Após login, o estado crítico também é salvo em user_progress. A primeira sincronização migra o estado local quando ele é mais novo. server_revision detecta alterações concorrentes e recusa sobrescrita silenciosa com HTTP 409. O limite sincronizado é 8 MB.
+src/save.js mantém cache local, valida backups e preserva preferências. Após login, o estado crítico também é salvo em user_progress. A primeira sincronização migra o estado local quando ele é mais novo. server_revision detecta alterações concorrentes e recusa sobrescrita silenciosa com HTTP 409; o cliente, ao receber o conflito, busca o estado remoto, adota-o se for mais novo e refaz o envio uma única vez. O limite sincronizado é 1,5 MB (abaixo do teto da célula do banco).
 
 Avatares JPG, PNG e WEBP de até 5 MB têm MIME e assinatura validados no backend. O objeto usa chave aleatória em AVATARS, e users guarda apenas a referência. Substituir ou remover exclui o objeto anterior. Sem foto, a interface mostra iniciais.
 
@@ -32,7 +32,7 @@ Usuário ativo significa atividade real de estudo ou navegação relevante. DAU,
 
 Retenção usa coortes elegíveis: D1 mede retorno no dia seguinte; D7 mede retorno entre os dias 1 e 7; D30 mede retorno entre os dias 1 e 30. Coortes jovens mostram que ainda não há dados suficientes.
 
-O painel mostra dados reais, séries diárias, funis por usuários únicos, usuários, relatos agrupados e sugestões. Mudanças de status geram admin_audit_logs. A lista visual é limitada, mas as métricas globais usam o banco completo.
+O painel mostra dados reais, séries diárias (ativos e novos; questões com respondidas, corretas, incorretas e puladas), funis por usuários únicos, usuários com modal de detalhes por usuário, relatos agrupados e sugestões. Mudanças de status geram admin_audit_logs. A lista visual é limitada, mas as métricas globais usam o banco completo.
 
 ## Pastas
 

@@ -37,7 +37,7 @@ Abra http://127.0.0.1:4187. Não há dependências para instalar. `npm test` exe
 
 O navegador mantém cache na chave fixou:2027:v1. Depois do login, os dados críticos também são sincronizados com user_progress. A primeira entrada migra o estado local mais novo. Uma revisão do servidor detecta conflito entre dispositivos antes de qualquer sobrescrita. Exportação e importação continuam disponíveis como cópia portátil.
 
-Preferências visuais podem permanecer locais. Respostas, sessões, revisões, favoritos, erros e domínio fazem parte do estado sincronizado. O limite seguro atual é 8 MB; em escala maior o histórico deverá ser normalizado em tabelas próprias.
+Preferências visuais podem permanecer locais. Respostas, sessões, revisões, favoritos, erros e domínio fazem parte do estado sincronizado. O limite seguro atual é 1,5 MB (dentro do teto da célula do banco); em escala maior o histórico deverá ser normalizado em tabelas próprias.
 ## Critérios de aprendizagem
 
 O domínio de 0 a 100 é uma **estimativa pedagógica**, não uma nota oficial, previsão de aprovação ou diagnóstico validado. Combina acertos, erros, confiança, dificuldade, tempo, desempenho recente, variedade e dias distintos. Uma única questão limita a estimativa a 35%; um único dia, a 55%; dois dias, a 80%. Chutes corretos não constroem domínio alto. Erros com certeza recebem maior prioridade nos momentos de recuperação.

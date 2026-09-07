@@ -13,7 +13,7 @@ import {statsScreen,profileScreen} from './screens-profile.js';
 import {settingsScreen} from './screens-settings.js';
 import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
 import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES} from './session-builder.js';
-import {api,authScreen,adminScreen,avatar,ACCOUNT_CONFIG} from './account.js';
+import {api,authScreen,adminScreen,adminUserModal,avatar,ACCOUNT_CONFIG} from './account.js';
 
 const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
@@ -24,7 +24,8 @@ const appElement=document.querySelector('#app'),modalElement=document.querySelec
 function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
-function queueServerSync(){if(!account.user)return;clearTimeout(syncTimeout);syncTimeout=setTimeout(()=>api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})}).then(r=>{account.progressRevision=r.revision;}).catch(error=>toast(error.message||'Seu progresso está salvo neste dispositivo e será sincronizado quando a conexão voltar.')),700);}
+function pushProgress(baseRevision=account.progressRevision){return api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision})}).then(r=>{account.progressRevision=r.revision;});}
+function queueServerSync(){if(!account.user)return;clearTimeout(syncTimeout);syncTimeout=setTimeout(()=>pushProgress().catch(async error=>{if(error.code==='progress_conflict'){try{const remote=await api('/api/progress'),rev=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}account.progressRevision=rev;await pushProgress(rev);toast('Conflito resolvido: este dispositivo foi atualizado e o progresso sincronizado.');}catch(error){toast('Seu progresso local foi preservado. Reabra o FIXOU para sincronizar.');}}else{toast(error.message||'Seu progresso está salvo neste dispositivo e será sincronizado quando a conexão voltar.');}}),700);}
 function saveProgress(){if(storageBlocked)return false;try{persistState(state);queueServerSync();return true;}catch(error){storageBlocked=true;toast('Não foi possível salvar. Exporte seu progresso pelo Perfil antes de fechar.');return false;}}
 function track(eventType,metadata={}){if(account.user)api('/api/events',{method:'POST',body:JSON.stringify({eventType,metadata})}).catch(()=>{});}
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
@@ -80,6 +81,7 @@ function handleAction(action,id,element){
  if(action==='logout'){api('/api/auth/logout',{method:'POST',body:'{}'}).finally(()=>{account={loading:false,user:null,progressRevision:0};adminData=null;go('login');render();});return;}
  if(action==='remove-avatar'){api('/api/avatar',{method:'DELETE',body:'{}'}).then(()=>{account.user={...account.user,hasAvatar:false,avatarVersion:Date.now()};render();toast('Foto removida.');}).catch(e=>toast(e.message));return;}
  if(action==='admin-period'){ui.adminPeriod=Number(id);adminData=null;render();api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}
+  if(action==='admin-user'){const target=(adminData?.users||[]).find(u=>u.id===id);if(target)openModal(adminUserModal(target));return;}
  if(action==='menu'){ui.sidebarOpen=!ui.sidebarOpen;render();return;}
  if(action==='close-modal'){closeModal();afterProfile=null;return;}
  if(action==='confirm-modal'){const fn=afterConfirm;closeModal();fn?.();return;}
