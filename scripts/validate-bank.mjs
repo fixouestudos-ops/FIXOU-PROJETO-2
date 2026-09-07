@@ -27,6 +27,11 @@ for(const q of bank.questions){
   if(q.imageAssets!==undefined&&(!Array.isArray(q.imageAssets)||q.imageAssets.some(asset=>typeof asset!=='string'||asset.includes('..')||!fs.existsSync(path.join(root,asset)))))fail('Asset de imagem inválido em '+q.id);
 }
 if(bank.questions.filter(q=>q.discipline==='biologia').length!==50)fail('As 50 questões de Biologia precisam permanecer preservadas.');
+const physicsAreas=['Mecânica','Cinemática','Eletromagnetismo','Óptica','Termologia','Física Moderna','Ondulatória','Gravitação'];
+const physicsQuestions=bank.questions.filter(q=>q.discipline==='fisica');
+if(physicsQuestions.length!==3334)fail('O total de Física precisa permanecer em 3334 questões.');
+if(physicsQuestions.some(q=>!physicsAreas.includes(q.topic)||/Física L[1-4]|Frente [1-3]|Capítulo \d/i.test(q.topic+' '+q.subtopic)))fail('Taxonomia editorial exposta em Física.');
+if(new Set(physicsQuestions.map(q=>q.topic)).size!==physicsAreas.length||physicsAreas.some(area=>!physicsQuestions.some(q=>q.topic===area)))fail('As oito áreas de Física precisam estar presentes.');
 for(const c of bank.concepts){if(!Array.isArray(c.officialIds)||c.officialIds.some(id=>!curriculum.objects.some(o=>o.id===id)))fail('Referência curricular inválida no conceito '+c.id);}
 if(manifest.deduplicationKey!=='id'||!Array.isArray(manifest.batches)||manifest.batches.length<1)fail('Manifesto de lotes inválido.');
 console.log(`Bank valid · ${bank.questions.length} questions · ${bank.concepts.length} concepts · ${manifest.batches.length} batch manifest`);

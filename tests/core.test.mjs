@@ -8,6 +8,7 @@ import {currentStreak,profileLevel} from '../src/gamification.js';
 import {gradeAnswer,createSession,recordAnswer,pickNextQuestion,finishSession,matchesQuestion} from '../src/training.js';
 import {studyStats} from '../src/statistics.js';
 import {diagramSVG} from '../src/components.js';
+import {PHYSICS_AREA_ORDER} from '../src/config.js';
 const bank=JSON.parse(fs.readFileSync(new URL('../content/bank.json',import.meta.url),'utf8'));
 const curriculum=JSON.parse(fs.readFileSync(new URL('../content/curriculum.json',import.meta.url),'utf8'));
 const now=new Date(2026,8,6,12).getTime(),day=86400000;
@@ -31,6 +32,8 @@ test('backup incompleto é rejeitado antes de substituir progresso válido',()=>
 test('falso domínio recebe prioridade no treino de fraquezas com outra variação',()=>{const s=createState(),q=bank.questions[0],other=bank.questions.find(x=>x.conceptId!==q.conceptId);let a=createSession(s,bank,'practice',{},now);recordAnswer(s,bank,a,q,-1,'sure',20,now);a=createSession(s,bank,'practice',{},now);recordAnswer(s,bank,a,other,-1,'guess',20,now);const weak=createSession(s,bank,'weak',{},now);const next=pickNextQuestion(s,bank,weak,now+1000);assert.equal(next.conceptId,q.conceptId);assert.notEqual(next.id,q.id);});
 
 test('questão em needsReview não aparece no treino nem altera domínio ou confiança',()=>{const s=createState(),base=bank.questions[0],q={...base,id:'pending-review',needsReview:true};const c=bank.concepts.find(c=>c.id===q.conceptId),a=createSession(s,{...bank,questions:[q]},'practice',{},now);assert.equal(matchesQuestion(q,c,{},s,now),false);assert.equal(recordAnswer(s,{...bank,questions:[q]},a,q,q.answer,'sure',20,now),null);assert.equal(s.history.length,0);assert.equal(s.concepts[q.conceptId],undefined);});
+
+test('Física usa somente as oito áreas FIXOU e preserva todas as questões',()=>{const qs=bank.questions.filter(q=>q.discipline==='fisica');assert.equal(qs.length,3334);assert.equal(new Set(qs.map(q=>q.id)).size,3334);assert.deepEqual([...new Set(qs.map(q=>q.topic))].sort(),[...PHYSICS_AREA_ORDER].sort());for(const q of qs)assert.doesNotMatch(q.topic+' '+q.subtopic,/Física L[1-4]|Frente [1-3]|Capítulo \d/i);});
 
 test('diagramas autorais de Física são renderizados com descrição acessível',()=>{const motion=diagramSVG({type:'motion-line'}),graph=diagramSVG({type:'velocity-graph'});assert.match(motion,/sessenta metros/);assert.match(graph,/Gráfico de velocidade/);assert.match(graph,/class="diagram-area"/);});
 

@@ -1,4 +1,4 @@
-import {SUBJECTS} from './config.js';
+import {SUBJECTS,PHYSICS_AREA_ORDER} from './config.js';
 
 // Somente disciplinas com questões publicáveis aparecem no construtor.
 export const SESSION_QUANTITIES=[5,10,20,30,50,'all'];
@@ -7,7 +7,9 @@ export function sessionSubjects(bank){
  return SUBJECTS.filter(s=>bank.questions.some(q=>q.discipline===s.id&&!q.needsReview));
 }
 export function sessionTopicKeys(bank,subjects=sessionSubjects(bank).map(s=>s.id)){
- const allowed=new Set(subjects);return [...new Set(bank.concepts.filter(c=>allowed.has(c.discipline)).map(c=>`${c.discipline}|${c.topic}`))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+ const allowed=new Set(subjects),activeConcepts=new Set(bank.questions.filter(q=>!q.needsReview).map(q=>q.conceptId));
+ const rank=key=>{const [discipline,topic]=key.split('|');return discipline==='fisica'?PHYSICS_AREA_ORDER.indexOf(topic):-1;};
+ return [...new Set(bank.concepts.filter(c=>allowed.has(c.discipline)&&activeConcepts.has(c.id)).map(c=>`${c.discipline}|${c.topic}`))].sort((a,b)=>a.startsWith('fisica|')&&b.startsWith('fisica|')?rank(a)-rank(b):a.localeCompare(b,'pt-BR'));
 }
 export function defaultSessionBuilder(bank){
  const subjects=sessionSubjects(bank).map(s=>s.id);
