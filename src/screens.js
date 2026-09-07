@@ -1,4 +1,4 @@
-import {SUBJECTS,QUESTION_TYPES,DIFFICULTIES} from './config.js';
+import {SUBJECTS,QUESTION_TYPES,DIFFICULTIES,PHYSICS_AREA_ORDER} from './config.js';
 import {escapeHTML,sum,formatNumber,normalize,relativeDue,formatDate} from './utils.js';
 import {studyStats,chartDays} from './statistics.js';
 import {profileLevel} from './gamification.js';
@@ -24,7 +24,7 @@ export function filterControls(bank,filters,prefix='filter'){
  const selected=(key,v)=>String(filters[key]||'')===String(v)?'selected':'';
  const activeConceptIds=new Set(bank.questions.filter(q=>!q.needsReview).map(q=>q.conceptId));
  const activeSubjects=SUBJECTS.filter(s=>bank.questions.some(q=>q.discipline===s.id&&!q.needsReview));
- const topics=[...new Set(bank.concepts.filter(c=>activeConceptIds.has(c.id)&&(!filters.discipline||c.discipline===filters.discipline)).map(c=>c.topic))];
+ const topics=[...new Set(bank.concepts.filter(c=>activeConceptIds.has(c.id)&&(!filters.discipline||c.discipline===filters.discipline)).map(c=>c.topic))].sort((a,b)=>filters.discipline==='fisica'?PHYSICS_AREA_ORDER.indexOf(a)-PHYSICS_AREA_ORDER.indexOf(b):a.localeCompare(b,'pt-BR'));
  const concepts=bank.concepts.filter(c=>activeConceptIds.has(c.id)&&(!filters.discipline||c.discipline===filters.discipline)&&(!filters.topic||c.topic===filters.topic));
  const select=(key,label,options)=>`<label>${label}<select data-filter="${key}" data-prefix="${prefix}" id="${prefix}-${key}"><option value="">Todos</option>${options.map(([v,t])=>`<option value="${escapeHTML(v)}" ${selected(key,v)}>${escapeHTML(t)}</option>`).join('')}</select></label>`;
  return `<div class="filter-grid">${select('discipline','Disciplina',activeSubjects.map(s=>[s.id,s.name]))}${select('topic','Assunto',topics.map(t=>[t,t]))}${select('subtopic','Subassunto',concepts.map(c=>[c.id,c.subtopic]))}${select('difficulty','Dificuldade',[1,2,3,4].map(d=>[d,DIFFICULTIES[d]]))}${select('type','Tipo',Object.entries(QUESTION_TYPES))}${select('status','Seu histórico',[['wrong','Pontos fracos'],['new','Nunca vistas'],['due','Revisões vencidas'],['favorites','Favoritas']])}</div>`;

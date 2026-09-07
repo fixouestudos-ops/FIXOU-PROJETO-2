@@ -9,10 +9,8 @@ export function errorsScreen({state,bank,curriculum,errorFilter}){
 }
 function bankTrackSummary(bank){
  const tracks=[
-  {label:'Biologia · evolução e ecologia',detail:'Evolução biológica, especiação, ecologia e biomas.',count:bank.questions.filter(q=>q.discipline==='biologia').length,kind:'discipline',value:'biologia',symbol:'⌁'},
-  {label:'Geometria plana',detail:'Áreas, circunferência, polígonos, coordenadas e transformações.',count:bank.questions.filter(q=>q.contentTrack==='geometria-plana').length,kind:'topic',value:'Geometria plana',symbol:'◇'},
-  {label:'Energia, dinâmica e trabalho',detail:'Leis de Newton, energia, impulso, potência e torque.',count:bank.questions.filter(q=>q.contentTrack==='fisica-foco').length,kind:'topic',value:'Energia, dinâmica e trabalho',symbol:'↯'},
-  {label:'Geomorfologia',detail:'Processos internos e externos, relevo, erosão e paisagens.',count:bank.questions.filter(q=>q.contentTrack==='geomorfologia').length,kind:'topic',value:'Geomorfologia',symbol:'◎'}
+  {label:'Física',detail:'Mecânica, Cinemática, Eletromagnetismo, Óptica, Termologia, Física Moderna, Ondulatória e Gravitação.',count:bank.questions.filter(q=>q.discipline==='fisica').length,kind:'discipline',value:'fisica',symbol:'↯'},
+  {label:'Biologia · evolução e ecologia',detail:'Evolução biológica, especiação, ecologia e biomas.',count:bank.questions.filter(q=>q.discipline==='biologia').length,kind:'discipline',value:'biologia',symbol:'⌁'}
  ];
  return `<section class="panel bank-track-summary"><div class="section-title"><div><h2>Novas trilhas ligadas ao programa</h2><p class="meta">O mapa oficial agora aponta diretamente para as questões adicionadas ao banco.</p></div><span>${bank.questions.length} questões no banco</span></div><div class="subject-grid">${tracks.map(t=>`<article class="subject-card bank-track-card"><span class="subject-symbol">${t.symbol}</span><h3>${t.label}</h3><p>${t.detail}</p><strong class="track-count">${t.count} questões</strong><button class="text-button" data-action="track" data-id="${escapeHTML(t.kind+'|'+t.value)}">Abrir no treino →</button></article>`).join('')}</div></section>`;
 }
