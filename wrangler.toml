@@ -1,0 +1,16 @@
+name = "fixou"
+main = "dist/server/index.js"
+compatibility_date = "2026-09-07"
+
+workers_dev = true
+
+vars = { SUPPORT_FROM_EMAIL = "FIXOU <onboarding@resend.dev>", SUPPORT_TO_EMAIL = "fixouestudos@gmail.com" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fixou-db"
+database_id = "54b84e0a-9f64-45f0-ad4e-46ce614f8e36"
+
+# [[r2_buckets]]
+# binding = "AVATARS"
+# bucket_name = "fixou-avatars"
