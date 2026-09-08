@@ -39,7 +39,7 @@ function closeGuestModal(){
 }
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
 if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
-function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
+function applyPreferences(){const s=state.settings||{};document.documentElement.dataset.theme='dark';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
 function pushProgress(baseRevision=account.progressRevision){return api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision})}).then(r=>{account.progressRevision=r.revision;});}

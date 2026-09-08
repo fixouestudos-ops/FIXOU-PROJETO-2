@@ -167,10 +167,18 @@
 .ab-btn-primary:hover{box-shadow:0 6px 30px rgba(37,99,235,.45);transform:translateY(-1px);color:#fff}
 .ab-btn-ghost{border:1px solid rgba(96,165,250,.25);color:#93c5fd;background:transparent}
 .ab-btn-ghost:hover{border-color:rgba(96,165,250,.5);background:rgba(96,165,250,.06);color:#93c5fd}
+.ab-section-text{font-size:1.05rem;line-height:1.85;max-width:680px;margin:0 auto;color:#94a3b8;text-align:center}
+.ab-highlight-quote{margin:28px auto;padding:24px 28px;border-left:3px solid #60a5fa;background:rgba(96,165,250,.06);border-radius:0 14px 14px 0;font-size:1.05rem;line-height:1.75;color:#93c5fd;font-style:normal;max-width:680px;text-align:left}
+.ab-note-text{font-size:.95rem;line-height:1.75;max-width:680px;margin:20px auto 0;color:#60a5fa;text-align:center;font-weight:500}
+.ab-report-cta,.ab-support-cta{margin-top:24px;text-align:center}
+.ab-report-cta{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:1px solid rgba(245,158,11,.25);border-radius:12px;background:rgba(245,158,11,.06);color:#fbbf24;font-size:.9rem}
+.ab-report-icon{font-size:1.1rem}
+.ab-differential-inner,.ab-report-inner,.ab-support-inner{text-align:center;max-width:720px;margin:0 auto}
+.ab-pilot .ab-section-text{text-align:center}
 [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .ab-visible[data-reveal],[data-reveal].ab-visible{opacity:1;transform:translateY(0)}
 @media(max-width:800px){.ab-hero{flex-direction:column;gap:30px;padding:50px 20px}.ab-hero-orb{width:180px;height:180px}.ab-problems-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-videos-grid{grid-template-columns:1fr}}
-@media(max-width:500px){.ab-hero{padding:40px 16px}.ab-hero-headline{font-size:1.7rem}.ab-section{padding:40px 16px}.ab-problems-grid,.ab-steps-grid,.ab-tools-grid{grid-template-columns:1fr}.ab-hero-orb{width:140px;height:140px}}
+@media(max-width:500px){.ab-hero{padding:40px 16px}.ab-hero-headline{font-size:1.7rem}.ab-section{padding:40px 16px}.ab-problems-grid,.ab-steps-grid,.ab-tools-grid{grid-template-columns:1fr}.ab-hero-orb{width:140px;height:140px}.ab-highlight-quote{padding:18px 16px;font-size:.95rem}.ab-report-cta{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){.ab-orb-ring{animation:none}.ab-problem,.ab-step,.ab-tool,[data-reveal]{opacity:1;transform:none;transition:none}}
 </style>
 </head>
@@ -228,7 +236,7 @@ const uid = () => globalThis.crypto?.randomUUID?.() || Date.now().toString(36)+M
 
 const SAVE_KEY = 'fixou:2027:v1';
 const LEGACY_SAVE_KEY = 'fuvest-mastery:2027:v1';
-const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'system',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
+const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'dark',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
 const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
 function validateState(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||input.version!==1)throw new Error('Este arquivo não é um backup compatível do FUVEST Mastery.');
@@ -258,7 +266,7 @@ function validateState(input){
   if(!s||typeof s.id!=='string'||!['daily','adaptive','weak','practice','lightning','survival','boss'].includes(s.mode)||!Array.isArray(s.answered)||s.answered.some(h=>!attempt(h))||!strings(s.items)||!isTime(s.startedAt)||!count(s.lives)||s.lives>3||!count(s.limit)||!['score','combo','bestCombo'].every(k=>count(s[k]))||!['question','feedback'].includes(s.phase)||s.finished!==false||typeof s.currentId!=='string'||!s.items.includes(s.currentId)||!s.filters||typeof s.filters!=='object'||Array.isArray(s.filters)||Object.values(s.filters).some(v=>!['string','number'].includes(typeof v))||s.endsAt!==null&&!isTime(s.endsAt))throw new Error('Sessão salva inválida.');
   const d=s.draft;if(!d||typeof d.text!=='string'||!Array.isArray(d.order)||!Array.isArray(d.match)||d.order.some(v=>!count(v))||d.match.some(v=>!Number.isInteger(v)||v< -1)||d.answer!==null&&!count(d.answer)||d.confidence!==null&&!['sure','think','guess'].includes(d.confidence)||!Number.isFinite(s.questionSeconds)||s.questionSeconds<0||s.phase==='feedback'&&(!attempt(s.feedback)||s.feedback.questionId!==s.currentId))throw new Error('Resposta em andamento inválida.');
  }
- return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings}};
+ return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings,theme:'dark'}};
 }
 function loadState(storage=globalThis.localStorage){
  try{const raw=storage.getItem(SAVE_KEY)||storage.getItem(LEGACY_SAVE_KEY);if(!raw)return {state:createState(),warning:null};return {state:validateState(JSON.parse(raw)),warning:storage.getItem(SAVE_KEY)?null:'Migramos seu progresso local para o FIXOU.'};}
@@ -646,9 +654,8 @@ const checks=[
 ];
 function settingsScreen({state,account,loggingOut}){
  const s=state.settings;
- return `${titleBlock('FIXOU · CONFIGURAÇÕES','Seu estudo, do seu jeito','Ajuste aparência, acessibilidade e preferências. Tudo fica salvo neste navegador.')}
- <div class="settings-layout"><section class="panel settings-panel"><div class="section-title"><h2>Aparência</h2><span>Identidade FIXOU</span></div><label>Tema<select data-setting="theme"><option value="light" ${s.theme==='light'?'selected':''}>☀️ Claro</option><option value="dark" ${s.theme==='dark'?'selected':''}>🌙 Escuro</option><option value="system" ${s.theme==='system'?'selected':''}>⚙️ Usar configuração do sistema</option></select></label><div class="settings-preview"><span class="settings-swatch navy"></span><span class="settings-swatch gold"></span><span class="settings-swatch sky"></span><p>Azul-marinho, amarelo e azul claro acompanham a logo FIXOU.</p></div></section>
- <section class="panel settings-panel"><div class="section-title"><h2>Preferências de estudo</h2><span>Personalize seu ritmo</span></div><label>Vestibular principal<select data-setting="primaryExam">${['FUVEST','ENEM','UNICAMP','UNESP','ITA','IME','Outro'].map(v=>`<option ${s.primaryExam===v?'selected':''}>${v}</option>`).join('')}</select></label><label>Meta diária de questões<select data-setting="dailyCount">${[10,20,30,50].map(v=>`<option value="${v}" ${s.dailyCount===v?'selected':''}>${v} questões</option>`).join('')}<option value="custom" ${![10,20,30,50].includes(s.dailyCount)?'selected':''}>Personalizada</option></select></label><label>Meta diária de estudo<select data-setting="dailyMinutes">${[[30,'30 minutos'],[60,'1 hora'],[120,'2 horas']].map(([v,t])=>`<option value="${v}" ${s.dailyMinutes===v?'selected':''}>${t}</option>`).join('')}</select></label><div class="settings-checks">${checks.map(([id,label,note])=>`<label class="toggle-row"><input type="checkbox" data-setting="${id}" ${s[id]?'checked':''}><span><strong>${label}</strong><small>${note}</small></span></label>`).join('')}</div></section>
+ return `${titleBlock('FIXOU · CONFIGURAÇÕES','Seu estudo, do seu jeito','Ajuste acessibilidade e preferências. Tudo fica salvo neste navegador.')}
+ <div class="settings-layout"><section class="panel settings-panel"><div class="section-title"><h2>Preferências de estudo</h2><span>Personalize seu ritmo</span></div><label>Vestibular principal<select data-setting="primaryExam">${['FUVEST','ENEM','UNICAMP','UNESP','ITA','IME','Outro'].map(v=>`<option ${s.primaryExam===v?'selected':''}>${v}</option>`).join('')}</select></label><label>Meta diária de questões<select data-setting="dailyCount">${[10,20,30,50].map(v=>`<option value="${v}" ${s.dailyCount===v?'selected':''}>${v} questões</option>`).join('')}<option value="custom" ${![10,20,30,50].includes(s.dailyCount)?'selected':''}>Personalizada</option></select></label><label>Meta diária de estudo<select data-setting="dailyMinutes">${[[30,'30 minutos'],[60,'1 hora'],[120,'2 horas']].map(([v,t])=>`<option value="${v}" ${s.dailyMinutes===v?'selected':''}>${t}</option>`).join('')}</select></label><div class="settings-checks">${checks.map(([id,label,note])=>`<label class="toggle-row"><input type="checkbox" data-setting="${id}" ${s[id]?'checked':''}><span><strong>${label}</strong><small>${note}</small></span></label>`).join('')}</div></section>
  <section class="panel settings-panel"><div class="section-title"><h2>Acessibilidade</h2><span>Leitura confortável</span></div><label>Tamanho do texto<select data-setting="fontScale"><option value="0.9" ${s.fontScale===0.9?'selected':''}>Menor</option><option value="1" ${s.fontScale===1?'selected':''}>Padrão</option><option value="1.12" ${s.fontScale===1.12?'selected':''}>Maior</option><option value="1.25" ${s.fontScale===1.25?'selected':''}>Muito maior</option></select></label><label class="toggle-row"><input type="checkbox" data-setting="highContrast" ${s.highContrast?'checked':''}><span><strong>Alto contraste</strong><small>Aumenta a diferença entre texto, fundo e controles.</small></span></label><label class="toggle-row"><input type="checkbox" data-setting="reduceMotion" ${s.reduceMotion?'checked':''}><span><strong>Reduzir animações</strong><small>Evita transições decorativas.</small></span></label></section>
  <section class="panel settings-panel"><div class="section-title"><h2>Ajuda e suporte</h2><span>Fale com o FIXOU</span></div><p>Encontrou um erro em uma questão ou tem uma sugestão? O formulário envia a mensagem para nossa equipe.</p><div class="support-actions"><a class="secondary" href="mailto:fixouestudos@gmail.com?subject=Suporte%20FIXOU">Enviar e-mail</a><button class="primary" data-action="support-form">Abrir formulário</button></div><p class="note"><strong>Suporte FIXOU</strong><br>fixouestudos@gmail.com</p><details><summary>Central de ajuda</summary><p>Seu progresso é salvo automaticamente na sua conta FIXOU. Entre com sua conta em outro dispositivo para continuar de onde parou. Questões erradas aparecem no Cofre dos erros e podem ser revisitadas a qualquer momento.</p></details></section>
  <section class="panel settings-panel"><div class="section-title"><h2>Minha conta</h2><span>Sincronizada</span></div><p><strong>${escapeHTML(account?.name||state.profile?.name||'Estudante')}</strong><br>${escapeHTML(account?.email||'')}</p>${button('Editar perfil →','profile-settings','','secondary')}<form id="password-form" class="form-stack"><h3>Alterar senha</h3><label>Senha atual<input name="currentPassword" type="password" required minlength="8"></label><label>Nova senha<input name="newPassword" type="password" required minlength="8"></label><button class="secondary" type="submit">Alterar senha</button></form><button class="ghost" data-action="logout" ${loggingOut?'disabled':''}>${loggingOut?'Saindo…':'Sair da conta'}</button></section><section class="panel settings-panel"><div class="section-title"><h2>Enviar sugestão</h2><span>Ajude a melhorar</span></div><form id="suggestion-form" class="form-stack"><label>Categoria<select name="category">${['Nova funcionalidade','Melhoria','Problema','Design','Conteúdo','Outro'].map(x=>`<option>${x}</option>`).join('')}</select></label><label>Mensagem<textarea name="message" rows="5" maxlength="2000" required></textarea></label><button class="primary" type="submit">Enviar sugestão</button></form></section></div>`;
@@ -662,36 +669,33 @@ const ABOUT_CONTENT={
   subline:'Precisa entender o que realmente domina.',
   description:'O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.'
  },
- whatIs:{
-  title:'O que é o FIXOU',
-  text:'O FIXOU é uma plataforma de estudos que organiza questões, desempenho, revisões e conteúdo do vestibular em uma única jornada. Em vez de mostrar apenas quantas questões você acertou, ele ajuda você a entender quais conteúdos realmente domina e quais ainda precisam de atenção.'
+ origin:{
+  title:'Feito de estudantes para estudantes',
+  text:'O FIXOU nasceu como um projeto-piloto feito de estudantes para estudantes. A ideia surgiu de uma dificuldade que muita gente conhece bem: estudar bastante, resolver várias questões e, mesmo assim, nem sempre conseguir enxergar com clareza o que já está dominado, onde ainda existem dificuldades e o que realmente precisa ser revisado.'
  },
- problems:{
-  title:'O problema',
-  items:[
-   'Resolver centenas de questões sem saber se evoluiu.',
-   'Esquecer os próprios erros e nunca revisá-los.',
-   'Não saber o que revisar nem por onde começar.',
-   'Estudar assuntos que já domina enquanto outros ficam para trás.',
-   'Dificuldade para visualizar progresso real.',
-   'Excesso de conteúdo e falta de direção.'
-  ]
+ whyExists:{
+  title:'Por que o FIXOU existe',
+  text:'O nosso objetivo é ir além de ser apenas um banco de questões. O diferencial do FIXOU é acompanhar a sua evolução ao longo dos estudos, identificando seus pontos fortes e pontos que ainda precisam de atenção, para ajudar você a estudar de forma mais direcionada e entender melhor o próprio desempenho.'
  },
- howItWorks:{
-  title:'Como o FIXOU resolve',
-  steps:[
-   {num:'01',label:'Escolha o que estudar',desc:'Selecione a matéria, área e tópico que quer treinar.'},
-   {num:'02',label:'Resolva questões',desc:'Enfrente questões de vestibulares reais organizadas por dificuldade.'},
-   {num:'03',label:'Informe sua confiança',desc:'Diga se tem certeza, acha que sabe ou está chutando.'},
-   {num:'04',label:'O FIXOU acompanha',desc:'Seu desempenho é registrado e analisado em cada tópico.'},
-   {num:'05',label:'Revise seus erros',desc:'Transforme cada erro em material de revisão e domínio.'},
-   {num:'06',label:'Veja sua evolução',desc:'Acompanhe como seu desempenho muda ao longo do tempo.'}
-  ]
+ differential:{
+  title:'O que torna o FIXOU diferente',
+  highlight:'O FIXOU não quer apenas mostrar quantas questões você acertou. Ele acompanha sua evolução para ajudar a identificar seus pontos fortes, pontos fracos e o que precisa ser revisado.',
+  text:'Mais do que mostrar quantas questões você acertou, queremos ajudar você a entender como está aprendendo. Porque estudar com mais clareza também é saber onde você está, onde precisa melhorar e qual é o próximo passo.'
  },
- mastery:{
-  title:'Acertar é diferente de dominar',
-  text:'O FIXOU não olha apenas se você acertou ou errou. Seu histórico, a dificuldade das questões e sua confiança na resposta ajudam a construir uma visão mais realista do seu domínio em cada tópico.',
-  highlight:'Uma questão acertada por chute não vale o mesmo que uma respondida com segurança e entendimento.'
+ pilot:{
+  title:'Ainda somos um projeto-piloto',
+  text:'Como este ainda é um projeto novo e está em constante desenvolvimento, algumas coisas podem não funcionar perfeitamente desde o início. Mesmo com todo o cuidado na revisão do conteúdo, é possível que alguma questão apresente erro de digitação, imagem incorreta, alternativa incompleta ou alguma outra inconsistência.',
+  note:'Isso não nos desanima — nos motiva a melhorar cada vez mais. Estamos construindo e melhorando continuamente, ouvindo os estudantes e transformando os problemas encontrados durante os estudos em melhorias reais na plataforma.'
+ },
+ report:{
+  title:'Encontrou um erro?',
+  text:'Se isso acontecer, pedimos um pouco de paciência — e, principalmente, a sua ajuda. Em cada questão, você poderá reportar um problema para que possamos revisar e corrigir o conteúdo o mais rápido possível.',
+  cta:'Use a opção "Reportar problema" na própria questão.'
+ },
+ support:{
+  title:'Ajude a construir o FIXOU',
+  text:'Também queremos construir o FIXOU junto com quem realmente usa a plataforma. Se encontrar algum erro, tiver dificuldade para utilizar alguma função, perceber algo que poderia melhorar ou simplesmente quiser mandar uma sugestão, você poderá entrar em contato com o nosso suporte.',
+  cta:'Encontre um problema na plataforma ou quer enviar uma sugestão? Entre em contato com o nosso suporte.'
  },
  tools:{
   title:'Conheça as ferramentas',
@@ -718,12 +722,6 @@ const ABOUT_CONTENT={
 function toolCard(t,i){
  return `<div class="ab-tool" data-delay="${i}"><span class="ab-tool-icon">${t.icon}</span><h4>${escapeHTML(t.name)}</h4><p>${escapeHTML(t.desc)}</p></div>`;
 }
-function stepCard(s,i){
- return `<div class="ab-step" data-delay="${i}"><span class="ab-step-num">${s.num}</span><h4>${escapeHTML(s.label)}</h4><p>${escapeHTML(s.desc)}</p></div>`;
-}
-function problemCard(p,i){
- return `<div class="ab-problem" data-delay="${i}"><span class="ab-problem-x">✕</span><p>${escapeHTML(p)}</p></div>`;
-}
 function videoCard(v){
  const thumb=v.thumbnail?`<img src="${escapeHTML(v.thumbnail)}" alt="" loading="lazy">`:'<div class="ab-video-ph">🎬</div>';
  const dur=v.duration?`<span class="ab-video-dur">${escapeHTML(v.duration)}</span>`:'';
@@ -736,8 +734,6 @@ function aboutScreen({account}){
  const cta2=`<a href="#${logged?'home':'login'}" class="ab-btn ab-btn-ghost" data-action="${logged?'about-start-study':'about-create'}">${logged?'Ver como funciona':'Ver como funciona'}</a>`;
  const finalBtn=logged?`<a href="#home" class="ab-btn ab-btn-primary">Ir para Minha Jornada</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
  const finalBtn2=logged?'':`<a href="#login" class="ab-btn ab-btn-ghost">Entrar</a>`;
- const problems=ABOUT_CONTENT.problems.items.map((p,i)=>problemCard(p,i)).join('');
- const steps=ABOUT_CONTENT.howItWorks.steps.map((s,i)=>stepCard(s,i)).join('');
  const tools=ABOUT_CONTENT.tools.items.map((t,i)=>toolCard(t,i)).join('');
  const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="ab-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
  return `
@@ -755,32 +751,49 @@ function aboutScreen({account}){
   <div class="ab-hero-orb" aria-hidden="true"><div class="ab-orb-ring"></div><div class="ab-orb-ring ab-orb-ring-2"></div></div>
  </header>
 
- <section class="ab-section ab-what" data-section>
+ <section class="ab-section ab-origin" data-section>
   <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.whatIs.title}</h2>
-   <p class="ab-what-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whatIs.text)}</p>
+   <h2 data-reveal>${ABOUT_CONTENT.origin.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.origin.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-problems" data-section>
+ <section class="ab-section ab-why" data-section>
   <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.problems.title}</h2>
-   <div class="ab-problems-grid">${problems}</div>
+   <h2 data-reveal>${ABOUT_CONTENT.whyExists.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whyExists.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-how" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.howItWorks.title}</h2>
-   <div class="ab-steps-grid">${steps}</div>
+ <section class="ab-section ab-differential" data-section>
+  <div class="ab-section-inner ab-differential-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.differential.title}</h2>
+   <blockquote class="ab-highlight-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.highlight)}</blockquote>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-mastery" data-section>
-  <div class="ab-section-inner ab-mastery-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.mastery.title}</h2>
-   <p data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.text)}</p>
-   <blockquote class="ab-mastery-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.highlight)}</blockquote>
+ <section class="ab-section ab-pilot" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.pilot.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.text)}</p>
+   <p class="ab-note-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.note)}</p>
+  </div>
+ </section>
+
+ <section class="ab-section ab-report" data-section>
+  <div class="ab-section-inner ab-report-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.report.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.report.text)}</p>
+   <div class="ab-report-cta" data-reveal><span class="ab-report-icon">⚠</span><span>${escapeHTML(ABOUT_CONTENT.report.cta)}</span></div>
+  </div>
+ </section>
+
+ <section class="ab-section ab-support" data-section>
+  <div class="ab-section-inner ab-support-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.support.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.support.text)}</p>
+   <div class="ab-support-cta" data-reveal><a class="ab-btn ab-btn-ghost" href="mailto:fixouestudos@gmail.com?subject=Suporte%20FIXOU">Entrar em contato com o suporte</a></div>
   </div>
  </section>
 
@@ -871,7 +884,7 @@ function closeGuestModal(){
 }
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
 if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
-function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
+function applyPreferences(){const s=state.settings||{};document.documentElement.dataset.theme='dark';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
 function pushProgress(baseRevision=account.progressRevision){return api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision})}).then(r=>{account.progressRevision=r.revision;});}

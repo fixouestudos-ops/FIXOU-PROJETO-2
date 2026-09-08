@@ -1,6 +1,6 @@
 export const SAVE_KEY = 'fixou:2027:v1';
 export const LEGACY_SAVE_KEY = 'fuvest-mastery:2027:v1';
-export const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'system',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
+export const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'dark',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
 export const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
 export function validateState(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||input.version!==1)throw new Error('Este arquivo não é um backup compatível do FUVEST Mastery.');
@@ -30,7 +30,7 @@ export function validateState(input){
   if(!s||typeof s.id!=='string'||!['daily','adaptive','weak','practice','lightning','survival','boss'].includes(s.mode)||!Array.isArray(s.answered)||s.answered.some(h=>!attempt(h))||!strings(s.items)||!isTime(s.startedAt)||!count(s.lives)||s.lives>3||!count(s.limit)||!['score','combo','bestCombo'].every(k=>count(s[k]))||!['question','feedback'].includes(s.phase)||s.finished!==false||typeof s.currentId!=='string'||!s.items.includes(s.currentId)||!s.filters||typeof s.filters!=='object'||Array.isArray(s.filters)||Object.values(s.filters).some(v=>!['string','number'].includes(typeof v))||s.endsAt!==null&&!isTime(s.endsAt))throw new Error('Sessão salva inválida.');
   const d=s.draft;if(!d||typeof d.text!=='string'||!Array.isArray(d.order)||!Array.isArray(d.match)||d.order.some(v=>!count(v))||d.match.some(v=>!Number.isInteger(v)||v< -1)||d.answer!==null&&!count(d.answer)||d.confidence!==null&&!['sure','think','guess'].includes(d.confidence)||!Number.isFinite(s.questionSeconds)||s.questionSeconds<0||s.phase==='feedback'&&(!attempt(s.feedback)||s.feedback.questionId!==s.currentId))throw new Error('Resposta em andamento inválida.');
  }
- return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings}};
+ return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings,theme:'dark'}};
 }
 export function loadState(storage=globalThis.localStorage){
  try{const raw=storage.getItem(SAVE_KEY)||storage.getItem(LEGACY_SAVE_KEY);if(!raw)return {state:createState(),warning:null};return {state:validateState(JSON.parse(raw)),warning:storage.getItem(SAVE_KEY)?null:'Migramos seu progresso local para o FIXOU.'};}

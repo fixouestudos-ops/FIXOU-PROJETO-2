@@ -6,36 +6,33 @@ const ABOUT_CONTENT={
   subline:'Precisa entender o que realmente domina.',
   description:'O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.'
  },
- whatIs:{
-  title:'O que é o FIXOU',
-  text:'O FIXOU é uma plataforma de estudos que organiza questões, desempenho, revisões e conteúdo do vestibular em uma única jornada. Em vez de mostrar apenas quantas questões você acertou, ele ajuda você a entender quais conteúdos realmente domina e quais ainda precisam de atenção.'
+ origin:{
+  title:'Feito de estudantes para estudantes',
+  text:'O FIXOU nasceu como um projeto-piloto feito de estudantes para estudantes. A ideia surgiu de uma dificuldade que muita gente conhece bem: estudar bastante, resolver várias questões e, mesmo assim, nem sempre conseguir enxergar com clareza o que já está dominado, onde ainda existem dificuldades e o que realmente precisa ser revisado.'
  },
- problems:{
-  title:'O problema',
-  items:[
-   'Resolver centenas de questões sem saber se evoluiu.',
-   'Esquecer os próprios erros e nunca revisá-los.',
-   'Não saber o que revisar nem por onde começar.',
-   'Estudar assuntos que já domina enquanto outros ficam para trás.',
-   'Dificuldade para visualizar progresso real.',
-   'Excesso de conteúdo e falta de direção.'
-  ]
+ whyExists:{
+  title:'Por que o FIXOU existe',
+  text:'O nosso objetivo é ir além de ser apenas um banco de questões. O diferencial do FIXOU é acompanhar a sua evolução ao longo dos estudos, identificando seus pontos fortes e pontos que ainda precisam de atenção, para ajudar você a estudar de forma mais direcionada e entender melhor o próprio desempenho.'
  },
- howItWorks:{
-  title:'Como o FIXOU resolve',
-  steps:[
-   {num:'01',label:'Escolha o que estudar',desc:'Selecione a matéria, área e tópico que quer treinar.'},
-   {num:'02',label:'Resolva questões',desc:'Enfrente questões de vestibulares reais organizadas por dificuldade.'},
-   {num:'03',label:'Informe sua confiança',desc:'Diga se tem certeza, acha que sabe ou está chutando.'},
-   {num:'04',label:'O FIXOU acompanha',desc:'Seu desempenho é registrado e analisado em cada tópico.'},
-   {num:'05',label:'Revise seus erros',desc:'Transforme cada erro em material de revisão e domínio.'},
-   {num:'06',label:'Veja sua evolução',desc:'Acompanhe como seu desempenho muda ao longo do tempo.'}
-  ]
+ differential:{
+  title:'O que torna o FIXOU diferente',
+  highlight:'O FIXOU não quer apenas mostrar quantas questões você acertou. Ele acompanha sua evolução para ajudar a identificar seus pontos fortes, pontos fracos e o que precisa ser revisado.',
+  text:'Mais do que mostrar quantas questões você acertou, queremos ajudar você a entender como está aprendendo. Porque estudar com mais clareza também é saber onde você está, onde precisa melhorar e qual é o próximo passo.'
  },
- mastery:{
-  title:'Acertar é diferente de dominar',
-  text:'O FIXOU não olha apenas se você acertou ou errou. Seu histórico, a dificuldade das questões e sua confiança na resposta ajudam a construir uma visão mais realista do seu domínio em cada tópico.',
-  highlight:'Uma questão acertada por chute não vale o mesmo que uma respondida com segurança e entendimento.'
+ pilot:{
+  title:'Ainda somos um projeto-piloto',
+  text:'Como este ainda é um projeto novo e está em constante desenvolvimento, algumas coisas podem não funcionar perfeitamente desde o início. Mesmo com todo o cuidado na revisão do conteúdo, é possível que alguma questão apresente erro de digitação, imagem incorreta, alternativa incompleta ou alguma outra inconsistência.',
+  note:'Isso não nos desanima — nos motiva a melhorar cada vez mais. Estamos construindo e melhorando continuamente, ouvindo os estudantes e transformando os problemas encontrados durante os estudos em melhorias reais na plataforma.'
+ },
+ report:{
+  title:'Encontrou um erro?',
+  text:'Se isso acontecer, pedimos um pouco de paciência — e, principalmente, a sua ajuda. Em cada questão, você poderá reportar um problema para que possamos revisar e corrigir o conteúdo o mais rápido possível.',
+  cta:'Use a opção "Reportar problema" na própria questão.'
+ },
+ support:{
+  title:'Ajude a construir o FIXOU',
+  text:'Também queremos construir o FIXOU junto com quem realmente usa a plataforma. Se encontrar algum erro, tiver dificuldade para utilizar alguma função, perceber algo que poderia melhorar ou simplesmente quiser mandar uma sugestão, você poderá entrar em contato com o nosso suporte.',
+  cta:'Encontre um problema na plataforma ou quer enviar uma sugestão? Entre em contato com o nosso suporte.'
  },
  tools:{
   title:'Conheça as ferramentas',
@@ -62,12 +59,6 @@ const ABOUT_CONTENT={
 function toolCard(t,i){
  return `<div class="ab-tool" data-delay="${i}"><span class="ab-tool-icon">${t.icon}</span><h4>${escapeHTML(t.name)}</h4><p>${escapeHTML(t.desc)}</p></div>`;
 }
-function stepCard(s,i){
- return `<div class="ab-step" data-delay="${i}"><span class="ab-step-num">${s.num}</span><h4>${escapeHTML(s.label)}</h4><p>${escapeHTML(s.desc)}</p></div>`;
-}
-function problemCard(p,i){
- return `<div class="ab-problem" data-delay="${i}"><span class="ab-problem-x">✕</span><p>${escapeHTML(p)}</p></div>`;
-}
 function videoCard(v){
  const thumb=v.thumbnail?`<img src="${escapeHTML(v.thumbnail)}" alt="" loading="lazy">`:'<div class="ab-video-ph">🎬</div>';
  const dur=v.duration?`<span class="ab-video-dur">${escapeHTML(v.duration)}</span>`:'';
@@ -80,8 +71,6 @@ export function aboutScreen({account}){
  const cta2=`<a href="#${logged?'home':'login'}" class="ab-btn ab-btn-ghost" data-action="${logged?'about-start-study':'about-create'}">${logged?'Ver como funciona':'Ver como funciona'}</a>`;
  const finalBtn=logged?`<a href="#home" class="ab-btn ab-btn-primary">Ir para Minha Jornada</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
  const finalBtn2=logged?'':`<a href="#login" class="ab-btn ab-btn-ghost">Entrar</a>`;
- const problems=ABOUT_CONTENT.problems.items.map((p,i)=>problemCard(p,i)).join('');
- const steps=ABOUT_CONTENT.howItWorks.steps.map((s,i)=>stepCard(s,i)).join('');
  const tools=ABOUT_CONTENT.tools.items.map((t,i)=>toolCard(t,i)).join('');
  const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="ab-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
  return `
@@ -99,32 +88,49 @@ export function aboutScreen({account}){
   <div class="ab-hero-orb" aria-hidden="true"><div class="ab-orb-ring"></div><div class="ab-orb-ring ab-orb-ring-2"></div></div>
  </header>
 
- <section class="ab-section ab-what" data-section>
+ <section class="ab-section ab-origin" data-section>
   <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.whatIs.title}</h2>
-   <p class="ab-what-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whatIs.text)}</p>
+   <h2 data-reveal>${ABOUT_CONTENT.origin.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.origin.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-problems" data-section>
+ <section class="ab-section ab-why" data-section>
   <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.problems.title}</h2>
-   <div class="ab-problems-grid">${problems}</div>
+   <h2 data-reveal>${ABOUT_CONTENT.whyExists.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whyExists.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-how" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.howItWorks.title}</h2>
-   <div class="ab-steps-grid">${steps}</div>
+ <section class="ab-section ab-differential" data-section>
+  <div class="ab-section-inner ab-differential-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.differential.title}</h2>
+   <blockquote class="ab-highlight-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.highlight)}</blockquote>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-mastery" data-section>
-  <div class="ab-section-inner ab-mastery-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.mastery.title}</h2>
-   <p data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.text)}</p>
-   <blockquote class="ab-mastery-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.highlight)}</blockquote>
+ <section class="ab-section ab-pilot" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.pilot.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.text)}</p>
+   <p class="ab-note-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.note)}</p>
+  </div>
+ </section>
+
+ <section class="ab-section ab-report" data-section>
+  <div class="ab-section-inner ab-report-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.report.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.report.text)}</p>
+   <div class="ab-report-cta" data-reveal><span class="ab-report-icon">⚠</span><span>${escapeHTML(ABOUT_CONTENT.report.cta)}</span></div>
+  </div>
+ </section>
+
+ <section class="ab-section ab-support" data-section>
+  <div class="ab-section-inner ab-support-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.support.title}</h2>
+   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.support.text)}</p>
+   <div class="ab-support-cta" data-reveal><a class="ab-btn ab-btn-ghost" href="mailto:fixouestudos@gmail.com?subject=Suporte%20FIXOU">Entrar em contato com o suporte</a></div>
   </div>
  </section>
 
