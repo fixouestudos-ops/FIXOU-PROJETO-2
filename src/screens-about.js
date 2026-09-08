@@ -2,142 +2,152 @@ import {escapeHTML} from './utils.js';
 const ABOUT_VIDEOS=[];
 const ABOUT_CONTENT={
  hero:{
-  headline:'Estudar não é apenas fazer questões.',
-  subline:'É entender o que você realmente domina.',
-  description:'O FIXOU organiza seus estudos, identifica seus pontos fortes e mostra onde você ainda precisa evoluir.'
+  headline:'Você não precisa estudar mais.',
+  subline:'Precisa entender o que realmente domina.',
+  description:'O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.'
  },
  whatIs:{
   title:'O que é o FIXOU',
-  text:'O FIXOU é uma plataforma de estudos voltada para vestibulares como FUVEST, ENEM e Unicamp. Ele combina banco de questões, revisão inteligente, acompanhamento de desempenho e organização por tópicos para ajudar você a entender não apenas quantas questões acertou, mas o que realmente domina.'
+  text:'O FIXOU é uma plataforma de estudos que organiza questões, desempenho, revisões e conteúdo do vestibular em uma única jornada. Em vez de mostrar apenas quantas questões você acertou, ele ajuda você a entender quais conteúdos realmente domina e quais ainda precisam de atenção.'
  },
- whyExists:{
-  title:'Por que o FIXOU existe',
-  problems:[
-   'Fazer muitas questões não significa necessariamente dominar o conteúdo.',
-   'O aluno muitas vezes não sabe onde está errando.',
-   'Erros são esquecidos em vez de revisados.',
-   'Progresso fica difícil de visualizar.',
-   'O conteúdo de vestibular é muito amplo.',
-   'Falta clareza sobre o que estudar em seguida.'
-  ],
-  solution:'O FIXOU foi criado para resolver exatamente isso. Ele transforma seus acertos e erros em um mapa claro do seu domínio, mostrando exatamente onde investir seu tempo.'
+ problems:{
+  title:'O problema',
+  items:[
+   'Resolver centenas de questões sem saber se evoluiu.',
+   'Esquecer os próprios erros e nunca revisá-los.',
+   'Não saber o que revisar nem por onde começar.',
+   'Estudar assuntos que já domina enquanto outros ficam para trás.',
+   'Dificuldade para visualizar progresso real.',
+   'Excesso de conteúdo e falta de direção.'
+  ]
  },
- howWorks:{
-  title:'Como funciona',
+ howItWorks:{
+  title:'Como o FIXOU resolve',
   steps:[
-   {icon:'◇',label:'Escolha o que estudar',desc:'Selecione a matéria, área e tópico que quer treinar.'},
-   {icon:'▷',label:'Resolva questões',desc:'Enfrente questões de vestibulares reais organizadas por dificuldade.'},
-   {icon:'◎',label:'Informe sua confiança',desc:'Diga se tem certeza, acha que sabe ou está chutando.'},
-   {icon:'↗',label:'O FIXOU acompanha',desc:'Seu desempenho é registrado e analisado em cada tópico.'},
-   {icon:'⊞',label:'Revise seus erros',desc:'Transforme cada erro em material de revisão e domínio.'},
-   {icon:'☆',label:'Observe sua evolução',desc:'Acompanhe como seu desempenho muda ao longo do tempo.'}
+   {num:'01',label:'Escolha o que estudar',desc:'Selecione a matéria, área e tópico que quer treinar.'},
+   {num:'02',label:'Resolva questões',desc:'Enfrente questões de vestibulares reais organizadas por dificuldade.'},
+   {num:'03',label:'Informe sua confiança',desc:'Diga se tem certeza, acha que sabe ou está chutando.'},
+   {num:'04',label:'O FIXOU acompanha',desc:'Seu desempenho é registrado e analisado em cada tópico.'},
+   {num:'05',label:'Revise seus erros',desc:'Transforme cada erro em material de revisão e domínio.'},
+   {num:'06',label:'Veja sua evolução',desc:'Acompanhe como seu desempenho muda ao longo do tempo.'}
   ]
  },
  mastery:{
-  title:'Entendendo seu domínio',
+  title:'Acertar é diferente de dominar',
   text:'O FIXOU não olha apenas se você acertou ou errou. Seu histórico, a dificuldade das questões e sua confiança na resposta ajudam a construir uma visão mais realista do seu domínio em cada tópico.',
-  highlight:'Acertar uma questão é diferente de dominar um conteúdo. O FIXOU mostra essa diferença.'
+  highlight:'Uma questão acertada por chute não vale o mesmo que uma respondida com segurança e entendimento.'
  },
  tools:{
   title:'Conheça as ferramentas',
   items:[
-   {icon:'◈',name:'Minha jornada',desc:'Acompanhe seu progresso e visualize o que já domina.'},
-   {icon:'▷',name:'Treinar',desc:'Resolva questões organizadas por matéria, área e tópico.'},
-   {icon:'▱',name:'Memorizar',desc:'Use revisões e flashcards para reforçar conteúdos importantes.'},
-   {icon:'⊞',name:'Cofre dos erros',desc:'Guarde seus erros e transforme-os em material de revisão.'},
-   {icon:'⌘',name:'Programa 2027',desc:'Veja o conteúdo do vestibular organizado de forma estruturada.'},
-   {icon:'▤',name:'Leituras',desc:'Organize as obras e conteúdos de leitura.'},
-   {icon:'↗',name:'Evolução',desc:'Acompanhe como seu desempenho muda ao longo do tempo.'},
-   {icon:'☆',name:'Favoritos',desc:'Guarde questões e conteúdos importantes.'}
+   {icon:'◈',name:'Minha jornada',desc:'Seu painel pessoal de evolução. Progresso, domínio e desempenho em um só lugar.'},
+   {icon:'▷',name:'Treinar',desc:'Questões organizadas para você praticar com propósito.'},
+   {icon:'▱',name:'Memorizar',desc:'Transforme conteúdo importante em revisão recorrente.'},
+   {icon:'⊞',name:'Cofre dos erros',desc:'Seus erros deixam de ser esquecidos e passam a fazer parte da sua revisão.'},
+   {icon:'⌘',name:'Programa 2027',desc:'Veja o conteúdo do vestibular organizado em matérias, áreas e tópicos.'},
+   {icon:'▤',name:'Leituras',desc:'Organize as obras e conteúdos de leitura obrigatória.'},
+   {icon:'↗',name:'Evolução',desc:'Veja como seu desempenho muda ao longo do tempo.'},
+   {icon:'☆',name:'Favoritos',desc:'Guarde questões e conteúdos importantes para revisitar.'}
   ]
  },
  videos:{
   title:'Aprenda a usar o FIXOU',
   emptyText:'Vídeo em breve'
  },
- howToStart:{
-  title:'Comece em poucos minutos',
-  steps:['Crie sua conta gratuitamente','Escolha a matéria que quer estudar','Faça seu primeiro treino','Veja seu progresso aparecer na Jornada']
- },
  ctaFinal:{
-  title:'Pronto para começar?',
-  description:'Comece agora e descubra o que você realmente domina.'
+  title:'Estude com direção. Evolua com clareza.',
+  description:'Seu progresso começa quando você entende onde está.'
  }
 };
+function toolCard(t,i){
+ return `<div class="ab-tool" data-delay="${i}"><span class="ab-tool-icon">${t.icon}</span><h4>${escapeHTML(t.name)}</h4><p>${escapeHTML(t.desc)}</p></div>`;
+}
+function stepCard(s,i){
+ return `<div class="ab-step" data-delay="${i}"><span class="ab-step-num">${s.num}</span><h4>${escapeHTML(s.label)}</h4><p>${escapeHTML(s.desc)}</p></div>`;
+}
+function problemCard(p,i){
+ return `<div class="ab-problem" data-delay="${i}"><span class="ab-problem-x">✕</span><p>${escapeHTML(p)}</p></div>`;
+}
 function videoCard(v){
- const thumb=v.thumbnail?`<img src="${escapeHTML(v.thumbnail)}" alt="" loading="lazy">`:'<div class="about-video-placeholder">🎬</div>';
- const duration=v.duration?`<span class="about-video-duration">${escapeHTML(v.duration)}</span>`:'';
- return `<article class="about-video-card" data-action="about-video" data-url="${escapeHTML(v.url||'')}">
-  <div class="about-video-thumb">${thumb}${duration}</div>
-  <div class="about-video-info"><h4>${escapeHTML(v.title)}</h4><p>${escapeHTML(v.description)}</p></div>
- </article>`;
-}
-function stepCard(step,i){
- return `<div class="about-step"><span class="about-step-icon">${step.icon}</span><span class="about-step-num">${i+1}</span><h4>${escapeHTML(step.label)}</h4><p>${escapeHTML(step.desc)}</p></div>`;
-}
-function toolCard(t){
- return `<div class="about-tool"><span class="about-tool-icon">${t.icon}</span><h4>${escapeHTML(t.name)}</h4><p>${escapeHTML(t.desc)}</p></div>`;
+ const thumb=v.thumbnail?`<img src="${escapeHTML(v.thumbnail)}" alt="" loading="lazy">`:'<div class="ab-video-ph">🎬</div>';
+ const dur=v.duration?`<span class="ab-video-dur">${escapeHTML(v.duration)}</span>`:'';
+ return `<article class="ab-video" data-action="about-video" data-url="${escapeHTML(v.url||'')}"><div class="ab-video-thumb">${thumb}${dur}</div><div class="ab-video-info"><h4>${escapeHTML(v.title)}</h4><p>${escapeHTML(v.description)}</p></div></article>`;
 }
 export function aboutScreen({account}){
  const logged=!!account;
  const hero=ABOUT_CONTENT.hero;
- const createBtn=logged?`<a href="#home" class="about-cta-primary">Começar a estudar</a>`:`<a href="#register" class="about-cta-primary" data-action="about-create">Criar conta grátis</a>`;
- const finalBtn=logged?`<a href="#home" class="about-cta-primary">Ir para Minha Jornada</a>`:`<a href="#register" class="about-cta-primary" data-action="about-create">Criar conta grátis</a>`;
- const finalBtn2=logged?'':`<a href="#login" class="about-cta-secondary">Entrar</a>`;
- const problems=ABOUT_CONTENT.whyExists.problems.map(p=>`<li>${escapeHTML(p)}</li>`).join('');
- const steps=ABOUT_CONTENT.howWorks.steps.map((s,i)=>stepCard(s,i)).join('');
- const tools=ABOUT_CONTENT.tools.items.map(t=>toolCard(t)).join('');
- const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="about-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
- const startSteps=ABOUT_CONTENT.howToStart.steps.map((s,i)=>`<li><span class="about-start-num">${i+1}</span>${escapeHTML(s)}</li>`).join('');
+ const cta1=logged?`<a href="#home" class="ab-btn ab-btn-primary">Começar a estudar</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
+ const cta2=`<a href="#${logged?'home':'login'}" class="ab-btn ab-btn-ghost" data-action="${logged?'about-start-study':'about-create'}">${logged?'Ver como funciona':'Ver como funciona'}</a>`;
+ const finalBtn=logged?`<a href="#home" class="ab-btn ab-btn-primary">Ir para Minha Jornada</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
+ const finalBtn2=logged?'':`<a href="#login" class="ab-btn ab-btn-ghost">Entrar</a>`;
+ const problems=ABOUT_CONTENT.problems.items.map((p,i)=>problemCard(p,i)).join('');
+ const steps=ABOUT_CONTENT.howItWorks.steps.map((s,i)=>stepCard(s,i)).join('');
+ const tools=ABOUT_CONTENT.tools.items.map((t,i)=>toolCard(t,i)).join('');
+ const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="ab-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
  return `
-<section class="about-page">
- <header class="about-hero">
-  <h1>${escapeHTML(hero.headline)}<br><em>${escapeHTML(hero.subline)}</em></h1>
-  <p>${escapeHTML(hero.description)}</p>
-  <div class="about-hero-ctas">${createBtn}</div>
+<section class="ab-page">
+ <div class="ab-bg-glow ab-bg-glow-1"></div>
+ <div class="ab-bg-glow ab-bg-glow-2"></div>
+ <div class="ab-bg-glow ab-bg-glow-3"></div>
+
+ <header class="ab-hero">
+  <div class="ab-hero-content">
+   <h1 class="ab-hero-headline" data-reveal>${escapeHTML(hero.headline)}<br><span class="ab-hero-accent">${escapeHTML(hero.subline)}</span></h1>
+   <p class="ab-hero-desc" data-reveal>${escapeHTML(hero.description)}</p>
+   <div class="ab-hero-ctas" data-reveal>${cta1}${cta2}</div>
+  </div>
+  <div class="ab-hero-orb" aria-hidden="true"><div class="ab-orb-ring"></div><div class="ab-orb-ring ab-orb-ring-2"></div></div>
  </header>
 
- <section class="about-section about-what">
-  <h2>${ABOUT_CONTENT.whatIs.title}</h2>
-  <p>${escapeHTML(ABOUT_CONTENT.whatIs.text)}</p>
+ <section class="ab-section ab-what" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.whatIs.title}</h2>
+   <p class="ab-what-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whatIs.text)}</p>
+  </div>
  </section>
 
- <section class="about-section about-why">
-  <h2>${ABOUT_CONTENT.whyExists.title}</h2>
-  <ul class="about-problems">${problems}</ul>
-  <p class="about-why-solution">${escapeHTML(ABOUT_CONTENT.whyExists.solution)}</p>
+ <section class="ab-section ab-problems" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.problems.title}</h2>
+   <div class="ab-problems-grid">${problems}</div>
+  </div>
  </section>
 
- <section class="about-section about-how">
-  <h2>${ABOUT_CONTENT.howWorks.title}</h2>
-  <div class="about-steps">${steps}</div>
+ <section class="ab-section ab-how" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.howItWorks.title}</h2>
+   <div class="ab-steps-grid">${steps}</div>
+  </div>
  </section>
 
- <section class="about-section about-mastery">
-  <h2>${ABOUT_CONTENT.mastery.title}</h2>
-  <p>${escapeHTML(ABOUT_CONTENT.mastery.text)}</p>
-  <p class="about-mastery-highlight">${escapeHTML(ABOUT_CONTENT.mastery.highlight)}</p>
+ <section class="ab-section ab-mastery" data-section>
+  <div class="ab-section-inner ab-mastery-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.mastery.title}</h2>
+   <p data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.text)}</p>
+   <blockquote class="ab-mastery-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.mastery.highlight)}</blockquote>
+  </div>
  </section>
 
- <section class="about-section about-tools">
-  <h2>${ABOUT_CONTENT.tools.title}</h2>
-  <div class="about-tools-grid">${tools}</div>
+ <section class="ab-section ab-tools" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.tools.title}</h2>
+   <div class="ab-tools-grid">${tools}</div>
+  </div>
  </section>
 
- <section class="about-section about-videos-section">
-  <h2>${ABOUT_CONTENT.videos.title}</h2>
-  <div class="about-videos-grid">${videos}</div>
+ <section class="ab-section ab-videos-section" data-section>
+  <div class="ab-section-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.videos.title}</h2>
+   <div class="ab-videos-grid">${videos}</div>
+  </div>
  </section>
 
- <section class="about-section about-start">
-  <h2>${ABOUT_CONTENT.howToStart.title}</h2>
-  <ol class="about-start-steps">${startSteps}</ol>
- </section>
-
- <section class="about-section about-cta-final">
-  <h2>${ABOUT_CONTENT.ctaFinal.title}</h2>
-  <p>${escapeHTML(ABOUT_CONTENT.ctaFinal.description)}</p>
-  <div class="about-cta-final-buttons">${finalBtn}${finalBtn2}</div>
+ <section class="ab-section ab-cta" data-section>
+  <div class="ab-section-inner ab-cta-inner">
+   <h2 data-reveal>${ABOUT_CONTENT.ctaFinal.title}</h2>
+   <p data-reveal>${escapeHTML(ABOUT_CONTENT.ctaFinal.description)}</p>
+   <div class="ab-cta-buttons" data-reveal>${finalBtn}${finalBtn2}</div>
+  </div>
  </section>
 </section>`;
 }

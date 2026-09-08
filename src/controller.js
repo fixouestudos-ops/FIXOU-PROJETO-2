@@ -90,6 +90,42 @@ function render(){
  const accountAreaHtml=guest?'':`<div class="account-area"><button class="profile-link" data-action="profile-settings" type="button" aria-label="Abrir configurações">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span></button></div>`;
  appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
  document.title=`${title} · FIXOU`;
+ if(ui.route==='about')initAboutPage();
+}
+function initAboutPage(){
+ const page=document.querySelector('.ab-page');
+ if(!page)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reveals=page.querySelectorAll('[data-reveal]');
+ const sections=page.querySelectorAll('[data-section]');
+ const cards=page.querySelectorAll('.ab-step,.ab-tool,.ab-problem');
+ if(!reduced){
+  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visible');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(el=>io.observe(el));
+  sections.forEach(el=>io.observe(el));
+  cards.forEach(el=>io.observe(el));
+ }
+ const orb=page.querySelector('.ab-hero-orb');
+ if(orb&&!reduced){
+  let ticking=false;
+  page.addEventListener('mousemove',(e)=>{
+   if(ticking)return;ticking=true;
+   requestAnimationFrame(()=>{
+    const rect=page.getBoundingClientRect();
+    const x=(e.clientX-rect.left)/rect.width-0.5;
+    const y=(e.clientY-rect.top)/rect.height-0.5;
+    orb.style.transform=`translate(${x*20}px,${y*20}px)`;
+    cards.forEach(card=>{
+     const cr=card.getBoundingClientRect();
+     const cx=(e.clientX-cr.left)/cr.width-0.5;
+     const cy=(e.clientY-cr.top)/cr.height-0.5;
+     card.style.transform=`perspective(600px) rotateY(${cx*6}deg) rotateX(${-cy*6}deg) translateZ(8px)`;
+    });
+    ticking=false;
+   });
+  });
+  page.addEventListener('mouseleave',()=>{cards.forEach(card=>{card.style.transform='';});});
+ }
 }
 function openModal(html){modalElement.innerHTML=html;if(!modalElement.open)modalElement.showModal();}
 function closeModal(){modalElement.close();afterConfirm=null;}
