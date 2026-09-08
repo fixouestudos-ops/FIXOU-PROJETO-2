@@ -107,9 +107,9 @@ test('owner perde acesso ao painel administrativo após o logout',async()=>{
 
 test('bundle traz menu de conta na sidebar e Sair nas Configurações',()=>{
  const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
- assert.match(html,/data-action="account-menu"/);
- assert.match(html,/data-action="account-settings"/);
- assert.match(html,/role="menuitem" data-action="logout"/);
+ assert.match(html,/data-action="profile-settings"/);
+ assert.match(html,/nav-logout/);
+ assert.match(html,/data-action="logout"/);
  assert.match(html,/Sair da conta/);
  assert.match(html,/performLogout/);
  assert.match(html,/\/api\/auth\/logout/);

@@ -19,8 +19,25 @@ const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null;
-const ui={route:'home',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false};
+const ui={route:'home',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null};
+const GUEST_LOCKED=['home','errors'];
+let guestModalTrigger=null;
+function isGuest(){return !account.user && !account.loading;}
+function openGuestModal(type,triggerEl=null){
+ guestModalTrigger=triggerEl||document.activeElement;
+ const isHome=type==='home';
+ const title=isHome?'Salve sua jornada no FIXOU':'Transforme seus erros em revisão';
+ const text=isHome?'Crie uma conta grátis para salvar seu progresso, acompanhar sua evolução e continuar exatamente de onde parou.':'Para montar seu Cofre dos erros, o FIXOU precisa guardar as questões que você errou e acompanhar suas revisões.';
+ openModal(`<div class="guest-modal-panel"><button class="modal-close icon-button guest-modal-close" data-action="close-guest-modal" aria-label="Fechar">×</button><h2 id="modal-title">${title}</h2><p class="modal-copy">${text}</p><div class="modal-actions"><button class="primary" data-action="guest-create">Criar conta grátis</button><button class="text-button" data-action="guest-login">Já tem uma conta? Entrar</button></div></div>`);
+ requestAnimationFrame(()=>{const focusable=modalElement.querySelector('button[data-action="guest-create"]');if(focusable)focusable.focus();});
+}
+function closeGuestModal(){
+ closeModal();
+ if(guestModalTrigger&&typeof guestModalTrigger.focus==='function'){try{guestModalTrigger.focus();}catch{}}
+ guestModalTrigger=null;
+}
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
+if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
 function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
@@ -35,12 +52,42 @@ function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['ho
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
  if(account.loading){appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
- if(!account.user){const mode=['register','forgot','reset'].includes(ui.route)?ui.route:'login',token=location.hash.split('/')[1]||'';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;}
- if(ui.route==='admin'&&!['owner','admin'].includes(account.user.role)){ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
- const level=profileLevel(state.xp),name=account.user.name,navRoute=ui.route==='quiz'?'train':ui.route;
+ const guest=isGuest();
+ if(!account.user && ['login','register','forgot','reset'].includes(ui.route)){
+  const mode=ui.route,token=location.hash.split('/')[1]||'';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;
+ }
+ if(guest && GUEST_LOCKED.includes(ui.route)){
+  const attempted=ui.route;
+  const fallback=ui.previousRoute && !GUEST_LOCKED.includes(ui.previousRoute) && !['login','register','forgot','reset','admin'].includes(ui.previousRoute) ? ui.previousRoute : 'train';
+  history.replaceState(null,'','#'+fallback);
+  ui.route=fallback;
+  if(!modalElement.open) setTimeout(()=>openGuestModal(attempted),0);
+ }
+ if(!GUEST_LOCKED.includes(ui.route) && !['login','register','forgot','reset','admin'].includes(ui.route)) ui.previousRoute=ui.route;
+ if(!account.user && GUEST_LOCKED.includes(ui.route)){
+  // fallback for direct load where previousRoute not yet set
+  ui.route='train';history.replaceState(null,'','#train');
+ }
+ if(ui.route==='admin'&&(!account.user||!['owner','admin'].includes(account.user.role))){
+  if(!account.user){history.replaceState(null,'','#train');ui.route='train';toast('Faça login para acessar o painel.');}
+  else {ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
+ }
+ const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
  const views={home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen};
- const nav=[...NAV,...(['owner','admin'].includes(account.user.role)?[['admin','▦','Painel do dono']]:[])],title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||'Minha jornada';
- appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${nav.map(([id,i,t])=>`<a href="#${id}" class="nav-item ${id===navRoute?'active':''}" ${id===navRoute?'aria-current="page"':''}><span aria-hidden="true">${i}</span>${t}${id==='errors'&&Object.values(state.errors).some(e=>!e.resolved)?'<i class="nav-badge"></i>':''}</a>`).join('')}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p><div class="account-area"><button class="profile-link" data-action="account-menu" aria-haspopup="menu" aria-expanded="${ui.accountMenuOpen}" type="button">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span><span>↗</span></button><div class="account-menu ${ui.accountMenuOpen?'open':''}" role="menu"><button class="account-menu-item" role="menuitem" data-action="profile-settings" type="button"><span>◈</span>Minha conta</button><button class="account-menu-item" role="menuitem" data-action="account-settings" type="button"><span>⚙</span>Configurações</button><button class="account-menu-item danger" role="menuitem" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span>↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button></div></div></div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route](context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
+ const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono']]:baseNav;
+ const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
+ const navHtml=nav.map(([id,i,t])=>{
+  const locked=guest && GUEST_LOCKED.includes(id);
+  const active=id===navRoute && !locked;
+  const badge=id==='errors'&&state.errors&&Object.values(state.errors).some(e=>!e.resolved)?'<i class="nav-badge"></i>':'';
+  if(locked){
+   return `<button class="nav-item guest-locked" data-action="guest-lock" data-id="${id}" aria-label="${t} - requer conta">${`<span aria-hidden="true">${i}</span>`}${escapeHTML(t)}<span class="nav-lock" aria-hidden="true">🔒</span>${badge}</button>`;
+  }
+  return `<a href="#${id}" class="nav-item ${active?'active':''}" ${active?'aria-current="page"':''}><span aria-hidden="true">${i}</span>${escapeHTML(t)}${badge}</a>`;
+ }).join('');
+ const logoutHtml=!guest?`<button class="nav-item nav-logout" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span aria-hidden="true">↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button>`:'';
+ const accountAreaHtml=guest?'':`<div class="account-area"><button class="profile-link" data-action="profile-settings" type="button" aria-label="Abrir configurações">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span></button></div>`;
+ appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
  document.title=`${title} · FIXOU`;
 }
 function openModal(html){modalElement.innerHTML=html;if(!modalElement.open)modalElement.showModal();}
@@ -80,8 +127,12 @@ function downloadText(name,text,type='application/json'){const blob=new Blob([te
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
  if(action==='logout'){performLogout();return;}
- if(action==='account-menu'){ui.accountMenuOpen=!ui.accountMenuOpen;render();return;}
- if(action==='account-settings'){ui.accountMenuOpen=false;go('settings');return;}
+ if(action==='guest-lock'){openGuestModal(id,element);return;}
+ if(action==='close-guest-modal'){closeGuestModal();return;}
+ if(action==='guest-create'){closeGuestModal();go('register');return;}
+ if(action==='guest-login'){closeGuestModal();go('login');return;}
+ if(action==='account-settings'){go('settings');return;}
+ if(action==='profile-settings'){go('settings');return;}
  if(action==='remove-avatar'){if(!AVATAR_FEATURE_ENABLED)return;api('/api/avatar',{method:'DELETE',body:'{}'}).then(()=>{account.user={...account.user,hasAvatar:false,avatarVersion:Date.now()};render();toast('Foto removida.');}).catch(e=>toast(e.message));return;}
  if(action==='admin-period'){ui.adminPeriod=Number(id);adminData=null;render();api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}
   if(action==='admin-user'){const target=(adminData?.users||[]).find(u=>u.id===id);if(target)openModal(adminUserModal(target));return;}
@@ -128,7 +179,9 @@ function handleAction(action,id,element){
  if(action==='download-curriculum'){downloadText('fuvest-2027-mapa-curricular.json',JSON.stringify(CURRICULUM,null,2));return;}
  if(action==='recover-save'){confirmAction('Começar um novo perfil local?','O progresso local anterior será substituído após a confirmação.',()=>{storageBlocked=false;saveProgress();render();},'Continuar e salvar');return;}
 }
-document.addEventListener('click',event=>{if(ui.accountMenuOpen&&!event.target.closest('.account-area')){ui.accountMenuOpen=false;render();}const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
+document.addEventListener('click',event=>{
+ if(modalElement.open && event.target===modalElement){closeGuestModal();return;}
+ const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
 document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}});
 document.addEventListener('change',event=>{
@@ -162,7 +215,13 @@ document.addEventListener('submit',event=>{
  if(form.id==='map-search-form'){ui.mapSearch=String(data.get('query')||'');render();}
  if(form.id==='global-search-form'){ui.searchTerm=String(data.get('query')||'');render();}
 });
-document.addEventListener('keydown',event=>{const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}});
+document.addEventListener('keydown',event=>{
+ const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);
+ if(event.key==='Escape' && modalElement.open){event.preventDefault();closeGuestModal();return;}
+ if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}
+ if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
+ if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}
+});
 window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}render();window.scrollTo(0,0);});
 window.addEventListener('pagehide',()=>saveProgress());
 let resizeTimer=null;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(ui.route==='admin')render();},120);});

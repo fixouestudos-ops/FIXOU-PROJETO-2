@@ -67,7 +67,39 @@
 .admin-filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:10px;margin:12px 0 18px}.admin-filters input,.admin-filters select{min-width:0}
 .admin-chart{min-width:0;height:340px}.admin-chart .chart-body{display:flex;height:100%}.admin-chart .plot{flex:1;display:flex;flex-direction:column;min-width:0}.admin-chart .plot-row{flex:1;display:flex;min-height:0;min-width:0}.admin-chart .y-axis{flex:none;width:34px;position:relative;margin-right:6px}.admin-chart .y-axis span{position:absolute;right:6px;transform:translateY(50%);font-size:.66rem;line-height:1;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right;white-space:nowrap}.admin-chart .plot-body{flex:1;position:relative;min-width:0;display:flex}.admin-chart .gridlines{position:absolute;inset:0;pointer-events:none}.admin-chart .gridlines i{position:absolute;left:0;right:0;height:1px;background:var(--grid);transform:translateY(50%)}.admin-chart .day{flex:1;min-width:0;position:relative}.admin-chart .bars{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:2px}.admin-chart .bars .seg{width:min(58%,26px);border-radius:3px 3px 1px 1px}.admin-chart .x-axis{flex:none;display:flex;height:28px;align-items:end;overflow:hidden;padding-left:40px}.admin-chart .x-axis .lbl{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;font-size:.68rem;line-height:1;color:var(--muted)}.admin-chart .lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.admin-chart .lines polyline{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;opacity:.85}.p-blue{stroke:var(--c-blue)}.p-green{stroke:var(--c-green)}.p-red{stroke:var(--c-red)}.p-grey{stroke:var(--c-grey)}.p-amber{stroke:var(--c-amber)}.chart-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;color:var(--muted);font-size:.76rem}.chart-legend span{display:inline-flex;align-items:center;gap:6px}.chart-legend i{display:inline-block;width:9px;height:9px;border-radius:50%}.s-blue{background:var(--c-blue)}.s-green{background:var(--c-green)}.s-red{background:var(--c-red)}.s-grey{background:var(--c-grey)}.s-amber{background:var(--c-amber)}.chart-empty{min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;border:1px dashed var(--border);border-radius:14px;background:var(--soft,#f7f9fc)}.chart-empty p{color:var(--ink);font-weight:700;font-size:.86rem}.chart-empty small{color:var(--muted);font-size:.74rem}.chart-tip{display:none;position:fixed;z-index:90;max-width:240px;padding:10px 13px;border-radius:12px;background:var(--surface);border:1px solid var(--border);box-shadow:0 12px 34px #101e3418;font-size:.76rem;pointer-events:none}.chart-tip .tip-date{display:block;font-weight:800;margin-bottom:7px;color:var(--ink)}.chart-tip .tip-row{display:flex;align-items:center;gap:7px;margin-top:5px;color:var(--muted)}.chart-tip .tip-row i{width:8px;height:8px;border-radius:50%;flex:none}.chart-tip .tip-row b{flex:1;color:var(--ink);font-weight:600}.chart-tip .tip-row em{font-style:normal;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}@media(max-width:700px){.admin-chart{height:280px}.admin-chart .y-axis{width:30px;margin-right:4px}.admin-chart .y-axis span{right:4px;font-size:.6rem}.admin-chart .x-axis{padding-left:34px}.admin-chart .x-axis span{font-size:.62rem}.admin-chart .bars{gap:1px}.chart-legend{gap:12px 14px}}
 @media(max-width:800px){.admin-filters{grid-template-columns:1fr 1fr}.admin-filters input{grid-column:1/-1}}
-.question-figure{margin:18px 0;display:block}.question-figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)}.account-area{position:relative}.account-area .profile-link{background:none;width:100%;color:inherit;cursor:pointer;text-align:left;font:inherit}.account-menu{position:absolute;left:0;right:0;bottom:calc(100% + 10px);background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 14px 34px #10203a1f;padding:6px;display:none;flex-direction:column;z-index:30}.account-menu.open{display:flex}.account-menu-item{display:flex;align-items:center;gap:11px;width:100%;background:transparent;border:0;border-radius:10px;padding:11px 13px;font-size:.86rem;font-weight:600;color:var(--ink);text-align:left;font:inherit;cursor:pointer;white-space:nowrap}.account-menu-item:hover{background:var(--purple-soft)}.account-menu-item span{color:var(--muted);font-size:.95rem;line-height:1}.account-menu-item.danger{color:var(--red)}.account-menu-item.danger span{color:var(--red)}.account-menu-item.danger:hover{background:#fbe9ed;color:#9d3a48}.account-menu-item:disabled{opacity:.5;cursor:default}.ghost{display:inline-flex;align-items:center;justify-content:center;color:var(--red);background:transparent;border:1px solid transparent;border-radius:10px;padding:10px 14px;font-size:.85rem;font-weight:600;min-height:42px;margin-top:14px}.ghost:hover{background:#fbe9ed}.ghost:disabled{opacity:.5;cursor:default}
+.question-figure{margin:18px 0;display:block}.question-figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.sidebar{padding:32px 18px 18px;gap:0}
+.sidebar .brand{margin:0 6px 36px}
+.nav-label{margin-bottom:12px;padding:0 10px;font-size:.62rem;letter-spacing:1.3px;opacity:.9}
+.nav-item{gap:14px;padding:13px 12px;margin:2px 0;border-radius:12px;font-size:.875rem;font-weight:500;letter-spacing:.1px}
+.nav-item.active{background:var(--purple-soft);color:var(--purple);font-weight:700;box-shadow:inset 0 0 0 1px #dbe6f0}
+.nav-item.active span:first-child{opacity:1}
+.sidebar-bottom{margin-top:auto;padding-top:18px;border-top:1px solid transparent}
+.sidebar-bottom .exam-label{margin-bottom:8px}
+.sidebar-bottom p{font-size:.78rem;line-height:1.6;margin-bottom:14px}
+.account-area{position:static}
+.account-area .profile-link{display:flex;align-items:center;gap:12px;width:100%;background:transparent;border:0;border-top:1px solid var(--border);padding:14px 4px 2px;margin-top:6px;color:inherit;cursor:pointer;text-align:left;font:inherit;border-radius:0;transition:opacity .15s}
+.account-area .profile-link:hover{opacity:.78;background:transparent}
+.nav-lock{margin-left:auto;font-size:.78rem;opacity:.32;line-height:1}
+.nav-item.guest-locked{opacity:.92}
+.nav-item.guest-locked .nav-lock{opacity:.34}
+.nav-logout{color:var(--red);opacity:.82;font-weight:600}
+.nav-logout:hover{background:#fdf0f2;color:#9d3a48;opacity:1}
+.nav-logout:disabled{opacity:.5}
+#modal{border:0;padding:18px;background:transparent;max-width:min(440px,92vw);width:min(440px,92vw)}
+#modal::backdrop{background:#0b1624cc;backdrop-filter:blur(3px)}
+#modal[open]{display:grid;place-items:center}
+.guest-modal-panel{position:relative;background:#0f2442;border:1px solid #1e3a62;border-radius:18px;padding:28px 24px 22px;box-shadow:0 24px 64px #0007;width:100%}
+.guest-modal-panel h2{font-size:1.25rem;line-height:1.3;color:#fff;margin-bottom:10px}
+.guest-modal-panel .modal-copy{color:#aab8c8;font-size:.92rem;line-height:1.6;margin-bottom:20px}
+.guest-modal-panel .modal-actions{display:flex;flex-direction:column;gap:10px}
+.guest-modal-panel .primary{width:100%;justify-content:center}
+.guest-modal-panel .text-button{color:#cbd8ea;font-size:.86rem}
+.guest-modal-panel .text-button:hover{color:#fff}
+.guest-modal-close{position:absolute;top:10px;right:10px;width:34px;height:34px;font-size:1.15rem}
+.ghost{display:inline-flex;align-items:center;justify-content:center;color:var(--red);background:transparent;border:1px solid transparent;border-radius:10px;padding:10px 14px;font-size:.85rem;font-weight:600;min-height:42px;margin-top:14px}
+.ghost:hover{background:#fbe9ed}
+.ghost:disabled{opacity:.5;cursor:default}
 </style>
 </head>
 <body>
@@ -604,8 +636,25 @@ const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null;
-const ui={route:'home',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false};
+const ui={route:'home',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null};
+const GUEST_LOCKED=['home','errors'];
+let guestModalTrigger=null;
+function isGuest(){return !account.user && !account.loading;}
+function openGuestModal(type,triggerEl=null){
+ guestModalTrigger=triggerEl||document.activeElement;
+ const isHome=type==='home';
+ const title=isHome?'Salve sua jornada no FIXOU':'Transforme seus erros em revisão';
+ const text=isHome?'Crie uma conta grátis para salvar seu progresso, acompanhar sua evolução e continuar exatamente de onde parou.':'Para montar seu Cofre dos erros, o FIXOU precisa guardar as questões que você errou e acompanhar suas revisões.';
+ openModal(`<div class="guest-modal-panel"><button class="modal-close icon-button guest-modal-close" data-action="close-guest-modal" aria-label="Fechar">×</button><h2 id="modal-title">${title}</h2><p class="modal-copy">${text}</p><div class="modal-actions"><button class="primary" data-action="guest-create">Criar conta grátis</button><button class="text-button" data-action="guest-login">Já tem uma conta? Entrar</button></div></div>`);
+ requestAnimationFrame(()=>{const focusable=modalElement.querySelector('button[data-action="guest-create"]');if(focusable)focusable.focus();});
+}
+function closeGuestModal(){
+ closeModal();
+ if(guestModalTrigger&&typeof guestModalTrigger.focus==='function'){try{guestModalTrigger.focus();}catch{}}
+ guestModalTrigger=null;
+}
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
+if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
 function applyPreferences(){const s=state.settings||{};const systemDark=s.theme==='system'&&window.matchMedia?.('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s.theme==='dark'||systemDark?'dark':'light';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
@@ -620,12 +669,42 @@ function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['ho
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
  if(account.loading){appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
- if(!account.user){const mode=['register','forgot','reset'].includes(ui.route)?ui.route:'login',token=location.hash.split('/')[1]||'';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;}
- if(ui.route==='admin'&&!['owner','admin'].includes(account.user.role)){ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
- const level=profileLevel(state.xp),name=account.user.name,navRoute=ui.route==='quiz'?'train':ui.route;
+ const guest=isGuest();
+ if(!account.user && ['login','register','forgot','reset'].includes(ui.route)){
+  const mode=ui.route,token=location.hash.split('/')[1]||'';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;
+ }
+ if(guest && GUEST_LOCKED.includes(ui.route)){
+  const attempted=ui.route;
+  const fallback=ui.previousRoute && !GUEST_LOCKED.includes(ui.previousRoute) && !['login','register','forgot','reset','admin'].includes(ui.previousRoute) ? ui.previousRoute : 'train';
+  history.replaceState(null,'','#'+fallback);
+  ui.route=fallback;
+  if(!modalElement.open) setTimeout(()=>openGuestModal(attempted),0);
+ }
+ if(!GUEST_LOCKED.includes(ui.route) && !['login','register','forgot','reset','admin'].includes(ui.route)) ui.previousRoute=ui.route;
+ if(!account.user && GUEST_LOCKED.includes(ui.route)){
+  // fallback for direct load where previousRoute not yet set
+  ui.route='train';history.replaceState(null,'','#train');
+ }
+ if(ui.route==='admin'&&(!account.user||!['owner','admin'].includes(account.user.role))){
+  if(!account.user){history.replaceState(null,'','#train');ui.route='train';toast('Faça login para acessar o painel.');}
+  else {ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
+ }
+ const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
  const views={home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen};
- const nav=[...NAV,...(['owner','admin'].includes(account.user.role)?[['admin','▦','Painel do dono']]:[])],title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||'Minha jornada';
- appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${nav.map(([id,i,t])=>`<a href="#${id}" class="nav-item ${id===navRoute?'active':''}" ${id===navRoute?'aria-current="page"':''}><span aria-hidden="true">${i}</span>${t}${id==='errors'&&Object.values(state.errors).some(e=>!e.resolved)?'<i class="nav-badge"></i>':''}</a>`).join('')}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p><div class="account-area"><button class="profile-link" data-action="account-menu" aria-haspopup="menu" aria-expanded="${ui.accountMenuOpen}" type="button">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span><span>↗</span></button><div class="account-menu ${ui.accountMenuOpen?'open':''}" role="menu"><button class="account-menu-item" role="menuitem" data-action="profile-settings" type="button"><span>◈</span>Minha conta</button><button class="account-menu-item" role="menuitem" data-action="account-settings" type="button"><span>⚙</span>Configurações</button><button class="account-menu-item danger" role="menuitem" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span>↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button></div></div></div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route](context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
+ const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono']]:baseNav;
+ const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
+ const navHtml=nav.map(([id,i,t])=>{
+  const locked=guest && GUEST_LOCKED.includes(id);
+  const active=id===navRoute && !locked;
+  const badge=id==='errors'&&state.errors&&Object.values(state.errors).some(e=>!e.resolved)?'<i class="nav-badge"></i>':'';
+  if(locked){
+   return `<button class="nav-item guest-locked" data-action="guest-lock" data-id="${id}" aria-label="${t} - requer conta">${`<span aria-hidden="true">${i}</span>`}${escapeHTML(t)}<span class="nav-lock" aria-hidden="true">🔒</span>${badge}</button>`;
+  }
+  return `<a href="#${id}" class="nav-item ${active?'active':''}" ${active?'aria-current="page"':''}><span aria-hidden="true">${i}</span>${escapeHTML(t)}${badge}</a>`;
+ }).join('');
+ const logoutHtml=!guest?`<button class="nav-item nav-logout" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span aria-hidden="true">↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button>`:'';
+ const accountAreaHtml=guest?'':`<div class="account-area"><button class="profile-link" data-action="profile-settings" type="button" aria-label="Abrir configurações">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span></button></div>`;
+ appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#home"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — estudo que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
  document.title=`${title} · FIXOU`;
 }
 function openModal(html){modalElement.innerHTML=html;if(!modalElement.open)modalElement.showModal();}
@@ -665,8 +744,12 @@ function downloadText(name,text,type='application/json'){const blob=new Blob([te
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
  if(action==='logout'){performLogout();return;}
- if(action==='account-menu'){ui.accountMenuOpen=!ui.accountMenuOpen;render();return;}
- if(action==='account-settings'){ui.accountMenuOpen=false;go('settings');return;}
+ if(action==='guest-lock'){openGuestModal(id,element);return;}
+ if(action==='close-guest-modal'){closeGuestModal();return;}
+ if(action==='guest-create'){closeGuestModal();go('register');return;}
+ if(action==='guest-login'){closeGuestModal();go('login');return;}
+ if(action==='account-settings'){go('settings');return;}
+ if(action==='profile-settings'){go('settings');return;}
  if(action==='remove-avatar'){if(!AVATAR_FEATURE_ENABLED)return;api('/api/avatar',{method:'DELETE',body:'{}'}).then(()=>{account.user={...account.user,hasAvatar:false,avatarVersion:Date.now()};render();toast('Foto removida.');}).catch(e=>toast(e.message));return;}
  if(action==='admin-period'){ui.adminPeriod=Number(id);adminData=null;render();api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}
   if(action==='admin-user'){const target=(adminData?.users||[]).find(u=>u.id===id);if(target)openModal(adminUserModal(target));return;}
@@ -713,7 +796,9 @@ function handleAction(action,id,element){
  if(action==='download-curriculum'){downloadText('fuvest-2027-mapa-curricular.json',JSON.stringify(CURRICULUM,null,2));return;}
  if(action==='recover-save'){confirmAction('Começar um novo perfil local?','O progresso local anterior será substituído após a confirmação.',()=>{storageBlocked=false;saveProgress();render();},'Continuar e salvar');return;}
 }
-document.addEventListener('click',event=>{if(ui.accountMenuOpen&&!event.target.closest('.account-area')){ui.accountMenuOpen=false;render();}const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
+document.addEventListener('click',event=>{
+ if(modalElement.open && event.target===modalElement){closeGuestModal();return;}
+ const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
 document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}});
 document.addEventListener('change',event=>{
@@ -747,7 +832,13 @@ document.addEventListener('submit',event=>{
  if(form.id==='map-search-form'){ui.mapSearch=String(data.get('query')||'');render();}
  if(form.id==='global-search-form'){ui.searchTerm=String(data.get('query')||'');render();}
 });
-document.addEventListener('keydown',event=>{const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}});
+document.addEventListener('keydown',event=>{
+ const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);
+ if(event.key==='Escape' && modalElement.open){event.preventDefault();closeGuestModal();return;}
+ if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}
+ if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
+ if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}
+});
 window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}render();window.scrollTo(0,0);});
 window.addEventListener('pagehide',()=>saveProgress());
 let resizeTimer=null;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(ui.route==='admin')render();},120);});
