@@ -40,10 +40,7 @@
                   "relatedConceptIds": [
                     "bio-metabolismo-energetico"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-metabolismo-energetico-a",
-                    "bio-metabolismo-energetico-b"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-metabolismo-energetico"
                   ],
@@ -117,10 +114,7 @@
                   "relatedConceptIds": [
                     "bio-metabolismo-energetico"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-metabolismo-energetico-a",
-                    "bio-metabolismo-energetico-b"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-metabolismo-energetico"
                   ],
@@ -218,10 +212,7 @@
                   "relatedConceptIds": [
                     "bio-metabolismo-energetico"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-metabolismo-energetico-a",
-                    "bio-metabolismo-energetico-b"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-metabolismo-energetico"
                   ],
@@ -251,10 +242,7 @@
                   "relatedConceptIds": [
                     "bio-metabolismo-energetico"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-metabolismo-energetico-a",
-                    "bio-metabolismo-energetico-b"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-metabolismo-energetico"
                   ],
@@ -285,14 +273,7 @@
                     "bio-selecao-variabilidade",
                     "bio-extra-deriva-genetica-e-efeito-fundador"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-segregacao-heranca-a",
-                    "bio-segregacao-heranca-b",
-                    "bio-selecao-variabilidade-a",
-                    "bio-selecao-variabilidade-b",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-1",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-segregacao-heranca",
                     "bio-selecao-variabilidade",
@@ -387,16 +368,7 @@
                     "bio-extra-deriva-genetica-e-efeito-fundador",
                     "bio-extra-populacoes-e-crescimento"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-segregacao-heranca-a",
-                    "bio-segregacao-heranca-b",
-                    "bio-selecao-variabilidade-a",
-                    "bio-selecao-variabilidade-b",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-1",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-2",
-                    "bio-extra-populacoes-e-crescimento-1",
-                    "bio-extra-populacoes-e-crescimento-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-segregacao-heranca",
                     "bio-selecao-variabilidade",
@@ -504,50 +476,7 @@
                     "bio-extra-ciclos-da-materia",
                     "bio-extra-eutrofizacao-e-conservacao"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-selecao-variabilidade-a",
-                    "bio-selecao-variabilidade-b",
-                    "bio-extra-teoria-moderna-da-evolucao-1",
-                    "bio-extra-teoria-moderna-da-evolucao-2",
-                    "bio-extra-mutacao-e-recombinacao-1",
-                    "bio-extra-mutacao-e-recombinacao-2",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-1",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-2",
-                    "bio-extra-filogenia-e-ancestralidade-1",
-                    "bio-extra-filogenia-e-ancestralidade-2",
-                    "bio-extra-evidencias-da-evolucao-1",
-                    "bio-extra-evidencias-da-evolucao-2",
-                    "bio-extra-evolucao-humana-1",
-                    "bio-extra-evolucao-humana-2",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-1",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-2",
-                    "bio-extra-fluxo-genico-1",
-                    "bio-extra-fluxo-genico-2",
-                    "bio-extra-selecao-natural-e-resistencia-1",
-                    "bio-extra-selecao-natural-e-resistencia-2",
-                    "bio-extra-selecao-sexual-1",
-                    "bio-extra-selecao-sexual-2",
-                    "bio-extra-nicho-ecologico-1",
-                    "bio-extra-nicho-ecologico-2",
-                    "bio-extra-populacoes-e-crescimento-1",
-                    "bio-extra-populacoes-e-crescimento-2",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-1",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-2",
-                    "bio-extra-predacao-e-cascatas-troficas-1",
-                    "bio-extra-predacao-e-cascatas-troficas-2",
-                    "bio-extra-cadeias-e-teias-alimentares-1",
-                    "bio-extra-cadeias-e-teias-alimentares-2",
-                    "bio-extra-biomas-mundiais-1",
-                    "bio-extra-biomas-mundiais-2",
-                    "bio-extra-biomas-brasileiros-1",
-                    "bio-extra-biomas-brasileiros-2",
-                    "bio-extra-sucessao-ecologica-1",
-                    "bio-extra-sucessao-ecologica-2",
-                    "bio-extra-ciclos-da-materia-1",
-                    "bio-extra-ciclos-da-materia-2",
-                    "bio-extra-eutrofizacao-e-conservacao-1",
-                    "bio-extra-eutrofizacao-e-conservacao-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-selecao-variabilidade",
                     "bio-extra-teoria-moderna-da-evolucao",
@@ -640,50 +569,7 @@
                     "bio-extra-ciclos-da-materia",
                     "bio-extra-eutrofizacao-e-conservacao"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-fluxo-energia-eutrofizacao-a",
-                    "bio-fluxo-energia-eutrofizacao-b",
-                    "bio-extra-teoria-moderna-da-evolucao-1",
-                    "bio-extra-teoria-moderna-da-evolucao-2",
-                    "bio-extra-mutacao-e-recombinacao-1",
-                    "bio-extra-mutacao-e-recombinacao-2",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-1",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-2",
-                    "bio-extra-filogenia-e-ancestralidade-1",
-                    "bio-extra-filogenia-e-ancestralidade-2",
-                    "bio-extra-evidencias-da-evolucao-1",
-                    "bio-extra-evidencias-da-evolucao-2",
-                    "bio-extra-evolucao-humana-1",
-                    "bio-extra-evolucao-humana-2",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-1",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-2",
-                    "bio-extra-fluxo-genico-1",
-                    "bio-extra-fluxo-genico-2",
-                    "bio-extra-selecao-natural-e-resistencia-1",
-                    "bio-extra-selecao-natural-e-resistencia-2",
-                    "bio-extra-selecao-sexual-1",
-                    "bio-extra-selecao-sexual-2",
-                    "bio-extra-nicho-ecologico-1",
-                    "bio-extra-nicho-ecologico-2",
-                    "bio-extra-populacoes-e-crescimento-1",
-                    "bio-extra-populacoes-e-crescimento-2",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-1",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-2",
-                    "bio-extra-predacao-e-cascatas-troficas-1",
-                    "bio-extra-predacao-e-cascatas-troficas-2",
-                    "bio-extra-cadeias-e-teias-alimentares-1",
-                    "bio-extra-cadeias-e-teias-alimentares-2",
-                    "bio-extra-biomas-mundiais-1",
-                    "bio-extra-biomas-mundiais-2",
-                    "bio-extra-biomas-brasileiros-1",
-                    "bio-extra-biomas-brasileiros-2",
-                    "bio-extra-sucessao-ecologica-1",
-                    "bio-extra-sucessao-ecologica-2",
-                    "bio-extra-ciclos-da-materia-1",
-                    "bio-extra-ciclos-da-materia-2",
-                    "bio-extra-eutrofizacao-e-conservacao-1",
-                    "bio-extra-eutrofizacao-e-conservacao-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-fluxo-energia-eutrofizacao",
                     "bio-extra-teoria-moderna-da-evolucao",
@@ -756,12 +642,7 @@
                     "bio-extra-biomas-mundiais",
                     "bio-extra-biomas-brasileiros"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-extra-biomas-mundiais-1",
-                    "bio-extra-biomas-mundiais-2",
-                    "bio-extra-biomas-brasileiros-1",
-                    "bio-extra-biomas-brasileiros-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-extra-biomas-mundiais",
                     "bio-extra-biomas-brasileiros"
@@ -786,12 +667,7 @@
                     "bio-extra-biomas-mundiais",
                     "bio-extra-biomas-brasileiros"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-extra-biomas-mundiais-1",
-                    "bio-extra-biomas-mundiais-2",
-                    "bio-extra-biomas-brasileiros-1",
-                    "bio-extra-biomas-brasileiros-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-extra-biomas-mundiais",
                     "bio-extra-biomas-brasileiros"
@@ -836,10 +712,7 @@
                   "relatedConceptIds": [
                     "bio-extra-ciclos-da-materia"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-extra-ciclos-da-materia-1",
-                    "bio-extra-ciclos-da-materia-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-extra-ciclos-da-materia"
                   ],
@@ -891,50 +764,7 @@
                     "bio-extra-ciclos-da-materia",
                     "bio-extra-eutrofizacao-e-conservacao"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-selecao-variabilidade-a",
-                    "bio-selecao-variabilidade-b",
-                    "bio-extra-teoria-moderna-da-evolucao-1",
-                    "bio-extra-teoria-moderna-da-evolucao-2",
-                    "bio-extra-mutacao-e-recombinacao-1",
-                    "bio-extra-mutacao-e-recombinacao-2",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-1",
-                    "bio-extra-isolamento-reprodutivo-e-especiacao-2",
-                    "bio-extra-filogenia-e-ancestralidade-1",
-                    "bio-extra-filogenia-e-ancestralidade-2",
-                    "bio-extra-evidencias-da-evolucao-1",
-                    "bio-extra-evidencias-da-evolucao-2",
-                    "bio-extra-evolucao-humana-1",
-                    "bio-extra-evolucao-humana-2",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-1",
-                    "bio-extra-deriva-genetica-e-efeito-fundador-2",
-                    "bio-extra-fluxo-genico-1",
-                    "bio-extra-fluxo-genico-2",
-                    "bio-extra-selecao-natural-e-resistencia-1",
-                    "bio-extra-selecao-natural-e-resistencia-2",
-                    "bio-extra-selecao-sexual-1",
-                    "bio-extra-selecao-sexual-2",
-                    "bio-extra-nicho-ecologico-1",
-                    "bio-extra-nicho-ecologico-2",
-                    "bio-extra-populacoes-e-crescimento-1",
-                    "bio-extra-populacoes-e-crescimento-2",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-1",
-                    "bio-extra-mutualismo-competicao-e-comensalismo-2",
-                    "bio-extra-predacao-e-cascatas-troficas-1",
-                    "bio-extra-predacao-e-cascatas-troficas-2",
-                    "bio-extra-cadeias-e-teias-alimentares-1",
-                    "bio-extra-cadeias-e-teias-alimentares-2",
-                    "bio-extra-biomas-mundiais-1",
-                    "bio-extra-biomas-mundiais-2",
-                    "bio-extra-biomas-brasileiros-1",
-                    "bio-extra-biomas-brasileiros-2",
-                    "bio-extra-sucessao-ecologica-1",
-                    "bio-extra-sucessao-ecologica-2",
-                    "bio-extra-ciclos-da-materia-1",
-                    "bio-extra-ciclos-da-materia-2",
-                    "bio-extra-eutrofizacao-e-conservacao-1",
-                    "bio-extra-eutrofizacao-e-conservacao-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-selecao-variabilidade",
                     "bio-extra-teoria-moderna-da-evolucao",
@@ -1008,10 +838,7 @@
                   "relatedConceptIds": [
                     "bio-fluxo-energia-eutrofizacao"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-fluxo-energia-eutrofizacao-a",
-                    "bio-fluxo-energia-eutrofizacao-b"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-fluxo-energia-eutrofizacao"
                   ],
@@ -1310,12 +1137,7 @@
                     "bio-plantas-ambiente-terrestre",
                     "bio-extra-evolucao-humana"
                   ],
-                  "relatedQuestionIds": [
-                    "bio-plantas-ambiente-terrestre-a",
-                    "bio-plantas-ambiente-terrestre-b",
-                    "bio-extra-evolucao-humana-1",
-                    "bio-extra-evolucao-humana-2"
-                  ],
+                  "relatedQuestionIds": [],
                   "relatedFlashcardIds": [
                     "bio-plantas-ambiente-terrestre",
                     "bio-extra-evolucao-humana"
