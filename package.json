@@ -4,5 +4,5 @@
   "private": true,
   "type": "module",
   "description": "Projeto independente de aprendizagem para a FUVEST 2027",
-  "scripts": { "build": "node scripts/build.mjs", "start": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs", "validate-bank": "node scripts/validate-bank.mjs", "test-server": "node --test tests/server.test.mjs", "expand-bank": "node scripts/expand-bank.mjs" }
+  "scripts": { "build": "node scripts/build.mjs", "start": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs", "validate-bank": "node scripts/validate-bank.mjs", "test-server": "node --test tests/server.test.mjs", "expand-bank": "node scripts/expand-bank.mjs", "audit:questions": "node scripts/audit-question-bank.mjs" }
 }

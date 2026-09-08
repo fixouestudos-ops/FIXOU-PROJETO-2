@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-08T03:27:15.667Z",
+  "sampleSize": 20,
+  "sample": [
+    {
+      "questionId": "fis-lic-l3-f1-c10-exercicios-propostos-q28",
+      "category": "image_missing"
+    },
+    {
+      "questionId": "fis-lic-l2-f1-c6-exercicios-propostos-q9",
+      "category": "image_missing"
+    },
+    {
+      "questionId": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
+      "category": "image_missing"
+    },
+    {
+      "questionId": "fis-lic-l3-f2-c8-exercicios-complementares-q25",
+      "category": "image_missing"
+    },
+    {
+      "questionId": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "category": "image_missing"
+    },
+    {
+      "questionId": "fis-lic-l3-f2-c8-exercicios-propostos-q18",
+      "category": "ocr"
+    },
+    {
+      "questionId": "fis-lic-l3-f3-c12-exercicios-propostos-q9",
+      "category": "ocr"
+    },
+    {
+      "questionId": "fis-lic-l1-f1-c3-exercicios-complementares-q29",
+      "category": "ocr"
+    },
+    {
+      "questionId": "fis-lic-l3-f2-c8-exercicios-propostos-q27",
+      "category": "options"
+    },
+    {
+      "questionId": "fis-lic-l1-f2-c2-exercicios-complementares-q29",
+      "category": "options"
+    },
+    {
+      "questionId": "fis-lic-l2-f1-c6-exercicios-complementares-q44",
+      "category": "options"
+    },
+    {
+      "questionId": "fis-lic-l4-f2-c13-revisando-q6",
+      "category": "formula"
+    },
+    {
+      "questionId": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
+      "category": "formula"
+    },
+    {
+      "questionId": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "category": "formula"
+    },
+    {
+      "questionId": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
+      "category": "answer_key"
+    },
+    {
+      "questionId": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
+      "category": "answer_key"
+    },
+    {
+      "questionId": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
+      "category": "explanation"
+    },
+    {
+      "questionId": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
+      "category": "explanation"
+    },
+    {
+      "questionId": "fis-lic-l1-f1-c1-exercicios-complementares-q23",
+      "category": "control"
+    },
+    {
+      "questionId": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "category": "control"
+    }
+  ],
+  "categories": [
+    "image_missing=5",
+    "ocr=3",
+    "options=3",
+    "formula=3",
+    "answer_key=2",
+    "explanation=2",
+    "control=2"
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "fis-lic-l3-f1-c10-exercicios-propostos-q28": {
+    "category": "image_missing",
+    "vol": "L3",
+    "page": 71,
+    "num": 28,
+    "status": "validated",
+    "antes": {
+      "prompt": "UFG-GO Uma das competições dos X-games são as manobras dos esqueitistas em uma rampa em U. Um atleta parte do repouso do topo da rampa e, através do movimento do seu corpo, de peso 800 N, consegue ganhar 600 J a cada ida e vinda na rampa, conforme ilustração a seguir. h Desprezando as perdas de energia e o peso do skate, o número mínimo de idas e vindas que o atleta deve realizar para atingir uma altura (h) de 3 m acima do topo da rampa é:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "UFG-GO Uma das competições dos X-games são as manobras dos esqueitistas em uma rampa em U. Um atleta parte do repouso do topo da rampa e, através do movimento do seu corpo, de peso 800 N, consegue ganhar 600 J a cada ida e vinda na rampa, conforme ilustração a seguir. h Desprezando as perdas de energia e o peso do skate, o número mínimo de idas e vindas que o atleta deve realizar para atingir uma altura (h) de 3 m acima do topo da rampa é:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f1-c10-exercicios-propostos-q28-p71.png"
+      ]
+    }
+  },
+  "fis-lic-l2-f1-c6-exercicios-propostos-q9": {
+    "category": "image_missing",
+    "vol": "L2",
+    "page": 23,
+    "num": 9,
+    "status": "validated",
+    "antes": {
+      "prompt": "Fatec-SP Dados os vetores A, B e C, representados na figura em que cada quadrícula apresenta lado correspondente a uma unidade de medida, é correto afirmar que a resultante dos vetores tem módulo: A  B  C ",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "answerKeyLetter": "A",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Fatec-SP Dados os vetores A, B e C, representados na figura em que cada quadrícula apresenta lado correspondente a uma unidade de medida, é correto afirmar que a resultante dos vetores tem módulo: A  B  C ",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "answerKeyLetter": "A",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l2-f1-c6-exercicios-propostos-q9-p23.png"
+      ]
+    }
+  },
+  "fis-lic-l1-f2-c4-exercicios-propostos-q32": {
+    "category": "image_missing",
+    "vol": "L1",
+    "page": 235,
+    "num": 32,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Efomm-RJ 2016 Considere que o Gerador de Van de Graaff da figura está em funcionamento, mantendo constante o potencial elétrico de sua cúpula esfé- rica de raio R 0 metros. Quando, então, é fechada a chave CH1, uma esfera condutora de raio R R 4 1 0 5 metros, inicialmente descarregada, conecta-se à cúpula por meio de fios de capacidade desprezí- vel (também é desprezível a indução eletrostática). Atingido o equilíbrio eletrostático, a razão 1 0 s s , en- tre as densidades superficiais de carga elétrica da esfera e da cúpula, vale 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 R 0 CH1 R 1 Gerador 1 1 1 1 1 1 1 1 1 1 1",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "1/2",
+        "1/4"
+      ],
+      "answer": 0,
+      "answerKeyLetter": "A",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Efomm-RJ 2016 Considere que o Gerador de Van de Graaff da figura está em funcionamento, mantendo constante o potencial elétrico de sua cúpula esfé- rica de raio R 0 metros. Quando, então, é fechada a chave CH1, uma esfera condutora de raio R R 4 1 0 5 metros, inicialmente descarregada, conecta-se à cúpula por meio de fios de capacidade desprezí- vel (também é desprezível a indução eletrostática). Atingido o equilíbrio eletrostático, a razão 1 0 s s , en- tre as densidades superficiais de carga elétrica da esfera e da cúpula, vale 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 R 0 CH1 R 1 Gerador 1 1 1 1 1 1 1 1 1 1 1",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "1/2",
+        "1/4"
+      ],
+      "answer": 0,
+      "answerKeyLetter": "A",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l3-f2-c8-exercicios-complementares-q25": {
+    "category": "image_missing",
+    "vol": "L3",
+    "page": 140,
+    "num": 25,
+    "status": "validated",
+    "antes": {
+      "prompt": "UFRGS A figura mostra dois condutores longos, X e Y, perpendiculares ao plano da página, percorridos por correntes elétricas contínuas de iguais intensidades e sentido para fora da página. No ponto P, equidistante dos fios, o sentido do vetor indução magnética resultante produzido pelas duas correntes está corretamente indicado pela seta: 1 2 3 4 P X Y",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "perpendicular à página e para dentro da página."
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "UFRGS A figura mostra dois condutores longos, X e Y, perpendiculares ao plano da página, percorridos por correntes elétricas contínuas de iguais intensidades e sentido para fora da página. No ponto P, equidistante dos fios, o sentido do vetor indução magnética resultante produzido pelas duas correntes está corretamente indicado pela seta: 1 2 3 4 P X Y",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "perpendicular à página e para dentro da página."
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-complementares-q25-p140.png"
+      ]
+    }
+  },
+  "fis-lic-l2-f1-c6-exercicios-propostos-q4": {
+    "category": "image_missing",
+    "vol": "L2",
+    "page": 23,
+    "num": 4,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Acafe-SC Considere a árvore de natal de vetores, montada conforme a figura a seguir. 1 cm 1 cm A alternativa correta que apresenta o módulo, em cm, do vetor resultante é:",
+      "options": [
+        "4",
+        "0",
+        "2",
+        "6"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Acafe-SC Considere a árvore de natal de vetores, montada conforme a figura a seguir. 1 cm 1 cm A alternativa correta que apresenta o módulo, em cm, do vetor resultante é:",
+      "options": [
+        "4",
+        "0",
+        "2",
+        "6"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l3-f2-c8-exercicios-propostos-q18": {
+    "category": "ocr",
+    "vol": "L3",
+    "page": 127,
+    "num": 18,
+    "status": "validated",
+    "antes": {
+      "prompt": "Enem 2022 O físico Hans C. Oersted observou que um fio transportando corrente elétrica produz um campo magnético. A presença do campo magnético foi verificada ao aproximar uma bússola de um fio conduzindo corrente elétrica. A figura ilustra um fio percorrido por uma corrente elétrica i, constante e com sentido para cima. Os pontos A, B e C estão num plano transversal e equidistantes do fio. Em cada ponto foi colocada uma bússola. N Bússola BC A i S Considerando apenas o campo magnético por causa da corrente i, as respectivas configurações das bússolas nos pontos A, B e C serão",
+      "options": [
+        "i",
+        "i",
+        "i",
+        "i",
+        "i"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Enem 2022 O físico Hans C. Oersted observou que um fio transportando corrente elétrica produz um campo magnético. A presença do campo magnético foi verificada ao aproximar uma bússola de um fio conduzindo corrente elétrica. A figura ilustra um fio percorrido por uma corrente elétrica i, constante e com sentido para cima. Os pontos A, B e C estão num plano transversal e equidistantes do fio. Em cada ponto foi colocada uma bússola. N Bússola BC A i S Considerando apenas o campo magnético por causa da corrente i, as respectivas configurações das bússolas nos pontos A, B e C serão",
+      "options": [
+        "i",
+        "i",
+        "i",
+        "i",
+        "i"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-propostos-q18-p127.png"
+      ]
+    }
+  },
+  "fis-lic-l3-f3-c12-exercicios-propostos-q9": {
+    "category": "ocr",
+    "vol": "L3",
+    "page": 311,
+    "num": 9,
+    "status": "validated",
+    "antes": {
+      "prompt": "FGV-SP A figura mostra um pulso que se aproxima de uma parede rígida onde está fixada a corda. v Supondo que a superfície reflita perfeitamente o pulso, deve-se esperar que no retorno, após uma reflexão, o pulso assuma a configuração indicada em:",
+      "options": [
+        "v",
+        "v",
+        "v",
+        "v",
+        "v"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "FGV-SP A figura mostra um pulso que se aproxima de uma parede rígida onde está fixada a corda. v Supondo que a superfície reflita perfeitamente o pulso, deve-se esperar que no retorno, após uma reflexão, o pulso assuma a configuração indicada em:",
+      "options": [
+        "v",
+        "v",
+        "v",
+        "v",
+        "v"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f3-c12-exercicios-propostos-q9-p311.png"
+      ]
+    }
+  },
+  "fis-lic-l1-f1-c3-exercicios-complementares-q29": {
+    "category": "ocr",
+    "vol": "L1",
+    "page": 55,
+    "num": 29,
+    "status": "validated",
+    "antes": {
+      "prompt": "EEAR-SP 2020 Um professor cronometra o tempo “tS” que um objeto (considerado um ponto material) lançado a partir do solo, verticalmente para cima e com uma velocidade inicial, leva para realizar um deslocamento DxS até atingir a altura máxima. Em seguida, o professor mede, em relação à altura máxima, o deslocamento de descida DxD ocorrido em um intervalo de tempo igual a 1 4 de “tS” cronometrado inicialmente. A razão D D x x S D é igual a ______. Considere o módulo da aceleração da gravidade constante e que, durante todo o movimento do objeto, não há nenhum tipo de atrito.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        ""
+      ]
+    },
+    "depois": {
+      "prompt": "EEAR-SP 2020 Um professor cronometra o tempo “tS” que um objeto (considerado um ponto material) lançado a partir do solo, verticalmente para cima e com uma velocidade inicial, leva para realizar um deslocamento DxS até atingir a altura máxima. Em seguida, o professor mede, em relação à altura máxima, o deslocamento de descida DxD ocorrido em um intervalo de tempo igual a 1 4 de “tS” cronometrado inicialmente. A razão D D x x S D é igual a ______. Considere o módulo da aceleração da gravidade constante e que, durante todo o movimento do objeto, não há nenhum tipo de atrito.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l1-f1-c3-exercicios-complementares-q29-p55.png"
+      ]
+    }
+  },
+  "fis-lic-l3-f2-c8-exercicios-propostos-q27": {
+    "category": "options",
+    "vol": "L3",
+    "page": 129,
+    "num": 27,
+    "status": "validated",
+    "antes": {
+      "prompt": "EEAR-SP 2018 Uma espira circular com 10p cm de diâmetro, ao ser percorrida por uma corrente elétrica de 500 mA de intensidade, produz no seu centro um vetor campo magnético de intensidade igual a _____ ? 1026 T. Dado: utilize m5 ?p ? 2 ? 4 10 T m A 0 7 .",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "EEAR-SP 2018 Uma espira circular com 10p cm de diâmetro, ao ser percorrida por uma corrente elétrica de 500 mA de intensidade, produz no seu centro um vetor campo magnético de intensidade igual a _____ ? 1026 T. Dado: utilize m5 ?p ? 2 ? 4 10 T m A 0 7 .",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-propostos-q27-p129.png"
+      ]
+    }
+  },
+  "fis-lic-l1-f2-c2-exercicios-complementares-q29": {
+    "category": "options",
+    "vol": "L1",
+    "page": 183,
+    "num": 29,
+    "status": "validated",
+    "antes": {
+      "prompt": "UFRGS 2023 Duas esferas condutoras, carregadas, são colocadas em contato, de modo que o potencial elétrico nas suas superfícies fica não nulo e com o mesmo valor em todos os pontos das superfícies. A esfera 1 tem raio R e a esfera 2 tem raio 2R. A seguir, as esferas são separadas até ficarem a grande distância uma da outra. Qual é a razão E E 1 2 , entre o módulo do campo elétrico na superfície da esfera 1 e o módulo do campo elétrico na superfície da esfera 2, depois da separação?",
+      "options": [
+        "2",
+        "3",
+        "2",
+        "3",
+        "3 2"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "UFRGS 2023 Duas esferas condutoras, carregadas, são colocadas em contato, de modo que o potencial elétrico nas suas superfícies fica não nulo e com o mesmo valor em todos os pontos das superfícies. A esfera 1 tem raio R e a esfera 2 tem raio 2R. A seguir, as esferas são separadas até ficarem a grande distância uma da outra. Qual é a razão E E 1 2 , entre o módulo do campo elétrico na superfície da esfera 1 e o módulo do campo elétrico na superfície da esfera 2, depois da separação?",
+      "options": [
+        "2",
+        "3",
+        "2",
+        "3",
+        "3 2"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l1-f2-c2-exercicios-complementares-q29-p183.png"
+      ]
+    }
+  },
+  "fis-lic-l2-f1-c6-exercicios-complementares-q44": {
+    "category": "options",
+    "vol": "L2",
+    "page": 41,
+    "num": 44,
+    "status": "validated",
+    "antes": {
+      "prompt": "Vunesp Gotas de chuva que caem com velocidade v 5 20 m/s são vistas através da minha vidraça formando um ângulo de 30° com a vertical, vindo da esquerda para a direita. Quatro automóveis estão passando pela minha rua com as velocidades de módulos e sentidos indicados. Qual dos motoristas vê, através do vidro lateral, a chuva caindo na vertical? minha janela 2 4 1 3 esquerda direita v1 5 62,4 km ? h–1 v2 5 36,0 km ? h–1 v3 5 36,0 km ? h–1 v4 5 62,4 km ? h–1",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "nenhum"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Vunesp Gotas de chuva que caem com velocidade v 5 20 m/s são vistas através da minha vidraça formando um ângulo de 30° com a vertical, vindo da esquerda para a direita. Quatro automóveis estão passando pela minha rua com as velocidades de módulos e sentidos indicados. Qual dos motoristas vê, através do vidro lateral, a chuva caindo na vertical? minha janela 2 4 1 3 esquerda direita v1 5 62,4 km ? h–1 v2 5 36,0 km ? h–1 v3 5 36,0 km ? h–1 v4 5 62,4 km ? h–1",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "nenhum"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": [
+        "assets/question-images/fis-lic-l2-f1-c6-exercicios-complementares-q44-p41.png"
+      ]
+    }
+  },
+  "fis-lic-l4-f2-c13-revisando-q6": {
+    "category": "formula",
+    "vol": "L4",
+    "page": 167,
+    "num": 6,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente que, posteriormente, é acomodado em um aparelho. Quando o elemento radioativo decai, os detectores do aparelho captam parte dos fótons emitidos. Radiação Radiação Detector Detector (www.radiologycafe.com. Adaptado.) Sabe-se que a energia associada a um fóton está relacionada com a frequência da radiação pela expressão Ef = h · f, sendo h a constante de Planck, cujo valor é 6,63 × 10⁻³⁴ J ? s. Suponha que o elemento radioativo utilizado em um desses exames seja o tecnécio-99m, que emite radiação cujos fótons têm energia associada de 2,24 × 10⁻¹⁴ J, e considere os detectores de radiação sensíveis às faixas de frequência indicadas na tabela. Detector Faixa de sensibilidade (Hz) I 1012 a 1013 V 1013 a 1014 U 1016 a 1017 X 1017 a 1018 G 1019 a 1020 Para que possam captar os fótons emitidos pelo tecnécio-99m, os detectores utilizados no aparelho devem ser do tipo",
+      "options": [
+        "X",
+        "G",
+        "V",
+        "I",
+        "U"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente que, posteriormente, é acomodado em um aparelho. Quando o elemento radioativo decai, os detectores do aparelho captam parte dos fótons emitidos. Radiação Radiação Detector Detector (www.radiologycafe.com. Adaptado.) Sabe-se que a energia associada a um fóton está relacionada com a frequência da radiação pela expressão Ef = h · f, sendo h a constante de Planck, cujo valor é 6,63 × 10⁻³⁴ J ? s. Suponha que o elemento radioativo utilizado em um desses exames seja o tecnécio-99m, que emite radiação cujos fótons têm energia associada de 2,24 × 10⁻¹⁴ J, e considere os detectores de radiação sensíveis às faixas de frequência indicadas na tabela. Detector Faixa de sensibilidade (Hz) I 1012 a 1013 V 1013 a 1014 U 1016 a 1017 X 1017 a 1018 G 1019 a 1020 Para que possam captar os fótons emitidos pelo tecnécio-99m, os detectores utilizados no aparelho devem ser do tipo",
+      "options": [
+        "X",
+        "G",
+        "V",
+        "I",
+        "U"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l4-f1-c11-exercicios-complementares-q22": {
+    "category": "formula",
+    "vol": "L4",
+    "page": 39,
+    "num": 22,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Fuvest-SP Um meteorito de massa m muito menor que a massa M da Terra aproxima-se dela, seguindo a trajetória indicada na figura. Inicialmente, bem longe da Terra, podemos supor que a trajetória seja retilínea e a sua velocidade v1 . Devido à atração gravitacional da Terra, o meteorito faz uma curva em torno dela e escapa para o espaço sem se chocar com a superfície terrestre. Quando se afasta suficientemente da Terra, atinge uma velocidade final v2, de forma que, aproximadamente, |v2| = |v1|, podendo sua trajetória ser novamente considerada retilínea. Ox e Oy são os eixos de um sistema de referência inercial, no qual a Terra está inicialmente em repouso. M 0 1 y m x 3 5 4 2 u u 2 v1 v Podemos afirmar que a direção e o sentido da quantidade de movimento adquirida pela Terra são indicados aproximadamente pela seta:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 4,
+      "answerKeyLetter": "E",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Fuvest-SP Um meteorito de massa m muito menor que a massa M da Terra aproxima-se dela, seguindo a trajetória indicada na figura. Inicialmente, bem longe da Terra, podemos supor que a trajetória seja retilínea e a sua velocidade v1 . Devido à atração gravitacional da Terra, o meteorito faz uma curva em torno dela e escapa para o espaço sem se chocar com a superfície terrestre. Quando se afasta suficientemente da Terra, atinge uma velocidade final v2, de forma que, aproximadamente, |v2| = |v1|, podendo sua trajetória ser novamente considerada retilínea. Ox e Oy são os eixos de um sistema de referência inercial, no qual a Terra está inicialmente em repouso. M 0 1 y m x 3 5 4 2 u u 2 v1 v Podemos afirmar que a direção e o sentido da quantidade de movimento adquirida pela Terra são indicados aproximadamente pela seta:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 4,
+      "answerKeyLetter": "E",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l1-f1-c4-exercicios-complementares-q10": {
+    "category": "formula",
+    "vol": "L1",
+    "page": 82,
+    "num": 10,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura a seguir representa as posições (x), dadas em metros, em função do tempo (t), dado em segundos, para esses dois móveis. 0 21 t (s) 4 3 2 1 A B 5 3 4 5 6 x (m) No instante t = 5 s, a distância entre A e B vale, em metros:",
+      "options": [
+        "2,5",
+        "3",
+        "4",
+        "5,5",
+        "6"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura a seguir representa as posições (x), dadas em metros, em função do tempo (t), dado em segundos, para esses dois móveis. 0 21 t (s) 4 3 2 1 A B 5 3 4 5 6 x (m) No instante t = 5 s, a distância entre A e B vale, em metros:",
+      "options": [
+        "2,5",
+        "3",
+        "4",
+        "5,5",
+        "6"
+      ],
+      "answer": 3,
+      "answerKeyLetter": "D",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l2-f1-c8-exercicios-propostos-q36": {
+    "category": "answer_key",
+    "vol": "L2",
+    "page": 96,
+    "num": 36,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Uerj 2022 O funcionário de um supermercado recolhe as mercadorias deixadas nos caixas e as coloca em carrinhos. Após certo tempo de trabalho, as mercadorias recolhidas ocupam quatro carrinhos, interligados pelas correntes I, II e III para facilitar a locomoção, como ilustra a imagem. Ao deslocar os carrinhos, o funcionário exerce uma força F de intensidade igual a 8 N. I II III F = 8 N Considere que cada carrinho, com os produtos neles contidos, possui massa de 10 kg. Desprezando os atritos, a tração na corrente II, em newtons, corresponde a:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Uerj 2022 O funcionário de um supermercado recolhe as mercadorias deixadas nos caixas e as coloca em carrinhos. Após certo tempo de trabalho, as mercadorias recolhidas ocupam quatro carrinhos, interligados pelas correntes I, II e III para facilitar a locomoção, como ilustra a imagem. Ao deslocar os carrinhos, o funcionário exerce uma força F de intensidade igual a 8 N. I II III F = 8 N Considere que cada carrinho, com os produtos neles contidos, possui massa de 10 kg. Desprezando os atritos, a tração na corrente II, em newtons, corresponde a:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l3-f1-c10-exercicios-complementares-q78": {
+    "category": "answer_key",
+    "vol": "L3",
+    "page": 105,
+    "num": 78,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "IME-RJ Um objeto com massa 1 kg é largado de uma altura de 20 m e atinge o solo com velocidade de 10 m/s. Sabe-se que a força F de resistência do ar que atua sobre o objeto varia com a altura, conforme o gráfico a seguir. 12 0 h 0 altura (m) F (N) 20 Considerando que g = 10 m/s² , a altura h, em metros, em que a força de resistência do ar passa a ser constante é:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "IME-RJ Um objeto com massa 1 kg é largado de uma altura de 20 m e atinge o solo com velocidade de 10 m/s. Sabe-se que a força F de resistência do ar que atua sobre o objeto varia com a altura, conforme o gráfico a seguir. 12 0 h 0 altura (m) F (N) 20 Considerando que g = 10 m/s² , a altura h, em metros, em que a força de resistência do ar passa a ser constante é:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": 1,
+      "answerKeyLetter": "B",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l3-f1-c10-exercicios-propostos-q62": {
+    "category": "explanation",
+    "vol": "L3",
+    "page": 79,
+    "num": 62,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "AFA-SP 2023 Uma partícula, livre de resistência do ar, é lançada em A sobre uma superfície sem atrito e descreve a trajetória, mostrada na figura a seguir, contida em um plano vertical: AB C h1 h2 x g A velocidade dessa partícula, ao longo da sua trajetória, em função da abcissa x, é indicada pelo gráfico seguinte: 1,0 A B C v (m/s) x 3,0 7,0 Sejam h1 e h2, respectivamente, as maiores alturas e profundidade atingidas pela partícula ao longo de sua trajetória. Nessas condições, e sendo constante a aceleração da gravidade local, a razão h h 2 1 é igual a",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "AFA-SP 2023 Uma partícula, livre de resistência do ar, é lançada em A sobre uma superfície sem atrito e descreve a trajetória, mostrada na figura a seguir, contida em um plano vertical: AB C h1 h2 x g A velocidade dessa partícula, ao longo da sua trajetória, em função da abcissa x, é indicada pelo gráfico seguinte: 1,0 A B C v (m/s) x 3,0 7,0 Sejam h1 e h2, respectivamente, as maiores alturas e profundidade atingidas pela partícula ao longo de sua trajetória. Nessas condições, e sendo constante a aceleração da gravidade local, a razão h h 2 1 é igual a",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 2,
+      "answerKeyLetter": "C",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l2-f3-c9-exercicios-propostos-q32": {
+    "category": "explanation",
+    "vol": "L2",
+    "page": 336,
+    "num": 32,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "UFG-GO Uma lente convergente de vidro possui distância focal f quando imersa no ar. Essa lente é mergulhada em glicerina, um tipo de álcool com índice de refração maior que o do ar. Considerando- -se que o índice de refração do vidro é o mesmo da glicerina (iguais a 1,5), conclui-se que o diagrama que representa o comportamento de um feixe de luz incidindo sobre a lente imersa na glicerina é o seguinte:",
+      "options": [
+        "f",
+        "f",
+        "f",
+        "f",
+        "f"
+      ],
+      "answer": 4,
+      "answerKeyLetter": "E",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "UFG-GO Uma lente convergente de vidro possui distância focal f quando imersa no ar. Essa lente é mergulhada em glicerina, um tipo de álcool com índice de refração maior que o do ar. Considerando- -se que o índice de refração do vidro é o mesmo da glicerina (iguais a 1,5), conclui-se que o diagrama que representa o comportamento de um feixe de luz incidindo sobre a lente imersa na glicerina é o seguinte:",
+      "options": [
+        "f",
+        "f",
+        "f",
+        "f",
+        "f"
+      ],
+      "answer": 4,
+      "answerKeyLetter": "E",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l1-f1-c1-exercicios-complementares-q23": {
+    "category": "control",
+    "vol": "L1",
+    "page": 21,
+    "num": 23,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Cesgranrio-RJ Para multar motoristas com velocidade superior a 90 km/h, um guarda rodoviário, munido de binóculo e cronômetro, aciona o cronômetro quando avista o automóvel passando pelo marco A e faz a leitura no cronômetro quando vê o veículo passar pelo marco B, situado a 1 500 m de A. Um motorista passa por A a 144 km/h e mantém essa velocidade durante 10 segundos, quando percebe a presença do guarda. Que velocidade média deverá manter, em seguida, para não ser multado?",
+      "answer": "v , 79,2 km/h",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Cesgranrio-RJ Para multar motoristas com velocidade superior a 90 km/h, um guarda rodoviário, munido de binóculo e cronômetro, aciona o cronômetro quando avista o automóvel passando pelo marco A e faz a leitura no cronômetro quando vê o veículo passar pelo marco B, situado a 1 500 m de A. Um motorista passa por A a 144 km/h e mantém essa velocidade durante 10 segundos, quando percebe a presença do guarda. Que velocidade média deverá manter, em seguida, para não ser multado?",
+      "answer": "v , 79,2 km/h",
+      "imageAssets": []
+    }
+  },
+  "fis-lic-l1-f1-c1-exercicios-complementares-q28": {
+    "category": "control",
+    "vol": "L1",
+    "page": 21,
+    "num": 28,
+    "status": "needs_review",
+    "antes": {
+      "prompt": "Uerj 2020 A Polícia Rodoviária Federal revelou que os radares da Ponte Rio-Niterói são do tipo “inteligentes”, ou seja, calculam a velocidade média do condutor na via. Dessa forma, o motorista que passar pelo primeiro aparelho terá o horário e a velocidade registrados pelo equipamento. Se ele alcançar o segundo radar antes do tempo necessário para percorrer o trecho, será multado. Adaptado de oglobo.globo.com, 29/12/2017. Admita que a distância entre dois radares sucessivos na Ponte Rio-Niterói corresponde a um trecho de 1 km. Um motorista percorreu 0,81 km desse trecho com velocidade de 90 km/h. Sabendo que a velocidade máxima permitida na Ponte Rio-Niterói é de 80 km/h, estime a velocidade média máxima, em km/h, que o motorista deverá manter no restante do trecho para não ser multado.",
+      "answer": "54,29 km/h",
+      "imageAssets": []
+    },
+    "depois": {
+      "prompt": "Uerj 2020 A Polícia Rodoviária Federal revelou que os radares da Ponte Rio-Niterói são do tipo “inteligentes”, ou seja, calculam a velocidade média do condutor na via. Dessa forma, o motorista que passar pelo primeiro aparelho terá o horário e a velocidade registrados pelo equipamento. Se ele alcançar o segundo radar antes do tempo necessário para percorrer o trecho, será multado. Adaptado de oglobo.globo.com, 29/12/2017. Admita que a distância entre dois radares sucessivos na Ponte Rio-Niterói corresponde a um trecho de 1 km. Um motorista percorreu 0,81 km desse trecho com velocidade de 90 km/h. Sabendo que a velocidade máxima permitida na Ponte Rio-Niterói é de 80 km/h, estime a velocidade média máxima, em km/h, que o motorista deverá manter no restante do trecho para não ser multado.",
+      "answer": "54,29 km/h",
+      "imageAssets": []
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q29",
+    "before": {
+      "prompt": "EEAR-SP 2020 Um professor cronometra o tempo “tS” que um objeto (considerado um ponto material) lançado a partir do solo, verticalmente para cima e com uma velocidade inicial, leva para realizar um deslocamento DxS até atingir a altura máxima. Em seguida, o professor mede, em relação à altura máxima, o deslocamento de descida DxD ocorrido em um intervalo de tempo igual a 1 4 de “tS” cronometrado inicialmente. A razão D D x x S D é igual a ______. Considere o módulo da aceleração da gravidade constante e que, durante todo o movimento do objeto, não há nenhum tipo de atrito.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        ""
+      ]
+    },
+    "after": {
+      "prompt": "EEAR-SP 2020 Um professor cronometra o tempo “tS” que um objeto (considerado um ponto material) lançado a partir do solo, verticalmente para cima e com uma velocidade inicial, leva para realizar um deslocamento DxS até atingir a altura máxima. Em seguida, o professor mede, em relação à altura máxima, o deslocamento de descida DxD ocorrido em um intervalo de tempo igual a 1 4 de “tS” cronometrado inicialmente. A razão D D x x S D é igual a ______. Considere o módulo da aceleração da gravidade constante e que, durante todo o movimento do objeto, não há nenhum tipo de atrito.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ]
+    }
+  }
+]

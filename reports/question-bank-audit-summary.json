@@ -1,0 +1,15 @@
+{
+  "totalPhysics": 3334,
+  "suspects": 3314,
+  "highRisk": 1596,
+  "mediumRisk": 1053,
+  "lowRisk": 685,
+  "possibleMissingImage": 1592,
+  "imageMentionedNoAsset": 1592,
+  "ocrSuspicious": 1525,
+  "alternativeSuspicious": 236,
+  "answerKeySuspicious": 474,
+  "explanationSuspicious": 3298,
+  "formulaSuspicious": 598,
+  "sourceNotTrackable": 0
+}

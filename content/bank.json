@@ -14989,10 +14989,10 @@
       "type": "choice",
       "prompt": "EEAR-SP 2020 Um professor cronometra o tempo “tS” que um objeto (considerado um ponto material) lançado a partir do solo, verticalmente para cima e com uma velocidade inicial, leva para realizar um deslocamento DxS até atingir a altura máxima. Em seguida, o professor mede, em relação à altura máxima, o deslocamento de descida DxD ocorrido em um intervalo de tempo igual a 1 4 de “tS” cronometrado inicialmente. A razão D D x x S D é igual a ______. Considere o módulo da aceleração da gravidade constante e que, durante todo o movimento do objeto, não há nenhum tipo de atrito.",
       "options": [
-        "",
-        "",
-        "",
-        " 006366_pv_pvv_al_fis_3_vol1_liv_037_058_f1_c3_P3.indd 55 11/08/25 13:35"
+        "2",
+        "4",
+        "8",
+        "16"
       ],
       "answer": 3,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D.",
@@ -15017,11 +15017,13 @@
       "answerKeyLetter": "D",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l1-f1-c3-exercicios-complementares-q29-p55.png"
+      ],
       "tags": [
         "física",
         "movimento",
@@ -18720,13 +18722,13 @@
       "conceptId": "fis-lic-l1-f1-c4-analise-grafica",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura a seguir representa as posições (x), dadas em metros, em função do tempo (t), dado em segundos, para esses dois móveis. 0 21 t (s) 4 3 2 1 A B 5 3 4 5 6 x (m) No instante t 5 5 s, a distância entre A e B vale, em metros:",
+      "prompt": "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura a seguir representa as posições (x), dadas em metros, em função do tempo (t), dado em segundos, para esses dois móveis. 0 21 t (s) 4 3 2 1 A B 5 3 4 5 6 x (m) No instante t = 5 s, a distância entre A e B vale, em metros:",
       "options": [
-        ",",
-        "",
-        "",
-        ",",
-        ""
+        "2,5",
+        "3",
+        "4",
+        "5,5",
+        "6"
       ],
       "answer": 3,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D.",
@@ -29725,8 +29727,8 @@
       "options": [
         "2",
         "3",
-        "",
-        "",
+        "2",
+        "3",
         "3 2"
       ],
       "answer": 2,
@@ -29754,7 +29756,8 @@
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "extraction_glyph"
+        "extraction_glyph",
+        "requires_image"
       ],
       "imageAssets": [],
       "tags": [
@@ -34913,13 +34916,13 @@
       "conceptId": "fis-lic-l1-f2-c4-campo-eletrico",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "Efomm-RJ 2016 Considere que o Gerador de Van de Graaff da figura está em funcionamento, mantendo constante o potencial elétrico de sua cúpula esférica de raio R0 metros. Quando, então, é fechada a chave CH1, uma esfera condutora de raio R R 4 1 5 0 metros, inicialmente descarregada, conecta-se à cúpula por meio de fios de capacidade desprezível (também é desprezível a indução eletrostática). Atingido o equilíbrio eletrostático, a razão 1 0 s s , entre as densidades superficiais de carga elétrica da esfera e da cúpula, vale 1 11 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 R0 CH1 R1 Gerador 1 1 1 1 1 1 1 1 1 1 1",
+      "prompt": "Efomm-RJ 2016 Considere que o Gerador de Van de Graaff da figura está em funcionamento, mantendo constante o potencial elétrico de sua cúpula esfé- rica de raio R 0 metros. Quando, então, é fechada a chave CH1, uma esfera condutora de raio R R 4 1 0 5 metros, inicialmente descarregada, conecta-se à cúpula por meio de fios de capacidade desprezí- vel (também é desprezível a indução eletrostática). Atingido o equilíbrio eletrostático, a razão 1 0 s s , en- tre as densidades superficiais de carga elétrica da esfera e da cúpula, vale 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 R 0 CH1 R 1 Gerador 1 1 1 1 1 1 1 1 1 1 1",
       "options": [
-        "",
-        "",
-        "",
-        "1 2",
-        "1 4 006366_pv_pvv_al_fis_3_vol1_liv_218_244_f2_c4_P4.indd 235 12/08/25 17:51 Texto SANTOS, C. A. dos. Experimento da gota de óleo de Millikan. Porto Alegre: UFRGS, . Disponível em: http://p.ped.com/ MYCQL. Acesso em:  jun. . Esse texto conta a história do experimento de Roberto Millikan, que mediu a carga elétrica elementar, com importantes consequências para a Física e outras áreas do conhecimento. Livro GASPAR, Alberto. História da eletricidade. São Paulo: Ática, . O autor apresenta, de maneira resumida e de fácil leitura, alguns aspectos históricos e algumas das principais personagens no desenvolvimento do estudo e compreensão da eletricidade. Alguns dos assuntos já estudados até aqui e outros que serão abordados mais adiante podem ser encontrados nesse texto. Vídeo Elearnin – Millikan’s oil drop experiment to determine charge of an electron. Disponível em: http://p.ped.com/MYCQZ. Acesso em:  jun. . Animação que mostra a importância do campo elétrico uniforme na construção do aparato no experimento de Robert Millikan, que culminou com a determinação da carga elétrica elementar, entre outros resultados importantes. Narrado em inglês, com legenda em português. Eletroporação O que é? \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0015\u0014\u001a\u0013\u0012\u0011\u0012 \u0015\u0013\u0018\u0015\u0018\u0019 \u0011\u0014\u0018\u0017\u0016\u001a\u0015\u0010 \u0015\u0019\u000f \u0012\u001a\u0012\u0015 \u000e \u001b\u0011\u0014\u001a\u0012\u0015\u0014\u000f\u001b \u001a\u0012\u0015 \u0010 \u0015\u0018 \u0018\u0015 \u0013\u0012\u0016\u001a\u0015 \u000f \u0015\u0018\u000f \u0013 \u0018 \u0015\u001a\u0015\u0019\u001a \u0013\u0014\u0011\u0018 \u0015\u0010 \u0015 \u001b\u0018\u0013\u0012\u0019\u001a\u001b \u0015\u0010\u0018\u0015 \u001b\u0018\u0013\u0018 \u0015\u0019\u001b\u001a \u001a\b \u0013\u0010\u001a\u0015\u000f \u0018\u0015\u0007\u001a\u001b \u0018\u0017\u0016\u001a\u0015 \u001b\u0018\u0013\u0012\u0011 \u0006\u001b\u0011\u0018\u0015\u0010 \u0015\u0019\u001a\u001b\u001a\u0012\u0015\u0018 \u000f\u001a\u0012\u001a\u0012 \u0015 \u0019 \u001b \u0011 \u0011\u0013\u0010\u001a\u0015 \u000f \u0015 \u0018\u0014\u001b\u001a \u001a \u000e\u0014\u000f \u0018\u0012\u0015 \u0011\u0005\u001b \u0015\u0018 \u001b\u0018\b\u000e\u0012\u0015\u0010 \u0012\u0012 \u0012\u0015\u0019\u001a\u001b\u001a\u0012\u0004\u0015\u0018\u001b\u0018\u0015 \u0013 \u0013\u0010 \u001b\u0015\u0011\u0012\u0012\u001a\u0015 \u001a\u001b\u0015\u000e\u0015\u0013 \u0014 \u0012\u0012\u0001\u001b\u0011\u001a\u0015 \u001b\u0018\u001b\u0015 \u000f \u0015\u0018\u0015 \u001b\u0018\u0013\u0018\u0015\u0014 \u000f \u0018\u001b\u0015 \u000e\u0015\u0018\u0015\u0014\u0018 \u0018\u0010\u0018\u0015\u0019\u001b\u001a \u001a\u001b\u0018\u0015\u0010\u0018\u0015\u0014\u000e \u000f \u0018 \u0015 \u0018\u0015\u0007\u000f\u0013\u0014\u0011\u001a\u0013\u0018\u0015\u0014\u001a \u001a\u0015\u000f \u0015\u0019\u001a\u001b \u0011\u001b\u001a \u0015 \u0014\u001a\u0013 \u001b\u001a \u0018\u0013\u0010\u001a\u0015\u001a\u0015 \u000f \u0015 \u0013 \u001b\u0018\u0015\u0013 \u0012\u0012\u0018\u0015\u0014\u000e \u000f \u0018 \u0015 \u0018\u0012\u0015\u0012 \u0015\u0019\u001a\u001b\u0015\u0018 \u0005\u000f \u0015 \u001a \u0011\b\u001a\u0015 \u000f \u001b \u001a\u0012\u0015\u0011\u0013\u0012 \u001b\u0011\u001b\u0015\u0018 \u0005\u000f \u0018\u0015\u0014\u001a\u0011\u0012\u0018\u0015\u0010 \u0013 \u001b\u001a\u0015\u0010 \u0012\u0012\u0018\u0015\u0014\u000e \u000f \u0018 \u0015\u0019\u001a\u001b\u0015  \u0019 \u001a\u0015\u000f \u0015 \u0010\u0011\u0014\u0018 \u0013 \u001a \u0015\u0019\u001b \u0014\u0011\u0012\u0018 \u001a\u0012\u0015 \u000f \u0015\u0018\u0015 \u001b\u0018\u0013\u0018\u0015\u0007\u0011 \u000f \u0015 \u0013\u001a\u0012\u0015\u0012 \u0011\b\u0018 \u0015 \u0019\u0018\u001b\u0018\u0015\u0011\u0012\u0012\u001a\u0015\u000f\u0012\u0018 \u001a\u0012\u0015\u0018\u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a \u0015\u0019\u0018\u001b\u0018\u0015 \u000f \u0015\u0018\u0012\u0015\u0019\u001a\u001b \u0018\u0012\u0015\u0012 \u0015\u0018 \u001b\u0018 \u0004 \u0015 \u0007\u0011\u0014\u0001\u0014\u0011\u0018\u0015\u0010\u001a\u0015 \u001b\u0018\u0013\u0012\u0019\u001a\u001b \u0015\u0010 \u0019 \u0013\u0010 \u0015\u0010\u001a\u0012\u0015\u0019\u0018\u001b \u001b\u001a\u0012\u0015 \u000e \u001b\u0011\u0014\u001a\u0012\u0015 \u0007\u001b \u000f \u0013\u0014\u0011\u0018\u0015\u0010 \u0015\u0019\u000f \u0012\u001a \u0015\u0007\u001a\u001b \u0018 \u001a\u0015\u0010 \u0015\u001a\u0013\u0010\u0018 \u0015\u0011\u0013 \u0013\u0012\u0011\u0010\u0018\u0010 \u0015\u0010\u001a\u0015\u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015 \u0015\u001a\u000f \u001b\u001a\u0012­\u0015 \u0015\u0010\u0018\u0012\u0015\u0019\u001b\u001a\u0019\u001b\u0011 \u0010\u0018\u0010 \u0012\u0015\u0007\u0012\u0011\u0014\u001a \u000f \u0011\u0014\u0018\u0012\u0015\u0010\u0018\u0012\u0015\u0010\u001b\u001a\u0005\u0018\u0012\u0004 Eletroporação Reversível e Irreversível \u001a \u001a\u0015 \u0013\u0014\u0011\u001a\u0013\u0018\u0010\u001a\u0015\u0018\u0013 \u001b\u0011\u001a\u001b \u0013 \u0015\u0013\u0018\u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a \u0015\u0019\u000f \u0012\u001a\u0012\u0015 \u000e \u001b\u0011\u0014\u001a\u0012\u0015\u0014\u000f\u001b \u001a\u0012\u0015 \u0015\u0011\u0013 \u0013\u0012\u001a\u0012\u0015\u0012\u0016\u001a\u0015\u0018\u0019 \u0011\u0014\u0018\u0010\u001a\u0012\u0004\u0015\u0018\u0011\u0012\u0015\u0019\u000f \u0012\u001a\u0012\u0015\u0019\u001a\u0010 \u0015 \u001b\u0015 \u001b \u0012\u0015 \u0007 \u0011 \u001a\u0012\u0015\u0013\u0018\u0012\u0015\u0014\u000e \u000f \u0018\u0012\u0004\u0015 \u0015\u001a\u0015\u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015\u0005 \u001b\u0018\u0010\u001a\u0015\u0007\u001a\u001b\u0015 \u000f\u0011 \u001a\u0015 \u0019 \u000f \u0013\u001a \u0015\u0013\u0016\u001a\u0015\u0001\u0015 \u000f\u0018 \u000f \u001b\u0015\u0018 \u001b\u0018\u0017\u0016\u001a\u0015\u0013\u0018\u0012\u0015\u0014\u000e \u000f \u0018\u0012\u0015 \u0019\u001a\u0012 \u0018\u0012\u0015\u0018\u0015 \u0004\u0015 \u000f\u0018\u0013\u0010\u001a\u0015\u000f \u0018\u0015\u0014\u000e \u000f \u0018\u0015\u000e\u0015 \u0019\u001a\u0012 \u0018\u0015\u0018\u0015\u000f \u0015\u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015\u0012\u000f\u0007\u0011\u0014\u0011 \u0013 \u0013 \u0015 \b\u0018\u0010\u001a \u0015\u0012\u000f\u0018\u0015 \u001b\u0018\u0013\u0018\u0015 \u001a\u001b\u0013\u0018 \u0012 \u0015 \u0019\u001a\u001b\u0018\u001b\u0011\u0018 \u0013 \u0015\u0019 \u001b \u0001\b \u0015 \u0015 \u001a \u000e\u0014\u000f \u0018\u0012\u0015\u0010 \u0015 \u000f\u0011 \u0011\u001a \u001b\u0001\u0019\u0011\u0014\u001a\u0012\u0015 \u000f \u0015\u0018\u0013 \u0012\u0015\u0013\u0016\u001a\u0015\u0014\u001a\u0013\u0012 \u0005\u000f\u0011\u0018 \u0015\u0019\u0018\u0012\u0012\u0018\u001b\u0015 \u0019\u001a\u001b\u0015 \u0018\u0015\u001a\u0015\u0007\u0018 \u0015\u001a\u0015\b\u0018 \u001a\u001b\u0015\u0010 \u0015\u0011\u0013 \u0013\u0012\u0011\u0010\u0018\u0010 \u0015\u0010\u001a\u0015\u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015 \u0015 \u000f \u0015 \u0018\u0015\u0019 \u001b \u0018 \u0011 \u0011\u0018\u0017\u0016\u001a\u0015\u001b \b \u001b\u0012\b \u0015\u000e\u0015\u0018 \u0014\u0018\u0013\u0017\u0018\u0010\u0018\u0015\u000e\u0015\u0010 \u0013\u001a \u0011\u0013\u0018\u0010\u001a\u0015\u0010 \u0015 \u0011 \u0011\u0018\u001b\u0015 \u001b \b \u001b\u0012\b \u0004\u0015 \u000f\u0018\u0013\u0010\u001a\u0015\u001a\u0015\u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015\u0019\u0018\u0012\u0012\u0018\u0015\u0010 \u0015\u000f \u0015\u0010 \u001b \u0011\u0013\u0018\u0010\u001a\u0015 \u0011 \u0011\u0018\u001b \u0015\u0019\u0018\u001b \u0011\u0014\u000f \u0018\u001b\u0015\u0019\u0018\u001b\u0018\u0015\u0014\u0018\u0010\u0018\u0015 \u0011\u0019\u001a\u0015\u0010 \u0015\u0014\u000e \u000f \u0018 \u0015\u0018\u0012\u0015\u0018 \u001b\u0018\u0017 \u0012\u0015\u0019\u001b\u001a\b\u001a\u0014\u0018\u0010\u0018\u0012\u0015 \u0013\u0018\u0015 \u001b\u0018\u0013\u0018\u0015\u0014 \u000f \u0018\u001b\u0015 \u001a\u001b\u0013\u0018 \u0012 \u0015\u0019 \u001b \u0018\u0013 \u0013 \u0012 \u0015 \b\u0018\u0013\u0010\u001a\u0015\u0015 \u001a\u001b \u0015 \u0014 \u000f \u0018\u001b\u0015\u0010 \b\u0011\u0010\u001a\u0015\u0015\u0019 \u001b\u0010\u0018\u0015\u0010 \u0015\u001a \u001a\u0012 \u0018\u0012 \u0015\u001a\u0015\b\u0018 \u001a\u001b\u0015\u0010 \u0015\u0011\u0013 \u0013\u0012\u0011\u0010\u0018\u0010 \u0015\u0010\u001a\u0015 \u0014\u0018 \u0019\u001a\u0015 \u000e \u001b\u0011\u0014\u001a\u0015 \u0015 \u000f \u0015\u0018\u0012\u0015 \u000f\u0010\u0018\u0013\u0017\u0018\u0012\u0015\u0013\u0018\u0015 \u001b\u0018\u0013\u0018\u0015\u0014 \u000f \u0018\u001b\u0015\u0012 \u0015 \u001a\u001b \u0013\u0018 \u0015\u0019 \u001b \u0018\u0013 \u0013 \u0012\u0015\u000e\u0015\u0010 \u0013\u001a \u0011\u0013\u0018\u0010\u001a\u0015 \u0011 \u0011\u0018\u001b\u0015\u0011\u001b\u001b \b \u001b\u0012\b \u0004 Aplicações \u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0015\u001b \b \u001b\u0012\b \u0015\u0010 \u0015 \u0014\u0011\u0010\u001a\u0012\u0015\b\u0011\b\u001a\u0012\u0015\u000e\u0015\u001a \u0015\u000f \u0011 \u0011\u0018\u0010\u0018\u0015 \u0014 \u0011\u0013\u0011\u0014\u0018 \u0013 \u0015\u001a\u000f\u0015 \u0015 \u0012 \u000f\u0010\u001a\u0012\u0015 \u001b\u0018\u0019 \u000f \u0011\u0014\u001a\u0012\u0004\u0015\u001a \u001a\u0015  \u0019 \u001a\u0015 \u001a\u0012\u0015 \u001b\u0018\u0013\u0012\u0007 \u001b \u0013\u0014\u0011\u0018\u0015\u0010 \u0015 \u001a \u000e\u0014\u000f \u0018\u0012\u0015\u0010 \u0015\u0015\u001a\u000f\u0015 \u001b\u001a\u0005 \u0013\u001a \u001b\u0018\u0019\u0011\u0018 \u0015 \u0011\u0013 \u001b\u001a\u0010\u000f\u0017\u0016\u001a\u0015\u0010 \u0015\u0007\u0001\u001b \u0018\u0014\u001a\u0012\u0015\u0018\u0013 \u0011\u0014\u0018\u0013\u0014 \u001b\u0005 \u0013\u001a\u0012\u0015 \u0015\u0014\u000e \u000f \u0018\u0012\u0015 \u000f \u001a\u001b\u0018\u0011\u0012\u0015  \u001b\u001a \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018­\u0015 \u0013 \u001b \u0015\u001a\u000f \u001b\u001a\u0012\u0004 \u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0015\u0011\u001b\u001b \b \u001b\u0012\b \u0015\u0012 \u0015 \u001a\u0012 \u001b\u001a\u000f\u0015\u000f \u0018\u0015\u0005\u001b\u0018\u0013\u0010 \u0015\u0019\u001b\u001a \u0012\u0012\u0018\u0015\u0013\u0018\u0015\u0018 \u0018\u0017\u0016\u001a\u0015\u0013\u0016\u001a\u0015 \u000e\u001b \u0011\u0014\u0018\u0015\u0010 \u0015 \u000f \u001a\u001b \u0012 \u0015\u0014\u001a \u0015\u000f\u0012\u001a\u0015\u0010 \u0015\u0007\u0001\u001b \u0018\u0014\u001a\u0012\u0015 Texto complementar Quer saber mais? Veja os principais assuntos e conceitos trabalhados neste capítulo acessando a seção Resumindo no livro digital, na Plataforma Poliedro. \u0018\u0010\u000f\b\u0018\u0013 \u0012\u0004\u0015\u0018\u0011\u0012\u0015\u001b \u0014 \u0013 \u0013 \u0015\u0010 \u0012 \u0013\b\u001a \b \u000f \u0012 \u0015\u0012 \u000f\u0015\u000f\u0012\u001a\u0015 \u0015 \u0014\u0011\u0010\u001a\u0012 \u0015\u0014\u001a \u0015\u0019\u001b\u001a\u0014 \u0010\u0011 \u0013 \u001a\u0015\u0014\u0011\u001b\u001b\u0005\u0011\u0014\u001a\u0015 \u0011\u0013\u0011 \u0018 \u0013 \u0015\u0011\u0013\b\u0018\u0012\u0011\b\u001a\u0015\u0013\u0018\u0015 \u0018 \u0018\u0017\u0016\u001a\u0015\u0010 \u0015 \u0014\u0011\u0010\u001a\u0012\u0015 \u000f \u001a\u001b\u0018\u0011\u0012\u0015\u0012 \u0015\u001a\u0015\u000f\u0012\u001a\u0015\u0010 \u0015\u0007\u0001\u001b \u0018\u0014\u001a\u0012\u0004\u0015\u001a\u001b\u0018\u0015\u0010\u001a\u0015 \u0011\u001a\u0015\u0014 \u0013\u0011\u0014\u001a \u0015\u000e\u0015\u0011 \u0019\u001a\u001b \u0018\u0013 \u0015\u0007\u001b\u0011\u0012\u0018\u001b\u0015 \u000f \u0015\u001a\u0015\u000f\u0012\u001a\u0015\u0010\u0018\u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0015 \u0011\u001b\u001b \b \u001b\u0012\b \u0015 \u0018 \u000e \u0015 \u0012 \u0001\u0015\u0019\u001b \u0012 \u0013 \u0015\u0013\u0018\u0015\u0011\u0013\u0010\u0012 \u001b\u0011\u0018 \u0015 \u0015\u0014 \u0018\u001b\u0018\u0015 \u0019\u0018\u001b\u0018\u0015 \u001b\u0018 \u0018 \u0013 \u001a\u0015\u0010 \u0015\u0019\u0018 \u001a\u0005 \u0013\u0011\u0014\u001a\u0012\u0004\u0015\u001a\u0015\u0014\u0018\u0012\u001a\u0015\u0010 \u0015\u0018 \u0011 \u0013 \u001a\u0012\u0015\u0012 \u000f\u0015\u000f\u0012\u001a\u0015 \u000e\u0015\u0014\u0018 \u0018\u0010\u001a\u0015\u0010 \u0015 \u001b\u001a\u0019 \u001b\u0018\u0017\u0016\u0015\u0018\u001a\u0014\u0015\u001b \u0013\u001a\u0017\u0016\u001b\u0012\u0017\u0011\u001b\u0010\u0017\u0015 ­ \u0015 \u0019 \u001a\u001b\u0018\u0010\u001a\u0015\u0013\u0018\u0015 \u0012 \u001b\u0011 \u0011\u0018\u0017\u0016\u001a\u0015\u0010 \u0015\u001a\b\u001a\u0012\u0015\u001a\u000f\u0015 \u0012 \u001a\u0015\u0013\u0018\u0015\u0019\u0018\u0012 \u000f\u001b\u0011\u0018\u0017\u0016\u001a\u0015\u0012\u000f\u0018\b \u0015\u0018\u0015 \u000f\u0018 \u0015 \u0019\u001b \u0012 \u001b\b\u0018\u0015\u001a\u0012\u0015\u0013\u000f \u001b\u0011 \u0013 \u0012\u0015 \u0018\u0011\u0012\u0015\b\u0018 \u0011\u001a\u0012\u001a\u0012\u0015\u0019\u001b\u001a \u001a\u0013\u0005\u0018\u0013\u0010\u001a\u0015\u0018\u0015\b\u0011\u0010\u0018\u0015 \u0011 \u0015\u0010\u001a\u0015 \u0018 \u0011 \u0013 \u001a\u0015\u0018\u0012\u0012\u0011 \u0015\u0014\u001a \u001a\u0015\u0012 \u000f\u0015\u0012\u0018 \u001a\u001b\u0004 \u0014 \u0013 \u0013 \u0015\u0018\u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0015\u0007\u001a\u0011\u0015\u0011\u0013\u0012 \u001b\u0011\u0010\u0018\u0015\u0013\u001a\u0015 \u001b\u0014\u0018\u0010\u001a\u0015 \u0012 \u000e \u0011\u0014\u001a\u0015\u0014\u001a \u001a\u0015\u000f \u0015 \u000e \u001a\u0010\u001a\u0015\u0014\u0018\u0019\u0018\u0015\u0010 \u0015\u0019 \u001b \u0018\u001b\u0015\u000f \u0018\u0015\u0018 \u0019 \u0018\u0015\u0005\u0018 \u0018\u0015 \u0010 \u0015\u0018 \u0011\b\u001a\u0012\u0015 \u0015\u0005\u001b\u0018\u0013\u0010 \u0012\u0015\u0014\u001a\u0013\u0014 \u0013 \u001b\u0018\u0017 \u0012\u0004\u0015 \u0013 \u001b \u0018\u0013 \u001a \u0015\u0012\u0016\u001a\u0015\u0019\u001a\u000f\u0014\u001a\u0012\u0015\u001a\u0012\u0015 \u0012 \u000f\u0010\u001a\u0012\u0015\u001b \u0007 \u001b \u0013 \u0012\u0015\u0018\u0015 \u0012 \u0015 \u000e \u001a\u0010\u001a\u0012\u0015\u0007\u0018 \u0013\u0010\u001a\u0015\u0014\u001a \u0015 \u000f \u0015\u0018\u0015\u0019\u001b\u0001 \u0011\u0014\u0018\u0015 \u0010 \u0012 \u0018\u0015 \u000e\u0014\u0013\u0011\u0014\u0018\u0015\u0018\u0011\u0013\u0010\u0018\u0015\u0014\u0018\u001b \u0017\u0018\u0015\u0010 \u0015\u001b \u0012\u0019\u0018 \u0010\u001a\u0015\u0014\u0011 \u0013 \u0007\u0011\u0014\u001a\u0015 \u000f \u0015\b\u0018 \u0011\u0010 \u0015 \u0012 \u000f\u0015 \u000e \u001a\u0010\u001a\u0015\u0010 \u0015\u0018\u0019 \u0011\u0014\u0018\u0017\u0016\u001a\u0004 Eletroquimioterapia \u0012\u0015\u0014\u0013\u0014 \u001b \u0012\u0015\u0014\u000f \u0011\u0013\u0018 \u0015\u0010\u0018\u0015 \u000f \u0018\u0017\u0016\u001a\u0015\u0010 \u0015\u0014\u000e \u000f \u0018\u0012\u0015\u0012\u001a \u0001 \u0011\u0014\u0018\u0012 \u0015 \u000e\u0015\u000f \u0018\u0015\u0010\u001a \u0013\u0017\u0018\u0015\u0014\u001a \u0019 \u0018\u0015 \u000f \u0015\u0019\u001b\u001a\b\u001a\u0014\u0018\u0015\u001a\u0015\u0014\u001b \u0012\u0014\u0011 \u0013 \u001a\u0015\u0010 \u0012\u001a\u001b\u0010 \u0013\u0018\u0010\u001a\u0015\u0010 \u0015\u0014\u000e \u000f \u0018\u0012\u0015 \u000f \u0015\u0011\u0013\b\u0018\u0010 \u0015\u0006\u001b\u0005\u0016\u001a\u0012\u0015 \u0015 \u0014\u0011\u0010\u001a\u0012\u0004 \u0015\u0005\u001b\u0018\u000f\u0015\u0010 \u0015 \b\u001a \u000f\u0017\u0016\u001a\u0015\u0010\u0018\u0015\u0010\u001a \u0013\u0017\u0018\u0015 \u0015\u0018\u0012\u0015\u0014\u001a\u0013\u0010\u0011\u0017 \u0012\u0015\u0014 \u0013\u0011\u0014\u0018\u0012\u0015\u0010\u001a\u0015 \u0019\u0018\u0014\u0011 \u0013 \u0015\u0012\u0016\u001a\u0015\u0019\u001b \u0011\u0012\u0012\u0018\u0012\u0015\u0019\u0018\u001b\u0018\u0015\u0018\u0015 \u0012\u0014\u001a \u0018\u0015\u0010\u001a\u0015 \u0011\u0019\u001a\u0015\u0010 \u0015 \u001b\u0018 \u0018 \u0013 \u001a\u0015 \u0014\u0011\u001b\u000f\u001b\u0005\u0011\u0018 \u0015 \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018 \u0015 \u0013 \u001b \u0015\u001a\u000f \u001b\u0018\u0012\u0004\u0015\u0012\u0015 \u000e\u0014\u0013\u0011\u0014\u0018\u0012\u0015\u0010\u0011\u0012\u0019\u001a\u0013\b \u0011\u0012\u0015 \u0013\u001a\u0015 \u001b\u0014\u0018\u0010\u001a\u0015\u0012\u0016\u001a\u0015\u0010\u0011\b \u001b\u0012\u0018\u0012 \u0015\u0019\u001a\u001b\u000e \u0015\u0018\u0015\u0018\u0010\u001a\u0017\u0016\u001a\u0015\u0010 \u0012\u0012\u0018\u0012\u0015 \u000e\u0014\u0013\u0011\u0014\u0018\u0012\u0015\u0010 \b \u0015 \u0018 \u0013\u0010 \u001b\u0015\u0018\u001a\u0012\u0015\u0018\u0012\u0019 \u0014 \u001a\u0012\u0015\u0010 \u0015 \u0007 \u0011\b\u0011\u0010\u0018\u0010 \u0015\u0013 \u0014 \u0012\u0012\u0011\u0010\u0018\u0010 \u0015\u0012 \u0005\u000f\u001b\u0018\u0013\u0017\u0018 \u0015 \u0007\u0011 \u0014\u0011 \u0013\u0014\u0011\u0018\u0015 \u0015 \u000f\u0011\u0010\u0018\u0010 \u0004 \u0015 \u001b\u001a \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018\u0015\u000e\u0015\u000f \u0018\u0015\u0010 \u0012\u0012\u0018\u0012\u0015 \u000e\u0014\u0013\u0011\u0014\u0018\u0012\u0015 \u000f \u0015\u0014\u001a\u0013\u0012\u0011\u0012 \u0015\u0013\u0018\u0015\u000f\u0013\u0017\u0016\u001a\u0015\u0010\u0018\u0015 \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018\u0015\u0014\u001a \u0015\u0018\u0015 \u001b\u001a\u0019\u001a\u001b\u0018\u0017\u0016\u001a\u0004 \u0015\u001b \u0012\u000f \u001a \u0015\u0018\u0015 \u001b\u001a \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018\u0015\u000e\u0015\u000f \u0015 \u001b\u0018 \u0018 \u0013 \u001a\u0015\u0018\u0013 \u0011 \u000f \u001a\u001b\u0018 \u0015 \u001a\u0014\u0018 \u0015\u0013\u001a\u0015 \u000f\u0018 \u0015\u0019\u000f \u0012\u001a\u0012\u0015 \u000e \u001b\u0011\u0014\u001a\u0012\u0015\u0012\u0016\u001a\u0015\u0018\u0019 \u0011\u0014\u0018\u0010\u001a\u0012\u0015\u0013\u001a\u0015 \u0014\u0011\u0010\u001a\u0015 \u0018 \b\u001a\u0015 \u0015\u0014\u001a\u0013\u000f\u0013 \u001a\u0015\u0014\u001a \u0015 \u000f\u0011 \u0011\u001a \u001b\u0001\u0019\u0011\u0014\u001a\u0012\u0004\u0015\u0012\u0015\u0007\u0001\u001b \u0018\u0014\u001a\u0012\u0015\u0019\u001a\u0010 \u0015\u0012 \u001b\u0015 \u0018\u0019 \u0011\u0014\u0018\u0010\u001a\u0012\u0015\u0010\u0011\u001b \u0018 \u0013 \u0015\u0013\u001a\u0015 \u000f \u001a\u001b\u0015\u001a\u000f\u0015\u0010 \u0015\u0007\u001a\u001b \u0018\u0015\u0011\u0013 \u001b\u0018\b \u0013\u001a\u0012\u0018 \u0015\u0019\u0018\u001b\u0018\u0015 \u000f \u0018\u0015\u0018 \u0012\u001a\u001b\u0017\u0016\u001a\u0015 \u0018\u0011\u0012\u0015 \u0007\u0011\u0014\u0011 \u0013 \u0015\u0010\u001a\u0012\u0015 \u0012 \u001a\u0012 \u0015\u0019\u001a \u0013\u0014\u0011\u0018 \u0011\u0018\u0013\u0010\u001a\u0015\u0012 \u000f\u0015 \u0007 \u0011 \u001a\u0015\u0018\u0013 \u0011 \u000f \u001a\u001b\u0018 \u0004\u0015\u0012\u0015 \u000f\u0011 \u0011\u001a \u001b\u0001\u0019\u0011\u0014\u001a\u0012\u0015\u0019\u001a\u0012\u0011\u0014\u0011\u001a\u0013\u0018 \u0012 \u0015\u0018\u001a\u0015\u001b \u0010\u001a\u001b\u0015 \u0010\u0018\u0012\u0015\u0014\u000e \u000f \u0018\u0012\u0004\u0015\u0019\u0006\u0012\u0015\u0018\u0015\u0018\u0019 \u0011\u0014\u0018\u0017\u0016\u001a\u0015\u0010\u001a\u0012\u0015\u0019\u000f \u0012\u001a\u0012\u0015 \u000e \u001b\u0011\u0014\u001a\u0012 \u0015\u0019\u001a\u001b\u001a\u0012\u0015\u0012\u0016\u001a\u0015\u0007\u001a\u001b \u0018\u0010\u001a\u0012 \u0015 \u0015\u001a\u0012\u0015 \u000f\u0011 \u0011\u001a \u001b\u0001\u0019\u0011\u0014\u001a\u0012\u0015\u0019 \u0013 \u001b\u0018 \u0015\u0013\u0018\u0012\u0015\u0014\u000e \u000f \u0018\u0012\u0004\u0015 \u0012\u0012\u0018\u0010\u001a\u0012\u0015 \u001a\u0012\u0015\u0019\u000f \u0012\u001a\u0012 \u0015\u0018\u0015 \u001b\u0018\u0013\u0018\u0015 \u001a\u001b\u0013\u0018 \u0012 \u0015\u0011 \u0019 \u001b \u0001\b \u0015\u0013\u001a\b\u0018 \u0013 \u0015 \u0015\u001a\u0012\u0015 \u000f\u0011 \u0011\u001a \u001b\u0001\u0019\u0011\u0014\u001a\u0012\u0015\u0018\u0005 \u0015 \u001a\u0014\u0018 \u0013 \u0004\u0015 \u000f\u0018 \u0013 \u0015\u0013\u001a\u0015\u001b\u0018\u0012\u0011 \u0015\u0018\u0015 \u001b\u001a \u000f\u0011 \u0011\u001a \u001b\u0018\u0019\u0011\u0018\u0015\b \u0015\u0012 \u0013\u0010\u001a\u0015\u000f \u0011 \u0011\u0018\u0010\u0018\u0015\u0013\u0018\u0015\u0001\u001b \u0018\u0015\b \u001b\u0011\u0013\u0001\u001b\u0011\u0018\u0004 \u0004\u0015 \u0019\u000f\u001a\u0019\u0019\u000e \u0014\u0004\u0015\u0011\u0012\u0019\u001a\u0013\b \u0015 \u0015 \u0019\u0012\u0019 \u0004\u000f\u0007\u0012\u0014\u0004 \u001b¡ \u001b\u001a\u0019\u001a\u001b\u0018\u0014\u0018\u001a\u0004\u0015\u0014 \u0012\u0012\u001a\u0015 \u0015¢\u0015\u000f\u0013\u0004\u0015£\u0004\u0015\u0010\u0018\u0019 \u0004­ 006366_pv_pvv_al_fis_3_vol1_liv_218_244_f2_c4_P4.indd 236 12/08/25 17:51 237"
+        "4",
+        "2",
+        "1",
+        "1/2",
+        "1/4"
       ],
       "answer": 0,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A.",
@@ -50885,10 +50888,10 @@
       "type": "choice",
       "prompt": "Acafe-SC Considere a árvore de natal de vetores, montada conforme a figura a seguir. 1 cm 1 cm A alternativa correta que apresenta o módulo, em cm, do vetor resultante é:",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "4",
+        "0",
+        "2",
+        "6"
       ],
       "answer": 2,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C.",
@@ -51125,11 +51128,11 @@
       "type": "choice",
       "prompt": "Fatec-SP Dados os vetores A, B e C, representados na figura em que cada quadrícula apresenta lado correspondente a uma unidade de medida, é correto afirmar que a resultante dos vetores tem módulo: A  B  C ",
       "options": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
       ],
       "answer": 0,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A.",
@@ -51154,12 +51157,13 @@
       "answerKeyLetter": "A",
       "answerKeySource": "Google Drive · Gabarito Física L2.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
-        "requires_image",
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l2-f1-c6-exercicios-propostos-q9-p23.png"
+      ],
       "tags": [
         "física",
         "cinemática",
@@ -54737,10 +54741,10 @@
       "type": "choice",
       "prompt": "Vunesp Gotas de chuva que caem com velocidade v 5 20 m/s são vistas através da minha vidraça formando um ângulo de 30° com a vertical, vindo da esquerda para a direita. Quatro automóveis estão passando pela minha rua com as velocidades de módulos e sentidos indicados. Qual dos motoristas vê, através do vidro lateral, a chuva caindo na vertical? minha janela 2 4 1 3 esquerda direita v1 5 62,4 km ? h–1 v2 5 36,0 km ? h–1 v3 5 36,0 km ? h–1 v4 5 62,4 km ? h–1",
       "options": [
-        "",
-        "",
-        "",
-        "",
+        "1",
+        "2",
+        "3",
+        "4",
         "nenhum"
       ],
       "answer": 2,
@@ -54766,11 +54770,13 @@
       "answerKeyLetter": "C",
       "answerKeySource": "Google Drive · Gabarito Física L2.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l2-f1-c6-exercicios-complementares-q44-p41.png"
+      ],
       "tags": [
         "física",
         "cinemática",
@@ -61813,12 +61819,12 @@
       "conceptId": "fis-lic-l2-f1-c8-dinamica",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "Uerj 2022 O funcionário de um supermercado recolhe as mercadorias deixadas nos caixas e as coloca em carrinhos. Após certo tempo de trabalho, as mercadorias recolhidas ocupam quatro carrinhos, interligados pelas correntes I, II e III para facilitar a locomoção, como ilustra a imagem. Ao deslocar os carrinhos, o funcionário exerce uma força F de intensidade igual a 8 N. I II III F 5 8 N Considere que cada carrinho, com os produtos neles contidos, possui massa de 10 kg. Desprezando os atritos, a tração na corrente II, em newtons, corresponde a:",
+      "prompt": "Uerj 2022 O funcionário de um supermercado recolhe as mercadorias deixadas nos caixas e as coloca em carrinhos. Após certo tempo de trabalho, as mercadorias recolhidas ocupam quatro carrinhos, interligados pelas correntes I, II e III para facilitar a locomoção, como ilustra a imagem. Ao deslocar os carrinhos, o funcionário exerce uma força F de intensidade igual a 8 N. I II III F = 8 N Considere que cada carrinho, com os produtos neles contidos, possui massa de 10 kg. Desprezando os atritos, a tração na corrente II, em newtons, corresponde a:",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2",
+        "3",
+        "4",
+        "5"
       ],
       "answer": 2,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C.",
@@ -88600,7 +88606,7 @@
         "f"
       ],
       "answer": 4,
-      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E.",
+      "explanation": "Quando a lente está imersa em meio com mesmo índice de refração, não há desvio dos raios luminosos na interface, pois n_lente = n_meio. O feixe atravessa a lente sem sofrer refração, mantendo sua trajetória retilínea. Conforme o gabarito do próprio material, a alternativa correta é E.",
       "discipline": "fisica",
       "topic": "Óptica",
       "subtopic": "Refração da luz",
@@ -88627,7 +88633,9 @@
         "requires_image",
         "duplicate_options"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l2-f3-c9-exercicios-propostos-q32-p336.png"
+      ],
       "tags": [
         "física",
         "refração da luz",
@@ -101066,13 +101074,13 @@
       "conceptId": "fis-lic-l3-f1-c10-trabalho",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "UFG-GO Uma das competições dos X-games são as manobras dos esqueitistas em uma rampa em U. Um atleta parte do repouso do topo da rampa e, através do movimento do seu corpo, de peso 800 N, consegue ganhar 600 J a cada ida e vinda na rampa, conforme ilustração a seguir. h 006368_pv_pvv_al_fis_3_vol3_liv_047_109_f1_c10_P3.indd 71 10/11/25 11:41 Desprezando as perdas de energia e o peso do skate, o número mínimo de idas e vindas que o atleta deve realizar para atingir uma altura (h) de 3 m acima do topo da rampa é:",
+      "prompt": "UFG-GO Uma das competições dos X-games são as manobras dos esqueitistas em uma rampa em U. Um atleta parte do repouso do topo da rampa e, através do movimento do seu corpo, de peso 800 N, consegue ganhar 600 J a cada ida e vinda na rampa, conforme ilustração a seguir. h Desprezando as perdas de energia e o peso do skate, o número mínimo de idas e vindas que o atleta deve realizar para atingir uma altura (h) de 3 m acima do topo da rampa é:",
       "options": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
       ],
       "answer": 2,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C.",
@@ -101097,11 +101105,13 @@
       "answerKeyLetter": "C",
       "answerKeySource": "Google Drive · Gabarito Física L3.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f1-c10-exercicios-propostos-q28-p71.png"
+      ],
       "tags": [
         "física",
         "trabalho,",
@@ -102323,13 +102333,13 @@
       "type": "choice",
       "prompt": "AFA-SP 2023 Uma partícula, livre de resistência do ar, é lançada em A sobre uma superfície sem atrito e descreve a trajetória, mostrada na figura a seguir, contida em um plano vertical: AB C h1 h2 x g A velocidade dessa partícula, ao longo da sua trajetória, em função da abcissa x, é indicada pelo gráfico seguinte: 1,0 A B C v (m/s) x 3,0 7,0 Sejam h1 e h2, respectivamente, as maiores alturas e profundidade atingidas pela partícula ao longo de sua trajetória. Nessas condições, e sendo constante a aceleração da gravidade local, a razão h h 2 1 é igual a",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "1",
+        "3",
+        "5",
+        "7"
       ],
       "answer": 2,
-      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C.",
+      "explanation": "A questão aborda o princípio da conservação da energia mecânica em sistemas com forças conservativas. Quando não há trabalho de forças dissipativas, a energia mecânica total (cinética + potencial) se conserva. Conforme o gabarito do próprio material, a alternativa correta é C.",
       "discipline": "fisica",
       "topic": "Mecânica",
       "subtopic": "Trabalho, energia e potência",
@@ -106090,13 +106100,13 @@
       "conceptId": "fis-lic-l3-f1-c10-trabalho",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "IME-RJ Um objeto com massa 1 kg é largado de uma altura de 20 m e atinge o solo com velocidade de 10 m/s. Sabe-se que a força F de resistência do ar que atua sobre o objeto varia com a altura, conforme o gráfico a seguir. 12 0 h 0 altura (m) F (N) 20 Considerando que g 5 10 m/s2 , a altura h, em metros, em que a força de resistência do ar passa a ser constante é:",
+      "prompt": "IME-RJ Um objeto com massa 1 kg é largado de uma altura de 20 m e atinge o solo com velocidade de 10 m/s. Sabe-se que a força F de resistência do ar que atua sobre o objeto varia com a altura, conforme o gráfico a seguir. 12 0 h 0 altura (m) F (N) 20 Considerando que g = 10 m/s² , a altura h, em metros, em que a força de resistência do ar passa a ser constante é:",
       "options": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "4",
+        "5",
+        "6",
+        "8",
+        "10"
       ],
       "answer": 1,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B.",
@@ -109761,7 +109771,7 @@
         "i",
         "i",
         "i",
-        "i 006368_pv_pvv_al_fis_3_vol3_liv_110_144_f2_c8_p4.indd 127 10/11/25 10:17"
+        "i"
       ],
       "answer": 3,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D.",
@@ -109788,10 +109798,12 @@
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "requires_image",
-        "duplicate_options"
+        "duplicate_options",
+        "requires_image"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-propostos-q18-p127.png"
+      ],
       "tags": [
         "física",
         "magnetismo e",
@@ -110092,10 +110104,10 @@
       "type": "choice",
       "prompt": "EEAR-SP 2018 Uma espira circular com 10p cm de diâmetro, ao ser percorrida por uma corrente elétrica de 500 mA de intensidade, produz no seu centro um vetor campo magnético de intensidade igual a _____ ? 1026 T. Dado: utilize m5 ?p ? 2 ? 4 10 T m A 0 7 .",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "1",
+        "2",
+        "4",
+        "5"
       ],
       "answer": 1,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B.",
@@ -110120,11 +110132,13 @@
       "answerKeyLetter": "B",
       "answerKeySource": "Google Drive · Gabarito Física L3.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-propostos-q27-p129.png"
+      ],
       "tags": [
         "física",
         "magnetismo e",
@@ -111971,10 +111985,10 @@
       "type": "choice",
       "prompt": "UFRGS A figura mostra dois condutores longos, X e Y, perpendiculares ao plano da página, percorridos por correntes elétricas contínuas de iguais intensidades e sentido para fora da página. No ponto P, equidistante dos fios, o sentido do vetor indução magnética resultante produzido pelas duas correntes está corretamente indicado pela seta: 1 2 3 4 P X Y",
       "options": [
-        "",
-        "",
-        "",
-        "",
+        "1",
+        "2",
+        "3",
+        "4",
         "perpendicular à página e para dentro da página."
       ],
       "answer": 3,
@@ -112000,12 +112014,13 @@
       "answerKeyLetter": "D",
       "answerKeySource": "Google Drive · Gabarito Física L3.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
-        "requires_image",
         "extraction_glyph"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f2-c8-exercicios-complementares-q25-p140.png"
+      ],
       "tags": [
         "física",
         "magnetismo e",
@@ -127482,7 +127497,7 @@
         "v",
         "v",
         "v",
-        "v 006368_pv_pvv_al_fis_3_vol3_liv_299_317_f3_c12_P2.indd 311 27/10/25 14:18"
+        "v"
       ],
       "answer": 3,
       "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D.",
@@ -127509,10 +127524,12 @@
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "requires_image",
-        "duplicate_options"
+        "duplicate_options",
+        "requires_image"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l3-f3-c12-exercicios-propostos-q9-p311.png"
+      ],
       "tags": [
         "física",
         "introdução à",
@@ -131687,7 +131704,7 @@
       "conceptId": "fis-lic-l4-f1-c11-impulso",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "Fuvest-SP Um meteorito de massa m muito menor que a massa M da Terra aproxima-se dela, seguindo a trajetória indicada na figura. Inicialmente, bem longe da Terra, podemos supor que a trajetória seja retilínea e a sua velocidade v1 . Devido à atração gravitacional da Terra, o meteorito faz uma curva em torno dela e escapa para o espaço sem se chocar com a superfície terrestre. Quando se afasta suficientemente da Terra, atinge uma velocidade final v2, de forma que, aproximadamente, |v2| 5 |v1 |, podendo sua trajetória ser novamente considerada retilínea. Ox e Oy são os eixos de um sistema de referência inercial, no qual a Terra está inicialmente em repouso. M 0 1 y m x 3 5 4 2 u u 2 v1 v Podemos afirmar que a direção e o sentido da quantidade de movimento adquirida pela Terra são indicados aproximadamente pela seta:",
+      "prompt": "Fuvest-SP Um meteorito de massa m muito menor que a massa M da Terra aproxima-se dela, seguindo a trajetória indicada na figura. Inicialmente, bem longe da Terra, podemos supor que a trajetória seja retilínea e a sua velocidade v1 . Devido à atração gravitacional da Terra, o meteorito faz uma curva em torno dela e escapa para o espaço sem se chocar com a superfície terrestre. Quando se afasta suficientemente da Terra, atinge uma velocidade final v2, de forma que, aproximadamente, |v2| = |v1|, podendo sua trajetória ser novamente considerada retilínea. Ox e Oy são os eixos de um sistema de referência inercial, no qual a Terra está inicialmente em repouso. M 0 1 y m x 3 5 4 2 u u 2 v1 v Podemos afirmar que a direção e o sentido da quantidade de movimento adquirida pela Terra são indicados aproximadamente pela seta:",
       "options": [
         "1",
         "2",
@@ -144349,7 +144366,7 @@
       "conceptId": "fis-lic-l4-f2-c13-fisica-moderna",
       "difficulty": 2,
       "type": "choice",
-      "prompt": "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente que, posteriormente, é acomodado em um aparelho. Quando o elemento radioativo decai, os detectores do aparelho captam parte dos fótons emitidos. Radiação Radiação Detector Detector (www.radiologycafe.com. Adaptado.) Sabe-se que a energia associada a um fóton está relacionada com a frequência da radiação pela expressão Ef 5 h ? f, sendo h a constante de Planck, cujo valor é 6,63 ? 10234 J ? s. Suponha que o elemento radioativo utilizado em um desses exames seja o tecnécio-99m, que emite radiação cujos fótons têm energia associada de 2,24 ? 10214 J, e considere os detectores de radiação sensíveis às faixas de frequência indicadas na tabela. Detector Faixa de sensibilidade (Hz) I 1012 a 1013 V 1013 a 1014 U 1016 a 1017 X 1017 a 1018 G 1019 a 1020 Para que possam captar os fótons emitidos pelo tecnécio-99m, os detectores utilizados no aparelho devem ser do tipo",
+      "prompt": "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente que, posteriormente, é acomodado em um aparelho. Quando o elemento radioativo decai, os detectores do aparelho captam parte dos fótons emitidos. Radiação Radiação Detector Detector (www.radiologycafe.com. Adaptado.) Sabe-se que a energia associada a um fóton está relacionada com a frequência da radiação pela expressão Ef = h · f, sendo h a constante de Planck, cujo valor é 6,63 × 10⁻³⁴ J ? s. Suponha que o elemento radioativo utilizado em um desses exames seja o tecnécio-99m, que emite radiação cujos fótons têm energia associada de 2,24 × 10⁻¹⁴ J, e considere os detectores de radiação sensíveis às faixas de frequência indicadas na tabela. Detector Faixa de sensibilidade (Hz) I 1012 a 1013 V 1013 a 1014 U 1016 a 1017 X 1017 a 1018 G 1019 a 1020 Para que possam captar os fótons emitidos pelo tecnécio-99m, os detectores utilizados no aparelho devem ser do tipo",
       "options": [
         "X",
         "G",
