@@ -25,6 +25,12 @@ const bundle=`(()=>{'use strict';\n${code}\n})();`;new vm.Script(bundle,{filenam
 const css=read('styles/app.css');const html=read('index.html').replace('<link rel="stylesheet" href="styles/app.css">',()=>`<style>${css}</style>`).replace('<script type="module" src="src/main.js"></script>',()=>`<script>${bundle.replace(/<\/script/gi,'<\\/script')}</script>`);
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join(root,'dist/index.html'),html);
 fs.mkdirSync(path.join(root,'dist/assets'),{recursive:true});fs.copyFileSync(path.join(root,'assets/fixou-logo.png'),path.join(root,'dist/assets/fixou-logo.png'));
+if(fs.existsSync(path.join(root,'assets/question-images'))){
+ fs.mkdirSync(path.join(root,'dist/assets/question-images'),{recursive:true});
+ for(const file of fs.readdirSync(path.join(root,'assets/question-images'))){
+  if(file.endsWith('.png'))fs.copyFileSync(path.join(root,'assets/question-images',file),path.join(root,'dist/assets/question-images',file));
+ }
+}
 fs.mkdirSync(path.join(root,'dist/server'),{recursive:true});const logoBase64=fs.readFileSync(path.join(root,'assets/fixou-logo.png')).toString('base64');const worker=read('server/index.mjs').replace("'__FIXOU_INDEX_HTML__'",JSON.stringify(html)).replace("'__FIXOU_LOGO_BASE64__'",JSON.stringify(logoBase64));fs.writeFileSync(path.join(root,'dist/server/index.js'),worker);
 console.log('Build OK · '+bank.questions.length+' questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');
 
