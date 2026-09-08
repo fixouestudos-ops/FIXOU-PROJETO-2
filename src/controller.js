@@ -11,6 +11,7 @@ import {homeScreen,trainScreen,cardsScreen} from './screens.js';
 import {errorsScreen,mapScreen,booksScreen,favoritesScreen,searchScreen} from './screens-library.js';
 import {statsScreen,profileScreen} from './screens-profile.js';
 import {settingsScreen} from './screens-settings.js';
+import {aboutScreen} from './screens-about.js';
 import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
 import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES} from './session-builder.js';
 import {api,authScreen,adminScreen,adminUserModal,avatar,ACCOUNT_CONFIG} from './account.js';
@@ -48,7 +49,7 @@ async function performLogout(){if(ui.loggingOut)return;ui.loggingOut=true;ui.acc
 function track(eventType,metadata={}){if(account.user)api('/api/events',{method:'POST',body:JSON.stringify({eventType,metadata})}).catch(()=>{});}
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
 function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut};}
-function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','login','register','forgot','reset'].includes(parts[0])?parts[0]:'home';ui.bookId=parts[1]||null;}
+function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','login','register','forgot','reset'].includes(parts[0])?parts[0]:'home';ui.bookId=parts[1]||null;}
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
  if(account.loading){appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
@@ -73,7 +74,7 @@ function render(){
   else {ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
  }
  const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
- const views={home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen};
+ const views={about:aboutScreen,home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen};
  const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono']]:baseNav;
  const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
  const navHtml=nav.map(([id,i,t])=>{
@@ -164,6 +165,9 @@ function handleAction(action,id,element){
  if(action==='profile-settings'){go('profile');return;}
  if(action==='report'){const q=questionById(BANK,id),c=q&&conceptById(BANK,q.conceptId);if(!q||!c)return;modalElement.dataset.reportQuestion=id;openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><span class="eyebrow modal-eyebrow">REPORTAR PROBLEMA</span><h2 id="modal-title">Algo parece errado?</h2><p class="modal-copy">${escapeHTML(c.subtopic)} · ${escapeHTML(q.source||'Questão original')}</p><form id="report-form" class="form-stack"><label>Categoria<select name="category"><option>Resposta possivelmente incorreta</option><option>Imagem incorreta</option><option>Imagem ilegível</option><option>Enunciado incompleto</option><option>Alternativa duplicada</option><option>Alternativa incorreta</option><option>Erro de formatação</option><option>Explicação incorreta</option><option>Vestibular/ano incorreto</option><option>Outro</option></select></label><label>Descreva o problema<textarea name="description" rows="5" maxlength="2000" required placeholder="Conte o que você encontrou"></textarea></label><button class="primary" type="submit">Enviar reporte</button></form>`);return;}
  if(action==='support-form'){openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><span class="eyebrow modal-eyebrow">SUPORTE FIXOU</span><h2 id="modal-title">Como podemos ajudar?</h2><form id="support-form" class="form-stack"><label>Nome<input name="name" maxlength="80" value="${escapeHTML(state.profile?.name||'')}" required></label><label>E-mail<input name="email" type="email" maxlength="160" placeholder="seu@email.com" required></label><label>Categoria<select name="category"><option>Problema técnico</option><option>Problema com questão</option><option>Erro em resposta</option><option>Erro em imagem</option><option>Conta</option><option>Sugestão</option><option>Outro</option></select></label><label>Assunto<input name="subject" maxlength="120" required></label><label>Mensagem<textarea name="message" rows="5" maxlength="2000" required></textarea></label><button class="primary" type="submit">Enviar mensagem</button></form>`);return;}
+ if(action==='about-video'){const url=element?.dataset?.url;if(url){track('about_video_clicked',{url});window.open(url,'_blank','noopener');}return;}
+ if(action==='about-create'){track('about_create_account_clicked');go('register');return;}
+ if(action==='about-start-study'){track('about_start_study_clicked');go('home');return;}
  if(action==='search-map'){ui.mapSearch=id;ui.mapDiscipline='';go('map');return;}
  if(action==='go-train'){go('train');return;}
  if(action==='go-home'){go('home');return;}
@@ -222,7 +226,7 @@ document.addEventListener('keydown',event=>{
  if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
  if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}
 });
-window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}render();window.scrollTo(0,0);});
+window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='about')track('about_viewed');if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}render();window.scrollTo(0,0);});
 window.addEventListener('pagehide',()=>saveProgress());
 let resizeTimer=null;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(ui.route==='admin')render();},120);});
 document.addEventListener('visibilitychange',()=>{lastTick=Date.now();if(document.hidden)saveProgress();});
