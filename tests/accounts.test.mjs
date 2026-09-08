@@ -4,9 +4,10 @@ import worker,{passwordHash,passwordMatches,avatarType,retentionValue,analyticsE
 
 test('senha usa hash derivado e valida sem armazenar texto puro',async()=>{
  const salt='salt-seguro-de-teste';
- const hash=await passwordHash('senha-muito-segura',salt,1000);
- assert.notEqual(hash,'senha-muito-segura');
- assert.equal(hash.length,64);
+ const stored=await passwordHash('senha-muito-segura',salt,1000);
+ assert.notEqual(stored,'senha-muito-segura');
+ assert.match(stored,/^pbkdf2sha256\$1\$1000\$/);
+ assert.equal(stored.split('$').pop().length,64);
  assert.equal(await passwordMatches('senha-muito-segura',salt,await passwordHash('senha-muito-segura',salt)),true);
  assert.equal(await passwordMatches('senha-errada',salt,await passwordHash('senha-muito-segura',salt)),false);
 });

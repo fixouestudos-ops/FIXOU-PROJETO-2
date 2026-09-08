@@ -1,6 +1,7 @@
 const INDEX_HTML='__FIXOU_INDEX_HTML__';
 const LOGO_BASE64='__FIXOU_LOGO_BASE64__';
 const enc=new TextEncoder(),SESSION_MS=30*864e5,RESET_MS=30*60e3,MAX_AVATAR_BYTES=5*1024*1024,PROGRESS_MAX_BYTES=1500000;
+const PBKDF2_ITERATIONS=100000,PBKDF2_ALGO='SHA-256',PASSWORD_HASH_VERSION=1;
 const jsonHeaders={'content-type':'application/json; charset=utf-8','cache-control':'no-store'};
 const limits=new Map();
 const now=()=>Date.now(),clean=(v,n)=>String(v??'').trim().slice(0,n);
@@ -9,8 +10,9 @@ const uuid=()=>crypto.randomUUID();
 const hex=b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
 const randomToken=()=>hex(crypto.getRandomValues(new Uint8Array(32)));
 async function sha(value){return hex(await crypto.subtle.digest('SHA-256',enc.encode(value)));}
-export async function passwordHash(password,salt,iterations=210000){const key=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);return hex(await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:enc.encode(salt),iterations},key,256));}
-export async function passwordMatches(password,salt,expected){const actual=await passwordHash(password,salt);if(actual.length!==expected.length)return false;let diff=0;for(let i=0;i<actual.length;i++)diff|=actual.charCodeAt(i)^expected.charCodeAt(i);return diff===0;}
+async function pbkdf2Hex(password,salt,iterations){const key=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);return hex(await crypto.subtle.deriveBits({name:'PBKDF2',hash:PBKDF2_ALGO,salt:enc.encode(String(salt)),iterations},key,256));}
+export async function passwordHash(password,salt,iterations=PBKDF2_ITERATIONS){return `pbkdf2sha256$${PASSWORD_HASH_VERSION}$${iterations}$${salt}$${await pbkdf2Hex(password,salt,iterations)}`;}
+export async function passwordMatches(password,columnSalt,stored){const parts=/^pbkdf2sha256\$(\d+)\$(\d+)\$([^$]+)\$([0-9a-f]{64})$/u.exec(stored);const salt=parts?parts[3]:columnSalt,iterations=parts?Number(parts[2]):PBKDF2_ITERATIONS,expected=parts?parts[4]:stored;if(iterations>PBKDF2_ITERATIONS||iterations<1000)return false;const actual=await pbkdf2Hex(password,salt,iterations);if(actual.length!==expected.length)return false;let diff=0;for(let i=0;i<actual.length;i++)diff|=actual.charCodeAt(i)^expected.charCodeAt(i);return diff===0;}
 function headers(request){return {...jsonHeaders,'vary':'Origin'};}
 function json(body,status=200,request){return new Response(JSON.stringify(body),{status,headers:headers(request)});}
 function cookie(request){return Object.fromEntries((request.headers.get('cookie')||'').split(';').map(x=>x.trim().split('=').map(decodeURIComponent)).filter(x=>x.length===2));}
