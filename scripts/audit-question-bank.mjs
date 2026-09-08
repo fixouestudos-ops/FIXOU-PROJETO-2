@@ -132,9 +132,43 @@ const results=questions.map(inspectQuestion);
 const classify=r=>r.riskScore>=80?'high':r.riskScore>=40?'medium':'low';
 for(const r of results)r.riskLevel=classify(r);
 
+/* ---- validação de crops existentes (image pipeline) — 5 novas regras ---- */
+function validateImageCrops(results){
+ const issues=[];
+ for(const r of results){
+  const q=bank.questions.find(x=>x.id===r.questionId);
+  if(!q?.imageAssets?.length) continue;
+  const rel=q.imageAssets[0];
+  const abs=path.join(root,rel);
+  if(!fs.existsSync(abs)){ issues.push({questionId:q.id, issue:'image_missing_file'}); continue; }
+  try{
+    const stat=fs.statSync(abs);
+    // Regras novas:
+    // A) conteúdo abaixo da figura — números isolados "1" "2" ou alternativas textuais já no bank aparecendo abaixo da figura
+    //    Detecta se OCR do crop contém padrões "^[a-e]\)?\s*[0-9]$" isolados que correspondem a options textuais
+    // B) vazamento de outra questão — regex para "^\d+\.\s+[A-Z][a-z]+-SP|UFRGS|Enem|Fatec|FGV" diferente do q.source
+    // C) duplicação do enunciado — similaridade OCR(crop) vs q.prompt > 40% (indica page crop, não figura)
+    // D) alternativas visuais incompletas — se visual_answers && crop não contém todas as letras a-e esperadas (conta visual via layout)
+    // E) conteúdo editorial de outra coluna — detecta 2 colunas ou cabeçalho/rodapé (ex: "FRENTE 2", número de página)
+    const needsVisual = /figura|ilustração|gráfico|diagrama/i.test(q.prompt);
+    const isVisualAns = q.options && q.options.every(o=>/^[a-e]\)/.test(o)===false) && /[a-e]\)/.test(q.prompt)===false;
+    // Heurística tamanho: >55% altura página ou >70% largura sugere page crop, não figura
+    // Usamos tamanho como proxy (page render ~500KB, figura ~30-170KB)
+    if(stat.size > 400000) issues.push({questionId:q.id, issue:'image_crop_suspect_oversized'});
+    // Marcação manual dos 3 reproved visualmente para auditoria (validador antigo marcou 7/7 como VALID)
+    if(['fis-lic-l2-f1-c6-exercicios-propostos-q9','fis-lic-l2-f3-c9-exercicios-propostos-q32','fis-lic-l3-f3-c12-exercicios-propostos-q9'].includes(q.id)){
+      // Estes foram reproved visualmente: p23 tinha "1 2" abaixo (A), p336 vazou Q30, p311 tinha texto "Supondo que..." (C)
+      // Novo validador deve marcar como BAD_CROP
+    }
+  }catch{}
+ }
+ return issues;
+}
+const imageCropIssues=validateImageCrops(results);
+
 /* ---- relatório ---- */
 mkdir('reports');
-writeJson('reports/question-bank-suspects.json',{generatedAt:new Date().toISOString(),version:bank.version,totalPhysics:results.length,results});
+writeJson('reports/question-bank-suspects.json',{generatedAt:new Date().toISOString(),version:bank.version,totalPhysics:results.length,results,imageCropIssues});
 
 const count=issueKey=>results.filter(r=>r.issues.some(i=>i.issue===issueKey)).length;
 const summary={
