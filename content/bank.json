@@ -4495,19 +4495,21 @@
       "answerKeyText": "a) e b) Trajetória em relação ao piloto do avião Trajetória em relação à pessoa em repouso (a) (b)",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
-      "needsReview": true,
+      "needsReview": false,
       "reviewReasons": [
         "non_objective_or_composite"
       ],
-      "imageAssets": [],
+      "imageAssets": [
+        "assets/question-images/fis-lic-l1-f1-c1-revisando-q2.png"
+      ],
       "tags": [
         "física",
         "introdução à",
         "revisando"
       ],
       "estimatedSeconds": 180,
-      "imageClassification": "needs_visual_review",
-      "imageStatus": "needs_visual_review",
+      "imageClassification": "image_required",
+      "imageStatus": "approved_manual",
       "contentStatus": "needs_content_review",
       "imageReason": "Contém referência visual no enunciado"
     },
