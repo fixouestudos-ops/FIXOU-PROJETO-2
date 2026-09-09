@@ -3,9 +3,10 @@ import { check, sleep, group } from 'k6';
 import { Rate, Trend, Counter } from 'k6/metrics';
 
 const BASE_URL = __ENV.FIXOU_URL || 'https://fixouestudos.com.br';
-const ACCOUNT_COUNT = 8;
+const ACCOUNT_COUNT = 100;
 
 const errorRate = new Rate('errors');
+const conflictRate = new Rate('conflicts');
 const totalRequests = new Counter('total_requests');
 const homeDuration = new Trend('home_duration', true);
 const sessionDuration = new Trend('session_duration', true);
@@ -22,8 +23,10 @@ export const options = {
         { duration: '30s', target: 10 },
         { duration: '60s', target: 10 },
         { duration: '30s', target: 50 },
-        { duration: '90s', target: 50 },
-        { duration: '30s', target: 0 },
+        { duration: '60s', target: 50 },
+        { duration: '30s', target: 100 },
+        { duration: '60s', target: 100 },
+        { duration: '15s', target: 0 },
       ],
       gracefulStop: '15s',
     },
@@ -53,14 +56,14 @@ function authHeaders(cookies) {
 
 export function setup() {
   const accounts = [];
+
   for (let i = 0; i < ACCOUNT_COUNT; i++) {
     const email = `loadtest_v2_${i}@loadtest.local`;
-    const password = TEST_PASSWORD;
     let cookies = '';
 
     const loginRes = http.post(`${BASE_URL}/api/auth/login`, JSON.stringify({
       email,
-      password,
+      password: TEST_PASSWORD,
     }), {
       headers: { 'Content-Type': 'application/json', 'User-Agent': 'FIXOU-LoadTest/1.0' },
       tags: { endpoint: 'login' },
@@ -73,7 +76,7 @@ export function setup() {
       const regRes = http.post(`${BASE_URL}/api/auth/register`, JSON.stringify({
         name: `Load Test ${i}`,
         email,
-        password,
+        password: TEST_PASSWORD,
       }), {
         headers: { 'Content-Type': 'application/json', 'User-Agent': 'FIXOU-LoadTest/1.0' },
         tags: { endpoint: 'register' },
@@ -85,10 +88,28 @@ export function setup() {
     }
 
     if (cookies) {
-      accounts.push({ email, password, cookies, revision: 0 });
+      let revision = 0;
+      const progRes = http.get(`${BASE_URL}/api/progress`, {
+        headers: authHeaders(cookies),
+        tags: { endpoint: 'progress_get' },
+        timeout: '10s',
+      });
+      if (progRes.status === 200) {
+        try {
+          const body = JSON.parse(progRes.body);
+          if (body.progress?.revision != null) {
+            revision = body.progress.revision;
+          }
+        } catch {}
+      }
+      accounts.push({ email, cookies, revision });
     }
-    sleep(1);
+
+    if (i % 10 === 9) {
+      sleep(1);
+    }
   }
+
   return { accounts };
 }
 
@@ -128,7 +149,7 @@ export default function (data) {
   const iterationId = `loadtest:${__VU}:${__ITER}`;
 
   for (let i = 0; i < 3; i++) {
-    group(`4.${i+1}. Question viewed`, () => {
+    group(`3.${i+1}. Question viewed`, () => {
       const res = http.post(`${BASE_URL}/api/events`, JSON.stringify({
         eventType: 'question_viewed',
         metadata: {
@@ -149,7 +170,7 @@ export default function (data) {
 
     sleep(Math.random() * 8 + 5);
 
-    group(`4.${i+1}. Question answered`, () => {
+    group(`3.${i+1}. Question answered`, () => {
       const correct = Math.random() > 0.5;
       const res = http.post(`${BASE_URL}/api/events`, JSON.stringify({
         eventType: correct ? 'question_correct' : 'question_incorrect',
@@ -173,7 +194,7 @@ export default function (data) {
     sleep(Math.random() * 2 + 1);
   }
 
-  group('5. Progress GET', () => {
+  group('4. Progress GET', () => {
     const res = http.get(`${BASE_URL}/api/progress`, {
       headers: authHeaders(account.cookies),
       tags: { endpoint: 'progress_get' },
@@ -195,11 +216,11 @@ export default function (data) {
 
   sleep(Math.random() * 1 + 0.5);
 
-  group('6. Progress PUT', () => {
+  group('5. Progress PUT', () => {
     const res = http.put(`${BASE_URL}/api/progress`, JSON.stringify({
       state: {
         version: 1,
-        profile: { name: 'Load Test' },
+        profile: { name: `Load Test ${__VU}` },
         settings: { dailyCount: 10 },
         xp: Math.floor(Math.random() * 1000),
         savedAt: Date.now(),
@@ -221,13 +242,46 @@ export default function (data) {
         }
       } catch {}
     }
-    check(res, { 'progress PUT 200': (r) => r.status === 200 });
-    if (res.status >= 400) errorRate.add(1); else errorRate.add(0);
+    if (res.status === 409) {
+      conflictRate.add(1);
+      try {
+        const body = JSON.parse(res.body);
+        if (body.revision != null) {
+          account.revision = body.revision;
+        }
+      } catch {}
+    }
+    check(res, { 'progress PUT 200 or 409': (r) => r.status === 200 || r.status === 409 });
+    if (res.status >= 400 && res.status !== 409) errorRate.add(1); else errorRate.add(0);
   });
 
   sleep(Math.random() * 3 + 2);
 }
 
 export function handleSummary(data) {
-  return { stdout: '' };
+  const m = data.metrics;
+  const summary = {
+    timestamp: new Date().toISOString(),
+    url: BASE_URL,
+    vus_max: m.vus_max?.value || 0,
+    iterations: m.iterations?.value || 0,
+    http_reqs: m.http_reqs?.value || 0,
+    http_req_duration_p50: m.http_req_duration?.values?.['p(50)'] || 0,
+    http_req_duration_p90: m.http_req_duration?.values?.['p(90)'] || 0,
+    http_req_duration_p95: m.http_req_duration?.values?.['p(95)'] || 0,
+    http_req_duration_p99: m.http_req_duration?.values?.['p(99)'] || 0,
+    http_req_duration_max: m.http_req_duration?.values?.max || 0,
+    http_req_failed: m.http_req_failed?.value || 0,
+    errors: m.errors?.value || 0,
+    conflicts: m.conflicts?.value || 0,
+    http_reqs_per_second: m.http_reqs?.rate || 0,
+    data_received: m.data_received?.value || 0,
+    data_sent: m.data_sent?.value || 0,
+  };
+
+  const summaryPath = `tests/load/results-study-flow-${Date.now()}.json`;
+  return {
+    stdout: JSON.stringify(summary, null, 2),
+    [summaryPath]: JSON.stringify(summary, null, 2),
+  };
 }
