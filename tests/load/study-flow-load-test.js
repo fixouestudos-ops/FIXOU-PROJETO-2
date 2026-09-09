@@ -15,6 +15,7 @@ const progressGetDuration = new Trend('progress_get_duration', true);
 const progressPutDuration = new Trend('progress_put_duration', true);
 
 export const options = {
+  setupTimeout: '120s',
   scenarios: {
     study_flow: {
       executor: 'ramping-vus',
@@ -56,61 +57,70 @@ function authHeaders(cookies) {
 
 export function setup() {
   const accounts = [];
+  const BATCH = 10;
 
-  for (let i = 0; i < ACCOUNT_COUNT; i++) {
-    const email = `loadtest_v2_${i}@loadtest.local`;
-    let cookies = '';
+  for (let batch = 0; batch < ACCOUNT_COUNT; batch += BATCH) {
+    const batchEnd = Math.min(batch + BATCH, ACCOUNT_COUNT);
+    const batchRequests = [];
 
-    const loginRes = http.post(`${BASE_URL}/api/auth/login`, JSON.stringify({
-      email,
-      password: TEST_PASSWORD,
-    }), {
-      headers: { 'Content-Type': 'application/json', 'User-Agent': 'FIXOU-LoadTest/1.0' },
-      tags: { endpoint: 'login' },
-      timeout: '10s',
-    });
-
-    if (loginRes.status === 200) {
-      cookies = extractCookie(loginRes.headers);
-    } else {
-      const regRes = http.post(`${BASE_URL}/api/auth/register`, JSON.stringify({
-        name: `Load Test ${i}`,
-        email,
-        password: TEST_PASSWORD,
-      }), {
-        headers: { 'Content-Type': 'application/json', 'User-Agent': 'FIXOU-LoadTest/1.0' },
-        tags: { endpoint: 'register' },
-        timeout: '10s',
+    for (let i = batch; i < batchEnd; i++) {
+      const idx = String(i + 1).padStart(3, '0');
+      const email = `loadtest_v3_${idx}@loadtest.local`;
+      batchRequests.push({
+        method: 'POST',
+        url: `${BASE_URL}/api/auth/login`,
+        body: JSON.stringify({ email, password: TEST_PASSWORD }),
+        params: {
+          headers: { 'Content-Type': 'application/json', 'User-Agent': 'FIXOU-LoadTest/1.0' },
+          tags: { endpoint: 'login' },
+          timeout: '10s',
+        },
       });
-      if (regRes.status === 201 || regRes.status === 200) {
-        cookies = extractCookie(regRes.headers);
-      }
     }
 
-    if (cookies) {
-      let revision = 0;
-      const progRes = http.get(`${BASE_URL}/api/progress`, {
-        headers: authHeaders(cookies),
-        tags: { endpoint: 'progress_get' },
-        timeout: '10s',
-      });
-      if (progRes.status === 200) {
-        try {
-          const body = JSON.parse(progRes.body);
-          if (body.progress?.revision != null) {
-            revision = body.progress.revision;
+    const batchRes = http.batch(batchRequests);
+
+    for (let j = 0; j < batchRes.length; j++) {
+      const i = batch + j;
+      const idx = String(i + 1).padStart(3, '0');
+      const email = `loadtest_v3_${idx}@loadtest.local`;
+
+      if (batchRes[j].status === 200) {
+        const cookies = extractCookie(batchRes[j].headers);
+        if (cookies) {
+          let revision = 0;
+          const progRes = http.get(`${BASE_URL}/api/progress`, {
+            headers: authHeaders(cookies),
+            tags: { endpoint: 'progress_get' },
+            timeout: '10s',
+          });
+          if (progRes.status === 200) {
+            try {
+              const body = JSON.parse(progRes.body);
+              if (body.progress?.revision != null) revision = body.progress.revision;
+            } catch {}
           }
-        } catch {}
+          accounts[i] = { email, cookies, revision };
+        }
       }
-      accounts.push({ email, cookies, revision });
     }
 
-    if (i % 10 === 9) {
-      sleep(1);
-    }
+    sleep(0.2);
   }
 
-  return { accounts };
+  if (accounts.filter(Boolean).length < ACCOUNT_COUNT) {
+    const missing = [];
+    for (let i = 0; i < ACCOUNT_COUNT; i++) {
+      if (!accounts[i]) {
+        const idx = String(i + 1).padStart(3, '0');
+        missing.push(`loadtest_v3_${idx}@loadtest.local`);
+      }
+    }
+    console.error(`FATAL: ${missing.length} accounts not found in D1. Run prepare-accounts.mjs first.`);
+    console.error('Missing:', missing.slice(0, 10).join(', '), missing.length > 10 ? '...' : '');
+  }
+
+  return { accounts: accounts.filter(Boolean) };
 }
 
 export default function (data) {
