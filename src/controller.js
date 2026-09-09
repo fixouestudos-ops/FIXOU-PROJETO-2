@@ -21,7 +21,7 @@ const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null;
-const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null};
+const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0};
 const GUEST_LOCKED=['home','errors'];
 let guestModalTrigger=null;
 function isGuest(){return !account.user && !account.loading;}
@@ -209,13 +209,15 @@ function handleAction(action,id,element){
  if(action==='go-train'){go('train');return;}
  if(action==='go-home'){go('home');return;}
  if(action==='go-errors'){go('errors');return;}
- if(action==='review-filter'){ui.reviewFilter=id;ui.reviewIndex=0;render();return;}
+ if(action==='review-filter'){ui.reviewFilter=element?.dataset?.filter||id;ui.reviewIndex=0;render();return;}
  if(action==='review-prev'){ui.reviewIndex=Math.max(0,(ui.reviewIndex||0)-1);render();return;}
  if(action==='review-next'){ui.reviewIndex=(ui.reviewIndex||0)+1;render();return;}
  if(action==='review-approve'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='approved';q.imageClassification='image_required';saveProgress();render();toast('Imagem aprovada.');}return;}
  if(action==='review-crop'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='needs_manual_crop';saveProgress();render();toast('Marcada para recorte manual.');}return;}
  if(action==='review-no-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='no_image_confirmed';q.imageClassification='no_image_required';q.imageReason='Confirmado como sem imagem pelo admin';saveProgress();render();toast('Confirmada como sem imagem.');}return;}
  if(action==='review-mark'){const q=BANK.questions.find(x=>x.id===id);if(q){q.needsReview=true;q.contentStatus='needs_content_review';saveProgress();render();toast('Marcada para revisão de conteúdo.');}return;}
+ if(action==='review-confirm-no-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='no_image_confirmed';q.imageClassification='no_image_required';q.imageReason='Confirmado manualmente como sem imagem';saveProgress();render();toast('Confirmada como sem imagem.');}return;}
+ if(action==='review-mark-needs-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='needs_manual_crop';q.imageClassification='image_required';q.imageReason='Reclassificada como necessitando de imagem pelo admin';saveProgress();render();toast('Reclassificada como precisa de imagem.');}return;}
  if(action==='review-copy-id'){navigator.clipboard.writeText(id).then(()=>toast('ID copiado.')).catch(()=>toast('Erro ao copiar.'));return;}
  if(action==='review-copy-codex'){const q=BANK.questions.find(x=>x.id===id);if(q){const cmd=`Vou anexar manualmente o crop correto desta questão.\nquestionId: ${q.id}\nsourceBook: ${q.sourceBook||''}\nsourcePage: ${q.sourcePage||''}\nsourceQuestionNumber: ${q.questionNumber||''}\nUse exclusivamente a imagem anexada como asset final desta questão.\nPreserve texto, alternativas e gabarito.\nSubstitua somente a imagem.\nMarque imageStatus = approved_manual.`;navigator.clipboard.writeText(cmd).then(()=>toast('Comando Copiado.')).catch(()=>toast('Erro ao copiar.'));}return;}
  if(action==='cards-home'){flash=null;go('cards');return;}
@@ -233,7 +235,7 @@ document.addEventListener('click',event=>{
  if(modalElement.open && event.target===modalElement){closeGuestModal();return;}
  const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
-document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}});
+document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}});
 document.addEventListener('change',event=>{
  const el=event.target;
  if(el.dataset.adminStatus){api(`/api/admin/${el.dataset.adminStatus}/${el.dataset.id}`,{method:'PATCH',body:JSON.stringify({status:el.value})}).then(()=>{toast('Status atualizado e auditado.');return api('/api/admin/overview?days='+ui.adminPeriod);}).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}

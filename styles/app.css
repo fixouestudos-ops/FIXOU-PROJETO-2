@@ -209,6 +209,13 @@
 .review-btn-mark:hover{background:#94a2b220;border-color:#94a2b2}
 .review-btn-copy,.review-btn-codex{border-color:var(--border);color:var(--muted)}
 .review-btn-copy:hover,.review-btn-codex:hover{border-color:var(--purple);color:var(--purple)}
+.review-btn-pdf{border-color:#60a5fa40;color:#60a5fa;text-decoration:none;display:inline-flex;align-items:center}
+.review-btn-pdf:hover{background:#60a5fa20;border-color:#60a5fa;color:#60a5fa}
+.review-btn-confirm{border-color:#3cc88d40;color:#3cc88d}
+.review-btn-confirm:hover{background:#3cc88d20;border-color:#3cc88d}
+.review-btn-mark-image{border-color:#e66a7440;color:#e66a74}
+.review-btn-mark-image:hover{background:#e66a7420;border-color:#e66a74}
+.review-btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
 .review-empty{text-align:center;padding:60px 24px;color:var(--muted);font-size:.95rem}
 .review-stats{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;padding:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
 .review-stat{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:80px}
