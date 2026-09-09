@@ -101,6 +101,84 @@
 .ghost:hover{background:#fbe9ed}
 .ghost:disabled{opacity:.5;cursor:default}
 
+/* ===== PREMIUM AUTH — Glassmorphism Dark ===== */
+.auth-premium{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#060d1a}
+.auth-premium-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.auth-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.auth-orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(139,92,246,.35),transparent 70%);top:-15%;left:-10%}
+.auth-orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);bottom:-10%;right:-8%}
+.auth-orb-3{width:350px;height:350px;background:radial-gradient(circle,rgba(14,165,233,.25),transparent 70%);top:50%;left:40%;transform:translate(-50%,-50%)}
+.auth-orb-4{width:250px;height:250px;background:radial-gradient(circle,rgba(168,85,247,.2),transparent 70%);top:20%;right:25%}
+.auth-orb-5{width:200px;height:200px;background:radial-gradient(circle,rgba(59,130,246,.15),transparent 70%);bottom:30%;left:15%}
+.auth-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(139,92,246,.3),rgba(59,130,246,.2),transparent);pointer-events:none}
+.auth-line-1{top:35%;left:0;right:0;transform:rotate(-15deg)}
+.auth-line-2{top:55%;left:0;right:0;transform:rotate(8deg)}
+.auth-line-3{top:75%;left:0;right:0;transform:rotate(-5deg)}
+
+.auth-brand-premium{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:clamp(40px,6vw,100px)}
+.auth-brand-content{max-width:480px}
+.auth-logo{width:180px;height:auto;border-radius:20px;margin-bottom:32px;display:block}
+.auth-brand-tag{display:inline-block;letter-spacing:.25em;color:#8b5cf6;font-size:.7rem;font-weight:800;margin-bottom:20px;padding:6px 14px;border:1px solid rgba(139,92,246,.25);border-radius:20px;background:rgba(139,92,246,.08)}
+.auth-headline{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:#f1f5f9;margin-bottom:20px}
+.auth-subtitle{font-size:1.05rem;color:#94a3b8;line-height:1.7;margin-bottom:36px;max-width:420px}
+.auth-features{display:flex;flex-direction:column;gap:14px}
+.auth-feature{display:flex;align-items:center;gap:12px;color:#cbd5e1;font-size:.9rem}
+.auth-feature-icon{color:#8b5cf6;font-size:.75rem}
+
+.auth-card-premium{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:clamp(32px,5vw,80px)}
+.auth-card-glass{width:100%;max-width:440px;padding:clamp(32px,4vw,48px);background:rgba(15,23,42,.65);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(139,92,246,.15);border-radius:24px;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 60px rgba(139,92,246,.08),inset 0 1px 0 rgba(255,255,255,.05)}
+.auth-card-header{margin-bottom:32px}
+.auth-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.2em;color:#8b5cf6;margin-bottom:12px}
+.auth-card-title{font-size:1.8rem;font-weight:800;letter-spacing:-.8px;color:#f1f5f9;line-height:1.2}
+
+.auth-form-premium{display:grid;gap:20px}
+.auth-field{display:grid;gap:8px}
+.auth-field label{font-size:.8rem;font-weight:600;color:#94a3b8;letter-spacing:.3px}
+.auth-field input{width:100%;padding:14px 16px;border:1px solid rgba(139,92,246,.2);border-radius:12px;background:rgba(15,23,42,.6);color:#f1f5f9;font-size:.92rem;transition:all .2s ease;outline:none}
+.auth-field input::placeholder{color:#475569}
+.auth-field input:hover{border-color:rgba(139,92,246,.35);background:rgba(15,23,42,.7)}
+.auth-field input:focus{border-color:#8b5cf6;background:rgba(15,23,42,.8);box-shadow:0 0 0 3px rgba(139,92,246,.15),0 0 20px rgba(139,92,246,.1)}
+
+.auth-submit-premium{width:100%;padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#6366f1);color:#fff;font-size:.95rem;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:all .2s ease;margin-top:8px;position:relative;overflow:hidden}
+.auth-submit-premium::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#8b5cf6,#818cf8);opacity:0;transition:opacity .2s ease}
+.auth-submit-premium:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(139,92,246,.35)}
+.auth-submit-premium:hover::before{opacity:1}
+.auth-submit-premium:active{transform:translateY(0);box-shadow:0 4px 15px rgba(139,92,246,.25)}
+.auth-submit-premium:focus-visible{outline:3px solid #a78bfa;outline-offset:4px}
+
+.auth-links-premium{display:flex;justify-content:space-between;margin:24px 0 0}
+.auth-link-premium{color:#8b5cf6;font-weight:600;font-size:.85rem;text-decoration:none;transition:color .15s ease}
+.auth-link-premium:hover{color:#a78bfa}
+
+.auth-note-premium{text-align:center;font-size:.78rem;color:#64748b;line-height:1.6;margin-top:24px;padding-top:20px;border-top:1px solid rgba(139,92,246,.1)}
+
+@media(max-width:900px){
+ .auth-premium{grid-template-columns:1fr}
+ .auth-brand-premium{padding:48px 24px 24px;text-align:center}
+ .auth-brand-content{max-width:100%}
+ .auth-logo{margin-left:auto;margin-right:auto}
+ .auth-features{align-items:center}
+ .auth-headline{font-size:2rem}
+ .auth-subtitle{margin-left:auto;margin-right:auto}
+ .auth-card-premium{padding:24px 16px 48px}
+ .auth-card-glass{padding:28px 24px}
+ .auth-links-premium{flex-direction:column;align-items:center;gap:12px}
+}
+
+@media(max-width:480px){
+ .auth-brand-premium{padding:36px 20px 16px}
+ .auth-logo{width:140px}
+ .auth-brand-tag{font-size:.6rem;padding:5px 12px}
+ .auth-headline{font-size:1.6rem;letter-spacing:-.8px}
+ .auth-subtitle{font-size:.9rem}
+ .auth-feature{font-size:.8rem}
+ .auth-card-premium{padding:16px 12px 40px}
+ .auth-card-glass{padding:24px 20px;border-radius:20px}
+ .auth-card-title{font-size:1.5rem}
+ .auth-field input{padding:12px 14px;font-size:.88rem}
+ .auth-submit-premium{padding:14px;font-size:.9rem}
+}
+
 /* ===== ABOUT / QUEM SOMOS — Premium Dark Redesign ===== */
 .ab-page{position:relative;overflow:hidden;background:#060d1a;color:#e2e8f0}
 .ab-bg-glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.35;pointer-events:none}
@@ -343,7 +421,7 @@ const ACCOUNT_CONFIG={maxAvatarBytes:5*1024*1024,allowedMimeTypes:['image/jpeg',
 async function api(path,options={}){const raw=options.body instanceof ArrayBuffer;const response=await fetch(path,{credentials:'same-origin',...options,headers:raw?options.headers:{'content-type':'application/json',...(options.headers||{})}});let data={};try{data=await response.json();}catch{}if(!response.ok){const error=new Error(data.error||'Não foi possível concluir esta operação.');error.status=response.status;error.code=data.code||null;throw error;}return data;}
 const initials=name=>String(name||'Aluno').trim().split(/\s+/).slice(0,2).map(x=>x[0]?.toUpperCase()).join('');
 function avatar(user,size=''){return AVATAR_FEATURE_ENABLED&&user?.hasAvatar?`<img class="avatar ${size}" src="/api/avatar?v=${user.avatarVersion||0}" alt="Foto de perfil">`:`<span class="avatar ${size}">${escapeHTML(initials(user?.name))}</span>`;}
-function authScreen(mode='login',token=''){const register=mode==='register',forgot=mode==='forgot',reset=mode==='reset';return `<div class="auth-shell"><section class="auth-brand"><img src="assets/fixou-logo.png" alt="FIXOU — Conhecimento que fica"><span>ESTUDO QUE FICA</span><h1>Seu aprendizado continua de onde você parou.</h1><p>Treinos, revisões, domínio e conquistas salvos com segurança na sua conta.</p></section><section class="auth-card"><div class="eyebrow">${register?'CRIAR CONTA':forgot||reset?'RECUPERAR ACESSO':'BEM-VINDO DE VOLTA'}</div><h2>${register?'Comece sua jornada':forgot?'Redefina sua senha':reset?'Escolha uma nova senha':'Entre no FIXOU'}</h2><form id="${reset?'reset-form':forgot?'forgot-form':register?'register-form':'login-form'}" class="form-stack">${register?'<label>Nome<input name="name" required minlength="2" maxlength="80" autocomplete="name"></label>':''}${!reset?'<label>E-mail<input name="email" type="email" required maxlength="160" autocomplete="email"></label>':''}${!forgot?'<label>'+(reset?'Nova senha':'Senha')+'<input name="password" type="password" required minlength="8" maxlength="128"></label>':''}${register?'<label>Confirmar senha<input name="confirmPassword" type="password" required minlength="8" maxlength="128"></label>':''}${reset?`<input type="hidden" name="token" value="${escapeHTML(token)}">`:''}<button class="primary" type="submit">${register?'Criar minha conta':forgot?'Enviar instruções':reset?'Salvar nova senha':'Entrar'} →</button></form><div class="auth-links">${register?'<a href="#login">Já tenho uma conta</a>':forgot||reset?'<a href="#login">Voltar ao login</a>':'<a href="#register">Criar conta</a><a href="#forgot">Esqueci minha senha</a>'}</div><p class="note">Ao continuar, seus dados de estudo ficam vinculados à sua conta FIXOU.</p></section></div>`;}
+function authScreen(mode='login',token=''){const register=mode==='register',forgot=mode==='forgot',reset=mode==='reset';return `<div class="auth-premium"><div class="auth-premium-bg"><div class="auth-orb auth-orb-1"></div><div class="auth-orb auth-orb-2"></div><div class="auth-orb auth-orb-3"></div><div class="auth-orb auth-orb-4"></div><div class="auth-orb auth-orb-5"></div><div class="auth-line auth-line-1"></div><div class="auth-line auth-line-2"></div><div class="auth-line auth-line-3"></div></div><section class="auth-brand-premium"><div class="auth-brand-content"><img src="assets/fixou-logo.png" alt="FIXOU" class="auth-logo"><div class="auth-brand-tag">ESTUDO QUE FICA</div><h1 class="auth-headline">Seu aprendizado continua de onde você parou.</h1><p class="auth-subtitle">Treinos, revisões, domínio e conquistas salvos com segurança na sua conta.</p><div class="auth-features"><div class="auth-feature"><span class="auth-feature-icon">✦</span><span>3.334 questões de Física</span></div><div class="auth-feature"><span class="auth-feature-icon">✦</span><span>Revisão espaçada inteligente</span></div><div class="auth-feature"><span class="auth-feature-icon">✦</span><span>Acompanhamento de desempenho</span></div></div></div></section><section class="auth-card-premium"><div class="auth-card-glass"><div class="auth-card-header"><div class="auth-eyebrow">${register?'CRIAR CONTA':forgot||reset?'RECUPERAR ACESSO':'BEM-VINDO DE VOLTA'}</div><h2 class="auth-card-title">${register?'Comece sua jornada':forgot?'Redefina sua senha':reset?'Escolha uma nova senha':'Entre no FIXOU'}</h2></div><form id="${reset?'reset-form':forgot?'forgot-form':register?'register-form':'login-form'}" class="auth-form-premium">${register?'<div class="auth-field"><label for="auth-name">Nome</label><input id="auth-name" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Seu nome completo"></div>':''}${!reset?'<div class="auth-field"><label for="auth-email">E-mail</label><input id="auth-email" name="email" type="email" required maxlength="160" autocomplete="email" placeholder="seu@email.com"></div>':''}${!forgot?'<div class="auth-field"><label for="auth-password">'+(reset?'Nova senha':'Senha')+'</label><input id="auth-password" name="password" type="password" required minlength="8" maxlength="128" placeholder="Mínimo 8 caracteres"></div>':''}${register?'<div class="auth-field"><label for="auth-confirm">Confirmar senha</label><input id="auth-confirm" name="confirmPassword" type="password" required minlength="8" maxlength="128" placeholder="Repita a senha"></div>':''}${reset?`<input type="hidden" name="token" value="${escapeHTML(token)}">`:''}<button class="auth-submit-premium" type="submit">${register?'Criar minha conta':forgot?'Enviar instruções':reset?'Salvar nova senha':'Entrar'}</button></form><div class="auth-links-premium">${register?'<a href="#login" class="auth-link-premium">Já tenho uma conta</a>':forgot||reset?'<a href="#login" class="auth-link-premium">Voltar ao login</a>':'<a href="#register" class="auth-link-premium">Criar conta</a><a href="#forgot" class="auth-link-premium">Esqueci minha senha</a>'}</div><p class="auth-note-premium">Ao continuar, seus dados de estudo ficam vinculados à sua conta FIXOU.</p></div></section></div>`;}
 const metric=(label,value,note='')=>`<article class="admin-metric"><span>${label}</span><strong>${typeof value==='number'?formatNumber(value):escapeHTML(value||'0')}</strong><small>${note}</small></article>`;
 const MONTH_SHORT=['jan.','fev.','mar.','abr.','mai.','jun.','jul.','ago.','set.','out.','nov.','dez.'];
 function chartDayLabel(dateStr){const parts=String(dateStr||'').split('-').map(Number);const m=parts[1],d=parts[2];if(!m||!d)return '';return `${String(d).padStart(2,'0')} ${MONTH_SHORT[m-1]||''}`;}
