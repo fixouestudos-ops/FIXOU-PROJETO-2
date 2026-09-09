@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
 import {execFileSync} from 'node:child_process';
@@ -23,9 +24,12 @@ for(const file of files){
 }
 const code=files.map(f=>read(f).replace(/^import\s+.*?;\s*$/gm,'').replace(/^export\s+/gm,'')).join('\n');
 const bundle=`(()=>{'use strict';\n${code}\n})();`;new vm.Script(bundle,{filename:'fuvest-mastery.js'});
-const css=read('styles/app.css');const html=read('index.html').replace('<link rel="stylesheet" href="styles/app.css">',()=>`<style>${css}</style>`).replace('<script type="module" src="src/main.js"></script>',()=>`<script>${bundle.replace(/<\/script/gi,'<\\/script')}</script>`);
+const bundleHash=crypto.createHash('md5').update(bundle).digest('hex').slice(0,8);
+const jsFilename=`app.${bundleHash}.js`;
+const css=read('styles/app.css');const html=read('index.html').replace('<link rel="stylesheet" href="styles/app.css">',()=>`<style>${css}</style>`).replace('<script type="module" src="src/main.js"></script>',()=>`<script src="assets/${jsFilename}"></script>`);
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join(root,'dist/index.html'),html);
-fs.mkdirSync(path.join(root,'dist/assets'),{recursive:true});fs.copyFileSync(path.join(root,'assets/fixou-logo.png'),path.join(root,'dist/assets/fixou-logo.png'));
+fs.mkdirSync(path.join(root,'dist/assets'),{recursive:true});fs.writeFileSync(path.join(root,`dist/assets/${jsFilename}`),bundle);
+fs.copyFileSync(path.join(root,'assets/fixou-logo.png'),path.join(root,'dist/assets/fixou-logo.png'));
 if(fs.existsSync(path.join(root,'assets/question-images'))){
  fs.mkdirSync(path.join(root,'dist/assets/question-images'),{recursive:true});
  for(const file of fs.readdirSync(path.join(root,'assets/question-images'))){
@@ -33,5 +37,7 @@ if(fs.existsSync(path.join(root,'assets/question-images'))){
  }
 }
 fs.mkdirSync(path.join(root,'dist/server'),{recursive:true});const logoBase64=fs.readFileSync(path.join(root,'assets/fixou-logo.png')).toString('base64');const worker=read('server/index.mjs').replace("'__FIXOU_INDEX_HTML__'",JSON.stringify(html)).replace("'__FIXOU_LOGO_BASE64__'",JSON.stringify(logoBase64));fs.writeFileSync(path.join(root,'dist/server/index.js'),worker);
-console.log('Build OK · '+bank.questions.length+' questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares · '+Math.round(Buffer.byteLength(html)/1024)+' KB');
+const htmlSize=Buffer.byteLength(html),jsSize=Buffer.byteLength(bundle);
+console.log('Build OK · '+bank.questions.length+' questões · '+bank.concepts.length+' conceitos · '+curriculum.objects.length+' registros curriculares');
+console.log('HTML: '+(htmlSize/1024).toFixed(1)+' KB · JS externo: '+(jsSize/1024/1024).toFixed(2)+' MB · hash: '+bundleHash);
 

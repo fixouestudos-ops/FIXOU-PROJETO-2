@@ -107,11 +107,14 @@ test('owner perde acesso ao painel administrativo após o logout',async()=>{
 
 test('bundle traz menu de conta na sidebar e Sair nas Configurações',()=>{
  const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
- assert.match(html,/data-action="profile-settings"/);
- assert.match(html,/nav-logout/);
- assert.match(html,/data-action="logout"/);
- assert.match(html,/Sair da conta/);
- assert.match(html,/performLogout/);
- assert.match(html,/\/api\/auth\/logout/);
- assert.match(html,/Saindo…/);
+ const scriptTag=html.match(/<script src="assets\/([^"]+)"><\/script>/);
+ assert.ok(scriptTag,'script tag com src não encontrado');
+ const js=fs.readFileSync(new URL('../dist/assets/'+scriptTag[1],import.meta.url),'utf8');
+ assert.match(js,/data-action="profile-settings"/);
+ assert.match(js,/nav-logout/);
+ assert.match(js,/data-action="logout"/);
+ assert.match(js,/Sair da conta/);
+ assert.match(js,/performLogout/);
+ assert.match(js,/\/api\/auth\/logout/);
+ assert.match(js,/Saindo…/);
 });
