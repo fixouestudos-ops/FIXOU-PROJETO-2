@@ -220,6 +220,7 @@ function handleAction(action,id,element){
  if(action==='review-mark-needs-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='needs_manual_crop';q.imageClassification='image_required';q.imageReason='Reclassificada como necessitando de imagem pelo admin';saveProgress();render();toast('Reclassificada como precisa de imagem.');}return;}
  if(action==='review-copy-id'){navigator.clipboard.writeText(id).then(()=>toast('ID copiado.')).catch(()=>toast('Erro ao copiar.'));return;}
  if(action==='review-copy-codex'){const q=BANK.questions.find(x=>x.id===id);if(q){const cmd=`Vou anexar manualmente o crop correto desta questão.\nquestionId: ${q.id}\nsourceBook: ${q.sourceBook||''}\nsourcePage: ${q.sourcePage||''}\nsourceQuestionNumber: ${q.questionNumber||''}\nUse exclusivamente a imagem anexada como asset final desta questão.\nPreserve texto, alternativas e gabarito.\nSubstitua somente a imagem.\nMarque imageStatus = approved_manual.`;navigator.clipboard.writeText(cmd).then(()=>toast('Comando Copiado.')).catch(()=>toast('Erro ao copiar.'));}return;}
+ if(action==='review-copy-page'){const page=event.target?.dataset?.page||'';navigator.clipboard.writeText(page).then(()=>toast('Página copiada: '+page)).catch(()=>toast('Erro ao copiar.'));return;}
  if(action==='cards-home'){flash=null;go('cards');return;}
  if(action==='start-cards'){startCards(id);return;}
  if(action==='card'){closeModal();startCards('one',id);return;}

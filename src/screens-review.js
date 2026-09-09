@@ -24,12 +24,18 @@ const CONTENT_STATUSES={
  needs_content_review:{label:'Revisão de conteúdo',color:'#e66a74'}
 };
 
-const SOURCE_BOOK_PDFS={
- L1:'fisica-l1.pdf',
- L2:'fisica-l2.pdf',
- L3:'fisica-l3.pdf',
- L4:'fisica-l4.pdf'
+const SOURCE_BOOK_DRIVE={
+ L1:'1QSvRDEnftpASkXpUKwDvGdJ2VBRLon2l',
+ L2:'1zmb7INyQXBWENZBEOJ9t5mBlgw1upbXZ',
+ L3:'1KJBD1Ip2zXqRWt1ieqfDkEoHsHtGyphM',
+ L4:'1mudd-ye9UiCsTPW_Ihx3M_-l1bMDYn4t'
 };
+
+function driveUrl(volume,page){
+ const id=SOURCE_BOOK_DRIVE[volume];
+ if(!id)return null;
+ return `https://drive.google.com/file/d/${id}/view`;
+}
 
 function filterQuestions(questions,filter){
  if(filter==='all')return questions;
@@ -73,11 +79,13 @@ function reviewQuestionCard(q,index,total){
  const isReview=q.imageClassification==='needs_visual_review';
 
  let actions='';
+ const pdfUrl=validSource?driveUrl(q.sourceVolume,q.sourcePage):null;
  if(isNoImage){
   actions=`
    <button class="review-btn review-btn-confirm" data-action="review-confirm-no-image" data-id="${escapeHTML(q.id)}">Confirmar sem imagem</button>
    <button class="review-btn review-btn-mark-image" data-action="review-mark-needs-image" data-id="${escapeHTML(q.id)}">Esta questão precisa de imagem</button>
-   ${validSource?`<a class="review-btn review-btn-pdf" href="assets/source-books/${SOURCE_BOOK_PDFS[q.sourceVolume]||''}#page=${q.sourcePage}" target="_blank" rel="noopener noreferrer">Abrir PDF na página ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${validSource?`<button class="review-btn review-btn-copy" data-action="review-copy-page" data-page="${q.sourcePage}">Copiar página</button>`:''}
    <button class="review-btn review-btn-mark" data-action="review-mark" data-id="${escapeHTML(q.id)}">Marcar para revisão</button>
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }else if(isImageReq){
@@ -85,13 +93,15 @@ function reviewQuestionCard(q,index,total){
    <button class="review-btn review-btn-approve" data-action="review-approve" data-id="${escapeHTML(q.id)}">Aprovar imagem</button>
    <button class="review-btn review-btn-crop" data-action="review-crop" data-id="${escapeHTML(q.id)}">Preciso recortar</button>
    <button class="review-btn review-btn-no-image" data-action="review-no-image" data-id="${escapeHTML(q.id)}">Não precisa de imagem</button>
-   ${validSource?`<a class="review-btn review-btn-pdf" href="assets/source-books/${SOURCE_BOOK_PDFS[q.sourceVolume]||''}#page=${q.sourcePage}" target="_blank" rel="noopener noreferrer">Abrir PDF na página ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${validSource?`<button class="review-btn review-btn-copy" data-action="review-copy-page" data-page="${q.sourcePage}">Copiar página</button>`:''}
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>
    <button class="review-btn review-btn-codex" data-action="review-copy-codex" data-id="${escapeHTML(q.id)}">Copiar comando Codex</button>`;
  }else{
   actions=`
    <button class="review-btn review-btn-mark" data-action="review-mark" data-id="${escapeHTML(q.id)}">Marcar para revisão</button>
-   ${validSource?`<a class="review-btn review-btn-pdf" href="assets/source-books/${SOURCE_BOOK_PDFS[q.sourceVolume]||''}#page=${q.sourcePage}" target="_blank" rel="noopener noreferrer">Abrir PDF na página ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
+   ${validSource?`<button class="review-btn review-btn-copy" data-action="review-copy-page" data-page="${q.sourcePage}">Copiar página</button>`:''}
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }
 
