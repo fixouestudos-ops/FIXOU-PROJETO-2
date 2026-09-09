@@ -303,6 +303,28 @@
 .review-btn-mark-image{border-color:#e66a7440;color:#e66a74}
 .review-btn-mark-image:hover{background:#e66a7420;border-color:#e66a74}
 .review-btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
+.review-btn-edit{border-color:#78b4e540;color:#78b4e5}
+.review-btn-edit:hover{background:#78b4e520;border-color:#78b4e5}
+.review-btn-save{border-color:#3cc88d40;color:#3cc88d;font-weight:700}
+.review-btn-save:hover{background:#3cc88d20;border-color:#3cc88d}
+.review-btn-save-next{border-color:#60a5fa40;color:#60a5fa;font-weight:700}
+.review-btn-save-next:hover{background:#60a5fa20;border-color:#60a5fa}
+.review-btn-cancel{border-color:#94a2b240;color:#94a2b2}
+.review-btn-cancel:hover{background:#94a2b220;border-color:#94a2b2}
+.review-btn-approve-content{border-color:#3cc88d40;color:#3cc88d;font-weight:700}
+.review-btn-approve-content:hover{background:#3cc88d20;border-color:#3cc88d}
+.review-card-editing{border-color:#78b4e540;box-shadow:0 0 0 2px rgba(120,180,229,.12)}
+.review-edit-label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.review-edit-textarea{width:100%;min-height:180px;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:.88rem;line-height:1.7;resize:vertical;transition:border-color .15s}
+.review-edit-textarea:focus{outline:2px solid var(--purple);outline-offset:2px;border-color:var(--purple)}
+.review-edit-input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--ink);font-size:.88rem;transition:border-color .15s}
+.review-edit-input:focus{outline:2px solid var(--purple);outline-offset:2px;border-color:var(--purple)}
+.review-card-prompt-edit,.review-card-answer-edit{margin-bottom:16px}
+.review-edit-options{display:grid;gap:8px}
+.review-edit-radio{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--ink);cursor:pointer;transition:border-color .15s}
+.review-edit-radio:hover{border-color:var(--purple)}
+.review-edit-radio:has(input:checked){border-color:var(--purple);background:var(--purple-soft)}
+.review-edit-radio input{accent-color:var(--purple);width:16px;height:16px;margin:0}
 .review-empty{text-align:center;padding:60px 24px;color:var(--muted);font-size:.95rem}
 .review-stats{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;padding:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
 .review-stat{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:80px}
@@ -1028,24 +1050,58 @@ function hasValidSource(q){
  return !!(q.sourceVolume&&q.sourcePage);
 }
 
-function reviewQuestionCard(q,index,total){
+function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  const ic=IMAGE_CLASSIFICATIONS[q.imageClassification]||IMAGE_CLASSIFICATIONS.no_image_required;
  const is=IMAGE_STATUSES[q.imageStatus]||IMAGE_STATUSES.no_image_required;
  const cs=CONTENT_STATUSES[q.contentStatus]||CONTENT_STATUSES.pending;
  const hasImage=q.imageAssets&&q.imageAssets.length>0;
  const hasDiagram=!!q.diagram;
- const promptPreview=q.prompt&&q.prompt.length>300?q.prompt.slice(0,300)+'…':q.prompt||'';
+ const isEditing=editingQuestion===q.id;
+ const promptText=isEditing?(editingFields.prompt||''):(q.prompt||'');
+ const promptPreview=!isEditing&&q.prompt&&q.prompt.length>300?q.prompt.slice(0,300)+'…':q.prompt||'';
  const optionsHtml=(q.options||[]).map((o,i)=>`<div class="review-option${i===q.answer?' correct':''}"><span class="review-option-letter">${' ABCDE'[i]}</span><span>${escapeHTML(o)}</span></div>`).join('');
  const src=sourceLabel(q);
  const validSource=hasValidSource(q);
  const isNoImage=q.imageClassification==='no_image_required';
  const isImageReq=q.imageClassification==='image_required'||q.imageClassification==='needs_visual_review'||q.imageClassification==='bad_image_association';
  const isReview=q.imageClassification==='needs_visual_review';
+ const hasOptions=q.options&&q.options.length>0;
+ const currentAnswer=isEditing?(editingFields.answer||''):(q.answer!=null?String(q.answer):'?');
+ const answerLabel=hasOptions&&currentAnswer!=='?'&&currentAnswer!==''?(' ABCDE'[Number(currentAnswer)]||currentAnswer):currentAnswer;
+
+ let promptSection='';
+ if(isEditing){
+  promptSection=`<div class="review-card-prompt-edit"><label class="review-edit-label">Enunciado</label><textarea class="review-edit-textarea" data-action="review-edit-prompt" rows="12">${escapeHTML(promptText)}</textarea></div>`;
+ }else{
+  promptSection=`<div class="review-card-prompt">${escapeHTML(promptPreview)}</div>`;
+ }
+
+ let answerSection='';
+ if(isEditing){
+  if(hasOptions){
+   const radioHtml=(q.options||[]).map((o,i)=>{
+    const letter=' ABCDE'[i];
+    const checked=String(i)===currentAnswer||letter===currentAnswer.toUpperCase()?'checked':'';
+    return `<label class="review-edit-radio"><input type="radio" name="review-answer-${q.id}" value="${i}" data-action="review-edit-answer" ${checked}> ${letter}) ${escapeHTML(o)}</label>`;
+   }).join('');
+   answerSection=`<div class="review-card-answer-edit"><label class="review-edit-label">Gabarito</label><div class="review-edit-options">${radioHtml}</div></div>`;
+  }else{
+   answerSection=`<div class="review-card-answer-edit"><label class="review-edit-label">Gabarito</label><input class="review-edit-input" type="text" data-action="review-edit-answer" value="${escapeHTML(currentAnswer)}" placeholder="Ex: 250 s"></div>`;
+  }
+ }else{
+  answerSection=`<div class="review-card-answer"><strong>Gabarito:</strong> ${hasOptions?(answerLabel):escapeHTML(currentAnswer)}</div>`;
+ }
 
  let actions='';
  const pdfUrl=validSource?driveUrl(q.sourceVolume,q.sourcePage):null;
- if(isNoImage){
+ if(isEditing){
   actions=`
+   <button class="review-btn review-btn-save" data-action="review-save" data-id="${escapeHTML(q.id)}">Salvar alterações</button>
+   <button class="review-btn review-btn-save-next" data-action="review-save-next" data-id="${escapeHTML(q.id)}">Salvar e próxima →</button>
+   <button class="review-btn review-btn-cancel" data-action="review-cancel-edit" data-id="${escapeHTML(q.id)}">Cancelar</button>`;
+ }else if(isNoImage){
+  actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-confirm" data-action="review-confirm-no-image" data-id="${escapeHTML(q.id)}">Confirmar sem imagem</button>
    <button class="review-btn review-btn-mark-image" data-action="review-mark-needs-image" data-id="${escapeHTML(q.id)}">Esta questão precisa de imagem</button>
    ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
@@ -1054,6 +1110,7 @@ function reviewQuestionCard(q,index,total){
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }else if(isImageReq){
   actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-approve" data-action="review-approve" data-id="${escapeHTML(q.id)}">Aprovar imagem</button>
    <button class="review-btn review-btn-crop" data-action="review-crop" data-id="${escapeHTML(q.id)}">Preciso recortar</button>
    <button class="review-btn review-btn-no-image" data-action="review-no-image" data-id="${escapeHTML(q.id)}">Não precisa de imagem</button>
@@ -1063,13 +1120,16 @@ function reviewQuestionCard(q,index,total){
    <button class="review-btn review-btn-codex" data-action="review-copy-codex" data-id="${escapeHTML(q.id)}">Copiar comando Codex</button>`;
  }else{
   actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-mark" data-action="review-mark" data-id="${escapeHTML(q.id)}">Marcar para revisão</button>
    ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
    ${validSource?`<button class="review-btn review-btn-copy" data-action="review-copy-page" data-page="${q.sourcePage}">Copiar página</button>`:''}
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }
 
- return `<div class="review-card" data-question-id="${escapeHTML(q.id)}">
+ const approveContentBtn=!isEditing?`<button class="review-btn review-btn-approve-content" data-action="review-approve-content" data-id="${escapeHTML(q.id)}">✓ Aprovar conteúdo</button>`:'';
+
+ return `<div class="review-card${isEditing?' review-card-editing':''}" data-question-id="${escapeHTML(q.id)}">
   <div class="review-card-header">
    <span class="review-badge" style="background:${ic.color}20;color:${ic.color}">${ic.label}</span>
    <span class="review-badge" style="background:${is.color}20;color:${is.color}">${is.label}</span>
@@ -1084,16 +1144,16 @@ function reviewQuestionCard(q,index,total){
    ${src?`<span><strong>Fonte:</strong> ${escapeHTML(src)}</span>`:''}
   </div>
   <div class="review-card-reason"><strong>Motivo:</strong> ${escapeHTML(q.imageReason||'—')}</div>
-  <div class="review-card-prompt">${escapeHTML(promptPreview)}</div>
+  ${promptSection}
   <div class="review-card-options">${optionsHtml}</div>
-  <div class="review-card-answer"><strong>Gabarito:</strong> ${' ABCDE'[q.answer]||'?'}</div>
+  ${answerSection}
   ${hasImage?`<div class="review-card-image"><img src="${escapeHTML(q.imageAssets[0])}" alt="Imagem da questão" loading="lazy"></div>`:''}
   ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
-  <div class="review-card-actions">${actions}</div>
+  <div class="review-card-actions">${actions}${approveContentBtn}</div>
  </div>`;
 }
 
-function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0}){
+function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
  const questions=bank.questions;
  const filtered=filterQuestions(questions,reviewFilter);
  const searched=searchQuestions(filtered,reviewSearch);
@@ -1129,7 +1189,7 @@ function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0}){
   <span class="review-nav-info">${searched.length>0?`${safeIndex+1} de ${searched.length}`:'Nenhuma questão encontrada'}</span>
   <button class="review-nav-btn" data-action="review-next" ${safeIndex>=searched.length-1?'disabled':''}>Próxima →</button>
  </div>
- ${current?reviewQuestionCard(current,safeIndex,searched.length):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>'}
+ ${current?reviewQuestionCard(current,safeIndex,searched.length,editingQuestion,editingFields):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>'}
  <div class="review-stats">
   <div class="review-stat"><span class="review-stat-label">Total</span><span class="review-stat-value">${counts.all}</span></div>
   <div class="review-stat"><span class="review-stat-label">Com imagem</span><span class="review-stat-value" style="color:#e66a74">${counts.image_required}</span></div>
@@ -1184,7 +1244,7 @@ function resultScreen({state,bank,session}){
 const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
-let account={loading:true,user:null,progressRevision:0},adminData=null;
+let account={loading:true,user:null,progressRevision:0},adminData=null,questionOverrides={},editingQuestion=null,editingFields={};
 const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0};
 const GUEST_LOCKED=['home','errors'];
 let guestModalTrigger=null;
@@ -1213,7 +1273,9 @@ function saveProgress(){if(storageBlocked)return false;try{persistState(state);q
 async function performLogout(){if(ui.loggingOut)return;ui.loggingOut=true;ui.accountMenuOpen=false;toast('Saindo…');render();saveProgress();clearTimeout(syncTimeout);try{await pushProgress();}catch(error){}try{await api('/api/auth/logout',{method:'POST',body:'{}'});}catch(error){}if(ui.route==='cards')flash=null;ui.loggingOut=false;account={loading:false,user:null,progressRevision:0};adminData=null;if(location.hash==='#login'){render();window.scrollTo(0,0);}else go('login');toast('Você saiu da sua conta. Seus dados continuam salvos.');}
 function track(eventType,metadata={}){if(account.user)api('/api/events',{method:'POST',body:JSON.stringify({eventType,metadata})}).catch(()=>{});}
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
-function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut};}
+async function fetchQuestionOverrides(){if(!account.user||!['owner','admin'].includes(account.user.role))return;try{const r=await api('/api/admin/questions/overrides');questionOverrides=r.overrides||{};applyOverrides();}catch{}}
+function applyOverrides(){for(const q of BANK.questions){const o=questionOverrides[q.id];if(!o)continue;if(o.prompt!==undefined)q._originalPrompt=q._originalPrompt||q.prompt,q.prompt=o.prompt;if(o.answer!==undefined)q._originalAnswer=q._originalAnswer||q.answer,q.answer=o.answer;if(o.options!==undefined){try{q._originalOptions=q._originalOptions||q.options,q.options=JSON.parse(o.options);}catch{}}if(o.explanation!==undefined)q._originalExplanation=q._originalExplanation||q.explanation,q.explanation=o.explanation;}}
+function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut,editingQuestion,editingFields};}
 function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','review','login','register','forgot','reset'].includes(parts[0])?parts[0]:'about';ui.bookId=parts[1]||null;}
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
@@ -1373,9 +1435,9 @@ function handleAction(action,id,element){
  if(action==='go-train'){go('train');return;}
  if(action==='go-home'){go('home');return;}
  if(action==='go-errors'){go('errors');return;}
- if(action==='review-filter'){ui.reviewFilter=element?.dataset?.filter||id;ui.reviewIndex=0;render();return;}
- if(action==='review-prev'){ui.reviewIndex=Math.max(0,(ui.reviewIndex||0)-1);render();return;}
- if(action==='review-next'){ui.reviewIndex=(ui.reviewIndex||0)+1;render();return;}
+ if(action==='review-filter'){if(editingQuestion&&!confirm('Você possui alterações não salvas. Deseja descartar?'))return;editingQuestion=null;editingFields={};ui.reviewFilter=element?.dataset?.filter||id;ui.reviewIndex=0;render();return;}
+ if(action==='review-prev'){if(editingQuestion&&!confirm('Você possui alterações não salvas. Deseja descartar?'))return;editingQuestion=null;editingFields={};ui.reviewIndex=Math.max(0,(ui.reviewIndex||0)-1);render();return;}
+ if(action==='review-next'){if(editingQuestion&&!confirm('Você possui alterações não salvas. Deseja descartar?'))return;editingQuestion=null;editingFields={};ui.reviewIndex=(ui.reviewIndex||0)+1;render();return;}
  if(action==='review-approve'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='approved';q.imageClassification='image_required';saveProgress();render();toast('Imagem aprovada.');}return;}
  if(action==='review-crop'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='needs_manual_crop';saveProgress();render();toast('Marcada para recorte manual.');}return;}
  if(action==='review-no-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='no_image_confirmed';q.imageClassification='no_image_required';q.imageReason='Confirmado como sem imagem pelo admin';saveProgress();render();toast('Confirmada como sem imagem.');}return;}
@@ -1385,6 +1447,11 @@ function handleAction(action,id,element){
  if(action==='review-copy-id'){navigator.clipboard.writeText(id).then(()=>toast('ID copiado.')).catch(()=>toast('Erro ao copiar.'));return;}
  if(action==='review-copy-codex'){const q=BANK.questions.find(x=>x.id===id);if(q){const cmd=`Vou anexar manualmente o crop correto desta questão.\nquestionId: ${q.id}\nsourceBook: ${q.sourceBook||''}\nsourcePage: ${q.sourcePage||''}\nsourceQuestionNumber: ${q.questionNumber||''}\nUse exclusivamente a imagem anexada como asset final desta questão.\nPreserve texto, alternativas e gabarito.\nSubstitua somente a imagem.\nMarque imageStatus = approved_manual.`;navigator.clipboard.writeText(cmd).then(()=>toast('Comando Copiado.')).catch(()=>toast('Erro ao copiar.'));}return;}
  if(action==='review-copy-page'){const page=event.target?.dataset?.page||'';navigator.clipboard.writeText(page).then(()=>toast('Página copiada: '+page)).catch(()=>toast('Erro ao copiar.'));return;}
+ if(action==='review-edit'){const q=BANK.questions.find(x=>x.id===id);if(q){editingQuestion=id;editingFields={prompt:q.prompt||'',answer:q.answer!=null?String(q.answer):''};render();}return;}
+ if(action==='review-cancel-edit'){editingQuestion=null;editingFields={};render();return;}
+ if(action==='review-save'){if(!editingQuestion)return;const q=BANK.questions.find(x=>x.id===editingQuestion);if(!q)return;const updates={};if(editingFields.prompt!==undefined&&editingFields.prompt!==(q._originalPrompt||q.prompt))updates.prompt=editingFields.prompt;if(editingFields.answer!==undefined&&editingFields.answer!==String(q._originalAnswer||q.answer))updates.answer=editingFields.answer;if(Object.keys(updates).length===0){toast('Nenhuma alteração detectada.');return;}api('/api/admin/questions/'+encodeURIComponent(editingQuestion),{method:'PATCH',body:JSON.stringify(updates)}).then(r=>{for(const[k,v]of Object.entries(updates)){q['_original'+k.charAt(0).toUpperCase()+k.slice(1)]=q[k];q[k]=k==='answer'?v:v;}if(!questionOverrides[editingQuestion])questionOverrides[editingQuestion]={};for(const[k,v]of Object.entries(updates))questionOverrides[editingQuestion][k]=v;toast('✓ Alterações salvas.');editingQuestion=null;editingFields={};render();}).catch(e=>{toast('✕ Não foi possível salvar: '+e.message);});return;}
+ if(action==='review-save-next'){if(!editingQuestion)return;const q=BANK.questions.find(x=>x.id===editingQuestion);if(!q)return;const updates={};if(editingFields.prompt!==undefined&&editingFields.prompt!==(q._originalPrompt||q.prompt))updates.prompt=editingFields.prompt;if(editingFields.answer!==undefined&&editingFields.answer!==String(q._originalAnswer||q.answer))updates.answer=editingFields.answer;if(Object.keys(updates).length===0){ui.reviewIndex=(ui.reviewIndex||0)+1;editingQuestion=null;editingFields={};render();return;}api('/api/admin/questions/'+encodeURIComponent(editingQuestion),{method:'PATCH',body:JSON.stringify(updates)}).then(r=>{for(const[k,v]of Object.entries(updates)){q['_original'+k.charAt(0).toUpperCase()+k.slice(1)]=q[k];q[k]=k==='answer'?v:v;}if(!questionOverrides[editingQuestion])questionOverrides[editingQuestion]={};for(const[k,v]of Object.entries(updates))questionOverrides[editingQuestion][k]=v;toast('✓ Alterações salvas.');editingQuestion=null;editingFields={};ui.reviewIndex=(ui.reviewIndex||0)+1;render();}).catch(e=>{toast('✕ Não foi possível salvar: '+e.message);});return;}
+ if(action==='review-approve-content'){const q=BANK.questions.find(x=>x.id===id);if(q){q.contentStatus='validated';q.needsReview=false;saveProgress();render();toast('Conteúdo aprovado.');}return;}
  if(action==='cards-home'){flash=null;go('cards');return;}
  if(action==='start-cards'){startCards(id);return;}
  if(action==='card'){closeModal();startCards('one',id);return;}
@@ -1400,7 +1467,7 @@ document.addEventListener('click',event=>{
  if(modalElement.open && event.target===modalElement){closeGuestModal();return;}
  const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
-document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}});
+document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){if(editingQuestion){event.target.value=ui.reviewSearch;return;}ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}if(event.target.dataset?.action==='review-edit-prompt'){editingFields.prompt=event.target.value;}if(event.target.dataset?.action==='review-edit-answer'){editingFields.answer=event.target.value;}});
 document.addEventListener('change',event=>{
  const el=event.target;
  if(el.dataset.adminStatus){api(`/api/admin/${el.dataset.adminStatus}/${el.dataset.id}`,{method:'PATCH',body:JSON.stringify({status:el.value})}).then(()=>{toast('Status atualizado e auditado.');return api('/api/admin/overview?days='+ui.adminPeriod);}).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}
@@ -1440,14 +1507,14 @@ document.addEventListener('keydown',event=>{
  if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
  if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}
 });
-window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='about')track('about_viewed');if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}render();window.scrollTo(0,0);});
+window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='about')track('about_viewed');if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}if(ui.route==='review'&&account.user&&['owner','admin'].includes(account.user.role)){fetchQuestionOverrides();}render();window.scrollTo(0,0);});
 window.addEventListener('pagehide',()=>saveProgress());
 let resizeTimer=null;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(ui.route==='admin')render();},120);});
 document.addEventListener('visibilitychange',()=>{lastTick=Date.now();if(document.hidden)saveProgress();});
 window.addEventListener('storage',event=>{if(event.key!==SAVE_KEY)return;const latest=loadState();if(!latest.blocked){state=latest.state;session=state.activeSession;render();toast('Progresso atualizado por outra aba.');}});
 setInterval(()=>{const now=Date.now(),dt=clamp((now-lastTick)/1000,0,2);lastTick=now;if(session&&!session.finished){if(session.endsAt&&now>=session.endsAt){complete();if(ui.route!=='quiz')toast('Relâmpago concluído. Seu recorde foi salvo.');return;}const clock=document.querySelector('#lightning-clock');if(clock)clock.textContent=formatTime((session.endsAt-now)/1000);if(ui.route==='quiz'&&!document.hidden&&!modalElement.open&&!session.feedback){session.questionSeconds=(session.questionSeconds||0)+dt;const timer=document.querySelector('#question-time');if(timer)timer.textContent=formatTime(session.questionSeconds)+' pensando';if(Math.floor(session.questionSeconds)%5===0)saveProgress();}}if(flash&&ui.route==='cards'&&!document.hidden&&!modalElement.open)flash.seconds+=dt;},1000);
 setInterval(()=>{if(account.user&&!document.hidden)api('/api/auth/session').catch(()=>{});},ACCOUNT_CONFIG.presenceMinutes*60*1000);
-readRoute();if(session?.endsAt&&Date.now()>=session.endsAt)finishSession(state,session);render();api('/api/auth/session').then(async r=>{account={loading:false,user:r.user,progressRevision:0};if(r.user){state.profile={...state.profile,name:r.user.name,createdAt:state.profile?.createdAt||r.user.createdAt};await hydrateProgress();if(ui.route==='admin'&&['owner','admin'].includes(r.user.role)){const result=await api('/api/admin/overview?days='+ui.adminPeriod);adminData=result.data;}}render();if(loaded.warning)toast(loaded.warning);}).catch(()=>{account={loading:false,user:null};render();});
+readRoute();if(session?.endsAt&&Date.now()>=session.endsAt)finishSession(state,session);render();api('/api/auth/session').then(async r=>{account={loading:false,user:r.user,progressRevision:0};if(r.user){state.profile={...state.profile,name:r.user.name,createdAt:state.profile?.createdAt||r.user.createdAt};await hydrateProgress();if(ui.route==='admin'&&['owner','admin'].includes(r.user.role)){const result=await api('/api/admin/overview?days='+ui.adminPeriod);adminData=result.data;}if(ui.route==='review'&&['owner','admin'].includes(r.user.role)){await fetchQuestionOverrides();}}render();if(loaded.warning)toast(loaded.warning);}).catch(()=>{account={loading:false,user:null};render();});
 
 
 })();</script>

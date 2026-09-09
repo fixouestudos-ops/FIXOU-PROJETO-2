@@ -64,24 +64,58 @@ function hasValidSource(q){
  return !!(q.sourceVolume&&q.sourcePage);
 }
 
-function reviewQuestionCard(q,index,total){
+function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  const ic=IMAGE_CLASSIFICATIONS[q.imageClassification]||IMAGE_CLASSIFICATIONS.no_image_required;
  const is=IMAGE_STATUSES[q.imageStatus]||IMAGE_STATUSES.no_image_required;
  const cs=CONTENT_STATUSES[q.contentStatus]||CONTENT_STATUSES.pending;
  const hasImage=q.imageAssets&&q.imageAssets.length>0;
  const hasDiagram=!!q.diagram;
- const promptPreview=q.prompt&&q.prompt.length>300?q.prompt.slice(0,300)+'…':q.prompt||'';
+ const isEditing=editingQuestion===q.id;
+ const promptText=isEditing?(editingFields.prompt||''):(q.prompt||'');
+ const promptPreview=!isEditing&&q.prompt&&q.prompt.length>300?q.prompt.slice(0,300)+'…':q.prompt||'';
  const optionsHtml=(q.options||[]).map((o,i)=>`<div class="review-option${i===q.answer?' correct':''}"><span class="review-option-letter">${' ABCDE'[i]}</span><span>${escapeHTML(o)}</span></div>`).join('');
  const src=sourceLabel(q);
  const validSource=hasValidSource(q);
  const isNoImage=q.imageClassification==='no_image_required';
  const isImageReq=q.imageClassification==='image_required'||q.imageClassification==='needs_visual_review'||q.imageClassification==='bad_image_association';
  const isReview=q.imageClassification==='needs_visual_review';
+ const hasOptions=q.options&&q.options.length>0;
+ const currentAnswer=isEditing?(editingFields.answer||''):(q.answer!=null?String(q.answer):'?');
+ const answerLabel=hasOptions&&currentAnswer!=='?'&&currentAnswer!==''?(' ABCDE'[Number(currentAnswer)]||currentAnswer):currentAnswer;
+
+ let promptSection='';
+ if(isEditing){
+  promptSection=`<div class="review-card-prompt-edit"><label class="review-edit-label">Enunciado</label><textarea class="review-edit-textarea" data-action="review-edit-prompt" rows="12">${escapeHTML(promptText)}</textarea></div>`;
+ }else{
+  promptSection=`<div class="review-card-prompt">${escapeHTML(promptPreview)}</div>`;
+ }
+
+ let answerSection='';
+ if(isEditing){
+  if(hasOptions){
+   const radioHtml=(q.options||[]).map((o,i)=>{
+    const letter=' ABCDE'[i];
+    const checked=String(i)===currentAnswer||letter===currentAnswer.toUpperCase()?'checked':'';
+    return `<label class="review-edit-radio"><input type="radio" name="review-answer-${q.id}" value="${i}" data-action="review-edit-answer" ${checked}> ${letter}) ${escapeHTML(o)}</label>`;
+   }).join('');
+   answerSection=`<div class="review-card-answer-edit"><label class="review-edit-label">Gabarito</label><div class="review-edit-options">${radioHtml}</div></div>`;
+  }else{
+   answerSection=`<div class="review-card-answer-edit"><label class="review-edit-label">Gabarito</label><input class="review-edit-input" type="text" data-action="review-edit-answer" value="${escapeHTML(currentAnswer)}" placeholder="Ex: 250 s"></div>`;
+  }
+ }else{
+  answerSection=`<div class="review-card-answer"><strong>Gabarito:</strong> ${hasOptions?(answerLabel):escapeHTML(currentAnswer)}</div>`;
+ }
 
  let actions='';
  const pdfUrl=validSource?driveUrl(q.sourceVolume,q.sourcePage):null;
- if(isNoImage){
+ if(isEditing){
   actions=`
+   <button class="review-btn review-btn-save" data-action="review-save" data-id="${escapeHTML(q.id)}">Salvar alterações</button>
+   <button class="review-btn review-btn-save-next" data-action="review-save-next" data-id="${escapeHTML(q.id)}">Salvar e próxima →</button>
+   <button class="review-btn review-btn-cancel" data-action="review-cancel-edit" data-id="${escapeHTML(q.id)}">Cancelar</button>`;
+ }else if(isNoImage){
+  actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-confirm" data-action="review-confirm-no-image" data-id="${escapeHTML(q.id)}">Confirmar sem imagem</button>
    <button class="review-btn review-btn-mark-image" data-action="review-mark-needs-image" data-id="${escapeHTML(q.id)}">Esta questão precisa de imagem</button>
    ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
@@ -90,6 +124,7 @@ function reviewQuestionCard(q,index,total){
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }else if(isImageReq){
   actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-approve" data-action="review-approve" data-id="${escapeHTML(q.id)}">Aprovar imagem</button>
    <button class="review-btn review-btn-crop" data-action="review-crop" data-id="${escapeHTML(q.id)}">Preciso recortar</button>
    <button class="review-btn review-btn-no-image" data-action="review-no-image" data-id="${escapeHTML(q.id)}">Não precisa de imagem</button>
@@ -99,13 +134,16 @@ function reviewQuestionCard(q,index,total){
    <button class="review-btn review-btn-codex" data-action="review-copy-codex" data-id="${escapeHTML(q.id)}">Copiar comando Codex</button>`;
  }else{
   actions=`
+   <button class="review-btn review-btn-edit" data-action="review-edit" data-id="${escapeHTML(q.id)}">Editar conteúdo</button>
    <button class="review-btn review-btn-mark" data-action="review-mark" data-id="${escapeHTML(q.id)}">Marcar para revisão</button>
    ${pdfUrl?`<a class="review-btn review-btn-pdf" href="${pdfUrl}" target="_blank" rel="noopener noreferrer">Abrir PDF original ↗</a>`:'<button class="review-btn review-btn-pdf disabled" disabled>Fonte não localizada</button>'}
    ${validSource?`<button class="review-btn review-btn-copy" data-action="review-copy-page" data-page="${q.sourcePage}">Copiar página</button>`:''}
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }
 
- return `<div class="review-card" data-question-id="${escapeHTML(q.id)}">
+ const approveContentBtn=!isEditing?`<button class="review-btn review-btn-approve-content" data-action="review-approve-content" data-id="${escapeHTML(q.id)}">✓ Aprovar conteúdo</button>`:'';
+
+ return `<div class="review-card${isEditing?' review-card-editing':''}" data-question-id="${escapeHTML(q.id)}">
   <div class="review-card-header">
    <span class="review-badge" style="background:${ic.color}20;color:${ic.color}">${ic.label}</span>
    <span class="review-badge" style="background:${is.color}20;color:${is.color}">${is.label}</span>
@@ -120,16 +158,16 @@ function reviewQuestionCard(q,index,total){
    ${src?`<span><strong>Fonte:</strong> ${escapeHTML(src)}</span>`:''}
   </div>
   <div class="review-card-reason"><strong>Motivo:</strong> ${escapeHTML(q.imageReason||'—')}</div>
-  <div class="review-card-prompt">${escapeHTML(promptPreview)}</div>
+  ${promptSection}
   <div class="review-card-options">${optionsHtml}</div>
-  <div class="review-card-answer"><strong>Gabarito:</strong> ${' ABCDE'[q.answer]||'?'}</div>
+  ${answerSection}
   ${hasImage?`<div class="review-card-image"><img src="${escapeHTML(q.imageAssets[0])}" alt="Imagem da questão" loading="lazy"></div>`:''}
   ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
-  <div class="review-card-actions">${actions}</div>
+  <div class="review-card-actions">${actions}${approveContentBtn}</div>
  </div>`;
 }
 
-export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0}){
+export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
  const questions=bank.questions;
  const filtered=filterQuestions(questions,reviewFilter);
  const searched=searchQuestions(filtered,reviewSearch);
@@ -165,7 +203,7 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   <span class="review-nav-info">${searched.length>0?`${safeIndex+1} de ${searched.length}`:'Nenhuma questão encontrada'}</span>
   <button class="review-nav-btn" data-action="review-next" ${safeIndex>=searched.length-1?'disabled':''}>Próxima →</button>
  </div>
- ${current?reviewQuestionCard(current,safeIndex,searched.length):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>'}
+ ${current?reviewQuestionCard(current,safeIndex,searched.length,editingQuestion,editingFields):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>'}
  <div class="review-stats">
   <div class="review-stat"><span class="review-stat-label">Total</span><span class="review-stat-value">${counts.all}</span></div>
   <div class="review-stat"><span class="review-stat-label">Com imagem</span><span class="review-stat-value" style="color:#e66a74">${counts.image_required}</span></div>

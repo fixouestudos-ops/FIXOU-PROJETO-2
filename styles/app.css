@@ -294,6 +294,28 @@
 .review-btn-mark-image{border-color:#e66a7440;color:#e66a74}
 .review-btn-mark-image:hover{background:#e66a7420;border-color:#e66a74}
 .review-btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
+.review-btn-edit{border-color:#78b4e540;color:#78b4e5}
+.review-btn-edit:hover{background:#78b4e520;border-color:#78b4e5}
+.review-btn-save{border-color:#3cc88d40;color:#3cc88d;font-weight:700}
+.review-btn-save:hover{background:#3cc88d20;border-color:#3cc88d}
+.review-btn-save-next{border-color:#60a5fa40;color:#60a5fa;font-weight:700}
+.review-btn-save-next:hover{background:#60a5fa20;border-color:#60a5fa}
+.review-btn-cancel{border-color:#94a2b240;color:#94a2b2}
+.review-btn-cancel:hover{background:#94a2b220;border-color:#94a2b2}
+.review-btn-approve-content{border-color:#3cc88d40;color:#3cc88d;font-weight:700}
+.review-btn-approve-content:hover{background:#3cc88d20;border-color:#3cc88d}
+.review-card-editing{border-color:#78b4e540;box-shadow:0 0 0 2px rgba(120,180,229,.12)}
+.review-edit-label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.review-edit-textarea{width:100%;min-height:180px;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:.88rem;line-height:1.7;resize:vertical;transition:border-color .15s}
+.review-edit-textarea:focus{outline:2px solid var(--purple);outline-offset:2px;border-color:var(--purple)}
+.review-edit-input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--ink);font-size:.88rem;transition:border-color .15s}
+.review-edit-input:focus{outline:2px solid var(--purple);outline-offset:2px;border-color:var(--purple)}
+.review-card-prompt-edit,.review-card-answer-edit{margin-bottom:16px}
+.review-edit-options{display:grid;gap:8px}
+.review-edit-radio{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--ink);cursor:pointer;transition:border-color .15s}
+.review-edit-radio:hover{border-color:var(--purple)}
+.review-edit-radio:has(input:checked){border-color:var(--purple);background:var(--purple-soft)}
+.review-edit-radio input{accent-color:var(--purple);width:16px;height:16px;margin:0}
 .review-empty{text-align:center;padding:60px 24px;color:var(--muted);font-size:.95rem}
 .review-stats{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;padding:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
 .review-stat{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:80px}
