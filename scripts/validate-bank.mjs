@@ -25,6 +25,9 @@ for(const q of bank.questions){
     }else if(typeof q.answerKeyText!=='string'||q.answerKeyText.trim().length<1)fail('Resposta textual ausente em '+q.id);
   }
   if(q.imageAssets!==undefined&&(!Array.isArray(q.imageAssets)||q.imageAssets.some(asset=>typeof asset!=='string'||asset.includes('..')||!fs.existsSync(path.join(root,asset)))))fail('Asset de imagem inválido em '+q.id);
+  if(q.imageClassification!==undefined&&!['no_image_required','image_required','needs_visual_review','bad_image_association'].includes(q.imageClassification))fail('imageClassification inválido em '+q.id);
+  if(q.imageStatus!==undefined&&!['no_image_required','needs_visual_review','approved','approved_manual','bad_crop','no_image_confirmed','bad_image_association','needs_manual_crop'].includes(q.imageStatus))fail('imageStatus inválido em '+q.id);
+  if(q.contentStatus!==undefined&&!['pending','validated','needs_content_review'].includes(q.contentStatus))fail('contentStatus inválido em '+q.id);
 }
 if(bank.questions.filter(q=>q.discipline==='biologia').length!==0)fail('As questões de Biologia foram removidas do banco.');
 const physicsAreas=['Mecânica','Cinemática','Eletromagnetismo','Óptica','Termologia','Física Moderna','Ondulatória','Gravitação'];

@@ -12,8 +12,9 @@ import {errorsScreen,mapScreen,booksScreen,favoritesScreen,searchScreen} from '.
 import {statsScreen,profileScreen} from './screens-profile.js';
 import {settingsScreen} from './screens-settings.js';
 import {aboutScreen} from './screens-about.js';
+import {reviewScreen} from './screens-review.js';
 import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
-import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES} from './session-builder.js';
+import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES,IMAGE_FILTERS} from './session-builder.js';
 import {api,authScreen,adminScreen,adminUserModal,avatar,ACCOUNT_CONFIG} from './account.js';
 
 const loaded=loadState();
@@ -49,7 +50,7 @@ async function performLogout(){if(ui.loggingOut)return;ui.loggingOut=true;ui.acc
 function track(eventType,metadata={}){if(account.user)api('/api/events',{method:'POST',body:JSON.stringify({eventType,metadata})}).catch(()=>{});}
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
 function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut};}
-function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','login','register','forgot','reset'].includes(parts[0])?parts[0]:'about';ui.bookId=parts[1]||null;}
+function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','review','login','register','forgot','reset'].includes(parts[0])?parts[0]:'about';ui.bookId=parts[1]||null;}
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
  if(account.loading){appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
@@ -69,13 +70,13 @@ function render(){
   // fallback for direct load where previousRoute not yet set
   ui.route='train';history.replaceState(null,'','#train');
  }
- if(ui.route==='admin'&&(!account.user||!['owner','admin'].includes(account.user.role))){
+ if((ui.route==='admin'||ui.route==='review')&&(!account.user||!['owner','admin'].includes(account.user.role))){
   if(!account.user){history.replaceState(null,'','#train');ui.route='train';toast('Faça login para acessar o painel.');}
   else {ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
  }
  const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
- const views={about:aboutScreen,home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen};
- const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono']]:baseNav;
+ const views={about:aboutScreen,home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen,review:reviewScreen};
+ const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono'],['review','◉','Revisão de Questões']]:baseNav;
  const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
  const navHtml=nav.map(([id,i,t])=>{
   const locked=guest && GUEST_LOCKED.includes(id);
@@ -208,6 +209,15 @@ function handleAction(action,id,element){
  if(action==='go-train'){go('train');return;}
  if(action==='go-home'){go('home');return;}
  if(action==='go-errors'){go('errors');return;}
+ if(action==='review-filter'){ui.reviewFilter=id;ui.reviewIndex=0;render();return;}
+ if(action==='review-prev'){ui.reviewIndex=Math.max(0,(ui.reviewIndex||0)-1);render();return;}
+ if(action==='review-next'){ui.reviewIndex=(ui.reviewIndex||0)+1;render();return;}
+ if(action==='review-approve'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='approved';q.imageClassification='image_required';saveProgress();render();toast('Imagem aprovada.');}return;}
+ if(action==='review-crop'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='needs_manual_crop';saveProgress();render();toast('Marcada para recorte manual.');}return;}
+ if(action==='review-no-image'){const q=BANK.questions.find(x=>x.id===id);if(q){q.imageStatus='no_image_confirmed';q.imageClassification='no_image_required';q.imageReason='Confirmado como sem imagem pelo admin';saveProgress();render();toast('Confirmada como sem imagem.');}return;}
+ if(action==='review-mark'){const q=BANK.questions.find(x=>x.id===id);if(q){q.needsReview=true;q.contentStatus='needs_content_review';saveProgress();render();toast('Marcada para revisão de conteúdo.');}return;}
+ if(action==='review-copy-id'){navigator.clipboard.writeText(id).then(()=>toast('ID copiado.')).catch(()=>toast('Erro ao copiar.'));return;}
+ if(action==='review-copy-codex'){const q=BANK.questions.find(x=>x.id===id);if(q){const cmd=`Vou anexar manualmente o crop correto desta questão.\nquestionId: ${q.id}\nsourceBook: ${q.sourceBook||''}\nsourcePage: ${q.sourcePage||''}\nsourceQuestionNumber: ${q.questionNumber||''}\nUse exclusivamente a imagem anexada como asset final desta questão.\nPreserve texto, alternativas e gabarito.\nSubstitua somente a imagem.\nMarque imageStatus = approved_manual.`;navigator.clipboard.writeText(cmd).then(()=>toast('Comando Copiado.')).catch(()=>toast('Erro ao copiar.'));}return;}
  if(action==='cards-home'){flash=null;go('cards');return;}
  if(action==='start-cards'){startCards(id);return;}
  if(action==='card'){closeModal();startCards('one',id);return;}
@@ -232,7 +242,8 @@ document.addEventListener('change',event=>{
  if(el.dataset.sessionSubject){const id=el.dataset.sessionSubject,subjects=new Set(ui.sessionBuilder.subjects||[]),topics=new Set(ui.sessionBuilder.topics||[]);if(el.checked){subjects.add(id);sessionTopicKeys(BANK,[id]).forEach(key=>topics.add(key));}else{subjects.delete(id);sessionTopicKeys(BANK,[id]).forEach(key=>topics.delete(key));}const next=[...subjects],validTopics=new Set(sessionTopicKeys(BANK,next));ui.sessionBuilder=cleanSessionBuilder(BANK,{...ui.sessionBuilder,subjects:next,topics:[...topics].filter(key=>validTopics.has(key))});render();}
  else if(el.dataset.sessionTopic){const key=decodeURIComponent(el.dataset.sessionTopic),topics=new Set(ui.sessionBuilder.topics||[]);if(el.checked)topics.add(key);else topics.delete(key);ui.sessionBuilder={...ui.sessionBuilder,topics:[...topics]};render();}
  else if(el.dataset.sessionDifficulty){const n=Number(el.dataset.sessionDifficulty),difficulties=new Set(ui.sessionBuilder.difficulties||[]);if(el.checked)difficulties.add(n);else difficulties.delete(n);ui.sessionBuilder={...ui.sessionBuilder,difficulties:[...difficulties].sort((a,b)=>a-b)};render();}
- else if(el.dataset.sessionQuantity){ui.sessionBuilder={...ui.sessionBuilder,quantity:SESSION_QUANTITIES.includes(el.value==='all'?'all':Number(el.value))?(el.value==='all'?'all':Number(el.value)):20};render();}
+  else if(el.dataset.sessionQuantity){ui.sessionBuilder={...ui.sessionBuilder,quantity:SESSION_QUANTITIES.includes(el.value==='all'?'all':Number(el.value))?(el.value==='all'?'all':Number(el.value)):20};render();}
+  else if(el.dataset.sessionImageFilter){ui.sessionBuilder={...ui.sessionBuilder,imageFilter:el.value};render();}
  else if(el.dataset.filter){const key=el.dataset.filter;ui.filters[key]=el.value;if(key==='discipline'){ui.filters.topic='';ui.filters.subtopic='';}if(key==='topic')ui.filters.subtopic='';render();}
  else if(el.dataset.cardFilter){ui.cardFilters[el.dataset.cardFilter]=el.value;if(el.dataset.cardFilter==='discipline')ui.cardFilters.topic='';render();}
  else if(el.dataset.match!==undefined&&session&&!session.feedback){session.draft.match[Number(el.dataset.match)]=el.value===''?-1:Number(el.value);updateDraft();}

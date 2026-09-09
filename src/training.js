@@ -9,6 +9,10 @@ export function matchesQuestion(q,c,filters,state,now=Date.now()){
  if(f.topics?.length&&!f.topics.includes(`${c.discipline}|${c.topic}`))return false;
  if(f.difficulties?.length&&!f.difficulties.includes(Number(q.difficulty)))return false;
  if(f.discipline&&c.discipline!==f.discipline)return false;if(f.topic&&c.topic!==f.topic)return false;if(f.subtopic&&c.id!==f.subtopic)return false;if(f.difficulty&&q.difficulty!==Number(f.difficulty))return false;if(f.type&&q.type!==f.type)return false;
+ if(f.imageFilter&&f.imageFilter!=='all'){
+  if(f.imageFilter==='image_required'&&q.imageClassification!=='image_required'&&q.imageClassification!=='needs_visual_review')return false;
+  if(f.imageFilter==='no_image_required'&&q.imageClassification!=='no_image_required')return false;
+ }
  if(f.status==='new'&&state.history.some(h=>h.questionId===q.id))return false;if(f.status==='wrong'&&!Object.values(state.errors).some(e=>e.conceptId===c.id&&!e.resolved))return false;if(f.status==='due'&&!isDue(state,c.id,now))return false;if(f.status==='favorites'&&!state.favorites.includes('q:'+q.id))return false;
  if(f.search&&!normalize([q.prompt,q.explanation,c.topic,c.subtopic,...(q.tags||[])].join(' ')).includes(normalize(f.search)))return false;return true;
 }
