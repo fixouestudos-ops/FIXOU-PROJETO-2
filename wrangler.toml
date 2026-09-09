@@ -14,6 +14,7 @@ vars = { SUPPORT_FROM_EMAIL = "FIXOU <onboarding@resend.dev>", SUPPORT_TO_EMAIL 
 binding = "DB"
 database_name = "fixou-db"
 database_id = "54b84e0a-9f64-45f0-ad4e-46ce614f8e36"
+migrations_dir = "drizzle"
 
 # [[r2_buckets]]
 # binding = "AVATARS"
