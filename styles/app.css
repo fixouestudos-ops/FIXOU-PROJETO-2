@@ -259,6 +259,8 @@
 .review-nav-info{font-size:.85rem;color:var(--muted);font-weight:600}
 .review-card{border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:24px;margin-bottom:20px}
 .review-card-header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.review-card-approval-status{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;padding:10px 14px;background:var(--bg);border-radius:8px;font-size:.82rem;font-weight:600}
+.review-approval-item{display:inline-flex;align-items:center;gap:6px}
 .review-badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
 .review-counter{margin-left:auto;font-size:.82rem;color:var(--muted);font-weight:600}
 .review-card-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px;font-size:.82rem;color:var(--muted)}

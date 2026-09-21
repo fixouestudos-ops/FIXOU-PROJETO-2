@@ -42,7 +42,7 @@ function filterQuestions(questions,filter){
  if(filter==='image_required')return questions.filter(q=>q.imageClassification==='image_required'||q.imageClassification==='needs_visual_review'||q.imageClassification==='bad_image_association');
  if(filter==='no_image_required')return questions.filter(q=>q.imageClassification==='no_image_required');
  if(filter==='needs_visual_review')return questions.filter(q=>q.imageClassification==='needs_visual_review');
- if(filter==='approved')return questions.filter(q=>q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed');
+ if(filter==='approved')return questions.filter(q=>q.contentStatus==='validated'||q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed');
  if(filter==='needs_content_review')return questions.filter(q=>q.contentStatus!=='validated');
  return questions;
 }
@@ -149,6 +149,10 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
    <span class="review-badge" style="background:${is.color}20;color:${is.color}">${is.label}</span>
    <span class="review-badge" style="background:${cs.color}20;color:${cs.color}">${cs.label}</span>
    <span class="review-counter">${index+1} / ${total}</span>
+  </div>
+  <div class="review-card-approval-status">
+   <span class="review-approval-item">Conteúdo: ${q.contentStatus==='validated'?'<span style="color:#3cc88d">✓ Validado</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
+   <span class="review-approval-item">Imagem: ${q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed'?'<span style="color:#3cc88d">✓ Aprovada</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
   </div>
   <div class="review-card-meta">
    <span><strong>ID:</strong> <code>${escapeHTML(q.id)}</code></span>
