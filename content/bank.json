@@ -3633,7 +3633,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3641,8 +3641,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-ponto-material-q1",
@@ -3673,7 +3676,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3681,8 +3684,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-trajetoria-referencial-q1",
@@ -3713,7 +3719,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3721,8 +3727,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-deslocamento-distancia-q1",
@@ -3761,7 +3770,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3769,8 +3778,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-velocidade-media-q1",
@@ -3801,7 +3813,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3809,8 +3821,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-uniforme-q1",
@@ -3841,7 +3856,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3849,8 +3864,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-acelerado-q1",
@@ -3881,7 +3899,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3889,8 +3907,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-grafico-velocidade-q1",
@@ -3930,7 +3951,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3938,8 +3959,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-circular-q1",
@@ -3970,7 +3994,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3978,8 +4002,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-carga-eletrica-q1",
@@ -4010,7 +4037,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4018,8 +4045,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-condutores-isolantes-q1",
@@ -4050,7 +4080,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4058,8 +4088,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-eletrizacao-inducao-q1",
@@ -4090,7 +4123,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4098,8 +4131,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-lei-coulomb-q1",
@@ -4130,7 +4166,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4138,8 +4174,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-campo-eletrico-q1",
@@ -4170,7 +4209,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4178,8 +4217,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-potencial-trabalho-q1",
@@ -4210,7 +4252,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4218,8 +4260,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-temperatura-calor-q1",
@@ -4250,7 +4295,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4258,8 +4303,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-dilatacao-linear-q1",
@@ -4290,7 +4338,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4298,8 +4346,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-calorimetria-basica-q1",
@@ -4330,7 +4381,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4338,8 +4389,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-mudanca-fase-q1",
@@ -4370,7 +4424,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4378,8 +4432,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-transferencia-calor-q1",
@@ -4410,7 +4467,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4418,8 +4475,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q1",
@@ -4427,8 +4487,8 @@
       "difficulty": 2,
       "type": "text",
       "prompt": "Um automóvel percorre uma estrada em movimento uniforme, com função horária do espaço dada por s 5 212 1 4t, em unidades do SI. Determine, para o móvel: a) o espaço inicial. b) a velocidade escalar. c) se o movimento é progressivo ou retrógrado. d) o espaço para t 5  s. e) o instante em que passa pela origem dos espaços. f) o instante em que passa por s 5  m.",
-      "answer": "Em Mecânica, o movimento e o repouso de um corpo são definidos em relação a um referencial. Para dizer que tanto Heloísa quanto Abelardo estão corretos, devemos interpretar a afirmação de Heloísa como “o passageiro não se move em relação ao ônibus” e a afirmação de Abelardo como “o passageiro está em movimento em relação à Terra (ou à rodovia)”.",
-      "explanation": "Resposta registrada no gabarito do próprio material: Em Mecânica, o movimento e o repouso de um corpo são definidos em relação a um referencial. Para dizer que tanto Heloísa quanto Abelardo estão corretos, devemos interpretar a afirmação de Heloísa como “o passageiro não se move em relação ao ônibus” e a afirmação de Abelardo como “o passageiro está em movimento em relação à Terra (ou à rodovia)”.",
+      "answer": "a) −12 m; b) 4 m/s; c) progressivo; d) 8 m; e) 3 s; f) 7 s",
+      "explanation": "Resposta confirmada no gabarito oficial do material: a) −12 m; b) 4 m/s; c) progressivo; d) 8 m; e) 3 s; f) 7 s",
       "discipline": "fisica",
       "topic": "Cinemática",
       "subtopic": "Fundamentos da Cinemática",
@@ -4447,12 +4507,14 @@
       "sourcePage": 26,
       "questionNumber": 1,
       "answerKeyQuestionNumber": 1,
-      "answerKeyText": "Em Mecânica, o movimento e o repouso de um corpo são definidos em relação a um referencial. Para dizer que tanto Heloísa quanto Abelardo estão corretos, devemos interpretar a afirmação de Heloísa como “o passageiro não se move em relação ao ônibus” e a afirmação de Abelardo como “o passageiro está em movimento em relação à Terra (ou à rodovia)”.",
+      "answerKeyText": "a) −12 m; b) 4 m/s; c) progressivo; d) 8 m; e) 3 s; f) 7 s",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "non_objective_or_composite"
+        "non_objective_or_composite",
+        "source_chapter_mismatch",
+        "extraction_glyph"
       ],
       "imageAssets": [],
       "tags": [
@@ -4462,9 +4524,9 @@
       ],
       "estimatedSeconds": 180,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q2",
@@ -4564,8 +4626,8 @@
       "difficulty": 2,
       "type": "text",
       "prompt": "UFMG Dois carros, A e B, movem-se numa estrada retilínea com velocidades constantes, vA 5 20 m/s e vB 5 18 m/s, respectivamente. O carro A está, inicialmente, 500 m atrás do carro B. Quanto tempo o carro A gasta para alcançar o carro B?",
-      "answer": "56 3",
-      "explanation": "Resposta registrada no gabarito do próprio material: 56 3",
+      "answer": "250 s",
+      "explanation": "Resposta confirmada no gabarito oficial do material: 250 s",
       "discipline": "fisica",
       "topic": "Cinemática",
       "subtopic": "Fundamentos da Cinemática",
@@ -4584,12 +4646,13 @@
       "sourcePage": 27,
       "questionNumber": 4,
       "answerKeyQuestionNumber": 4,
-      "answerKeyText": "56 3",
+      "answerKeyText": "250 s",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "non_objective_or_composite"
+        "non_objective_or_composite",
+        "source_chapter_mismatch"
       ],
       "imageAssets": [],
       "tags": [
@@ -4599,9 +4662,9 @@
       ],
       "estimatedSeconds": 180,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q5",
@@ -4609,8 +4672,8 @@
       "difficulty": 2,
       "type": "text",
       "prompt": "Dois automóveis partem, simultaneamente, de dois pontos distantes 700 m um do outro, com velocidades, respectivamente, iguais a 108 km/h e 5 m/s, em sentidos opostos. Determine o tempo que esses automóveis levam desde a partida até o encontro.",
-      "answer": "1,2 min",
-      "explanation": "Resposta registrada no gabarito do próprio material: 1,2 min",
+      "answer": "20 s",
+      "explanation": "Resposta confirmada no gabarito oficial do material: 20 s",
       "discipline": "fisica",
       "topic": "Cinemática",
       "subtopic": "Fundamentos da Cinemática",
@@ -4629,12 +4692,13 @@
       "sourcePage": 27,
       "questionNumber": 5,
       "answerKeyQuestionNumber": 5,
-      "answerKeyText": "1,2 min",
+      "answerKeyText": "20 s",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "non_objective_or_composite"
+        "non_objective_or_composite",
+        "source_chapter_mismatch"
       ],
       "imageAssets": [],
       "tags": [
@@ -4644,9 +4708,9 @@
       ],
       "estimatedSeconds": 180,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q6",
@@ -4654,8 +4718,8 @@
       "difficulty": 2,
       "type": "text",
       "prompt": "FMABC-SP Dois foguetes espaciais são enviados, da Terra, com 48 horas de intervalo. O primeiro tem velocidade constante de 30000 km/h e o segundo, de 40000 km/h. Ambas as velocidades têm mesmo sentido e mesma direção. O sistema de referência é a Terra. Para que o primeiro foguete seja ultrapassado pelo segundo, durante quantas horas, pelo menos, este último deverá voar?",
-      "answer": "20 km/h",
-      "explanation": "Resposta registrada no gabarito do próprio material: 20 km/h",
+      "answer": "144 h",
+      "explanation": "Resposta confirmada no gabarito oficial do material: 144 h",
       "discipline": "fisica",
       "topic": "Cinemática",
       "subtopic": "Fundamentos da Cinemática",
@@ -4674,12 +4738,13 @@
       "sourcePage": 27,
       "questionNumber": 6,
       "answerKeyQuestionNumber": 6,
-      "answerKeyText": "20 km/h",
+      "answerKeyText": "144 h",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "non_objective_or_composite"
+        "non_objective_or_composite",
+        "source_chapter_mismatch"
       ],
       "imageAssets": [],
       "tags": [
@@ -4689,9 +4754,9 @@
       ],
       "estimatedSeconds": 180,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q7",
@@ -4699,8 +4764,8 @@
       "difficulty": 2,
       "type": "text",
       "prompt": "Dois trens, A e B, de 300 m de comprimento percorrem trajetórias paralelas com velocidades, respectivamente, iguais a 20 m/s e 10 m/s. Determine: a) o tempo que o trem A leva para passar por uma ponte de  m de comprimento. b) o tempo que o trem A leva para ultrapassar o trem B quando se deslocam no mesmo sentido. c) o tempo que os trens levam para ultrapassar um ao outro quando se deslocam em sentidos opostos.",
-      "answer": "15 km/h",
-      "explanation": "Resposta registrada no gabarito do próprio material: 15 km/h",
+      "answer": "a) 25 s; b) 60 s; c) 20 s",
+      "explanation": "Resposta confirmada no gabarito oficial do material: a) 25 s; b) 60 s; c) 20 s",
       "discipline": "fisica",
       "topic": "Cinemática",
       "subtopic": "Fundamentos da Cinemática",
@@ -4719,12 +4784,14 @@
       "sourcePage": 27,
       "questionNumber": 7,
       "answerKeyQuestionNumber": 7,
-      "answerKeyText": "15 km/h",
+      "answerKeyText": "a) 25 s; b) 60 s; c) 20 s",
       "answerKeySource": "Google Drive · Gabarito Física L1.pdf",
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "non_objective_or_composite"
+        "non_objective_or_composite",
+        "source_chapter_mismatch",
+        "extraction_glyph"
       ],
       "imageAssets": [],
       "tags": [
@@ -4734,9 +4801,9 @@
       ],
       "estimatedSeconds": 180,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q1",
@@ -4784,9 +4851,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
@@ -4888,9 +4955,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q8",
@@ -4939,9 +5006,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a fotografia apenas ilustra Chankillo; direção, distância e período necessários constam no texto."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q9",
@@ -4990,9 +5057,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q10",
@@ -5041,9 +5108,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q11",
@@ -5145,9 +5212,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q14",
@@ -5197,9 +5264,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q15",
@@ -5249,9 +5316,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q16",
@@ -5301,9 +5368,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q17",
@@ -5353,9 +5420,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q18",
@@ -5405,9 +5472,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q19",
@@ -5509,9 +5576,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q22",
@@ -5550,7 +5617,8 @@
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "extraction_glyph"
+        "extraction_glyph",
+        "missing_source_context"
       ],
       "imageAssets": [],
       "tags": [
@@ -5560,9 +5628,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q23",
@@ -5602,7 +5670,8 @@
       "licenseBasis": "Autorização declarada pelo usuário em 2026-09-07",
       "needsReview": true,
       "reviewReasons": [
-        "extraction_glyph"
+        "extraction_glyph",
+        "source_visual_text_noise"
       ],
       "imageAssets": [],
       "tags": [
@@ -5612,9 +5681,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: o mapa é redundante; origem, destino, distância e fração percorrida constam no texto."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q24",
@@ -5664,9 +5733,9 @@
       ],
       "estimatedSeconds": 120,
       "imageClassification": "no_image_required",
-      "imageStatus": "no_image_required",
+      "imageStatus": "no_image_confirmed",
       "contentStatus": "needs_content_review",
-      "imageReason": "Questão puramente textual"
+      "imageReason": "Página original conferida: a resolução não depende de figura, gráfico, tabela, mapa ou outro elemento visual."
     },
     {
       "id": "fis-lic-l1-f1-c1-exercicios-propostos-q4",
