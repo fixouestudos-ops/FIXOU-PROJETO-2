@@ -3633,7 +3633,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3641,8 +3641,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-ponto-material-q1",
@@ -3673,7 +3676,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3681,8 +3684,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-trajetoria-referencial-q1",
@@ -3713,7 +3719,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3721,8 +3727,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-deslocamento-distancia-q1",
@@ -3761,7 +3770,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3769,8 +3778,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-velocidade-media-q1",
@@ -3801,7 +3813,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3809,8 +3821,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-uniforme-q1",
@@ -3841,7 +3856,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3849,8 +3864,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-acelerado-q1",
@@ -3881,7 +3899,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3889,8 +3907,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-grafico-velocidade-q1",
@@ -3930,7 +3951,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3938,8 +3959,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Diagrama SVG embutido (não precisa de imagem externa)",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-movimento-circular-q1",
@@ -3970,7 +3994,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "cinemática",
@@ -3978,8 +4002,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-carga-eletrica-q1",
@@ -4010,7 +4037,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4018,8 +4045,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-condutores-isolantes-q1",
@@ -4050,7 +4080,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4058,8 +4088,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-eletrizacao-inducao-q1",
@@ -4090,7 +4123,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4098,8 +4131,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-lei-coulomb-q1",
@@ -4130,7 +4166,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4138,8 +4174,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-campo-eletrico-q1",
@@ -4170,7 +4209,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4178,8 +4217,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-potencial-trabalho-q1",
@@ -4210,7 +4252,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "eletrostática",
@@ -4218,8 +4260,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-temperatura-calor-q1",
@@ -4250,7 +4295,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4258,8 +4303,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-dilatacao-linear-q1",
@@ -4290,7 +4338,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4298,8 +4346,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-calorimetria-basica-q1",
@@ -4330,7 +4381,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4338,8 +4389,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-mudanca-fase-q1",
@@ -4370,7 +4424,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4378,8 +4432,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-l1-transferencia-calor-q1",
@@ -4410,7 +4467,7 @@
       "sourceType": "fixou_original",
       "sourceReference": "Física L1 · material didático enviado pelo usuário · arquivo 1maLWzI4Gl-XAktLyMAYj_kfIgw-FNobV",
       "contentTrack": "fisica-l1-batch-01",
-      "needsReview": false,
+      "needsReview": true,
       "imageAssets": [],
       "tags": [
         "termologia",
@@ -4418,8 +4475,11 @@
       ],
       "imageClassification": "no_image_required",
       "imageStatus": "no_image_required",
-      "contentStatus": "validated",
-      "imageReason": "Questão puramente textual"
+      "contentStatus": "needs_content_review",
+      "imageReason": "Questão puramente textual",
+      "reviewReasons": [
+        "source_unavailable_for_verification"
+      ]
     },
     {
       "id": "fis-lic-l1-f1-c1-revisando-q1",
