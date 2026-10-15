@@ -7,7 +7,7 @@ import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionTopicKey
 const bank=JSON.parse(fs.readFileSync(new URL('../content/bank.json',import.meta.url),'utf8'));
 const concepts=Object.fromEntries(bank.concepts.map(c=>[c.id,c]));
 test('sessão personalizada começa apenas com disciplinas que possuem questões publicáveis',()=>{
- const b=defaultSessionBuilder(bank);assert.deepEqual(b.subjects,['fisica']);assert.ok(b.topics.length>0);assert.deepEqual(b.difficulties,[1,2,3,4]);assert.equal(b.quantity,20);
+ const b=defaultSessionBuilder(bank);assert.deepEqual(b.subjects,['fisica','literatura']);assert.ok(b.topics.length>0);assert.deepEqual(b.difficulties,[1,2,3,4]);assert.equal(b.quantity,20);
 });
 test('sessão personalizada remove assuntos de disciplinas desmarcadas e preserva opções válidas',()=>{
  const all=defaultSessionBuilder(bank),only=cleanSessionBuilder(bank,{...all,subjects:['fisica'],topics:all.topics.filter(k=>k.startsWith('fisica|')),difficulties:[2,4],quantity:50});assert.deepEqual(only.subjects,['fisica']);assert.ok(only.topics.every(key=>key.startsWith('fisica|')));assert.deepEqual(only.difficulties,[2,4]);assert.equal(only.quantity,50);assert.deepEqual(builderFilters(only).disciplines,['fisica']);
