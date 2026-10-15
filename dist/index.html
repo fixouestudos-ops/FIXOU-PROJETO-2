@@ -377,6 +377,32 @@ main{padding:26px 28px 36px}
 .filter-grid{gap:14px}
 .panel{padding:20px}
 }
+
+/* ===== SIDEBAR COMPACT — vertical density only =====
+   Goal: all nav tabs visible at 1366x768 and 1280x720 with no inner
+   scroll. Only vertical paddings/margins and logo size are trimmed;
+   width, fonts (one minimal step on short screens), icons, colors,
+   active state and alignment are preserved. Later in source => wins
+   at equal specificity. Mobile (<=700px) untouched. */
+@media(min-width:701px) and (min-height:801px){
+.sidebar .brand{margin:0 6px 30px}
+.brand-logo{width:104px;height:114px}
+}
+@media(min-width:701px) and (max-height:800px){
+.sidebar{padding-top:16px;padding-bottom:10px}
+.sidebar .brand{margin:0 6px 12px}
+.brand-logo{width:65px;height:72px}
+.nav-label{margin-bottom:6px}
+.nav-item{padding:7px 12px;margin:0;font-size:.8rem}
+.sidebar-bottom{padding-top:8px}
+.sidebar-bottom .exam-label{margin-bottom:6px}
+.sidebar-bottom p{font-size:.7rem;margin-bottom:8px}
+.account-area .profile-link{padding:8px 4px 2px;margin-top:2px}
+.account-area .avatar{height:30px;min-width:30px;font-size:.85rem}
+}
+@media(min-width:701px) and (max-height:730px){
+.sidebar-bottom p{display:none}
+}
 </style>
 </head>
 <body>
@@ -386,6 +412,6 @@ main{padding:26px 28px 36px}
   <div id="chart-tip" class="chart-tip" role="tooltip"></div>
   <dialog id="modal" aria-labelledby="modal-title"></dialog>
   <noscript>Ative o JavaScript do navegador para usar o FIXOU.</noscript>
-  <script src="assets/app.b8abffdc.js"></script>
+  <script src="assets/app.1bf0e5be.js"></script>
 </body>
 </html>

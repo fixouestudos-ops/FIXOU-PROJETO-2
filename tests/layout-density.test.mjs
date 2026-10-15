@@ -10,7 +10,21 @@ const css = readFileSync(cssPath, 'utf8');
 
 const BAND = '@media(min-width:701px) and (max-width:1500px)';
 const bandIndex = css.indexOf(BAND);
-const bandCss = bandIndex === -1 ? '' : css.slice(bandIndex);
+// Scope assertions to the compact-density band block only (balanced braces),
+// so later unrelated blocks (e.g. sidebar compact) don't leak into these checks.
+function extractBlock(start) {
+  let depth = 0, i = start;
+  const open = css.indexOf('{', start);
+  if (open === -1) return '';
+  depth = 1; i = open + 1;
+  while (i < css.length && depth > 0) {
+    if (css[i] === '{') depth++;
+    else if (css[i] === '}') depth--;
+    i++;
+  }
+  return css.slice(start, i);
+}
+const bandCss = bandIndex === -1 ? '' : extractBlock(bandIndex);
 
 describe('Layout density: compact desktop band exists', () => {
   it('compact band 701-1500px is present', () => {
