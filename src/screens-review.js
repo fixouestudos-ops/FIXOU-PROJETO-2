@@ -21,6 +21,7 @@ const IMAGE_STATUSES={
 const CONTENT_STATUSES={
  pending:{label:'Pendente',color:'#f0b04e'},
  validated:{label:'Validado',color:'#3cc88d'},
+ not_approved:{label:'Não aprovada',color:'#e66a74'},
  needs_content_review:{label:'Revisão de conteúdo',color:'#e66a74'}
 };
 
@@ -43,7 +44,8 @@ function filterQuestions(questions,filter){
  if(filter==='no_image_required')return questions.filter(q=>q.imageClassification==='no_image_required');
  if(filter==='needs_visual_review')return questions.filter(q=>q.imageClassification==='needs_visual_review');
  if(filter==='approved')return questions.filter(q=>q.contentStatus==='validated'||q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed');
- if(filter==='needs_content_review')return questions.filter(q=>q.contentStatus!=='validated');
+ if(filter==='needs_content_review')return questions.filter(q=>q.contentStatus!=='validated'&&q.contentStatus!=='not_approved');
+ if(filter==='not_approved')return questions.filter(q=>q.contentStatus==='not_approved');
  return questions;
 }
 
@@ -73,7 +75,7 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  const isEditing=editingQuestion===q.id;
  const promptText=isEditing?(editingFields.prompt||''):(q.prompt||'');
  const promptPreview=!isEditing&&q.prompt&&q.prompt.length>300?q.prompt.slice(0,300)+'…':q.prompt||'';
- const optionsHtml=(q.options||[]).map((o,i)=>`<div class="review-option${i===q.answer?' correct':''}"><span class="review-option-letter">${' ABCDE'[i]}</span><span>${escapeHTML(o)}</span></div>`).join('');
+ const optionsHtml=(q.options||[]).map((o,i)=>`<div class="review-option${i===q.answer?' correct':''}"><span class="review-option-letter">${'ABCDE'[i]}</span><span>${escapeHTML(o)}</span></div>`).join('');
  const src=sourceLabel(q);
  const validSource=hasValidSource(q);
  const isNoImage=q.imageClassification==='no_image_required';
@@ -81,7 +83,7 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  const isReview=q.imageClassification==='needs_visual_review';
  const hasOptions=q.options&&q.options.length>0;
  const currentAnswer=isEditing?(editingFields.answer||''):(q.answer!=null?String(q.answer):'?');
- const answerLabel=hasOptions&&currentAnswer!=='?'&&currentAnswer!==''?(' ABCDE'[Number(currentAnswer)]||currentAnswer):currentAnswer;
+ const answerLabel=hasOptions&&currentAnswer!=='?'&&currentAnswer!==''?('ABCDE'[Number(currentAnswer)]||currentAnswer):currentAnswer;
 
  let promptSection='';
  if(isEditing){
@@ -94,7 +96,7 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  if(isEditing){
   if(hasOptions){
    const radioHtml=(q.options||[]).map((o,i)=>{
-    const letter=' ABCDE'[i];
+    const letter='ABCDE'[i];
     const checked=String(i)===currentAnswer||letter===currentAnswer.toUpperCase()?'checked':'';
     return `<label class="review-edit-radio"><input type="radio" name="review-answer-${q.id}" value="${i}" data-action="review-edit-answer" ${checked}> ${letter}) ${escapeHTML(o)}</label>`;
    }).join('');
@@ -141,7 +143,9 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }
 
- const approveContentBtn=!isEditing?`<button class="review-btn review-btn-approve-content" data-action="review-approve-content" data-id="${escapeHTML(q.id)}">✓ Aprovar conteúdo</button>`:'';
+ const approveContentBtn=!isEditing&&q.contentStatus!=='not_approved'?`<button class="review-btn review-btn-approve-content" data-action="review-approve-content" data-id="${escapeHTML(q.id)}">✓ Aprovar conteúdo</button>`:'';
+ const notApprovedBtn=!isEditing&&q.contentStatus!=='not_approved'&&q.contentStatus!=='validated'?`<button class="review-btn review-btn-not-approved" data-action="review-not-approve" data-id="${escapeHTML(q.id)}">✕ Não aprovar</button>`:'';
+ const revertBtn=!isEditing&&q.contentStatus==='not_approved'?`<button class="review-btn review-btn-revert" data-action="review-revert-not-approved" data-id="${escapeHTML(q.id)}">Reverter para pendente</button>`:'';
 
  return `<div class="review-card${isEditing?' review-card-editing':''}" data-question-id="${escapeHTML(q.id)}">
   <div class="review-card-header">
@@ -150,10 +154,10 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
    <span class="review-badge" style="background:${cs.color}20;color:${cs.color}">${cs.label}</span>
    <span class="review-counter">${index+1} / ${total}</span>
   </div>
-  <div class="review-card-approval-status">
-   <span class="review-approval-item">Conteúdo: ${q.contentStatus==='validated'?'<span style="color:#3cc88d">✓ Validado</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
-   <span class="review-approval-item">Imagem: ${q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed'?'<span style="color:#3cc88d">✓ Aprovada</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
-  </div>
+   <div class="review-card-approval-status">
+    <span class="review-approval-item">Conteúdo: ${q.contentStatus==='validated'?'<span style="color:#3cc88d">✓ Validado</span>':q.contentStatus==='not_approved'?'<span style="color:#e66a74">✕ Não aprovada</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
+    <span class="review-approval-item">Imagem: ${q.imageStatus==='approved'||q.imageStatus==='approved_manual'||q.imageStatus==='no_image_confirmed'?'<span style="color:#3cc88d">✓ Aprovada</span>':'<span style="color:#f0b04e">Pendente</span>'}</span>
+   </div>
   <div class="review-card-meta">
    <span><strong>ID:</strong> <code>${escapeHTML(q.id)}</code></span>
    <span><strong>Disciplina:</strong> ${escapeHTML(q.discipline)}</span>
@@ -167,7 +171,7 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
   ${answerSection}
   ${hasImage?`<div class="review-card-image"><img src="${escapeHTML(q.imageAssets[0])}" alt="Imagem da questão" loading="lazy"></div>`:''}
   ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
-  <div class="review-card-actions">${actions}${approveContentBtn}</div>
+   <div class="review-card-actions">${actions}${approveContentBtn}${notApprovedBtn}${revertBtn}</div>
  </div>`;
 }
 
@@ -185,7 +189,8 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   no_image_required:filterQuestions(questions,'no_image_required').length,
   needs_visual_review:filterQuestions(questions,'needs_visual_review').length,
   approved:filterQuestions(questions,'approved').length,
-  needs_content_review:filterQuestions(questions,'needs_content_review').length
+  needs_content_review:filterQuestions(questions,'needs_content_review').length,
+  not_approved:filterQuestions(questions,'not_approved').length
  };
 
  const filterButtons=[
@@ -194,7 +199,8 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   {key:'no_image_required',label:'Sem imagem',count:counts.no_image_required},
   {key:'needs_visual_review',label:'Dúvida visual',count:counts.needs_visual_review},
   {key:'approved',label:'Aprovadas',count:counts.approved},
-  {key:'needs_content_review',label:'Conteúdo pendente',count:counts.needs_content_review}
+  {key:'needs_content_review',label:'Conteúdo pendente',count:counts.needs_content_review},
+  {key:'not_approved',label:'Não aprovadas',count:counts.not_approved}
  ];
 
  return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES</div><h1>Auditoria do Banco</h1><p>${counts.all} questões de Física classificadas automaticamente.</p></div></div>
@@ -214,6 +220,7 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   <div class="review-stat"><span class="review-stat-label">Sem imagem</span><span class="review-stat-value" style="color:#3cc88d">${counts.no_image_required}</span></div>
   <div class="review-stat"><span class="review-stat-label">Dúvida visual</span><span class="review-stat-value" style="color:#f0b04e">${counts.needs_visual_review}</span></div>
   <div class="review-stat"><span class="review-stat-label">Aprovadas</span><span class="review-stat-value" style="color:#3cc88d">${counts.approved}</span></div>
-  <div class="review-stat"><span class="review-stat-label">Conteúdo pendente</span><span class="review-stat-value" style="color:#f0b04e">${counts.needs_content_review}</span></div>
- </div>`;
+   <div class="review-stat"><span class="review-stat-label">Conteúdo pendente</span><span class="review-stat-value" style="color:#f0b04e">${counts.needs_content_review}</span></div>
+   <div class="review-stat"><span class="review-stat-label">Não aprovadas</span><span class="review-stat-value" style="color:#e66a74">${counts.not_approved}</span></div>
+  </div>`;
 }
