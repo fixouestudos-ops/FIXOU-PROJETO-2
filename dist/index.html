@@ -339,6 +339,39 @@
 @media(max-width:800px){.ab-hero{flex-direction:column;gap:30px;padding:50px 20px}.ab-hero-orb{width:180px;height:180px}.ab-problems-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-videos-grid{grid-template-columns:1fr}}
 @media(max-width:500px){.ab-hero{padding:40px 16px}.ab-hero-headline{font-size:1.7rem}.ab-section{padding:40px 16px}.ab-problems-grid,.ab-steps-grid,.ab-tools-grid{grid-template-columns:1fr}.ab-hero-orb{width:140px;height:140px}.ab-highlight-quote{padding:18px 16px;font-size:.95rem}.ab-report-cta{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){.ab-orb-ring{animation:none}.ab-problem,.ab-step,.ab-tool,[data-reveal]{opacity:1;transform:none;transition:none}}
+
+/* ===== COMPACT DENSITY — desktop band 701–1500px =====
+   Objective: at 100% zoom on common desktop viewports, show roughly the
+   same amount of content per screen as a wider viewport does, by trimming
+   only oversized fixed vertical costs (topbar height, paddings, hero bulk,
+   card padding, grid gaps). No zoom/scale tricks, no font shrinking, no
+   hidden content. Sidebar widths, mobile (<=700px) and >1500px airy layout
+   are intentionally untouched. Later in source => wins at equal specificity. */
+@media(min-width:701px) and (max-width:1500px){
+.topbar{height:68px;padding:0 28px}
+main{padding:26px 28px 36px}
+.page-heading{margin-bottom:20px}
+.hero-grid{gap:16px}
+.today-card{padding:24px 26px;min-height:290px}
+.orbit{width:220px;height:220px;right:-30px;top:55px}
+.orbit:before,.orbit:after{inset:18px}
+.orbit:after{inset:40px}
+.session-chips{margin:16px 0 14px}
+.mode-grid{gap:14px}
+.mode-card{padding:16px;gap:12px}
+.subject-grid{gap:14px}
+.subject-card{padding:18px}
+.section-title{margin:22px 0 12px}
+.bottom-grid{margin-top:20px;gap:16px}
+.quick-stats{padding:16px 0 0;gap:14px}
+.focus-card{padding:20px 20px 0}
+.challenge-grid{gap:14px}
+.challenge-card{padding:20px;gap:14px}
+.stat-grid{gap:14px}
+.stat-card{padding:18px 20px}
+.filter-grid{gap:14px}
+.panel{padding:20px}
+}
 </style>
 </head>
 <body>
@@ -348,6 +381,6 @@
   <div id="chart-tip" class="chart-tip" role="tooltip"></div>
   <dialog id="modal" aria-labelledby="modal-title"></dialog>
   <noscript>Ative o JavaScript do navegador para usar o FIXOU.</noscript>
-  <script src="assets/app.6f97cb67.js"></script>
+  <script src="assets/app.2037d4fe.js"></script>
 </body>
 </html>
