@@ -4849,16 +4849,16 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem Libras 2017 No Brasil, a quantidade de mortes decorrentes de acidentes por excesso de velocidade já é tratada como epidemia. Uma forma de profilaxia é a instalação de aparelhos que medem a velocidade dos automóveis e registram, por meio de fotografias, os veículos que trafegam acima do limite de velocidade permitido. O princípio de funcionamento desses aparelhos consiste na instalação de dois sensores no solo, de forma a registrar os instantes em que o veículo passa e, em caso de excesso de velocidade, fotografar o veículo quando ele passar sobre uma marca no solo, após o segundo sensor. Considere que o dispositivo representado na figura esteja instalado em uma via com velocidade máxima permitida de 60 km/h. Caixa com máquina fotográfica Sentido de movimento Posição do automóvel para a fotografia Sensor 1 Sensor 2 0,50 m 0,75 m No caso de um automóvel que trafega na velocidade máxima permitida, o tempo, em milissegundos, medido pelo dispositivo, é:",
+                          "prompt":  "Enem Libras 2017 No Brasil, a quantidade de mortes decorrentes de acidentes por excesso de velocidade já é tratada como epidemia. Uma forma de prevenção é a instalação de aparelhos que medem a velocidade dos automóveis. O dispositivo representado na figura possui dois sensores instalados no solo e está em uma via cuja velocidade máxima permitida é 60 km/h. No caso de um automóvel que trafega na velocidade máxima permitida, o tempo, em milissegundos, medido entre a passagem pelos dois sensores é:",
                           "options":  [
-                                          ",",
-                                          ",",
-                                          ",",
-                                          ",",
-                                          ","
+                                          "8,3",
+                                          "12,5",
+                                          "30,0",
+                                          "45,0",
+                                          "75,0"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "A distância entre os sensores é 0,50 m. Convertendo 60 km/h para o SI, v = 60/3,6 = 16,67 m/s. Assim, Δt = Δs/v = 0,50/16,67 ≈ 0,030 s = 30 ms. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4881,23 +4881,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c1-exercicios-propostos-q5-p13.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c1-exercicios-propostos-q6",
@@ -6239,16 +6234,16 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UEL-PR Um ciclista percorre as rotas 1 e 2 para se deslocar do ponto A ao ponto B, como mostrado no mapa a seguir, e registra em cada uma a distância percorrida. R Paranaguá R Maragogipe R Mossoró R Fernando de Noronha Rota 1 Rota 2 Pç. 15 de Novembro A B Fernando R Santos Belo Horizonte Hugo Cabral R Pernambuco João Cândido Benjamim Constant Sergipe R. Pio XII Quintino Bocaiuva Av. Paraná Assinale a alternativa que apresenta os valores aproximados da distância percorrida na rota 1 e na rota 2. Considere como aproximação todos os quarteirões quadrados com 100 m de lado. As rotas 1 e 2 encontram-se tracejadas.",
+                          "prompt":  "UEL-PR Um ciclista percorre as rotas 1 e 2 para se deslocar do ponto A ao ponto B, como mostrado no mapa, e registra em cada uma a distância percorrida. Considere, para a estimativa, os quarteirões quadrados com 100 m de lado. As rotas 1 e 2 encontram-se tracejadas. Os valores aproximados das distâncias percorridas são:",
                           "options":  [
-                                          "rota  à  m; rota  à  m",
-                                          "rota  à  m; rota  à  m",
-                                          "rota  à  m; rota  à  m",
-                                          "rota  à  m; rota  à  m",
-                                          "rota  à  m; rota  à  m Velocidade, espaço e tempo"
+                                          "rota 1 ≈ 800 m; rota 2 ≈ 800 m.",
+                                          "rota 1 ≈ 700 m; rota 2 ≈ 700 m.",
+                                          "rota 1 ≈ 800 m; rota 2 ≈ 900 m.",
+                                          "rota 1 ≈ 900 m; rota 2 ≈ 700 m.",
+                                          "rota 1 ≈ 900 m; rota 2 ≈ 600 m."
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Contando os trechos indicados pelas linhas tracejadas e usando aproximadamente 100 m para cada lado de quarteirão, a rota 1 totaliza cerca de 900 m e a rota 2 cerca de 700 m. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -6271,23 +6266,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c1-exercicios-complementares-q3-p17.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c1-exercicios-complementares-q4",
@@ -6510,16 +6500,16 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem 2019 A agricultura de precisão reúne técnicas agrícolas que consideram particularidades locais do solo ou lavoura a fim de otimizar o uso de recursos. Uma das formas de adquirir informações sobre essas particularidades é a fotografia aérea de baixa altitude realizada por um veículo aéreo não tripulado (vant). Na fase de aquisição é importante determinar o nível de sobreposição entre as fotografias. A figura ilustra como uma sequência de imagens é coletada por um vant e como são formadas as sobreposições frontais. Vant com câmera fotográfica 45° H Solo 12 3 1 DS 23 Imagens coletadas 1, 2 e 3 20% de sobreposição frontal 45° O operador do vant recebe uma encomenda na qual as imagens devem ter uma sobreposição frontal de 20% em um terreno plano. Para realizar a aquisição das imagens, seleciona uma altitude H fixa de voo de 1000 m, a uma velocidade constante de 50 ms−1. A abertura da câmera fotográfica do vant é de 90°. Considere tg(45°) 5 1. Natural Resources Canada. Concepts of Aerial Photography. Disponível em: www.nrcan.gc.ca. Acesso em: 26 abr. 2019 (adaptado). Com que intervalo de tempo o operador deve adquirir duas imagens consecutivas?",
+                          "prompt":  "Enem 2019 Um veículo aéreo não tripulado (VANT) fotografa um terreno plano a uma altitude fixa H = 1000 m e com velocidade constante de 50 m/s. A abertura da câmera é de 90°, e as imagens consecutivas devem apresentar sobreposição frontal de 20%, conforme a figura. Considere tg 45° = 1. Com que intervalo de tempo o operador deve adquirir duas imagens consecutivas?",
                           "options":  [
-                                          " segundos",
-                                          " segundos",
-                                          " segundos",
-                                          " segundos",
-                                          " segundos"
+                                          "40 segundos",
+                                          "32 segundos",
+                                          "28 segundos",
+                                          "16 segundos",
+                                          "8 segundos"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Com abertura de 90°, cada metade do campo visual forma 45° com a horizontal. Como H = 1000 m e tg45° = 1, a largura fotografada no solo é 2H = 2000 m. Com sobreposição de 20%, o VANT deve avançar 80% dessa largura: ΔS = 0,8·2000 = 1600 m. Logo, Δt = 1600/50 = 32 s. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -6542,23 +6532,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c1-exercicios-complementares-q8-p18.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c1-exercicios-complementares-q9",
@@ -6889,16 +6874,16 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem O tempo que um ônibus gasta para ir do ponto inicial ao ponto final de uma linha varia, durante o dia, conforme as condições do trânsito, demorando mais nos horários de maior movimento. A empresa que opera essa linha forneceu, no gráfico abaixo, o tempo médio de duração da viagem conforme o horário de saída do ponto inicial, no período da manhã. 120 110 100 90 80 70 60 50 40 30 20 10 0 6:00 6:10 6:20 6:30 6:40 6:50 7:00 7:10 7:20 7:30 7:40 7:50 8:00 8:10 8:20 8:30 8:40 8:50 9:00 9:10 9:20 9:30 9:40 9:50 10:00 10:10 10:20 10:30 10:40 10:50 11:00 Horário de saída Tempo do percurso (minutos) De acordo com as informações do gráfico, um passageiro que necessita chegar até as 10h30min ao ponto final dessa linha deve tomar o ônibus no ponto inicial, no máximo, até as:",
+                          "prompt":  "Enem O gráfico mostra o tempo médio de duração da viagem de uma linha de ônibus em função do horário de saída do ponto inicial, durante o período da manhã. De acordo com o gráfico, um passageiro que necessita chegar ao ponto final até as 10h30 deve tomar o ônibus no ponto inicial, no máximo, às:",
                           "options":  [
-                                          "hmin",
-                                          "hmin",
-                                          "hmin",
-                                          "hmin",
-                                          "hmin"
+                                          "9h20",
+                                          "9h30",
+                                          "9h00",
+                                          "8h30",
+                                          "8h50"
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "Pelo gráfico, o ônibus que sai às 8h50 leva 100 minutos, chegando às 10h30. Já uma saída às 9h00 corresponde a aproximadamente 95 minutos de viagem, com chegada às 10h35. Portanto, a saída mais tardia possível é 8h50. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -6921,39 +6906,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c1-exercicios-complementares-q19-p20.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c1-exercicios-complementares-q20",
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem João e Antônio utilizam os ônibus da linha mencionada na questão anterior para ir trabalhar, no período considerado no gráfico, nas seguintes condições: • trabalham vinte dias por mês; • João viaja sempre no horário em que o ônibus faz o trajeto no menor tempo; • Antônio viaja sempre no horário em que o ônibus faz o trajeto no maior tempo; • na volta do trabalho, ambos fazem o trajeto no mesmo tempo de percurso. Considerando-se a diferença de tempo de percurso, Antônio gasta, por mês, em média:",
+                          "prompt":  "Enem O gráfico associado mostra o tempo de percurso de uma linha de ônibus em função do horário de saída. João e Antônio utilizam essa linha para ir trabalhar durante 20 dias por mês. João viaja sempre no horário em que o percurso é realizado no menor tempo, enquanto Antônio viaja sempre no horário em que o percurso é realizado no maior tempo. Na volta, ambos gastam o mesmo tempo. Considerando apenas a diferença no trajeto de ida, Antônio gasta, por mês, em média:",
                           "options":  [
-                                          " horas a mais que João.",
-                                          " horas a mais que João.",
-                                          " horas a mais que João.",
-                                          " horas a mais que João.",
-                                          " horas a mais que João."
+                                          "5 horas a mais que João.",
+                                          "10 horas a mais que João.",
+                                          "20 horas a mais que João.",
+                                          "40 horas a mais que João.",
+                                          "60 horas a mais que João."
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Pelo gráfico, o menor tempo de percurso é 50 min e o maior é 110 min. A diferença é 60 min = 1 h por dia. Em 20 dias de trabalho, Antônio gasta 20·1 h = 20 h a mais. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -6976,23 +6956,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c1-exercicios-complementares-q20-p20.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c1-exercicios-complementares-q21",
@@ -7320,10 +7295,17 @@
                           "id":  "fis-lic-l1-f1-c1-exercicios-complementares-q1",
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "Fesp-RJ Das afirmações: I. Uma partícula em movimento em relação a um referencial pode estar em repouso em relação a outro referencial. II. A forma da trajetória de uma partícula depende do referencial adotado. III. Se a distância entre duas partículas permanece constante, então uma está em repouso em relação à outra. São corretas: a) apenas I e II. d) todas. b) apenas III. e) apenas II e III. c) apenas I e III.",
-                          "answer":  "A",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: A",
+                          "type":  "choice",
+                          "prompt":  "Fesp-RJ Considere as afirmações:\n\nI. Uma partícula em movimento em relação a um referencial pode estar em repouso em relação a outro referencial.\n\nII. A forma da trajetória de uma partícula depende do referencial adotado.\n\nIII. Se a distância entre duas partículas permanece constante, então uma está em repouso em relação à outra.\n\nSão corretas:",
+                          "options":  [
+                                          "apenas I e II.",
+                                          "apenas III.",
+                                          "apenas I e III.",
+                                          "todas.",
+                                          "apenas II e III."
+                                      ],
+                          "answer":  0,
+                          "explanation":  "As afirmações I e II são corretas: movimento, repouso e trajetória dependem do referencial adotado. A III é falsa, pois manter constante apenas a distância entre duas partículas não garante que a posição relativa vetorial permaneça constante; elas podem, por exemplo, mudar continuamente a direção relativa. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -7342,13 +7324,11 @@
                           "sourcePage":  17,
                           "questionNumber":  1,
                           "answerKeyQuestionNumber":  1,
-                          "answerKeyText":  "A",
+                          "answerKeyLetter":  "A",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -7604,8 +7584,8 @@
                           "difficulty":  2,
                           "type":  "text",
                           "prompt":  "Cesgranrio-RJ Para multar motoristas com velocidade superior a 90 km/h, um guarda rodoviário, munido de binóculo e cronômetro, aciona o cronômetro quando avista o automóvel passando pelo marco A e faz a leitura no cronômetro quando vê o veículo passar pelo marco B, situado a 1 500 m de A. Um motorista passa por A a 144 km/h e mantém essa velocidade durante 10 segundos, quando percebe a presença do guarda. Que velocidade média deverá manter, em seguida, para não ser multado?",
-                          "answer":  "v , 79,2 km/h",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: v , 79,2 km/h",
+                          "answer":  "79,2 km/h",
+                          "explanation":  "Para não ser multado, o tempo para percorrer 1 500 m deve ser de pelo menos 1 500/25 = 60 s, pois 90 km/h = 25 m/s. Nos primeiros 10 s, a 144 km/h = 40 m/s, o motorista percorre 400 m. Restam 1 100 m para os 50 s restantes. Assim, v = 1 100/50 = 22 m/s = 79,2 km/h.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -7624,7 +7604,7 @@
                           "sourcePage":  21,
                           "questionNumber":  23,
                           "answerKeyQuestionNumber":  23,
-                          "answerKeyText":  "v , 79,2 km/h",
+                          "answerKeyText":  "79,2 km/h",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
@@ -7652,7 +7632,7 @@
                           "type":  "text",
                           "prompt":  "Uerj 2020 A Polícia Rodoviária Federal revelou que os radares da Ponte Rio-Niterói são do tipo “inteligentes”, ou seja, calculam a velocidade média do condutor na via. Dessa forma, o motorista que passar pelo primeiro aparelho terá o horário e a velocidade registrados pelo equipamento. Se ele alcançar o segundo radar antes do tempo necessário para percorrer o trecho, será multado. Adaptado de oglobo.globo.com, 29/12/2017. Admita que a distância entre dois radares sucessivos na Ponte Rio-Niterói corresponde a um trecho de 1 km. Um motorista percorreu 0,81 km desse trecho com velocidade de 90 km/h. Sabendo que a velocidade máxima permitida na Ponte Rio-Niterói é de 80 km/h, estime a velocidade média máxima, em km/h, que o motorista deverá manter no restante do trecho para não ser multado.",
                           "answer":  "54,29 km/h",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 54,29 km/h",
+                          "explanation":  "Para que a velocidade média no trecho de 1 km não ultrapasse 80 km/h, o tempo total deve ser de pelo menos 1/80 h = 45 s. Os primeiros 0,81 km a 90 km/h são percorridos em 0,009 h = 32,4 s. Restam 0,19 km e 12,6 s = 0,0035 h. Logo, a maior velocidade média possível no trecho restante é 0,19/0,0035 ≈ 54,29 km/h.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -8182,16 +8162,16 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Vunesp Um ciclista está correndo com velocidade constante v0, ao longo da reta x (figura). Ao passar por O é visto por um cão, em P, que decide interceptá-lo no ponto Q, correndo com velocidade constante vc. Qual será efetivamente o valor de v0 se o cão chegar ao ponto Q junto com o ciclista? Dados: vc 5  m/s; OP 5  m; OQ 5  m. P y vc v0 O Q x",
+                          "prompt":  "Vunesp Um ciclista move-se com velocidade constante v0 ao longo do eixo x. Ao passar pelo ponto O, é visto por um cão localizado em P, que decide interceptá-lo no ponto Q, correndo em linha reta com velocidade constante vc. Sabendo que vc = 20 m/s, OP = 80 m e OQ = 60 m, qual deve ser o valor de v0 para que o cão e o ciclista cheguem simultaneamente a Q?",
                           "options":  [
-                                          " m/s",
-                                          ", m/s",
-                                          " m/s",
-                                          " m/s",
-                                          " m/s"
+                                          "20 m/s",
+                                          "23,3 m/s",
+                                          "24 m/s",
+                                          "12 m/s",
+                                          "10 m/s"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "O trajeto do cão é a hipotenusa do triângulo retângulo: PQ = √(80² + 60²) = 100 m. Correndo a 20 m/s, o cão leva 100/20 = 5 s para chegar a Q. Nesse mesmo tempo, o ciclista percorre OQ = 60 m. Logo, v0 = 60/5 = 12 m/s. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -8214,23 +8194,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c2-exercicios-propostos-q5-p28.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c2-exercicios-propostos-q6",
@@ -8344,7 +8319,7 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem 2023 O petróleo é uma matéria-prima muito valiosa e métodos geofísicos são úteis na sua prospecção. É possível identificar a composição de materiais estratificados medindo-se a velocidade de propagação do som (onda mecânica) através deles. Considere que uma camada de 450 m de um líquido se encontra presa no subsolo entre duas camadas rochosas, conforme o esquema. Um pulso acústico (que gera uma vibração mecânica) é emitido a partir da superfície do solo, onde são posteriormente recebidas duas vibrações refletidas (ecos). A primeira corresponde à reflexão do pulso na interface superior do líquido com a camada rochosa. A segunda vibração deve-se à reflexão do pulso na interface inferior. O tempo entre a emissão do pulso e a chegada do primeiro eco é de 0,5 s. O segundo eco chega 1,1 s após a emissão do pulso. Líquido Emissor e detector de pulsos Rocha Rocha 450 m A velocidade do som na camada líquida, em metro por segundo, é",
+                          "prompt":  "Enem 2023 Uma camada líquida de 450 m de espessura está presa entre duas camadas rochosas. Um pulso acústico é emitido da superfície e são detectados dois ecos: o primeiro, refletido na interface superior do líquido, chega 0,5 s após a emissão; o segundo, refletido na interface inferior do líquido, chega 1,1 s após a emissão. A velocidade do som na camada líquida, em m/s, é:",
                           "options":  [
                                           "270",
                                           "540",
@@ -8353,7 +8328,7 @@
                                           "1800"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A diferença entre os tempos dos ecos é 1,1 − 0,5 = 0,6 s. Nesse intervalo adicional, o som percorre a camada líquida na ida e na volta, totalizando 2·450 = 900 m. Portanto, v = 900/0,6 = 1500 m/s. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -8376,22 +8351,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c2-exercicios-propostos-q8-p28.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c2-exercicios-propostos-q11",
@@ -8776,15 +8747,15 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "EEAR-SP 2021 Um carro a 108 km/h se encontra prestes a iniciar uma ultrapassagem de um caminhão que está a 72 km/h, conforme a figura. Ambos realizam um movimento retilíneo uniforme durante todo percurso. 27 3 0 x (m) B A carro caminhão O tempo, em segundos, que o carro leva para ultrapassar o caminhão (ponto A chegar à mesma posição do ponto B, em relação ao referencial x) é igual a",
+                          "prompt":  "EEAR-SP 2021 Um carro a 108 km/h está prestes a iniciar a ultrapassagem de um caminhão que se move a 72 km/h, conforme a figura. Ambos realizam movimento retilíneo uniforme durante todo o percurso. O tempo, em segundos, para que o ponto A do carro chegue à mesma posição do ponto B do caminhão é:",
                           "options":  [
-                                          "",
-                                          ",",
-                                          ",",
-                                          ""
+                                          "1",
+                                          "2,4",
+                                          "2,7",
+                                          "3"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "A velocidade relativa do carro em relação ao caminhão é 108 − 72 = 36 km/h = 10 m/s. Pela figura, no início o ponto A está em x = 0 e o ponto B em x = 27 m, portanto a separação relativa é 27 m. Assim, t = 27/10 = 2,7 s. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -8807,23 +8778,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c2-exercicios-propostos-q23-p30.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c2-exercicios-propostos-q24",
@@ -9416,16 +9382,16 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Esc. Naval-RJ 2019 Analise o gráfico abaixo. A y z x O P 1,0 km S 4,0 km 2,0 km 3,0 km 5,0 km 5,0 km N B Uma aeronave de patrulha A segue, com velocidade escalar constante VA, rumo ao ponto P com a finalidade de interceptar outra aeronave, B, a qual mantém altitude e velocidade escalar constante e, inicialmente, encontra-se 1,00 km ao norte (sentido positivo de x) e 2,00 km acima de A. Sabendo que a aeronave B percorre 5,00 km em 30.0 segundos antes de ser interceptada no ponto P, a diferença, VA 2 VB, entre as velocidades escalares das duas aeronaves, em km/h, é igual a:",
+                          "prompt":  "Esc. Naval-RJ 2019 Uma aeronave de patrulha A segue, com velocidade escalar constante VA, rumo ao ponto P para interceptar outra aeronave B, que mantém altitude e velocidade escalar constante. Inicialmente, B encontra-se 1,00 km ao norte e 2,00 km acima de A. De acordo com a geometria indicada na figura, B percorre 5,00 km em 30,0 s antes de ser interceptada em P. A diferença VA − VB, em km/h, é:",
                           "options":  [
-                                          "",
-                                          "",
-                                          "",
-                                          "",
-                                          ", Velocidade do som"
+                                          "450",
+                                          "300",
+                                          "150",
+                                          "120",
+                                          "90,0"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A aeronave B percorre 5 km em 30 s, portanto VB = 600 km/h. Como B mantém altitude, a geometria da figura fornece para o ponto P, em relação a A, componentes de 4 km, 4 km e 2 km. Assim, AP = √(4² + 4² + 2²) = 6 km. Logo, VA = 6 km/30 s = 720 km/h e VA − VB = 720 − 600 = 120 km/h. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -9448,23 +9414,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c2-exercicios-complementares-q4-p33.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c2-exercicios-complementares-q6",
@@ -9525,16 +9486,16 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP Marta e Pedro combinaram encontrar-se em um certo ponto de uma autoestrada plana, para seguirem viagem juntos. Marta, ao passar pelo marco zero da estrada, constatou que, mantendo uma velocidade média de 80 km/h, chegaria na hora certa ao ponto de encontro combinado. No entanto, quando ela já estava no marco do quilômetro 10, ficou sabendo que Pedro tinha se atrasado e, só então, estava passando pelo marco zero, pretendendo continuar sua viagem a uma velocidade média de 100 km/h. Mantendo essas velocidades, seria previsível que os dois amigos se encontrassem próximos a um marco da estrada com indicação de",
+                          "prompt":  "Fuvest-SP Marta e Pedro combinaram encontrar-se em certo ponto de uma autoestrada plana. Quando Marta passa pelo marco zero, mantendo velocidade média de 80 km/h, ela calcula que chegaria pontualmente ao encontro. Mais tarde, ao atingir o marco do quilômetro 10, fica sabendo que Pedro, atrasado, está naquele instante passando pelo marco zero e seguirá a 100 km/h. Mantidas essas velocidades, os dois amigos se encontrarão aproximadamente no marco:",
                           "options":  [
-                                          "km 20 km 30 km 40 km 50 km 60",
-                                          "km 20 km 30 km 40 km 50 km 60",
-                                          "km 20 km 30 km 40 km 50 km 60",
-                                          "km 20 km 30 km 40 km 50 km 60",
-                                          "km 20 km 30 km 40 km 50 km 60"
+                                          "km 20",
+                                          "km 30",
+                                          "km 40",
+                                          "km 50",
+                                          "km 60"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Quando Pedro passa pelo km 0, Marta já está no km 10. A velocidade relativa é 100 − 80 = 20 km/h. Pedro leva 10/20 = 0,5 h para eliminar essa diferença. Nesse intervalo ele percorre 100·0,5 = 50 km. Portanto, o encontro ocorre no km 50. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -9557,9 +9518,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "duplicate_options"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -9847,16 +9806,16 @@
                           "conceptId":  "fis-lic-l1-f1-c2-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unesp 2016 Em uma viagem de carro com sua família, um garoto colocou em prática o que havia aprendido nas aulas de física. Quando seu pai ultrapassou um caminhão em um trecho reto da estrada, ele calculou a velocidade do caminhão ultrapassado utilizando um cronômetro. O garoto acionou o cronômetro quando seu pai alinhou a frente do carro com a traseira do caminhão e o desligou no instante em que a ultrapassagem terminou, com a traseira do carro alinhada com a frente do caminhão, obtendo 8,5 s para o tempo de ultrapassagem. Em seguida, considerando a informação contida na figura e sabendo que o comprimento do carro era 4 m e que a velocidade do carro permaneceu constante e igual a 30 m/s, ele calculou a velocidade média do caminhão, durante a ultrapassagem, obtendo corretamente o valor",
+                          "prompt":  "Unesp 2016 Durante uma ultrapassagem em um trecho reto, um garoto mede 8,5 s desde o instante em que a frente do carro se alinha à traseira do caminhão até o instante em que a traseira do carro se alinha à frente do caminhão. A figura informa o comprimento do caminhão. Sabendo que o carro tem 4 m de comprimento e mantém velocidade constante de 30 m/s, a velocidade média do caminhão durante a ultrapassagem é:",
                           "options":  [
-                                          " m/s",
-                                          " m/s",
-                                          " m/s",
-                                          " m/s",
-                                          " m/s"
+                                          "24 m/s",
+                                          "21 m/s",
+                                          "22 m/s",
+                                          "26 m/s",
+                                          "28 m/s"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A figura informa que o caminhão tem 30 m. Para completar a ultrapassagem, o carro deve avançar, em relação ao caminhão, 30 + 4 = 34 m. Em 8,5 s, a velocidade relativa é 34/8,5 = 4 m/s. Como o carro se move a 30 m/s, 30 − vcaminhão = 4, portanto vcaminhão = 26 m/s. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniforme",
@@ -9879,23 +9838,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c2-exercicios-complementares-q19-p35.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c2-exercicios-complementares-q2",
@@ -14119,10 +14073,17 @@
                           "id":  "fis-lic-l1-f1-c3-exercicios-complementares-q3",
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "Unesp 2018 Um foguete lançador de satélites, partindo do repouso, atinge a velocidade de 5400 km/h após 50 segundos. Supondo que esse foguete se desloque em trajetória retilínea, sua aceleração escalar média é de a)  m/s b)  m/s c)  m/s d)  m/s e)  m/s Queda livre A física descrita nos trabalhos do filósofo grego Aristóteles (384- -322 a.C.) estabelecia que o mundo era composto de quatro elementos terrestres, cuja proporção relativa na composição de um objeto determinava seu peso. Desse modo, Aristóteles afirmara que objetos com pesos diferentes dispunham-se em camadas diferentes com relação ao centro da Terra: o ar sobre a superfície, o fogo acima dele, a água e a terra, mais pesados, mais próximos do centro. Todos os objetos se moveriam, para cima ou para baixo, de modo que ocupassem seu lugar “natural”. Assim, a velocidade de um objeto seria diretamente proporcional ao seu peso. Em queda livre, por exemplo, objetos mais pesados cairiam mais rápido que objetos mais leves. Um famoso experimento, para alguns historiadores apenas uma lenda, teria sido realizado por Galileu Galilei (1564 -1642) para refutar a ideia aristotélica de que objetos mais pesados caem mais rápido. No experimento, esferas de pesos diferentes foram abandonadas do topo da famosa Torre de Pisa e os tempos de queda foram medidos. As esferas atingiram o solo simultaneamente; então, concluiu -se que “corpos abandonados de uma mesma altura e ao mesmo tempo chegam ao solo juntos, independentemente de seus pesos”. De fato, sabe -se que um objeto em queda livre sobre a superfície da Terra, ou seja, sob influência somente da gravidade, cai com uma aceleração de, aproximadamente, 9,8 m/s2. Portanto, pode -se pensar que, se um corpo cai mais lentamente, deve existir algo além de seu peso que imponha resistência ao movimento – nesse caso, a chamada resistência do ar, que depende de fatores como a densidade do ar e a 006366_pv_pvv_al_fis_3_vol1_liv_037_058_f1_c3_P4.indd 52 12/08/25 16:10 53 b) A conquista espacial possibilitou uma viagem do homem à Lua realizada em poucos dias e proporcionou a máxima velocidade de deslocamento que um ser humano já experimentou. Considere um foguete subindo com uma aceleração resultante constante de módulo aR 5  m/s e calcule o tempo que o foguete leva para percorrer uma distância de  km, a partir do repouso.",
-                          "answer":  "A",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: A",
+                          "type":  "choice",
+                          "prompt":  "Unesp 2018 Um foguete lançador de satélites, partindo do repouso, atinge a velocidade de 5400 km/h após 50 segundos. Supondo trajetória retilínea, sua aceleração escalar média é de:",
+                          "options":  [
+                                          "30 m/s²",
+                                          "150 m/s²",
+                                          "388 m/s²",
+                                          "108 m/s²",
+                                          "54 m/s²"
+                                      ],
+                          "answer":  0,
+                          "explanation":  "Primeiro, 5400 km/h = 5400/3,6 = 1500 m/s. Como o foguete parte do repouso, a aceleração escalar média é a = Δv/Δt = 1500/50 = 30 m/s². Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -14141,13 +14102,11 @@
                           "sourcePage":  52,
                           "questionNumber":  3,
                           "answerKeyQuestionNumber":  3,
-                          "answerKeyText":  "A",
+                          "answerKeyLetter":  "A",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -14354,10 +14313,17 @@
                           "id":  "fis-lic-l1-f1-c3-exercicios-complementares-q12",
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "UFRGS 2017 Um atleta, partindo do repouso, percorre 100 m em uma pista horizontal retilínea, em 10 s, e mantém a aceleração constante durante todo o percurso. Desprezando a resistência do ar, considere as afirmações abaixo, sobre esse movimento. I. O módulo de sua velocidade média é  km/h. II. O módulo de sua aceleração é  m/s . III. O módulo de sua maior velocidade instantânea é  m/s. Quais estão corretas? a) Apenas I. c) Apenas III. e) I, II e III. b) Apenas II. d) Apenas I e II.",
-                          "answer":  "A",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: A",
+                          "type":  "choice",
+                          "prompt":  "UFRGS 2017 Um atleta, partindo do repouso, percorre 100 m em uma pista horizontal retilínea em 10 s e mantém aceleração constante durante todo o percurso. Considere:\n\nI. O módulo de sua velocidade média é 36 km/h.\nII. O módulo de sua aceleração é 10 m/s².\nIII. O módulo de sua maior velocidade instantânea é 10 m/s.\n\nQuais estão corretas?",
+                          "options":  [
+                                          "Apenas I.",
+                                          "Apenas II.",
+                                          "Apenas III.",
+                                          "Apenas I e II.",
+                                          "I, II e III."
+                                      ],
+                          "answer":  0,
+                          "explanation":  "A velocidade média é 100/10 = 10 m/s = 36 km/h, logo I é verdadeira. Como o atleta parte do repouso e 100 = (a/2)·10², temos a = 2 m/s², tornando II falsa. A velocidade final é v = at = 20 m/s, portanto III também é falsa. Apenas I está correta. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -14376,13 +14342,11 @@
                           "sourcePage":  54,
                           "questionNumber":  12,
                           "answerKeyQuestionNumber":  12,
-                          "answerKeyText":  "A",
+                          "answerKeyLetter":  "A",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -15389,15 +15353,16 @@
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFMG Um ônibus está parado em um sinal. Quando o sinal abre, esse ônibus entra em movimento e aumenta sua velocidade até determinado valor. Ele mantém essa velocidade até se aproximar de um ponto de ônibus quando, então, diminui a velocidade até parar. O gráfico da posição x em função do tempo t que melhor representa esse movimento é:",
+                          "prompt":  "Fatec-SP 2020 O gráfico mostra a velocidade vertical de um corpo em função do tempo. Considere um sistema de referência orientado de cima para baixo. O movimento representado pode ser associado, de forma aproximada, a:",
                           "options":  [
-                                          "x t",
-                                          "x t",
-                                          "x t",
-                                          "x t"
+                                          "um balão com gás hélio solto das mãos de uma criança em pé no chão.",
+                                          "um foguete alçando voo a partir de um lançamento no solo.",
+                                          "uma fruta caindo de uma árvore diretamente até o solo.",
+                                          "um paraquedista que deixa uma aeronave com velocidade vertical inicial nula e desce até chegar ao solo.",
+                                          "uma ave que mergulha em direção a uma presa próxima à superfície do oceano."
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "O gráfico mostra inicialmente aumento da velocidade para baixo, seguido de um trecho de velocidade constante. Depois ocorre forte redução da velocidade, seguida de nova velocidade constante de menor módulo e, por fim, a velocidade cai a zero. Esse comportamento é compatível com a queda de um paraquedista, a abertura do paraquedas, a descida com nova velocidade terminal e a chegada ao solo. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15420,39 +15385,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q1-p70.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q2",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UEL-PR Nas origens do estudo sobre o movimento, o filósofo grego Aristóteles (384/383-322 a.C.) dizia que tudo o que havia no mundo pertencia ao seu lugar natural. De acordo com esse modelo, a terra apresenta-se em seu lugar natural abaixo da água, a água abaixo do ar, e o ar, por sua vez, abaixo do fogo, e acima de tudo um local perfeito constituído pelo manto de estrelas, pela Lua, pelo Sol e pelos demais planetas. Dessa forma, o modelo aristotélico explicava o motivo pelo qual a chama da vela tenta escapar do pavio, para cima, a areia cai de nossas mãos ao chão, e o rio corre para o mar, que se encontra acima da terra. A mecânica aristotélica também defendia que um corpo de maior quantidade de massa cai mais rápido que um corpo de menor massa, conhecimento que foi contrariado séculos depois, principalmente pelos estudos realizados por Galileu, Kepler e Newton. Com o avanço do conhecimento científico acerca da queda livre dos corpos, assinale a alternativa que indica, corretamente, o gráfico de deslocamento versus tempo que melhor representa esse movimento em regiões onde a resistência do ar é desprezível.",
+                          "prompt":  "UEL-PR Desprezando a resistência do ar, um corpo é abandonado do repouso e passa a cair livremente sob ação da gravidade. Considerando o módulo do deslocamento vertical medido a partir do ponto em que o corpo foi solto, qual dos gráficos representa corretamente a dependência desse deslocamento com o tempo?",
                           "options":  [
-                                          "y (m) t (s)",
-                                          "y (m) t (s)",
-                                          "y (m) t (s)",
-                                          "y (m) t (s)",
-                                          "y (m) t (s) Conceitos básicos"
+                                          "Gráfico A.",
+                                          "Gráfico B.",
+                                          "Gráfico C.",
+                                          "Gráfico D.",
+                                          "Gráfico E."
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Na queda livre a partir do repouso, o módulo do deslocamento é Δs = (g/2)t². Portanto, ele parte de zero e cresce proporcionalmente ao quadrado do tempo, produzindo uma curva crescente e côncava para cima. Isso corresponde ao gráfico B. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15475,39 +15435,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q2-p70.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q3",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Vunesp O gráfico na figura mostra a posição x de um objeto em movimento sobre uma trajetória retilínea, em função do tempo t. 4 2 0 22 24 1514131211108 97653 421 x (m) t (s) A partir desse gráfico, é possível concluir que a velocidade instantânea do objeto anulou-se somente:",
+                          "prompt":  "Vunesp O gráfico representa a posição x de um objeto em movimento retilíneo em função do tempo t. A partir do gráfico, é possível concluir que a velocidade instantânea do objeto se anulou somente:",
                           "options":  [
-                                          "no instante  segundo.",
-                                          "nos instantes  e  segundos.",
-                                          "nos instantes  e  segundos.",
-                                          "nos instantes  e  segundos.",
-                                          "nos instantes , ,  e  segundos."
+                                          "no instante 0 s.",
+                                          "nos instantes 9 s e 14 s.",
+                                          "nos instantes 2 s e 7 s.",
+                                          "nos instantes 5 s e 11 s.",
+                                          "nos instantes 2 s, 5 s, 7 s e 11 s."
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "Em um gráfico posição × tempo, a velocidade instantânea corresponde à inclinação da tangente à curva. Ela é nula nos máximos e mínimos locais, onde a tangente é horizontal. Isso ocorre em aproximadamente 2 s, 5 s, 7 s e 11 s. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15530,39 +15485,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q3-p70.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q4",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Efoa-MG O gráfico representa as posições de dois corpos A e B em função do tempo. t s A uA uB uA 5 uB B 006366_pv_pvv_al_fis_3_vol1_liv_059_088_f1_c4_P3.indd 70 11/08/25 18:28 71 Por este gráfico, podemos inferir que tais corpos partem de pontos:",
+                          "prompt":  "Efoa-MG O gráfico representa as posições de dois corpos A e B em função do tempo. A partir dele, pode-se inferir que os corpos partem de pontos:",
                           "options":  [
                                           "diferentes no espaço e se aproximam.",
                                           "diferentes no espaço e se afastam.",
-                                          "diferentes no espaço e mantêm-se na mesma distância um do outro.",
+                                          "diferentes no espaço e mantêm a mesma distância entre si.",
                                           "iguais e se aproximam.",
                                           "iguais e se afastam."
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "As duas retas possuem a mesma inclinação, portanto A e B têm a mesma velocidade. Como apresentam posições iniciais diferentes, mas velocidades iguais, a diferença entre suas posições permanece constante. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15585,38 +15535,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q4-p70.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q6",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unifor-CE O gráfico a seguir representa o espaço s em função do tempo t, para o movimento de um corpo. 0 t1 t2 arco de parábola s (m) t (s) Para esse movimento, o gráfico da velocidade v em função do tempo t está representado em:",
+                          "prompt":  "Unifor-CE Um corpo apresenta o seguinte comportamento da posição em função do tempo: inicialmente, sua posição cresce linearmente até t1; entre t1 e t2 permanece constante; após t2, a posição cresce segundo um arco de parábola com concavidade voltada para cima. Qual dos gráficos associados representa corretamente a velocidade em função do tempo?",
                           "options":  [
-                                          "0 t1 t2 t (s) v (m/s)",
-                                          "0 t1 t2 t (s) v (m/s)",
-                                          "0 t1 t2 t (s) v (m/s)",
-                                          "0 t1 t2 t (s) v (m/s)",
-                                          "0 t1 t2 t (s) v (m/s)"
+                                          "Gráfico A.",
+                                          "Gráfico B.",
+                                          "Gráfico C.",
+                                          "Gráfico D.",
+                                          "Gráfico E."
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "No primeiro trecho, a posição varia linearmente, logo a velocidade é positiva e constante. Entre t1 e t2, a posição permanece constante e a velocidade é nula. Após t2, a posição é parabólica e côncava para cima, portanto a velocidade cresce linearmente a partir de zero. O gráfico E representa esse comportamento. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15639,38 +15585,33 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q6-p71.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q7",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "IFSul-RS 2018 Uma partícula realizou um movimento unidimensional ao longo de um eixo Ox e o comportamento da sua posição x, em função do tempo t, foi representado em um gráfico, ilustrado na figura abaixo. 0 15 215 1 2 3 4 5 6 7 8 9 10 x (m) t (s) 10 210 5 25 Analise as seguintes afirmativas referentes ao movimento realizado por essa partícula: I. Entre os instantes  s e  s, a partícula realizou um movimento uniforme. II. Entre os instantes  s e  s, a partícula realizou um movimento acelerado. III. Entre os instantes  s e  s, a partícula estava em repouso. IV. No instante  s, a partícula estava na origem do eixo Ox. Estão corretas apenas as afirmativas",
+                          "prompt":  "IFSul-RS 2018 O gráfico representa a posição x de uma partícula em função do tempo t. Analise as afirmativas:\n\nI. Entre 3 s e 6 s, a partícula realizou movimento uniforme.\nII. Entre 0 s e 3 s, a partícula realizou movimento acelerado.\nIII. Entre 3 s e 6 s, a partícula estava em repouso.\nIV. No instante 8 s, a partícula estava na origem do eixo Ox.\n\nEstão corretas apenas:",
                           "options":  [
-                                          "I e II",
-                                          "I e IV",
-                                          "II e III",
-                                          "III e IV 006366_pv_pvv_al_fis_3_vol1_liv_059_088_f1_c4_P3.indd 71 11/08/25 18:28"
+                                          "I e II.",
+                                          "I e IV.",
+                                          "II e III.",
+                                          "III e IV."
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "De 0 a 3 s, a posição varia linearmente, portanto a velocidade é constante e a afirmativa II é falsa. De 3 a 6 s, a posição permanece em 15 m, logo a partícula está em repouso: III é verdadeira e I é falsa. No trecho seguinte, a reta cruza x = 0 exatamente em t = 8 s, portanto IV é verdadeira. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15693,39 +15634,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q7-p71.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q8",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP 2024 Um carro movimentava-se por uma rua de mão única, com sentido da esquerda para a direita, e deixou no asfalto o padrão de pingos de óleo indicado na figura I. posição Figura I Entre as curvas no gráfico da figura II, indique aquela que melhor corresponde à dependência da posição do carro com o tempo, segundo esses pingos. Adote como positivo o sentido para a direita, conforme a indicação da seta em I. posição tempo Figura II a b e d Note e adote: assuma que o intervalo de tempo entre os pingos seja o mesmo.",
+                          "prompt":  "Fuvest-SP 2024 Um carro move-se em uma rua de mão única, da esquerda para a direita, deixando no asfalto o padrão de pingos de óleo mostrado na Figura I. Considere iguais os intervalos de tempo entre pingos consecutivos e positivo o sentido para a direita. Qual curva da Figura II melhor representa a posição do carro em função do tempo?",
                           "options":  [
                                           "Curva a.",
                                           "Curva b.",
                                           "Curva c.",
                                           "Curva d.",
-                                          "Curva e. Gráficos de espaço no movimento uniforme"
+                                          "Curva e."
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "Como os pingos são produzidos em intervalos de tempo iguais, a distância entre pingos consecutivos indica o módulo da velocidade. O carro se move para a direita, mas os espaçamentos diminuem, portanto sua posição continua aumentando enquanto a velocidade positiva diminui. O gráfico posição × tempo deve ser crescente e com inclinação cada vez menor, como a curva a. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15748,39 +15684,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "possible_heading_noise"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q8-p72.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q9",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Mackenzie-SP Um observador registra, a partir do instante zero, as posições (x) assumidas por uma partícula em função do tempo (t). A trajetória descrita é retilínea e o gráfico obtido está ilustrado a seguir. 0 4 8 10 x (m) t (s) A posição assumida pela partícula no instante 19 s é:",
+                          "prompt":  "Mackenzie-SP O gráfico representa a posição x de uma partícula em função do tempo t. Mantendo-se o comportamento indicado no trecho retilíneo final, a posição da partícula no instante t = 19 s é:",
                           "options":  [
-                                          "2, m",
-                                          "2, m",
-                                          "2, m",
-                                          "2, m",
-                                          "2, m"
+                                          "−10,0 m",
+                                          "−8,75 m",
+                                          "−15,0 m",
+                                          "−27,5 m",
+                                          "−37,5 m"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Entre 4 s e 8 s, a posição varia de 10 m para 0 m. A velocidade nesse trecho é constante e vale v = (0 − 10)/(8 − 4) = −2,5 m/s. Extrapolando a mesma reta até 19 s: x = 10 − 2,5·(19 − 4) = 10 − 37,5 = −27,5 m. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15803,30 +15734,25 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q9-p72.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q10",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFC-CE Um trem de passageiros executa viagens entre algumas estações. Durante uma dessas viagens, um passageiro anotou a posição do trem e o instante de tempo correspondente e colocou os dados obtidos no gráfico abaixo. x (km) t (h) 300 200 100 1 2 3 4 5 6 7 8 Com base no gráfico, considere as seguintes alternativas. I. Nessa viagem, o trem para em quatro estações diferentes. II. O trem retorna à primeira estação após oito horas de viagem. III. O trem executa movimento uniforme entre as estações. IV. O módulo da velocidade do trem, durante a primeira hora de viagem, é menor do que em qualquer outro trecho. Assinale a alternativa correta.",
+                          "prompt":  "UFC-CE O gráfico representa a posição de um trem de passageiros em função do tempo durante uma viagem. Considere as afirmativas:\n\nI. Nessa viagem, o trem para em quatro estações diferentes.\nII. O trem retorna à primeira estação após oito horas de viagem.\nIII. O trem executa movimento uniforme entre as estações.\nIV. O módulo da velocidade do trem durante a primeira hora é menor do que em qualquer outro trecho.\n\nAssinale a alternativa correta.",
                           "options":  [
                                           "Somente as afirmativas II e III são verdadeiras.",
                                           "Somente as afirmativas I e II são verdadeiras.",
@@ -15835,7 +15761,7 @@
                                           "Somente as afirmativas III e IV são verdadeiras."
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "Os trechos inclinados são retas, portanto o movimento entre as estações é uniforme, tornando III verdadeira. Em t = 8 h, o trem volta à posição inicial x = 0, então II também é verdadeira. O gráfico representa apenas três posições de estação distintas (0, 200 e 300 km), portanto I é falsa. Na primeira hora o módulo da velocidade é 200 km/h, maior, e não menor, que nos demais trechos, logo IV é falsa. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15858,38 +15784,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q10-p72.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q11",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP O gráfico a seguir ilustra a posição s, em função do tempo t, de uma pessoa caminhando em linha reta durante 400 segundos. 100 80 60 40 20 100 200 300 400 t (s) s (m) Assinale a alternativa correta.",
+                          "prompt":  "Fuvest-SP O gráfico representa a posição s de uma pessoa caminhando em linha reta durante 400 s. Assinale a alternativa correta.",
                           "options":  [
-                                          "A velocidade no instante t 5  s vale , m/s.",
+                                          "A velocidade no instante t = 200 s vale 0,5 m/s.",
                                           "Em nenhum instante a pessoa parou.",
-                                          "A distância total percorrida durante os  segundos foi  m.",
-                                          "O deslocamento durante os  segundos foi  m.",
-                                          "O valor de sua velocidade no instante t 5  s é menor do que no instante t 5  s. Gráficos de espaço no movimento uniformemente variado"
+                                          "A distância total percorrida durante os 400 s foi 120 m.",
+                                          "O deslocamento durante os 400 s foi 180 m.",
+                                          "O valor da velocidade no instante t = 50 s é menor do que no instante t = 350 s."
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "De 0 a 100 s, a pessoa percorre 100 m. De 100 a 300 s, permanece na mesma posição. De 300 a 400 s, retorna de 100 m para 80 m, percorrendo mais 20 m. Assim, a distância total percorrida é 100 + 20 = 120 m. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15912,38 +15834,33 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q11-p72.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q12",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "EEAR-SP 2018 A posição (x) de um móvel em função do tempo (t) é representado pela parábola no gráfico a seguir. 0 3 5 x (m) t (s) Durante todo o movimento o móvel estava sob uma aceleração constante de módulo igual a 2 m/s2 . A posição inicial desse móvel, em m, era",
+                          "prompt":  "EEAR-SP 2018 O gráfico representa a posição x de um móvel em função do tempo t. A curva é uma parábola que cruza x = 0 em t = 3 s e t = 5 s. Durante todo o movimento, a aceleração é constante e possui módulo 2 m/s². A posição inicial do móvel, em metros, é:",
                           "options":  [
-                                          "",
-                                          "",
-                                          "",
-                                          "2 006366_pv_pvv_al_fis_3_vol1_liv_059_088_f1_c4_P3.indd 72 11/08/25 18:28 73"
+                                          "0",
+                                          "2",
+                                          "15",
+                                          "−8"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Como a aceleração tem módulo 2 m/s² e a parábola é côncava para cima, o termo quadrático da função horária é (a/2)t² = t². Como x = 0 em t = 3 s e t = 5 s, podemos escrever x(t) = (t − 3)(t − 5) = t² − 8t + 15. Portanto, x(0) = 15 m. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -15966,38 +15883,33 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q12-p72.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q15",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unicamp-SP 2017 O semáforo é um dos recursos utilizados para organizar o tráfego de veículos e de pedestres nas grandes cidades. Considere que um carro trafega em um trecho de uma via retilínea, em que temos 3 semáforos. O gráfico a seguir mostra a velocidade do carro, em função do tempo, ao passar por esse trecho em que o carro teve que parar nos três semáforos. A distância entre o primeiro e o terceiro semáforo é de 453525155 5040302010 55 65 60 70 velocidade (m/s) tempo (s) 0 4 6 2 8 10 12 14",
+                          "prompt":  "Unicamp-SP 2017 O gráfico mostra a velocidade de um carro em função do tempo ao percorrer um trecho retilíneo no qual existem três semáforos. A distância entre o primeiro e o terceiro semáforo é:",
                           "options":  [
-                                          " m",
-                                          " m",
-                                          " m",
-                                          " m"
+                                          "330 m",
+                                          "440 m",
+                                          "150 m",
+                                          "180 m"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "A distância percorrida é a área sob o gráfico v × t. No primeiro trecho: (1/2)·5·10 + 10·10 + (1/2)·5·10 = 150 m. No segundo: (1/2)·5·12 + 10·12 + (1/2)·5·12 = 180 m. Logo, a distância entre o primeiro e o terceiro semáforo é 150 + 180 = 330 m. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -16020,38 +15932,33 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q15-p73.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q16",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Uerj 2018 Um carro se desloca ao longo de uma reta. Sua velocidade varia de acordo com o tempo, conforme indicado no gráfico. v (m/s) 20 15 10 5 0 2 4 6 8 10 12 t (s) A função que indica o deslocamento do carro em relação ao tempo t é:",
+                          "prompt":  "Uerj 2018 Um carro se desloca ao longo de uma reta. Sua velocidade varia linearmente com o tempo, conforme o gráfico. Admitindo posição inicial nula, a função que representa o deslocamento do carro em função do tempo é:",
                           "options":  [
-                                          "t 2 ,t",
-                                          "t 1 ,t",
-                                          "t 2 ,t",
-                                          "t 1 ,t"
+                                          "5t − 0,55t²",
+                                          "5t + 0,625t²",
+                                          "20t − 1,25t²",
+                                          "20t + 2,5t²"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "A velocidade inicial é 5 m/s. A aceleração é dada pela inclinação do gráfico: a = (20 − 5)/12 = 1,25 m/s². Para movimento uniformemente variado, Δs = v0t + (a/2)t². Assim, Δs = 5t + 0,625t². Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -16074,23 +15981,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q16-p73.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q17",
@@ -16152,16 +16054,16 @@
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFPE O gráfico a seguir representa, aproximadamente, a velocidade de um atleta, em função do tempo, em um trecho de um percurso retilíneo. t (s) v (m/s) 22,0 24,0 26,0 6,0 4,0 2,0 0,0 0 42 6 8 10 12 14 No instante em que ocorreu a mudança no sentido do movimento, a quantos metros da sua posição inicial (em t 5 0) se encontrava o atleta?",
+                          "prompt":  "UFPE O gráfico representa aproximadamente a velocidade de um atleta em função do tempo, em um trecho retilíneo. No instante em que ocorre a mudança no sentido do movimento, a quantos metros da posição inicial (t = 0) encontra-se o atleta?",
                           "options":  [
-                                          "",
-                                          "",
-                                          "",
-                                          "",
-                                          ""
+                                          "12",
+                                          "24",
+                                          "30",
+                                          "36",
+                                          "42"
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "A mudança de sentido ocorre quando a velocidade muda de sinal, isto é, quando cruza v = 0, em t = 10 s. A posição nesse instante é obtida pela área positiva sob o gráfico: (1/2)·4·6 + 4·6 + (1/2)·2·6 = 12 + 24 + 6 = 42 m. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -16184,23 +16086,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-propostos-q18-p74.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-propostos-q19",
@@ -17440,16 +17337,16 @@
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP Na Cidade Universitária (USP), um jovem, em um carrinho de rolimã, desce a rua do Matão, cujo perfil está representado na figura abaixo, em um sistema de coordenadas em que o eixo Ox tem a direção horizontal. No instante t 5 0, o carrinho passa em movimento pela posição y 5 y0 e x 5 0. y g 0 x Entre os gráficos das figuras abaixo, os que melhor poderiam descrever a posição x e a velocidade v do carrinho em função do tempo t são, respectivamente: 0 t 0 0 I II III t 0 0 t 0 IV 0 t 0 0 t 0 0 I II III t 0 0 t 0 IV 0 t 0 0 t 0 0 I II III t 0 0 t 0 IV 0 t 0 0 t 0 0 I II III t 0 0 t 0 IV 0 t 0",
+                          "prompt":  "Fuvest-SP Na Cidade Universitária, um jovem em um carrinho de rolimã desce uma rua cujo perfil é mostrado na figura. No instante t = 0, o carrinho passa por x = 0 com velocidade inicial nula. Entre os gráficos I, II, III e IV apresentados, quais podem descrever, respectivamente, a posição x e a velocidade v do carrinho em função do tempo?",
                           "options":  [
-                                          "I e II",
-                                          "I e III",
-                                          "II e IV",
-                                          "III e II",
-                                          "IV e III Quer saber mais? Veja os principais assuntos e conceitos trabalhados neste capítulo acessando a seção Resumindo no livro digital, na Plataforma Poliedro. 006366_pv_pvv_al_fis_3_vol1_liv_059_088_f1_c4_P3.indd 80 11/08/25 18:28 81"
+                                          "I e II.",
+                                          "I e III.",
+                                          "II e IV.",
+                                          "III e II.",
+                                          "IV e III."
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "À medida que o carrinho desce, sua velocidade aumenta, mas a inclinação da rua diminui progressivamente; por isso a aceleração diminui até tender a zero. A posição cresce com inclinação cada vez maior, como em I. A velocidade cresce com taxa de crescimento cada vez menor, como em II. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -17472,38 +17369,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-complementares-q2-p80.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-complementares-q3",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Cesgranrio-RJ Uma pequena esfera de aço é abandonada, a partir do repouso, de uma certa altura inicial. A bola quica repetidas vezes colidindo com o chão, perdendo uma mesma fração de sua energia a cada colisão. Qual das opções a seguir melhor representa o gráfico velocidade 3 tempo desse movimento? Nota: despreze a resistência do ar.",
+                          "prompt":  "Cesgranrio-RJ Uma pequena esfera de aço é abandonada do repouso de certa altura. Após atingir o chão, ela quica repetidamente, perdendo a mesma fração de sua energia mecânica em cada colisão. Despreze a resistência do ar. Qual dos gráficos representa melhor a velocidade da esfera em função do tempo?",
                           "options":  [
-                                          "v t",
-                                          "v t",
-                                          "v t",
-                                          "v t",
-                                          "v t"
+                                          "Gráfico A.",
+                                          "Gráfico B.",
+                                          "Gráfico C.",
+                                          "Gráfico D.",
+                                          "Gráfico E."
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Entre duas colisões, a aceleração é constante e igual à gravidade, de modo que a velocidade varia linearmente com o tempo. Em cada colisão, a velocidade muda instantaneamente de sentido e volta com módulo menor que antes, devido à perda de energia. O gráfico B mostra segmentos lineares de mesma inclinação separados por saltos de velocidade e com amplitudes progressivamente menores. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -17526,39 +17419,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-complementares-q3-p81.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-complementares-q4",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFRGS 2025 Enquanto percorre um trecho de trajetória horizontal e retilínea com velocidade constante de 3,0 m/s, medida por um observador em repouso, um garoto, andando de skate, joga verticalmente para cima uma bolinha de tênis com velocidade inicial de 5,0 m/s, medida em seu referencial. Mantendo a mão na mesma posição em que a lançou, o garoto a pega de volta na queda. Considere o módulo da aceleração da gravidade igual a 10,0 m/s2 e despreze o atrito com o ar. Qual dos gráficos a seguir melhor representa a trajetória percorrida pela bolinha, como vista pelo observador em repouso?",
+                          "prompt":  "UFRGS 2025 Um garoto desloca-se horizontalmente de skate a 3,0 m/s e lança verticalmente para cima uma bolinha de tênis com velocidade inicial de 5,0 m/s em relação a ele. Mantendo a mão na mesma posição em que lançou, o garoto recebe a bola novamente na queda. Considere g = 10 m/s² e despreze a resistência do ar. Qual dos gráficos representa a trajetória da bolinha vista por um observador em repouso no solo?",
                           "options":  [
-                                          "0 1,25 3,0 y (m) x (m)",
-                                          "0 0,80 5,0 y (m) x (m)",
-                                          "0 1,25 3,0 y (m) x (m)",
-                                          "0 0,80 5,0 y (m) x (m)",
-                                          "0 1,25 3,0 x (m) y (m) Conceitos básicos"
+                                          "Gráfico A.",
+                                          "Gráfico B.",
+                                          "Gráfico C.",
+                                          "Gráfico D.",
+                                          "Gráfico E."
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "No referencial do solo, a bolinha possui velocidade horizontal constante de 3,0 m/s e velocidade vertical inicial de 5,0 m/s. O tempo total de voo é 2·5/10 = 1,0 s, de modo que o alcance horizontal é 3,0 m. A altura máxima é 5²/(2·10) = 1,25 m. Como o movimento horizontal é uniforme, a trajetória é uma parábola simétrica com alcance 3,0 m e altura máxima 1,25 m. Isso corresponde ao gráfico A. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -17581,39 +17469,34 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-complementares-q4-p81.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-complementares-q6",
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP 2017 Um elevador sobe verticalmente com velocidade constante v0, e, em um dado instante de tempo t0, um parafuso desprende-se do teto. O gráfico que melhor representa, em função do tempo t, o módulo da velocidade v desse parafuso em relação ao chão do elevador é",
+                          "prompt":  "Fuvest-SP 2017 Um elevador sobe verticalmente com velocidade constante v0. Em um dado instante t0, um parafuso desprende-se do teto. Qual dos gráficos melhor representa, em função do tempo, o módulo da velocidade do parafuso em relação ao chão do elevador, desde antes de se desprender até pouco antes de atingir o piso?",
                           "options":  [
-                                          "0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t",
-                                          "0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t",
-                                          "0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t",
-                                          "0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t",
-                                          "0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t 0 v0 t 0 v t Note e adote: os gráficos se referem ao movimento do parafuso antes que ele atinja o chão do elevador."
+                                          "Gráfico A.",
+                                          "Gráfico B.",
+                                          "Gráfico C.",
+                                          "Gráfico D.",
+                                          "Gráfico E."
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "Antes de se desprender, o parafuso está em repouso em relação ao elevador, portanto sua velocidade relativa é zero. No instante t0 ele se solta mantendo inicialmente a mesma velocidade do elevador; assim, sua velocidade relativa ainda é zero naquele instante. Depois disso, sua aceleração em relação ao elevador é a gravidade e o módulo da velocidade relativa cresce linearmente a partir de zero. O gráfico E representa esse comportamento. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -17636,23 +17519,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-complementares-q6-p82.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-complementares-q8",
@@ -17768,7 +17646,7 @@
                           "conceptId":  "fis-lic-l1-f1-c4-analise-grafica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura a seguir representa as posições (x), dadas em metros, em função do tempo (t), dado em segundos, para esses dois móveis. 0 21 t (s) 4 3 2 1 A B 5 3 4 5 6 x (m) No instante t = 5 s, a distância entre A e B vale, em metros:",
+                          "prompt":  "Dois móveis, A e B, percorrem a mesma trajetória retilínea. A figura representa as posições x, em metros, em função do tempo t, em segundos, para esses dois móveis. No instante t = 5 s, a distância entre A e B vale, em metros:",
                           "options":  [
                                           "2,5",
                                           "3",
@@ -17777,7 +17655,7 @@
                                           "6"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Pelo gráfico, o móvel A passa por (t = 2 s, x = 4 m), portanto sua reta tem inclinação 2 m/s e x_A = 2t. O móvel B parte de x = 2 m e passa por (t = 4 s, x = 4 m), logo sua inclinação é 0,5 m/s e x_B = 2 + 0,5t. Em t = 5 s: x_A = 10 m e x_B = 4,5 m. Assim, a distância entre eles é |10 − 4,5| = 5,5 m. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Análise gráfica do movimento",
@@ -17800,23 +17678,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c4-exercicios-complementares-q10-p82.png"],
                           "tags":  [
                                        "física",
                                        "análise gráfica",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c4-exercicios-complementares-q11",
@@ -20669,10 +20542,16 @@
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q2",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "UFU-MG 2017 Ainda que tenhamos a sensação de que estamos estáticos sobre a Terra, na verdade, se tomarmos como referência um observador parado em relação às estrelas fixas e externo ao nosso planeta, ele terá mais clareza de que estamos em movimento, por exemplo, rotacionando junto com a Terra em torno de seu eixo imaginário. Se consideramos duas pessoas (A e B), uma delas localizada em Ottawa (A), Canadá, (latitude 45° Norte) e a outra em Caracas (B), Venezuela, (latitude 10° Norte), qual a relação entre a velocidade angular média (w) e velocidade escalar média (v) dessas duas pessoas, quando analisadas sob a perspectiva do referido observador? a) wA 5 wB e vA 5 vB b) wA \u003c wB e vA \u003c vB c) wA 5 wB e vA \u003c vB d) wA \u003e wB e vA 5 vB Movimento circular uniforme",
-                          "answer":  "B",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: B",
+                          "type":  "choice",
+                          "prompt":  "UFU-MG 2017 Considere duas pessoas sobre a superfície da Terra: A está em Ottawa, Canadá, latitude 45° N, e B está em Caracas, Venezuela, latitude 10° N. Para um observador externo, parado em relação às estrelas fixas, qual é a relação entre as velocidades angulares médias (ω) e as velocidades escalares médias (v) dessas duas pessoas devido à rotação da Terra?",
+                          "options":  [
+                                          "ωA = ωB e vA = vB",
+                                          "ωA < ωB e vA < vB",
+                                          "ωA = ωB e vA < vB",
+                                          "ωA > ωB e vA = vB"
+                                      ],
+                          "answer":  2,
+                          "explanation":  "Todos os pontos da Terra completam uma rotação no mesmo período, portanto ωA = ωB. A velocidade escalar vale v = ωr, sendo r a distância do ponto ao eixo terrestre. Como Ottawa está em latitude maior, sua distância ao eixo é menor que a de Caracas. Assim, vA < vB. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -20691,13 +20570,11 @@
                           "sourcePage":  106,
                           "questionNumber":  2,
                           "answerKeyQuestionNumber":  2,
-                          "answerKeyText":  "B",
+                          "answerKeyLetter":  "C",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -20717,9 +20594,9 @@
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "UEM-PR 2023 Em um plano cartesiano, considere uma circunferência de centro na origem O e de raio 1, sobre a qual uma partícula está em movimento circular, sempre no sentido anti­‐horário. Assinale o que for correto. 01 Se no instante t1 5 2s a partícula está no ponto       2 2 , 2 2 e no instante t2 5 5s ela está no ponto (21, 0), não tendo passado por um mesmo ponto duas vezes, então sua velocidade angular média no intervalo [t1, t2] é p 3 rad/s. rad/s 02 Se a partícula se desloca com velocidade não nula e constante, em módulo, então sua aceleração centrípeta é nula. 04 Se a partícula se desloca em velocidade constante, em módulo, efetuando 5 rotações por minuto, e se denotamos por A e B as posições da partícula nos instantes 0 s e 4 s, respectivamente, então o ângulo Â do triângulo OAB mede p 6 ra rad. d 08 Se a partícula se desloca partindo do ponto (1, 0) em t 5 0 s com velocidade constante, em módulo, levando 2p s para completar uma volta, então a coordenada x da posição da partícula no instante t (em segundos) satisfaz x 5 sent. 16 As coordenadas (x, y) de um ponto sobre essa circunferência satisfazem a igualdade (x 1 y)2 5 1 1 1 2xy. Soma:",
-                          "answer":  "C",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: C",
+                          "prompt":  "UEM-PR 2023 Em um plano cartesiano, considere uma circunferência de centro na origem O e raio 1, sobre a qual uma partícula realiza movimento circular sempre no sentido anti-horário. Assinale o que for correto.\n\n01. Se em t1 = 2 s a partícula está no ponto (√2/2, √2/2) e em t2 = 5 s está no ponto (−1, 0), sem ter passado duas vezes pelo mesmo ponto, então sua velocidade angular média no intervalo [t1,t2] é π/3 rad/s.\n\n02. Se a partícula se desloca com velocidade não nula e constante em módulo, então sua aceleração centrípeta é nula.\n\n04. Se a partícula se desloca com velocidade constante em módulo, efetuando 5 rotações por minuto, e A e B são suas posições nos instantes 0 s e 4 s, respectivamente, então o ângulo Â do triângulo OAB mede π/6 rad.\n\n08. Se a partícula parte do ponto (1,0) em t = 0 com velocidade de módulo constante e leva 2π s para completar uma volta, então a coordenada x de sua posição satisfaz x = sen(t).\n\n16. As coordenadas (x,y) de qualquer ponto dessa circunferência satisfazem (x + y)² = 1 + 2xy.\n\nSoma:",
+                          "answer":  "20",
+                          "explanation":  "01 é falsa: a variação angular é π − π/4 = 3π/4 em 3 s, então ωm = π/4 rad/s. 02 é falsa, pois no movimento circular uniforme existe aceleração centrípeta. 04 é verdadeira: 5 rpm correspondem a ω = π/6 rad/s; em 4 s o deslocamento angular é 2π/3, formando um triângulo isósceles cujos ângulos da base valem π/6. 08 é falsa: com período 2π s e início em (1,0), x = cos(t). 16 é verdadeira porque (x+y)² = x²+y²+2xy = 1+2xy. Soma = 04 + 16 = 20.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -20738,13 +20615,11 @@
                           "sourcePage":  106,
                           "questionNumber":  3,
                           "answerKeyQuestionNumber":  3,
-                          "answerKeyText":  "C",
+                          "answerKeyText":  "20",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -20764,9 +20639,9 @@
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Fuvest-SP A figura ilustra uma roda­‐d’água constituída de 16 cubas. Cada cuba recebe 5 litros de água de uma bica cuja vazão é de 160 litros/min. A roda gira em movimento uniforme. a) Qual o período de rotação da roda? b) Qual a quantidade de água utilizada em uma hora de funcionamento do sistema?",
-                          "answer":  "B",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: B",
+                          "prompt":  "Fuvest-SP Uma roda-d’água possui 16 cubas igualmente distribuídas. Cada cuba recebe 5 litros de água de uma bica cuja vazão é 160 litros por minuto. A roda gira uniformemente.\n\na) Qual é o período de rotação da roda?\nb) Qual é a quantidade de água utilizada em uma hora de funcionamento?",
+                          "answer":  "a) 30 s; b) 9600 L",
+                          "explanation":  "Uma volta completa exige o enchimento das 16 cubas, totalizando 16·5 = 80 L. Com vazão de 160 L/min, o tempo para fornecer 80 L é 80/160 = 0,5 min = 30 s. Em uma hora, o volume fornecido é 160·60 = 9600 L.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -20785,13 +20660,11 @@
                           "sourcePage":  106,
                           "questionNumber":  4,
                           "answerKeyQuestionNumber":  4,
-                          "answerKeyText":  "B",
+                          "answerKeyText":  "a) 30 s; b) 9600 L",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -20801,19 +20674,19 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q5",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Fuvest-SP O raio do cilindro de um carretel mede 2 cm. Uma pessoa, em 10 s, desenrola uniformemente 50 cm de linha que está em contato com o cilindro. P a) Qual o valor da velocidade linear de um ponto da superfície do cilindro? b) Qual a velocidade angular de um ponto P distante 4 cm do eixo de rotação?",
-                          "answer":  "E",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: E",
+                          "prompt":  "Fuvest-SP O raio do cilindro de um carretel mede 2 cm. Uma pessoa desenrola uniformemente 50 cm de linha em 10 s, estando a linha em contato com a superfície do cilindro.\n\na) Qual é a velocidade linear de um ponto da superfície do cilindro?\nb) Qual é a velocidade angular de um ponto P situado a 4 cm do eixo de rotação?",
+                          "answer":  "a) 5 cm/s; b) 2,5 rad/s",
+                          "explanation":  "A velocidade linear da superfície é v = 50/10 = 5 cm/s. A velocidade angular do carretel é ω = v/r = 5/2 = 2,5 rad/s. Todos os pontos de um corpo rígido em rotação possuem a mesma velocidade angular, inclusive o ponto P a 4 cm do eixo.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -20832,13 +20705,11 @@
                           "sourcePage":  106,
                           "questionNumber":  5,
                           "answerKeyQuestionNumber":  5,
-                          "answerKeyText":  "E",
+                          "answerKeyText":  "a) 5 cm/s; b) 2,5 rad/s",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -20951,10 +20822,17 @@
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q9",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "Famema­‐SP 2018 A figura representa um satélite geoestacionário em movimento circular e uniforme a uma distância (d) da superfície da Terra. A trajetória desse satélite está contida no plano equatorial terrestre e seu período de translação é igual ao de rotação da Terra, cerca de 24 h. Terra R Satélite d v Considerando que o raio equatorial da Terra mede R e adotando p 5 3, a velocidade orbital desse satélite é de a) 3 ?1 (R d) 4 b) (R 1 d) 4 c) 2 ?1 (R d) 3 d) (R 1 d) 12 e) (R 1 d) 8",
-                          "answer":  "B",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: B",
+                          "type":  "choice",
+                          "prompt":  "Famema-SP 2018 Um satélite geoestacionário realiza movimento circular uniforme a uma distância d da superfície da Terra. Sua trajetória está contida no plano equatorial e seu período é igual ao período de rotação da Terra, aproximadamente 24 h. Considerando que o raio equatorial da Terra é R e adotando π = 3, a velocidade orbital do satélite é:",
+                          "options":  [
+                                          "3(R + d)/4",
+                                          "(R + d)/4",
+                                          "2(R + d)/3",
+                                          "(R + d)/12",
+                                          "(R + d)/8"
+                                      ],
+                          "answer":  1,
+                          "explanation":  "O raio da órbita é R + d. Em uma volta, o satélite percorre 2π(R+d). Como T = 24 h e π = 3, v = 2·3·(R+d)/24 = (R+d)/4. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -20973,13 +20851,11 @@
                           "sourcePage":  99,
                           "questionNumber":  9,
                           "answerKeyQuestionNumber":  9,
-                          "answerKeyText":  "B",
+                          "answerKeyLetter":  "B",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -20989,10 +20865,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q10",
@@ -21374,10 +21250,17 @@
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q33",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "UEL-PR 2018 Analise a figura a seguir e responda à questão. Máquina de tear industrial. (Disponível em: \u003chttp://www.sohistoria.com.br/resumos/ revolucaoindustrial_clip_image001.jpg\u003e. Acesso em: 2 maio 2017.) Suponha que a máquina de tear industrial (figura) seja composta por 3 engrenagens (A, B e C), conforme a figura a seguir. A B C Suponha também que todos os dentes de cada engrenagem são iguais e que a engrenagem A possui 200 dentes e gira no sentido anti­‐horário a 40 rpm. Já as engrenagens B e C possuem 20 e 100 dentes, respectivamente. Com base nos conhecimentos sobre movimento circular, assinale a alternativa correta quanto à velocidade e ao sentido. a) A engrenagem C gira a 800 rpm e sentido antihorário. b) A engrenagem B gira a 40 rpm e sentido horário. c) A engrenagem B gira a 800 rpm e sentido antihorário. d) A engrenagem C gira a 80 rpm e sentido anti­‐horário. e) A engrenagem C gira a 8 rpm e sentido horário.",
-                          "answer":  "D",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: D",
+                          "type":  "choice",
+                          "prompt":  "UEL-PR 2018 Três engrenagens A, B e C estão acopladas pelo sistema mostrado na figura. Todos os dentes têm o mesmo tamanho. A engrenagem A possui 200 dentes e gira no sentido anti-horário a 40 rpm; B possui 20 dentes e C possui 100 dentes. Assinale a alternativa correta quanto à velocidade de rotação e ao sentido.",
+                          "options":  [
+                                          "A engrenagem C gira a 800 rpm no sentido anti-horário.",
+                                          "A engrenagem B gira a 40 rpm no sentido horário.",
+                                          "A engrenagem B gira a 800 rpm no sentido anti-horário.",
+                                          "A engrenagem C gira a 80 rpm no sentido anti-horário.",
+                                          "A engrenagem C gira a 8 rpm no sentido horário."
+                                      ],
+                          "answer":  3,
+                          "explanation":  "Como os dentes possuem o mesmo tamanho, o raio de cada engrenagem é proporcional ao número de dentes. Na primeira transmissão, ωA·RA = ωB·RB, então ωB = 40·200/20 = 400 rpm. A correia cruzada inverte o sentido, fazendo B girar no sentido horário. Entre B e C, ωB·RB = ωC·RC, então ωC = 400·20/100 = 80 rpm. A segunda correia cruzada inverte novamente o sentido, portanto C gira anti-horário. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -21396,26 +21279,22 @@
                           "sourcePage":  103,
                           "questionNumber":  33,
                           "answerKeyQuestionNumber":  33,
-                          "answerKeyText":  "D",
+                          "answerKeyLetter":  "D",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c5-exercicios-propostos-q33-p103.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q34",
@@ -21468,10 +21347,17 @@
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q35",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "Unesp 2021 Duas polias circulares, I e II, de raios respectivamente iguais a 30 cm e 20 cm estão apoiadas sobre uma mesa horizontal e são acopladas como mostra a figura. Na superfície da polia II está desenhada uma seta vermelha, inicialmente na posição indicada. A polia I é fixa na mesa e não gira, mas a polia II pode girar no sentido horário em torno do seu próprio centro e, simultaneamente, em torno do centro da polia I sem perder contato e sem escorregar em relação a ela. Dessa forma, o centro da polia II percorre a trajetória circular tracejada indicada na figura, que mostra uma visão superior das polias. II Mesa I Quando a polia II der uma volta completa em torno de I e retornar à posição inicial indicada na figura, a seta em sua superfície estará na posição: a)(A) (B) (C) (D) (E) b) (A) (B) (C) (D) (E) c) (A) (B) (C) (D) (E) d) (A) (B) (C) (D) (E) e) (A) (B) (C) (D) (E) 006366_pv_pvv_al_fis_3_vol1_liv_089_112_f1_c5_P3.indd 103 11/08/25 18:54",
-                          "answer":  "B",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: B",
+                          "type":  "choice",
+                          "prompt":  "Unesp 2021 Duas polias circulares I e II, de raios respectivamente 30 cm e 20 cm, estão apoiadas sobre uma mesa horizontal e acopladas como mostra a figura. A polia I é fixa. A polia II rola sem escorregar sobre I enquanto seu centro completa uma volta em torno do centro da polia I. A seta vermelha desenhada sobre II começa apontando para cima. Quando II retornar à posição inicial, para qual direção a seta apontará?",
+                          "options":  [
+                                          "Para a esquerda.",
+                                          "Para baixo.",
+                                          "Para cima.",
+                                          "Diagonalmente para baixo e para a direita.",
+                                          "Para a direita."
+                                      ],
+                          "answer":  1,
+                          "explanation":  "O centro da polia II percorre uma circunferência de raio 30 + 20 = 50 cm. Sem escorregamento, a distância percorrida pelo centro corresponde ao arco girado pela polia: o número de voltas em torno do próprio eixo durante uma órbita é 50/20 = 2,5. Assim, ao completar a volta em torno de I, a seta girou duas voltas e meia, ficando com sentido oposto ao inicial. Como inicialmente apontava para cima, ao final aponta para baixo. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -21490,35 +21376,38 @@
                           "sourcePage":  103,
                           "questionNumber":  35,
                           "answerKeyQuestionNumber":  35,
-                          "answerKeyText":  "B",
+                          "answerKeyLetter":  "B",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c5-exercicios-propostos-q35-p103.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q37",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
-                          "type":  "text",
-                          "prompt":  "Enem Em que opção a seguir a roda traseira dá o maior número de voltas por pedalada? a) b) c) d) e)",
-                          "answer":  "A",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: A",
+                          "type":  "choice",
+                          "prompt":  "Enem As bicicletas possuem uma corrente que liga uma coroa dentada dianteira, movimentada pelos pedais, a uma coroa localizada no eixo da roda traseira. O número de voltas dadas pela roda traseira a cada pedalada depende do tamanho relativo dessas coroas. Em qual configuração mostrada na figura a roda traseira dá o maior número de voltas por pedalada?",
+                          "options":  [
+                                          "Configuração A.",
+                                          "Configuração B.",
+                                          "Configuração C.",
+                                          "Configuração D.",
+                                          "Configuração E."
+                                      ],
+                          "answer":  0,
+                          "explanation":  "A corrente possui a mesma velocidade linear nas duas coroas. Para uma volta completa da coroa acionada pelos pedais, o número de voltas da coroa traseira cresce com a razão entre o raio da coroa dianteira e o raio da coroa traseira. Entre as configurações apresentadas, essa razão é máxima na configuração A. Portanto, a roda traseira realiza o maior número de voltas por pedalada na alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -21537,26 +21426,22 @@
                           "sourcePage":  104,
                           "questionNumber":  37,
                           "answerKeyQuestionNumber":  37,
-                          "answerKeyText":  "A",
+                          "answerKeyLetter":  "A",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c5-exercicios-propostos-q37-p104.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "no_image_required",
-                          "imageStatus":  "no_image_required",
+                          "imageClassification":  "image_required",
+                          "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Questão puramente textual"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-complementares-q6",
@@ -22472,9 +22357,9 @@
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "UFBA Um indivíduo, preocupado com as constantes multas que tem recebido por dirigir o seu automóvel em excesso de velocidade, relata o fato a dois companheiros. Os três amigos não conseguem compreender a razão das multas, já que todos eles observam os limites de velocidade nas vias públicas, através do velocímetro de seus carros. Os seus veículos, de mesmo modelo, têm nos pneus a única característica distinta. O carro A usa os pneus indicados pelo fabricante do veículo; o carro B usa pneus com diâmetro maior do que o indicado, pois o seu proprietário visita, periodicamente, seus familiares no interior, viajando por estradas e caminhos irregulares; o carro C usa pneus com diâmetro menor do que o indicado, uma vez que o seu proprietário gosta de veículos rebaixados, com aspecto esportivo. Os três amigos decidem fazer um experimento, alugam um aparelho de radar e vão para uma estrada deserta. Após realizarem várias medições, construíram o gráfico a seguir. 0 60 60 1 2 3 radar (km/h) velocímetro (km/h) Com base na análise do gráfico, identifique a correspondência existente entre os carros A, B e C e as linhas 1, 2 e 3, que representam as velocidades desses carros, verificando qual dos três amigos deve ser mais precavido ao circular em estradas e avenidas vigiadas pelo radar.",
-                          "answer":  "A ñ 2; B ñ 3; C ñ 1.",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: A ñ 2; B ñ 3; C ñ 1.",
+                          "prompt":  "UFBA Três carros do mesmo modelo diferem apenas pelos pneus. O carro A utiliza pneus com o diâmetro especificado pelo fabricante; o carro B utiliza pneus de diâmetro maior; e o carro C utiliza pneus de diâmetro menor. Os motoristas comparam as velocidades indicadas pelo velocímetro com as medidas por um radar e obtêm o gráfico mostrado.\n\nIdentifique a correspondência entre os carros A, B e C e as linhas 1, 2 e 3 do gráfico e indique qual motorista deve ser mais precavido em vias fiscalizadas por radar.",
+                          "answer":  "A → linha 2; B → linha 3; C → linha 1; o motorista do carro B deve ser mais precavido.",
+                          "explanation":  "O velocímetro é calibrado para o diâmetro de pneu especificado pelo fabricante. Assim, no carro A, a velocidade indicada coincide com a velocidade real medida pelo radar: A corresponde à linha 2.\n\nCom pneus maiores, como no carro B, cada volta da roda percorre uma distância maior. Para uma mesma rotação medida pelo sistema do carro, a velocidade real é maior do que a indicada pelo velocímetro. Portanto, no gráfico velocímetro × radar, B corresponde à linha 3, situada abaixo da relação 1:1.\n\nCom pneus menores, como no carro C, ocorre o contrário: o velocímetro indica uma velocidade maior que a real, correspondendo à linha 1.\n\nO motorista B deve ser o mais precavido porque pode estar trafegando acima do limite mesmo quando seu velocímetro parece indicar uma velocidade admissível.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento circular",
@@ -22493,26 +22378,22 @@
                           "sourcePage":  108,
                           "questionNumber":  13,
                           "answerKeyQuestionNumber":  13,
-                          "answerKeyText":  "A ñ 2; B ñ 3; C ñ 1.",
+                          "answerKeyText":  "A → linha 2; B → linha 3; C → linha 1; o motorista do carro B deve ser mais precavido.",
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "objective_parse_pending"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c5-exercicios-complementares-q13-p108.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  180,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c5-exercicios-complementares-q15",
@@ -36240,7 +36121,7 @@
                           "conceptId":  "fis-lic-l1-f2-c4-campo-eletrico",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Efomm-RJ 2016 Considere que o Gerador de Van de Graaff da figura está em funcionamento, mantendo constante o potencial elétrico de sua cúpula esfé- rica de raio R 0 metros. Quando, então, é fechada a chave CH1, uma esfera condutora de raio R R 4 1 0 5 metros, inicialmente descarregada, conecta-se à cúpula por meio de fios de capacidade desprezí- vel (também é desprezível a indução eletrostática). Atingido o equilíbrio eletrostático, a razão 1 0 s s , en- tre as densidades superficiais de carga elétrica da esfera e da cúpula, vale 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 R 0 CH1 R 1 Gerador 1 1 1 1 1 1 1 1 1 1 1",
+                          "prompt":  "Efomm-RJ 2016 Um gerador de Van de Graaff mantém constante o potencial elétrico de sua cúpula condutora esférica de raio R0. Uma esfera condutora inicialmente descarregada, de raio R1 = R0/4, é conectada à cúpula por fios de capacidade desprezível. Despreze a indução eletrostática. Após o sistema atingir o equilíbrio eletrostático, qual é a razão σ1/σ0 entre a densidade superficial de carga da esfera menor e a densidade superficial de carga da cúpula?",
                           "options":  [
                                           "4",
                                           "2",
@@ -36249,7 +36130,7 @@
                                           "1/4"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "No equilíbrio eletrostático, as duas esferas conectadas ficam no mesmo potencial. Para uma esfera condutora, V = kQ/R, portanto Q1/Q0 = R1/R0 = 1/4. Como σ = Q/(4πR²), temos σ1/σ0 = (Q1/Q0)(R0²/R1²) = (1/4)·16 = 4. Logo, alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Campo elétrico",
@@ -36272,11 +36153,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph",
-                                                "length_outlier"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -36286,10 +36163,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c4-exercicios-propostos-q1",
@@ -54498,7 +54375,7 @@
                           "conceptId":  "fis-lic-l2-f1-c6-cinematica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Acafe-SC Considere a árvore de natal de vetores, montada conforme a figura a seguir. 1 cm 1 cm A alternativa correta que apresenta o módulo, em cm, do vetor resultante é:",
+                          "prompt":  "Acafe-SC Considere a árvore de Natal de vetores, montada conforme a figura a seguir. A alternativa correta que apresenta o módulo, em cm, do vetor resultante é:",
                           "options":  [
                                           "4",
                                           "0",
@@ -54506,7 +54383,7 @@
                                           "6"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Somando vetorialmente todos os segmentos representados na malha, as componentes verticais se anulam. Na direção horizontal, a resultante corresponde a 2 unidades da malha. Como cada quadrícula representa 1 cm, o módulo do vetor resultante é 2 cm. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Cinemática vetorial",
@@ -54529,23 +54406,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L2.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l2-f1-c6-exercicios-propostos-q4-p23.png"],
                           "tags":  [
                                        "física",
                                        "cinemática",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l2-f1-c6-exercicios-propostos-q5",
@@ -66977,7 +66849,7 @@
                           "conceptId":  "fis-lic-l2-f1-c8-dinamica",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Uerj 2022 O funcionário de um supermercado recolhe as mercadorias deixadas nos caixas e as coloca em carrinhos. Após certo tempo de trabalho, as mercadorias recolhidas ocupam quatro carrinhos, interligados pelas correntes I, II e III para facilitar a locomoção, como ilustra a imagem. Ao deslocar os carrinhos, o funcionário exerce uma força F de intensidade igual a 8 N. I II III F = 8 N Considere que cada carrinho, com os produtos neles contidos, possui massa de 10 kg. Desprezando os atritos, a tração na corrente II, em newtons, corresponde a:",
+                          "prompt":  "Uerj 2022 Quatro carrinhos idênticos estão alinhados horizontalmente e ligados por três correntes, denominadas I, II e III da esquerda para a direita. Cada carrinho, já com os produtos, possui massa de 10 kg. O carrinho da extremidade direita é puxado horizontalmente para a direita por uma força de 8 N. Desprezando os atritos, a tração na corrente II, localizada entre o segundo e o terceiro carrinhos, em newtons, é",
                           "options":  [
                                           "2",
                                           "3",
@@ -66985,7 +66857,7 @@
                                           "5"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "A massa total é 4·10 = 40 kg, portanto a aceleração do conjunto é a = 8/40 = 0,2 m/s². A corrente II deve acelerar os dois carrinhos à sua esquerda, cuja massa total é 20 kg. Assim, TII = 20·0,2 = 4 N. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -67008,9 +66880,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L2.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -67020,10 +66890,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Contém referência visual no enunciado"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l2-f1-c8-exercicios-propostos-q38",
@@ -97681,16 +97551,16 @@
                           "conceptId":  "fis-lic-l2-f3-c9-refracao-da-luz",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFG-GO Uma lente convergente de vidro possui distância focal f quando imersa no ar. Essa lente é mergulhada em glicerina, um tipo de álcool com índice de refração maior que o do ar. Considerando- -se que o índice de refração do vidro é o mesmo da glicerina (iguais a 1,5), conclui-se que o diagrama que representa o comportamento de um feixe de luz incidindo sobre a lente imersa na glicerina é o seguinte:",
+                          "prompt":  "UFG-GO (adaptada) Uma lente convergente de vidro possui distância focal f quando imersa no ar. A lente é então totalmente mergulhada em glicerina. Sabendo que o índice de refração do vidro é igual ao da glicerina, ambos iguais a 1,5, o que acontece com um feixe de raios luminosos paralelos ao eixo principal ao atravessar a lente?",
                           "options":  [
-                                          "f",
-                                          "f",
-                                          "f",
-                                          "f",
-                                          "f"
+                                          "Os raios convergem para um foco localizado entre a lente e a posição f.",
+                                          "Os raios emergem divergentes, como se viessem de um foco virtual.",
+                                          "Os raios convergem para o mesmo foco f que a lente possui no ar.",
+                                          "Os raios convergem para um foco mais distante que f.",
+                                          "Os raios atravessam a lente sem desvio, permanecendo paralelos."
                                       ],
                           "answer":  4,
-                          "explanation":  "Quando a lente está imersa em meio com mesmo índice de refração, não há desvio dos raios luminosos na interface, pois n_lente = n_meio. O feixe atravessa a lente sem sofrer refração, mantendo sua trajetória retilínea. Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "A lente só desvia a luz porque existe diferença entre seu índice de refração e o do meio ao redor. Como nvidro = nglicerina = 1,5, não ocorre refração nas superfícies da lente. Sua vergência relativa torna-se nula e um feixe paralelo permanece paralelo. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Refração da luz",
@@ -97713,10 +97583,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L2.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -97726,10 +97593,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l2-f3-c9-exercicios-propostos-q33",
@@ -113329,7 +113196,7 @@
                           "conceptId":  "fis-lic-l3-f1-c10-trabalho",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "AFA-SP 2023 Uma partícula, livre de resistência do ar, é lançada em A sobre uma superfície sem atrito e descreve a trajetória, mostrada na figura a seguir, contida em um plano vertical: AB C h1 h2 x g A velocidade dessa partícula, ao longo da sua trajetória, em função da abcissa x, é indicada pelo gráfico seguinte: 1,0 A B C v (m/s) x 3,0 7,0 Sejam h1 e h2, respectivamente, as maiores alturas e profundidade atingidas pela partícula ao longo de sua trajetória. Nessas condições, e sendo constante a aceleração da gravidade local, a razão h h 2 1 é igual a",
+                          "prompt":  "AFA-SP 2023 (adaptada) Uma partícula move-se sem resistência do ar sobre uma trajetória contida em um plano vertical. Tome o ponto A como nível de referência para a energia potencial gravitacional. Em A, a velocidade da partícula é 3,0 m/s. No ponto B, situado na maior altura h1 acima de A, sua velocidade é 1,0 m/s. No ponto C, situado na maior profundidade h2 abaixo de A, sua velocidade é 7,0 m/s. Sendo constante a aceleração da gravidade, a razão h2/h1 é igual a",
                           "options":  [
                                           "1",
                                           "3",
@@ -113337,7 +113204,7 @@
                                           "7"
                                       ],
                           "answer":  2,
-                          "explanation":  "A questão aborda o princípio da conservação da energia mecânica em sistemas com forças conservativas. Quando não há trabalho de forças dissipativas, a energia mecânica total (cinética + potencial) se conserva. Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Entre A e B, a energia mecânica se conserva: mgh1 = (m/2)(3² − 1²) = 4m, portanto h1 = 4/g. Entre A e C, mgh2 = (m/2)(7² − 3²) = 20m, logo h2 = 20/g. Assim, h2/h1 = 20/4 = 5. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Trabalho, energia e potência",
@@ -113360,10 +113227,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L3.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -113373,10 +113237,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l3-f1-c10-exercicios-propostos-q63",
@@ -117608,7 +117472,7 @@
                           "conceptId":  "fis-lic-l3-f1-c10-trabalho",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "IME-RJ Um objeto com massa 1 kg é largado de uma altura de 20 m e atinge o solo com velocidade de 10 m/s. Sabe-se que a força F de resistência do ar que atua sobre o objeto varia com a altura, conforme o gráfico a seguir. 12 0 h 0 altura (m) F (N) 20 Considerando que g = 10 m/s² , a altura h, em metros, em que a força de resistência do ar passa a ser constante é:",
+                          "prompt":  "IME-RJ (adaptada) Um objeto de massa 1 kg é largado do repouso a 20 m do solo e atinge o solo com velocidade de 10 m/s. Considere g = 10 m/s². Durante a queda, o módulo da força de resistência do ar depende da altura y medida a partir do solo: ao descer de y = 20 m até y = h, a força cresce linearmente de 0 N até 12 N; de y = h até y = 0, permanece constante e igual a 12 N. Qual é o valor de h, em metros?",
                           "options":  [
                                           "4",
                                           "5",
@@ -117617,7 +117481,7 @@
                                           "10"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "A energia potencial inicial é 1·10·20 = 200 J e a energia cinética ao chegar ao solo é (1/2)·1·10² = 50 J. Portanto, 150 J foram dissipados pela resistência do ar. Esse trabalho corresponde à área sob o gráfico F × deslocamento: (1/2)·12·(20 − h) + 12h = 150. Assim, 120 + 6h = 150, de onde h = 5 m. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Trabalho, energia e potência",
@@ -117640,10 +117504,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L3.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -117653,10 +117514,10 @@
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l3-f1-c10-exercicios-complementares-q79",
@@ -146926,16 +146787,16 @@
                           "conceptId":  "fis-lic-l4-f1-c11-impulso",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Fuvest-SP Um meteorito de massa m muito menor que a massa M da Terra aproxima-se dela, seguindo a trajetória indicada na figura. Inicialmente, bem longe da Terra, podemos supor que a trajetória seja retilínea e a sua velocidade v1 . Devido à atração gravitacional da Terra, o meteorito faz uma curva em torno dela e escapa para o espaço sem se chocar com a superfície terrestre. Quando se afasta suficientemente da Terra, atinge uma velocidade final v2, de forma que, aproximadamente, |v2| = |v1|, podendo sua trajetória ser novamente considerada retilínea. Ox e Oy são os eixos de um sistema de referência inercial, no qual a Terra está inicialmente em repouso. M 0 1 y m x 3 5 4 2 u u 2 v1 v Podemos afirmar que a direção e o sentido da quantidade de movimento adquirida pela Terra são indicados aproximadamente pela seta:",
+                          "prompt":  "Fuvest-SP (adaptada) Um meteorito de massa m, muito menor que a massa M da Terra, passa próximo ao planeta e é desviado pela atração gravitacional sem colidir com ele. Muito antes do encontro, sua velocidade tem módulo v e componentes (v·cosθ, −v·sinθ). Muito depois do encontro, sua velocidade tem o mesmo módulo v e componentes (v·cosθ, +v·sinθ). Considere um referencial inercial em que a Terra estava inicialmente em repouso. Desprezando interações externas ao sistema Terra-meteorito, a quantidade de movimento adquirida pela Terra aponta",
                           "options":  [
-                                          "1",
-                                          "2",
-                                          "3",
-                                          "4",
-                                          "5"
+                                          "no sentido positivo do eixo x.",
+                                          "no sentido negativo do eixo x.",
+                                          "no sentido positivo do eixo y.",
+                                          "é nula.",
+                                          "no sentido negativo do eixo y."
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "O meteorito mantém a componente horizontal de sua quantidade de movimento e inverte o sinal da componente vertical. Portanto, sua variação de quantidade de movimento aponta para +y. Pela conservação da quantidade de movimento do sistema Terra-meteorito, a Terra recebe variação oposta, apontando para −y. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Impulso, quantidade de movimento e colisões",
@@ -146958,9 +146819,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L4.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -146970,10 +146829,10 @@
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l4-f1-c11-exercicios-complementares-q23",
@@ -161430,7 +161289,7 @@
                           "conceptId":  "fis-lic-l4-f2-c13-fisica-moderna",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente que, posteriormente, é acomodado em um aparelho. Quando o elemento radioativo decai, os detectores do aparelho captam parte dos fótons emitidos. Radiação Radiação Detector Detector (www.radiologycafe.com. Adaptado.) Sabe-se que a energia associada a um fóton está relacionada com a frequência da radiação pela expressão Ef = h · f, sendo h a constante de Planck, cujo valor é 6,63 × 10⁻³⁴ J ? s. Suponha que o elemento radioativo utilizado em um desses exames seja o tecnécio-99m, que emite radiação cujos fótons têm energia associada de 2,24 × 10⁻¹⁴ J, e considere os detectores de radiação sensíveis às faixas de frequência indicadas na tabela. Detector Faixa de sensibilidade (Hz) I 1012 a 1013 V 1013 a 1014 U 1016 a 1017 X 1017 a 1018 G 1019 a 1020 Para que possam captar os fótons emitidos pelo tecnécio-99m, os detectores utilizados no aparelho devem ser do tipo",
+                          "prompt":  "Famerp-SP 2021 Em certos exames de medicina nuclear, uma substância radioativa é administrada ao paciente e os detectores do aparelho captam fótons emitidos em seu decaimento. A energia de um fóton é dada por E = h·f, sendo h = 6,63 × 10^-34 J·s. O tecnécio-99m utilizado em um desses exames emite fótons de energia 2,24 × 10^-14 J. Considere as seguintes faixas de sensibilidade: detector I: 10^12 a 10^13 Hz; V: 10^13 a 10^14 Hz; U: 10^16 a 10^17 Hz; X: 10^17 a 10^18 Hz; G: 10^19 a 10^20 Hz. Para captar os fótons emitidos pelo tecnécio-99m, o detector deve ser do tipo",
                           "options":  [
                                           "X",
                                           "G",
@@ -161439,7 +161298,7 @@
                                           "U"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Pela relação E = h·f, f = E/h = (2,24 × 10^-14)/(6,63 × 10^-34) ≈ 3,38 × 10^19 Hz. Essa frequência pertence ao intervalo de 10^19 a 10^20 Hz, correspondente ao detector G. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Física Moderna",
                           "subtopic":  "Física Moderna",
@@ -161462,9 +161321,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L4.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -161474,10 +161331,10 @@
                                        "revisando"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l4-f2-c13-revisando-q7",
