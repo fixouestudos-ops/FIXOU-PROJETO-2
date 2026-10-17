@@ -1,14 +1,13 @@
 name = "fixou"
 main = "dist/server/index.js"
 compatibility_date = "2026-09-07"
+workers_dev = true
+
+vars = { SUPPORT_FROM_EMAIL = "FIXOU <onboarding@resend.dev>", SUPPORT_TO_EMAIL = "fixouestudos@gmail.com" }
 
 [assets]
 directory = "./dist"
 not_found_handling = "none"
-
-workers_dev = true
-
-vars = { SUPPORT_FROM_EMAIL = "FIXOU <onboarding@resend.dev>", SUPPORT_TO_EMAIL = "fixouestudos@gmail.com" }
 
 [[d1_databases]]
 binding = "DB"
