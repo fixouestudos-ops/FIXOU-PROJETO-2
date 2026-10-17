@@ -21,6 +21,7 @@ const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null,questionOverrides={},editingQuestion=null,editingFields={};
+let cardGesture=null,starAnimation=0;
 const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0};
 const GUEST_LOCKED=['home','errors'];
 let guestModalTrigger=null;
@@ -40,7 +41,7 @@ function closeGuestModal(){
 }
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
 if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
-function applyPreferences(){const s=state.settings||{};document.documentElement.dataset.theme='dark';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
+function applyPreferences(){const s=state.settings||{},theme=['nebula','light','rest'].includes(s.theme)?s.theme:'nebula';document.documentElement.dataset.theme=theme;document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='nebula'?'#080e1c':theme==='light'?'#f5f8fc':'#f5efe3');}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
 function pushProgress(baseRevision=account.progressRevision){return api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision})}).then(r=>{account.progressRevision=r.revision;});}
@@ -94,42 +95,26 @@ function render(){
  appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#about"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — Conhecimento que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
  document.title=`${title} · FIXOU`;
  if(ui.route==='about')initAboutPage();
+ if(ui.route==='cards'&&flash)initCardGestures();
 }
 function initAboutPage(){
  const page=document.querySelector('.ab-page');
  if(!page)return;
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reduced=state.settings.reduceMotion||window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  const reveals=page.querySelectorAll('[data-reveal]');
  const sections=page.querySelectorAll('[data-section]');
  const cards=page.querySelectorAll('.ab-step,.ab-tool,.ab-problem');
- if(!reduced){
+ if(!reduced&&'IntersectionObserver' in window){
   const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visible');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
   reveals.forEach(el=>io.observe(el));
   sections.forEach(el=>io.observe(el));
   cards.forEach(el=>io.observe(el));
- }
- const orb=page.querySelector('.ab-hero-orb');
- if(orb&&!reduced){
-  let ticking=false;
-  page.addEventListener('mousemove',(e)=>{
-   if(ticking)return;ticking=true;
-   requestAnimationFrame(()=>{
-    const rect=page.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width-0.5;
-    const y=(e.clientY-rect.top)/rect.height-0.5;
-    orb.style.transform=`translate(${x*20}px,${y*20}px)`;
-    cards.forEach(card=>{
-     const cr=card.getBoundingClientRect();
-     const cx=(e.clientX-cr.left)/cr.width-0.5;
-     const cy=(e.clientY-cr.top)/cr.height-0.5;
-     card.style.transform=`perspective(600px) rotateY(${cx*6}deg) rotateX(${-cy*6}deg) translateZ(8px)`;
-    });
-    ticking=false;
-   });
-  });
-  page.addEventListener('mouseleave',()=>{cards.forEach(card=>{card.style.transform='';});});
- }
+ }else reveals.forEach(el=>el.classList.add('ab-visible'));
+ initStarfield(page.querySelector('#fixou-stars'),reduced);
 }
+function initStarfield(canvas,reduced){cancelAnimationFrame(starAnimation);if(!canvas)return;const ctx=canvas.getContext('2d');if(!ctx)return;const ratio=Math.min(devicePixelRatio||1,1.5),w=innerWidth,h=innerHeight;canvas.width=w*ratio;canvas.height=h*ratio;canvas.style.width=w+'px';canvas.style.height=h+'px';const stars=Array.from({length:Math.max(45,Math.min(150,Math.round(w*h/11000)))},(_,i)=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:(.4+Math.random()*1.2)*ratio,v:(5+(i%4)*5)*ratio,a:.25+Math.random()*.55}));let last=performance.now();const draw=now=>{const theme=document.documentElement.dataset.theme||'nebula',moving=!reduced&&!state.settings.reduceMotion&&!document.hidden,speed=theme==='rest'?.18:theme==='light'?.5:1;ctx.clearRect(0,0,canvas.width,canvas.height);for(const s of stars){if(moving){s.x-=s.v*Math.min((now-last)/1000,.05)*speed;if(s.x<0)s.x=canvas.width;}ctx.globalAlpha=s.a*(theme==='nebula'?1:theme==='light'?.45:.24);ctx.fillStyle=theme==='rest'?'#7d674d':theme==='light'?'#5377a4':'#c3d8ff';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;last=now;starAnimation=requestAnimationFrame(draw);};draw(last);}
+function initCardGestures(){const card=document.querySelector('.flash-card-3d');if(!card)return;const arena=card.closest('.flash-arena'),left=arena.querySelector('.swipe-rever'),right=arena.querySelector('.swipe-sei');card.addEventListener('pointerdown',e=>{if(e.button!==0)return;cardGesture={id:e.pointerId,x:e.clientX,y:e.clientY,dragged:false};card.setPointerCapture(e.pointerId);});card.addEventListener('pointermove',e=>{if(!cardGesture||e.pointerId!==cardGesture.id)return;const dx=e.clientX-cardGesture.x,dy=e.clientY-cardGesture.y;if(Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)*.75)cardGesture.dragged=true;if(!cardGesture.dragged)return;card.style.setProperty('--drag-x',dx+'px');card.style.setProperty('--drag-rot',dx/30+'deg');left.style.opacity=dx<0?Math.min(1,-dx/100):0;right.style.opacity=dx>0?Math.min(1,dx/100):0;});const finish=e=>{if(!cardGesture||e.pointerId!==cardGesture.id)return;const dx=e.clientX-cardGesture.x,dy=e.clientY-cardGesture.y,dragged=cardGesture.dragged;cardGesture=null;if(flash?.revealed&&dragged&&Math.abs(dx)>95&&Math.abs(dx)>Math.abs(dy)*1.1){rateCard(dx>0?'good':'forgot');return;}card.style.removeProperty('--drag-x');card.style.removeProperty('--drag-rot');left.style.opacity=right.style.opacity=0;};card.addEventListener('pointerup',finish);card.addEventListener('pointercancel',finish);}
+function particleBurst(){if(state.settings.reduceMotion||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const target=document.querySelector('.answer-celebrate');if(!target)return;for(let i=0;i<16;i++){const p=document.createElement('i');p.className='answer-particle';p.style.setProperty('--particle-x',`${Math.cos(i/16*Math.PI*2)*(55+Math.random()*80)}px`);p.style.setProperty('--particle-y',`${Math.sin(i/16*Math.PI*2)*(35+Math.random()*65)}px`);p.style.background=['#82d6c8','#749fe3','#efd095','#eab4d7'][i%4];target.append(p);setTimeout(()=>p.remove(),900);}}
 function openModal(html){modalElement.innerHTML=html;if(!modalElement.open)modalElement.showModal();}
 function closeModal(){modalElement.close();afterConfirm=null;}
 function ensureProfile(action){if(state.profile?.name){action();return;}afterProfile=action;openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><img class="modal-logo" src="assets/fixou-logo.png" alt="FIXOU — Conhecimento que fica"><div class="eyebrow modal-eyebrow">SUA JORNADA COMEÇA AQUI</div><h2 id="modal-title">Como podemos chamar você?</h2><p>Vamos guardar sua evolução e preparar seu primeiro treino.</p><form id="onboarding-form" class="form-stack"><label>Seu nome<input name="name" required maxlength="40" autocomplete="given-name" placeholder="Digite seu nome" autofocus></label><label>Seu objetivo <span class="meta">(opcional)</span><input name="goal" maxlength="100" placeholder="Ex.: Medicina na USP"></label><button class="primary" type="submit">Começar minha jornada →</button><p class="note">Seu progresso é salvo automaticamente na sua conta FIXOU.</p></form>`);}
@@ -151,7 +136,7 @@ function advance(forcedId=null){
 function complete(){if(!session||session.finished)return;finishSession(state,session);track('study_session_completed',{sessionId:session.id,mode:session.mode,total:session.answered.length,correct:session.score,seconds:Math.round(session.answered.reduce((n,a)=>n+(a.seconds||0),0))});if(state.daily?.sessionId===session.id)state.daily.completed=true;saveProgress();render();if(ui.route==='quiz')window.scrollTo(0,0);}
 function submitAnswer(){if(!session||session.finished||session.feedback)return;const q=questionById(BANK,session.currentId);if(!canSubmitDraft(q,session.draft)){toast('Escolha uma resposta e indique sua confiança.');return;}if(session.endsAt&&Date.now()>=session.endsAt){complete();return;}
  const attempt=recordAnswer(state,BANK,session,q,draftAnswer(q,session.draft),session.draft.confidence,session.questionSeconds||0);
- if(!attempt)return;track('question_answered',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id,seconds:Math.round(attempt.seconds||0)});track(attempt.correct?'question_correct':'question_incorrect',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id});track('topic_mastery_updated',{topicId:q.conceptId,score:masteryValue(state.concepts[q.conceptId],state.reviews[q.conceptId])});saveProgress();render();document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+ if(!attempt)return;track('question_answered',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id,seconds:Math.round(attempt.seconds||0)});track(attempt.correct?'question_correct':'question_incorrect',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id});track('topic_mastery_updated',{topicId:q.conceptId,score:masteryValue(state.concepts[q.conceptId],state.reviews[q.conceptId])});saveProgress();render();if(attempt.correct)requestAnimationFrame(particleBurst);document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function updateDraft(){saveProgress();const q=questionById(BANK,session.currentId),submit=document.querySelector('[data-action="submit-answer"]');if(submit)submit.disabled=!canSubmitDraft(q,session.draft);}
 function startCards(kind,id){ensureProfile(()=>{const flashConcepts=BANK.concepts.filter(c=>c.flashcard&&!c.flashcard.needsReview);let concepts=kind==='one'?flashConcepts.filter(c=>c.id===id):kind==='due'?dueConcepts(state,flashConcepts):flashConcepts.filter(c=>{const status=ui.cardFilters.status;return (!ui.cardFilters.discipline||c.discipline===ui.cardFilters.discipline)&&(!ui.cardFilters.topic||c.topic===ui.cardFilters.topic)&&(!status||status==='new'&&!state.reviews[c.id]||status==='due'&&isDue(state,c.id)||status==='favorites'&&state.favorites.includes('c:'+c.id));});
@@ -166,6 +151,9 @@ function rateCard(rating){if(!flash?.revealed)return;const id=flash.currentId,pr
 function downloadText(name,text,type='application/json'){const blob=new Blob([text],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
+ if(action==='set-theme'){if(!['nebula','light','rest'].includes(id))return;state.settings.theme=id;applyPreferences();saveProgress();render();toast('Aparência salva.');return;}
+ if(action==='about-tool'){document.querySelectorAll('.about-tool-list button').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.about-tool-detail');if(detail){detail.querySelector('.ab-tool-icon').textContent=element.dataset.toolIcon||'◈';detail.querySelector('h3').textContent=element.dataset.toolName||'';detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+ if(action==='flip-card'){if(flash){flash.revealed=!flash.revealed;render();}return;}
  if(action==='logout'){performLogout();return;}
  if(action==='guest-lock'){openGuestModal(id,element);return;}
  if(action==='close-guest-modal'){closeGuestModal();return;}
@@ -278,6 +266,8 @@ document.addEventListener('submit',event=>{
 });
 document.addEventListener('keydown',event=>{
  const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);
+ if(!editing&&!modalElement.open&&ui.route==='quiz'&&session){const q=questionById(BANK,session.currentId);if(!session.feedback&&['choice','boolean'].includes(q?.type)){const index='abcd'.indexOf(event.key.toLowerCase());if(index>=0&&index<q.options.length){event.preventDefault();session.draft.answer=index;updateDraft();render();return;}}if(session.feedback&&event.key==='Enter'){event.preventDefault();advance();return;}}
+ if(!editing&&!modalElement.open&&ui.route==='cards'&&flash){if(event.key==='ArrowLeft'){event.preventDefault();rateCard('forgot');return;}if(event.key==='ArrowRight'){event.preventDefault();rateCard('good');return;}if(event.key==='Enter'||event.key===' '){event.preventDefault();flash.revealed=!flash.revealed;render();return;}}
  if(event.key==='Escape' && modalElement.open){event.preventDefault();closeGuestModal();return;}
  if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}
  if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}

@@ -73,36 +73,39 @@ export function aboutScreen({account}){
  const finalBtn2=logged?'':`<a href="#login" class="ab-btn ab-btn-ghost">Entrar</a>`;
  const tools=ABOUT_CONTENT.tools.items.map((t,i)=>toolCard(t,i)).join('');
  const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="ab-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
+ const toolRoutes=['home','train','cards','errors','map','books','stats','favorites'];
  return `
-<section class="ab-page">
+<section class="ab-page fixou-about">
+ <canvas class="starfield" id="fixou-stars" aria-hidden="true"></canvas><div class="screen-glow" aria-hidden="true"></div>
  <div class="ab-bg-glow ab-bg-glow-1"></div>
  <div class="ab-bg-glow ab-bg-glow-2"></div>
  <div class="ab-bg-glow ab-bg-glow-3"></div>
 
- <header class="ab-hero">
+ <div class="about-theme-switch" role="group" aria-label="Aparência"><button data-action="set-theme" data-id="nebula">✦ Nebulosa</button><button data-action="set-theme" data-id="light">☀ Claro</button><button data-action="set-theme" data-id="rest">◐ Descanso</button></div>
+ <header class="ab-hero approved-hero">
   <div class="ab-hero-content">
    <h1 class="ab-hero-headline" data-reveal>${escapeHTML(hero.headline)}<br><span class="ab-hero-accent">${escapeHTML(hero.subline)}</span></h1>
    <p class="ab-hero-desc" data-reveal>${escapeHTML(hero.description)}</p>
    <div class="ab-hero-ctas" data-reveal>${cta1}${cta2}</div>
   </div>
-  <div class="ab-hero-orb" aria-hidden="true"><div class="ab-orb-ring"></div><div class="ab-orb-ring ab-orb-ring-2"></div></div>
+  <div class="stickerboard" aria-label="Expressões da jornada de estudo"><span class="sticker errei">errei</span><span class="sticker bora">bora</span><span class="sticker quase">quase!</span><span class="sticker agora">agora entendi</span><span class="sticker dominei">dominei!</span><span class="sticker revisar">revisar amanhã</span></div>
  </header>
 
- <section class="ab-section ab-origin" data-section>
+ <section class="ab-section ab-origin editorial-section" data-section>
   <div class="ab-section-inner">
    <h2 data-reveal>${ABOUT_CONTENT.origin.title}</h2>
    <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.origin.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-why" data-section>
+ <section class="ab-section ab-why editorial-section" data-section>
   <div class="ab-section-inner">
    <h2 data-reveal>${ABOUT_CONTENT.whyExists.title}</h2>
    <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whyExists.text)}</p>
   </div>
  </section>
 
- <section class="ab-section ab-differential" data-section>
+ <section class="ab-section ab-differential editorial-section" data-section>
   <div class="ab-section-inner ab-differential-inner">
    <h2 data-reveal>${ABOUT_CONTENT.differential.title}</h2>
    <blockquote class="ab-highlight-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.highlight)}</blockquote>
@@ -110,7 +113,7 @@ export function aboutScreen({account}){
   </div>
  </section>
 
- <section class="ab-section ab-pilot" data-section>
+ <section class="ab-section ab-pilot editorial-section" data-section>
   <div class="ab-section-inner">
    <h2 data-reveal>${ABOUT_CONTENT.pilot.title}</h2>
    <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.text)}</p>
@@ -118,7 +121,7 @@ export function aboutScreen({account}){
   </div>
  </section>
 
- <section class="ab-section ab-report" data-section>
+ <section class="ab-section ab-report editorial-section" data-section>
   <div class="ab-section-inner ab-report-inner">
    <h2 data-reveal>${ABOUT_CONTENT.report.title}</h2>
    <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.report.text)}</p>
@@ -126,7 +129,7 @@ export function aboutScreen({account}){
   </div>
  </section>
 
- <section class="ab-section ab-support" data-section>
+ <section class="ab-section ab-support editorial-section" data-section>
   <div class="ab-section-inner ab-support-inner">
    <h2 data-reveal>${ABOUT_CONTENT.support.title}</h2>
    <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.support.text)}</p>
@@ -137,7 +140,7 @@ export function aboutScreen({account}){
  <section class="ab-section ab-tools" data-section>
   <div class="ab-section-inner">
    <h2 data-reveal>${ABOUT_CONTENT.tools.title}</h2>
-   <div class="ab-tools-grid">${tools}</div>
+   <div class="about-tools"><div class="about-tool-list">${ABOUT_CONTENT.tools.items.map((t,i)=>`<button data-action="about-tool" data-id="${toolRoutes[i]}" data-tool-icon="${escapeHTML(t.icon)}" data-tool-name="${escapeHTML(t.name)}" data-tool-desc="${escapeHTML(t.desc)}" aria-pressed="${i===0}"><span>${t.icon}</span>${escapeHTML(t.name)}</button>`).join('')}</div><article class="about-tool-detail"><span class="ab-tool-icon">${ABOUT_CONTENT.tools.items[0].icon}</span><h3>${escapeHTML(ABOUT_CONTENT.tools.items[0].name)}</h3><p>${escapeHTML(ABOUT_CONTENT.tools.items[0].desc)}</p><a href="#home" class="ab-btn ab-btn-primary">Abrir ${escapeHTML(ABOUT_CONTENT.tools.items[0].name)}</a></article></div>
   </div>
  </section>
 

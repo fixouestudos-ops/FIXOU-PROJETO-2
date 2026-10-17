@@ -1,0 +1,34 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createState,validateState} from '../src/save.js';
+import {cardsScreen} from '../src/screens.js';
+import {settingsScreen} from '../src/screens-settings.js';
+import {aboutScreen} from '../src/screens-about.js';
+
+const concept={id:'fisica-cinematica-mru',discipline:'fisica',topic:'Mecânica',subtopic:'MRU',summary:'Movimento com velocidade constante.',officialIds:[],flashcard:{front:'Como reconhecer MRU?',back:'A velocidade permanece constante.'}};
+const bank={concepts:[concept],questions:[]};
+
+test('os três temas aparecem nas configurações e o tema escolhido sobrevive à validação',()=>{
+ const state=createState();
+ state.settings.theme='rest';
+ const validated=validateState(state);
+ assert.equal(validated.settings.theme,'rest');
+ const html=settingsScreen({state:validated,account:{name:'Estudante',email:'e@x.test'},loggingOut:false});
+ for(const theme of ['nebula','light','rest'])assert.match(html,new RegExp(`data-id="${theme}"`));
+ assert.match(html,/theme-rest[^>]+aria-pressed="true"/);
+});
+
+test('Quem Somos oferece os seis balões e ferramentas que apontam para rotas reais',()=>{
+ const html=aboutScreen({account:{name:'Estudante'}});
+ for(const phrase of ['errei','bora','quase!','agora entendi','dominei!','revisar amanhã'])assert.ok(html.includes(phrase));
+ for(const route of ['home','train','cards','errors','map','books','stats','favorites'])assert.ok(html.includes(`data-id="${route}"`));
+});
+
+test('Memorizar preserva quatro avaliações e expõe cartão 3D acessível',()=>{
+ const state=createState();
+ const html=cardsScreen({state,bank,cardFilters:{},flash:{ids:[concept.id],currentId:concept.id,index:0,revealed:true}});
+ assert.match(html,/flash-card-3d revealed flipped/);
+ assert.match(html,/aria-label="Ocultar resposta"/);
+ for(const rating of ['forgot','hard','good','easy'])assert.ok(html.includes(`data-id="${rating}"`));
+ assert.ok(html.includes('← REVER')&&html.includes('SEI →'));
+});
