@@ -1,7 +1,7 @@
 export const SAVE_KEY = 'fixou:2027:v1';
 export const LEGACY_SAVE_KEY = 'fuvest-mastery:2027:v1';
 export const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'nebula',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
-export const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
+export const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},errorVaultSeenAt:0,favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
 export function validateState(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||input.version!==1)throw new Error('Este arquivo não é um backup compatível do FUVEST Mastery.');
  const raw=JSON.stringify(input);if(raw.length>15000000)throw new Error('O backup é muito grande.');
@@ -20,6 +20,7 @@ export function validateState(input){
  for(const c of Object.values(input.concepts)){if(!c||!Number.isFinite(c.score)||c.score<0||c.score>100||!isTime(c.lastAt)||!strings(c.questionIds)||!strings(c.days)||!strings(c.recoveryIds)||!Array.isArray(c.recent)||c.recent.some(v=>v!==0&&v!==1)||!['attempts','correct','consecutiveErrors','consecutiveCorrect'].every(k=>count(c[k])))throw new Error('Dados de domínio inválidos.');}
  for(const r of Object.values(input.reviews)){if(!r||!isTime(r.dueAt)||!isTime(r.lastAt)||!Number.isFinite(r.interval)||r.interval<0||r.interval>365||!Number.isFinite(r.ease)||r.ease<1.3||r.ease>3||!count(r.repetitions)||!count(r.lapses)||r.flashRewardAt!==undefined&&!isTime(r.flashRewardAt))throw new Error('Agenda de revisão inválida.');}
  for(const e of Object.values(input.errors)){if(!e||typeof e.questionId!=='string'||typeof e.conceptId!=='string'||!isTime(e.lastAt)||!Number.isFinite(e.count))throw new Error('Cofre dos erros inválido.');}
+ if(input.errorVaultSeenAt!==undefined&&!isTime(input.errorVaultSeenAt))throw new Error('Notificações do Cofre inválidas.');
  for(const [key,a] of Object.entries(input.activity)){if(!/^\d{4}-\d{2}-\d{2}$/.test(key)||!a||!Number.isFinite(a.answers)||!Number.isFinite(a.seconds)||!Number.isFinite(a.reviews))throw new Error('Calendário inválido.');}
  if(input.favorites.some(x=>typeof x!=='string')||input.achievements.some(x=>typeof x!=='string'))throw new Error('Favoritos ou conquistas inválidos.');
  if(!count(input.records.lightning)||!count(input.records.survival))throw new Error('Recordes inválidos.');
@@ -31,7 +32,8 @@ export function validateState(input){
   const d=s.draft;if(!d||typeof d.text!=='string'||!Array.isArray(d.order)||!Array.isArray(d.match)||d.order.some(v=>!count(v))||d.match.some(v=>!Number.isInteger(v)||v< -1)||d.answer!==null&&!count(d.answer)||d.confidence!==null&&!['sure','think','guess'].includes(d.confidence)||!Number.isFinite(s.questionSeconds)||s.questionSeconds<0||s.phase==='feedback'&&(!attempt(s.feedback)||s.feedback.questionId!==s.currentId))throw new Error('Resposta em andamento inválida.');
  }
  const theme=['nebula','light','rest'].includes(input.settings.theme)?input.settings.theme:'nebula';
- return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings,theme}};
+ const errorVaultSeenAt=input.errorVaultSeenAt===undefined?Object.values(input.errors).reduce((latest,error)=>Math.max(latest,error.lastAt),0):input.errorVaultSeenAt;
+ return {...base,...input,errorVaultSeenAt,settings:{...SETTINGS_DEFAULTS,...input.settings,theme}};
 }
 export function loadState(storage=globalThis.localStorage){
  try{const raw=storage.getItem(SAVE_KEY)||storage.getItem(LEGACY_SAVE_KEY);if(!raw)return {state:createState(),warning:null};return {state:validateState(JSON.parse(raw)),warning:storage.getItem(SAVE_KEY)?null:'Migramos seu progresso local para o FIXOU.'};}

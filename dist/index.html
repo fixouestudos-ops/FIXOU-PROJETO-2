@@ -385,8 +385,11 @@ p{margin:0}
 .navitem{width:100%;border:1px solid transparent;background:transparent;border-radius:13px;display:flex;align-items:center;gap:11px;padding:10px 12px;text-align:left;cursor:pointer;font-size:13px;color:var(--muted);line-height:1.4;transition:background .16s,border-color .16s,color .16s}
 .navitem:hover{background:var(--highlight);color:var(--ink)}
 .navitem.active{background:var(--highlight);border-color:var(--line-strong);color:var(--primary);font-weight:800}
-.navIcon{width:21px;flex:none;text-align:center;font-style:normal;font-size:19px;line-height:1;color:var(--primary)}
-.navitem.active .navIcon{color:var(--primary)}
+.navIcon{--ice-icon:#9edfff;width:22px;height:22px;flex:none;display:grid;place-items:center;color:var(--ice-icon);filter:drop-shadow(0 1px 3px rgba(89,171,222,.18))}
+.navIcon .navSvg{display:block;width:22px;height:22px;overflow:visible}
+.navitem.active .navIcon{color:var(--ice-icon)}
+html[data-theme="light"] .navIcon{--ice-icon:#4f80bd}
+html[data-theme="rest"] .navIcon{--ice-icon:#667f9f}
 .dot{height:7px;width:7px;border-radius:50%;background:#de9a80;margin-left:auto}
 .sidefooter{margin-top:auto;padding:18px 12px 4px}
 .vest{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--muted);display:flex;align-items:center;gap:8px}
@@ -655,6 +658,6 @@ html.reveal-ready [data-reveal]{transition:opacity .68s ease-out,transform .68s 
   <div id="chart-tip" class="chart-tip" role="tooltip"></div>
   <dialog id="modal" aria-labelledby="modal-title"></dialog>
   <noscript>Ative o JavaScript do navegador para usar o FIXOU.</noscript>
-  <script src="assets/app.57b8dd54.js"></script>
+  <script src="assets/app.3ec81424.js"></script>
 </body>
 </html>

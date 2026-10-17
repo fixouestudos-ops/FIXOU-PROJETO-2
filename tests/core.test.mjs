@@ -9,6 +9,8 @@ import {gradeAnswer,createSession,recordAnswer,pickNextQuestion,finishSession,ma
 import {studyStats} from '../src/statistics.js';
 import {diagramSVG} from '../src/components.js';
 import {PHYSICS_AREA_ORDER} from '../src/config.js';
+import {SIDEBAR_ICONS} from '../src/sidebar-icons.js';
+import {hasNewVaultErrors,markVaultErrorsSeen} from '../src/error-vault-notifications.js';
 const bank=JSON.parse(fs.readFileSync(new URL('../content/bank.json',import.meta.url),'utf8'));
 const curriculum=JSON.parse(fs.readFileSync(new URL('../content/curriculum.json',import.meta.url),'utf8'));
 const now=new Date(2026,8,6,12).getTime(),day=86400000;
@@ -39,3 +41,11 @@ test('Física usa somente as oito áreas FIXOU e preserva todas as questões',()
 test('diagramas autorais de Física são renderizados com descrição acessível',()=>{const motion=diagramSVG({type:'motion-line'}),graph=diagramSVG({type:'velocity-graph'});assert.match(motion,/sessenta metros/);assert.match(graph,/Gráfico de velocidade/);assert.match(graph,/class="diagram-area"/);});
 
 test('banco ativo e histórico continuam válidos após importar',()=>{const s=createState(),publishable=bank.questions.filter(q=>!q.needsReview);for(const q of publishable){const a=createSession(s,bank,'practice',{},now);recordAnswer(s,bank,a,q,q.answer,'think',25,now);finishSession(s,a,now+25000);}const restored=importState(exportState(s));assert.equal(restored.history.length,publishable.length);assert.equal(studyStats(restored,bank.concepts,now).accuracy,100);});
+
+test('sidebar possui doze ícones SVG independentes conforme as abas',()=>{const ids=['about','home','train','cards','errors','map','books','stats','favorites','settings','admin','review'];assert.deepEqual(Object.keys(SIDEBAR_ICONS),ids);assert.equal(new Set(Object.values(SIDEBAR_ICONS)).size,12);for(const id of ids){assert.match(SIDEBAR_ICONS[id],/^<svg/);assert.match(SIDEBAR_ICONS[id],/class="navSvg"/);}});
+
+test('indicador do Cofre aparece somente após erro realmente registrado',()=>{const s=createState(),q=multiConceptQ,a=createSession(s,bank,'practice',{},now);assert.equal(hasNewVaultErrors(s),false);recordAnswer(s,bank,a,q,'resposta incorreta','sure',20,now);assert.ok(s.errors[q.id]);assert.equal(hasNewVaultErrors(s),true);});
+
+test('abrir o Cofre limpa a notificação e a persistência sobrevive ao reload',()=>{const s=createState(),q=multiConceptQ,a=createSession(s,bank,'practice',{},now),m=memory();recordAnswer(s,bank,a,q,'resposta incorreta','sure',20,now);persistState(s,m);let restored=loadState(m).state;assert.equal(hasNewVaultErrors(restored),true);markVaultErrorsSeen(restored);persistState(restored,m);restored=loadState(m).state;assert.equal(hasNewVaultErrors(restored),false);assert.equal(restored.errors[q.id].resolved,false);});
+
+test('erro resolvido e progresso legado não geram notificação falsa',()=>{const s=createState(),q=multiConceptQ,a=createSession(s,bank,'practice',{},now);recordAnswer(s,bank,a,q,'resposta incorreta','sure',20,now);s.errors[q.id].resolved=true;assert.equal(hasNewVaultErrors(s),false);const legacy=JSON.parse(JSON.stringify(s));legacy.errors[q.id].resolved=false;delete legacy.errorVaultSeenAt;const migrated=importState(JSON.stringify({app:'FIXOU',state:legacy}));assert.equal(migrated.errorVaultSeenAt,legacy.errors[q.id].lastAt);assert.equal(hasNewVaultErrors(migrated),false);});

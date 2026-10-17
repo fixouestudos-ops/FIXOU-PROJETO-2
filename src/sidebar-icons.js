@@ -1,0 +1,18 @@
+const icon=(body)=>`<svg class="navSvg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
+
+export const SIDEBAR_ICONS={
+ about:icon('<circle cx="16" cy="8" r="3.4" fill="currentColor" fill-opacity=".13"/><circle cx="7.5" cy="11" r="2.7" fill="currentColor" fill-opacity=".1"/><circle cx="24.5" cy="11" r="2.7" fill="currentColor" fill-opacity=".1"/><path d="M9.7 25v-3.2a6.3 6.3 0 0 1 12.6 0V25M2.8 24v-2.2a4.8 4.8 0 0 1 6-4.7M29.2 24v-2.2a4.8 4.8 0 0 0-6-4.7"/>'),
+ home:icon('<path d="M6.5 24.5c3.2-5.4 7-2.2 9.5-6.7 1.7-3 3.5-3.4 5.8-2.1"/><path d="M7.5 26.5c2.8 0 5-2.2 5-5 0-3.5-5-8.5-5-8.5s-5 5-5 8.5c0 2.8 2.2 5 5 5Z" fill="currentColor" fill-opacity=".1"/><circle cx="7.5" cy="21.4" r="1.6"/><path d="M24.5 17.5c2.8 0 5-2.2 5-5 0-3.5-5-8.5-5-8.5s-5 5-5 8.5c0 2.8 2.2 5 5 5Z" fill="currentColor" fill-opacity=".1"/><circle cx="24.5" cy="12.4" r="1.6"/>'),
+ train:icon('<circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity=".08"/><circle cx="16" cy="16" r="9"/><path d="m13.5 11.5 7.5 4.5-7.5 4.5v-9Z" fill="currentColor" fill-opacity=".18"/>'),
+ cards:icon('<rect x="5" y="4" width="22" height="24" rx="3" fill="currentColor" fill-opacity=".06"/><path d="M10 4v9l3-2 3 2V4M10 18h12M10 22h9"/><path d="M8 7H5M27 8h-2M27 13h-2M27 18h-2M27 23h-2"/>'),
+ errors:icon('<rect x="5" y="4" width="22" height="24" rx="3" fill="currentColor" fill-opacity=".07"/><rect x="9" y="8" width="14" height="16" rx="2"/><circle cx="16" cy="16" r="4.2"/><path d="M16 12v2.1M19.8 16H18M16 20v-2M12.2 16H14M27 9h2M27 14h2M27 19h2M27 24h2M8 28v2M24 28v2"/>'),
+ map:icon('<rect x="4" y="6" width="24" height="22" rx="3" fill="currentColor" fill-opacity=".06"/><path d="M4 12h24M10 3v6M22 3v6"/><rect x="8" y="16" width="4" height="3" rx=".6"/><rect x="14" y="16" width="4" height="3" rx=".6"/><rect x="20" y="16" width="4" height="3" rx=".6"/><rect x="8" y="22" width="4" height="3" rx=".6"/><rect x="14" y="22" width="4" height="3" rx=".6"/><rect x="20" y="22" width="4" height="3" rx=".6"/>'),
+ books:icon('<path d="M16 27c-2.8-3-6.3-4.2-11-3.5V6.2c4.8-.7 8.5.6 11 3.4V27Z" fill="currentColor" fill-opacity=".06"/><path d="M16 27c2.8-3 6.3-4.2 11-3.5V6.2c-4.8-.7-8.5.6-11 3.4V27ZM16 9.6V27M8.5 11c1.7 0 3.2.3 4.6 1M8.5 15c1.7 0 3.2.3 4.6 1M23.5 11c-1.7 0-3.2.3-4.6 1M23.5 15c-1.7 0-3.2.3-4.6 1"/>'),
+ stats:icon('<path d="M4 27h24M7 27v-7h5v7M14 27V15h5v12M21 27V10h5v17" fill="currentColor" fill-opacity=".08"/><path d="m5 15 7-6 5 3 10-8M22 4h5v5"/>'),
+ favorites:icon('<path d="m16 3.8 3.8 7.7 8.5 1.2-6.1 6 1.4 8.4-7.6-4-7.6 4 1.4-8.4-6.1-6 8.5-1.2L16 3.8Z" fill="currentColor" fill-opacity=".08"/>'),
+ settings:icon('<path d="M13 4.8h6l.8 3a9 9 0 0 1 2 1.2l3-.8 3 5.2-2.2 2.2v2.8l2.2 2.2-3 5.2-3-.8a9 9 0 0 1-2 1.2l-.8 3h-6l-.8-3a9 9 0 0 1-2-1.2l-3 .8-3-5.2 2.2-2.2v-2.8l-2.2-2.2 3-5.2 3 .8a9 9 0 0 1 2-1.2l.8-3Z" fill="currentColor" fill-opacity=".06"/><circle cx="16" cy="17" r="4"/>'),
+ admin:icon('<rect x="4" y="4" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="18" y="4" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="4" y="18" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="18" y="18" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/>'),
+ review:icon('<path d="M26.7 12A11.5 11.5 0 1 0 27 19M27 5v7h-7"/><path d="m10.5 17 3.6 3.7 7.6-8.1" fill="currentColor" fill-opacity=".08"/>')
+};
+
+export function sidebarIcon(id){return SIDEBAR_ICONS[id]||'';}
