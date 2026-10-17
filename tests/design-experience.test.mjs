@@ -15,7 +15,7 @@ test('os três temas aparecem nas configurações e o tema escolhido sobrevive �
  assert.equal(validated.settings.theme,'rest');
  const html=settingsScreen({state:validated,account:{name:'Estudante',email:'e@x.test'},loggingOut:false});
  for(const theme of ['nebula','light','rest'])assert.match(html,new RegExp(`data-id="${theme}"`));
- assert.match(html,/theme-rest[^>]+aria-pressed="true"/);
+ assert.match(html,/themeCard[^>]+data-id="rest"[^>]+aria-pressed="true"/);
 });
 
 test('Quem Somos oferece os seis balões e ferramentas que apontam para rotas reais',()=>{
@@ -24,11 +24,11 @@ test('Quem Somos oferece os seis balões e ferramentas que apontam para rotas re
  for(const route of ['home','train','cards','errors','map','books','stats','favorites'])assert.ok(html.includes(`data-id="${route}"`));
 });
 
-test('Memorizar preserva quatro avaliações e expõe cartão 3D acessível',()=>{
+test('Memorizar expõe as duas classificações do protótipo e cartão 3D acessível',()=>{
  const state=createState();
  const html=cardsScreen({state,bank,cardFilters:{},flash:{ids:[concept.id],currentId:concept.id,index:0,revealed:true}});
- assert.match(html,/flash-card-3d revealed flipped/);
+ assert.match(html,/flashCard flash-card-3d flipped/);
  assert.match(html,/aria-label="Ocultar resposta"/);
- for(const rating of ['forgot','hard','good','easy'])assert.ok(html.includes(`data-id="${rating}"`));
- assert.ok(html.includes('← REVER')&&html.includes('SEI →'));
+ for(const rating of ['forgot','good'])assert.ok(html.includes(`data-id="${rating}"`));
+ assert.ok(html.includes('← Rever')&&html.includes('Sei →'));
 });
