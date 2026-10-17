@@ -21,11 +21,12 @@ test('os três temas aparecem nas configurações e o tema escolhido sobrevive �
 test('Quem Somos oferece os seis balões e ferramentas que apontam para rotas reais',()=>{
  const html=aboutScreen({account:{name:'Estudante'}});
  for(const phrase of ['errei','bora','quase!','agora entendi','dominei!','revisar amanhã'])assert.ok(html.includes(phrase));
+ for(const title of ['Feito de estudantes para estudantes','Por que o FIXOU existe','O que torna o FIXOU diferente','Ainda somos um projeto-piloto','Encontrou um erro?','Ajude a construir o FIXOU','Conheça as ferramentas','Aprenda a usar o FIXOU'])assert.ok(html.includes(title));
  for(const note of ['a gente também já passou por isso','o estudo faz mais sentido com direção','descubra o que já fixou','ainda crescendo!','ops!','bora juntos'])assert.ok(html.includes(`<div class="handnote">${note}</div>`));
  for(const route of ['home','train','cards','errors','map','books','stats','favorites'])assert.ok(html.includes(`data-id="${route}"`));
- assert.match(html,/sectionGroup aboutStarRegion/);
- assert.match(html,/tools aboutStarRegion/);
- assert.match(html,/id="aboutToolDetail" aria-live="polite"/);
+ assert.ok(!html.includes('aboutStarRegion'));
+ assert.ok(!html.includes('editorialIndex'));
+ assert.ok(!html.includes('— O FIXOU'));
 });
 
 test('Memorizar expõe as duas classificações do protótipo e cartão 3D acessível',()=>{

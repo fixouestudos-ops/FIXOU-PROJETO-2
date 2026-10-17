@@ -628,13 +628,11 @@ html.reveal-ready [data-reveal]{transition:opacity .68s ease-out,transform .68s 
 @media(max-width:850px){#app.app{display:block}.workspace.mainArea{margin-left:0}.side nav{display:flex;gap:3px}.side .nav-logout{margin:0}.content#main{padding:0 18px 65px}.approved-settings .settings-layout{grid-template-columns:1fr}}.side{width:254px}
 @media(max-width:850px){.side{width:100%!important;max-width:none!important;transform:none!important;box-shadow:none!important}.workspace.mainArea{width:100%;min-width:0}.menu-toggle{display:none}.nav-backdrop{display:none!important}}
 
-/* Ajustes pontuais da homepage aprovada: anotações e continuidade do céu estrelado. */
-.fixou-approved-home{--about-star-rgb:195,216,255;--about-star-strength:.42}
-html[data-theme="light"] .fixou-approved-home{--about-star-rgb:83,119,164;--about-star-strength:.16}
-html[data-theme="rest"] .fixou-approved-home{--about-star-rgb:125,103,77;--about-star-strength:.10}
-.fixou-approved-home .handnote{display:block;width:max-content;max-width:100%;color:var(--primary);text-wrap:balance;opacity:.96}
-.aboutStarRegion{position:relative;isolation:isolate}
-.aboutStarRegion::before{content:"";position:absolute;z-index:-1;inset:-38px clamp(-56px,-4vw,-18px);pointer-events:none;opacity:var(--about-star-strength);background-image:radial-gradient(circle,rgba(var(--about-star-rgb),.72) 0 1px,transparent 1.7px),radial-gradient(circle,rgba(var(--about-star-rgb),.42) 0 .8px,transparent 1.5px),radial-gradient(circle,rgba(var(--about-star-rgb),.25) 0 .7px,transparent 1.35px);background-size:137px 149px,211px 197px,89px 103px;background-position:17px 11px,76px 43px,31px 68px;mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 92%,transparent 100%);animation:aboutStarDrift 34s linear infinite}
-.aboutStarRegion>*{position:relative;z-index:1}
-@keyframes aboutStarDrift{to{background-position:-120px 75px,-135px 118px,-58px 119px}}
-@media(prefers-reduced-motion:reduce){.aboutStarRegion::before{animation:none}}
+/* Recuperação da homepage: conteúdo visível sem depender do observer. */
+.fixou-approved-home [data-reveal]{opacity:1!important;visibility:visible!important;transform:none!important}
+.fixou-approved-home .handnote{display:block;width:max-content;max-width:100%;color:var(--primary);opacity:.96}
+.fixou-approved-home .hero h1 .accent{background:linear-gradient(100deg,#7db7ff,#6fe0c2 65%,#f6c26b);background-clip:text;-webkit-background-clip:text;color:transparent}
+.fixou-approved-home .sticker{width:max-content;height:auto;min-width:0;min-height:0;max-width:calc(100% - 16px);padding:6px 13px;border:2px solid currentColor;border-radius:52% 48% 45% 55%;background:rgba(8,14,28,.76);box-shadow:0 10px 26px rgba(0,0,0,.22),inset 0 0 0 1px rgba(255,255,255,.035);font:700 clamp(20px,1.7vw,25px)/1.05 Caveat,cursive;white-space:nowrap;overflow:visible}
+.fixou-approved-home .sticker.errei{color:#ff8b9b}.fixou-approved-home .sticker.bora{color:#a793ff}.fixou-approved-home .sticker.quase{color:#f6c26b}.fixou-approved-home .sticker.agora{color:#71ddc1}.fixou-approved-home .sticker.dominei{color:#82b8ff}.fixou-approved-home .sticker.revisar{color:#e9a8ed}
+.fixou-approved-home .sticker.errei{top:11%;right:auto;bottom:auto;left:4%}.fixou-approved-home .sticker.bora{top:6%;right:4%;bottom:auto;left:auto}.fixou-approved-home .sticker.quase{top:30%;right:16%;bottom:auto;left:auto}.fixou-approved-home .sticker.agora{top:48%;right:auto;bottom:auto;left:0}.fixou-approved-home .sticker.dominei{top:65%;right:7%;bottom:auto;left:auto}.fixou-approved-home .sticker.revisar{top:82%;right:auto;bottom:auto;left:10%}
+@media(max-width:540px){.fixou-approved-home .sticker{font-size:18px;padding:5px 10px}}
