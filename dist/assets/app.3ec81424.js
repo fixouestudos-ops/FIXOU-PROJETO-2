@@ -45,8 +45,8 @@ const uid = () => globalThis.crypto?.randomUUID?.() || Date.now().toString(36)+M
 
 const SAVE_KEY = 'fixou:2027:v1';
 const LEGACY_SAVE_KEY = 'fuvest-mastery:2027:v1';
-const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'dark',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
-const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
+const SETTINGS_DEFAULTS={dailyCount:20,dailyCustom:20,theme:'nebula',fontScale:1,highContrast:false,reduceMotion:false,primaryExam:'FUVEST',dailyMinutes:30,autoExplanation:false,shuffleOptions:false,showDifficulty:true,showExam:true,soundCorrect:false,soundWrong:false};
+const createState = () => ({version:1,profile:null,xp:0,history:[],concepts:{},reviews:{},errors:{},errorVaultSeenAt:0,favorites:[],activity:{},records:{lightning:0,survival:0},sessions:[],activeSession:null,daily:null,books:{},achievements:[],settings:{...SETTINGS_DEFAULTS},savedAt:null});
 function validateState(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||input.version!==1)throw new Error('Este arquivo não é um backup compatível do FUVEST Mastery.');
  const raw=JSON.stringify(input);if(raw.length>15000000)throw new Error('O backup é muito grande.');
@@ -65,6 +65,7 @@ function validateState(input){
  for(const c of Object.values(input.concepts)){if(!c||!Number.isFinite(c.score)||c.score<0||c.score>100||!isTime(c.lastAt)||!strings(c.questionIds)||!strings(c.days)||!strings(c.recoveryIds)||!Array.isArray(c.recent)||c.recent.some(v=>v!==0&&v!==1)||!['attempts','correct','consecutiveErrors','consecutiveCorrect'].every(k=>count(c[k])))throw new Error('Dados de domínio inválidos.');}
  for(const r of Object.values(input.reviews)){if(!r||!isTime(r.dueAt)||!isTime(r.lastAt)||!Number.isFinite(r.interval)||r.interval<0||r.interval>365||!Number.isFinite(r.ease)||r.ease<1.3||r.ease>3||!count(r.repetitions)||!count(r.lapses)||r.flashRewardAt!==undefined&&!isTime(r.flashRewardAt))throw new Error('Agenda de revisão inválida.');}
  for(const e of Object.values(input.errors)){if(!e||typeof e.questionId!=='string'||typeof e.conceptId!=='string'||!isTime(e.lastAt)||!Number.isFinite(e.count))throw new Error('Cofre dos erros inválido.');}
+ if(input.errorVaultSeenAt!==undefined&&!isTime(input.errorVaultSeenAt))throw new Error('Notificações do Cofre inválidas.');
  for(const [key,a] of Object.entries(input.activity)){if(!/^\d{4}-\d{2}-\d{2}$/.test(key)||!a||!Number.isFinite(a.answers)||!Number.isFinite(a.seconds)||!Number.isFinite(a.reviews))throw new Error('Calendário inválido.');}
  if(input.favorites.some(x=>typeof x!=='string')||input.achievements.some(x=>typeof x!=='string'))throw new Error('Favoritos ou conquistas inválidos.');
  if(!count(input.records.lightning)||!count(input.records.survival))throw new Error('Recordes inválidos.');
@@ -75,7 +76,9 @@ function validateState(input){
   if(!s||typeof s.id!=='string'||!['daily','adaptive','weak','practice','lightning','survival','boss'].includes(s.mode)||!Array.isArray(s.answered)||s.answered.some(h=>!attempt(h))||!strings(s.items)||!isTime(s.startedAt)||!count(s.lives)||s.lives>3||!count(s.limit)||!['score','combo','bestCombo'].every(k=>count(s[k]))||!['question','feedback'].includes(s.phase)||s.finished!==false||typeof s.currentId!=='string'||!s.items.includes(s.currentId)||!s.filters||typeof s.filters!=='object'||Array.isArray(s.filters)||Object.values(s.filters).some(v=>!['string','number'].includes(typeof v))||s.endsAt!==null&&!isTime(s.endsAt))throw new Error('Sessão salva inválida.');
   const d=s.draft;if(!d||typeof d.text!=='string'||!Array.isArray(d.order)||!Array.isArray(d.match)||d.order.some(v=>!count(v))||d.match.some(v=>!Number.isInteger(v)||v< -1)||d.answer!==null&&!count(d.answer)||d.confidence!==null&&!['sure','think','guess'].includes(d.confidence)||!Number.isFinite(s.questionSeconds)||s.questionSeconds<0||s.phase==='feedback'&&(!attempt(s.feedback)||s.feedback.questionId!==s.currentId))throw new Error('Resposta em andamento inválida.');
  }
- return {...base,...input,settings:{...SETTINGS_DEFAULTS,...input.settings,theme:'dark'}};
+ const theme=['nebula','light','rest'].includes(input.settings.theme)?input.settings.theme:'nebula';
+ const errorVaultSeenAt=input.errorVaultSeenAt===undefined?Object.values(input.errors).reduce((latest,error)=>Math.max(latest,error.lastAt),0):input.errorVaultSeenAt;
+ return {...base,...input,errorVaultSeenAt,settings:{...SETTINGS_DEFAULTS,...input.settings,theme}};
 }
 function loadState(storage=globalThis.localStorage){
  try{const raw=storage.getItem(SAVE_KEY)||storage.getItem(LEGACY_SAVE_KEY);if(!raw)return {state:createState(),warning:null};return {state:validateState(JSON.parse(raw)),warning:storage.getItem(SAVE_KEY)?null:'Migramos seu progresso local para o FIXOU.'};}
@@ -391,7 +394,7 @@ function trainScreen({state,bank,filters,sessionBuilder}){
  <div class="section-title"><h2>Explore as questões</h2><span>${bank.questions.filter(q=>!q.needsReview).length} questões disponíveis · ${bank.concepts.length} conceitos</span></div><div class="question-list">${matches.length?matches.slice(0,20).map(q=>questionCard(state,bank,q)).join(''):empty('Nenhuma questão nesta seleção','Experimente outra disciplina ou limpe os filtros.','clear-filters','Limpar filtros')}</div>${matches.length>20?`<p class="footnote">Mostrando 20 de ${matches.length}. Use os filtros para localizar um assunto; o treino usa toda a seleção.</p>`:''}`;
 }
 function cardsScreen({state,bank,cardFilters,flash}){
- if(flash){const c=conceptByIdLocal(bank,flash.currentId);if(!c?.flashcard)return empty('Revisão concluída','Sua agenda foi atualizada.','cards-home','Ver meus cartões');const reveal=flash.revealed;return `${titleBlock('MEMORIZAÇÃO','Dê espaço para lembrar',`${flash.index+1} de ${flash.ids.length} cartões nesta sessão`,button('Encerrar revisão','cards-home','','secondary'))}<div class="flash-layout"><div class="flash-card ${reveal?'revealed':''}"><div class="row"><span class="tag">${subjectById(c.discipline).name} · ${escapeHTML(c.subtopic)}</span>${favorite(state,'c',c.id)}</div><div class="flash-content"><span class="eyebrow">${reveal?'RESPOSTA':'RECUPERE DA MEMÓRIA'}</span><h2>${escapeHTML(reveal?c.flashcard.back:c.flashcard.front)}</h2>${reveal?`<p>${escapeHTML(c.summary)}</p>`:'<p>Pense na resposta antes de virar o cartão.</p>'}</div>${!reveal?button('Mostrar resposta ↻','reveal-card','','primary'):''}</div>${reveal?`<div class="rating-grid">${[['forgot','Esqueci','10 min'],['hard','Difícil','Intervalo menor'],['good','Lembrei','Revisão espaçada'],['easy','Fácil','Intervalo maior']].map(([id,t,d])=>`<button data-action="rate-card" data-id="${id}" class="rating ${id}"><strong>${t}</strong><small>${d}</small></button>`).join('')}</div>`:'<p class="footnote">A resposta só aparece quando você escolher. Sem pressa.</p>'}</div>`;}
+ if(flash){const c=conceptByIdLocal(bank,flash.currentId);if(!c?.flashcard)return empty('Revisão concluída','Sua agenda foi atualizada.','cards-home','Ver meus cartões');const reveal=flash.revealed;return `<section class="studyArea approved-memory" aria-labelledby="memoryTitle"><div class="studyTop"><div class="studyEyebrow"><span class="studyEyebrowDot"></span> FIXOU · REVISÃO ATIVA</div><button class="studyBack" data-action="cards-home">Encerrar revisão</button></div><h1 id="memoryTitle" class="studyHeading">Memorizar<span class="studyHeadingAccent"> de verdade.</span></h1><p class="studyLead">Clique para virar a carta. Arraste para a direita se já sabe e para a esquerda se precisa rever. No celular, basta deslizar o dedo.</p><div class="memorySessionBar"><span>Carta ${flash.index+1} de ${flash.ids.length}</span><span>Revisão espaçada ativa</span></div><div class="memoryProgressTrack"><span style="width:${flash.index/flash.ids.length*100}%"></span></div><div class="flashArena flash-arena"><span class="swipeLabel swipeLeft swipe-rever">↶ rever</span><span class="swipeLabel swipeRight swipe-sei">sei ✓</span><button type="button" class="flashCard flash-card-3d ${reveal?'flipped':''}" data-action="flip-card" aria-pressed="${reveal}" aria-label="${reveal?'Ocultar resposta':'Virar carta de memória'}"><span class="flashInner"><span class="flashFace flashFront"><span class="flashType">${subjectById(c.discipline).name} · ${escapeHTML(c.subtopic)}</span><span class="flashText">${escapeHTML(c.flashcard.front)}</span><span class="flashInstruction">Toque para virar ↻</span></span><span class="flashFace flashBack"><span class="flashType">RESPOSTA</span><span class="flashText">${escapeHTML(c.flashcard.back)}</span><span class="flashInstruction">Como foi sua lembrança?</span></span></span></button></div><div class="memoryActions"><button class="reviewAction" data-action="rate-card" data-id="forgot" ${reveal?'':'disabled'}>← Rever</button><button class="knowAction" data-action="rate-card" data-id="good" ${reveal?'':'disabled'}>Sei →</button></div><div class="memoryKeyboardTip">Teclado: <kbd>←</kbd> Rever &nbsp; <kbd>→</kbd> Sei &nbsp; <kbd>Espaço</kbd> Virar</div><p class="studyFootnote">A agenda e os intervalos usam a repetição espaçada real do FIXOU.</p></section>`;}
  const cardConcepts=bank.concepts.filter(c=>c.flashcard&&!c.flashcard.needsReview);const due=dueConcepts(state,cardConcepts),cards=cardConcepts.filter(c=>{const status=cardFilters.status;return (!cardFilters.discipline||c.discipline===cardFilters.discipline)&&(!cardFilters.topic||c.topic===cardFilters.topic)&&(!status||status==='new'&&!state.reviews[c.id]||status==='due'&&isDue(state,c.id)||status==='favorites'&&state.favorites.includes('c:'+c.id));});
  return `${titleBlock('MEMÓRIA DE LONGO PRAZO','Recordar é aprender de novo','Vire, avalie sua lembrança e deixe a próxima revisão com o aplicativo.')}
  <section class="review-banner"><div><span class="eyebrow">SUA AGENDA</span><h2>${due.length?`${due.length} cartões esperam por você`:'Revisões em dia'}</h2><p>${due.length?'Uma retomada agora ajuda o conteúdo a permanecer.':'Você pode conhecer novos cartões ou praticar livremente.'}</p></div><button class="primary" data-action="start-cards" data-id="due" ${due.length?'':'disabled'}>Revisar pendentes →</button></section>
@@ -470,171 +473,41 @@ const checks=[
 ];
 function settingsScreen({state,account,loggingOut}){
  const s=state.settings;
- return `${titleBlock('FIXOU · CONFIGURAÇÕES','Seu estudo, do seu jeito','Ajuste acessibilidade e preferências. Tudo fica salvo neste navegador.')}
+ return `<div class="settings approved-settings"><div class="settingsEyebrow">SEU ESPAÇO · PREFERÊNCIAS</div><h1>Configurações</h1><p class="settingsIntro">Ajuste a aparência do FIXOU ao seu ambiente de estudo. O tema escolhido também será usado na página Quem Somos.</p>
+ <section class="settingsBox appearance-panel"><h2>Aparência do aplicativo</h2><p>Escolha entre três combinações pensadas para diferentes horários e preferências de leitura.</p><div class="themeCards" role="group" aria-label="Escolher aparência do FIXOU">${[["nebula","✦ Nebulosa","Noturno padrão, azul profundo, estrelas discretas e detalhes em menta."],["light","☀ Claro","Branco-azulado, superfícies leves e contraste confortável."],["rest","◐ Descanso","Creme, areia e âmbar fosco. Menos saturação e estrelas bem mais lentas."]].map(([id,name,desc])=>`<button class="themeCard" data-action="set-theme" data-id="${id}" aria-pressed="${s.theme===id}"><div class="themePreview ${id}"><i></i></div><span class="themeCardName">${name}<span class="themeCheck">✓</span></span><span class="themeDesc">${desc}</span></button>`).join("")}</div></section>
  <div class="settings-layout"><section class="panel settings-panel"><div class="section-title"><h2>Preferências de estudo</h2><span>Personalize seu ritmo</span></div><label>Vestibular principal<select data-setting="primaryExam">${['FUVEST','ENEM','UNICAMP','UNESP','ITA','IME','Outro'].map(v=>`<option ${s.primaryExam===v?'selected':''}>${v}</option>`).join('')}</select></label><label>Meta diária de questões<select data-setting="dailyCount">${[10,20,30,50].map(v=>`<option value="${v}" ${s.dailyCount===v?'selected':''}>${v} questões</option>`).join('')}<option value="custom" ${![10,20,30,50].includes(s.dailyCount)?'selected':''}>Personalizada</option></select></label><label>Meta diária de estudo<select data-setting="dailyMinutes">${[[30,'30 minutos'],[60,'1 hora'],[120,'2 horas']].map(([v,t])=>`<option value="${v}" ${s.dailyMinutes===v?'selected':''}>${t}</option>`).join('')}</select></label><div class="settings-checks">${checks.map(([id,label,note])=>`<label class="toggle-row"><input type="checkbox" data-setting="${id}" ${s[id]?'checked':''}><span><strong>${label}</strong><small>${note}</small></span></label>`).join('')}</div></section>
  <section class="panel settings-panel"><div class="section-title"><h2>Acessibilidade</h2><span>Leitura confortável</span></div><label>Tamanho do texto<select data-setting="fontScale"><option value="0.9" ${s.fontScale===0.9?'selected':''}>Menor</option><option value="1" ${s.fontScale===1?'selected':''}>Padrão</option><option value="1.12" ${s.fontScale===1.12?'selected':''}>Maior</option><option value="1.25" ${s.fontScale===1.25?'selected':''}>Muito maior</option></select></label><label class="toggle-row"><input type="checkbox" data-setting="highContrast" ${s.highContrast?'checked':''}><span><strong>Alto contraste</strong><small>Aumenta a diferença entre texto, fundo e controles.</small></span></label><label class="toggle-row"><input type="checkbox" data-setting="reduceMotion" ${s.reduceMotion?'checked':''}><span><strong>Reduzir animações</strong><small>Evita transições decorativas.</small></span></label></section>
  <section class="panel settings-panel"><div class="section-title"><h2>Ajuda e suporte</h2><span>Fale com o FIXOU</span></div><p>Encontrou um erro em uma questão ou tem uma sugestão? O formulário envia a mensagem para nossa equipe.</p><div class="support-actions"><a class="secondary" href="mailto:fixouestudos@gmail.com?subject=Suporte%20FIXOU">Enviar e-mail</a><button class="primary" data-action="support-form">Abrir formulário</button></div><p class="note"><strong>Suporte FIXOU</strong><br>fixouestudos@gmail.com</p><details><summary>Central de ajuda</summary><p>Seu progresso é salvo automaticamente na sua conta FIXOU. Entre com sua conta em outro dispositivo para continuar de onde parou. Questões erradas aparecem no Cofre dos erros e podem ser revisitadas a qualquer momento.</p></details></section>
- <section class="panel settings-panel"><div class="section-title"><h2>Minha conta</h2><span>Sincronizada</span></div><p><strong>${escapeHTML(account?.name||state.profile?.name||'Estudante')}</strong><br>${escapeHTML(account?.email||'')}</p>${button('Editar perfil →','profile-settings','','secondary')}<form id="password-form" class="form-stack"><h3>Alterar senha</h3><label>Senha atual<input name="currentPassword" type="password" required minlength="8"></label><label>Nova senha<input name="newPassword" type="password" required minlength="8"></label><button class="secondary" type="submit">Alterar senha</button></form><button class="ghost" data-action="logout" ${loggingOut?'disabled':''}>${loggingOut?'Saindo…':'Sair da conta'}</button></section><section class="panel settings-panel"><div class="section-title"><h2>Enviar sugestão</h2><span>Ajude a melhorar</span></div><form id="suggestion-form" class="form-stack"><label>Categoria<select name="category">${['Nova funcionalidade','Melhoria','Problema','Design','Conteúdo','Outro'].map(x=>`<option>${x}</option>`).join('')}</select></label><label>Mensagem<textarea name="message" rows="5" maxlength="2000" required></textarea></label><button class="primary" type="submit">Enviar sugestão</button></form></section></div>`;
+ <section class="panel settings-panel"><div class="section-title"><h2>Minha conta</h2><span>Sincronizada</span></div><p><strong>${escapeHTML(account?.name||state.profile?.name||'Estudante')}</strong><br>${escapeHTML(account?.email||'')}</p>${button('Editar perfil →','profile-settings','','secondary')}<form id="password-form" class="form-stack"><h3>Alterar senha</h3><label>Senha atual<input name="currentPassword" type="password" required minlength="8"></label><label>Nova senha<input name="newPassword" type="password" required minlength="8"></label><button class="secondary" type="submit">Alterar senha</button></form><button class="ghost" data-action="logout" ${loggingOut?'disabled':''}>${loggingOut?'Saindo…':'Sair da conta'}</button></section><section class="panel settings-panel"><div class="section-title"><h2>Enviar sugestão</h2><span>Ajude a melhorar</span></div><form id="suggestion-form" class="form-stack"><label>Categoria<select name="category">${['Nova funcionalidade','Melhoria','Problema','Design','Conteúdo','Outro'].map(x=>`<option>${x}</option>`).join('')}</select></label><label>Mensagem<textarea name="message" rows="5" maxlength="2000" required></textarea></label><button class="primary" type="submit">Enviar sugestão</button></form></section></div></div>`;
 }
 
 
-const ABOUT_VIDEOS=[];
-const ABOUT_CONTENT={
- hero:{
-  headline:'Você não precisa estudar mais.',
-  subline:'Precisa entender o que realmente domina.',
-  description:'O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.'
- },
- origin:{
-  title:'Feito de estudantes para estudantes',
-  text:'O FIXOU nasceu como um projeto-piloto feito de estudantes para estudantes. A ideia surgiu de uma dificuldade que muita gente conhece bem: estudar bastante, resolver várias questões e, mesmo assim, nem sempre conseguir enxergar com clareza o que já está dominado, onde ainda existem dificuldades e o que realmente precisa ser revisado.'
- },
- whyExists:{
-  title:'Por que o FIXOU existe',
-  text:'O nosso objetivo é ir além de ser apenas um banco de questões. O diferencial do FIXOU é acompanhar a sua evolução ao longo dos estudos, identificando seus pontos fortes e pontos que ainda precisam de atenção, para ajudar você a estudar de forma mais direcionada e entender melhor o próprio desempenho.'
- },
- differential:{
-  title:'O que torna o FIXOU diferente',
-  highlight:'O FIXOU não quer apenas mostrar quantas questões você acertou. Ele acompanha sua evolução para ajudar a identificar seus pontos fortes, pontos fracos e o que precisa ser revisado.',
-  text:'Mais do que mostrar quantas questões você acertou, queremos ajudar você a entender como está aprendendo. Porque estudar com mais clareza também é saber onde você está, onde precisa melhorar e qual é o próximo passo.'
- },
- pilot:{
-  title:'Ainda somos um projeto-piloto',
-  text:'Como este ainda é um projeto novo e está em constante desenvolvimento, algumas coisas podem não funcionar perfeitamente desde o início. Mesmo com todo o cuidado na revisão do conteúdo, é possível que alguma questão apresente erro de digitação, imagem incorreta, alternativa incompleta ou alguma outra inconsistência.',
-  note:'Isso não nos desanima — nos motiva a melhorar cada vez mais. Estamos construindo e melhorando continuamente, ouvindo os estudantes e transformando os problemas encontrados durante os estudos em melhorias reais na plataforma.'
- },
- report:{
-  title:'Encontrou um erro?',
-  text:'Se isso acontecer, pedimos um pouco de paciência — e, principalmente, a sua ajuda. Em cada questão, você poderá reportar um problema para que possamos revisar e corrigir o conteúdo o mais rápido possível.',
-  cta:'Use a opção "Reportar problema" na própria questão.'
- },
- support:{
-  title:'Ajude a construir o FIXOU',
-  text:'Também queremos construir o FIXOU junto com quem realmente usa a plataforma. Se encontrar algum erro, tiver dificuldade para utilizar alguma função, perceber algo que poderia melhorar ou simplesmente quiser mandar uma sugestão, você poderá entrar em contato com o nosso suporte.',
-  cta:'Encontre um problema na plataforma ou quer enviar uma sugestão? Entre em contato com o nosso suporte.'
- },
- tools:{
-  title:'Conheça as ferramentas',
-  items:[
-   {icon:'◈',name:'Minha jornada',desc:'Seu painel pessoal de evolução. Progresso, domínio e desempenho em um só lugar.'},
-   {icon:'▷',name:'Treinar',desc:'Questões organizadas para você praticar com propósito.'},
-   {icon:'▱',name:'Memorizar',desc:'Transforme conteúdo importante em revisão recorrente.'},
-   {icon:'⊞',name:'Cofre dos erros',desc:'Seus erros deixam de ser esquecidos e passam a fazer parte da sua revisão.'},
-   {icon:'⌘',name:'Programa 2027',desc:'Veja o conteúdo do vestibular organizado em matérias, áreas e tópicos.'},
-   {icon:'▤',name:'Leituras',desc:'Organize as obras e conteúdos de leitura obrigatória.'},
-   {icon:'↗',name:'Evolução',desc:'Veja como seu desempenho muda ao longo do tempo.'},
-   {icon:'☆',name:'Favoritos',desc:'Guarde questões e conteúdos importantes para revisitar.'}
-  ]
- },
- videos:{
-  title:'Aprenda a usar o FIXOU',
-  emptyText:'Vídeo em breve'
- },
- ctaFinal:{
-  title:'Estude com direção. Evolua com clareza.',
-  description:'Seu progresso começa quando você entende onde está.'
- }
-};
-function toolCard(t,i){
- return `<div class="ab-tool" data-delay="${i}"><span class="ab-tool-icon">${t.icon}</span><h4>${escapeHTML(t.name)}</h4><p>${escapeHTML(t.desc)}</p></div>`;
-}
-function videoCard(v){
- const thumb=v.thumbnail?`<img src="${escapeHTML(v.thumbnail)}" alt="" loading="lazy">`:'<div class="ab-video-ph">🎬</div>';
- const dur=v.duration?`<span class="ab-video-dur">${escapeHTML(v.duration)}</span>`:'';
- return `<article class="ab-video" data-action="about-video" data-url="${escapeHTML(v.url||'')}"><div class="ab-video-thumb">${thumb}${dur}</div><div class="ab-video-info"><h4>${escapeHTML(v.title)}</h4><p>${escapeHTML(v.description)}</p></div></article>`;
-}
+const sections=[
+ ['01','Feito de estudantes para estudantes','a gente também já passou por isso','O FIXOU nasceu como um projeto-piloto feito de estudantes para estudantes. A ideia surgiu de uma dificuldade que muita gente conhece bem: estudar bastante, resolver várias questões e, mesmo assim, nem sempre conseguir enxergar com clareza o que já está dominado, onde ainda existem dificuldades e o que realmente precisa ser revisado.'],
+ ['02','Por que o FIXOU existe','o estudo faz mais sentido com direção','O nosso objetivo é ir além de ser apenas um banco de questões. O diferencial do FIXOU é acompanhar a sua evolução ao longo dos estudos, identificando seus pontos fortes e pontos que ainda precisam de atenção, para ajudar você a estudar de forma mais direcionada e entender melhor o próprio desempenho.'],
+ ['03','O que torna o FIXOU diferente','descubra o que já fixou','Mais do que mostrar quantas questões você acertou, queremos ajudar você a entender como está aprendendo. Porque estudar com mais clareza também é saber onde você está, onde precisa melhorar e qual é o próximo passo.'],
+ ['04','Ainda somos um projeto-piloto','ainda crescendo!','Como este ainda é um projeto novo e está em constante desenvolvimento, algumas coisas podem não funcionar perfeitamente desde o início. Mesmo com todo o cuidado na revisão do conteúdo, é possível que alguma questão apresente erro de digitação, imagem incorreta, alternativa incompleta ou alguma outra inconsistência.'],
+ ['05','Encontrou um erro?','ops!','Se isso acontecer, pedimos um pouco de paciência e, principalmente, a sua ajuda. Em cada questão, você poderá reportar um problema para que possamos revisar e corrigir o conteúdo o mais rápido possível.'],
+ ['06','Ajude a construir o FIXOU','bora juntos','Também queremos construir o FIXOU junto com quem realmente usa a plataforma. Se encontrar algum erro, tiver dificuldade para utilizar alguma função, perceber algo que poderia melhorar ou simplesmente quiser mandar uma sugestão, você poderá entrar em contato com o nosso suporte.']
+];
+const tools=[
+ ['home','Minha jornada','Seu painel pessoal de evolução. Progresso, domínio e desempenho em um só lugar.'],
+ ['train','Treinar','Questões organizadas para você praticar com propósito.'],
+ ['cards','Memorizar','Transforme conteúdo importante em revisão recorrente.'],
+ ['errors','Cofre dos erros','Seus erros deixam de ser esquecidos e passam a fazer parte da sua revisão.'],
+ ['map','Programa 2027','Veja o conteúdo do vestibular organizado em matérias, áreas e tópicos.'],
+ ['books','Leituras','Organize as obras e conteúdos de leitura obrigatória.'],
+ ['stats','Evolução','Veja como seu desempenho muda ao longo do tempo.'],
+ ['favorites','Favoritos','Guarde questões e conteúdos importantes para revisitar.']
+];
 function aboutScreen({account}){
- const logged=!!account;
- const hero=ABOUT_CONTENT.hero;
- const cta1=logged?`<a href="#home" class="ab-btn ab-btn-primary">Começar a estudar</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
- const cta2=`<a href="#${logged?'home':'login'}" class="ab-btn ab-btn-ghost" data-action="${logged?'about-start-study':'about-create'}">${logged?'Ver como funciona':'Ver como funciona'}</a>`;
- const finalBtn=logged?`<a href="#home" class="ab-btn ab-btn-primary">Ir para Minha Jornada</a>`:`<a href="#register" class="ab-btn ab-btn-primary" data-action="about-create">Criar conta grátis</a>`;
- const finalBtn2=logged?'':`<a href="#login" class="ab-btn ab-btn-ghost">Entrar</a>`;
- const tools=ABOUT_CONTENT.tools.items.map((t,i)=>toolCard(t,i)).join('');
- const videos=ABOUT_VIDEOS.length?ABOUT_VIDEOS.map(v=>videoCard(v)).join(''):`<div class="ab-video-empty">${ABOUT_CONTENT.videos.emptyText}</div>`;
- return `
-<section class="ab-page">
- <div class="ab-bg-glow ab-bg-glow-1"></div>
- <div class="ab-bg-glow ab-bg-glow-2"></div>
- <div class="ab-bg-glow ab-bg-glow-3"></div>
-
- <header class="ab-hero">
-  <div class="ab-hero-content">
-   <h1 class="ab-hero-headline" data-reveal>${escapeHTML(hero.headline)}<br><span class="ab-hero-accent">${escapeHTML(hero.subline)}</span></h1>
-   <p class="ab-hero-desc" data-reveal>${escapeHTML(hero.description)}</p>
-   <div class="ab-hero-ctas" data-reveal>${cta1}${cta2}</div>
-  </div>
-  <div class="ab-hero-orb" aria-hidden="true"><div class="ab-orb-ring"></div><div class="ab-orb-ring ab-orb-ring-2"></div></div>
- </header>
-
- <section class="ab-section ab-origin" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.origin.title}</h2>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.origin.text)}</p>
-  </div>
- </section>
-
- <section class="ab-section ab-why" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.whyExists.title}</h2>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.whyExists.text)}</p>
-  </div>
- </section>
-
- <section class="ab-section ab-differential" data-section>
-  <div class="ab-section-inner ab-differential-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.differential.title}</h2>
-   <blockquote class="ab-highlight-quote" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.highlight)}</blockquote>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.differential.text)}</p>
-  </div>
- </section>
-
- <section class="ab-section ab-pilot" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.pilot.title}</h2>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.text)}</p>
-   <p class="ab-note-text" data-reveal>${escapeHTML(ABOUT_CONTENT.pilot.note)}</p>
-  </div>
- </section>
-
- <section class="ab-section ab-report" data-section>
-  <div class="ab-section-inner ab-report-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.report.title}</h2>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.report.text)}</p>
-   <div class="ab-report-cta" data-reveal><span class="ab-report-icon">⚠</span><span>${escapeHTML(ABOUT_CONTENT.report.cta)}</span></div>
-  </div>
- </section>
-
- <section class="ab-section ab-support" data-section>
-  <div class="ab-section-inner ab-support-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.support.title}</h2>
-   <p class="ab-section-text" data-reveal>${escapeHTML(ABOUT_CONTENT.support.text)}</p>
-   <div class="ab-support-cta" data-reveal><a class="ab-btn ab-btn-ghost" href="mailto:fixouestudos@gmail.com?subject=Suporte%20FIXOU">Entrar em contato com o suporte</a></div>
-  </div>
- </section>
-
- <section class="ab-section ab-tools" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.tools.title}</h2>
-   <div class="ab-tools-grid">${tools}</div>
-  </div>
- </section>
-
- <section class="ab-section ab-videos-section" data-section>
-  <div class="ab-section-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.videos.title}</h2>
-   <div class="ab-videos-grid">${videos}</div>
-  </div>
- </section>
-
- <section class="ab-section ab-cta" data-section>
-  <div class="ab-section-inner ab-cta-inner">
-   <h2 data-reveal>${ABOUT_CONTENT.ctaFinal.title}</h2>
-   <p data-reveal>${escapeHTML(ABOUT_CONTENT.ctaFinal.description)}</p>
-   <div class="ab-cta-buttons" data-reveal>${finalBtn}${finalBtn2}</div>
-  </div>
- </section>
-</section>`;
+ const start=account?'#train':'#register';
+ return `<div class="fixou-approved-home">
+ <section class="hero" id="quem-somos" aria-labelledby="heroTitle"><div class="heroIntro"><div class="eyebrow"><i></i> O CONHECIMENTO QUE FICA</div><h1 id="heroTitle">Você não precisa estudar mais. <span class="accent">Precisa entender o que realmente domina.</span></h1><p class="lead">O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.</p><div class="btnRow"><a class="btn btnPrimary" href="${start}">Começar a estudar</a><a class="btn btnSecondary" href="#como">Ver como funciona</a></div></div><div class="stickerboard" aria-label="Seis balões com momentos da aprendizagem: errei, bora, quase, agora entendi, dominei e revisar amanhã"><span class="sticker errei">errei</span><span class="sticker bora">bora</span><span class="sticker quase">quase!</span><span class="sticker agora">agora entendi</span><span class="sticker dominei">dominei!</span><span class="sticker revisar">revisar amanhã</span></div></section>
+ <div class="sectionGroup" id="como">${sections.map(([n,title,note,text],i)=>`<section class="editorialSection" aria-labelledby="sec${n}"><div class="sectionTitleCol" data-reveal><h2 id="sec${n}">${escapeHTML(title)}</h2><div class="handnote">${escapeHTML(note)}</div></div><div class="sectionBody" data-reveal style="--reveal-delay:110ms">${i===2?'<div class="callout">O FIXOU não quer apenas mostrar quantas questões você acertou. Ele acompanha sua evolução para ajudar a identificar seus pontos fortes, pontos fracos e o que precisa ser revisado.</div>':''}<p>${escapeHTML(text)}</p>${i===3?'<p>Isso não nos desanima: nos motiva a melhorar cada vez mais. Estamos construindo e melhorando continuamente, ouvindo os estudantes e transformando os problemas encontrados durante os estudos em melhorias reais na plataforma.</p>':''}${i===4?'<div class="notice">⚠ Use a opção “Reportar problema” na própria questão.</div>':''}${i===5?'<button class="btn btnSecondary" data-action="support-form">Entrar em contato com o suporte</button>':''}</div></section>`).join('')}</div>
+ <section class="tools" id="ferramentas"><h2 class="sectionTitle" data-reveal>Conheça as ferramentas</h2><div class="toolGrid" data-reveal style="--reveal-delay:110ms">${tools.map(([route,name,desc],i)=>`<button class="tool" data-action="about-tool" data-id="${route}" data-tool-name="${escapeHTML(name)}" data-tool-desc="${escapeHTML(desc)}" aria-pressed="${i===0}"><span class="toolTitle">${escapeHTML(name)}</span></button>`).join('')}</div><div class="toolDetail" data-reveal style="--reveal-delay:190ms"><p>${escapeHTML(tools[0][2])}</p><a href="#home" class="btn btnPrimary">Abrir ${escapeHTML(tools[0][1])}</a></div></section>
+ <section class="tutorial" id="aprenda"><h2 class="sectionTitle" data-reveal>Aprenda a usar o FIXOU</h2><div class="videoPlaceholder" data-reveal style="--reveal-delay:100ms">▷ &nbsp; Vídeo em breve</div><div class="footerMotto" data-reveal>Um pouco hoje. Mais clareza amanhã.</div></section>
+ </div>`;
 }
 
 
@@ -866,18 +739,47 @@ function sessionScreen({state,bank,curriculum,session}){
  if(!session)return empty('Seu próximo treino está pronto','Escolha um modo para começar a praticar.','go-train','Ver modos de estudo');
  if(session.finished)return resultScreen({state,bank,session});
  const q=questionById(bank,session.currentId);if(!q)return empty('Não há mais questões nesta seleção','As respostas já foram salvas.','finish-session','Ver resultado');
- const c=conceptById(bank,q.conceptId),subject=subjectById(c.discipline),draft=session.draft||{},feedback=session.feedback,visual=diagramSVG(q.diagram);
- const indicator=session.mode==='lightning'?`<span class="session-timer" role="timer" aria-label="Tempo restante"><span aria-hidden="true">◷</span> <b id="lightning-clock">${formatTime(Math.max(0,(session.endsAt-Date.now())/1000))}</b></span>`:session.mode==='survival'?`<span class="lives" aria-label="${session.lives} ${session.lives===1?'vida restante':'vidas restantes'}">${'♥'.repeat(Math.max(0,session.lives))}<i>${'♡'.repeat(3-Math.max(0,session.lives))}</i></span>`:`<span class="question-counter">${Math.min(session.answered.length+(feedback?0:1),session.limit)} <small>/ ${session.limit}</small></span>`;
- const optionsHTML=['choice','boolean'].includes(q.type)?`<div class="answer-options ${q.type==='boolean'?'boolean-options':''}">${q.options.map((option,i)=>{const selected=feedback?feedback.answer===i:draft.answer===i;const status=feedback?(i===q.answer?'correct':selected?'incorrect':''):'';return `<button class="answer-option ${selected?'selected':''} ${status}" data-action="select-answer" data-id="${i}" aria-pressed="${selected}" ${feedback?'disabled':''}><span class="option-letter">${feedback&&i===q.answer?'✓':String.fromCharCode(65+i)}</span><span>${escapeHTML(option)}</span>${selected?'<b class="option-check">✓</b>':''}</button>`;}).join('')}</div>`:q.type==='order'?`<p class="input-hint">Use as setas para colocar os itens na ordem solicitada.</p><ol class="ordering">${(draft.order||q.options.map((_,i)=>i)).map((i,n)=>`<li><span class="order-index">${n+1}</span><span>${escapeHTML(q.options[i])}</span><div><button class="icon-button" data-action="order-up" data-id="${n}" aria-label="Mover item ${n+1} para cima" ${feedback||n===0?'disabled':''}>↑</button><button class="icon-button" data-action="order-down" data-id="${n}" aria-label="Mover item ${n+1} para baixo" ${feedback||n===q.options.length-1?'disabled':''}>↓</button></div></li>`).join('')}</ol>`:q.type==='match'?`<div class="matching">${q.matchLeft.map((left,i)=>`<label><span>${escapeHTML(left)}</span><select data-match="${i}" ${feedback?'disabled':''}><option value="">Escolha uma associação</option>${q.options.map((o,j)=>`<option value="${j}" ${draft.match?.[i]===j?'selected':''}>${escapeHTML(o)}</option>`).join('')}</select></label>`).join('')}</div>`:`<label class="answer-input-label" for="written-answer">${q.type==='numeric'?'Sua resposta numérica':'Sua resposta'}<input id="written-answer" type="text" inputmode="${q.type==='numeric'?'decimal':'text'}" maxlength="200" value="${escapeHTML(draft.text||'')}" placeholder="${q.type==='numeric'?'Digite apenas o número':'Digite uma resposta curta'}" autocomplete="off" ${feedback?'disabled':''}></label>`;
- return `<div class="session-heading"><button class="text-button" data-action="pause-session">← ${session.mode==='lightning'?'Sair do desafio':'Pausar treino'}</button><span>${MODE_NAMES[session.mode]}</span>${indicator}</div><div class="session-progress">${bar(session.answered.length/session.limit*100,'Progresso da sessão')}</div><div class="quiz-layout"><article class="question-panel"><div class="row"><div class="question-tags"><span class="tag" style="color:${subject.color}">${subject.name}</span><span class="tag difficulty d${q.difficulty}">${DIFFICULTIES[q.difficulty]}</span><span class="meta">${QUESTION_TYPES[q.type]}</span></div><span>${favorite(state,'q',q.id)}${button('⚑ Reportar','report',q.id,'text-button')}</span></div><p class="question-origin">Questão original — estilo FUVEST</p><h1 class="question-prompt">${escapeHTML(q.prompt)}</h1>${questionImages(q)}${optionsHTML}
- ${visual}${!feedback?`<fieldset class="confidence-field"><legend>O quanto você confia nessa resposta?</legend><div>${Object.entries(CONFIDENCE).map(([id,label])=>`<button class="confidence-option ${draft.confidence===id?'selected':''}" data-action="confidence" data-id="${id}" aria-pressed="${draft.confidence===id}"><span>${id==='sure'?'●':id==='think'?'◐':'○'}</span>${label}</button>`).join('')}</div></fieldset><div class="answer-actions"><span class="meta" id="question-time">${formatTime(session.questionSeconds||0)} pensando</span><button class="primary" data-action="submit-answer" ${canSubmitDraft(q,draft)?'':'disabled'}>Confirmar resposta →</button></div>`:feedbackPanel(state,bank,curriculum,session,q,c)}
- ${sourceTrail(c,curriculum)}</article><aside class="quiz-aside"><article class="panel"><span class="eyebrow">NESTA SESSÃO</span><strong class="session-score">${session.score}<small> acertos</small></strong><div class="aside-line"><span>Sequência atual</span><b>${session.combo}</b></div><div class="aside-line"><span>XP conquistado</span><b>+${sum(session.answered.map(h=>h.xp))}</b></div><div class="aside-line"><span>Melhor sequência</span><b>${session.bestCombo}</b></div></article><div class="study-note"><span>✦</span><h3>A confiança também ensina</h3><p>Se estiver em dúvida, sinalize. O treino usa essa informação para retomar o conceito no momento certo.</p></div><div class="note">${session.mode==='lightning'?'O cronômetro continua mesmo ao sair da aba.':session.mode==='survival'?'Cada erro custa uma vida. A explicação fica disponível antes da próxima questão.':'Cada resposta é salva na hora. Você pode fazer uma pausa e voltar depois.'}</div></aside></div>`;
+ const c=conceptById(bank,q.conceptId),subject=subjectById(c.discipline),draft=session.draft||{},feedback=session.feedback,visual=diagramSVG(q.diagram),current=Math.min(session.answered.length+(feedback?0:1),session.limit),percent=session.answered.length/session.limit*100;
+ const optionsHTML=['choice','boolean'].includes(q.type)?`<div class="answerOptions ${q.type==='boolean'?'boolean-options':''}">${q.options.map((option,i)=>{const selected=feedback?feedback.answer===i:draft.answer===i,status=feedback?(i===q.answer?'answerCorrect':selected?'answerWrong':''):'';return `<button class="answerOption ${selected?'selected':''} ${status}" data-action="select-answer" data-id="${i}" aria-pressed="${selected}" ${feedback?'disabled':''}><span class="answerLetter">${String.fromCharCode(65+i)}</span><span>${escapeHTML(option)}</span></button>`;}).join('')}</div>`:q.type==='order'?`<p class="input-hint">Use as setas para colocar os itens na ordem solicitada.</p><ol class="ordering">${(draft.order||q.options.map((_,i)=>i)).map((i,n)=>`<li><span class="order-index">${n+1}</span><span>${escapeHTML(q.options[i])}</span><div><button class="icon-button" data-action="order-up" data-id="${n}" aria-label="Mover item ${n+1} para cima" ${feedback||n===0?'disabled':''}>↑</button><button class="icon-button" data-action="order-down" data-id="${n}" aria-label="Mover item ${n+1} para baixo" ${feedback||n===q.options.length-1?'disabled':''}>↓</button></div></li>`).join('')}</ol>`:q.type==='match'?`<div class="matching">${q.matchLeft.map((left,i)=>`<label><span>${escapeHTML(left)}</span><select data-match="${i}" ${feedback?'disabled':''}><option value="">Escolha uma associação</option>${q.options.map((o,j)=>`<option value="${j}" ${draft.match?.[i]===j?'selected':''}>${escapeHTML(o)}</option>`).join('')}</select></label>`).join('')}</div>`:`<label class="answer-input-label" for="written-answer">${q.type==='numeric'?'Sua resposta numérica':'Sua resposta'}<input id="written-answer" type="text" inputmode="${q.type==='numeric'?'decimal':'text'}" maxlength="200" value="${escapeHTML(draft.text||'')}" autocomplete="off" ${feedback?'disabled':''}></label>`;
+ return `<section class="studyArea approved-training" aria-labelledby="trainingTitle"><div class="studyTop"><div class="studyEyebrow"><span class="studyEyebrowDot"></span> FIXOU · INTERAÇÃO DE ESTUDO</div><button class="studyBack" data-action="pause-session">← ${session.mode==='lightning'?'Sair do desafio':'Pausar treino'}</button></div><h1 id="trainingTitle" class="studyHeading">Treinar<span class="studyHeadingAccent"> com propósito.</span></h1><p class="studyLead">Responda às questões e veja um feedback imediato. Acertos geram partículas discretas e aumentam o combo. Erros mostram a explicação no próprio cartão.</p><div class="studySessionBar" aria-label="Progresso do treino"><span class="sessionStat">Questão ${current} de ${session.limit}</span><div class="sessionTrack" aria-hidden="true"><div style="width:${percent}%"></div></div><span class="sessionStat">Combo <strong>${session.combo}</strong> <span aria-hidden="true">✦</span></span></div><article class="questionShell ${feedback?(feedback.correct?'answer-celebrate':'questionShake answer-shake'):''}"><div class="questionUpper"><span class="questionSubject">${escapeHTML(subject.name)} · ${escapeHTML(c.subtopic)}</span><span>${favorite(state,'q',q.id)}${button('⚑ Reportar','report',q.id,'studyBack')}</span></div><p class="questionText">${escapeHTML(q.prompt)}</p>${questionImages(q)}${visual}${optionsHTML}${!feedback?`<fieldset class="confidence-field"><legend>O quanto você confia nessa resposta?</legend><div>${Object.entries(CONFIDENCE).map(([id,label])=>`<button class="confidence-option ${draft.confidence===id?'selected':''}" data-action="confidence" data-id="${id}" aria-pressed="${draft.confidence===id}"><span>${id==='sure'?'●':id==='think'?'◐':'○'}</span>${label}</button>`).join('')}</div></fieldset><div class="questionBottom"><span class="studyMicro" id="question-time">Use A–D · ${formatTime(session.questionSeconds||0)} pensando</span><button class="btn btnPrimary" data-action="submit-answer" ${canSubmitDraft(q,draft)?'':'disabled'}>Confirmar resposta →</button></div>`:feedbackPanel(state,bank,curriculum,session,q,c)}</article><p class="studyFootnote">Questões, gabaritos, explicações, XP e domínio usam os sistemas reais do FIXOU.</p></section>`;
 }
-function feedbackPanel(state,bank,curriculum,session,q,c){const f=session.feedback,good=f.correct,m=masteryValue(state.concepts[c.id],state.reviews[c.id]),distractor=!good&&Number.isInteger(f.answer)&&q.distractors?.[f.answer];return `<section class="feedback ${good?'feedback-correct':'feedback-wrong'}" aria-live="polite"><div class="row"><h2>${good?'✓ '+(f.confidence==='guess'?'Acertou, com uma dúvida para retomar.':'Raciocínio no caminho certo!'):f.confidence==='sure'?'Vamos corrigir um falso domínio.':'Esta é uma oportunidade de aprender.'}</h2><span class="xp-badge">+${f.xp} XP</span></div>${good&&f.confidence==='guess'?'<p>O acerto foi registrado. Sua confiança indica que precisamos testar o conceito novamente.</p>':''}${!good?`<div class="answer-comparison"><div><small>Sua resposta</small><p>${escapeHTML(answerText(q,f.answer))}</p></div><div><small>Resposta correta</small><p>${escapeHTML(answerText(q,q.answer))}</p></div></div>`:''}<div class="feedback-explanation"><div class="row"><h3>Entenda o raciocínio</h3>${favorite(state,'e',q.id)}</div><p>${escapeHTML(q.explanation)}</p>${distractor?`<p class="distractor-note">Sua alternativa: ${escapeHTML(distractor)}</p>`:''}</div><div class="feedback-bottom"><span class="meta">Domínio deste conceito: <strong>${m}%</strong> · ${good?'Progresso salvo':'Erro guardado para revisar'}</span><button class="primary" data-action="next-question">${session.answered.length>=session.limit||session.lives===0?'Ver resultado':'Próxima questão'} →</button></div></section>`;}
-function resultScreen({state,bank,session}){
- const total=session.answered.length,correct=session.score,percent=total?Math.round(correct/total*100):0,xp=sum(session.answered.map(h=>h.xp)),seconds=sum(session.answered.map(h=>h.seconds));const wrong=session.answered.filter(h=>!h.correct);
- return `<div class="result-wrap"><span class="result-symbol">✦</span><div class="eyebrow">${MODE_NAMES[session.mode].toUpperCase()} · CONCLUÍDO</div><h1>Você avançou hoje<span>.</span></h1><p>${total?'Cada resposta ajuda a escolher melhor o seu próximo passo.':'Seu progresso anterior continua salvo. Quando quiser, comece de novo.'}</p><div class="result-stats"><div><strong>${correct}<small>/${total}</small></strong><span>acertos</span></div><div><strong>+${xp}</strong><span>XP conquistado</span></div><div><strong>${percent}<small>%</small></strong><span>aproveitamento</span></div><div><strong>${formatTime(seconds)}</strong><span>tempo nas respostas</span></div></div>${['lightning','survival'].includes(session.mode)?`<div class="record-banner">Erros: <strong>${wrong.length}</strong> · Melhor sequência: <strong>${session.bestCombo}</strong> · Seu recorde no modo: <strong>${state.records[session.mode]} acertos</strong></div>`:''}<div class="result-actions">${button('Voltar à minha jornada','go-home','','primary')}${wrong.length?button('Retomar minhas dúvidas','go-errors'):button('Revisar flashcards','cards-home')}</div></div><section class="panel result-review"><div class="section-title"><h2>${wrong.length?'O que vale retomar':'Seus conceitos nesta sessão'}</h2></div>${(wrong.length?wrong:session.answered).map(h=>{const q=questionById(bank,h.questionId);return `<details><summary><span class="result-dot ${h.correct?'right':'wrong'}"></span>${escapeHTML(q.subtopic)}<span class="tag">${h.correct?'Acerto':'Retomar'}</span></summary><div><p>${escapeHTML(q.prompt)}</p><p><strong>Resposta:</strong> ${escapeHTML(answerText(q,q.answer))}</p><p>${escapeHTML(q.explanation)}</p>${button('Outra abordagem →','variation',q.conceptId,'text-button')}</div></details>`;}).join('')||'<p>Nenhuma resposta nesta sessão.</p>'}</section>`;
+function feedbackPanel(state,bank,curriculum,session,q,c){const f=session.feedback,good=f.correct,m=masteryValue(state.concepts[c.id],state.reviews[c.id]),distractor=!good&&Number.isInteger(f.answer)&&q.distractors?.[f.answer];return `<section class="questionFeedback ${good?'rightFeedback':'wrongFeedback'}" role="status" aria-live="polite"><strong>${good?'Raciocínio no caminho certo!':f.confidence==='sure'?'Vamos corrigir um falso domínio.':'Esta é uma oportunidade de aprender.'}</strong>${!good?`<p><b>Sua resposta:</b> ${escapeHTML(answerText(q,f.answer))}<br><b>Resposta correta:</b> ${escapeHTML(answerText(q,q.answer))}</p>`:''}<p>${escapeHTML(q.explanation)}</p>${distractor?`<p>${escapeHTML(distractor)}</p>`:''}<p class="studyMicro">Domínio deste conceito: ${m}% · ${good?'Progresso salvo':'Erro guardado para revisar'}</p></section><div class="questionBottom"><span class="studyMicro">${good?'Continue o combo.':'A explicação já foi salva no Cofre dos erros.'}</span><button class="btn btnPrimary" data-action="next-question">${session.answered.length>=session.limit||session.lives===0?'Ver resultado':'Próxima questão'} →</button></div>${sourceTrail(c,curriculum)}`;}
+function resultScreen({state,bank,session}){const total=session.answered.length,correct=session.score,percent=total?Math.round(correct/total*100):0,xp=sum(session.answered.map(h=>h.xp)),wrong=session.answered.filter(h=>!h.correct);return `<section class="studyArea"><div class="questionShell questionFinished"><div class="questionFinishedIcon">✦</div><h2>Seu treino terminou!</h2><p>Você acertou ${correct} de ${total} questões e conquistou ${xp} XP. Aproveitamento: ${percent}%.</p><div class="btnRow">${button('Voltar à minha jornada','go-home','','btn btnPrimary')}${wrong.length?button('Retomar minhas dúvidas','go-errors','','btn btnSecondary'):button('Revisar flashcards','cards-home','','btn btnSecondary')}</div></div></section>`;}
+
+const icon=(body)=>`<svg class="navSvg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
+
+const SIDEBAR_ICONS={
+ about:icon('<circle cx="16" cy="8" r="3.4" fill="currentColor" fill-opacity=".13"/><circle cx="7.5" cy="11" r="2.7" fill="currentColor" fill-opacity=".1"/><circle cx="24.5" cy="11" r="2.7" fill="currentColor" fill-opacity=".1"/><path d="M9.7 25v-3.2a6.3 6.3 0 0 1 12.6 0V25M2.8 24v-2.2a4.8 4.8 0 0 1 6-4.7M29.2 24v-2.2a4.8 4.8 0 0 0-6-4.7"/>'),
+ home:icon('<path d="M6.5 24.5c3.2-5.4 7-2.2 9.5-6.7 1.7-3 3.5-3.4 5.8-2.1"/><path d="M7.5 26.5c2.8 0 5-2.2 5-5 0-3.5-5-8.5-5-8.5s-5 5-5 8.5c0 2.8 2.2 5 5 5Z" fill="currentColor" fill-opacity=".1"/><circle cx="7.5" cy="21.4" r="1.6"/><path d="M24.5 17.5c2.8 0 5-2.2 5-5 0-3.5-5-8.5-5-8.5s-5 5-5 8.5c0 2.8 2.2 5 5 5Z" fill="currentColor" fill-opacity=".1"/><circle cx="24.5" cy="12.4" r="1.6"/>'),
+ train:icon('<circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity=".08"/><circle cx="16" cy="16" r="9"/><path d="m13.5 11.5 7.5 4.5-7.5 4.5v-9Z" fill="currentColor" fill-opacity=".18"/>'),
+ cards:icon('<rect x="5" y="4" width="22" height="24" rx="3" fill="currentColor" fill-opacity=".06"/><path d="M10 4v9l3-2 3 2V4M10 18h12M10 22h9"/><path d="M8 7H5M27 8h-2M27 13h-2M27 18h-2M27 23h-2"/>'),
+ errors:icon('<rect x="5" y="4" width="22" height="24" rx="3" fill="currentColor" fill-opacity=".07"/><rect x="9" y="8" width="14" height="16" rx="2"/><circle cx="16" cy="16" r="4.2"/><path d="M16 12v2.1M19.8 16H18M16 20v-2M12.2 16H14M27 9h2M27 14h2M27 19h2M27 24h2M8 28v2M24 28v2"/>'),
+ map:icon('<rect x="4" y="6" width="24" height="22" rx="3" fill="currentColor" fill-opacity=".06"/><path d="M4 12h24M10 3v6M22 3v6"/><rect x="8" y="16" width="4" height="3" rx=".6"/><rect x="14" y="16" width="4" height="3" rx=".6"/><rect x="20" y="16" width="4" height="3" rx=".6"/><rect x="8" y="22" width="4" height="3" rx=".6"/><rect x="14" y="22" width="4" height="3" rx=".6"/><rect x="20" y="22" width="4" height="3" rx=".6"/>'),
+ books:icon('<path d="M16 27c-2.8-3-6.3-4.2-11-3.5V6.2c4.8-.7 8.5.6 11 3.4V27Z" fill="currentColor" fill-opacity=".06"/><path d="M16 27c2.8-3 6.3-4.2 11-3.5V6.2c-4.8-.7-8.5.6-11 3.4V27ZM16 9.6V27M8.5 11c1.7 0 3.2.3 4.6 1M8.5 15c1.7 0 3.2.3 4.6 1M23.5 11c-1.7 0-3.2.3-4.6 1M23.5 15c-1.7 0-3.2.3-4.6 1"/>'),
+ stats:icon('<path d="M4 27h24M7 27v-7h5v7M14 27V15h5v12M21 27V10h5v17" fill="currentColor" fill-opacity=".08"/><path d="m5 15 7-6 5 3 10-8M22 4h5v5"/>'),
+ favorites:icon('<path d="m16 3.8 3.8 7.7 8.5 1.2-6.1 6 1.4 8.4-7.6-4-7.6 4 1.4-8.4-6.1-6 8.5-1.2L16 3.8Z" fill="currentColor" fill-opacity=".08"/>'),
+ settings:icon('<path d="M13 4.8h6l.8 3a9 9 0 0 1 2 1.2l3-.8 3 5.2-2.2 2.2v2.8l2.2 2.2-3 5.2-3-.8a9 9 0 0 1-2 1.2l-.8 3h-6l-.8-3a9 9 0 0 1-2-1.2l-3 .8-3-5.2 2.2-2.2v-2.8l-2.2-2.2 3-5.2 3 .8a9 9 0 0 1 2-1.2l.8-3Z" fill="currentColor" fill-opacity=".06"/><circle cx="16" cy="17" r="4"/>'),
+ admin:icon('<rect x="4" y="4" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="18" y="4" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="4" y="18" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/><rect x="18" y="18" width="10" height="10" rx="2" fill="currentColor" fill-opacity=".08"/>'),
+ review:icon('<path d="M26.7 12A11.5 11.5 0 1 0 27 19M27 5v7h-7"/><path d="m10.5 17 3.6 3.7 7.6-8.1" fill="currentColor" fill-opacity=".08"/>')
+};
+
+function sidebarIcon(id){return SIDEBAR_ICONS[id]||'';}
+
+function latestVaultErrorAt(errors={}){
+ return Object.values(errors).reduce((latest,error)=>Math.max(latest,Number(error?.lastAt)||0),0);
 }
+
+function hasNewVaultErrors(state){
+ const seenAt=Number(state?.errorVaultSeenAt)||0;
+ return Object.values(state?.errors||{}).some(error=>!error.resolved&&(Number(error.lastAt)||0)>seenAt);
+}
+
+function markVaultErrorsSeen(state){
+ state.errorVaultSeenAt=Math.max(Number(state.errorVaultSeenAt)||0,latestVaultErrorAt(state.errors));
+ return state.errorVaultSeenAt;
+}
+
+
 
 
 
@@ -901,6 +803,7 @@ const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null,questionOverrides={},editingQuestion=null,editingFields={};
+let cardGesture=null,starAnimation=0;
 const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0};
 const GUEST_LOCKED=['home','errors'];
 let guestModalTrigger=null;
@@ -920,12 +823,13 @@ function closeGuestModal(){
 }
 const appElement=document.querySelector('#app'),modalElement=document.querySelector('#modal');
 if(modalElement?.addEventListener) modalElement.addEventListener('cancel',e=>{e.preventDefault();closeGuestModal();});
-function applyPreferences(){const s=state.settings||{};document.documentElement.dataset.theme='dark';document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);}
+function applyPreferences(){const s=state.settings||{},theme=['nebula','light','rest'].includes(s.theme)?s.theme:'nebula';document.documentElement.dataset.theme=theme;document.documentElement.style.setProperty('--font-scale',String(s.fontScale||1));document.documentElement.classList.toggle('high-contrast',!!s.highContrast);document.documentElement.classList.toggle('reduce-motion',!!s.reduceMotion);document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='nebula'?'#080e1c':theme==='light'?'#f5f8fc':'#f5efe3');}
 applyPreferences();
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4500);}
 function pushProgress(baseRevision=account.progressRevision){return api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision})}).then(r=>{account.progressRevision=r.revision;});}
 function queueServerSync(){if(!account.user)return;clearTimeout(syncTimeout);syncTimeout=setTimeout(()=>pushProgress().catch(async error=>{if(error.code==='progress_conflict'){try{const remote=await api('/api/progress'),rev=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}account.progressRevision=rev;await pushProgress(rev);toast('Conflito resolvido: este dispositivo foi atualizado e o progresso sincronizado.');}catch(error){toast('Seu progresso local foi preservado. Reabra o FIXOU para sincronizar.');}}else{toast(error.message||'Seu progresso está salvo neste dispositivo e será sincronizado quando a conexão voltar.');}}),700);}
 function saveProgress(){if(storageBlocked)return false;try{persistState(state);queueServerSync();return true;}catch(error){storageBlocked=true;toast('Não foi possível salvar agora. O progresso será sincronizado quando a conexão voltar.');return false;}}
+function acknowledgeErrorVault(){if(!account.user||ui.route!=='errors'||!hasNewVaultErrors(state))return;markVaultErrorsSeen(state);saveProgress();}
 async function performLogout(){if(ui.loggingOut)return;ui.loggingOut=true;ui.accountMenuOpen=false;toast('Saindo…');render();saveProgress();clearTimeout(syncTimeout);try{await pushProgress();}catch(error){}try{await api('/api/auth/logout',{method:'POST',body:'{}'});}catch(error){}if(ui.route==='cards')flash=null;ui.loggingOut=false;account={loading:false,user:null,progressRevision:0};adminData=null;if(location.hash==='#login'){render();window.scrollTo(0,0);}else go('login');toast('Você saiu da sua conta. Seus dados continuam salvos.');}
 function track(eventType,metadata={}){if(account.user)api('/api/events',{method:'POST',body:JSON.stringify({eventType,metadata})}).catch(()=>{});}
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
@@ -935,10 +839,10 @@ function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOO
 function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','review','login','register','forgot','reset'].includes(parts[0])?parts[0]:'about';ui.bookId=parts[1]||null;}
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
- if(account.loading){appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
+ if(account.loading){appElement.className='';appElement.innerHTML='<div class="loading-screen"><span class="spinner"></span><h2>Preparando seu espaço…</h2></div>';return;}
  const guest=isGuest();
  if(!account.user && ['login','register','forgot','reset'].includes(ui.route)){
-  const mode=ui.route,token=location.hash.split('/')[1]||'';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;
+  const mode=ui.route,token=location.hash.split('/')[1]||'';appElement.className='';appElement.innerHTML=authScreen(mode,token);document.title='Entrar · FIXOU';return;
  }
  if(guest && GUEST_LOCKED.includes(ui.route)){
   const attempted=ui.route;
@@ -958,58 +862,40 @@ function render(){
  }
  const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
  const views={about:aboutScreen,home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen,review:reviewScreen};
- const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','▦','Painel do dono'],['review','◉','Revisão de Questões']]:baseNav;
+  const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','','Painel do dono'],['review','','Revisão de Questões']]:baseNav;
  const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
  const navHtml=nav.map(([id,i,t])=>{
   const locked=guest && GUEST_LOCKED.includes(id);
   const active=id===navRoute && !locked;
-  const badge=id==='errors'&&state.errors&&Object.values(state.errors).some(e=>!e.resolved)?'<i class="nav-badge"></i>':'';
+   const badge=id==='errors'&&account.user&&hasNewVaultErrors(state)?'<i class="nav-badge" aria-label="Novas questões no Cofre"></i>':'';
   if(locked){
-   return `<button class="nav-item guest-locked" data-action="guest-lock" data-id="${id}" aria-label="${t} - requer conta">${`<span aria-hidden="true">${i}</span>`}${escapeHTML(t)}<span class="nav-lock" aria-hidden="true">🔒</span>${badge}</button>`;
+    return `<button class="nav-item guest-locked" data-action="guest-lock" data-id="${id}" aria-label="${t} - requer conta"><span class="navIcon" aria-hidden="true">${sidebarIcon(id)}</span>${escapeHTML(t)}<span class="nav-lock" aria-hidden="true">🔒</span>${badge}</button>`;
   }
-  return `<a href="#${id}" class="nav-item ${active?'active':''}" ${active?'aria-current="page"':''}><span aria-hidden="true">${i}</span>${escapeHTML(t)}${badge}</a>`;
+   return `<a href="#${id}" class="nav-item navitem ${active?'active':''}" ${active?'aria-current="page"':''}><span class="navIcon" aria-hidden="true">${sidebarIcon(id)}</span>${escapeHTML(t)}${badge}</a>`;
  }).join('');
  const logoutHtml=!guest?`<button class="nav-item nav-logout" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span aria-hidden="true">↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button>`:'';
  const accountAreaHtml=guest?'':`<div class="account-area"><button class="profile-link" data-action="profile-settings" type="button" aria-label="Abrir configurações">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span></button></div>`;
- appElement.innerHTML=`<button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar ${ui.sidebarOpen?'open':''}"><a class="brand" href="#about"><img class="brand-logo" src="assets/fixou-logo.png" alt="FIXOU — Conhecimento que fica"></a><span class="nav-label">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom"><div class="exam-label"><span class="status-dot"></span> VESTIBULAR 2027</div><p>Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span>/</span> ${title}</span><button class="search-top" data-action="search" aria-label="Buscar um conceito">⌕ <span>Buscar um conceito</span><kbd>/</kbd></button><a class="streak-chip" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027. <a href="#profile">Fontes e progresso</a></footer></div>`;
+ appElement.className='app';
+ appElement.innerHTML=`<canvas id="stars" aria-hidden="true"></canvas><div class="screenGlow" aria-hidden="true"></div><button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar side ${ui.sidebarOpen?'open':''}"><a class="brand" href="#about"><svg class="brain" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M22 8L34 6L46 10L54 20L52 33L40 40L32 46L26 38L14 34L10 22L22 8Z" fill="#3B82F6" fill-opacity=".29" stroke="#6cc5f5" stroke-width="1.5"/><path d="M22 8L32 18L34 6M32 18L46 10M32 18L44 26L54 20M32 18L20 24L10 22M32 18L28 30L20 24M28 30L44 26M28 30L40 40L52 33L44 26M28 30L26 38L14 34L20 24" stroke="#77d7ee" stroke-width="1.3"/><circle cx="32" cy="18" r="2.5" fill="#84dcee"/></svg><div><div class="wordmark">FIXOU</div><div class="slogan">CONHECIMENTO QUE FICA</div></div></a><span class="nav-label sidelabel">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom sidefooter"><div class="exam-label vest"><span class="status-dot"></span> VESTIBULAR 2027</div><p class="sidefootnote">Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace mainArea"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span class="slash">/</span> <b>${title}</b></span><div class="headerRight"><span class="themeLabel">Aparência</span><div class="themePills" role="group" aria-label="Alternar modo de aparência">${[['nebula','✦ Nebulosa'],['light','☀ Claro'],['rest','◐ Descanso']].map(([id,label])=>`<button data-action="set-theme" data-id="${id}" aria-pressed="${state.settings.theme===id}">${label}</button>`).join('')}</div><a class="streak" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></div></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" class="content" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027.</footer></div>`;
  document.title=`${title} · FIXOU`;
  if(ui.route==='about')initAboutPage();
+ if(ui.route==='cards'&&flash)initCardGestures();
+ initStarfield(document.querySelector('#stars'),state.settings.reduceMotion||window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 }
 function initAboutPage(){
- const page=document.querySelector('.ab-page');
+ const page=document.querySelector('.fixou-approved-home');
  if(!page)return;
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reduced=state.settings.reduceMotion||window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  const reveals=page.querySelectorAll('[data-reveal]');
- const sections=page.querySelectorAll('[data-section]');
- const cards=page.querySelectorAll('.ab-step,.ab-tool,.ab-problem');
- if(!reduced){
-  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visible');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+ if(!reduced&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -10% 0px'});
   reveals.forEach(el=>io.observe(el));
-  sections.forEach(el=>io.observe(el));
-  cards.forEach(el=>io.observe(el));
- }
- const orb=page.querySelector('.ab-hero-orb');
- if(orb&&!reduced){
-  let ticking=false;
-  page.addEventListener('mousemove',(e)=>{
-   if(ticking)return;ticking=true;
-   requestAnimationFrame(()=>{
-    const rect=page.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width-0.5;
-    const y=(e.clientY-rect.top)/rect.height-0.5;
-    orb.style.transform=`translate(${x*20}px,${y*20}px)`;
-    cards.forEach(card=>{
-     const cr=card.getBoundingClientRect();
-     const cx=(e.clientX-cr.left)/cr.width-0.5;
-     const cy=(e.clientY-cr.top)/cr.height-0.5;
-     card.style.transform=`perspective(600px) rotateY(${cx*6}deg) rotateX(${-cy*6}deg) translateZ(8px)`;
-    });
-    ticking=false;
-   });
-  });
-  page.addEventListener('mouseleave',()=>{cards.forEach(card=>{card.style.transform='';});});
- }
+  document.documentElement.classList.add('reveal-ready');
+ }else reveals.forEach(el=>el.classList.add('is-visible'));
 }
+function initStarfield(canvas,reduced){if(typeof cancelAnimationFrame==='function')cancelAnimationFrame(starAnimation);if(!canvas)return;const ctx=canvas.getContext('2d');if(!ctx)return;const dpr=Math.min(devicePixelRatio||1,1.6),cssW=innerWidth,cssH=innerHeight,W=canvas.width=Math.max(1,Math.round(cssW*dpr)),H=canvas.height=Math.max(1,Math.round(cssH*dpr));canvas.style.width=cssW+'px';canvas.style.height=cssH+'px';const stars=Array.from({length:Math.max(44,Math.min(165,Math.round(cssW*cssH/10200)))},(_,i)=>{const layer=i%4,depth=.36+layer*.29;return{x:Math.random()*W,y:Math.random()*H,depth,r:(.38+Math.random()*.85+(layer===3?.38:0))*dpr,speed:(7.2+layer*6.6+Math.random()*5.7)*dpr,twinkle:Math.random()*Math.PI*2,glow:layer===3};});let last=performance.now(),phase=0,shooting=null,lastShot=0;const draw=now=>{const theme=document.documentElement.dataset.theme||'nebula',seconds=Math.min((now-last)/1000,.05),factor=theme==='rest'?.21:theme==='light'?.58:1,moving=!reduced&&!document.hidden;phase+=moving?seconds:0;ctx.clearRect(0,0,W,H);const col=theme==='nebula'?'195,216,255':theme==='light'?'83,119,164':'125,103,77',intensity=theme==='nebula'?.66:theme==='light'?.31:.20;for(const s of stars){if(moving){s.x-=s.speed*seconds*factor;s.y-=s.speed*.15*seconds*factor;if(s.x < -5*dpr){s.x=W+4*dpr;s.y=Math.random()*H;}if(s.y < -5*dpr)s.y=H+4*dpr;}const alpha=intensity*(.84+.16*Math.sin(phase*.95+s.twinkle))*(s.depth*.45+.65);ctx.globalAlpha=alpha;ctx.fillStyle='rgb('+col+')';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,2*Math.PI);ctx.fill();if(s.glow&&theme==='nebula'){ctx.globalAlpha=alpha*.13;ctx.beginPath();ctx.arc(s.x,s.y,s.r*3.7,0,2*Math.PI);ctx.fill();}}if(moving&&theme==='nebula'&&phase-lastShot>13&&W>600*dpr){shooting={x:W*(.65+Math.random()*.25),y:H*(.13+Math.random()*.4),life:0,maxLife:.85};lastShot=phase;}if(shooting){shooting.x+=85*seconds*dpr;shooting.y+=25*seconds*dpr;shooting.life+=seconds;ctx.globalAlpha=Math.max(0,Math.sin(Math.PI*shooting.life/shooting.maxLife)*.4);const g=ctx.createLinearGradient(shooting.x-90*dpr,shooting.y-26*dpr,shooting.x,shooting.y);g.addColorStop(0,'rgba(148,191,252,0)');g.addColorStop(1,'rgba(203,231,255,.9)');ctx.strokeStyle=g;ctx.lineWidth=dpr;ctx.beginPath();ctx.moveTo(shooting.x-90*dpr,shooting.y-26*dpr);ctx.lineTo(shooting.x,shooting.y);ctx.stroke();if(shooting.life>shooting.maxLife)shooting=null;}ctx.globalAlpha=1;last=now;starAnimation=typeof requestAnimationFrame==='function'?requestAnimationFrame(draw):0;};draw(last);}
+function initCardGestures(){const card=document.querySelector('.flash-card-3d');if(!card)return;const arena=card.closest('.flash-arena'),left=arena.querySelector('.swipe-rever'),right=arena.querySelector('.swipe-sei');card.addEventListener('pointerdown',e=>{if(e.button!==0)return;cardGesture={id:e.pointerId,x:e.clientX,y:e.clientY,dragged:false};card.setPointerCapture(e.pointerId);});card.addEventListener('pointermove',e=>{if(!cardGesture||e.pointerId!==cardGesture.id)return;const dx=e.clientX-cardGesture.x,dy=e.clientY-cardGesture.y;if(Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)*.75)cardGesture.dragged=true;if(!cardGesture.dragged)return;card.style.setProperty('--drag-x',dx+'px');card.style.setProperty('--drag-rot',dx/30+'deg');left.style.opacity=dx<0?Math.min(1,-dx/100):0;right.style.opacity=dx>0?Math.min(1,dx/100):0;});const finish=e=>{if(!cardGesture||e.pointerId!==cardGesture.id)return;const dx=e.clientX-cardGesture.x,dy=e.clientY-cardGesture.y,dragged=cardGesture.dragged;cardGesture=null;if(flash?.revealed&&dragged&&Math.abs(dx)>95&&Math.abs(dx)>Math.abs(dy)*1.1){rateCard(dx>0?'good':'forgot');return;}card.style.removeProperty('--drag-x');card.style.removeProperty('--drag-rot');left.style.opacity=right.style.opacity=0;};card.addEventListener('pointerup',finish);card.addEventListener('pointercancel',finish);}
+function particleBurst(){if(state.settings.reduceMotion||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const target=document.querySelector('.answer-celebrate');if(!target)return;for(let i=0;i<16;i++){const p=document.createElement('i');p.className='answer-particle';p.style.setProperty('--particle-x',`${Math.cos(i/16*Math.PI*2)*(55+Math.random()*80)}px`);p.style.setProperty('--particle-y',`${Math.sin(i/16*Math.PI*2)*(35+Math.random()*65)}px`);p.style.background=['#82d6c8','#749fe3','#efd095','#eab4d7'][i%4];target.append(p);setTimeout(()=>p.remove(),900);}}
 function openModal(html){modalElement.innerHTML=html;if(!modalElement.open)modalElement.showModal();}
 function closeModal(){modalElement.close();afterConfirm=null;}
 function ensureProfile(action){if(state.profile?.name){action();return;}afterProfile=action;openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><img class="modal-logo" src="assets/fixou-logo.png" alt="FIXOU — Conhecimento que fica"><div class="eyebrow modal-eyebrow">SUA JORNADA COMEÇA AQUI</div><h2 id="modal-title">Como podemos chamar você?</h2><p>Vamos guardar sua evolução e preparar seu primeiro treino.</p><form id="onboarding-form" class="form-stack"><label>Seu nome<input name="name" required maxlength="40" autocomplete="given-name" placeholder="Digite seu nome" autofocus></label><label>Seu objetivo <span class="meta">(opcional)</span><input name="goal" maxlength="100" placeholder="Ex.: Medicina na USP"></label><button class="primary" type="submit">Começar minha jornada →</button><p class="note">Seu progresso é salvo automaticamente na sua conta FIXOU.</p></form>`);}
@@ -1031,7 +917,7 @@ function advance(forcedId=null){
 function complete(){if(!session||session.finished)return;finishSession(state,session);track('study_session_completed',{sessionId:session.id,mode:session.mode,total:session.answered.length,correct:session.score,seconds:Math.round(session.answered.reduce((n,a)=>n+(a.seconds||0),0))});if(state.daily?.sessionId===session.id)state.daily.completed=true;saveProgress();render();if(ui.route==='quiz')window.scrollTo(0,0);}
 function submitAnswer(){if(!session||session.finished||session.feedback)return;const q=questionById(BANK,session.currentId);if(!canSubmitDraft(q,session.draft)){toast('Escolha uma resposta e indique sua confiança.');return;}if(session.endsAt&&Date.now()>=session.endsAt){complete();return;}
  const attempt=recordAnswer(state,BANK,session,q,draftAnswer(q,session.draft),session.draft.confidence,session.questionSeconds||0);
- if(!attempt)return;track('question_answered',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id,seconds:Math.round(attempt.seconds||0)});track(attempt.correct?'question_correct':'question_incorrect',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id});track('topic_mastery_updated',{topicId:q.conceptId,score:masteryValue(state.concepts[q.conceptId],state.reviews[q.conceptId])});saveProgress();render();document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+ if(!attempt)return;track('question_answered',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id,seconds:Math.round(attempt.seconds||0)});track(attempt.correct?'question_correct':'question_incorrect',{questionId:q.id,subjectId:q.discipline,topicId:q.conceptId,sessionId:session.id});track('topic_mastery_updated',{topicId:q.conceptId,score:masteryValue(state.concepts[q.conceptId],state.reviews[q.conceptId])});saveProgress();render();if(attempt.correct)requestAnimationFrame(particleBurst);document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function updateDraft(){saveProgress();const q=questionById(BANK,session.currentId),submit=document.querySelector('[data-action="submit-answer"]');if(submit)submit.disabled=!canSubmitDraft(q,session.draft);}
 function startCards(kind,id){ensureProfile(()=>{const flashConcepts=BANK.concepts.filter(c=>c.flashcard&&!c.flashcard.needsReview);let concepts=kind==='one'?flashConcepts.filter(c=>c.id===id):kind==='due'?dueConcepts(state,flashConcepts):flashConcepts.filter(c=>{const status=ui.cardFilters.status;return (!ui.cardFilters.discipline||c.discipline===ui.cardFilters.discipline)&&(!ui.cardFilters.topic||c.topic===ui.cardFilters.topic)&&(!status||status==='new'&&!state.reviews[c.id]||status==='due'&&isDue(state,c.id)||status==='favorites'&&state.favorites.includes('c:'+c.id));});
@@ -1046,6 +932,9 @@ function rateCard(rating){if(!flash?.revealed)return;const id=flash.currentId,pr
 function downloadText(name,text,type='application/json'){const blob=new Blob([text],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
+ if(action==='set-theme'){if(!['nebula','light','rest'].includes(id))return;state.settings.theme=id;applyPreferences();saveProgress();render();toast('Aparência salva.');return;}
+ if(action==='about-tool'){document.querySelectorAll('.toolGrid .tool').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.toolDetail');if(detail){detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+ if(action==='flip-card'){if(flash){flash.revealed=!flash.revealed;render();}return;}
  if(action==='logout'){performLogout();return;}
  if(action==='guest-lock'){openGuestModal(id,element);return;}
  if(action==='close-guest-modal'){closeGuestModal();return;}
@@ -1158,19 +1047,21 @@ document.addEventListener('submit',event=>{
 });
 document.addEventListener('keydown',event=>{
  const editing=/INPUT|TEXTAREA|SELECT/.test(event.target.tagName);
+ if(!editing&&!modalElement.open&&ui.route==='quiz'&&session){const q=questionById(BANK,session.currentId);if(!session.feedback&&['choice','boolean'].includes(q?.type)){const index='abcd'.indexOf(event.key.toLowerCase());if(index>=0&&index<q.options.length){event.preventDefault();session.draft.answer=index;updateDraft();render();return;}}if(session.feedback&&event.key==='Enter'){event.preventDefault();advance();return;}}
+ if(!editing&&!modalElement.open&&ui.route==='cards'&&flash){if(event.key==='ArrowLeft'){event.preventDefault();rateCard('forgot');return;}if(event.key==='ArrowRight'){event.preventDefault();rateCard('good');return;}if(event.key==='Enter'||event.key===' '){event.preventDefault();flash.revealed=!flash.revealed;render();return;}}
  if(event.key==='Escape' && modalElement.open){event.preventDefault();closeGuestModal();return;}
  if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}
  if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
  if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}
 });
-window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='about')track('about_viewed');if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors')track('error_vault_viewed');if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}if(ui.route==='review'&&account.user&&['owner','admin'].includes(account.user.role)){fetchQuestionOverrides().then(()=>{render();});}else{render();}window.scrollTo(0,0);});
+window.addEventListener('hashchange',()=>{readRoute();ui.sidebarOpen=false;if(ui.route==='about')track('about_viewed');if(ui.route==='map')track('program_2027_viewed');if(ui.route==='errors'){track('error_vault_viewed');acknowledgeErrorVault();}if(ui.route==='admin'&&account.user&&['owner','admin'].includes(account.user.role)){adminData=null;api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));}if(ui.route==='review'&&account.user&&['owner','admin'].includes(account.user.role)){fetchQuestionOverrides().then(()=>{render();});}else{render();}window.scrollTo(0,0);});
 window.addEventListener('pagehide',()=>saveProgress());
 let resizeTimer=null;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(ui.route==='admin')render();},120);});
 document.addEventListener('visibilitychange',()=>{lastTick=Date.now();if(document.hidden)saveProgress();});
 window.addEventListener('storage',event=>{if(event.key!==SAVE_KEY)return;const latest=loadState();if(!latest.blocked){state=latest.state;session=state.activeSession;render();toast('Progresso atualizado por outra aba.');}});
 setInterval(()=>{const now=Date.now(),dt=clamp((now-lastTick)/1000,0,2);lastTick=now;if(session&&!session.finished){if(session.endsAt&&now>=session.endsAt){complete();if(ui.route!=='quiz')toast('Relâmpago concluído. Seu recorde foi salvo.');return;}const clock=document.querySelector('#lightning-clock');if(clock)clock.textContent=formatTime((session.endsAt-now)/1000);if(ui.route==='quiz'&&!document.hidden&&!modalElement.open&&!session.feedback){session.questionSeconds=(session.questionSeconds||0)+dt;const timer=document.querySelector('#question-time');if(timer)timer.textContent=formatTime(session.questionSeconds)+' pensando';if(Math.floor(session.questionSeconds)%5===0)saveProgress();}}if(flash&&ui.route==='cards'&&!document.hidden&&!modalElement.open)flash.seconds+=dt;},1000);
 setInterval(()=>{if(account.user&&!document.hidden)api('/api/auth/session').catch(()=>{});},ACCOUNT_CONFIG.presenceMinutes*60*1000);
-readRoute();if(session?.endsAt&&Date.now()>=session.endsAt)finishSession(state,session);render();api('/api/auth/session').then(async r=>{account={loading:false,user:r.user,progressRevision:0};if(r.user){state.profile={...state.profile,name:r.user.name,createdAt:state.profile?.createdAt||r.user.createdAt};await hydrateProgress();if(ui.route==='admin'&&['owner','admin'].includes(r.user.role)){const result=await api('/api/admin/overview?days='+ui.adminPeriod);adminData=result.data;}if(ui.route==='review'&&['owner','admin'].includes(r.user.role)){await fetchQuestionOverrides();}}render();if(loaded.warning)toast(loaded.warning);}).catch(()=>{account={loading:false,user:null};render();});
+readRoute();if(session?.endsAt&&Date.now()>=session.endsAt)finishSession(state,session);render();api('/api/auth/session').then(async r=>{account={loading:false,user:r.user,progressRevision:0};if(r.user){state.profile={...state.profile,name:r.user.name,createdAt:state.profile?.createdAt||r.user.createdAt};await hydrateProgress();acknowledgeErrorVault();if(ui.route==='admin'&&['owner','admin'].includes(r.user.role)){const result=await api('/api/admin/overview?days='+ui.adminPeriod);adminData=result.data;}if(ui.route==='review'&&['owner','admin'].includes(r.user.role)){await fetchQuestionOverrides();}}render();if(loaded.warning)toast(loaded.warning);}).catch(()=>{account={loading:false,user:null};render();});
 
 
 })();
