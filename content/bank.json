@@ -10943,16 +10943,16 @@
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Udesc Um caminhão-tanque desloca-se numa estrada reta com velocidade constante de 72,0 km/h. Devido a um vazamento, o caminhão perde água à razão de uma gota por segundo. O motorista, vendo um obstáculo, freia o caminhão uniformemente, até parar. As manchas de água deixadas na estrada estão representadas na figura a seguir. v 5 72,0 km/h v 5 0 20 m 20 m 18 m 14 m 10 m 6 m 2 m O valor do módulo da desaceleração durante a frenagem do caminhão (em m/s2 ) é:",
+                          "prompt":  "Udesc Um caminhão-tanque desloca-se numa estrada reta com velocidade constante de 72,0 km/h. Devido a um vazamento, o caminhão perde água à razão de uma gota por segundo. O motorista, vendo um obstáculo, freia o caminhão uniformemente, até parar. As manchas de água deixadas na estrada estão representadas na figura a seguir. O valor do módulo da desaceleração durante a frenagem do caminhão (em m/s²) é:",
                           "options":  [
-                                          ",",
-                                          ",",
-                                          ",",
-                                          ",",
-                                          ","
+                                          "4,0",
+                                          "2,2",
+                                          "4,4",
+                                          "2,8",
+                                          "3,4"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "A velocidade inicial é 72,0 km/h = 20 m/s. Como as gotas caem em intervalos de 1 s, as distâncias sucessivas percorridas durante a frenagem podem ser comparadas diretamente. Na figura, essas distâncias passam por 18 m, 14 m, 10 m, 6 m e 2 m, diminuindo 4 m a cada segundo. Em um movimento uniformemente variado, essa diferença corresponde ao módulo da aceleração para intervalos de 1 s. Logo, o módulo da desaceleração é 4,0 m/s². Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -10975,23 +10975,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c3-exercicios-propostos-q8-p48.png"],
                           "tags":  [
                                        "física",
                                        "movimento",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c3-exercicios-propostos-q9",
@@ -11160,16 +11155,16 @@
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFJF-MG 2019 O sistema de freios ABS (Anti-lock Braking System) aumenta a segurança dos veículos, fazendo com que as rodas não travem e continuem girando, evitando que os pneus derrapem. Uma caminhonete equipada com esse sistema de freios 006366_pv_pvv_al_fis_3_vol1_liv_037_058_f1_c3_P3.indd 48 11/08/25 13:35 49 encontra-se acima da velocidade máxima de 110 km/h permitida num trecho de uma rodovia. O motorista dessa caminhonete avista um Fusca que se move no mesmo sentido que ele, a uma velocidade constante de módulo v 5 108 km/h, num longo trecho plano e retilíneo da rodovia, como mostra a figura. Ele percebe que não é possível ultrapassar o Fusca, já que um ônibus está vindo na outra pista. Então, ele imediatamente pisa no freio, fazendo com que a caminhonete diminua sua velocidade a uma razão de 14,4 km/h por segundo. Após 5 s, depois de acionar os freios, a caminhonete atinge a mesma velocidade do automóvel, evitando uma possível colisão. v0 v v Caminhonete desacelerando para não colidir com o Fusca. O módulo da velocidade v0 da caminhonete no momento em que o motorista pisou no freio era de:",
+                          "prompt":  "UFJF-MG 2019 O sistema de freios ABS (Anti-lock Braking System) aumenta a segurança dos veículos, fazendo com que as rodas não travem e continuem girando, evitando que os pneus derrapem. Uma caminhonete equipada com esse sistema de freios encontra-se acima da velocidade máxima de 110 km/h permitida num trecho de uma rodovia. O motorista dessa caminhonete avista um Fusca que se move no mesmo sentido que ele, a uma velocidade constante de módulo v = 108 km/h, num longo trecho plano e retilíneo da rodovia. Ele percebe que não é possível ultrapassar o Fusca, já que um ônibus está vindo na outra pista. Então, ele imediatamente pisa no freio, fazendo com que a caminhonete diminua sua velocidade a uma razão de 14,4 km/h por segundo. Após 5 s, depois de acionar os freios, a caminhonete atinge a mesma velocidade do automóvel, evitando uma possível colisão. O módulo da velocidade v₀ da caminhonete no momento em que o motorista pisou no freio era de:",
                           "options":  [
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h"
+                                          "128 km/h",
+                                          "135 km/h",
+                                          "145 km/h",
+                                          "150 km/h",
+                                          "180 km/h"
                                       ],
                           "answer":  4,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é E.",
+                          "explanation":  "A caminhonete reduz sua velocidade à razão de 14,4 km/h a cada segundo. Em 5 s, a redução total é 14,4 × 5 = 72 km/h. Como após esse intervalo ela atinge a velocidade do Fusca, 108 km/h, sua velocidade inicial era v₀ = 108 + 72 = 180 km/h. Alternativa E.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -11192,10 +11187,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -11205,10 +11197,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c3-exercicios-propostos-q17",
@@ -12897,15 +12889,15 @@
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "AFA-SP 2023 Duas partículas, A e B, se movem, em sentidos opostos, em uma mesma trajetória. No instante t0 5 0, a partícula A inicia do repouso e da origem dos espaços um movimento uniformemente variado, e a partícula B passa pela posição 3,0 m com velocidade constante, permanecendo em movimento uniforme. No instante t 5 2 s, as duas partículas, A e B, se encontram, tendo a partícula B percorrido uma distância igual a duas vezes a distância percorrida pela partícula A, conforme indica figura a seguir: 3,0 A BA B 0 S (m) Nessas condições, a velocidade da partícula A, em m/s, no momento em que as partículas se encontram, é igual a",
+                          "prompt":  "AFA-SP 2023 Duas partículas, A e B, se movem, em sentidos opostos, em uma mesma trajetória. No instante t₀ = 0, a partícula A inicia do repouso e da origem dos espaços um movimento uniformemente variado, e a partícula B passa pela posição 3,0 m com velocidade constante, permanecendo em movimento uniforme. No instante t = 2 s, as duas partículas se encontram, tendo a partícula B percorrido uma distância igual a duas vezes a distância percorrida pela partícula A. Nessas condições, a velocidade da partícula A, em m/s, no momento em que as partículas se encontram, é igual a:",
                           "options":  [
-                                          ",",
-                                          ",",
-                                          ",",
-                                          ","
+                                          "0,25",
+                                          "0,50",
+                                          "1,0",
+                                          "2,0"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "No encontro, as partículas percorreram juntas os 3,0 m que as separavam inicialmente. Como B percorreu o dobro da distância de A, temos dA + dB = 3,0 e dB = 2dA. Logo, 3dA = 3,0 e dA = 1,0 m. A parte do repouso e realiza MUV durante 2 s, então 1,0 = (a·2²)/2, resultando em a = 0,5 m/s². Assim, v = a·t = 0,5·2 = 1,0 m/s. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -12928,10 +12920,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -12941,10 +12930,10 @@
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c3-exercicios-complementares-q7",
@@ -13005,16 +12994,16 @@
                           "conceptId":  "fis-lic-l1-f1-c3-movimento",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Enem 2020 Você foi contratado para sincronizar os quatro semáforos de uma avenida, indicados pelas letras O, A, B e C, conforme a figura. O A B C Os semáforos estão separados por uma distância de 500 m. Segundo os dados estatísticos da companhia controladora de trânsito, um veículo, que está inicialmente parado no semáforo O, tipicamente parte com aceleração constante de 1 m ? s22 até atingir a velocidade de 72 km ? h21 e, a partir daí, prossegue com velocidade constante. Você deve ajustar os semáforos A, B e C de modo que eles mudem para a cor verde quando o veículo estiver a 100 m de cruzá-los, para que ele não tenha que reduzir a velocidade em nenhum momento. Considerando essas condições, aproximadamente quanto tempo depois da abertura do semáforo O os semáforos A, B e C devem abrir, respectivamente?",
+                          "prompt":  "Enem 2020 Você foi contratado para sincronizar os quatro semáforos de uma avenida, indicados pelas letras O, A, B e C. Os semáforos estão separados por uma distância de 500 m. Segundo os dados estatísticos da companhia controladora de trânsito, um veículo, que está inicialmente parado no semáforo O, tipicamente parte com aceleração constante de 1 m/s² até atingir a velocidade de 72 km/h e, a partir daí, prossegue com velocidade constante. Você deve ajustar os semáforos A, B e C de modo que eles mudem para a cor verde quando o veículo estiver a 100 m de cruzá-los, para que ele não tenha que reduzir a velocidade em nenhum momento. Considerando essas condições, aproximadamente quanto tempo depois da abertura do semáforo O os semáforos A, B e C devem abrir, respectivamente?",
                           "options":  [
-                                          " s,  s e  s",
-                                          " s,  s e  s",
-                                          " s,  s e  s",
-                                          " s,  s e  s",
-                                          " s,  s e  s"
+                                          "20 s, 45 s e 70 s",
+                                          "25 s, 50 s e 75 s",
+                                          "28 s, 42 s e 53 s",
+                                          "30 s, 55 s e 80 s",
+                                          "35 s, 60 s e 85 s"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Primeiro, 72 km/h = 20 m/s. Partindo do repouso com aceleração de 1 m/s², o veículo leva 20 s para atingir 20 m/s e percorre nesse intervalo 200 m. Os semáforos A, B e C estão a 500 m, 1000 m e 1500 m de O e devem abrir quando o veículo estiver 100 m antes deles, isto é, nas posições 400 m, 900 m e 1400 m. Depois dos primeiros 200 m, o veículo segue a 20 m/s. Assim: tA = 20 + 200/20 = 30 s; tB = 20 + 700/20 = 55 s; tC = 20 + 1200/20 = 80 s. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Movimento uniformemente variado",
@@ -13037,10 +13026,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -13050,10 +13036,10 @@
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f1-c3-exercicios-complementares-q13",
@@ -23743,16 +23729,16 @@
                           "conceptId":  "fis-lic-l1-f2-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "IFCE 2019 Um aluno do IFCE dispõe de quatro objetos esféricos idênticos eletrizados conforme mostra a figura a seguir. A (Q) B (26Q) C (4Q) D (27Q) Ele efetua os seguintes procedimentos: . toca C em B, com A mantida à distância, e em seguida separa C de B; . toca C em A, com B mantida à distância, e em seguida separa C de A; . toca A em B, com C mantida à distância, e em seguida separa A de B. É correto afirmar-se que a carga final das esferas A até D e a soma das cargas das quatro esferas após os procedimentos realizados pelo aluno valem, respectivamente,",
+                          "prompt":  "IFCE 2019 Um aluno do IFCE dispõe de quatro objetos esféricos idênticos, A, B, C e D, inicialmente eletrizados com cargas, respectivamente, Q, -6Q, 4Q e -7Q.\n\nEle efetua os seguintes procedimentos:\n\n1. toca C em B, com A mantida à distância, e em seguida separa C de B;\n2. toca C em A, com B mantida à distância, e em seguida separa C de A;\n3. toca A em B, com C mantida à distância, e em seguida separa A de B.\n\nÉ correto afirmar que as cargas finais das esferas A, B, C e D e a soma das cargas das quatro esferas após os procedimentos realizados pelo aluno valem, respectivamente:",
                           "options":  [
-                                          "11 Q 2 ; Q 2 ; zero; −Q e −Q.",
-                                          "22 Q 2 ; Q 2 ; zero; −Q e −Q.",
-                                          "2Q 4 ; Q 2 ; zero; −Q e −Q.",
-                                          "2Q 4 ; Q 2 ; zero; Q e Q.",
-                                          "Q 4 ; Q 4 ; zero; −Q e −Q."
+                                          "+Q/2; +Q/2; zero; -7Q; -8Q.",
+                                          "-Q/2; -Q/2; zero; -7Q; -8Q.",
+                                          "-Q/4; +Q/2; zero; -7Q; -8Q.",
+                                          "-Q/4; +Q/2; zero; +7Q; +8Q.",
+                                          "+Q/4; +Q/4; zero; -7Q; -8Q."
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "No primeiro contato, B possui carga -6Q e C possui 4Q. Como as esferas são idênticas, a carga total -2Q é dividida igualmente, ficando B = -Q e C = -Q.\n\nNo segundo contato, C = -Q toca A = Q. A carga total é zero, portanto A = 0 e C = 0.\n\nNo terceiro contato, A = 0 toca B = -Q. A carga total -Q é dividida igualmente, ficando A = -Q/2 e B = -Q/2.\n\nA esfera D não participa dos contatos e permanece com -7Q. Assim, as cargas finais são A = -Q/2, B = -Q/2, C = 0 e D = -7Q, cuja soma é -8Q. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Eletrostática",
@@ -23775,10 +23761,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -23788,10 +23771,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c1-exercicios-propostos-q14",
@@ -23960,16 +23943,16 @@
                           "conceptId":  "fis-lic-l1-f2-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UEA-AM 2024 Três esferas condutoras idênticas, A, B e C, encontram-se fixadas sobre a borda de um disco isolante que pode girar em torno de seu centro. Uma quarta esfera, P, idêntica às outras três, encontra-se eletricamente isolada e fixada a uma certa distância do disco. Tal distância permite que, ao girar-se o disco, as esferas A, B e C apenas tangenciem a superfície da esfera P. A C P B Horário Anti-horário Isolante São realizados dois experimentos, ambos começando com o disco na mesma posição indicada na figura e com as esferas A, B, C e P com cargas iguais a 4,0 C, 22,0 C, 8,0 C e 0 C, respectivamente. No primeiro experimento, o disco completa um giro no sentido horário. No segundo experimento, o disco completa um giro no sentido anti-horário. Os valores da carga final de P, no primeiro e no segundo experimento, são, respectivamente,",
+                          "prompt":  "UEA-AM 2024 Três esferas condutoras idênticas, A, B e C, encontram-se fixadas sobre a borda de um disco isolante que pode girar em torno de seu centro. Uma quarta esfera, P, idêntica às outras três, encontra-se eletricamente isolada e fixada a uma certa distância do disco. Tal distância permite que, ao girar-se o disco, as esferas A, B e C apenas tangenciem a superfície da esfera P.\n\nSão realizados dois experimentos, ambos começando com o disco na mesma posição indicada na figura e com as esferas A, B, C e P com cargas iguais a 4,0 C, -2,0 C, 8,0 C e 0 C, respectivamente.\n\nNo primeiro experimento, o disco completa um giro no sentido horário. No segundo experimento, o disco completa um giro no sentido anti-horário.\n\nOs valores da carga final de P, no primeiro e no segundo experimento, são, respectivamente:",
                           "options":  [
-                                          ", C e 2, C.",
-                                          ", C e , C.",
-                                          ", C e , C.",
-                                          "2, C e , C.",
-                                          "2, C e 2, C."
+                                          "1,0 C e -2,5 C.",
+                                          "2,5 C e 4,0 C.",
+                                          "2,0 C e 3,5 C.",
+                                          "-0,5 C e 5,0 C.",
+                                          "-3,5 C e -2,0 C."
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Como as esferas são condutoras, idênticas e apenas se tocam aos pares, em cada contato a carga total do par é igualmente dividida.\n\nNo giro horário, a ordem de contato com P é C → B → A.\n\nInicialmente P = 0.\nC = 8,0 C toca P: cada uma fica com 4,0 C.\nDepois B = -2,0 C toca P = 4,0 C: cada uma fica com 1,0 C.\nPor fim A = 4,0 C toca P = 1,0 C: cada uma fica com 2,5 C.\nLogo, no primeiro experimento, P termina com 2,5 C.\n\nNo giro anti-horário, a ordem é A → B → C.\n\nA = 4,0 C toca P = 0: P passa a 2,0 C.\nB = -2,0 C toca P = 2,0 C: P passa a 0.\nC = 8,0 C toca P = 0: P termina com 4,0 C.\n\nPortanto, as cargas finais de P são 2,5 C e 4,0 C. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Eletrostática",
@@ -23992,23 +23975,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f2-c1-exercicios-propostos-q17-p140.png"],
                           "tags":  [
                                        "física",
                                        "introdução à",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c1-exercicios-propostos-q18",
@@ -24608,16 +24586,16 @@
                           "conceptId":  "fis-lic-l1-f2-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unioeste-PR 2021 Elementos radioativos emitem diferentes tipos de radiações, tais como a radiação alfa, gama, elétrons e nêutrons, visando atingir sua estabilidade energética. Suponha que uma substância radioativa hipotética esteja emitindo um feixe com diferentes partículas que passam por um contador/identificador de radiação e atinge uma garrafa metálica que possui a propriedade de acumular totalmente a radiação que chega no seu interior. Todo o experimento está numa região de vácuo, como mostra a figura a seguir. Após um certo tempo, o detector indica que o elemento radioativo emitiu 3,0 ? 106 partículas alfa, 4,5 ? 106 fótons gama, 6,0 ? 106 elétrons e 1,5 ? 106 nêutrons. Se e é a carga elementar, assinale a alternativa que indica corretamente a carga total armazenada pela garrafa ao final do experimento. Elemento radioativo Contador / identificador Garrafa metálica Vácuo Feixe",
+                          "prompt":  "Unioeste-PR 2021 Elementos radioativos emitem diferentes tipos de radiações, tais como radiação alfa, gama, elétrons e nêutrons, visando atingir sua estabilidade energética.\n\nSuponha que uma substância radioativa hipotética esteja emitindo um feixe com diferentes partículas que passam por um contador/identificador de radiação e são totalmente acumuladas no interior de uma garrafa metálica. Todo o experimento está numa região de vácuo.\n\nApós certo tempo, o detector indica que o elemento radioativo emitiu 3,0 × 10⁶ partículas alfa, 4,5 × 10⁶ fótons gama, 6,0 × 10⁶ elétrons e 1,5 × 10⁶ nêutrons.\n\nSe e é a carga elementar, assinale a alternativa que indica corretamente a carga total armazenada pela garrafa ao final do experimento.",
                           "options":  [
-                                          "Zero",
-                                          "(, ?  ) ? e",
-                                          "(, ?  ) ? e",
-                                          "(, ?  ) ? e",
-                                          "(, ?  ) ? e 006366_pv_pvv_al_fis_3_vol1_liv_113_150_f2_c1_P3.indd 143 05/08/25 19:27 Textos CENTRO Brasileiro de Pesquisa em Física. Partículas elementares: a (des)construção da matéria pelo homem. Disponível em: http://p.ped.com/MYXQI. Acesso em:  jun. . Material desenvolvido pelo Centro Brasileiro de Pesquisa em Física, que apresenta um panorama das partículas elementares que constituem o modelo padrão. FRANKLIN, Benjamin. Experiments and Observations on Electricity. London: E. Cave, . Disponível em: http://p.ped.com/ MYXQY. Acesso em:  jun. . Compilação dos experimentos de Benjamin Franklin em forma de cartas no livro Franklin\u0027s Experiments and Observations on Electricity. QUEIROZ, Antônio Carlos M. Máquinas Eletrostáticas. UFRJ,  nov. . Disponível em: http://p.ped.com/MYXQP. Acesso em:  jun. . Material reorganizado para apresentar o desenvolvimento das máquinas eletrostáticas ao longo da história. SOUSA, Alana. Frankenstein: os experimentos reais que inspiraram a história do icônico personagem. Aventuras na História,  dez. . Disponível em: http://p.ped.com/MYXQU. Acesso em:  jun. . O artigo apresenta alguns experimentos com a “eletricidade animal” que inspiraram a obra de Mary Shelley. Sites UNIVERSITY of Colorado. Balões e Eletricidade Estática. Phet. Disponível em: http://p.ped.com/MYXQO. Acesso em:  jun. . Nessa simulação, você pode explorar alguns dos processos de eletrização estudados neste capítulo. UNIVERSITY of Colorado. Monte um átomo. Phet. Disponível em: http://p.ped.com/LVSLI. Acesso em:  jun. . Simulador que ajuda a compreender melhor a estrutura do átomo e proporciona a experiência de estar em um laboratório. Frankenstein: a ficção científica inspirada pela eletricidade \u001b\u001a\u0019 \u0018\u0017\u0016 \u0016\u0015\u001a\u001b \u0014\u0013\u0012\u0011\u0019 \u0015\u0016 \u0010\u001b\u0015\u0016\u0014\u001b \u001a\u0016\u000f \u0015\u0014\u000e\u0019 \u0013\u0019 \u0015\u0014\u000e\u0016 \u001b\u000e\u0019 \u0016 \u0019 \b \u0007 \b\u001b \u0006\u0014 \u0005 \u0016 \u001b \u0004\u0017 \u0015 \u000e\u0019\u0015 \u0014\u0015\u0014\u0019 \u0019\u0004\u0014\u0015\u001a\u001b\u0015 \u000e\u001b \u0016\u000f\u001b \u001b \u0013\u0019\u000f\u0019 \u0011\u0019 \u0014\u000f \u0019\u0015\u0015\u0001\u0016 \u000e\u0016 \u001b\u0013\u0019 \u001a\u0016\u0013\u0016 \u0007 \u001b  \u0016 \u0016  ­­  \u0015\u001a\u001b \u0019\u0014 \u0017\u000f\u001b \u000e\u001b\u0015 \u0013\u0014\u001a\u001b\u0012\u0016\u0015 \u0018\u0017\u0016 \u001b  \u0016 \u0016 \u001b\u0017\u001a\u0019 \u001b \u000e\u0019 \u0014 \u0019  \u001b \u0016 \u0015\u001a\u0016\u0014 \u0016\u0015\u0013 \u0016\u0016\u0017 \u0019 \u0016 \u0013\u0014\u0019 \u000e\u0016 \u0015\u0016\u0017 \u0014 \u0019 \u0017\u0010 \u0014\u0013\u001b\u000e\u0019 \u0016\u000f  \u0007 \u001b  \u000e\u0016\u0014\u0019\u0017 \u0016\u0015\u001a\u001b \u0019\u001a\u001b \u001b \u001b \u0018\u0017\u0016 \u0015\u0016\u0017\u0015 \u0016\u0014\u001a\u0019 \u0016\u0015 \u0015\u0019\u0017\u0010\u0016\u0015\u0015\u0016\u000f \u0018\u0017\u0016 \u0004 \u001b \u000e\u0016\u0015 \u0019\u000f\u0016\u0015 \u000e\u001b \u0013\u0014 \u0013\u0014\u001b \u000e\u0019\u0015 \u0015\u0013\u0017 \u0019\u0015  \u0016  \u001b\u0013 \u0016\u000e\u0014\u001a\u001b\u001b\u000f \u001b \u0014 \u001a\u0016\u0015\u0016 \u000e\u0016 \u0018\u0017\u0016 \u0019 \u0015\u0016 \u0017\u000f\u001b \u0019 \u0019\u000e\u0016 \u0014\u001b \u0015\u0016 \u0013\u001b \u001b \u000e\u0016 \u0013\u0019 \u0016 \u0014 \u0014\u000e\u001b \u001b \u000f\u001b\u001a \u0014\u001b \u000f\u0019 \u001a\u001b\u0007 \u001b \u001b \u0018\u0017\u0016\u000f \u0011\u0019 \u0016\u000f\u0010 \u001b \u0016\u0015\u001a\u0016 \u0014 \u0019 \u0013\u0019 \u001a\u001b \u001b \u0014\u0015\u001a \u0014\u001b \u000e\u0019 \u0019\u0016\u000f \u0016\u0015\u001a\u0017\u000e\u001b \u001a\u0016 \u0014\u0013\u001a\u0019  \u001b \u0016 \u0015\u001a\u0016\u0014 \u0018\u0017\u0016 \u0013\u0019 \u0015\u001a \u0014 \u0017\u000f \u000f\u0019 \u0015\u001a \u0019 \u0016\u000f \u0015\u0016\u0017 \u001b\u0010\u0019 \u001b\u001a \u0014\u0019 \u001b \u001a\u0014 \u000e\u0019 \u000e\u0016 \u0016\u000e\u001b\u0012\u0019\u0015 \u000e\u0016 \u0013\u0019 \u0019\u0015 \u000e\u0016 \u0015\u0016 \u0016\u0015 \u0017\u000f\u001b \u0019\u0015 \u000e\u001b \u000e\u0019 \u0016 \u001b \u0014\u000e\u001b \u001b\u001a \u001b\u0015 \u000e\u0016 \u0017\u000f\u001b \u0013\u0019 \u0016 \u001a\u0016 \u0016 \u001a \u0014\u0013\u001b\u0007 \u001b \u001b \u001b \u000e\u0016\u0015\u0004 \u001b\u0012\u001b \u000e\u0016 \u0015\u0016\u0017 \u0013 \u0014\u001b\u000e\u0019 \u0019 \u000f\u0019 \u0015\u001a \u0019  \u0017\u000f \u001b\u0015\u0015\u001b\u0015\u0015\u0014 \u0019 \u0014 \u0015\u001b\u0013\u0014\u0016 \u0007\u0007\u0007 \u0013\u001b\u000e\u0016 \u000e\u0016\u000f\u0019 \u0001\u001b\u0013\u0019 \u001b\u0019 \u0018\u0017\u001b \u001a\u0011\u0019 \u000e\u0016\u0015\u0004 \u001b\u0012\u001b\u000e\u001b\u000f\u0016 \u001a\u0016 \u0016\u0017 \u001b\u0014\u001b \u000e\u001b\u000e\u0019 \u001b \u0014\u000e\u001b \u001b \u001b \u000e\u0019 \u0016 \u0015\u0019 \u001b\u0004\u0016\u000f \u0014\u0013\u001a\u0019  \u001b \u0016 \u0015\u001a\u0016\u0014   \u0007 ­\u0007 A Inspiração! ¡\u0015 \u0015\u001b\u0010\u0016\u000f\u0019\u0015 \u0018\u0017\u0016 \u001a\u0019\u000e\u0019 \u001b \u001a\u0014\u0015\u001a\u001b \u000e\u0016 \u0016 \u000e\u0016 \u000e\u0016 \u0017\u000f\u001b \u0014 \u0015 \u0014 \u001b\u0012\u0011\u0019 \u001b \u001b \u0016\u0016\u0013\u0017\u001a\u001b \u0015\u0017\u001b \u001b \u001a\u0016 \u0016 \u0014\u0015\u0015\u0019 \u0011\u0019 \u0019\u0014 \u000e\u0014 \u0016 \u0016 \u001a\u0016 \u001b \u001b \u001b \u0019\u0016\u000f \u001b  \u0018\u0017\u0016 \u0015\u0016\u0004\u0017 \u000e\u0019 \u0017\u000f\u0019 \u0016\u0015 \u001b\u0019\u0015  \u001b \u0019\u0015 \u000e\u0016 \u0014\u000e\u001b\u000e\u0016 \u001b\u0015\u0015\u0014\u0015\u001a\u0014\u0017 \u0017\u000f\u001b \u001b \u0016\u0015\u001a \u001b \u000e\u0016 \u0014\u0013\u001b\u0016 \u001b \u001b\u000e\u001b \u0017\u000f \u0018\u0017\u0001\u000f\u0014\u0013\u0019 \u0016 \u0001\u0015\u0014\u0013\u0019 \u0014 \u0004 \u0015 \u0018\u0017\u0016 \u001b\u0014\u001b \u0016 \u0019\u000e\u0017\u0014\u000e\u0019 \u0019 \u001b\u0017\u000e\u0014\u001a \u0014\u0019 \u0017\u000f \u0016 \u0016 \u0014\u000f\u0016 \u001a\u0019 \u0016\u001b \u0014\u001b\u000e\u0019 \u0019 \u0015\u0013\u0017 \u0019  \u0016 \u0019 \u000f\u000e\u0014\u0013\u0019 \u0016 \u0014 \u0015\u0019 \u0019 \u0017\u0014\u0004\u0014 ¢\u001b \u001b \u0014 \u001b\u0019 \u0016 \u0013\u0019\u0015\u001a\u001b \u0017\u000f \u001b \u0013\u0019 \u000e\u0016 \u000f\u0016\u001a\u001b \u0019\u0015 \u0016 \u0019\u0015 \u0016 \u000f£\u0015\u0013\u0017 \u0019\u0015 \u000e\u001b\u0015 \u0016 \u001b\u0015 \u000e\u0016 \u0017\u000f\u001b \u0011 \u000e\u0014\u0015\u0015\u0016\u0013\u001b\u000e\u001b \u001b \u0016 \u001b \u0015\u0016 \u0013\u0019 \u001a \u001b\u0014 \u0014\u0019 \u0016 \u001a\u001b\u000f\u0016 \u001a\u0016 \u0013\u0019\u000f\u0019 \u0015\u0016 \u0016\u0015\u001a\u0014\u0016\u0015\u0015\u0016 \u0019 \u001a\u001b \u000e\u0019 \u001b \u0014\u000e\u001b\u0007 ¤\u001b \u0019\u0014 \u001b \u0015\u0017 \u0016\u0015\u001b \u0016 \u0016\u0015 \u001b \u001a\u0019 \u000e\u0016 \u001b  \u0013\u0019\u000f \u001b\u0015 \u0019 \u0014\u0016\u000e\u001b\u000e\u0016\u0015 \u0016 \u001a \u0014\u0013\u001b\u0015 \u0019 \u001b \u0001\u0010\u0014\u0019  \u000f\u0019 \u001a\u0019 \u0018\u0017\u0016 \u001b \u0015 \u001a\u0016 \u0015\u0014\u000e\u0019 \u0016 \u0013\u0019 \u001b\u001b\u000e\u001b \u0019 \u0015\u0016\u0017 \u0019\u0014\u0019 \u0016 \u001b\u000f\u0014\u0004\u0019\u0015 \u001b \u0016\u0015\u0013 \u0016\u0016 \u0017\u000f\u001b \u0016\u0015\u001a \u0014\u001b \u0018\u0017\u0016 \u0019\u0015\u0015\u0016 \u0007\u0007\u0007 \u0013\u001b \u001b \u000e\u0016 \u001b\u0016 \u0019 \u0016\u0014\u001a\u0019 \u0019 \u001b \u0016\u000f \u001a\u0019 \u0019 \u001b\u000f\u0016\u000e \u0019 \u001a\u001b\u000e\u0019 \u0013\u001b \u001b \u000e\u0016 \u0004\u0016 \u001b \u0019 \u0015\u0016\u0017 \u0015\u001b \u0004\u0017\u0016 \u0016 \u001b\u0013\u0016 \u0016 \u001b \u0019\u0015 \u0010\u001b\u001a\u0014\u000f\u0016 \u001a\u0019\u0015 \u000e\u0016 \u0015\u0016\u0017 \u0013\u0019 \u001b\u0012\u0011\u0019\u0007 \u001b  \u0016 \u0016 \u000e\u0016\u0017 \u0014\u000e\u001b \u0011\u0019 \u001b \u0016 \u001b\u0015 \u001b \u0017\u000f \u000f\u0019 \u0015\u001a \u0019 \u0016\u000f\u0016 \u000e\u001b\u000e\u0019 \u000e\u0016 \u000f\u0016\u000f\u0010 \u0019\u0015 \u0017\u000f\u001b \u0019\u0015 \u000f\u001b\u0015 \u001a\u001b\u000f\u0010\u000f \u000e\u0016\u0017 \u0014\u000e\u001b \u001b\u0019 \u0014\u000f\u001b\u0004\u0014  \u0014\u0019 \u0017\u000f\u001b \u0019 \u0016 \u001a\u0016 \u001b \u0017\u000f\u001b \u0019 \u0012\u001b \u000e\u001b \u001b\u001a\u0017 \u0016\u001b \u0018\u0017\u0016 \u001b\u001a \u0019 \u000f\u0019\u000f\u0016 \u001a\u0019 \u0011\u0019 \u0016 \u001b \u001a\u0019\u001a\u001b \u000f\u0016 \u001a\u0016 \u0013\u0019\u000f \u0016\u0016 \u000e\u0014\u000e\u001b \u001a\u0011\u0019 \u0019\u0017\u0013\u0019 \u0013\u0019 \u001a \u0019 \u001b\u000e\u001b \u001b ¤¥¦\b\b\u0007  \u001b \u0016 \u0015\u001a\u0016\u0014 \u0019\u0014 \u0016\u0015\u0013 \u0014\u001a\u0019  \u000e\u0019\u0014\u0015 \u0015\u0013\u0017 \u0019\u0015 \u001b\u001a \u0015§ \u000f\u0017\u0014\u001a\u001b \u0013\u0019\u0014\u0015\u001b \u000f\u0017\u000e\u0019\u0017 \u0019\u0015 \u000e\u0014\u001b\u0015 \u001b\u001a\u0017\u001b\u0014\u0015\u0007 \u0019\u0016 \u0018\u0017\u001b \u0018\u0017\u0016 \u0013 \u0014\u001b \u0012\u001b \u0016\u0016 \u0013\u0016 \u0013\u0019 \u001a \u0019 \u0016 \u0015\u0019\u0010 \u0016 \u001b \u0016 \u0016 \u0004\u0014\u001b \u0016 \u001a \u0014\u0013\u001b \u0010\u001b\u0015\u001a\u001b \u0017\u000f \u0015\u0014\u000f \u0016\u0015 \u001a\u0019\u0018\u0017\u0016 \u0013\u0019\u000f \u001b \u0019 \u001a\u001b \u000e\u0019 \u000e\u0016\u000e\u0019 \u001b \u001b \u001b \u000f\u0004\u0014\u0013\u001b \u001b\u0013\u0019 \u001a\u0016\u0013\u0016 \u0007 \u0013\u0016 \u000e\u0016 \u001b \u001b\u0004\u001b \u0014\u0004\u001b \u000e\u0016\u0015 \u0014\u0004\u001b\u0007\u0007\u0007 \u001b\u0015\u0013\u0014 \u001b \u001a\u0016 ̈ \u001b\u0015 \u0015\u0016  \u0018\u0017\u0016 \u001a\u0019\u000e\u0019\u0015 \u0015 \u000e\u0019 \u0015\u0013\u0017 \u0019  \u0015\u001b\u0010\u0016\u000f\u0019\u0015 \u000e\u0016 \u001b\u001a\u0019 \u0019 \u0018\u0017\u0016  \u001b \u0016 \u0016\u001a \u0014\u0013\u0014\u000e\u001b\u000e\u0016 \u0013\u0019\u000f\u0019  \u0004\u0016 \u001b\u000e\u001b \u0016 \u0013\u0019\u000f\u0019 \u0013\u0016\u0004\u001b \u001b\u001a \u0015© \u0019\u0014\u0015 § \u000f\u0017\u0014\u001a\u001b\u0015 \u000e\u0016\u0015\u0015\u001b\u0015 \u0016 \u0004\u0017 \u001a\u001b\u0015 \u0011\u0019 \u0015\u0011\u0019 \u0013\u0016\u0014\u0015 \u000e\u0016 \u0015\u0016 \u0016\u000f \u0016\u0015 \u0019 \u000e\u0014\u000e\u001b\u0015 \u000f\u001b\u0015 \u0015\u0016 \u0019\u0013 \u0015\u0016\u0004\u0017\u0014 \u0013\u0019\u000f \u0016\u0015\u0015\u001b \u0016\u0014\u001a\u0017 \u001b \u001b\u0013 \u0016\u000e\u0014\u001a\u0019 \u0018\u0017\u0016 \u000f\u0017\u0014\u001a\u001b\u0015 \u000e\u0016\u0015\u0015\u001b\u0015 \u000e£\u0014\u000e\u001b\u0015 \u0019\u000e\u0016 \u0011\u0019 \u0015\u0016 \u0016\u0015\u0013 \u001b \u0016\u0013\u0014\u000e\u001b\u0015\u0007  \u001b \u0016\u0015\u0015\u001b \u000e\u0019\u0015 \u001b \u001a\u0019\u0015\u0007 \u0016 \u0016\u001a \u0014\u0013\u0014\u000e\u001b\u000e\u0016 \u001b\u001a \u001b\u0015 \u000e\u0019\u0015 \u0015\u0013\u0017 \u0019\u0015  \u001b  \u000e\u001b \u0014\u0013\u0012\u0011\u0019 \u0013\u0014\u0016 \u001a\u0001 \u0014\u0013\u001b \u001b \u0019\u000e\u0017\u0012\u0011\u0019 \u000e\u0016 \u0017\u000f \u0004\u0016 \u001b\u000e\u0019 \u0016 \u001a \u0014\u0013\u0019\u0007 \u001b\u001a\u0019\u0018 \u0017\u0016\u0015 \u0017 \u0007 a« \u0007 \u0007  ¬\u0007 \b\u0014\u0015 \u0019 \u0001\u0016 \u0016\u000f \u001a\u001a \u0015®®\u0006\u0006\u0006\u0007\u0014 \u0014\u0007\u0017 \u0014\u0013\u001b\u000f \u0007\u0010 ® ̄ \u0017 \u001b\u0014®¬«°«°±«°«°®«® ±«°a« °\u0015\u0016\u000f ®\u001b \u0016\u0015\u0015\u001b°\u0016\u000e \u0019¦°¥a°±«\u0007 \u000e \u0007 \u0013\u0016\u0015\u0015\u0019 \u0016\u000f a \u001b\u0010 \u0007 a«a¬\u0007 \u000e\u001b \u001a\u0007 \u0007 \u0005 \b \u0007  \u001b\u0015\u000f\u0017\u0015 \b\u001b \u0006\u0014  ­¬  «a \u0014\u000f \u0019 \u001a\u001b \u001a\u0016 \u001b\u001a\u0017 \u001b \u0014\u0015\u001a\u001b \u000e\u0019 \u0015\u0013\u0017 \u0019   \u001b\u0015\u000f\u0017\u0015 \u0019\u0014 \u001b2 \u000e\u0016 ¦\u001b \u0016\u0015 \b\u001b \u0006\u0014  « ¬ \u0013\u0019 \u0016\u0013\u0014\u000e\u0019 \u0019 \u0013 \u0014\u001b \u001b ¤\u0016\u0019 \u0014\u001b \u000e\u001b \u0019 \u0017\u0012\u0011\u0019\u0007 Texto complementar Quer saber mais? Veja os principais assuntos e conceitos trabalhados neste capítulo acessando a seção Resumindo no livro digital, na Plataforma Poliedro. 006366_pv_pvv_al_fis_3_vol1_liv_113_150_f2_c1_P3.indd 144 05/08/25 19:27 145"
+                                          "Zero.",
+                                          "(3,0 × 10⁶)·e.",
+                                          "(6,0 × 10⁶)·e.",
+                                          "(9,0 × 10⁶)·e.",
+                                          "(15,0 × 10⁶)·e."
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "Cada partícula alfa possui carga +2e. Assim, 3,0 × 10⁶ partículas alfa transportam carga total +(6,0 × 10⁶)e.\n\nOs 6,0 × 10⁶ elétrons transportam carga total -(6,0 × 10⁶)e.\n\nFótons gama não possuem carga elétrica, e os nêutrons também são eletricamente neutros.\n\nAs cargas positivas e negativas se cancelam, resultando em carga total igual a zero. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Eletrostática",
@@ -24640,11 +24618,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph",
-                                                "length_outlier"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -24654,10 +24628,10 @@
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c1-exercicios-propostos-q6",
@@ -25384,15 +25358,15 @@
                           "conceptId":  "fis-lic-l1-f2-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Ufla-MG Duas esferas condutoras descarregadas e iguais 1 e 2 estão em contato entre si e apoiadas numa superfície isolante. Aproxima-se de uma delas um bastão eletrizado positivamente, sem tocá-la, conforme figura a seguir. Em seguida as esferas são afastadas e o bastão eletrizado é removido. 1 2 111 111 2 222 222 2 222 É correto afirmar que",
+                          "prompt":  "Ufla-MG Duas esferas condutoras descarregadas e idênticas, 1 e 2, estão em contato entre si e apoiadas em uma superfície isolante. Aproxima-se da esfera 1 um bastão eletrizado positivamente, sem tocá-la.\n\nEm seguida, mantendo o bastão na mesma posição, as esferas são afastadas entre si. Depois disso, o bastão eletrizado é removido.\n\nÉ correto afirmar que:",
                           "options":  [
                                           "as esferas permanecem descarregadas, pois não há transferência de cargas entre bastão e esferas.",
-                                          "a esfera , mais próxima do bastão, fica carregada positivamente e a esfera  carregada negativamente.",
-                                          "as esferas ficam eletrizadas com cargas iguais e de sinais opostos.",
+                                          "a esfera 1, mais próxima do bastão, fica carregada positivamente e a esfera 2 fica carregada negativamente.",
+                                          "as esferas ficam eletrizadas com cargas iguais em módulo e de sinais opostos.",
                                           "as esferas ficam carregadas com cargas de sinais iguais e ambas de sinal negativo, pois o bastão atrai cargas opostas."
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "O bastão positivo atrai elétrons das duas esferas em direção à esfera 1. Como as esferas estão inicialmente em contato, elétrons se deslocam da esfera 2 para a esfera 1.\n\nMantendo o bastão próximo, as esferas são separadas. Assim, a esfera 1 permanece com excesso de elétrons e fica negativa, enquanto a esfera 2 fica com falta de elétrons e, portanto, positiva.\n\nComo o sistema formado pelas duas esferas era inicialmente neutro e não houve contato com o bastão, as cargas finais possuem o mesmo módulo e sinais opostos. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Eletrostática",
@@ -25415,10 +25389,7 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
+                          "reviewReasons":  [],
                           "imageAssets":  [
 
                                           ],
@@ -25428,10 +25399,10 @@
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
-                          "imageStatus":  "needs_visual_review",
+                          "imageClassification":  "no_image_required",
+                          "imageStatus":  "no_image_required",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Questão puramente textual"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c1-exercicios-complementares-q13",
@@ -26961,16 +26932,16 @@
                           "conceptId":  "fis-lic-l1-f2-c2-forca",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UFPE O gráfico a seguir mostra a intensidade da força eletrostática entre duas esferas metálicas muito pequenas, em função da distância entre os centros das esferas. Se as esferas têm a mesma carga elétrica, qual o valor desta carga? 2,00 0 4,0 6,0 8,0 F (mN) r (m) 10 20 30 40",
+                          "prompt":  "UFPE O gráfico a seguir mostra a intensidade da força eletrostática entre duas esferas metálicas muito pequenas, em função da distância entre os centros das esferas. Se as esferas têm a mesma carga elétrica, qual é o valor dessa carga?",
                           "options":  [
-                                          ", mC",
-                                          ", mC",
-                                          ", mC",
-                                          ", mC",
-                                          ", mC"
+                                          "0,86 μC",
+                                          "0,43 μC",
+                                          "0,26 μC",
+                                          "0,13 μC",
+                                          "0,07 μC"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "Do gráfico, podemos escolher o ponto r = 4,0 m, para o qual F = 10 μN = 1,0 × 10⁻⁵ N.\n\nComo as duas esferas possuem cargas de mesmo módulo q, pela lei de Coulomb:\n\nF = kq²/r².\n\nUsando k = 9,0 × 10⁹ N·m²/C²:\n\nq = √(Fr²/k)\n\nq = √[(1,0 × 10⁻⁵)·(4,0)²/(9,0 × 10⁹)]\n\nq ≈ 1,33 × 10⁻⁷ C = 0,13 μC.\n\nAlternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Força elétrica",
@@ -26993,23 +26964,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f2-c2-exercicios-propostos-q9-p169.png"],
                           "tags":  [
                                        "física",
                                        "força",
                                        "exercícios propostos"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c2-exercicios-propostos-q10",
@@ -33702,16 +33668,16 @@
                           "conceptId":  "fis-lic-l1-f2-c3-trabalho-da",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "UTFPR 2024 Nos sistemas eletroeletrônicos, os capacitores são componentes utilizados frequentemente, como por exemplo nos circuitos elétricos dos filtros de linha. Na figura a seguir, entre um capacitor de placas paralelas, foi inserida uma pequena esfera em repouso com carga Q 5 15 mC, presa a uma mola de constante k 5 5 mN/m. Após estabelecida uma ddp entre as placas do capacitor, um campo elétrico E é gerado entre as placas igual a 0,1 N/C, fazendo com que o sistema massa-mola comece a oscilar. Considerando que a mola não interfere eletricamente no sistema e não há escoamento de carga da massa para a placa, pergunta-se: Qual a compressão máxima d exercida sobre a mola pelo campo elétrico? E d Q 1 1 1 1 1 1 1 2 2 2 2 2 2 2 Q",
+                          "prompt":  "UTFPR 2024 Nos sistemas eletroeletrônicos, os capacitores são componentes utilizados frequentemente, como por exemplo nos circuitos elétricos dos filtros de linha.\n\nNa figura a seguir, entre as placas de um capacitor de placas paralelas, foi inserida uma pequena esfera em repouso com carga Q = +5 μC, presa a uma mola de constante k = 5 mN/m.\n\nApós estabelecida uma ddp entre as placas do capacitor, um campo elétrico E = 0,1 N/C é gerado entre as placas, fazendo com que o sistema massa-mola comece a oscilar.\n\nConsiderando que a mola não interfere eletricamente no sistema e que não há escoamento de carga da esfera para a placa, qual é a compressão máxima d exercida sobre a mola pelo campo elétrico?",
                           "options":  [
-                                          ", mm.",
-                                          ", mm.",
-                                          ", mm.",
-                                          ", mm.",
-                                          " mm. 006366_pv_pvv_al_fis_3_vol1_liv_188_217_f2_c3_P5.indd 214 18/08/25 16:24 215"
+                                          "0,1 mm.",
+                                          "0,2 mm.",
+                                          "0,1 μm.",
+                                          "0,2 μm.",
+                                          "1 mm."
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "A força elétrica que atua sobre a esfera é constante e vale:\n\nFₑ = QE = (5 × 10⁻⁶)·0,1 = 5 × 10⁻⁷ N.\n\nA esfera parte do repouso com a mola inicialmente sem a compressão provocada pelo campo. Na compressão máxima, sua velocidade volta a ser zero.\n\nAssim, o trabalho realizado pela força elétrica é convertido integralmente em energia potencial elástica:\n\nFₑ·d = (1/2)kd².\n\nPara d diferente de zero:\n\nd = 2Fₑ/k = 2QE/k.\n\nComo k = 5 mN/m = 5 × 10⁻³ N/m:\n\nd = [2·(5 × 10⁻⁶)·0,1]/(5 × 10⁻³)\n\nd = 2 × 10⁻⁴ m = 0,2 mm.\n\nAlternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Trabalho da força elétrica e potencial",
@@ -33734,24 +33700,18 @@
                           "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
-                          "reviewReasons":  [
-                                                "requires_image",
-                                                "duplicate_options",
-                                                "extraction_glyph"
-                                            ],
-                          "imageAssets":  [
-
-                                          ],
+                          "reviewReasons":  [],
+                          "imageAssets":  ["assets/question-images/fis-lic-l1-f2-c3-exercicios-complementares-q20-p214.png"],
                           "tags":  [
                                        "física",
                                        "trabalho da",
                                        "exercícios complementares"
                                    ],
                           "estimatedSeconds":  120,
-                          "imageClassification":  "needs_visual_review",
+                          "imageClassification":  "image_required",
                           "imageStatus":  "needs_visual_review",
                           "contentStatus":  "needs_content_review",
-                          "imageReason":  "Revisado como possivelmente necessitando de imagem"
+                          "imageReason":  "Possui asset de imagem associado"
                       },
                       {
                           "id":  "fis-lic-l1-f2-c3-exercicios-complementares-q22",
