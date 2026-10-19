@@ -20,6 +20,7 @@ import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
 import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES,IMAGE_FILTERS,applyStudyPreset} from './session-builder.js';
 import {api,authScreen,adminScreen,adminUserModal,avatar,ACCOUNT_CONFIG} from './account.js';
 import {fixouLogo} from './fixou-logo.js';
+import {initVideoPlayer,toggleVideoPlayback} from './video-player.js';
 
 const loaded=loadState();
 let state=loaded.state,storageBlocked=!!loaded.blocked;
@@ -92,7 +93,7 @@ function render(){
  appElement.className='app';
  appElement.innerHTML=`<canvas id="stars" aria-hidden="true"></canvas><div class="screenGlow" aria-hidden="true"></div><button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><div class="workspace mainArea"><header class="topbar${ui.sidebarOpen?' menu-open':''}"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><a class="topnav-brand" href="#about" aria-label="Quem Somos - FIXOU">${fixouLogo()}</a><nav class="topnav" id="topnav" aria-label="Navegação principal"><a href="#about" class="topnav-link${navRoute==='about'?' active':''}"${navRoute==='about'?' aria-current="page"':''}>Quem Somos</a>${topnavHtml}<div class="topnav-foot"><a class="navitem foot-item" href="#settings"><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span>Configurações</a>${logoutHtml}</div></nav><div class="headerRight"><div class="themePills" role="group" aria-label="Alternar modo de aparência">${[['nebula','✦ Nebulosa'],['light','☀ Claro'],['rest','◐ Descanso']].map(([id,label])=>`<button data-action="set-theme" data-id="${id}" aria-pressed="${state.settings.theme===id}">${label}</button>`).join('')}</div><a class="header-icon" href="#settings" aria-label="Configurações"${navRoute==='settings'?' aria-current="page"':''}><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span></a>${headerUserHtml}<a class="streak" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a>${logoutHtml}</div></header><div class="crumbrow"><span class="breadcrumb">Seu aprendizado <span class="slash">/</span> <b>${title}</b></span></div>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" class="content" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027.</footer></div>`;
  document.title=`${title} · FIXOU`;
- if(ui.route==='about')initAboutPage();
+  if(ui.route==='about'){initAboutPage();initVideoPlayer();}
  if(ui.route==='cards'&&flash)initCardGestures();
  initStarfield(document.querySelector('#stars'),state.settings.reduceMotion||window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 }
@@ -147,7 +148,8 @@ function downloadText(name,text,type='application/json'){const blob=new Blob([te
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
  if(action==='set-theme'){if(!['nebula','light','rest'].includes(id))return;state.settings.theme=id;applyPreferences();saveProgress();render();toast('Aparência salva.');return;}
- if(action==='about-tool'){document.querySelectorAll('.toolGrid .tool').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.toolDetail');if(detail){detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+  if(action==='about-tool'){document.querySelectorAll('.toolGrid .tool').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.toolDetail');if(detail){detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+  if(action==='video-play'){toggleVideoPlayback();return;}
  if(action==='flip-card'){if(flash){flash.revealed=!flash.revealed;render();}return;}
  if(action==='logout'){performLogout();return;}
  if(action==='guest-lock'){openGuestModal(id,element);return;}

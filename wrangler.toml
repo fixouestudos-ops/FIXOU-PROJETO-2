@@ -7,6 +7,7 @@ vars = { SUPPORT_FROM_EMAIL = "FIXOU <onboarding@resend.dev>", SUPPORT_TO_EMAIL 
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 not_found_handling = "none"
 
 [[d1_databases]]

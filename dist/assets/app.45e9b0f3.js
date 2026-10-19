@@ -632,6 +632,7 @@ function settingsScreen({state,account,loggingOut}){
 }
 
 
+
 const sections=[
  ['01','Feito de estudantes para estudantes','a gente também já passou por isso','O FIXOU nasceu como um projeto-piloto feito de estudantes para estudantes. A ideia surgiu de uma dificuldade que muita gente conhece bem: estudar bastante, resolver várias questões e, mesmo assim, nem sempre conseguir enxergar com clareza o que já está dominado, onde ainda existem dificuldades e o que realmente precisa ser revisado.'],
  ['02','Por que o FIXOU existe','o estudo faz mais sentido com direção','O nosso objetivo é ir além de ser apenas um banco de questões. O diferencial do FIXOU é acompanhar a sua evolução ao longo dos estudos, identificando seus pontos fortes e pontos que ainda precisam de atenção, para ajudar você a estudar de forma mais direcionada e entender melhor o próprio desempenho.'],
@@ -656,7 +657,7 @@ function aboutScreen({account}){
  <section class="hero" id="quem-somos" aria-labelledby="heroTitle"><div class="heroIntro"><div class="eyebrow"><i></i> O CONHECIMENTO QUE FICA</div><h1 id="heroTitle">Você não precisa estudar mais. <span class="accent">Precisa entender o que realmente domina.</span></h1><p class="lead">O FIXOU transforma questões, erros e desempenho em uma jornada clara de evolução para o vestibular.</p><div class="btnRow"><a class="btn btnPrimary" href="${start}">Começar a estudar</a><a class="btn btnSecondary" href="#como">Ver como funciona</a></div></div><div class="stickerboard" aria-label="Seis balões com momentos da aprendizagem: errei, bora, quase, agora entendi, dominei e revisar amanhã"><span class="sticker errei">errei</span><span class="sticker bora">bora</span><span class="sticker quase">quase!</span><span class="sticker agora">agora entendi</span><span class="sticker dominei">dominei!</span><span class="sticker revisar">revisar amanhã</span></div></section>
  <div class="sectionGroup" id="como">${sections.map(([n,title,note,text],i)=>`<section class="editorialSection" aria-labelledby="sec${n}"><div class="sectionTitleCol" data-reveal><h2 id="sec${n}">${escapeHTML(title)}</h2><div class="handnote">${escapeHTML(note)}</div></div><div class="sectionBody" data-reveal style="--reveal-delay:110ms">${i===2?'<div class="callout">O FIXOU não quer apenas mostrar quantas questões você acertou. Ele acompanha sua evolução para ajudar a identificar seus pontos fortes, pontos fracos e o que precisa ser revisado.</div>':''}<p>${escapeHTML(text)}</p>${i===3?'<p>Isso não nos desanima: nos motiva a melhorar cada vez mais. Estamos construindo e melhorando continuamente, ouvindo os estudantes e transformando os problemas encontrados durante os estudos em melhorias reais na plataforma.</p>':''}${i===4?'<div class="notice">⚠ Use a opção “Reportar problema” na própria questão.</div>':''}${i===5?'<button class="btn btnSecondary" data-action="support-form">Entrar em contato com o suporte</button>':''}</div></section>`).join('')}</div>
  <section class="tools" id="ferramentas"><h2 class="sectionTitle" data-reveal>Conheça as ferramentas</h2><div class="toolGrid" data-reveal style="--reveal-delay:110ms">${tools.map(([route,name,desc],i)=>`<button class="tool" data-action="about-tool" data-id="${route}" data-tool-name="${escapeHTML(name)}" data-tool-desc="${escapeHTML(desc)}" aria-pressed="${i===0}"><span class="toolTitle">${escapeHTML(name)}</span></button>`).join('')}</div><div class="toolDetail" data-reveal style="--reveal-delay:190ms"><p>${escapeHTML(tools[0][2])}</p><a href="#home" class="btn btnPrimary">Abrir ${escapeHTML(tools[0][1])}</a></div></section>
- <section class="tutorial" id="aprenda"><h2 class="sectionTitle" data-reveal>Aprenda a usar o FIXOU</h2><div class="videoPlaceholder" data-reveal style="--reveal-delay:100ms">▷ &nbsp; Vídeo em breve</div><div class="footerMotto" data-reveal>Um pouco hoje. Mais clareza amanhã.</div></section>
+  <section class="tutorial" id="aprenda"><h2 class="sectionTitle" data-reveal>Aprenda a usar o FIXOU</h2>${homeVideoFigure()}<div class="footerMotto" data-reveal>Um pouco hoje. Mais clareza amanhã.</div></section>
  </div>`;
 }
 
@@ -1187,6 +1188,57 @@ function markVaultErrorsSeen(state){
  return state.errorVaultSeenAt;
 }
 
+const PLAY_ICON='<svg class="homeVideoIconPlay" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72c0 .79.87 1.29 1.55.88l10.79-6.86a1.03 1.03 0 0 0 0-1.76L9.55 4.26A1.03 1.03 0 0 0 8 5.14z"/></svg>';
+const REPLAY_ICON='<svg class="homeVideoIconReplay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>';
+const VIDEO_SRC='media/fixou-apresentacao.mp4';
+
+function homeVideoFigure(){
+  return `<figure class="homeVideo" data-reveal style="--reveal-delay:100ms" aria-label="Vídeo de apresentação do FIXOU"><div class="homeVideoFrame"><video class="homeVideoMedia" id="fixouPresentacao" data-src="${VIDEO_SRC}" poster="assets/fixou-apresentacao-poster.jpg" preload="none" playsinline width="1280" height="720"></video><button class="homeVideoPlay" type="button" data-action="video-play" aria-label="Reproduzir o vídeo de apresentação do FIXOU"><span class="homeVideoPlayIcon" aria-hidden="true">${PLAY_ICON}${REPLAY_ICON}</span><span class="homeVideoPlayLabel">Assistir ao vídeo</span></button></div></figure>`;
+}
+
+function applyPreview(root,video,button,label){
+  const ended=video.ended;
+  root.classList.remove('is-started');
+  root.classList.toggle('is-ended',ended);
+  video.controls=false;
+  video.style.pointerEvents='none';
+  button.setAttribute('aria-label',ended?'Reproduzir o vídeo novamente':'Reproduzir o vídeo de apresentação do FIXOU');
+  if(label)label.textContent=ended?'Assistir novamente':'Assistir ao vídeo';
+}
+
+function applyPlaying(root,video){
+  root.classList.add('is-started');
+  root.classList.remove('is-ended');
+  video.controls=true;
+  video.style.pointerEvents='auto';
+}
+
+function initVideoPlayer(){
+  const root=document.querySelector('.homeVideo');
+  if(!root)return;
+  const video=root.querySelector('video');
+  const button=root.querySelector('.homeVideoPlay');
+  if(!video||!button)return;
+  const label=root.querySelector('.homeVideoPlayLabel');
+  video.addEventListener('play',()=>applyPlaying(root,video));
+  video.addEventListener('ended',()=>applyPreview(root,video,button,label));
+  video.addEventListener('loadedmetadata',()=>{if(video.paused&&!video.ended)applyPreview(root,video,button,label);});
+  applyPreview(root,video,button,label);
+}
+
+function toggleVideoPlayback(){
+  const video=document.querySelector('.homeVideo video');
+  if(!video)return;
+  if(!video.getAttribute('src')&&video.dataset.src){
+    video.setAttribute('src',video.dataset.src);
+    video.load();
+  }
+  if(video.ended)video.currentTime=0;
+  if(video.paused){const promise=video.play();if(promise&&typeof promise.catch==='function')promise.catch(()=>{});}
+  else video.pause();
+}
+
+
 
 
 
@@ -1280,7 +1332,7 @@ function render(){
  appElement.className='app';
  appElement.innerHTML=`<canvas id="stars" aria-hidden="true"></canvas><div class="screenGlow" aria-hidden="true"></div><button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><div class="workspace mainArea"><header class="topbar${ui.sidebarOpen?' menu-open':''}"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><a class="topnav-brand" href="#about" aria-label="Quem Somos - FIXOU">${fixouLogo()}</a><nav class="topnav" id="topnav" aria-label="Navegação principal"><a href="#about" class="topnav-link${navRoute==='about'?' active':''}"${navRoute==='about'?' aria-current="page"':''}>Quem Somos</a>${topnavHtml}<div class="topnav-foot"><a class="navitem foot-item" href="#settings"><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span>Configurações</a>${logoutHtml}</div></nav><div class="headerRight"><div class="themePills" role="group" aria-label="Alternar modo de aparência">${[['nebula','✦ Nebulosa'],['light','☀ Claro'],['rest','◐ Descanso']].map(([id,label])=>`<button data-action="set-theme" data-id="${id}" aria-pressed="${state.settings.theme===id}">${label}</button>`).join('')}</div><a class="header-icon" href="#settings" aria-label="Configurações"${navRoute==='settings'?' aria-current="page"':''}><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span></a>${headerUserHtml}<a class="streak" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a>${logoutHtml}</div></header><div class="crumbrow"><span class="breadcrumb">Seu aprendizado <span class="slash">/</span> <b>${title}</b></span></div>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" class="content" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027.</footer></div>`;
  document.title=`${title} · FIXOU`;
- if(ui.route==='about')initAboutPage();
+  if(ui.route==='about'){initAboutPage();initVideoPlayer();}
  if(ui.route==='cards'&&flash)initCardGestures();
  initStarfield(document.querySelector('#stars'),state.settings.reduceMotion||window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 }
@@ -1335,7 +1387,8 @@ function downloadText(name,text,type='application/json'){const blob=new Blob([te
 function showConcept(id){const c=conceptById(BANK,id);if(!c)return;track('topic_viewed',{topicId:id,subjectId:c.discipline});const score=masteryValue(state.concepts[id],state.reviews[id]);openModal(`<button class="modal-close icon-button" data-action="close-modal" aria-label="Fechar">×</button><div class="eyebrow">${subjectById(c.discipline).name}</div><h2 id="modal-title">${escapeHTML(c.subtopic)}</h2><p class="modal-copy">${escapeHTML(c.summary)}</p><div class="row"><span>Domínio estimado</span><strong>${score}%</strong></div>${bar(score)}<div class="modal-actions">${button('Praticar conceito →','variation',id,'primary')}${button('Revisar cartão','card',id)}${favorite(state,'c',id)}</div>${sourceTrail(c,CURRICULUM)}`);}
 function handleAction(action,id,element){
  if(action==='set-theme'){if(!['nebula','light','rest'].includes(id))return;state.settings.theme=id;applyPreferences();saveProgress();render();toast('Aparência salva.');return;}
- if(action==='about-tool'){document.querySelectorAll('.toolGrid .tool').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.toolDetail');if(detail){detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+  if(action==='about-tool'){document.querySelectorAll('.toolGrid .tool').forEach(button=>button.setAttribute('aria-pressed',String(button===element)));const detail=document.querySelector('.toolDetail');if(detail){detail.querySelector('p').textContent=element.dataset.toolDesc||'';const link=detail.querySelector('a');link.href=`#${id}`;link.textContent=`Abrir ${element.dataset.toolName||'ferramenta'}`;}return;}
+  if(action==='video-play'){toggleVideoPlayback();return;}
  if(action==='flip-card'){if(flash){flash.revealed=!flash.revealed;render();}return;}
  if(action==='logout'){performLogout();return;}
  if(action==='guest-lock'){openGuestModal(id,element);return;}

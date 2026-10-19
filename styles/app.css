@@ -530,7 +530,7 @@ h1 .accent{display:block;background:linear-gradient(112deg,var(--primary),var(--
 .toolDetail{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 27px;background:var(--card);border:1px solid var(--line);border-radius:20px;min-height:98px}
 .toolDetail p{color:var(--muted);font-size:14px;max-width:43ch}
 .tutorial{padding:0 0 20px;max-width:840px;margin:0 auto}
-.videoPlaceholder{height:260px;border:1.5px dashed var(--line-strong);background:var(--highlight);border-radius:23px;display:grid;place-items:center;color:var(--muted);font-size:14px}
+
 .footerMotto{padding:50px 0 60px;text-align:center;color:var(--subtle);font:italic 600 20px Fraunces,serif}
 .settings{max-width:870px;margin:0 auto;padding:65px 0 100px;min-height:calc(100vh - 70px)}
 .settings .settingsEyebrow{color:var(--primary);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
@@ -547,7 +547,7 @@ h1 .accent{display:block;background:linear-gradient(112deg,var(--primary),var(--
 @media(min-width:1500px){h1{font-size:64px}.hero{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr)}}
 @media(max-width:1150px){.hero{grid-template-columns:minmax(0,1fr) minmax(270px,.87fr)}.stickerboard{height:520px}.sticker{font-size:25px;padding:9px 12px}h1{font-size:clamp(40px,4.2vw,54px)}.topbar{flex-wrap:wrap}}
 @media(max-width:850px){.topbar{position:sticky;padding:11px 18px}.hero{min-height:0;grid-template-columns:1fr;padding:64px 0 70px;gap:10px}.heroIntro{max-width:620px;margin:0 auto}.hero h1{max-width:100%}.stickerboard{height:305px;max-width:570px;width:100%;margin:0 auto}.sticker{font-size:24px;padding:8px 13px}.sticker.errei{top:9%;left:6%}.sticker.bora{top:4%;right:9%}.sticker.quase{top:35%;right:22%}.sticker.agora{top:44%;left:2%}.sticker.dominei{top:66%;right:8%}.sticker.revisar{top:81%;left:13%}.toolGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:540px){.topnav-brand .fixou-logo{width:104px}.topbar{gap:10px}.breadcrumb{font-size:11px}.themePills button{font-size:10px;padding:6px 8px}.streak{font-size:10px;padding:6px 8px}.content{padding:0 18px 65px}.hero{padding:48px 0 35px}.hero h1{font-size:clamp(37px,10vw,52px);max-width:100%}.lead{font-size:15px}.stickerboard{height:284px}.sticker{font-size:21px;padding:7px 12px;box-shadow:4px 4px 0 rgba(21,29,47,.55)}.sticker.agora{left:0}.sticker.revisar{left:3%}.sticker.dominei{right:2%}.panel{border-radius:21px}.toolDetail{flex-direction:column;align-items:stretch}.videoPlaceholder{height:185px}.settings{padding:42px 0 70px}.motionRow{align-items:flex-start;flex-direction:column}.motionBtn{width:100%}}
+@media(max-width:540px){.topnav-brand .fixou-logo{width:104px}.topbar{gap:10px}.breadcrumb{font-size:11px}.themePills button{font-size:10px;padding:6px 8px}.streak{font-size:10px;padding:6px 8px}.content{padding:0 18px 65px}.hero{padding:48px 0 35px}.hero h1{font-size:clamp(37px,10vw,52px);max-width:100%}.lead{font-size:15px}.stickerboard{height:284px}.sticker{font-size:21px;padding:7px 12px;box-shadow:4px 4px 0 rgba(21,29,47,.55)}.sticker.agora{left:0}.sticker.revisar{left:3%}.sticker.dominei{right:2%}.panel{border-radius:21px}.toolDetail{flex-direction:column;align-items:stretch}.settings{padding:42px 0 70px}.motionRow{align-items:flex-start;flex-direction:column}.motionBtn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 /* Elements remain visible by default; observers enable the enhancement only when supported. */
 html.reveal-ready [data-reveal]:not(.is-visible){opacity:0;transform:translateY(18px)}
@@ -585,7 +585,29 @@ html.reveal-ready [data-reveal]{transition:opacity .68s ease-out,transform .68s 
 .toolDetail .btn{font-size:12.5px;padding:11px 17px}
 .tutorial{max-width:1115px;margin:0 auto;padding:35px 2px 18px}
 .tutorial .sectionTitle{font-family:Manrope,system-ui,sans-serif;font-weight:800;text-align:left;letter-spacing:-.05em}
-.videoPlaceholder{max-width:690px;margin-top:30px}
+
+/* Player de apresentação da homepage: HTML5 nativo, tema FIXOU, carga leve. */
+.homeVideo{max-width:690px;margin:30px auto 0;position:relative}
+.homeVideoFrame{position:relative;aspect-ratio:16/9;border-radius:23px;overflow:hidden;background:#080e1c;border:1px solid var(--line);box-shadow:0 18px 44px #0a142833}
+.homeVideoMedia{display:block;width:100%;height:100%;object-fit:contain;background:#080e1c}
+.homeVideoMedia::-webkit-media-controls-center-play-button{display:none}
+.homeVideoFrame::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(62% 52% at 50% 50%,#05080fe8 0%,#05080fb8 42%,#05080f00 80%);transition:opacity .3s ease}
+.homeVideo.is-started .homeVideoFrame::after{opacity:0}
+.homeVideoPlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;padding:10px;background:transparent;border-radius:26px;transition:opacity .28s ease}
+/* A regra global button:active{transform:translateY(1px)} tira o botão de baixo do cursor no clique; aqui o transform é preservado. */
+.homeVideoPlay:hover,.homeVideoPlay:active,.homeVideoPlay:focus,.homeVideoPlay:focus-visible{transform:translate(-50%,-50%)}
+.homeVideoPlay:hover .homeVideoPlayIcon{transform:scale(1.07);box-shadow:0 16px 38px #04070ecc}
+.homeVideoPlayIcon{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#7db7ff,#6fe0c2);color:#08111f;box-shadow:0 12px 30px #04070e9c;transition:transform .2s ease,box-shadow .2s ease}
+.homeVideoPlayIcon svg{width:26px;height:26px;fill:currentColor;grid-area:1/1}
+.homeVideoIconPlay{margin-left:3px}
+.homeVideoIconReplay{display:none}
+.homeVideo.is-ended .homeVideoIconPlay{display:none}
+.homeVideo.is-ended .homeVideoIconReplay{display:block}
+.homeVideoPlayLabel{font:800 11.5px/1 Manrope,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#eaf1ff;white-space:nowrap;background:rgba(5,9,17,.72);padding:8px 15px;border-radius:99px;border:1px solid rgba(174,196,234,.18)}
+.homeVideo.is-started .homeVideoPlay{opacity:0;pointer-events:none}
+.homeVideo.is-ended .homeVideoPlay{opacity:1;pointer-events:auto}
+@media(max-width:640px){.homeVideo{max-width:100%}.homeVideoFrame{border-radius:18px}.homeVideoPlayIcon{width:54px;height:54px}.homeVideoPlayIcon svg{width:22px;height:22px}.homeVideoPlayLabel{font-size:10px;letter-spacing:.13em}}
+@media(prefers-reduced-motion:reduce){.homeVideoPlay,.homeVideoPlayIcon,.homeVideoFrame::after{transition:none}}
 /* Campo de balões: flutuação pequena, contínua e sem interação de arrastar */
 .sticker{pointer-events:none!important;touch-action:auto;cursor:default!important;animation:balloonFloat var(--float-duration,7.1s) ease-in-out infinite alternate;animation-delay:var(--float-delay,0s);will-change:transform}
 .sticker.errei{--float-duration:7.1s;--float-delay:-1.6s;--dx:4px;--dy:-8px;--tilt:1.2deg}
