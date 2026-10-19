@@ -21379,57 +21379,7 @@
                           "contentStatus":  "needs_content_review",
                           "imageReason":  "Possui asset de imagem associado"
                       },
-                      {
-                          "id":  "fis-lic-l1-f1-c5-exercicios-propostos-q37",
-                          "conceptId":  "fis-lic-l1-f1-c5-movimento",
-                          "difficulty":  2,
-                          "type":  "choice",
-                          "prompt":  "Enem As bicicletas possuem uma corrente que liga uma coroa dentada dianteira, movimentada pelos pedais, a uma coroa localizada no eixo da roda traseira. O número de voltas dadas pela roda traseira a cada pedalada depende do tamanho relativo dessas coroas. Em qual configuração mostrada na figura a roda traseira dá o maior número de voltas por pedalada?",
-                          "options":  [
-                                          "Configuração A.",
-                                          "Configuração B.",
-                                          "Configuração C.",
-                                          "Configuração D.",
-                                          "Configuração E."
-                                      ],
-                          "answer":  0,
-                          "explanation":  "A corrente possui a mesma velocidade linear nas duas coroas. Para uma volta completa da coroa acionada pelos pedais, o número de voltas da coroa traseira cresce com a razão entre o raio da coroa dianteira e o raio da coroa traseira. Entre as configurações apresentadas, essa razão é máxima na configuração A. Portanto, a roda traseira realiza o maior número de voltas por pedalada na alternativa A.",
-                          "discipline":  "fisica",
-                          "topic":  "Cinemática",
-                          "subtopic":  "Movimento circular",
-                          "source":  "PV Física – L1 · Frente 1 · Capítulo 5 · Exercícios propostos",
-                          "year":  2025,
-                          "officialIds":  [
-                                              "of-241"
-                                          ],
-                          "contentTrack":  "physics-licensed-complete",
-                          "sourceType":  "licensed_material",
-                          "sourceReference":  "Google Drive · PV Física – L1.pdf",
-                          "sourceVolume":  "L1",
-                          "sourceFront":  1,
-                          "sourceChapter":  5,
-                          "sourceSection":  "Exercícios propostos",
-                          "sourcePage":  104,
-                          "questionNumber":  37,
-                          "answerKeyQuestionNumber":  37,
-                          "answerKeyLetter":  "A",
-                          "answerKeySource":  "Google Drive · Gabarito Física L1.pdf",
-                          "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
-                          "needsReview":  true,
-                          "reviewReasons":  [],
-                          "imageAssets":  ["assets/question-images/fis-lic-l1-f1-c5-exercicios-propostos-q37-p104.png"],
-                          "tags":  [
-                                       "física",
-                                       "movimento",
-                                       "exercícios propostos"
-                                   ],
-                          "estimatedSeconds":  180,
-                          "imageClassification":  "image_required",
-                          "imageStatus":  "needs_visual_review",
-                          "contentStatus":  "needs_content_review",
-                          "imageReason":  "Possui asset de imagem associado"
-                      },
-                      {
+                                            {
                           "id":  "fis-lic-l1-f1-c5-exercicios-complementares-q6",
                           "conceptId":  "fis-lic-l1-f1-c5-movimento",
                           "difficulty":  2,

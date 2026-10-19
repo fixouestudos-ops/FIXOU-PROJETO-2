@@ -1,10 +1,10 @@
 export const AI_AUDIT_BATCH={
  "version": 1,
  "batchId": "master-release-01-09",
- "total": 62,
+ "total":  61,
  "preservedOverrideId": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
  "source": {
-  "d1": "question_overrides WHERE field='contentStatus' AND value='needs_content_review' AND actor_user_id='master-release-01-09' → 61 ids",
+  "d1": "question_overrides WHERE field='contentStatus' AND value='needs_content_review' AND actor_user_id='master-release-01-09' → 60 ids",
   "preserved": "override manual do Owner em contentStatus=pending preservado pela migração → 1 id"
  },
  "ids": [
@@ -52,7 +52,6 @@ export const AI_AUDIT_BATCH={
   "fis-lic-l1-f1-c5-exercicios-propostos-q3",
   "fis-lic-l1-f1-c5-exercicios-propostos-q33",
   "fis-lic-l1-f1-c5-exercicios-propostos-q35",
-  "fis-lic-l1-f1-c5-exercicios-propostos-q37",
   "fis-lic-l1-f1-c5-exercicios-propostos-q4",
   "fis-lic-l1-f1-c5-exercicios-propostos-q5",
   "fis-lic-l1-f1-c5-exercicios-propostos-q9",

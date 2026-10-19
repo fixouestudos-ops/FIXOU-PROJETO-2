@@ -1,7 +1,7 @@
 {
- "note": "Estados de producao dos 62 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
- "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 62 ids do manifesto",
- "totalRows": 65,
+ "note": "Estados de producao dos 61 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
+ "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 61 ids do manifesto",
+ "totalRows": 64,
  "rows": [
   {
    "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
@@ -379,14 +379,7 @@
    "created_at": 1792318228108,
    "updated_at": 1792318228108
   },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q37",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
+  
   {
    "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
    "field": "contentStatus",
