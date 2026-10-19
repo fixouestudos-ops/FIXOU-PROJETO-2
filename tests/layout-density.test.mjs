@@ -69,18 +69,22 @@ describe('Layout density: no zoom/scale hacks', () => {
   });
 });
 
-describe('Layout density: sidebar and mobile preserved', () => {
-  it('sidebar widths untouched', () => {
-    assert.ok(css.includes('.sidebar{position:fixed'), 'sidebar must stay fixed');
-    assert.ok(css.match(/\.sidebar\{[^}]*width\s*:\s*236px/), 'sidebar base width 236px preserved');
+describe('Layout density: sidebar removed for top navigation', () => {
+  it('no .sidebar rule remains in the stylesheet', () => {
+    assert.ok(!css.match(/\.sidebar[\s{.]/), 'sidebar must be fully removed from CSS');
   });
 
-  it('workspace offsets untouched', () => {
-    assert.ok(css.match(/\.workspace\s*\{\s*margin-left\s*:\s*236px\s*\}/), 'workspace base offset preserved');
+  it('no --sidebar-width token remains', () => {
+    assert.ok(!css.includes('--sidebar-width'), 'legacy --sidebar-width token must be removed');
   });
 
-  it('mobile (700px) block keeps workspace margin-left:0', () => {
-    assert.ok(css.includes('.workspace{margin-left:0}'), 'mobile workspace offset preserved');
+  it('workspace carries no sidebar offsets (single-column grid)', () => {
+    assert.ok(!css.match(/\.workspace\s*\{[^}]*margin-left/), 'workspace must not carry margin-left offsets');
+    assert.ok(!css.match(/margin-left:\s*(236|214|190)px/), 'no legacy sidebar pixel offsets anywhere');
+  });
+
+  it('app grid stays single-column', () => {
+    assert.ok(css.match(/\.app\{[^}]*grid-template-columns:minmax\(0,1fr\)/), '.app must use a single minmax(0,1fr) column');
   });
 
   it('mobile block does not contain the 68px topbar', () => {

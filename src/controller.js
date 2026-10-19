@@ -4,7 +4,7 @@ import {escapeHTML,normalize,formatNumber,formatTime,todayKey,uid,clamp,relative
 import {createState,loadState,persistState,exportState,importState,validateState,SAVE_KEY} from './save.js';
 import {scheduleReview,dueConcepts,isDue} from './reviews.js';
 import {masteryValue} from './mastery.js';
-import {profileLevel,currentStreak,addActivity,unlockAchievements} from './gamification.js';
+import {currentStreak,addActivity,unlockAchievements} from './gamification.js';
 import {createSession,pickNextQuestion,recordAnswer,finishSession,matchesQuestion} from './training.js';
 import {subjectById,conceptById,questionById,bar,button,sourceTrail,favorite} from './components.js';
 import {homeScreen,trainScreen,cardsScreen} from './screens.js';
@@ -14,6 +14,7 @@ import {settingsScreen} from './screens-settings.js';
 import {aboutScreen} from './screens-about.js';
 import {reviewScreen} from './screens-review.js';
 import {sidebarIcon} from './sidebar-icons.js';
+import {renderTopnav,toggleNavGroup,closeNavGroups,moveGroupFocus} from './topnav.js';
 import {hasNewVaultErrors,markVaultErrorsSeen} from './error-vault-notifications.js';
 import {sessionScreen,canSubmitDraft,draftAnswer} from './session-view.js';
 import {defaultSessionBuilder,cleanSessionBuilder,builderFilters,sessionSubjects,sessionTopicKeys,SESSION_QUANTITIES,IMAGE_FILTERS} from './session-builder.js';
@@ -81,23 +82,15 @@ function render(){
   if(!account.user){history.replaceState(null,'','#train');ui.route='train';toast('Faça login para acessar o painel.');}
   else {ui.route='home';history.replaceState(null,'','#home');toast('Esta área é exclusiva da administração.');}
  }
- const level=account.user?profileLevel(state.xp):{level:1},name=account.user?account.user.name:'',navRoute=ui.route==='quiz'?'train':ui.route;
+ const navRoute=ui.route==='quiz'?'train':ui.route;
  const views={about:aboutScreen,home:homeScreen,train:trainScreen,cards:cardsScreen,errors:errorsScreen,map:mapScreen,books:booksScreen,stats:statsScreen,favorites:favoritesScreen,profile:profileScreen,search:searchScreen,quiz:sessionScreen,settings:settingsScreen,admin:adminScreen,review:reviewScreen};
   const baseNav=[...NAV];const nav=account.user&&['owner','admin'].includes(account.user.role)?[...baseNav,['admin','','Painel do dono'],['review','','Revisão de Questões']]:baseNav;
  const title=ui.route==='admin'?'Painel do dono':ui.route==='profile'?'Seu perfil':ui.route==='search'?'Pesquisa':ui.route==='quiz'?'Em estudo':nav.find(n=>n[0]===ui.route)?.[2]||(!account.user?'FIXOU':'Minha jornada');
- const navHtml=nav.map(([id,i,t])=>{
-  const locked=guest && GUEST_LOCKED.includes(id);
-  const active=id===navRoute && !locked;
-   const badge=id==='errors'&&account.user&&hasNewVaultErrors(state)?'<i class="nav-badge" aria-label="Novas questões no Cofre"></i>':'';
-  if(locked){
-    return `<button class="nav-item guest-locked" data-action="guest-lock" data-id="${id}" aria-label="${t} - requer conta"><span class="navIcon" aria-hidden="true">${sidebarIcon(id)}</span>${escapeHTML(t)}<span class="nav-lock" aria-hidden="true">🔒</span>${badge}</button>`;
-  }
-   return `<a href="#${id}" class="nav-item navitem ${active?'active':''}" ${active?'aria-current="page"':''}><span class="navIcon" aria-hidden="true">${sidebarIcon(id)}</span>${escapeHTML(t)}${badge}</a>`;
- }).join('');
- const logoutHtml=!guest?`<button class="nav-item nav-logout" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span aria-hidden="true">↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button>`:'';
- const accountAreaHtml=guest?'':`<div class="account-area"><button class="profile-link" data-action="profile-settings" type="button" aria-label="Abrir configurações">${avatar(account.user)}<span>${escapeHTML(name)}<small>Plano ${account.user.plan==='free'?'Free':'Pro'} · Nível ${level.level}</small></span></button></div>`;
+ const topnavHtml=renderTopnav({route:navRoute,isLocked:id=>guest&&GUEST_LOCKED.includes(id),isActive:id=>id===navRoute,badgeFor:id=>id==='errors'&&account.user&&hasNewVaultErrors(state)?'<i class="nav-badge" aria-label="Novas questões no Cofre"></i>':'',admin:account.user&&['owner','admin'].includes(account.user.role)});
+ const logoutHtml=!guest?`<button class="nav-logout" data-action="logout" type="button" ${ui.loggingOut?'disabled':''}><span aria-hidden="true">↪</span>${ui.loggingOut?'Saindo…':'Sair'}</button>`:'';
+ const headerUserHtml=guest?'':`<button class="headerUser" data-action="profile-settings" type="button" aria-label="Abrir meu perfil">${avatar(account.user,'avatar-header')}<span class="headerUserName">${escapeHTML(account.user?.name||state.profile?.name||(account.user?.email?account.user.email.split('@')[0]:'Aluno'))}</span></button>`;
  appElement.className='app';
- appElement.innerHTML=`<canvas id="stars" aria-hidden="true"></canvas><div class="screenGlow" aria-hidden="true"></div><button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><aside class="sidebar side ${ui.sidebarOpen?'open':''}"><a class="brand" href="#about">${fixouLogo()}</a><span class="nav-label sidelabel">SEU ESPAÇO DE ESTUDO</span><nav aria-label="Navegação principal">${navHtml}${logoutHtml}</nav><div class="sidebar-bottom sidefooter"><div class="exam-label vest"><span class="status-dot"></span> VESTIBULAR 2027</div><p class="sidefootnote">Um pouco hoje.<br>Mais clareza amanhã.</p>${accountAreaHtml}</div></aside><div class="workspace mainArea"><header class="topbar"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><span class="breadcrumb">Seu aprendizado <span class="slash">/</span> <b>${title}</b></span><div class="headerRight"><span class="themeLabel">Aparência</span><div class="themePills" role="group" aria-label="Alternar modo de aparência">${[['nebula','✦ Nebulosa'],['light','☀ Claro'],['rest','◐ Descanso']].map(([id,label])=>`<button data-action="set-theme" data-id="${id}" aria-pressed="${state.settings.theme===id}">${label}</button>`).join('')}</div><a class="streak" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a></div></header>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" class="content" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027.</footer></div>`;
+ appElement.innerHTML=`<canvas id="stars" aria-hidden="true"></canvas><div class="screenGlow" aria-hidden="true"></div><button class="nav-backdrop ${ui.sidebarOpen?'visible':''}" data-action="menu" aria-label="Fechar menu"></button><div class="workspace mainArea"><header class="topbar${ui.sidebarOpen?' menu-open':''}"><button class="menu-toggle" data-action="menu" aria-label="Abrir menu" aria-expanded="${ui.sidebarOpen}">☰</button><a class="topnav-brand" href="#about" aria-label="Quem Somos - FIXOU">${fixouLogo()}</a><nav class="topnav" id="topnav" aria-label="Navegação principal"><a href="#about" class="topnav-link${navRoute==='about'?' active':''}"${navRoute==='about'?' aria-current="page"':''}>Quem Somos</a>${topnavHtml}<div class="topnav-foot"><a class="navitem foot-item" href="#settings"><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span>Configurações</a>${logoutHtml}</div></nav><div class="headerRight"><div class="themePills" role="group" aria-label="Alternar modo de aparência">${[['nebula','✦ Nebulosa'],['light','☀ Claro'],['rest','◐ Descanso']].map(([id,label])=>`<button data-action="set-theme" data-id="${id}" aria-pressed="${state.settings.theme===id}">${label}</button>`).join('')}</div><a class="header-icon" href="#settings" aria-label="Configurações"${navRoute==='settings'?' aria-current="page"':''}><span class="navIcon" aria-hidden="true">${sidebarIcon('settings')}</span></a>${headerUserHtml}<a class="streak" href="#stats">♨ ${currentStreak(state.activity)} ${currentStreak(state.activity)===1?'dia':'dias'}</a>${logoutHtml}</div></header><div class="crumbrow"><span class="breadcrumb">Seu aprendizado <span class="slash">/</span> <b>${title}</b></span></div>${storageBlocked?'<div class="storage-alert">Seu progresso precisa de atenção. <a href="#profile">Abra o Perfil para recuperar seus dados →</a></div>':''}<main id="main" class="content" tabindex="-1">${views[ui.route] ? views[ui.route](context()) : homeScreen(context())}</main><footer>FIXOU · Estudo que fica · preparação independente para a FUVEST 2027.</footer></div>`;
  document.title=`${title} · FIXOU`;
  if(ui.route==='about')initAboutPage();
  if(ui.route==='cards'&&flash)initCardGestures();
@@ -166,7 +159,8 @@ function handleAction(action,id,element){
  if(action==='remove-avatar'){if(!AVATAR_FEATURE_ENABLED)return;api('/api/avatar',{method:'DELETE',body:'{}'}).then(()=>{account.user={...account.user,hasAvatar:false,avatarVersion:Date.now()};render();toast('Foto removida.');}).catch(e=>toast(e.message));return;}
  if(action==='admin-period'){ui.adminPeriod=Number(id);adminData=null;render();api('/api/admin/overview?days='+ui.adminPeriod).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}
   if(action==='admin-user'){const target=(adminData?.users||[]).find(u=>u.id===id);if(target)openModal(adminUserModal(target));return;}
- if(action==='menu'){ui.sidebarOpen=!ui.sidebarOpen;render();return;}
+  if(action==='nav-group'){toggleNavGroup(element);return;}
+  if(action==='menu'){ui.sidebarOpen=!ui.sidebarOpen;render();return;}
  if(action==='close-modal'){closeModal();afterProfile=null;return;}
  if(action==='confirm-modal'){const fn=afterConfirm;closeModal();fn?.();return;}
  if(action==='start'){launch(id,id==='practice'?ui.filters:{});return;}
@@ -233,6 +227,8 @@ function handleAction(action,id,element){
 }
 document.addEventListener('click',event=>{
  if(modalElement.open && event.target===modalElement){closeGuestModal();return;}
+ const inNavGroup=event.target.closest?event.target.closest('.navgroup'):null;
+ if(!inNavGroup||event.target.closest('a[href^="#"]'))closeNavGroups();
  const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
 document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){if(editingQuestion){event.target.value=ui.reviewSearch;return;}ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}if(event.target.dataset?.action==='review-edit-prompt'){editingFields.prompt=event.target.value;}if(event.target.dataset?.action==='review-edit-answer'){editingFields.answer=event.target.value;}});
@@ -273,6 +269,9 @@ document.addEventListener('keydown',event=>{
  if(!editing&&!modalElement.open&&ui.route==='quiz'&&session){const q=questionById(BANK,session.currentId);if(!session.feedback&&['choice','boolean'].includes(q?.type)){const index='abcd'.indexOf(event.key.toLowerCase());if(index>=0&&index<q.options.length){event.preventDefault();session.draft.answer=index;updateDraft();render();return;}}if(session.feedback&&event.key==='Enter'){event.preventDefault();advance();return;}}
  if(!editing&&!modalElement.open&&ui.route==='cards'&&flash){if(event.key==='ArrowLeft'){event.preventDefault();rateCard('forgot');return;}if(event.key==='ArrowRight'){event.preventDefault();rateCard('good');return;}if(event.key==='Enter'||event.key===' '){event.preventDefault();flash.revealed=!flash.revealed;render();return;}}
  if(event.key==='Escape' && modalElement.open){event.preventDefault();closeGuestModal();return;}
+ const navGroupEl=event.target&&event.target.closest?event.target.closest('.navgroup'):null;
+ if(navGroupEl&&event.key.toLowerCase()==='escape'&&navGroupEl.classList.contains('open')){event.preventDefault();closeNavGroups(navGroupEl.querySelector('.navgroup-btn'));return;}
+ if(navGroupEl&&['ArrowDown','ArrowUp','Home','End'].includes(event.key)&&!editing&&!modalElement.open){if(!navGroupEl.classList.contains('open'))toggleNavGroup(navGroupEl.querySelector('.navgroup-btn'));event.preventDefault();moveGroupFocus(navGroupEl,event.key);return;}
  if(event.key==='/'&&!editing&&!modalElement.open){event.preventDefault();go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);}
  if(event.key==='Enter'&&event.target.id==='written-answer'){event.preventDefault();submitAnswer();}
  if(event.key==='Escape'&&ui.sidebarOpen){ui.sidebarOpen=false;render();}

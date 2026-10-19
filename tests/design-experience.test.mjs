@@ -15,7 +15,7 @@ test('os três temas aparecem nas configurações e o tema escolhido sobrevive �
  assert.equal(validated.settings.theme,'rest');
  const html=settingsScreen({state:validated,account:{name:'Estudante',email:'e@x.test'},loggingOut:false});
  for(const theme of ['nebula','light','rest'])assert.match(html,new RegExp(`data-id="${theme}"`));
- assert.match(html,/themeCard[^>]+data-id="rest"[^>]+aria-pressed="true"/);
+ assert.match(html,/data-action="set-theme" data-id="rest" aria-pressed="true"/);
 });
 
 test('Quem Somos oferece os seis balões e ferramentas que apontam para rotas reais',()=>{

@@ -9,139 +9,137 @@ const cssPath = resolve(__dirname, '..', 'styles', 'app.css');
 const css = readFileSync(cssPath, 'utf8');
 const jsPath = resolve(__dirname, '..', 'src', 'controller.js');
 const js = readFileSync(jsPath, 'utf8');
+const topnavSrc = readFileSync(resolve(__dirname, '..', 'src', 'topnav.js'), 'utf8');
+const settingsSrc = readFileSync(resolve(__dirname, '..', 'src', 'screens-settings.js'), 'utf8');
 
-describe('Sidebar CSS: permanently visible on desktop', () => {
-  it('base .sidebar has display:flex (visible by default)', () => {
-    const rule = css.match(/\.sidebar\{[^}]*display\s*:\s*flex/);
-    assert.ok(rule, 'Base .sidebar rule must contain display:flex');
+describe('Topnav CSS: sidebar permanently removed', () => {
+  it('no .sidebar rule remains', () => {
+    assert.ok(!css.match(/\.sidebar[\s{.]/), 'CSS must not contain any .sidebar selector');
   });
 
-  it('base .sidebar has no display:none!important', () => {
-    const rule = css.match(/\.sidebar\{[^}]*display\s*:\s*none\s*!important/);
-    assert.ok(!rule, 'Base .sidebar must NOT contain display:none!important');
+  it('no --sidebar-width token remains', () => {
+    assert.ok(!css.includes('--sidebar-width'), 'CSS must not contain --sidebar-width');
   });
 
-  it('base .sidebar has no visibility:hidden!important', () => {
-    const rule = css.match(/\.sidebar\{[^}]*visibility\s*:\s*hidden\s*!important/);
-    assert.ok(!rule, 'Base .sidebar must NOT contain visibility:hidden!important');
+  it('no .nav-item legacy selector remains', () => {
+    assert.ok(!css.match(/\.nav-item[\s,{]/), 'CSS must not contain the legacy .nav-item selector');
   });
 
-  it('base .sidebar has no height:0!important', () => {
-    const rule = css.match(/\.sidebar\{[^}]*height\s*:\s*0\s*!important/);
-    assert.ok(!rule, 'Base .sidebar must NOT contain height:0!important');
+  it('workspace has no pixel margin-left offset', () => {
+    assert.ok(!css.match(/\.workspace\s*\{\s*margin-left:\s*\d+px/), 'workspace must not be offset by a sidebar width');
+    assert.ok(!css.match(/margin-left:\s*(236|214|190)px/), 'no legacy sidebar offsets (236/214/190) remain');
   });
 
-  it('base .sidebar has no pointer-events:none!important', () => {
-    const rule = css.match(/\.sidebar\{[^}]*pointer-events\s*:\s*none\s*!important/);
-    assert.ok(!rule, 'Base .sidebar must NOT contain pointer-events:none!important');
-  });
-
-  it('base .sidebar has no z-index:-1!important', () => {
-    const rule = css.match(/\.sidebar\{[^}]*z-index\s*:\s*-1\s*!important/);
-    assert.ok(!rule, 'Base .sidebar must NOT contain z-index:-1!important');
-  });
-
-  it('base .sidebar has position:fixed', () => {
-    const rule = css.match(/\.sidebar\{[^}]*position\s*:\s*fixed/);
-    assert.ok(rule, 'Base .sidebar must contain position:fixed');
-  });
-
-  it('base .sidebar has width:236px', () => {
-    const rule = css.match(/\.sidebar\{[^}]*width\s*:\s*236px/);
-    assert.ok(rule, 'Base .sidebar must contain width:236px');
-  });
-
-  it('base .sidebar has height:100dvh (full viewport)', () => {
-    const rule = css.match(/\.sidebar\{[^}]*height\s*:\s*100dvh/);
-    assert.ok(rule, 'Base .sidebar must contain height:100dvh');
-  });
-
-  it('base .sidebar has overflow:hidden (no internal scrollbar)', () => {
-    const rule = css.match(/\.sidebar\{[^}]*overflow\s*:\s*hidden/);
-    assert.ok(rule, 'Base .sidebar must contain overflow:hidden (no internal scrollbar)');
-  });
-
-  it('base .sidebar has z-index:30 (above workspace)', () => {
-    const rule = css.match(/\.sidebar\{[^}]*z-index\s*:\s*30/);
-    assert.ok(rule, 'Base .sidebar must contain z-index:30');
-  });
-
-  it('base .sidebar has flex-direction:column', () => {
-    const rule = css.match(/\.sidebar\{[^}]*flex-direction\s*:\s*column/);
-    assert.ok(rule, 'Base .sidebar must contain flex-direction:column');
+  it('base .workspace keeps min-width:0 and box-sizing:border-box', () => {
+    const rule = css.match(/\.workspace\s*\{[^}]*min-width:\s*0/);
+    assert.ok(rule, 'base .workspace must keep min-width:0');
   });
 });
 
-describe('Sidebar CSS: workspace offset matches sidebar width', () => {
-  it('base .workspace has margin-left:236px', () => {
-    const rule = css.match(/\.workspace\s*\{\s*margin-left\s*:\s*236px\s*\}/);
-    assert.ok(rule, 'Base .workspace must have margin-left:236px');
+describe('Topnav CSS: top bar and dropdown structure', () => {
+  it('base .topnav is a flex row', () => {
+    assert.ok(css.includes('.topnav{display:flex'), 'base .topnav must be display:flex');
   });
 
-  it('@media(max-width:1250px) workspace margin-left matches sidebar width (214px)', () => {
-    const hasMatch = css.includes('@media(max-width:1250px){') && css.includes('.workspace{margin-left:214px}');
-    assert.ok(hasMatch, '@media(max-width:1250px) workspace must have margin-left:214px');
+  it('logo pill lives in .topnav-brand', () => {
+    assert.ok(css.includes('.topnav-brand .fixou-logo'), 'topnav brand must size the fixou logo');
   });
 
-  it('@media(max-width:980px) workspace margin-left matches sidebar width (190px)', () => {
-    const hasMatch = css.includes('@media(max-width:980px){') && css.includes('.workspace{margin-left:190px}');
-    assert.ok(hasMatch, '@media(max-width:980px) workspace must have margin-left:190px');
+  it('groups are positioned for absolute dropdowns', () => {
+    assert.ok(css.includes('.navgroup{position:relative'), '.navgroup must be position:relative on desktop');
+  });
+
+  it('dropdown panel exists with width:280px', () => {
+    const rule = css.match(/\.navpop\{[^}]*width:\s*280px/);
+    assert.ok(rule, '.navpop must have width:280px');
+  });
+
+  it('dropdown panel is hidden by default (opacity/visibility/transform)', () => {
+    const rule = css.match(/\.navpop\{[^}]*opacity:\s*0/);
+    assert.ok(rule, '.navpop must start with opacity:0');
+    assert.ok(css.match(/\.navpop\{[^}]*visibility:\s*hidden/), '.navpop must start with visibility:hidden');
+    assert.ok(css.match(/\.navpop\{[^}]*transform:\s*translateY/), '.navpop must start translated');
+  });
+
+  it('dropdown panel animates with a transition', () => {
+    assert.ok(css.match(/\.navpop\{[^}]*transition:\s*opacity/), '.navpop must transition opacity');
+  });
+
+  it('open group reveals the dropdown panel', () => {
+    assert.ok(css.includes('.navgroup.open .navpop{opacity:1;visibility:visible;transform:none}'), 'open group must reveal .navpop');
+  });
+
+  it('active/hover group is highlighted', () => {
+    assert.ok(css.includes('.navgroup.open .navgroup-btn,.navgroup.group-active .navgroup-btn'), 'open/active group button must be highlighted');
+  });
+
+  it('topnav entrance keyframes exist', () => {
+    assert.ok(css.includes('@keyframes topnavIn'), 'topnavIn keyframes must exist for the mobile panel');
+  });
+
+  it('mobile-only .topnav-foot starts hidden on desktop', () => {
+    assert.ok(css.includes('.topnav-foot{display:none}'), '.topnav-foot must be display:none by default');
+  });
+
+  it('breadcrumb row is rendered under the topbar', () => {
+    assert.ok(css.includes('.crumbrow{'), '.crumbrow styles must exist');
+    assert.ok(css.includes('.crumbrow .breadcrumb{'), 'breadcrumb rules must target .crumbrow');
+  });
+
+  it('header settings icon gets an active state', () => {
+    assert.ok(css.includes('.header-icon[aria-current="page"]'), 'header icon must support aria-current styling');
+  });
+
+  it('guest-locked dropdown items are styled', () => {
+    assert.ok(css.includes('.navpop-item.guest-locked{'), 'guest-locked navpop items must be styled');
+    assert.ok(css.includes('.navpop-item.guest-locked .nav-lock{'), 'guest lock icon must be styled');
   });
 });
 
-describe('Sidebar CSS: no internal scrollbar', () => {
-  it('no .sidebar rule has overflow-y:auto or overflow-y:scroll', () => {
-    const overflowRules = css.match(/\.sidebar\{[^}]*overflow-y\s*:\s*(auto|scroll)/g);
-    assert.ok(!overflowRules, '.sidebar must NOT have overflow-y:auto or overflow-y:scroll');
-  });
-
-  it('no .sidebar rule has overflow:auto or overflow:scroll', () => {
-    const overflowRules = css.match(/\.sidebar\{[^}]*overflow\s*:\s*(auto|scroll)[^-]/g);
-    assert.ok(!overflowRules, '.sidebar must NOT have overflow:auto or overflow:scroll');
-  });
-});
-
-describe('Sidebar CSS: menu-toggle hidden on desktop, visible on mobile', () => {
+describe('Topnav CSS: menu-toggle hidden on desktop, visible when collapsed', () => {
   it('.menu-toggle has display:none as base rule (hidden on desktop)', () => {
     const rule = css.match(/\.menu-toggle\s*\{\s*display\s*:\s*none/);
     assert.ok(rule, '.menu-toggle must have display:none as base rule');
   });
 
-  it('@media(max-width:700px) has .menu-toggle with display:block (visible on mobile)', () => {
+  it('@media(max-width:1024px) collapses .topnav into a fixed panel', () => {
+    const blocks = css.split('@media(max-width:1024px)');
+    const hasCollapse = blocks.some((block, i) => i > 0 && block.includes('.topnav{display:none;position:fixed;top:68px'));
+    assert.ok(hasCollapse, 'the 1024px breakpoint must collapse .topnav into a fixed panel');
+  });
+
+  it('@media(max-width:1024px) shows the menu toggle', () => {
+    const blocks = css.split('@media(max-width:1024px)');
+    const hasToggle = blocks.some((block, i) => i > 0 && block.includes('.menu-toggle{display:block'));
+    assert.ok(hasToggle, 'the 1024px breakpoint must show .menu-toggle');
+  });
+
+  it('open menu reveals the panel via .menu-open', () => {
+    assert.ok(css.includes('.topbar.menu-open .topnav{display:flex'), 'menu-open must reveal the topnav panel');
+  });
+
+  it('@media(max-width:700px) keeps .menu-toggle with display:block', () => {
     const blocks = css.split(/@media\s*\(\s*max-width\s*:\s*700px\s*\)/);
     const hasMobileToggle = blocks.some((block, i) => i > 0 && block.includes('.menu-toggle') && block.includes('display:block'));
     assert.ok(hasMobileToggle, '@media(max-width:700px) must have .menu-toggle display:block');
   });
 });
 
-describe('Sidebar CSS: mobile toggle preserved', () => {
-  it('@media(max-width:700px) .sidebar.open has display:flex!important', () => {
-    const blocks = css.split(/@media\s*\(\s*max-width\s*:\s*700px\s*\)/);
-    const hasOpen = blocks.some((block, i) => i > 0 && block.includes('.sidebar.open') && block.includes('display:flex!important'));
-    assert.ok(hasOpen, '@media(max-width:700px) .sidebar.open must have display:flex!important');
+describe('Topnav CSS: dropdown becomes accordion on mobile', () => {
+  it('collapsed breakpoint turns .navgroup static and .navpop into a stacked block', () => {
+    const blocks = css.split('@media(max-width:1024px)');
+    const block = blocks.find((b, i) => i > 0 && b.includes('.navpop{position:static;display:none'));
+    assert.ok(block, 'mobile .navpop must be position:static and display:none');
+    assert.ok(block.includes('.navgroup.open .navpop{display:block'), 'open mobile .navpop must be display:block');
+    assert.ok(block.includes('.navgroup{position:static'), 'mobile .navgroup must be position:static');
   });
 
-  it('@media(max-width:700px) .sidebar.open has visibility:visible!important', () => {
-    const blocks = css.split(/@media\s*\(\s*max-width\s*:\s*700px\s*\)/);
-    const hasVisible = blocks.some((block, i) => i > 0 && block.includes('.sidebar.open') && block.includes('visibility:visible!important'));
-    assert.ok(hasVisible, '@media(max-width:700px) .sidebar.open must have visibility:visible!important');
-  });
-
-  it('@media(max-width:700px) .sidebar.open has z-index:20!important', () => {
-    const blocks = css.split(/@media\s*\(\s*max-width\s*:\s*700px\s*\)/);
-    const hasZindex = blocks.some((block, i) => i > 0 && block.includes('.sidebar.open') && block.includes('z-index:20!important'));
-    assert.ok(hasZindex, '@media(max-width:700px) .sidebar.open must have z-index:20!important');
-  });
-
-  it('@media(max-width:700px) .sidebar.open has pointer-events:auto!important', () => {
-    const blocks = css.split(/@media\s*\(\s*max-width\s*:\s*700px\s*\)/);
-    const hasPointer = blocks.some((block, i) => i > 0 && block.includes('.sidebar.open') && block.includes('pointer-events:auto!important'));
-    assert.ok(hasPointer, '@media(max-width:700px) .sidebar.open must have pointer-events:auto!important');
-  });
-
-  it('@media(max-width:700px) .workspace has margin-left:0 (no offset when sidebar hidden)', () => {
-    const hasMobileZero = css.includes('@media(max-width:700px){') && css.includes('.workspace{margin-left:0}');
-    assert.ok(hasMobileZero, '@media(max-width:700px) .workspace must have margin-left:0');
+  it('panel offset matches the 68px topbar on collapse and stays within the viewport', () => {
+    const blocks = css.split('@media(max-width:1024px)');
+    const block = blocks.find((b, i) => i > 0 && b.includes('position:fixed;top:68px'));
+    assert.ok(block, 'collapsed panel must sit at top:68px');
+    assert.ok(block.includes('max-height:calc(100vh - 68px)'), 'collapsed panel must not exceed the viewport');
+    assert.ok(block.includes('overflow-y:auto'), 'collapsed panel must scroll when needed');
   });
 
   it('.nav-backdrop exists with display:none base', () => {
@@ -155,7 +153,96 @@ describe('Sidebar CSS: mobile toggle preserved', () => {
   });
 });
 
-describe('Sidebar JS: no safety mechanism in render()', () => {
+describe('Topnav markup: groups, icons and descriptions', () => {
+  it('topnav.js renders group triggers with aria-expanded/aria-controls', () => {
+    assert.ok(topnavSrc.includes('data-action="nav-group"'), 'group trigger must use data-action="nav-group"');
+    assert.ok(topnavSrc.includes('aria-expanded="false"'), 'group trigger must start aria-expanded="false"');
+    assert.ok(topnavSrc.includes('aria-controls="navpop-'), 'group trigger must point at its panel id');
+  });
+
+  it('dropdown items carry navpop name + description text', () => {
+    assert.ok(topnavSrc.includes('navpop-name'), 'items must render a name');
+    assert.ok(topnavSrc.includes('navpop-desc'), 'items must render a description');
+    assert.ok(topnavSrc.includes('Quiz adaptativo e desafios de estudo'), 'train description must exist');
+    assert.ok(topnavSrc.includes('Revise as questões que você errou'), 'errors description must exist');
+    assert.ok(topnavSrc.includes('Gestão e métricas do FIXOU'), 'admin description must exist');
+  });
+
+  it('admin group labels are the approved ones', () => {
+    assert.ok(topnavSrc.includes("'Painel do dono'"), 'admin route label override missing');
+    assert.ok(topnavSrc.includes("'Revisão de Questões'"), 'review route label override missing');
+  });
+
+  it('guest-locked items use guest-lock action with nav-lock', () => {
+    assert.ok(topnavSrc.includes('guest-locked'), 'locked items must be marked guest-locked');
+    assert.ok(topnavSrc.includes('data-action="guest-lock"'), 'locked items must trigger guest-lock');
+    assert.ok(topnavSrc.includes('nav-lock'), 'locked items must render the nav-lock icon');
+  });
+
+  it('controller keeps the admin role gate for the Admin group', () => {
+    assert.ok(js.includes("'owner','admin'"), "controller must gate Admin with ['owner','admin']");
+    assert.ok(js.includes('renderTopnav('), 'controller must render the topnav');
+  });
+
+  it('controller wires dropdown helpers', () => {
+    assert.ok(js.includes('toggleNavGroup('), 'controller must toggle groups');
+    assert.ok(js.includes('closeNavGroups('), 'controller must close groups');
+    assert.ok(js.includes('moveGroupFocus('), 'controller must support keyboard navigation');
+    assert.ok(js.includes("toLowerCase()==='escape'"), 'Escape must close dropdowns (case-insensitive)');
+  });
+
+  it('controller renders brand, breadcrumb row and mobile foot', () => {
+    assert.ok(js.includes('crumbrow'), 'controller must render .crumbrow');
+    assert.ok(js.includes('topnav-foot'), 'controller must render the mobile foot');
+    assert.ok(js.includes('#about'), 'brand must link to Quem Somos');
+    assert.ok(js.includes('themePills'), 'controller must render the header theme selector');
+    assert.ok(js.includes('data-action="set-theme"'), 'header selector must use the shared set-theme action');
+  });
+
+  it('header shows the authenticated user chip (avatar + name)', () => {
+    assert.ok(/import\s*\{[^}]*\bavatar\b[^}]*\}\s*from\s*'\.\/account\.js'/.test(js), 'controller must import the shared avatar() helper from account.js');
+    assert.ok(js.includes('class="headerUser"'), 'controller must render the header user chip');
+    assert.ok(js.includes('${headerUserHtml}<a class="streak"'), 'chip must sit between settings icon and streak');
+    assert.ok(js.includes('avatar(account.user'), 'chip must read the authenticated account.user (no second user structure)');
+    assert.ok(js.includes('data-action="profile-settings"'), 'chip must link to the existing profile action');
+    assert.ok(!js.includes('Victor'), 'chip must never hardcode a person name');
+  });
+
+  it('user chip: theme variables and responsive name hiding', () => {
+    assert.ok(css.includes('.headerRight .avatar{background:var(--highlight);color:var(--primary)'), 'avatar must use existing theme variables');
+    assert.ok(css.includes('.headerUserName{font-size:13px;font-weight:700;color:var(--ink)'), 'name must use theme ink color');
+    assert.ok(css.includes('@media(max-width:980px){.headerUserName{display:none}'), 'name text must hide at <=980px while avatar stays');
+    assert.ok(css.includes('.headerUser{display:flex;align-items:center'), 'chip must be a flex row');
+  });
+});
+
+describe('Topnav: appearance selector moved to settings', () => {
+  it('settings renders the themePills selector', async () => {
+    const {createState} = await import('../src/save.js');
+    const {settingsScreen} = await import('../src/screens-settings.js');
+    const html = settingsScreen({state:createState(),account:{name:'Estudante',email:'e@x.test'},loggingOut:false});
+    assert.ok(html.includes('themePills'), 'settings must render themePills');
+    for (const id of ['nebula', 'light', 'rest']) assert.ok(html.includes(`data-id="${id}"`), `missing theme ${id}`);
+  });
+
+  it('appearance section sits after the settings layout (bottom of page)', () => {
+    assert.ok(settingsSrc.indexOf('settings-layout') < settingsSrc.indexOf('appearance-panel'), 'appearance must come after settings-layout');
+  });
+
+  it('header and settings selectors stay in sync (same action, same state)', () => {
+    assert.ok(js.includes('aria-pressed="${state.settings.theme===id}"'), 'header pills must read state.settings.theme');
+    assert.ok(settingsSrc.includes('aria-pressed="${s.theme===id}"'), 'settings pills must read state.settings.theme');
+    assert.ok(js.includes("action==='set-theme'"), 'set-theme action must apply and re-render both selectors');
+    assert.ok(css.includes('@media(max-width:1150px){.headerRight .themePills{display:none}'), 'header-only selector must hide when space is tight');
+  });
+
+  it('legacy themeCards markup is gone', () => {
+    assert.ok(!settingsSrc.includes('themeCards'), 'settings must not use themeCards');
+    assert.ok(!css.includes('.themeCard'), 'CSS must not style themeCards');
+  });
+});
+
+describe('Topnav JS: no safety mechanism in render()', () => {
   it('controller.js must NOT contain window.innerWidth>700 safety check', () => {
     const hasCheck = js.includes('window.innerWidth>700');
     assert.ok(!hasCheck, 'controller.js must NOT contain window.innerWidth>700 safety check');
@@ -167,7 +254,7 @@ describe('Sidebar JS: no safety mechanism in render()', () => {
   });
 });
 
-describe('Sidebar JS: sidebarOpen state management', () => {
+describe('Topnav JS: sidebarOpen state management', () => {
   it('sidebarOpen is only toggled by menu click (action===menu)', () => {
     const menuLines = js.match(/if\(action==='menu'\)\{ui\.sidebarOpen=!ui\.sidebarOpen/g);
     assert.ok(menuLines && menuLines.length === 1, 'sidebarOpen must only be toggled by menu action');
