@@ -2,9 +2,10 @@ import {DAY,todayKey,normalize,seedHash,uid,clamp} from './utils.js';
 import {masteryValue,updateMastery,conceptWeakness} from './mastery.js';
 import {isDue,reviewFromAnswer} from './reviews.js';
 import {answerXP,addActivity,unlockAchievements} from './gamification.js';
+import {isBlockedForStudent} from './screens-review.js';
 export function matchesQuestion(q,c,filters,state,now=Date.now()){
  const f=filters||{};
- if(q.needsReview)return false;
+ if(isBlockedForStudent(q))return false;
  if(f.disciplines?.length&&!f.disciplines.includes(c.discipline))return false;
  if(f.topics?.length&&!f.topics.includes(`${c.discipline}|${c.topic}`))return false;
  if(f.difficulties?.length&&!f.difficulties.includes(Number(q.difficulty)))return false;
@@ -45,7 +46,7 @@ export function gradeAnswer(q,value){
  return Number.isInteger(value)&&value===q.answer;
 }
 export function recordAnswer(state,bank,session,q,answer,confidence,seconds,now=Date.now()){
- if(q.needsReview)return null;
+ if(isBlockedForStudent(q))return null;
  if(!['sure','think','guess'].includes(confidence))throw new Error('Informe sua confiança.');
  if(session.finished||session.feedback||session.answered.some(h=>h.questionId===q.id))return null;
  if(session.endsAt&&now>=session.endsAt)return null;

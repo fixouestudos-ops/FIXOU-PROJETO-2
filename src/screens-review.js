@@ -1,4 +1,6 @@
 import {escapeHTML} from './utils.js';
+import {AI_AUDIT_BATCH} from './ai-audit-batch.js';
+import {AI_AUDIT_BASELINE} from './ai-audit-baseline.js';
 
 const IMAGE_CLASSIFICATIONS={
  no_image_required:{label:'Sem imagem',color:'#3cc88d'},
@@ -24,6 +26,20 @@ const CONTENT_STATUSES={
  not_approved:{label:'Não aprovada',color:'#e66a74'},
  needs_content_review:{label:'Revisão de conteúdo',color:'#e66a74'}
 };
+
+const IMAGE_PENDENT_STATUSES=['needs_manual_crop','needs_visual_review','bad_crop','bad_image_association'];
+
+export function hasImagePendency(q){
+ if(!q)return false;
+ return IMAGE_PENDENT_STATUSES.includes(q.imageStatus)||IMAGE_PENDENT_STATUSES.includes(q.imageClassification);
+}
+
+export function isBlockedForStudent(q){
+ if(!q)return true;
+ if(q.needsReview)return true;
+ if(!AI_AUDIT_BATCH.ids.includes(q.id))return false;
+ return q.contentStatus!=='validated'||hasImagePendency(q);
+}
 
 const SOURCE_BOOK_DRIVE={
  L1:'1QSvRDEnftpASkXpUKwDvGdJ2VBRLon2l',
@@ -66,7 +82,60 @@ function hasValidSource(q){
  return !!(q.sourceVolume&&q.sourcePage);
 }
 
-function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
+export function aiAuditStatus(q){
+ if(q.contentStatus==='validated')return 'approved';
+ if(q.contentStatus==='not_approved')return 'rejected';
+ return 'awaiting';
+}
+
+export function aiAuditCompare(q){
+ const entry=AI_AUDIT_BASELINE[q.id];
+ if(!entry)return {available:false};
+ const before={prompt:entry.before.prompt||'',options:(entry.before.options||[]).slice(),answer:entry.before.answer,explanation:entry.before.explanation||''};
+ const after={prompt:q.prompt||'',options:(q.options||[]).slice(),answer:q.answer,explanation:q.explanation||''};
+ const changed={
+  prompt:before.prompt!==after.prompt,
+  options:JSON.stringify(before.options)!==JSON.stringify(after.options),
+  answer:String(before.answer??'')!==String(after.answer??''),
+  explanation:before.explanation!==after.explanation
+ };
+ return {available:true,lot:entry.lot,commit:entry.commit,before,after,changed,anyChanged:Object.values(changed).some(Boolean)};
+}
+
+function aiAnswerLabel(value,options){
+ if(options&&options.length&&value!==''&&value!=null&&Number.isInteger(Number(value))&&options[Number(value)]!==undefined)return 'ABCDE'[Number(value)]+') '+options[Number(value)];
+ return String(value==null?'?':value);
+}
+
+function aiAuditSections(q){
+ const cmp=aiAuditCompare(q);
+ const statusLabel=q.contentStatus==='validated'?'Aprovada (validated)':q.contentStatus==='not_approved'?'Não aprovada (not_approved)':'Aguardando auditoria';
+ let compare;
+ if(cmp.available){
+  const row=(label,beforeHtml,afterHtml,changed)=>`<div class="ai-diff-row${changed?' changed':''}"><div class="ai-diff-label">${label}${changed?' <span class="ai-diff-flag">alterado</span>':''}</div><div class="ai-diff-cols"><div class="ai-diff-cell">${beforeHtml}</div><div class="ai-diff-cell">${afterHtml}</div></div></div>`;
+  const opts=list=>(list||[]).map((o,i)=>'ABCDE'[i]+') '+escapeHTML(o)).join('<br>')||'—';
+  compare=`<div class="ai-section ai-compare"><h4>Comparação da correção <span class="ai-compare-meta">lotes ${escapeHTML(cmp.lot)} · commit ${escapeHTML(cmp.commit)}</span></h4>
+  <div class="ai-diff-head"><span>Antes da correção</span><span>Depois da correção</span></div>
+  ${row('Enunciado',escapeHTML(cmp.before.prompt||'—'),escapeHTML(cmp.after.prompt||'—'),cmp.changed.prompt)}
+  ${row('Alternativas',opts(cmp.before.options),opts(cmp.after.options),cmp.changed.options)}
+  ${row('Gabarito',escapeHTML(aiAnswerLabel(cmp.before.answer,cmp.before.options)),escapeHTML(aiAnswerLabel(cmp.after.answer,cmp.after.options)),cmp.changed.answer)}
+  ${row('Explicação',escapeHTML(cmp.before.explanation||'—'),escapeHTML(cmp.after.explanation||'—'),cmp.changed.explanation)}
+  </div>`;
+ }else{
+  compare='<div class="ai-section ai-compare"><h4>Comparação da correção</h4><p class="ai-note">Versão anterior não disponível</p></div>';
+ }
+ const explanation=q.explanation?`<div class="ai-section"><h4>Explicação</h4><div class="ai-explanation-text">${escapeHTML(q.explanation)}</div></div>`:'<div class="ai-section"><h4>Explicação</h4><p class="ai-note">Sem explicação registrada.</p></div>';
+ const info=`<div class="ai-section ai-audit-info"><h4>Informações de auditoria</h4><div class="ai-audit-meta">
+  <span><strong>ID:</strong> <code>${escapeHTML(q.id)}</code></span>
+  <span><strong>Status da auditoria:</strong> ${statusLabel}</span>
+  <span><strong>Lote IA:</strong> ${escapeHTML(AI_AUDIT_BATCH.batchId)}</span>
+  <span><strong>Pendências de imagem:</strong> ${escapeHTML(q.imageStatus||'sem registro')}</span>
+  <span><strong>needsReview:</strong> ${q.needsReview===true?'sim':'não'}</span>
+ </div><p class="ai-note">Parte do conjunto de ${AI_AUDIT_BATCH.total} questões corrigidas com auxílio de IA. Aprovação somente manual pelo Owner; a liberação para estudantes respeita imageStatus e demais bloqueios existentes.</p></div>`;
+ return explanation+info+compare;
+}
+
+function reviewQuestionCard(q,index,total,editingQuestion,editingFields={},aiAudit=false){
  const ic=IMAGE_CLASSIFICATIONS[q.imageClassification]||IMAGE_CLASSIFICATIONS.no_image_required;
  const is=IMAGE_STATUSES[q.imageStatus]||IMAGE_STATUSES.no_image_required;
  const cs=CONTENT_STATUSES[q.contentStatus]||CONTENT_STATUSES.pending;
@@ -109,8 +178,8 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
  }
 
  let actions='';
- const pdfUrl=validSource?driveUrl(q.sourceVolume,q.sourcePage):null;
- if(isEditing){
+  const pdfUrl=validSource?driveUrl(q.sourceVolume,q.sourcePage):null;
+  if(isEditing){
   actions=`
    <button class="review-btn review-btn-save" data-action="review-save" data-id="${escapeHTML(q.id)}">Salvar alterações</button>
    <button class="review-btn review-btn-save-next" data-action="review-save-next" data-id="${escapeHTML(q.id)}">Salvar e próxima →</button>
@@ -143,8 +212,9 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
    <button class="review-btn review-btn-copy" data-action="review-copy-id" data-id="${escapeHTML(q.id)}">Copiar ID</button>`;
  }
 
- const approveContentBtn=!isEditing&&q.contentStatus!=='not_approved'?`<button class="review-btn review-btn-approve-content" data-action="review-approve-content" data-id="${escapeHTML(q.id)}">✓ Aprovar conteúdo</button>`:'';
- const notApprovedBtn=!isEditing&&q.contentStatus!=='not_approved'&&q.contentStatus!=='validated'?`<button class="review-btn review-btn-not-approved" data-action="review-not-approve" data-id="${escapeHTML(q.id)}">✕ Não aprovar</button>`:'';
+ if(aiAudit&&!isEditing)actions=actions.split('Editar conteúdo').join('Editar correção');
+  const approveContentBtn=!isEditing&&q.contentStatus!=='not_approved'?`<button class="review-btn review-btn-approve-content" data-action="${aiAudit?'ai-audit-approve':'review-approve-content'}" data-id="${escapeHTML(q.id)}">${aiAudit?'Aprovar correção':'✓ Aprovar conteúdo'}</button>`:'';
+  const notApprovedBtn=!isEditing&&q.contentStatus!=='not_approved'&&q.contentStatus!=='validated'?`<button class="review-btn review-btn-not-approved" data-action="${aiAudit?'ai-audit-not-approve':'review-not-approve'}" data-id="${escapeHTML(q.id)}">✕ Não aprovar</button>`:'';
  const revertBtn=!isEditing&&q.contentStatus==='not_approved'?`<button class="review-btn review-btn-revert" data-action="review-revert-not-approved" data-id="${escapeHTML(q.id)}">Reverter para pendente</button>`:'';
 
  return `<div class="review-card${isEditing?' review-card-editing':''}" data-question-id="${escapeHTML(q.id)}">
@@ -152,6 +222,7 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
    <span class="review-badge" style="background:${ic.color}20;color:${ic.color}">${ic.label}</span>
    <span class="review-badge" style="background:${is.color}20;color:${is.color}">${is.label}</span>
    <span class="review-badge" style="background:${cs.color}20;color:${cs.color}">${cs.label}</span>
+   ${aiAudit?'<span class="review-badge ai-lot-badge">Correção assistida por IA</span>':''}
    <span class="review-counter">${index+1} / ${total}</span>
   </div>
    <div class="review-card-approval-status">
@@ -170,18 +241,14 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={}){
   <div class="review-card-options">${optionsHtml}</div>
   ${answerSection}
   ${hasImage?`<div class="review-card-image"><img src="${escapeHTML(q.imageAssets[0])}" alt="Imagem da questão" loading="lazy"></div>`:''}
-  ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
-   <div class="review-card-actions">${actions}${approveContentBtn}${notApprovedBtn}${revertBtn}</div>
+   ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
+   ${aiAudit?aiAuditSections(q):''}
+    <div class="review-card-actions">${actions}${approveContentBtn}${notApprovedBtn}${revertBtn}</div>
  </div>`;
 }
 
-export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
+export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={},reviewAiFilter='all'}){
  const questions=bank.questions;
- const filtered=filterQuestions(questions,reviewFilter);
- const searched=searchQuestions(filtered,reviewSearch);
-
- const safeIndex=Math.min(reviewIndex,Math.max(0,searched.length-1));
- const current=searched[safeIndex];
 
  const counts={
   all:filterQuestions(questions,'all').length,
@@ -200,8 +267,17 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   {key:'needs_visual_review',label:'Dúvida visual',count:counts.needs_visual_review},
   {key:'approved',label:'Aprovadas',count:counts.approved},
   {key:'needs_content_review',label:'Conteúdo pendente',count:counts.needs_content_review},
-  {key:'not_approved',label:'Não aprovadas',count:counts.not_approved}
+  {key:'not_approved',label:'Não aprovadas',count:counts.not_approved},
+  {key:'ai_audit',label:'AI auditing',count:AI_AUDIT_BATCH.ids.length}
  ];
+
+ if(reviewFilter==='ai_audit')return aiAuditView({bank,filterButtons,reviewAiFilter,reviewSearch,reviewIndex,editingQuestion,editingFields});
+
+ const filtered=filterQuestions(questions,reviewFilter);
+ const searched=searchQuestions(filtered,reviewSearch);
+
+ const safeIndex=Math.min(reviewIndex,Math.max(0,searched.length-1));
+ const current=searched[safeIndex];
 
  return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES</div><h1>Auditoria do Banco</h1><p>${counts.all} questões de Física classificadas automaticamente.</p></div></div>
  <div class="review-filters">
@@ -223,4 +299,52 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
    <div class="review-stat"><span class="review-stat-label">Conteúdo pendente</span><span class="review-stat-value" style="color:#f0b04e">${counts.needs_content_review}</span></div>
    <div class="review-stat"><span class="review-stat-label">Não aprovadas</span><span class="review-stat-value" style="color:#e66a74">${counts.not_approved}</span></div>
   </div>`;
+}
+
+function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
+ const order=new Map(AI_AUDIT_BATCH.ids.map((id,i)=>[id,i]));
+ const aiQuestions=bank.questions.filter(q=>order.has(q.id));
+ const rank=q=>{const s=aiAuditStatus(q);return s==='awaiting'?0:s==='rejected'?1:2;};
+ aiQuestions.sort((a,b)=>rank(a)-rank(b)||(order.get(a.id)||0)-(order.get(b.id)||0));
+ const counts={
+  all:aiQuestions.length,
+  awaiting:aiQuestions.filter(q=>aiAuditStatus(q)==='awaiting').length,
+  approved:aiQuestions.filter(q=>aiAuditStatus(q)==='approved').length,
+  rejected:aiQuestions.filter(q=>aiAuditStatus(q)==='rejected').length
+ };
+ const subTabs=[
+  {key:'all',label:'Todas',count:counts.all},
+  {key:'awaiting',label:'Aguardando auditoria',count:counts.awaiting},
+  {key:'approved',label:'Aprovadas',count:counts.approved},
+  {key:'rejected',label:'Não aprovadas',count:counts.rejected}
+ ];
+ const pool=reviewAiFilter==='all'?aiQuestions:aiQuestions.filter(q=>aiAuditStatus(q)===reviewAiFilter);
+ const searched=searchQuestions(pool,reviewSearch);
+ const safeIndex=Math.min(reviewIndex,Math.max(0,searched.length-1));
+ const current=searched[safeIndex];
+ const statusColor={awaiting:'#f0b04e',approved:'#3cc88d',rejected:'#e66a74'};
+ const statusLabel={awaiting:'Aguardando',approved:'Aprovada',rejected:'Não aprovada'};
+ const listHtml=searched.length?searched.map((q,i)=>{const st=aiAuditStatus(q);return `<button class="ai-row${i===safeIndex?' active':''}" type="button" data-action="ai-audit-open" data-id="${i}"><span class="ai-row-index">${i+1}</span><span class="ai-row-id"><code>${escapeHTML(q.id)}</code></span><span class="ai-row-meta">${escapeHTML(q.topic||'')} · ${escapeHTML(q.subtopic||'')}</span><span class="review-badge" style="background:${statusColor[st]}20;color:${statusColor[st]}">${statusLabel[st]}</span></button>`;}).join(''):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>';
+ return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES · AI AUDITING</div><h1>AI auditing</h1><p>${AI_AUDIT_BATCH.ids.length} questões do lote ${escapeHTML(AI_AUDIT_BATCH.batchId)} corrigidas com auxílio de IA, aguardando sua auditoria manual.</p></div></div>
+ <div class="review-filters">
+  <div class="review-filter-tabs">${filterButtons.map(f=>`<button class="review-tab${f.key==='ai_audit'?' active':''}" data-action="review-filter" data-filter="${f.key}">${f.label} <span class="review-tab-count">${f.count}</span></button>`).join('')}</div>
+  <div class="review-search"><input type="text" placeholder="Buscar por ID ou palavras do enunciado…" value="${escapeHTML(reviewSearch)}" data-action="review-search-input"></div>
+ </div>
+ <div class="ai-panel">
+  <div class="ai-panel-grid">
+   <div class="ai-stat"><span class="ai-stat-label">Total corrigidas por IA</span><span class="ai-stat-value">${AI_AUDIT_BATCH.ids.length}</span></div>
+   <div class="ai-stat ai-stat-awaiting"><span class="ai-stat-label">Aguardando auditoria</span><span class="ai-stat-value">${counts.awaiting}</span></div>
+   <div class="ai-stat ai-stat-approved"><span class="ai-stat-label">Aprovadas por mim</span><span class="ai-stat-value">${counts.approved}</span></div>
+   <div class="ai-stat ai-stat-rejected"><span class="ai-stat-label">Não aprovadas</span><span class="ai-stat-value">${counts.rejected}</span></div>
+  </div>
+  <p class="ai-note">A IA corrige. O Owner audita. O Owner aprova. Nenhuma questão é validada automaticamente.</p>
+ </div>
+ <div class="ai-subtabs">${subTabs.map(s=>`<button class="review-tab${reviewAiFilter===s.key?' active':''}" data-action="ai-audit-filter" data-filter="${s.key}">${s.label} <span class="review-tab-count">${s.count}</span></button>`).join('')}</div>
+ <div class="ai-list">${listHtml}</div>
+ <div class="review-nav">
+  <button class="review-nav-btn" data-action="review-prev" ${safeIndex<=0?'disabled':''}>← Anterior</button>
+  <span class="review-nav-info">${searched.length>0?`${safeIndex+1} de ${searched.length}`:'Nenhuma questão encontrada'}</span>
+  <button class="review-nav-btn" data-action="review-next" ${safeIndex>=searched.length-1?'disabled':''}>Próxima →</button>
+ </div>
+ ${current?reviewQuestionCard(current,safeIndex,searched.length,editingQuestion,editingFields,true):'<div class="review-empty">Selecione uma questão da lista.</div>'}`;
 }

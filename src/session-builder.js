@@ -1,14 +1,15 @@
 import {SUBJECTS,PHYSICS_AREA_ORDER} from './config.js';
+import {isBlockedForStudent} from './screens-review.js';
 
 // Somente disciplinas com questões publicáveis aparecem no construtor.
 export const SESSION_QUANTITIES=[5,10,20,30,50,'all'];
 export const IMAGE_FILTERS=['all','image_required','no_image_required'];
 
 export function sessionSubjects(bank){
- return SUBJECTS.filter(s=>bank.questions.some(q=>q.discipline===s.id&&!q.needsReview));
+ return SUBJECTS.filter(s=>bank.questions.some(q=>q.discipline===s.id&&!isBlockedForStudent(q)));
 }
 export function sessionTopicKeys(bank,subjects=sessionSubjects(bank).map(s=>s.id)){
- const allowed=new Set(subjects),activeConcepts=new Set(bank.questions.filter(q=>!q.needsReview).map(q=>q.conceptId));
+ const allowed=new Set(subjects),activeConcepts=new Set(bank.questions.filter(q=>!isBlockedForStudent(q)).map(q=>q.conceptId));
  const rank=key=>{const [discipline,topic]=key.split('|');return discipline==='fisica'?PHYSICS_AREA_ORDER.indexOf(topic):-1;};
  return [...new Set(bank.concepts.filter(c=>allowed.has(c.discipline)&&activeConcepts.has(c.id)).map(c=>`${c.discipline}|${c.topic}`))].sort((a,b)=>a.startsWith('fisica|')&&b.startsWith('fisica|')?rank(a)-rank(b):a.localeCompare(b,'pt-BR'));
 }

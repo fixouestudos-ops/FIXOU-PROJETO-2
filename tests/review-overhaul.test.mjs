@@ -126,6 +126,7 @@ test('PATCH not_approved creates override and audit log', async () => {
  }), { DB: db });
  assert.ok(captures.updates.length > 0);
  assert.ok(captures.audit.length > 0);
+ assert.ok(captures.updates.some(u => u.params[1] === 'needsReview' && u.params[2] === 'true'), 'servidor força needsReview=true em not_approved');
 });
 
 test('GET overrides returns not_approved status', async () => {
