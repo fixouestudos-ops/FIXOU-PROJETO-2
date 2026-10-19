@@ -13,7 +13,7 @@ if(new Set(bank.questions.map(q=>q.id)).size!==bank.questions.length)throw new E
 for(const c of bank.concepts)if(!c.officialIds.every(id=>curriculum.objects.some(o=>o.id===id)))throw new Error('Origem curricular inválida: '+c.id);
 const catalog=`export const BANK=${JSON.stringify(bank)};\nexport const CURRICULUM=${JSON.stringify(curriculum)};\nexport const BOOKS=${JSON.stringify(books)};\n`;
 fs.writeFileSync(path.join(root,'src/catalog.js'),catalog);
-const files=['src/catalog.js','src/config.js','src/utils.js','src/save.js','src/account.js','src/reviews.js','src/mastery.js','src/gamification.js','src/statistics.js','src/training.js','src/components.js','src/session-builder.js','src/screens.js','src/screens-library.js','src/screens-profile.js','src/screens-settings.js','src/screens-about.js','src/screens-review.js','src/session-view.js','src/sidebar-icons.js','src/error-vault-notifications.js','src/controller.js','src/main.js'];
+const files=['src/catalog.js','src/config.js','src/utils.js','src/fixou-logo.js','src/save.js','src/account.js','src/reviews.js','src/mastery.js','src/gamification.js','src/statistics.js','src/training.js','src/components.js','src/session-builder.js','src/screens.js','src/screens-library.js','src/screens-profile.js','src/screens-settings.js','src/screens-about.js','src/screens-review.js','src/session-view.js','src/sidebar-icons.js','src/error-vault-notifications.js','src/controller.js','src/main.js'];
 const bundled=new Set(files.map(f=>path.normalize(f)));
 for(const file of files){
  const imports=[...read(file).matchAll(/from\s+['"](.+?)['"]/g)].map(match=>match[1]).filter(specifier=>specifier.startsWith('.'));
@@ -30,6 +30,8 @@ const css=read('styles/app.css');const html=read('index.html').replace('<link re
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});fs.writeFileSync(path.join(root,'dist/index.html'),html);
 fs.mkdirSync(path.join(root,'dist/assets'),{recursive:true});fs.writeFileSync(path.join(root,`dist/assets/${jsFilename}`),bundle);
 fs.copyFileSync(path.join(root,'assets/fixou-logo.png'),path.join(root,'dist/assets/fixou-logo.png'));
+fs.copyFileSync(path.join(root,'assets/fixou-logo-pilula.png'),path.join(root,'dist/assets/fixou-logo-pilula.png'));
+fs.copyFileSync(path.join(root,'assets/fixou-logo-pilula-vazada.png'),path.join(root,'dist/assets/fixou-logo-pilula-vazada.png'));
 if(fs.existsSync(path.join(root,'assets/question-images'))){
  fs.mkdirSync(path.join(root,'dist/assets/question-images'),{recursive:true});
  for(const file of fs.readdirSync(path.join(root,'assets/question-images'))){

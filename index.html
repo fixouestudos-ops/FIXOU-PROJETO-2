@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="nebula">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171b34">
   <meta name="description" content="Seu espaço de estudo para a FUVEST 2027: questões originais, flashcards, revisões e um plano que aprende com seus erros.">
   <title>FIXOU — Estudo que fica · FUVEST 2027</title>
-  <link rel="icon" type="image/png" href="assets/fixou-logo.png">
+  <link rel="icon" type="image/png" href="assets/fixou-logo-pilula.png">
   <link rel="stylesheet" href="styles/app.css">
+  <script>
+    try {
+      var raw = localStorage.getItem('fixou:2027:v1') || localStorage.getItem('fuvest-mastery:2027:v1');
+      var earlyTheme = raw ? JSON.parse(raw)?.settings?.theme : null;
+      if (earlyTheme === 'nebula' || earlyTheme === 'light' || earlyTheme === 'rest') document.documentElement.setAttribute('data-theme', earlyTheme);
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Ir para o conteúdo</a>
