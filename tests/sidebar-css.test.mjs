@@ -163,7 +163,7 @@ describe('Topnav markup: groups, icons and descriptions', () => {
   it('dropdown items carry navpop name + description text', () => {
     assert.ok(topnavSrc.includes('navpop-name'), 'items must render a name');
     assert.ok(topnavSrc.includes('navpop-desc'), 'items must render a description');
-    assert.ok(topnavSrc.includes('Quiz adaptativo e desafios de estudo'), 'train description must exist');
+    assert.ok(topnavSrc.includes('Banco de questões, atalhos e montador de treino'), 'train description must exist');
     assert.ok(topnavSrc.includes('Revise as questões que você errou'), 'errors description must exist');
     assert.ok(topnavSrc.includes('Gestão e métricas do FIXOU'), 'admin description must exist');
   });

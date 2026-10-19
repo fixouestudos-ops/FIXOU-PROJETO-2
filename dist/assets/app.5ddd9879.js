@@ -21,7 +21,7 @@ const SUBJECTS=[
 const AVATAR_FEATURE_ENABLED=false;
 const MANUAL_BACKUP_FEATURE_ENABLED=false;
 const PHYSICS_AREA_ORDER=['Mecânica','Cinemática','Eletromagnetismo','Óptica','Termologia','Física Moderna','Ondulatória','Gravitação'];
-const NAV=[['about','❋','Quem Somos'],['home','◈','Minha jornada'],['train','▷','Treinar'],['cards','▱','Memorizar'],['errors','⊞','Cofre dos erros'],['map','⌘','Programa 2027'],['books','▤','Leituras'],['stats','↗','Evolução'],['favorites','☆','Favoritos'],['settings','⚙','Configurações']];
+const NAV=[['about','❋','Quem Somos'],['home','◈','Minha jornada'],['train','▷','Estudar'],['cards','▱','Memorizar'],['errors','⊞','Cofre dos erros'],['map','⌘','Programa 2027'],['books','▤','Leituras'],['stats','↗','Evolução'],['favorites','☆','Favoritos'],['settings','⚙','Configurações']];
 const DIFFICULTIES=['','Fácil','Média','Difícil','Muito difícil'];
 const QUESTION_TYPES={choice:'Múltipla escolha',boolean:'Verdadeiro ou falso',numeric:'Resposta numérica',order:'Ordenação',match:'Associação',text:'Resposta curta'};
 const CONFIDENCE={sure:'Tenho certeza',think:'Acho que sei',guess:'Estou chutando'};
@@ -80,7 +80,7 @@ function validateState(input){
  for(const s of input.sessions)if(!s||typeof s.id!=='string'||typeof s.mode!=='string'||!isTime(s.startedAt)||!isTime(s.finishedAt)||!['total','correct','bestCombo','xp'].every(k=>count(s[k]))||!Number.isFinite(s.seconds)||s.seconds<0)throw new Error('Histórico de sessões inválido.');
  if(!Number.isInteger(input.settings.dailyCount)||input.settings.dailyCount<5||input.settings.dailyCount>200)throw new Error('Meta diária inválida.');
  if(input.activeSession!==null&&input.activeSession!==undefined){const s=input.activeSession;
-  if(!s||typeof s.id!=='string'||!['daily','adaptive','weak','practice','lightning','survival','boss'].includes(s.mode)||!Array.isArray(s.answered)||s.answered.some(h=>!attempt(h))||!strings(s.items)||!isTime(s.startedAt)||!count(s.lives)||s.lives>3||!count(s.limit)||!['score','combo','bestCombo'].every(k=>count(s[k]))||!['question','feedback'].includes(s.phase)||s.finished!==false||typeof s.currentId!=='string'||!s.items.includes(s.currentId)||!s.filters||typeof s.filters!=='object'||Array.isArray(s.filters)||Object.values(s.filters).some(v=>!['string','number'].includes(typeof v))||s.endsAt!==null&&!isTime(s.endsAt))throw new Error('Sessão salva inválida.');
+  if(!s||typeof s.id!=='string'||!['daily','adaptive','weak','practice','lightning','survival','boss'].includes(s.mode)||!Array.isArray(s.answered)||s.answered.some(h=>!attempt(h))||!strings(s.items)||!isTime(s.startedAt)||!count(s.lives)||s.lives>3||!count(s.limit)||!['score','combo','bestCombo'].every(k=>count(s[k]))||!['question','feedback'].includes(s.phase)||s.finished!==false||typeof s.currentId!=='string'||!s.items.includes(s.currentId)||!s.filters||typeof s.filters!=='object'||Array.isArray(s.filters)||Object.values(s.filters).some(v=>!['string','number'].includes(typeof v)&&!(Array.isArray(v)&&v.every(x=>['string','number'].includes(typeof x))))||s.endsAt!==null&&!isTime(s.endsAt))throw new Error('Sessão salva inválida.');
   const d=s.draft;if(!d||typeof d.text!=='string'||!Array.isArray(d.order)||!Array.isArray(d.match)||d.order.some(v=>!count(v))||d.match.some(v=>!Number.isInteger(v)||v< -1)||d.answer!==null&&!count(d.answer)||d.confidence!==null&&!['sure','think','guess'].includes(d.confidence)||!Number.isFinite(s.questionSeconds)||s.questionSeconds<0||s.phase==='feedback'&&(!attempt(s.feedback)||s.feedback.questionId!==s.currentId))throw new Error('Resposta em andamento inválida.');
  }
  const theme=['nebula','light','rest'].includes(input.settings.theme)?input.settings.theme:'nebula';
@@ -351,6 +351,26 @@ function builderFilters(builder){
 function topicLabel(key){return String(key).split('|').slice(1).join('|');}
 function subjectIdFromTopic(key){return String(key).split('|')[0];}
 
+// Atalhos da aba Estudar (Original+). Não iniciam sessão; só preenchem o montador.
+const STUDY_PRESETS={
+ warmup:{name:'Aquecimento',detail:'Sessão curta com questões fáceis e médias de todos os assuntos',symbol:'☀'},
+ hard:{name:'Foco no difícil',detail:'Dificuldades maiores para treinar onde dói',symbol:'↗'},
+ mechanics:{name:'Mecânica e cinemática',detail:'Os conteúdos mais cobrados da Física',symbol:'◎'}
+};
+function applyStudyPreset(bank,id){
+ const subjects=sessionSubjects(bank).map(s=>s.id);
+ const topics=sessionTopicKeys(bank,subjects);
+ if(id==='warmup')return cleanSessionBuilder(bank,{subjects,topics,difficulties:[1,2],quantity:10,imageFilter:'all'});
+ if(id==='hard')return cleanSessionBuilder(bank,{subjects,topics,difficulties:[3,4],quantity:20,imageFilter:'all'});
+ if(id==='mechanics'){
+  const physics=subjects.includes('fisica')?['fisica']:[];
+  const focus=PHYSICS_AREA_ORDER.filter(area=>['Mecânica','Cinemática'].includes(area));
+  const mechTopics=physics.length?sessionTopicKeys(bank,physics).filter(key=>focus.includes(topicLabel(key))):[];
+  return cleanSessionBuilder(bank,{subjects:physics,topics:mechTopics,difficulties:[1,2,3,4],quantity:20,imageFilter:'all'});
+ }
+ return defaultSessionBuilder(bank);
+}
+
 
 
 
@@ -384,26 +404,143 @@ function filterControls(bank,filters,prefix='filter'){
  return `<div class="filter-grid">${select('discipline','Disciplina',activeSubjects.map(s=>[s.id,s.name]))}${select('topic','Assunto',topics.map(t=>[t,t]))}${select('subtopic','Subassunto',concepts.map(c=>[c.id,c.subtopic]))}${select('difficulty','Dificuldade',[1,2,3,4].map(d=>[d,DIFFICULTIES[d]]))}${select('type','Tipo',Object.entries(QUESTION_TYPES))}${select('status','Seu histórico',[['wrong','Pontos fracos'],['new','Nunca vistas'],['due','Revisões vencidas'],['favorites','Favoritas']])}</div>`;
 }
 function sessionBuilderControls(bank,builder){
- const subjects=sessionSubjects(bank),selectedSubjects=new Set(builder?.subjects||[]),selectedTopics=new Set(builder?.topics||[]),selectedDifficulties=new Set((builder?.difficulties||[]).map(Number));
- const topicsBySubject=subjects.map(s=>({subject:s,topics:sessionTopicKeys(bank,[s.id]).map(key=>({key,label:topicLabel(key)}))}));
- const subjectChecks=subjects.map(s=>`<label class="builder-check"><input type="checkbox" data-session-subject="${s.id}" ${selectedSubjects.has(s.id)?'checked':''}><span class="subject-symbol" style="--subject-color:${s.color}">${escapeHTML(s.icon)}</span><span><strong>${escapeHTML(s.name)}</strong><small>${bank.questions.filter(q=>!isBlockedForStudent(q)&&bank.concepts.find(c=>c.id===q.conceptId)?.discipline===s.id).length} questões</small></span></label>`).join('');
- const topicChecks=topicsBySubject.map(({subject,topics})=>`<details class="builder-topic-group" ${selectedSubjects.has(subject.id)?'open':''}><summary><span class="subject-symbol" style="--subject-color:${subject.color}">${escapeHTML(subject.icon)}</span><strong>${escapeHTML(subject.name)}</strong><small>${topics.length} assuntos</small></summary><div class="builder-topic-list">${topics.map(t=>`<label class="builder-topic"><input type="checkbox" data-session-topic="${escapeHTML(encodeURIComponent(t.key))}" ${selectedTopics.has(t.key)?'checked':''}><span>${escapeHTML(t.label)}</span></label>`).join('')}</div></details>`).join('');
- const difficultyChecks=[[1,'Fácil'],[2,'Média'],[3,'Difícil'],[4,'Muito difícil']].map(([n,label])=>`<label class="builder-pill"><input type="checkbox" data-session-difficulty="${n}" ${selectedDifficulties.has(n)?'checked':''}><span>${label}</span></label>`).join('');
- const qty=SESSION_QUANTITIES.map(v=>`<option value="${v}" ${String(builder?.quantity??20)===String(v)?'selected':''}>${v==='all'?'Todas disponíveis':`${v} questões`}</option>`).join('');
- const imageFilterOptions=[['all','Todas'],['image_required','Somente com imagem'],['no_image_required','Somente sem imagem']].map(([v,t])=>`<option value="${v}" ${(builder?.imageFilter||'all')===v?'selected':''}>${t}</option>`).join('');
- return `<section class="session-builder panel"><div class="builder-heading"><div><span class="eyebrow">SESSÃO PERSONALIZADA</span><h2>Monte sua sessão de estudos</h2><p>Combine disciplinas, assuntos, dificuldade e quantidade antes de começar.</p></div><span class="builder-step">1 · 2 · 3</span></div><div class="builder-block"><div class="builder-label-row"><strong>Disciplinas</strong><span><button class="text-button" data-action="session-select-all-subjects">Selecionar todas</button><button class="text-button" data-action="session-clear-subjects">Limpar</button></span></div><div class="builder-subject-grid">${subjectChecks}</div></div><div class="builder-block"><div class="builder-label-row"><strong>Assuntos</strong><span><button class="text-button" data-action="session-select-all-topics">Selecionar todos</button><button class="text-button" data-action="session-clear-topics">Limpar</button></span></div><div class="builder-topic-groups">${topicChecks}</div></div><div class="builder-options"><label><strong>Dificuldade</strong><div class="builder-pills">${difficultyChecks}</div></label><label><strong>Quantidade</strong><select data-session-quantity>${qty}</select></label><label><strong>Tipo de questão</strong><select data-session-image-filter>${imageFilterOptions}</select></label></div><div class="builder-footer"><div><strong data-builder-summary>Escolha os filtros para ver o resumo.</strong><span class="meta">A seleção de assuntos é atualizada conforme as disciplinas.</span></div><button class="primary" data-action="start-session">Começar sessão →</button></div></section>`;
+  const subjects=sessionSubjects(bank),selectedSubjects=new Set(builder?.subjects||[]),selectedTopics=new Set(builder?.topics||[]),selectedDifficulties=new Set((builder?.difficulties||[]).map(Number));
+  const topicsBySubject=subjects.map(s=>({subject:s,topics:sessionTopicKeys(bank,[s.id]).map(key=>({key,label:topicLabel(key)}))}));
+  const subjectChecks=subjects.map(s=>`<label class="builder-check"><input type="checkbox" data-session-subject="${s.id}" ${selectedSubjects.has(s.id)?'checked':''}><span class="subject-symbol" style="--subject-color:${s.color}">${escapeHTML(s.icon)}</span><span><strong>${escapeHTML(s.name)}</strong><small>${bank.questions.filter(q=>!isBlockedForStudent(q)&&bank.concepts.find(c=>c.id===q.conceptId)?.discipline===s.id).length} questões</small></span></label>`).join('');
+  const topicChecks=topicsBySubject.map(({subject,topics})=>`<details class="builder-topic-group" ${selectedSubjects.has(subject.id)?'open':''}><summary><span class="subject-symbol" style="--subject-color:${subject.color}">${escapeHTML(subject.icon)}</span><strong>${escapeHTML(subject.name)}</strong><small>${topics.length} assuntos</small></summary><div class="builder-topic-list">${topics.map(t=>`<label class="builder-topic"><input type="checkbox" data-session-topic="${escapeHTML(encodeURIComponent(t.key))}" ${selectedTopics.has(t.key)?'checked':''}><span>${escapeHTML(t.label)}</span></label>`).join('')}</div></details>`).join('');
+  const difficultyChecks=[[1,'Fácil'],[2,'Média'],[3,'Difícil'],[4,'Muito difícil']].map(([n,label])=>`<label class="builder-pill"><input type="checkbox" data-session-difficulty="${n}" ${selectedDifficulties.has(n)?'checked':''}><span>${label}</span></label>`).join('');
+  const qty=SESSION_QUANTITIES.map(v=>`<option value="${v}" ${String(builder?.quantity??20)===String(v)?'selected':''}>${v==='all'?'Todas disponíveis':`${v} questões`}</option>`).join('');
+  const imageFilterOptions=[['all','Todas'],['image_required','Somente com imagem'],['no_image_required','Somente sem imagem']].map(([v,t])=>`<option value="${v}" ${(builder?.imageFilter||'all')===v?'selected':''}>${t}</option>`).join('');
+  return `<section class="session-builder panel"><div class="builder-heading"><div><span class="eyebrow">SESSÃO PERSONALIZADA</span><h2>Monte sua sessão de estudos</h2><p>Combine disciplinas, assuntos, dificuldade e quantidade antes de começar.</p></div><span class="builder-step">1 · 2 · 3</span></div><div class="builder-block"><div class="builder-label-row"><strong>Disciplinas</strong><span><button class="text-button" data-action="session-select-all-subjects">Selecionar todas</button><button class="text-button" data-action="session-clear-subjects">Limpar</button></span></div><div class="builder-subject-grid">${subjectChecks}</div></div><div class="builder-block"><div class="builder-label-row"><strong>Assuntos</strong><span><button class="text-button" data-action="session-select-all-topics">Selecionar todos</button><button class="text-button" data-action="session-clear-topics">Limpar</button></span></div><div class="builder-topic-groups">${topicChecks}</div></div><div class="builder-options"><label><strong>Dificuldade</strong><div class="builder-pills">${difficultyChecks}</div></label><label><strong>Quantidade</strong><select data-session-quantity>${qty}</select></label><label><strong>Tipo de questão</strong><select data-session-image-filter>${imageFilterOptions}</select></label></div><div class="builder-footer"><div><strong data-builder-summary>Escolha os filtros para ver o resumo.</strong><span class="meta">A seleção de assuntos é atualizada conforme as disciplinas.</span></div><button class="primary" data-action="start-session">Começar sessão →</button></div></section>`;
 }
-function trainScreen({state,bank,filters,sessionBuilder}){
- const cb=Object.fromEntries(bank.concepts.map(c=>[c.id,c]));const matches=bank.questions.filter(q=>matchesQuestion(q,cb[q.conceptId],filters,state));
- const customFilters=builderFilters(sessionBuilder||{subjects:[],topics:[],difficulties:[],quantity:20});
- const customMatches=bank.questions.filter(q=>matchesQuestion(q,cb[q.conceptId],customFilters,state));
- const customQuantity=sessionBuilder?.quantity==='all'?customMatches.length:Math.min(Number(sessionBuilder?.quantity||20),customMatches.length);
- const builderSummary=sessionBuilder?.subjects?.length&&sessionBuilder?.topics?.length&&sessionBuilder?.difficulties?.length?`${customQuantity} questões · ${sessionBuilder.subjects.length} disciplinas · ${sessionBuilder.topics.length} assuntos · ${sessionBuilder.difficulties.length} níveis`:'Escolha ao menos uma opção em cada filtro.';
- return `${titleBlock('PRÁTICA QUE EVOLUI COM VOCÊ','Encontre o seu ritmo','Errou? Você recebe uma explicação e volta ao conceito por outro caminho.')}
- <section class="challenge-grid"><article class="challenge-card adaptive"><span class="mode-icon purple">▷</span><div><h2>Quiz adaptativo</h2><p>Dificuldade e seleção se ajustam ao seu desempenho.</p><span class="meta">20 questões · com feedback</span></div>${button('Começar →','start','adaptive','primary')}</article><article class="challenge-card lightning"><span class="mode-icon peach">ϟ</span><div><h2>Relâmpago</h2><p>60 segundos para exercitar a memória.</p><span class="meta">Recorde: ${state.records.lightning} acertos</span></div>${button('Desafiar →','start','lightning')}</article><article class="challenge-card survival"><span class="mode-icon mint">♡</span><div><h2>Sobrevivência</h2><p>Três vidas. Até onde seu raciocínio vai?</p><span class="meta">Recorde: ${state.records.survival} acertos</span></div>${button('Jogar →','start','survival')}</article></section>
- ${sessionBuilderControls(bank,sessionBuilder).replace('Escolha os filtros para ver o resumo.',builderSummary)}
- <div class="section-title"><h2>Monte seu treino</h2>${button('Limpar filtros','clear-filters','','text-button')}</div><section class="panel">${filterControls(bank,filters)}<div class="filter-footer"><span><strong>${matches.length}</strong> questões encontradas <span class="meta">· alinhadas à FUVEST 2027</span></span><button class="primary" data-action="start" data-id="practice" ${!matches.length?'disabled':''}>Treinar seleção →</button></div></section>
- <div class="section-title"><h2>Explore as questões</h2><span>${bank.questions.filter(q=>!isBlockedForStudent(q)).length} questões disponíveis · ${bank.concepts.length} conceitos</span></div><div class="question-list">${matches.length?matches.slice(0,20).map(q=>questionCard(state,bank,q)).join(''):empty('Nenhuma questão nesta seleção','Experimente outra disciplina ou limpe os filtros.','clear-filters','Limpar filtros')}</div>${matches.length>20?`<p class="footnote">Mostrando 20 de ${matches.length}. Use os filtros para localizar um assunto; o treino usa toda a seleção.</p>`:''}`;
+function studyChip(text,on,action,value,small=''){
+  return `<button type="button" class="study-ch${on?' on':''}" data-action="${action}" data-id="${escapeHTML(String(value))}" aria-pressed="${on}">${on?'✓ ':''}${escapeHTML(text)}${small?` <small>${escapeHTML(small)}</small>`:''}</button>`;
+}
+function studyModeIcon(kind){
+  if(kind==='adaptive')return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>`;
+  if(kind==='lightning')return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>`;
+  return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></svg>`;
+}
+function studySearchResults(bank,term){
+  const needle=normalize(term||'');
+  if(!needle)return `<div class="study-q-empty">Digite um termo para pesquisar o banco. Ex.: cinemática, metáfora, Ohm.</div>`;
+  const conceptById=Object.fromEntries(bank.concepts.map(c=>[c.id,c]));
+  const list=bank.questions.filter(q=>{
+    if(isBlockedForStudent(q))return false;
+    const c=conceptById[q.conceptId];
+    return normalize([q.prompt,q.explanation,c?.topic,c?.subtopic,...(q.tags||[])].join(' ')).includes(needle);
+  });
+  if(!list.length)return `<div class="study-q-empty">Nenhuma questão liberada corresponde a essa busca.</div>`;
+  return list.slice(0,8).map(q=>{
+    const c=conceptById[q.conceptId],s=subjectById(c?.discipline);
+    return `<button type="button" class="study-q-result" data-action="question" data-id="${escapeHTML(q.id)}"><small>${escapeHTML(s.name)} · ${escapeHTML(c?.subtopic||c?.topic||'')} · ${escapeHTML(DIFFICULTIES[q.difficulty]||'')}</small><b>${escapeHTML(q.prompt.slice(0,160))}${q.prompt.length>160?'…':''}</b><span class="study-result-meta"><span>Resolver ↗</span></span></button>`;
+  }).join('')+(list.length>8?`<p class="study-q-more">Mostrando 8 de ${formatNumber(list.length)}. Refine a busca para ver menos resultados.</p>`:'');
+}
+function trainScreen({state,bank,filters,sessionBuilder,studySearch}){
+  const conceptById=Object.fromEntries(bank.concepts.map(c=>[c.id,c]));
+  const catalogTotal=bank.questions.length;
+  const availableQuestions=bank.questions.filter(q=>!isBlockedForStudent(q));
+  const availableTotal=availableQuestions.length;
+  const subjects=sessionSubjects(bank);
+  const selectedSubjects=new Set(sessionBuilder?.subjects||[]);
+  const selectedTopics=new Set(sessionBuilder?.topics||[]);
+  const selectedDifficulties=new Set((sessionBuilder?.difficulties||[]).map(Number));
+  const quantity=sessionBuilder?.quantity??20;
+  const customFilters=builderFilters(sessionBuilder||{subjects:[],topics:[],difficulties:[],quantity:20,imageFilter:'all'});
+  const customMatches=bank.questions.filter(q=>matchesQuestion(q,conceptById[q.conceptId],customFilters,state));
+  const actualQty=quantity==='all'?customMatches.length:Math.min(Number(quantity),customMatches.length);
+  const estimatedMin=Math.max(1,Math.round(actualQty*1.5));
+  const allTopicKeys=sessionTopicKeys(bank,subjects.map(s=>s.id));
+  const visibleTopicKeys=sessionTopicKeys(bank,[...selectedSubjects]);
+  const selectedTopicCount=visibleTopicKeys.filter(key=>selectedTopics.has(key)).length;
+  const subjectCountLabel=selectedSubjects.size||0;
+  const disciplinesLine=subjects.map(s=>s.name).join(' e ')||'Catálogo';
+  const toastHtml=studySearch&&studySearch.message?`<div class="study-toast" role="status">${escapeHTML(studySearch.message)}</div>`:'';
+  const subjectChips=subjects.map(s=>{
+    const count=availableQuestions.filter(q=>conceptById[q.conceptId]?.discipline===s.id).length;
+    return studyChip(s.name,selectedSubjects.has(s.id),'study-subject',s.id,formatNumber(count));
+  }).join('');
+  const topicChips=visibleTopicKeys.length?visibleTopicKeys.map(key=>{
+    const count=availableQuestions.filter(q=>{const c=conceptById[q.conceptId];return c&&`${c.discipline}|${c.topic}`===key;}).length;
+    return studyChip(topicLabel(key),selectedTopics.has(key),'study-topic',key,formatNumber(count));
+  }).join(''):`<span class="study-section-sub">Selecione uma disciplina para ver os assuntos.</span>`;
+  const difficultyChips=[[1,'Fácil'],[2,'Média'],[3,'Difícil'],[4,'Muito difícil']].map(([n,label])=>studyChip(label,selectedDifficulties.has(n),'study-difficulty',n)).join('');
+  const qtyChips=SESSION_QUANTITIES.map(v=>`<button type="button" class="${String(quantity)===String(v)?'on':''}" data-action="study-qty" data-id="${v}" aria-pressed="${String(quantity)===String(v)}">${v==='all'?'Todas':v}</button>`).join('');
+  const imageFilterOptions=[['all','Todas'],['image_required','Somente com imagem'],['no_image_required','Somente sem imagem']].map(([v,t])=>`<option value="${v}" ${(sessionBuilder?.imageFilter||'all')===v?'selected':''}>${t}</option>`).join('');
+  const presetButtons=Object.entries(STUDY_PRESETS).map(([id,p])=>`<button type="button" class="study-pr" data-action="study-preset" data-id="${id}"><span class="study-picon" aria-hidden="true">${p.symbol}</span><span><b>${escapeHTML(p.name)}</b><small>${escapeHTML(p.detail)}</small></span><span aria-hidden="true">→</span></button>`).join('');
+  return `<section class="study-page" aria-labelledby="study-title">
+  <div class="study-eb">Todas as questões do FIXOU</div>
+  <h1 id="study-title">Banco de questões<span class="study-dot">.</span></h1>
+  <p class="study-mut">Monte o treino do seu jeito ou comece por um atalho. Estudar com intenção faz a diferença.</p>
+  ${toastHtml}
+  <div class="study-core">
+    <div class="study-core-left">
+      <div class="study-eb">Seu banco de questões</div>
+      <div class="study-num">${formatNumber(catalogTotal)}</div>
+      <p class="study-mut study-core-sub">questões · ${escapeHTML(disciplinesLine)}</p>
+      <p class="study-mini-note">${availableTotal===catalogTotal?`Total do catálogo publicado. ${formatNumber(availableTotal)} prontas para estudar.`:`${formatNumber(catalogTotal)} no catálogo · ${formatNumber(availableTotal)} liberadas para estudantes. Itens em revisão ficam fora do treino.`}</p>
+      <div class="study-btns">
+        <button type="button" class="study-go" data-action="study-scroll" data-id="builder">Montar meu treino →</button>
+        <button type="button" class="study-ol" data-action="study-quick">Treino rápido · 10 questões</button>
+      </div>
+    </div>
+    <div class="study-core-right">
+      <div class="study-eb study-presets-eb">Atalhos para hoje</div>
+      ${presetButtons}
+    </div>
+  </div>
+  <div class="study-lbl study-modes-lbl">Outros jeitos de treinar <span class="study-caption">Escolha seu ritmo</span></div>
+  <div class="study-g3">
+    <button type="button" class="study-mc" data-action="start" data-id="adaptive"><span class="study-ic study-ic-a" aria-hidden="true">${studyModeIcon('adaptive')}</span><span><b>Quiz adaptativo</b><small>Dificuldade e seleção se ajustam ao seu desempenho.</small><span class="study-mc-foot">Uma questão de cada vez ↗</span></span></button>
+    <button type="button" class="study-mc" data-action="start" data-id="lightning"><span class="study-ic" aria-hidden="true">${studyModeIcon('lightning')}</span><span><b>Relâmpago</b><small>60 segundos para pensar rápido.</small><span class="study-mc-foot">Desafio contra o tempo ↗</span></span></button>
+    <button type="button" class="study-mc" data-action="start" data-id="survival"><span class="study-ic study-ic-g" aria-hidden="true">${studyModeIcon('survival')}</span><span><b>Sobrevivência</b><small>Três vidas. Até onde seu raciocínio vai?</small><span class="study-mc-foot">Errou? Perde uma vida ↗</span></span></button>
+  </div>
+  <section class="study-builder" id="study-builder" aria-labelledby="study-builder-title">
+    <div class="study-eb">Configure sua sessão</div>
+    <h2 id="study-builder-title">Monte seu treino<span class="study-dot">.</span></h2>
+    <p class="study-mut">Combine disciplinas, assuntos, dificuldade e quantidade. O resumo acompanha cada escolha.</p>
+    <div class="study-cols">
+      <section class="study-box study-filters" aria-label="Filtros de treino">
+        <div class="study-lbl">Disciplina</div>
+        <div class="study-chs">${subjectChips||'<span class="study-section-sub">Nenhuma disciplina disponível.</span>'}</div>
+        <div class="study-lbl">Assuntos <span class="study-lbl-actions"><button type="button" data-action="study-topics-all">Selecionar todos</button><button type="button" data-action="study-topics-none">Limpar</button></span></div>
+        <div class="study-chs">${topicChips}</div>
+        <div class="study-lbl">Dificuldade</div>
+        <div class="study-chs">${difficultyChips}</div>
+        <div class="study-lbl">Quantidade</div>
+        <div class="study-sg" role="group" aria-label="Quantidade de questões">${qtyChips}</div>
+        <div class="study-lbl">Tipo de questão</div>
+        <select class="study-select" aria-label="Tipo de questão" data-session-image-filter>${imageFilterOptions}</select>
+        <p class="study-fit-note">Os filtros usam o catálogo real. Questões bloqueadas para revisão nunca entram na seleção.</p>
+      </section>
+      <aside class="study-box study-sum" aria-label="Resumo do seu treino">
+        <div class="study-eb">Seu treino</div>
+        <div class="study-sn">${actualQty}</div>
+        <p class="study-mut study-sum-sub">questões elegíveis nesta seleção</p>
+        <div class="study-row"><span>Disciplinas</span><b>${subjectCountLabel} de ${subjects.length}</b></div>
+        <div class="study-row"><span>Assuntos</span><b>${selectedTopicCount} de ${allTopicKeys.length}</b></div>
+        <div class="study-row"><span>Níveis</span><b>${selectedDifficulties.size} de 4</b></div>
+        <div class="study-row"><span>Tempo estimado</span><b>~${estimatedMin} min</b></div>
+        <div class="study-row"><span>Elegíveis agora</span><b>${formatNumber(customMatches.length)}</b></div>
+        <div class="study-sum-cta"><button type="button" class="study-go study-go-full" data-action="start-session" ${!customMatches.length?'disabled':''}>Começar a estudar →</button></div>
+        ${!customMatches.length?`<p class="study-fit-note">Selecione outra combinação de filtros para continuar.</p>`:Number(quantity)!=='all'&&customMatches.length<Number(quantity)?`<p class="study-fit-note">Você pediu ${quantity} questões; há ${customMatches.length} elegíveis. A sessão usará as disponíveis.</p>`:`<p class="study-fit-note">Você pode ajustar os filtros antes de começar.</p>`}
+      </aside>
+    </div>
+  </section>
+  <section class="study-explore" aria-labelledby="study-explore-title">
+    <div class="study-explore-head">
+      <div>
+        <div class="study-eb">Questões na prática</div>
+        <h3 id="study-explore-title">Explorar questões</h3>
+      </div>
+      <span class="study-pillmeta">${formatNumber(availableTotal)} liberadas</span>
+    </div>
+    <p class="study-section-sub">Pesquise e abra uma questão para resolver com feedback real do FIXOU.</p>
+    <label class="study-caption" for="explore-input">Buscar questão</label>
+    <input id="explore-input" class="study-search" placeholder="Ex.: movimento, metáfora, óptica..." autocomplete="off" value="${escapeHTML(studySearch?.term||'')}" data-action="study-search-input">
+    <div class="study-results" id="explore-results">${studySearchResults(bank,studySearch?.term||'')}</div>
+  </section>
+</section>`;
 }
 function cardsScreen({state,bank,cardFilters,flash}){
  if(flash){const c=conceptByIdLocal(bank,flash.currentId);if(!c?.flashcard)return empty('Revisão concluída','Sua agenda foi atualizada.','cards-home','Ver meus cartões');const reveal=flash.revealed;return `<section class="studyArea approved-memory" aria-labelledby="memoryTitle"><div class="studyTop"><div class="studyEyebrow"><span class="studyEyebrowDot"></span> FIXOU · REVISÃO ATIVA</div><button class="studyBack" data-action="cards-home">Encerrar revisão</button></div><h1 id="memoryTitle" class="studyHeading">Memorizar<span class="studyHeadingAccent"> de verdade.</span></h1><p class="studyLead">Clique para virar a carta. Arraste para a direita se já sabe e para a esquerda se precisa rever. No celular, basta deslizar o dedo.</p><div class="memorySessionBar"><span>Carta ${flash.index+1} de ${flash.ids.length}</span><span>Revisão espaçada ativa</span></div><div class="memoryProgressTrack"><span style="width:${flash.index/flash.ids.length*100}%"></span></div><div class="flashArena flash-arena"><span class="swipeLabel swipeLeft swipe-rever">↶ rever</span><span class="swipeLabel swipeRight swipe-sei">sei ✓</span><button type="button" class="flashCard flash-card-3d ${reveal?'flipped':''}" data-action="flip-card" aria-pressed="${reveal}" aria-label="${reveal?'Ocultar resposta':'Virar carta de memória'}"><span class="flashInner"><span class="flashFace flashFront"><span class="flashType">${subjectById(c.discipline).name} · ${escapeHTML(c.subtopic)}</span><span class="flashText">${escapeHTML(c.flashcard.front)}</span><span class="flashInstruction">Toque para virar ↻</span></span><span class="flashFace flashBack"><span class="flashType">RESPOSTA</span><span class="flashText">${escapeHTML(c.flashcard.back)}</span><span class="flashInstruction">Como foi sua lembrança?</span></span></span></button></div><div class="memoryActions"><button class="reviewAction" data-action="rate-card" data-id="forgot" ${reveal?'':'disabled'}>← Rever</button><button class="knowAction" data-action="rate-card" data-id="good" ${reveal?'':'disabled'}>Sei →</button></div><div class="memoryKeyboardTip">Teclado: <kbd>←</kbd> Rever &nbsp; <kbd>→</kbd> Sei &nbsp; <kbd>Espaço</kbd> Virar</div><p class="studyFootnote">A agenda e os intervalos usam a repetição espaçada real do FIXOU.</p></section>`;}
@@ -442,7 +579,7 @@ function booksScreen({state,bank,books,bookId}){
 function favoritesScreen({state,bank}){
  const questions=bank.questions.filter(q=>state.favorites.includes('q:'+q.id)&&!isBlockedForStudent(q)),cards=bank.concepts.filter(c=>state.favorites.includes('c:'+c.id)&&c.flashcard&&!c.flashcard.needsReview),explanations=bank.questions.filter(q=>state.favorites.includes('e:'+q.id)&&!isBlockedForStudent(q));
  if(!questions.length&&!cards.length&&!explanations.length)return `${titleBlock('GUARDE O QUE IMPORTA','Seus favoritos','Questões, explicações e cartões para revisitar com facilidade.')}${empty('Seu espaço de boas descobertas','Toque na estrela de uma questão, flashcard ou explicação para guardar aqui.','go-train','Explorar questões')}`;
- return `${titleBlock('GUARDE O QUE IMPORTA','Seus favoritos','Tudo o que você escolheu para revisitar.')}${questions.length?`<div class="section-title"><h2>Questões · ${questions.length}</h2>${button('Treinar favoritas →','favorite-training','','text-button')}</div><div class="question-list">${questions.map(q=>questionCard(state,bank,q)).join('')}</div>`:''}${cards.length?`<div class="section-title"><h2>Flashcards · ${cards.length}</h2></div><div class="flash-grid">${cards.map(c=>`<article class="flash-preview"><div class="row"><span class="tag">${subjectById(c.discipline).name}</span>${favorite(state,'c',c.id)}</div><h3>${escapeHTML(c.flashcard.front)}</h3>${button('Revisar →','card',c.id,'text-button')}</article>`).join('')}</div>`:''}${explanations.length?`<div class="section-title"><h2>Explicações · ${explanations.length}</h2></div>${explanations.map(q=>`<article class="panel saved-explanation"><div class="row"><h3>${escapeHTML(q.subtopic)}</h3>${favorite(state,'e',q.id)}</div><p>${escapeHTML(q.explanation)}</p></article>`).join('')}`:''}`;
+ return `${titleBlock('GUARDE O QUE IMPORTA','Seus favoritos','Tudo o que você escolheu para revisitar.')}${questions.length?`<div class="section-title"><h2>Questões · ${questions.length}</h2>${button('Estudar favoritas →','favorite-training','','text-button')}</div><div class="question-list">${questions.map(q=>questionCard(state,bank,q)).join('')}</div>`:''}${cards.length?`<div class="section-title"><h2>Flashcards · ${cards.length}</h2></div><div class="flash-grid">${cards.map(c=>`<article class="flash-preview"><div class="row"><span class="tag">${subjectById(c.discipline).name}</span>${favorite(state,'c',c.id)}</div><h3>${escapeHTML(c.flashcard.front)}</h3>${button('Revisar →','card',c.id,'text-button')}</article>`).join('')}</div>`:''}${explanations.length?`<div class="section-title"><h2>Explicações · ${explanations.length}</h2></div>${explanations.map(q=>`<article class="panel saved-explanation"><div class="row"><h3>${escapeHTML(q.subtopic)}</h3>${favorite(state,'e',q.id)}</div><p>${escapeHTML(q.explanation)}</p></article>`).join('')}`:''}`;
 }
 function searchScreen({state,bank,curriculum,searchTerm}){
  const term=normalize(searchTerm||''),concepts=term?bank.concepts.filter(c=>normalize(c.subtopic+' '+c.topic+' '+c.summary).includes(term)):[],questions=term?bank.questions.filter(q=>!isBlockedForStudent(q)&&normalize(q.prompt+' '+q.explanation+' '+(q.tags||[]).join(' ')).includes(term)):[],objects=term?curriculum.objects.filter(o=>normalize(o.text+' '+o.skillText).includes(term)):[];
@@ -505,7 +642,7 @@ const sections=[
 ];
 const tools=[
  ['home','Minha jornada','Seu painel pessoal de evolução. Progresso, domínio e desempenho em um só lugar.'],
- ['train','Treinar','Questões organizadas para você praticar com propósito.'],
+ ['train','Estudar','Questões organizadas para você praticar com propósito.'],
  ['cards','Memorizar','Transforme conteúdo importante em revisão recorrente.'],
  ['errors','Cofre dos erros','Seus erros deixam de ser esquecidos e passam a fazer parte da sua revisão.'],
  ['map','Programa 2027','Veja o conteúdo do vestibular organizado em matérias, áreas e tópicos.'],
@@ -961,7 +1098,7 @@ function sessionScreen({state,bank,curriculum,session}){
  const q=questionById(bank,session.currentId);if(!q)return empty('Não há mais questões nesta seleção','As respostas já foram salvas.','finish-session','Ver resultado');
  const c=conceptById(bank,q.conceptId),subject=subjectById(c.discipline),draft=session.draft||{},feedback=session.feedback,visual=diagramSVG(q.diagram),current=Math.min(session.answered.length+(feedback?0:1),session.limit),percent=session.answered.length/session.limit*100;
  const optionsHTML=['choice','boolean'].includes(q.type)?`<div class="answerOptions ${q.type==='boolean'?'boolean-options':''}">${q.options.map((option,i)=>{const selected=feedback?feedback.answer===i:draft.answer===i,status=feedback?(i===q.answer?'answerCorrect':selected?'answerWrong':''):'';return `<button class="answerOption ${selected?'selected':''} ${status}" data-action="select-answer" data-id="${i}" aria-pressed="${selected}" ${feedback?'disabled':''}><span class="answerLetter">${String.fromCharCode(65+i)}</span><span>${escapeHTML(option)}</span></button>`;}).join('')}</div>`:q.type==='order'?`<p class="input-hint">Use as setas para colocar os itens na ordem solicitada.</p><ol class="ordering">${(draft.order||q.options.map((_,i)=>i)).map((i,n)=>`<li><span class="order-index">${n+1}</span><span>${escapeHTML(q.options[i])}</span><div><button class="icon-button" data-action="order-up" data-id="${n}" aria-label="Mover item ${n+1} para cima" ${feedback||n===0?'disabled':''}>↑</button><button class="icon-button" data-action="order-down" data-id="${n}" aria-label="Mover item ${n+1} para baixo" ${feedback||n===q.options.length-1?'disabled':''}>↓</button></div></li>`).join('')}</ol>`:q.type==='match'?`<div class="matching">${q.matchLeft.map((left,i)=>`<label><span>${escapeHTML(left)}</span><select data-match="${i}" ${feedback?'disabled':''}><option value="">Escolha uma associação</option>${q.options.map((o,j)=>`<option value="${j}" ${draft.match?.[i]===j?'selected':''}>${escapeHTML(o)}</option>`).join('')}</select></label>`).join('')}</div>`:`<label class="answer-input-label" for="written-answer">${q.type==='numeric'?'Sua resposta numérica':'Sua resposta'}<input id="written-answer" type="text" inputmode="${q.type==='numeric'?'decimal':'text'}" maxlength="200" value="${escapeHTML(draft.text||'')}" autocomplete="off" ${feedback?'disabled':''}></label>`;
- return `<section class="studyArea approved-training" aria-labelledby="trainingTitle"><div class="studyTop"><div class="studyEyebrow"><span class="studyEyebrowDot"></span> FIXOU · INTERAÇÃO DE ESTUDO</div><button class="studyBack" data-action="pause-session">← ${session.mode==='lightning'?'Sair do desafio':'Pausar treino'}</button></div><h1 id="trainingTitle" class="studyHeading">Treinar<span class="studyHeadingAccent"> com propósito.</span></h1><p class="studyLead">Responda às questões e veja um feedback imediato. Acertos geram partículas discretas e aumentam o combo. Erros mostram a explicação no próprio cartão.</p><div class="studySessionBar" aria-label="Progresso do treino"><span class="sessionStat">Questão ${current} de ${session.limit}</span><div class="sessionTrack" aria-hidden="true"><div style="width:${percent}%"></div></div><span class="sessionStat">Combo <strong>${session.combo}</strong> <span aria-hidden="true">✦</span></span></div><article class="questionShell ${feedback?(feedback.correct?'answer-celebrate':'questionShake answer-shake'):''}"><div class="questionUpper"><span class="questionSubject">${escapeHTML(subject.name)} · ${escapeHTML(c.subtopic)}</span><span>${favorite(state,'q',q.id)}${button('⚑ Reportar','report',q.id,'studyBack')}</span></div><p class="questionText">${escapeHTML(q.prompt)}</p>${questionImages(q)}${visual}${optionsHTML}${!feedback?`<fieldset class="confidence-field"><legend>O quanto você confia nessa resposta?</legend><div>${Object.entries(CONFIDENCE).map(([id,label])=>`<button class="confidence-option ${draft.confidence===id?'selected':''}" data-action="confidence" data-id="${id}" aria-pressed="${draft.confidence===id}"><span>${id==='sure'?'●':id==='think'?'◐':'○'}</span>${label}</button>`).join('')}</div></fieldset><div class="questionBottom"><span class="studyMicro" id="question-time">Use A–D · ${formatTime(session.questionSeconds||0)} pensando</span><button class="btn btnPrimary" data-action="submit-answer" ${canSubmitDraft(q,draft)?'':'disabled'}>Confirmar resposta →</button></div>`:feedbackPanel(state,bank,curriculum,session,q,c)}</article><p class="studyFootnote">Questões, gabaritos, explicações, XP e domínio usam os sistemas reais do FIXOU.</p></section>`;
+ return `<section class="studyArea approved-training" aria-labelledby="trainingTitle"><div class="studyTop"><div class="studyEyebrow"><span class="studyEyebrowDot"></span> FIXOU · INTERAÇÃO DE ESTUDO</div><button class="studyBack" data-action="pause-session">← ${session.mode==='lightning'?'Sair do desafio':'Pausar estudo'}</button></div><h1 id="trainingTitle" class="studyHeading">Estude<span class="studyHeadingAccent"> com propósito.</span></h1><p class="studyLead">Responda às questões e veja um feedback imediato. Acertos geram partículas discretas e aumentam o combo. Erros mostram a explicação no próprio cartão.</p><div class="studySessionBar" aria-label="Progresso do treino"><span class="sessionStat">Questão ${current} de ${session.limit}</span><div class="sessionTrack" aria-hidden="true"><div style="width:${percent}%"></div></div>${session.mode==='lightning'?`<span class="sessionStat lightningStat">⚡ <strong id="lightning-clock">${formatTime((session.endsAt-Date.now())/1000)}</strong></span>`:''}${session.mode==='survival'?`<span class="sessionStat survivalStat" aria-label="Vidas restantes">♥ <strong>${session.lives}</strong></span>`:''}<span class="sessionStat">Combo <strong>${session.combo}</strong> <span aria-hidden="true">✦</span></span></div><article class="questionShell ${feedback?(feedback.correct?'answer-celebrate':'questionShake answer-shake'):''}"><div class="questionUpper"><span class="questionSubject">${escapeHTML(subject.name)} · ${escapeHTML(c.subtopic)}</span><span>${favorite(state,'q',q.id)}${button('⚑ Reportar','report',q.id,'studyBack')}</span></div><p class="questionText">${escapeHTML(q.prompt)}</p>${questionImages(q)}${visual}${optionsHTML}${!feedback?`<fieldset class="confidence-field"><legend>O quanto você confia nessa resposta?</legend><div>${Object.entries(CONFIDENCE).map(([id,label])=>`<button class="confidence-option ${draft.confidence===id?'selected':''}" data-action="confidence" data-id="${id}" aria-pressed="${draft.confidence===id}"><span>${id==='sure'?'●':id==='think'?'◐':'○'}</span>${label}</button>`).join('')}</div></fieldset><div class="questionBottom"><span class="studyMicro" id="question-time">Use A–D · ${formatTime(session.questionSeconds||0)} pensando</span><button class="btn btnPrimary" data-action="submit-answer" ${canSubmitDraft(q,draft)?'':'disabled'}>Confirmar resposta →</button></div>`:feedbackPanel(state,bank,curriculum,session,q,c)}</article><p class="studyFootnote">Questões, gabaritos, explicações, XP e domínio usam os sistemas reais do FIXOU.</p></section>`;
 }
 function feedbackPanel(state,bank,curriculum,session,q,c){const f=session.feedback,good=f.correct,m=masteryValue(state.concepts[c.id],state.reviews[c.id]),distractor=!good&&Number.isInteger(f.answer)&&q.distractors?.[f.answer];return `<section class="questionFeedback ${good?'rightFeedback':'wrongFeedback'}" role="status" aria-live="polite"><strong>${good?'Raciocínio no caminho certo!':f.confidence==='sure'?'Vamos corrigir um falso domínio.':'Esta é uma oportunidade de aprender.'}</strong>${!good?`<p><b>Sua resposta:</b> ${escapeHTML(answerText(q,f.answer))}<br><b>Resposta correta:</b> ${escapeHTML(answerText(q,q.answer))}</p>`:''}<p>${escapeHTML(q.explanation)}</p>${distractor?`<p>${escapeHTML(distractor)}</p>`:''}<p class="studyMicro">Domínio deste conceito: ${m}% · ${good?'Progresso salvo':'Erro guardado para revisar'}</p></section><div class="questionBottom"><span class="studyMicro">${good?'Continue o combo.':'A explicação já foi salva no Cofre dos erros.'}</span><button class="btn btnPrimary" data-action="next-question">${session.answered.length>=session.limit||session.lives===0?'Ver resultado':'Próxima questão'} →</button></div>${sourceTrail(c,curriculum)}`;}
 function resultScreen({state,bank,session}){const total=session.answered.length,correct=session.score,percent=total?Math.round(correct/total*100):0,xp=sum(session.answered.map(h=>h.xp)),wrong=session.answered.filter(h=>!h.correct);return `<section class="studyArea"><div class="questionShell questionFinished"><div class="questionFinishedIcon">✦</div><h2>Seu treino terminou!</h2><p>Você acertou ${correct} de ${total} questões e conquistou ${xp} XP. Aproveitamento: ${percent}%.</p><div class="btnRow">${button('Voltar à minha jornada','go-home','','btn btnPrimary')}${wrong.length?button('Retomar minhas dúvidas','go-errors','','btn btnSecondary'):button('Revisar flashcards','cards-home','','btn btnSecondary')}</div></div></section>`;}
@@ -988,7 +1125,7 @@ function sidebarIcon(id){return SIDEBAR_ICONS[id]||'';}
 
 
 
-const DESCRIPTIONS={train:'Quiz adaptativo e desafios de estudo',cards:'Cartas e revisão espaçada',errors:'Revise as questões que você errou',home:'Seu caminho de aprendizagem',stats:'Acompanhe seus pontos fortes e fracos',map:'Conteúdos para o vestibular',books:'Obras e textos para estudar',favorites:'Questões que você salvou',admin:'Gestão e métricas do FIXOU',review:'Revise e aprove o acervo'};
+const DESCRIPTIONS={train:'Banco de questões, atalhos e montador de treino',cards:'Cartas e revisão espaçada',errors:'Revise as questões que você errou',home:'Seu caminho de aprendizagem',stats:'Acompanhe seus pontos fortes e fracos',map:'Conteúdos para o vestibular',books:'Obras e textos para estudar',favorites:'Questões que você salvou',admin:'Gestão e métricas do FIXOU',review:'Revise e aprove o acervo'};
 const LABELS=Object.fromEntries(NAV.map(([id,,label])=>[id,label]));
 LABELS.admin='Painel do dono';
 LABELS.review='Revisão de Questões';
@@ -1077,7 +1214,7 @@ let state=loaded.state,storageBlocked=!!loaded.blocked;
 let session=state.activeSession,flash=null,lastTick=Date.now(),toastTimeout,afterProfile=null,afterConfirm=null,pendingImport=null,syncTimeout=null;
 let account={loading:true,user:null,progressRevision:0},adminData=null,questionOverrides={},editingQuestion=null,editingFields={};
 let cardGesture=null,starAnimation=0;
-const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0,reviewAiFilter:'all'};
+const ui={route:'about',filters:{},cardFilters:{},sessionBuilder:defaultSessionBuilder(BANK),errorFilter:'active',mapSearch:'',mapDiscipline:'',searchTerm:'',chartCount:7,bookId:null,sidebarOpen:false,adminPeriod:30,adminSearch:'',adminRole:'',adminPlan:'',accountMenuOpen:false,loggingOut:false,previousRoute:'train',guestModalType:null,reviewFilter:'all',reviewSearch:'',reviewIndex:0,reviewAiFilter:'all',studySearch:{term:'',message:''}};
 const GUEST_LOCKED=['home','errors'];
 let guestModalTrigger=null;
 function isGuest(){return !account.user && !account.loading;}
@@ -1108,7 +1245,7 @@ function track(eventType,metadata={}){if(account.user)api('/api/events',{method:
 async function hydrateProgress(){if(!account.user)return;try{const remote=await api('/api/progress');account.progressRevision=remote.progress?.revision||0;if(remote.progress?.state&&remote.progress.clientSavedAt>=(state.savedAt||0)){state=validateState(remote.progress.state);session=state.activeSession;persistState(state);}else{const saved=await api('/api/progress',{method:'PUT',body:JSON.stringify({state,clientSavedAt:state.savedAt||Date.now(),baseRevision:account.progressRevision})});account.progressRevision=saved.revision;}}catch(error){toast(error.message||'O progresso local foi mantido; a sincronização será tentada novamente.');}}
 async function fetchQuestionOverrides(){if(!account.user||!['owner','admin'].includes(account.user.role))return;try{const r=await api('/api/admin/questions/overrides');questionOverrides=r.overrides||{};applyOverrides();}catch{}}
 function applyOverrides(){for(const q of BANK.questions){const o=questionOverrides[q.id];if(!o)continue;if(o.prompt!==undefined)q._originalPrompt=q._originalPrompt||q.prompt,q.prompt=o.prompt;if(o.answer!==undefined)q._originalAnswer=q._originalAnswer||q.answer,q.answer=o.answer;if(o.options!==undefined){try{q._originalOptions=q._originalOptions||q.options,q.options=JSON.parse(o.options);}catch{}}if(o.explanation!==undefined)q._originalExplanation=q._originalExplanation||q.explanation,q.explanation=o.explanation;if(o.contentStatus!==undefined)q.contentStatus=o.contentStatus;if(o.needsReview!==undefined)q.needsReview=o.needsReview==='true'||o.needsReview===true;if(o.imageStatus!==undefined)q.imageStatus=o.imageStatus;if(o.imageClassification!==undefined)q.imageClassification=o.imageClassification;if(o.imageReason!==undefined)q.imageReason=o.imageReason;}}
-function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut,editingQuestion,editingFields};}
+function context(){return {...ui,state,bank:BANK,curriculum:CURRICULUM,books:BOOKS,session,flash,storageBlocked,account:account.user,adminData,loggingOut:ui.loggingOut,editingQuestion,editingFields,studySearch:ui.studySearch};}
 function readRoute(){const parts=location.hash.slice(1).split('/');ui.route=['about','home','train','cards','errors','map','books','stats','favorites','profile','search','quiz','settings','admin','review','login','register','forgot','reset'].includes(parts[0])?parts[0]:'about';ui.bookId=parts[1]||null;}
 function go(route){if(location.hash==='#'+route){readRoute();render();window.scrollTo(0,0);}else location.hash=route;}
 function render(){
@@ -1220,8 +1357,17 @@ function handleAction(action,id,element){
  if(action==='session-clear-subjects'){ui.sessionBuilder={...ui.sessionBuilder,subjects:[],topics:[]};render();return;}
  if(action==='session-select-all-topics'){const subjects=ui.sessionBuilder.subjects||[];ui.sessionBuilder={...ui.sessionBuilder,topics:sessionTopicKeys(BANK,subjects)};render();return;}
  if(action==='session-clear-topics'){ui.sessionBuilder={...ui.sessionBuilder,topics:[]};render();return;}
+ if(action==='study-preset'){ui.sessionBuilder=applyStudyPreset(BANK,id);ui.studySearch={...ui.studySearch,message:`Atalho aplicado: ${id==='warmup'?'Aquecimento':id==='hard'?'Foco no difícil':'Mecânica e cinemática'}. Ajuste os filtros e comece quando quiser.`};if(ui.route!=='train')go('train');else render();requestAnimationFrame(()=>{document.querySelector('#study-builder')?.scrollIntoView({behavior:'smooth',block:'start'});});return;}
+ if(action==='study-scroll'){const target=document.querySelector(id==='builder'?'#study-builder':'.study-explore');if(target)target.scrollIntoView({behavior:'smooth',block:'start'});return;}
+ if(action==='study-quick'){const preset=applyStudyPreset(BANK,'warmup');ui.sessionBuilder=preset;const filters=builderFilters(preset),available=BANK.questions.filter(q=>matchesQuestion(q,conceptById(BANK,q.conceptId),filters,state));if(!available.length){toast('Nenhuma questão disponível para o treino rápido.');render();return;}if(available.length<10)toast(`Há ${available.length} questões disponíveis; a sessão usará todas elas.`);launch('practice',filters);return;}
+ if(action==='study-subject'){const subjects=new Set(ui.sessionBuilder.subjects||[]),topics=new Set(ui.sessionBuilder.topics||[]);if(subjects.has(id)){subjects.delete(id);sessionTopicKeys(BANK,[id]).forEach(key=>topics.delete(key));}else{subjects.add(id);sessionTopicKeys(BANK,[id]).forEach(key=>topics.add(key));}const next=[...subjects],validTopics=new Set(sessionTopicKeys(BANK,next));ui.sessionBuilder=cleanSessionBuilder(BANK,{...ui.sessionBuilder,subjects:next,topics:[...topics].filter(key=>validTopics.has(key))});ui.studySearch={...ui.studySearch,message:''};render();return;}
+ if(action==='study-topic'){const topics=new Set(ui.sessionBuilder.topics||[]);if(topics.has(id))topics.delete(id);else topics.add(id);ui.sessionBuilder={...ui.sessionBuilder,topics:[...topics]};ui.studySearch={...ui.studySearch,message:''};render();return;}
+ if(action==='study-difficulty'){const n=Number(id),difficulties=new Set(ui.sessionBuilder.difficulties||[]);if(difficulties.has(n))difficulties.delete(n);else difficulties.add(n);ui.sessionBuilder={...ui.sessionBuilder,difficulties:[...difficulties].sort((a,b)=>a-b)};ui.studySearch={...ui.studySearch,message:''};render();return;}
+ if(action==='study-qty'){const value=id==='all'?'all':Number(id);ui.sessionBuilder={...ui.sessionBuilder,quantity:SESSION_QUANTITIES.includes(value)?value:20};ui.studySearch={...ui.studySearch,message:''};render();return;}
+ if(action==='study-topics-all'){const subjects=ui.sessionBuilder.subjects||[];ui.sessionBuilder={...ui.sessionBuilder,topics:sessionTopicKeys(BANK,subjects)};render();return;}
+ if(action==='study-topics-none'){ui.sessionBuilder={...ui.sessionBuilder,topics:[]};render();return;}
  if(action==='resume'){session=state.activeSession;if(session){track('study_session_resumed',{sessionId:session.id,mode:session.mode});if(session.endsAt&&Date.now()>=session.endsAt)complete();go('quiz');}return;}
- if(action==='pause-session'){if(session)track('study_session_paused',{sessionId:session.id,mode:session.mode});if(session?.mode==='lightning'){confirmAction('Encerrar o Relâmpago?','O cronômetro não pausa neste modo. Seu resultado será registrado agora.',()=>{complete();go('home');},'Encerrar desafio');}else{saveProgress();go('home');toast('Treino pausado e salvo.');}return;}
+ if(action==='pause-session'){if(session)track('study_session_paused',{sessionId:session.id,mode:session.mode});if(session?.mode==='lightning'){confirmAction('Encerrar o Relâmpago?','O cronômetro não pausa neste modo. Seu resultado será registrado agora.',()=>{complete();go('home');},'Encerrar desafio');}else{saveProgress();go('home');toast('Estudo pausado e salvo.');}return;}
  if(action==='finish-session'){complete();return;}
  if(action==='select-answer'&&session&&!session.feedback){session.draft.answer=Number(id);updateDraft();render();return;}
  if(action==='confidence'&&session&&!session.feedback){session.draft.confidence=id;updateDraft();render();return;}
@@ -1231,8 +1377,8 @@ function handleAction(action,id,element){
  if(action==='favorite'){const i=state.favorites.indexOf(id);if(i<0){state.favorites.push(id);track('favorite_added',{itemId:id});}else state.favorites.splice(i,1);saveProgress();const kind=id.split(':')[0],noun=kind==='q'?'questão':kind==='c'?'flashcard':'explicação';element.classList.toggle('is-favorite',i<0);element.textContent=i<0?'★':'☆';element.setAttribute('aria-pressed',i<0?'true':'false');element.setAttribute('aria-label',(i<0?'Remover dos favoritos ':'Favoritar ')+noun);if(ui.route==='favorites')render();return;}
  if(action==='question'){const q=questionById(BANK,id);if(q)launch('practice',{subtopic:q.conceptId},id);return;}
  if(action==='variation'){closeModal();launch('practice',{subtopic:id});return;}
- if(action==='subject'){ui.filters={discipline:id};go('train');return;}
- if(action==='track'){const [kind,value]=String(id||'').split('|');const concept=kind==='concept'?conceptById(BANK,value):null;ui.filters=kind==='discipline'?{discipline:value}:concept?{discipline:concept.discipline,subtopic:value}:{topic:value};go('train');return;}
+ if(action==='subject'){ui.filters={discipline:id};const subjects=new Set(ui.sessionBuilder.subjects||[]);if(sessionSubjects(BANK).some(s=>s.id===id)){subjects.add(id);ui.sessionBuilder=cleanSessionBuilder(BANK,{...ui.sessionBuilder,subjects:[...subjects],topics:sessionTopicKeys(BANK,[...subjects])});}go('train');return;}
+ if(action==='track'){const [kind,value]=String(id||'').split('|');const concept=kind==='concept'?conceptById(BANK,value):null;ui.filters=kind==='discipline'?{discipline:value}:concept?{discipline:concept.discipline,subtopic:value}:{topic:value};const focus=kind==='concept'?concept:null;const discipline=focus?focus.discipline:kind==='discipline'?value:null;if(discipline&&sessionSubjects(BANK).some(s=>s.id===discipline)){const subjects=new Set(ui.sessionBuilder.subjects||[]);subjects.add(discipline);const topics=new Set(ui.sessionBuilder.topics||[]);sessionTopicKeys(BANK,[discipline]).forEach(key=>{if(!focus||key===`${focus.discipline}|${focus.topic}`)topics.add(key);});ui.sessionBuilder=cleanSessionBuilder(BANK,{...ui.sessionBuilder,subjects:[...subjects],topics:[...topics]});}go('train');return;}
  if(action==='concept'){showConcept(id);return;}
  if(action==='clear-filters'){ui.filters={};render();return;}
  if(action==='search'){go('search');setTimeout(()=>document.querySelector('#global-search')?.focus(),0);return;}
@@ -1286,7 +1432,7 @@ document.addEventListener('click',event=>{
  if(!inNavGroup||event.target.closest('a[href^="#"]'))closeNavGroups();
  const el=event.target.closest('[data-action]');if(!el||el.disabled)return;event.preventDefault();try{handleAction(el.dataset.action,el.dataset.id,el);}catch(error){console.error(error);toast('Não conseguimos concluir esta ação. Seu progresso já salvo foi mantido.');}});
 (function(){const tip=document.querySelector('#chart-tip');if(!tip)return;const near=e=>{const el=e.target.closest&&e.target.closest('[data-tip]');return el&&el.getAttribute('data-tip')!=null?el:null;};document.addEventListener('mouseover',e=>{const el=near(e);if(!el)return;tip.innerHTML=el.getAttribute('data-tip');tip.style.display='block';});document.addEventListener('mousemove',e=>{if(tip.style.display!=='block')return;const pad=12,r=tip.getBoundingClientRect();let left=e.clientX+pad,top=e.clientY+pad;if(left+r.width>window.innerWidth-8)left=e.clientX-r.width-pad;if(top+r.height>window.innerHeight-8)top=e.clientY-r.height-pad;if(left<8)left=8;if(top<8)top=8;tip.style.left=left+'px';tip.style.top=top+'px';});document.addEventListener('mouseout',e=>{const el=near(e);if(el&&!el.contains(e.relatedTarget))tip.style.display='none';});})();
-document.addEventListener('input',event=>{if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){if(editingQuestion){event.target.value=ui.reviewSearch;return;}ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}if(event.target.dataset?.action==='review-edit-prompt'){editingFields.prompt=event.target.value;}if(event.target.dataset?.action==='review-edit-answer'){editingFields.answer=event.target.value;}});
+document.addEventListener('input',event=>{if(event.target.id==='explore-input'){ui.studySearch={...ui.studySearch,term:event.target.value,message:''};const results=document.querySelector('#explore-results');if(results)results.innerHTML=studySearchResults(BANK,event.target.value);return;}if(event.target.id==='written-answer'&&session&&!session.feedback){session.draft.text=event.target.value;updateDraft();}if(event.target.dataset?.action==='review-search-input'){if(editingQuestion){event.target.value=ui.reviewSearch;return;}ui.reviewSearch=event.target.value;ui.reviewIndex=0;render();}if(event.target.dataset?.action==='review-edit-prompt'){editingFields.prompt=event.target.value;}if(event.target.dataset?.action==='review-edit-answer'){editingFields.answer=event.target.value;}});
 document.addEventListener('change',event=>{
  const el=event.target;
  if(el.dataset.adminStatus){api(`/api/admin/${el.dataset.adminStatus}/${el.dataset.id}`,{method:'PATCH',body:JSON.stringify({status:el.value})}).then(()=>{toast('Status atualizado e auditado.');return api('/api/admin/overview?days='+ui.adminPeriod);}).then(r=>{adminData=r.data;render();}).catch(e=>toast(e.message));return;}

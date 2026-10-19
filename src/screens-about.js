@@ -9,7 +9,7 @@ const sections=[
 ];
 const tools=[
  ['home','Minha jornada','Seu painel pessoal de evolução. Progresso, domínio e desempenho em um só lugar.'],
- ['train','Treinar','Questões organizadas para você praticar com propósito.'],
+ ['train','Estudar','Questões organizadas para você praticar com propósito.'],
  ['cards','Memorizar','Transforme conteúdo importante em revisão recorrente.'],
  ['errors','Cofre dos erros','Seus erros deixam de ser esquecidos e passam a fazer parte da sua revisão.'],
  ['map','Programa 2027','Veja o conteúdo do vestibular organizado em matérias, áreas e tópicos.'],

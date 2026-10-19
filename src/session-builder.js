@@ -32,3 +32,23 @@ export function builderFilters(builder){
 }
 export function topicLabel(key){return String(key).split('|').slice(1).join('|');}
 export function subjectIdFromTopic(key){return String(key).split('|')[0];}
+
+// Atalhos da aba Estudar (Original+). Não iniciam sessão; só preenchem o montador.
+export const STUDY_PRESETS={
+ warmup:{name:'Aquecimento',detail:'Sessão curta com questões fáceis e médias de todos os assuntos',symbol:'☀'},
+ hard:{name:'Foco no difícil',detail:'Dificuldades maiores para treinar onde dói',symbol:'↗'},
+ mechanics:{name:'Mecânica e cinemática',detail:'Os conteúdos mais cobrados da Física',symbol:'◎'}
+};
+export function applyStudyPreset(bank,id){
+ const subjects=sessionSubjects(bank).map(s=>s.id);
+ const topics=sessionTopicKeys(bank,subjects);
+ if(id==='warmup')return cleanSessionBuilder(bank,{subjects,topics,difficulties:[1,2],quantity:10,imageFilter:'all'});
+ if(id==='hard')return cleanSessionBuilder(bank,{subjects,topics,difficulties:[3,4],quantity:20,imageFilter:'all'});
+ if(id==='mechanics'){
+  const physics=subjects.includes('fisica')?['fisica']:[];
+  const focus=PHYSICS_AREA_ORDER.filter(area=>['Mecânica','Cinemática'].includes(area));
+  const mechTopics=physics.length?sessionTopicKeys(bank,physics).filter(key=>focus.includes(topicLabel(key))):[];
+  return cleanSessionBuilder(bank,{subjects:physics,topics:mechTopics,difficulties:[1,2,3,4],quantity:20,imageFilter:'all'});
+ }
+ return defaultSessionBuilder(bank);
+}
