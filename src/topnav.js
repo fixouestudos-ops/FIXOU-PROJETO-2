@@ -2,7 +2,7 @@ import {NAV} from './config.js';
 import {sidebarIcon} from './sidebar-icons.js';
 import {escapeHTML} from './utils.js';
 
-const DESCRIPTIONS={train:'Quiz adaptativo e desafios de estudo',cards:'Cartas e revisão espaçada',errors:'Revise as questões que você errou',home:'Seu caminho de aprendizagem',stats:'Acompanhe seus pontos fortes e fracos',map:'Conteúdos para o vestibular',books:'Obras e textos para estudar',favorites:'Questões que você salvou',admin:'Gestão e métricas do FIXOU',review:'Revise e aprove o acervo'};
+const DESCRIPTIONS={train:'Banco de questões, atalhos e montador de treino',cards:'Cartas e revisão espaçada',errors:'Revise as questões que você errou',home:'Seu caminho de aprendizagem',stats:'Acompanhe seus pontos fortes e fracos',map:'Conteúdos para o vestibular',books:'Obras e textos para estudar',favorites:'Questões que você salvou',admin:'Gestão e métricas do FIXOU',review:'Revise e aprove o acervo'};
 const LABELS=Object.fromEntries(NAV.map(([id,,label])=>[id,label]));
 LABELS.admin='Painel do dono';
 LABELS.review='Revisão de Questões';

@@ -21,7 +21,7 @@ test('HTML empacotado inicializa e protege o conteúdo sem sessão',async()=>{
  const ctxTrain=makeContext('#train');
  vm.runInNewContext(script,ctxTrain.context,{filename:'dist/assets/'+scriptTag[1]});
  await new Promise(resolve=>setImmediate(resolve));
- assert.match(ctxTrain.app.innerHTML,/PRÁTICA QUE EVOLUI|Treinar/);
+ assert.match(ctxTrain.app.innerHTML,/Banco de questões|Estudar/);
  assert.match(ctxTrain.app.innerHTML,/guest-locked/);
  assert.match(ctxTrain.app.innerHTML,/nav-lock/);
  assert.doesNotMatch(ctxTrain.app.innerHTML,/nav-logout/);
