@@ -297,9 +297,9 @@ test('fixture reproduz os 275 estados da produção capturados por leitura',()=>
   assert.ok(extra.length>=3,'extras do snapshot preservados');
   assert.equal(extra.filter(r=>r.question_id===q5).length,4,'extras do q5 preservados');
   assert.ok(extra.filter(r=>r.actor_user_id==='af2254e6-977e-4694-aa39-5dd01bb40303').length>=8,'overrides manuais do Owner preservados');
-  assert.equal(extra.find(r=>r.field==='needsReview').value,'false');
-  assert.equal(extra.find(r=>r.field==='imageStatus').value,'approved');
-  assert.ok(extra.find(r=>r.field==='prompt'));
+  assert.equal(extra.find(r=>r.question_id===q5&&r.field==='needsReview').value,'false');
+  assert.equal(extra.find(r=>r.question_id===q5&&r.field==='imageStatus').value,'approved');
+  assert.ok(extra.find(r=>r.question_id===q5&&r.field==='prompt'));
  const validated=cs.filter(r=>r.value==='validated');
  assert.ok(validated.length>=3,'aprovacoes manuais do Owner preservadas');
  assert.ok(validated.every(r=>r.actor_user_id==='af2254e6-977e-4694-aa39-5dd01bb40303'),'aprovacao manual mantem o ator do Owner');
