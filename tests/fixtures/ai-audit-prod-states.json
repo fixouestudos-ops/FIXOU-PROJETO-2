@@ -1,519 +1,511 @@
 {
-  "note": "Estados de producao dos 81 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
-  "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 81 ids do manifesto",
-  "totalRows": 92,
+  "note": "Estados de producao dos 119 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
+  "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 119 ids do manifesto",
+  "totalRows": 310,
   "rows": [
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792431668903
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431668903,
+      "updated_at": 1792431668903
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q11",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792437160267
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437155295,
+      "updated_at": 1792437155295
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431715630,
+      "updated_at": 1792437155295
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437160267,
+      "updated_at": 1792437160267
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q2",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792437171044
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437167430,
+      "updated_at": 1792437167430
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437167430,
+      "updated_at": 1792437167430
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437171044,
+      "updated_at": 1792437171044
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q22",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q23",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792431932444
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q23",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431932444,
+      "updated_at": 1792431932444
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q24",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q26",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q27",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792433252946
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433250087,
+      "updated_at": 1792433250087
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433250087,
+      "updated_at": 1792433250087
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433250087,
+      "updated_at": 1792433250087
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433252946,
+      "updated_at": 1792433252946
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792437176890
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437174783,
+      "updated_at": 1792437174783
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437174783,
+      "updated_at": 1792437174783
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437176890,
+      "updated_at": 1792437176890
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q5",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q7",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "updated_at": 1792432667625
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432666095,
+      "updated_at": 1792432666095
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432666095,
+      "updated_at": 1792432666095
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432667625,
+      "updated_at": 1792432667625
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q1",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q14",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q15",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q16",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q17",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q18",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q20",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q24",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q25",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q26",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q27",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q28",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q29",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
       "field": "contentStatus",
-      "value": "pending",
-      "actor_user_id": "owner-teste-local",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1790032095533,
-      "updated_at": "2026-09-22 04:41:55"
+      "updated_at": 1792432091624
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432659377,
+      "updated_at": 1792432659377
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
       "field": "imageStatus",
-      "value": "needs_manual_crop",
-      "actor_user_id": "owner-teste-local",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1790040479313,
-      "updated_at": 1790040484068
+      "updated_at": 1792432659377
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
       "field": "needsReview",
       "value": "false",
-      "actor_user_id": "owner-teste-local",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1790032095533,
       "updated_at": 1790032099995
     },
     {
       "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
       "field": "prompt",
-      "value": "[fixture de teste minimizada] Enunciado de teste do override do q5.",
-      "actor_user_id": "owner-teste-local",
+      "value": "Enem 2017) No Brasil a quantidade de mortes decorrentes de acidentes por excesso de velocidade já é tratada como epidemia. Uma forma de profilaxia é a instalação de aparelhos que medem a velocidade dos automóveis e registram, por meio de fotografias, os veículos que trafegam acima do limite de velocidade permitido. O princípio de funcionamento desses aparelhos. consiste na instalação de dois sensores no solo, de forma a registrar os instantes em que o veículo passa e, em caso de excesso de velocidade, fotografar o veículo quando ele passar sobre uma marca no solo, após o segundo sensor. Considere que o dispositivo representado na figura esteja instalado em uma via com velocidade máxima permitida de 60 km/h. No caso de um automóvel que trafega na velocidade máxima permitida, o tempo, em milissegundos, medido pelo dispositivo, é:",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1790039897926,
       "updated_at": 1790040239701
     },
     {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q6",
       "field": "contentStatus",
       "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
     },
     {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q8",
       "field": "contentStatus",
       "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
     },
     {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q9",
       "field": "contentStatus",
       "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q32",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
-    },
-    {
-      "question_id": "fis-lic-l4-f2-c13-revisando-q6",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "master-release-01-09",
-      "created_at": 1792318228108,
-      "updated_at": 1792318228108
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
     },
     {
       "question_id": "fis-lic-l1-f1-c1-revisando-q1",
@@ -605,11 +597,51 @@
     },
     {
       "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "answer",
+      "value": "144 horas",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789132318469,
+      "updated_at": 1789132318469
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
       "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "updated_at": 1792517004710
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792517002912,
+      "updated_at": 1792517002912
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792517002912,
+      "updated_at": 1792517002912
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792517002912,
+      "updated_at": 1792517002912
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792517004710,
+      "updated_at": 1792517004710
     },
     {
       "question_id": "fis-lic-l1-f1-c1-revisando-q7",
@@ -620,124 +652,1836 @@
       "updated_at": 1792491005746
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q1",
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q1",
       "field": "contentStatus",
       "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q6",
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432686236
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q8",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432684796,
+      "updated_at": 1792432684796
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q9",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432684796,
+      "updated_at": 1792432684796
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q10",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432686236,
+      "updated_at": 1792432686236
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q13",
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792437181973
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q14",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437180056,
+      "updated_at": 1792437180056
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q15",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437180056,
+      "updated_at": 1792437180056
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q16",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437181973,
+      "updated_at": 1792437181973
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q17",
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
       "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433266171
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q18",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433263863,
+      "updated_at": 1792433263863
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q20",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433263863,
+      "updated_at": 1792433263863
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q24",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433263863,
+      "updated_at": 1792433263863
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q4",
-      "field": "contentStatus",
-      "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433266171,
+      "updated_at": 1792433266171
     },
     {
-      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q12",
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q1",
       "field": "contentStatus",
       "value": "needs_content_review",
-      "actor_user_id": "ai-lote-01-textual",
-      "created_at": 1792491005746,
-      "updated_at": 1792491005746
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q14",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q15",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q16",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q17",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q18",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q19",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q2",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q20",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q21",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q22",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792437187373
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437185329,
+      "updated_at": 1792437185329
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437185329,
+      "updated_at": 1792437185329
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437187373,
+      "updated_at": 1792437187373
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q24",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q25",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432680005
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432619935,
+      "updated_at": 1792432675143
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432619935,
+      "updated_at": 1792432675143
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432680005,
+      "updated_at": 1792432680005
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q7",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433290469
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433286103,
+      "updated_at": 1792433286103
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433286103,
+      "updated_at": 1792433286103
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433290469,
+      "updated_at": 1792433290469
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-02-03-textual",
+      "created_at": 1792523663990,
+      "updated_at": 1792523663990
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433297615
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433295105,
+      "updated_at": 1792433295105
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433295105,
+      "updated_at": 1792433295105
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433295105,
+      "updated_at": 1792433295105
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433297615,
+      "updated_at": 1792433297615
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433412190
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433409115,
+      "updated_at": 1792433409115
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433409115,
+      "updated_at": 1792433409115
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433409115,
+      "updated_at": 1792433409115
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433412190,
+      "updated_at": 1792433412190
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433422811
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433420102,
+      "updated_at": 1792433420102
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433420102,
+      "updated_at": 1792433420102
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433420102,
+      "updated_at": 1792433420102
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433422811,
+      "updated_at": 1792433422811
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433430229
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433427630,
+      "updated_at": 1792433427630
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433427630,
+      "updated_at": 1792433427630
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433427630,
+      "updated_at": 1792433427630
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433430229,
+      "updated_at": 1792433430229
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433441499
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433439149,
+      "updated_at": 1792433439149
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433439149,
+      "updated_at": 1792433439149
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433439149,
+      "updated_at": 1792433439149
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433441499,
+      "updated_at": 1792433441499
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433460539
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433455895,
+      "updated_at": 1792433455895
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433455895,
+      "updated_at": 1792433455895
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433460539,
+      "updated_at": 1792433460539
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433499826
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433497511,
+      "updated_at": 1792433497511
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433497511,
+      "updated_at": 1792433497511
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433499826,
+      "updated_at": 1792433499826
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792437192589
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437190524,
+      "updated_at": 1792437190524
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437190524,
+      "updated_at": 1792437190524
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437192589,
+      "updated_at": 1792437192589
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792437197852
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437195895,
+      "updated_at": 1792437195895
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437195895,
+      "updated_at": 1792437195895
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437197852,
+      "updated_at": 1792437197852
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433659317
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433655034,
+      "updated_at": 1792433655034
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433655034,
+      "updated_at": 1792433655034
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433659317,
+      "updated_at": 1792433659317
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433675466
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433672931,
+      "updated_at": 1792433672931
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433672931,
+      "updated_at": 1792433672931
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433675466,
+      "updated_at": 1792433675466
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433688370
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433682781,
+      "updated_at": 1792433684288
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433682781,
+      "updated_at": 1792433684288
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433688370,
+      "updated_at": 1792433688370
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433696515
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433694443,
+      "updated_at": 1792433694443
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433694443,
+      "updated_at": 1792433694443
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433696515,
+      "updated_at": 1792433696515
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433709634
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433707135,
+      "updated_at": 1792433707135
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433707135,
+      "updated_at": 1792433707135
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433709634,
+      "updated_at": 1792433709634
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433767587
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433765355,
+      "updated_at": 1792433765355
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433765355,
+      "updated_at": 1792433765355
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433767587,
+      "updated_at": 1792433767587
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792437205033
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437201332,
+      "updated_at": 1792437201332
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437201332,
+      "updated_at": 1792437201332
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792437205033,
+      "updated_at": 1792437205033
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433185372
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433182565,
+      "updated_at": 1792433182565
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433182565,
+      "updated_at": 1792433182565
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433185372,
+      "updated_at": 1792433185372
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433173435
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433171183,
+      "updated_at": 1792433171183
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433171183,
+      "updated_at": 1792433171183
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433173435,
+      "updated_at": 1792433173435
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433167532
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433163167,
+      "updated_at": 1792433165618
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433163167,
+      "updated_at": 1792433165618
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433167532,
+      "updated_at": 1792433167532
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433106940
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433104870,
+      "updated_at": 1792433104870
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433104870,
+      "updated_at": 1792433104870
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433106940,
+      "updated_at": 1792433106940
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433099886
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433097633,
+      "updated_at": 1792433097633
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433097633,
+      "updated_at": 1792433097633
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433099886,
+      "updated_at": 1792433099886
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433086680
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433084116,
+      "updated_at": 1792433084116
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433084116,
+      "updated_at": 1792433084116
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433086680,
+      "updated_at": 1792433086680
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433043469
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433041367,
+      "updated_at": 1792433041367
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433041367,
+      "updated_at": 1792433041367
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433043469,
+      "updated_at": 1792433043469
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433034196
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433032104,
+      "updated_at": 1792433032104
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433032104,
+      "updated_at": 1792433032104
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433034196,
+      "updated_at": 1792433034196
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433026605
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433024478,
+      "updated_at": 1792433024478
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433024478,
+      "updated_at": 1792433024478
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433026605,
+      "updated_at": 1792433026605
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792433017011
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433013794,
+      "updated_at": 1792433014555
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433013794,
+      "updated_at": 1792433014555
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792433017011,
+      "updated_at": 1792433017011
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432994412
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432990852,
+      "updated_at": 1792432990852
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432990852,
+      "updated_at": 1792432990852
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432990852,
+      "updated_at": 1792432990852
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432994412,
+      "updated_at": 1792432994412
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432985154
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432982518,
+      "updated_at": 1792432982518
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432982518,
+      "updated_at": 1792432982518
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432982518,
+      "updated_at": 1792432982518
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432985154,
+      "updated_at": 1792432985154
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432972938
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432970969,
+      "updated_at": 1792432970969
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432970969,
+      "updated_at": 1792432970969
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432972938,
+      "updated_at": 1792432972938
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432961751
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432959440,
+      "updated_at": 1792432959440
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432959440,
+      "updated_at": 1792432959440
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432961751,
+      "updated_at": 1792432961751
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432904426
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432902018,
+      "updated_at": 1792432902018
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432902018,
+      "updated_at": 1792432902018
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432902018,
+      "updated_at": 1792432902018
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432904426,
+      "updated_at": 1792432904426
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432893273
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432890880,
+      "updated_at": 1792432890880
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432890880,
+      "updated_at": 1792432890880
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432890880,
+      "updated_at": 1792432890880
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432893273,
+      "updated_at": 1792432893273
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432870511
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432865776,
+      "updated_at": 1792432865776
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432865776,
+      "updated_at": 1792432865776
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432865776,
+      "updated_at": 1792432865776
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432870511,
+      "updated_at": 1792432870511
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432858662
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432856393,
+      "updated_at": 1792432856393
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432856393,
+      "updated_at": 1792432856393
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432856393,
+      "updated_at": 1792432856393
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432858662,
+      "updated_at": 1792432858662
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432849438
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "imageClassification",
+      "value": "no_image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432846952,
+      "updated_at": 1792432846952
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "imageReason",
+      "value": "Confirmado manualmente como sem imagem",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432846952,
+      "updated_at": 1792432846952
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "imageStatus",
+      "value": "no_image_confirmed",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432846952,
+      "updated_at": 1792432846952
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432849438,
+      "updated_at": 1792432849438
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432841872
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432837556,
+      "updated_at": 1792432837556
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432837556,
+      "updated_at": 1792432837556
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432841872,
+      "updated_at": 1792432841872
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432824741
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q32",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432824741,
+      "updated_at": 1792432824741
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432811269
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432809282,
+      "updated_at": 1792432809282
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432809282,
+      "updated_at": 1792432809282
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432811269,
+      "updated_at": 1792432811269
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432804712
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432802528,
+      "updated_at": 1792432802528
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432802528,
+      "updated_at": 1792432802528
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432804712,
+      "updated_at": 1792432804712
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432777924
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432777924,
+      "updated_at": 1792432777924
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792432694191
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "field": "imageClassification",
+      "value": "image_required",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432692499,
+      "updated_at": 1792432692499
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "field": "imageStatus",
+      "value": "approved",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432692499,
+      "updated_at": 1792432692499
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792432694191,
+      "updated_at": 1792432694191
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431651953
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431651953,
+      "updated_at": 1792431651953
+    },
+    {
+      "question_id": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431645729
+    },
+    {
+      "question_id": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431645729,
+      "updated_at": 1792431645729
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431641524
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431641524,
+      "updated_at": 1792431641524
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431636302
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431636302,
+      "updated_at": 1792431636302
+    },
+    {
+      "question_id": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431625916
+    },
+    {
+      "question_id": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431625916,
+      "updated_at": 1792431625916
+    },
+    {
+      "question_id": "fis-lic-l4-f2-c13-revisando-q6",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792318228108,
+      "updated_at": 1792431610822
+    },
+    {
+      "question_id": "fis-lic-l4-f2-c13-revisando-q6",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1792431610822,
+      "updated_at": 1792431610822
     }
   ]
 }

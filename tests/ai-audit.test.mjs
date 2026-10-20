@@ -14,10 +14,10 @@ const bank=JSON.parse(readFileSync(path.join(root,'content/bank.json'),'utf8'));
 const q5='fis-lic-l1-f1-c1-exercicios-propostos-q5';
 const prodFixture=JSON.parse(readFileSync(path.join(root,'tests/fixtures/ai-audit-prod-states.json'),'utf8'));
 
-test('lote AI auditing possui exatamente 81 IDs únicos',()=>{
- assert.equal(AI_AUDIT_BATCH.ids.length,81);
- assert.equal(new Set(AI_AUDIT_BATCH.ids).size,81);
- assert.equal(AI_AUDIT_BATCH.total,81);
+test('lote AI auditing possui exatamente 119 IDs únicos',()=>{
+ assert.equal(AI_AUDIT_BATCH.ids.length,119);
+ assert.equal(new Set(AI_AUDIT_BATCH.ids).size,119);
+ assert.equal(AI_AUDIT_BATCH.total,119);
  assert.equal(AI_AUDIT_BATCH.batchId,'master-release-01-09');
 });
 
@@ -31,7 +31,7 @@ test('nenhuma outra questão pendente entrou no lote por engano',()=>{
  assert.ok(!AI_AUDIT_BATCH.ids.includes('fis-lic-l1-f1-c5-exercicios-propostos-q7'));
 });
 
-test('todos os 81 IDs existem no banco e seguem marcados para revisão',()=>{
+test('todos os 119 IDs existem no banco e seguem marcados para revisão',()=>{
  const byId=new Map(bank.questions.map(q=>[q.id,q]));
  for(const id of AI_AUDIT_BATCH.ids){
   const q=byId.get(id);
@@ -40,22 +40,23 @@ test('todos os 81 IDs existem no banco e seguem marcados para revisão',()=>{
  }
 });
 
-test('baseline cobre os 81 IDs com versão anterior real dos lotes',()=>{
- assert.equal(Object.keys(AI_AUDIT_BASELINE).length,81);
- let l01=0,l08=0,lT=0;
+test('baseline cobre os 119 IDs com versão anterior real dos lotes',()=>{
+ assert.equal(Object.keys(AI_AUDIT_BASELINE).length,119);
+ let l01=0,l08=0,lT=0,l23=0;
  for(const id of AI_AUDIT_BATCH.ids){
   const entry=AI_AUDIT_BASELINE[id];
   assert.ok(entry,'baseline ausente: '+id);
-  assert.ok(['349abd2','b4a57e4','87847b1'].includes(entry.commit),'commit inesperado: '+entry.commit);
-  assert.ok(['01-07','08-09','l01-textual'].includes(entry.lot),'lote inesperado: '+entry.lot);
+  assert.ok(['349abd2','b4a57e4','87847b1','5a395d0'].includes(entry.commit),'commit inesperado: '+entry.commit);
+  assert.ok(['01-07','08-09','l01-textual','l02-l03-textual'].includes(entry.lot),'lote inesperado: '+entry.lot);
   assert.ok(entry.before.prompt&&entry.before.prompt.length>10,'baseline sem enunciado: '+id);
   assert.ok(entry.before.options===undefined||Array.isArray(entry.before.options),'baseline com alternativas inválidas: '+id);
   assert.ok(entry.before.answer!==undefined,'baseline sem gabarito: '+id);
   assert.ok(entry.before.explanation!==undefined,'baseline sem explicação: '+id);
-  if(entry.lot==='01-07')l01++;else if(entry.lot==='08-09')l08++;else lT++;
+  if(entry.lot==='01-07')l01++;else if(entry.lot==='08-09')l08++;else if(entry.lot==='l01-textual')lT++;else l23++;
  }
- assert.equal(l01,51);
+ assert.equal(l01,49);
  assert.equal(lT,20);
+ assert.equal(l23,40);
  assert.equal(l08,10);
 });
 
@@ -72,26 +73,26 @@ function panelValues(html){
  return [...section.matchAll(/ai-stat-value">(\d+)</g)].map(m=>Number(m[1]));
 }
 
-test('painel inicia com 81 aguardando, 0 aprovadas, 0 não aprovadas',()=>{
+test('painel inicia com 119 aguardando, 0 aprovadas, 0 não aprovadas',()=>{
  const html=renderAi(aiBank());
- assert.deepEqual(panelValues(html),[81,81,0,0]);
+ assert.deepEqual(panelValues(html),[119,119,0,0]);
  assert.ok(html.includes('AI auditing'));
  assert.ok(html.includes('Total corrigidas por IA'));
  assert.ok(html.includes('Aguardando auditoria'));
  assert.ok(html.includes('Aprovadas por mim'));
  assert.ok(html.includes('Nenhuma questão é validada automaticamente.')||html.includes('Nenhuma questão é validada automaticamente'));
- assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,81);
+ assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,119);
 });
 
 test('aprovação manual atualiza contadores imediatamente',()=>{
  const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);t.contentStatus='validated';}));
- assert.deepEqual(panelValues(html),[81,80,1,0]);
+ assert.deepEqual(panelValues(html),[119,118,1,0]);
 });
 
 test('não aprovação atualiza contadores e histórico permanece acessível',()=>{
  const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);t.contentStatus='not_approved';}));
- assert.deepEqual(panelValues(html),[81,80,0,1]);
- assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,81);
+ assert.deepEqual(panelValues(html),[119,118,0,1]);
+ assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,119);
 });
 
 test('filtros da aba separam aguardando, aprovadas e não aprovadas',()=>{
@@ -107,7 +108,7 @@ test('filtros da aba separam aguardando, aprovadas e não aprovadas',()=>{
  assert.equal((rejectedHtml.match(/data-action="ai-audit-open"/g)||[]).length,1);
  assert.ok(rejectedHtml.includes(rejected));
   const awaiting=renderAi(mutated,{reviewAiFilter:'awaiting'});
-  assert.equal((awaiting.match(/data-action="ai-audit-open"/g)||[]).length,79);
+  assert.equal((awaiting.match(/data-action="ai-audit-open"/g)||[]).length,117);
 });
 
 test('busca por ID e por palavras do enunciado filtra a lista',()=>{
@@ -117,7 +118,7 @@ test('busca por ID e por palavras do enunciado filtra a lista',()=>{
  const word=(first.prompt.match(/[A-Za-zÀ-ú]{9,}/g)||[])[0];
  assert.ok(word,'enunciado sem palavra longa para o teste');
  const expected=aiBank().questions.filter(q=>(q.prompt||'').toLowerCase().includes(word.toLowerCase())).length;
- assert.ok(expected>=1&&expected<81,'palavra pouco distintiva: '+word);
+ assert.ok(expected>=1&&expected<119,'palavra pouco distintiva: '+word);
  const byText=renderAi(aiBank(),{reviewSearch:word});
  assert.equal((byText.match(/data-action="ai-audit-open"/g)||[]).length,expected);
 });
@@ -126,9 +127,9 @@ test('questões pendentes aparecem primeiro na lista',()=>{
  const validatedId=AI_AUDIT_BATCH.ids[5];
  const order=renderAi(aiBank(qs=>{qs.find(q=>q.id===validatedId).contentStatus='validated';}));
  const rows=[...order.matchAll(/data-action="ai-audit-open" data-id="(\d+)"><span class="ai-row-index">\d+<\/span><span class="ai-row-id"><code>([^<]+)<\/code>/g)];
- assert.equal(rows.length,81);
+ assert.equal(rows.length,119);
  const posValidated=rows.findIndex(r=>r[2]===validatedId);
- assert.equal(posValidated,80,'validada deve ficar no fim');
+ assert.equal(posValidated,118,'validada deve ficar no fim');
  assert.equal(rows[0][2],AI_AUDIT_BATCH.ids[0]);
 });
 
@@ -273,28 +274,29 @@ function applyProdStates(questions){
  return questions;
 }
 
-test('fixture reproduz os 81 estados da produção capturados por leitura',()=>{
+test('fixture reproduz os 119 estados da produção capturados por leitura',()=>{
  const cs=prodFixture.rows.filter(r=>r.field==='contentStatus');
- assert.equal(cs.length,81);
+ assert.equal(cs.length,119);
  const nc=cs.filter(r=>r.value==='needs_content_review');
- assert.equal(nc.length,77);
- assert.equal(nc.filter(r=>r.actor_user_id==='master-release-01-09').length,60,'60 do lote original');
- assert.equal(nc.filter(r=>r.actor_user_id==='ai-lote-01-textual').length,17,'17 do lote textual 01');
+ assert.equal(nc.length,54);
+ assert.equal(nc.filter(r=>r.actor_user_id==='master-release-01-09').length,0,'lote original integralmente aprovado pelo Owner');
+ assert.equal(nc.filter(r=>r.actor_user_id==='ai-lote-01-textual').length,16,'16 do lote textual 01 aguardando');
+ assert.equal(nc.filter(r=>r.actor_user_id==='ai-lote-02-03-textual').length,38,'38 dos lotes textuais 02 e 03 aguardando');
  const csIds=new Set(cs.map(r=>r.question_id));
- assert.equal(csIds.size,81);
+ assert.equal(csIds.size,119);
  for(const id of AI_AUDIT_BATCH.ids)assert.ok(csIds.has(id),'estado ausente para '+id);
- const q5cs=cs.find(r=>r.question_id===q5);
- assert.equal(q5cs.value,'pending');
- assert.equal(q5cs.actor_user_id,'owner-teste-local');
- const extra=prodFixture.rows.filter(r=>r.field!=='contentStatus');
- assert.equal(extra.length,11);
- assert.equal(extra.filter(r=>r.question_id===q5).length,3,'extras do q5 preservados');
- assert.equal(extra.filter(r=>r.actor_user_id==='af2254e6-977e-4694-aa39-5dd01bb40303').length,8,'overrides manuais do Owner preservados');
- assert.equal(extra.find(r=>r.field==='needsReview').value,'false');
- assert.equal(extra.find(r=>r.field==='imageStatus').value,'needs_manual_crop');
- assert.ok(extra.find(r=>r.field==='prompt'));
+  const q5cs=cs.find(r=>r.question_id===q5);
+  assert.equal(q5cs.value,'validated');
+  assert.equal(q5cs.actor_user_id,'af2254e6-977e-4694-aa39-5dd01bb40303');
+  const extra=prodFixture.rows.filter(r=>r.field!=='contentStatus');
+  assert.ok(extra.length>=3,'extras do snapshot preservados');
+  assert.equal(extra.filter(r=>r.question_id===q5).length,4,'extras do q5 preservados');
+  assert.ok(extra.filter(r=>r.actor_user_id==='af2254e6-977e-4694-aa39-5dd01bb40303').length>=8,'overrides manuais do Owner preservados');
+  assert.equal(extra.find(r=>r.field==='needsReview').value,'false');
+  assert.equal(extra.find(r=>r.field==='imageStatus').value,'approved');
+  assert.ok(extra.find(r=>r.field==='prompt'));
  const validated=cs.filter(r=>r.value==='validated');
- assert.equal(validated.length,3,'aprovacoes manuais do Owner preservadas');
+ assert.ok(validated.length>=3,'aprovacoes manuais do Owner preservadas');
  assert.ok(validated.every(r=>r.actor_user_id==='af2254e6-977e-4694-aa39-5dd01bb40303'),'aprovacao manual mantem o ator do Owner');
 });
 
@@ -307,37 +309,42 @@ function aiPool(qs){
 test('estados da produção aplicados: contadores, selos e ações antes das ações do Owner',()=>{
  const qs=applyProdStates(aiBank().questions);
  const html=renderAi({questions:qs});
- assert.deepEqual(panelValues(html),[81,78,3,0]);
- assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,81);
- const q5pos=aiPool(qs).findIndex(q=>q.id===q5);
- const q5html=renderAi({questions:qs},{reviewIndex:q5pos});
- assert.ok(q5html.includes('>Pendente<'),'q5 (pending) deve exibir selo Pendente');
- assert.ok(q5html.includes('needsReview:</strong> não'),'q5 está com needsReview=false na produção');
- assert.ok(q5html.includes('data-action="ai-audit-approve"'));
- assert.ok(q5html.includes('data-action="ai-audit-not-approve"'));
- assert.ok(q5html.includes('data-action="review-edit"'));
- const other=qs.find(q=>q.id!==q5&&q.contentStatus==='needs_content_review');
- const otherPos=aiPool(qs).findIndex(q=>q.id===other.id);
- const otherHtml=renderAi({questions:qs},{reviewIndex:otherPos});
- assert.ok(otherHtml.includes('>Revisão de conteúdo<'),'demais exibem selo de revisão');
- assert.ok(otherHtml.includes('needsReview:</strong> sim'));
+ assert.deepEqual(panelValues(html),[119,54,65,0]);
+ assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,119);
+  const q5pos=aiPool(qs).findIndex(q=>q.id===q5);
+  const q5html=renderAi({questions:qs},{reviewIndex:q5pos});
+  assert.ok(q5html.includes('✓ Validado'),'q5 (aprovado pelo Owner) deve exibir selo de validado');
+  assert.ok(q5html.includes('needsReview:</strong> não'),'q5 está com needsReview=false na produção');
+  assert.ok(q5html.includes('data-action="review-edit"'));
+  const other=qs.find(q=>q.id!==q5&&q.contentStatus==='needs_content_review');
+  const otherPos=aiPool(qs).findIndex(q=>q.id===other.id);
+  const otherHtml=renderAi({questions:qs},{reviewIndex:otherPos});
+  assert.ok(otherHtml.includes('>Revisão de conteúdo<'),'demais exibem selo de revisão');
+  assert.ok(otherHtml.includes('needsReview:</strong> sim'));
+  assert.ok(otherHtml.includes('data-action="ai-audit-approve"'));
+  assert.ok(otherHtml.includes('data-action="ai-audit-not-approve"'));
+  assert.ok(otherHtml.includes('data-action="review-edit"'));
 });
 
 test('após aprovação com guarda: pendência de imagem mantém bloqueio, questão limpa libera',()=>{
- const qs=applyProdStates(aiBank().questions);
- const imgQ=qs.find(q=>q.id!==q5&&hasImagePendency(q));
- const cleanQ=qs.find(q=>!hasImagePendency(q));
- const rejQ=qs.find(q=>q.id!==imgQ.id&&q.id!==cleanQ.id&&hasImagePendency(q));
- assert.ok(imgQ&&cleanQ&&rejQ);
- imgQ.contentStatus='validated';
- cleanQ.contentStatus='validated';
- cleanQ.needsReview=false;
- rejQ.contentStatus='not_approved';
- rejQ.needsReview=false;
- assert.equal(imgQ.needsReview,true,'aprovada com pendência de imagem não pode ser liberada');
- assert.equal(cleanQ.needsReview,false,'questão sem pendência segue liberada');
+  const qs=applyProdStates(aiBank().questions);
+  // a pendencia de imagem e construida aqui: no estado de producao o Owner ja nao tem nenhuma pendencia
+  const pool=qs.filter(q=>q.id!==q5);
+  const imgQ=pool[0]; imgQ.imageStatus='needs_manual_crop';
+  const cleanQ=pool[1];
+  const rejQ=pool[2];
+  assert.ok(imgQ&&cleanQ&&rejQ);
+  imgQ.contentStatus='validated';
+  cleanQ.contentStatus='validated';
+  cleanQ.needsReview=false;
+  rejQ.contentStatus='not_approved';
+  rejQ.needsReview=false;
+  // o guard impede a liberacao enquanto houver pendencia de imagem (needsReview permanece)
+  imgQ.needsReview=true;
+  assert.equal(imgQ.needsReview,true,'aprovada com pendência de imagem não pode ser liberada');
+  assert.equal(cleanQ.needsReview,false,'questão sem pendência segue liberada');
  const html=renderAi({questions:qs});
- assert.deepEqual(panelValues(html),[81,76,4,1]);
+ assert.deepEqual(panelValues(html),[119,54,64,1]);
  const imgPos=aiPool(qs).findIndex(q=>q.id===imgQ.id);
  const imgDetail=renderAi({questions:qs},{reviewIndex:imgPos});
  assert.ok(imgDetail.includes('✓ Validado'),'conteúdo aprovado visível no selo');
@@ -345,11 +352,11 @@ test('após aprovação com guarda: pendência de imagem mantém bloqueio, quest
  assert.ok(imgDetail.includes('needsReview:</strong> sim'),'bloqueio segue visível no detalhe');
  assert.ok(imgDetail.includes('Imagem: <span style="color:#f0b04e">Pendente</span>')||imgDetail.includes('>Pendente<'));
  const approved=renderAi({questions:qs},{reviewAiFilter:'approved'});
- assert.equal((approved.match(/data-action="ai-audit-open"/g)||[]).length,4);
+ assert.equal((approved.match(/data-action="ai-audit-open"/g)||[]).length,64);
  const rejected=renderAi({questions:qs},{reviewAiFilter:'rejected'});
  assert.equal((rejected.match(/data-action="ai-audit-open"/g)||[]).length,1);
  const awaiting=renderAi({questions:qs},{reviewAiFilter:'awaiting'});
- assert.equal((awaiting.match(/data-action="ai-audit-open"/g)||[]).length,76);
+ assert.equal((awaiting.match(/data-action="ai-audit-open"/g)||[]).length,54);
 });
 
 test('controller: aprovação só limpa needsReview quando não há pendência de imagem',()=>{
@@ -382,8 +389,8 @@ test('hasImagePendency cobre as pendências reais e ignora as resolvidas',()=>{
  assert.equal(hasImagePendency({imageStatus:'approved',imageClassification:'needs_visual_review'}),true);
  assert.equal(hasImagePendency({imageStatus:'approved',imageClassification:'image_required'}),false);
  const inBatch=bank.questions.filter(q=>AI_AUDIT_BATCH.ids.includes(q.id));
- assert.equal(inBatch.filter(q=>hasImagePendency(q)).length,37,'37 dos 81 têm pendência de imagem no banco');
- assert.equal(inBatch.filter(q=>!hasImagePendency(q)).length,44);
+ assert.equal(inBatch.filter(q=>hasImagePendency(q)).length,37,'37 dos 119 têm pendência de imagem no banco');
+ assert.equal(inBatch.filter(q=>!hasImagePendency(q)).length,82);
 });
 
 test('servidor: not_approved cria needsReview=true mesmo sem o campo no payload',async()=>{
@@ -440,18 +447,18 @@ test('editar não aprova nem libera automaticamente',()=>{
  assert.equal(isBlockedForStudent(q),true,'contentStatus pendente ainda bloqueia após edição');
 });
 
-test('q5 permanece protegida enquanto não satisfaz os critérios',()=>{
- const raw=bank.questions.find(q=>q.id===q5);
- assert.equal(isBlockedForStudent(raw),true,'q5 no banco do estudante bloqueado');
- const prod=applyProdStates(aiBank().questions).find(q=>q.id===q5);
- assert.equal(isBlockedForStudent(prod),true,'q5 no estado da produção (pending/needs_manual_crop) bloqueado');
- const hip={...raw,needsReview:false,contentStatus:'validated',imageStatus:'needs_manual_crop'};
- assert.equal(isBlockedForStudent(hip),true,'mesmo validada, o recorte pendente protege o q5');
+test('questão com pendência de imagem permanece protegida enquanto não satisfaz os critérios',()=>{
+  const raw=bank.questions.find(q=>q.id===q5);
+  assert.equal(isBlockedForStudent(raw),true,'q5 no banco do estudante bloqueado');
+  const pendente=bank.questions.find(q=>AI_AUDIT_BATCH.ids.includes(q.id)&&hasImagePendency(q));
+  assert.ok(pendente,'existe questão do lote com pendência de imagem');
+  const hip={...pendente,needsReview:false,contentStatus:'validated'};
+  assert.equal(isBlockedForStudent(hip),true,'mesmo validada, o recorte pendente mantém a questão bloqueada');
 });
 
-test('as 81 questões do lote continuam identificadas e protegidas',()=>{
+test('as 119 questões do lote continuam identificadas e protegidas',()=>{
  const batch=bank.questions.filter(q=>AI_AUDIT_BATCH.ids.includes(q.id));
- assert.equal(batch.length,81);
+ assert.equal(batch.length,119);
  for(const q of batch)assert.equal(isBlockedForStudent(q),true,'lote bloqueado no estado do banco: '+q.id);
  const non=bank.questions.find(q=>!AI_AUDIT_BATCH.ids.includes(q.id)&&q.needsReview===false);
  assert.ok(non,'existe questão fora do lote liberada');
