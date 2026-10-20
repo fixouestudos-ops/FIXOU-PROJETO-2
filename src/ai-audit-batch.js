@@ -1,11 +1,12 @@
 export const AI_AUDIT_BATCH={
  "version": 1,
  "batchId": "master-release-01-09",
- "total":  61,
+ "total":  81,
  "preservedOverrideId": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
  "source": {
   "d1": "question_overrides WHERE field='contentStatus' AND value='needs_content_review' AND actor_user_id='master-release-01-09' → 60 ids",
-  "preserved": "override manual do Owner em contentStatus=pending preservado pela migração → 1 id"
+  "preserved": "override manual do Owner em contentStatus=pending preservado pela migração → 1 id",
+  "textual": "lote textual 01 → 20 ids com actor_user_id='ai-lote-01-textual'"
  },
  "ids": [
   "fis-lic-l1-f1-c1-exercicios-complementares-q1",
@@ -68,6 +69,26 @@ export const AI_AUDIT_BATCH={
   "fis-lic-l3-f1-c10-exercicios-complementares-q78",
   "fis-lic-l3-f1-c10-exercicios-propostos-q62",
   "fis-lic-l4-f1-c11-exercicios-complementares-q22",
-  "fis-lic-l4-f2-c13-revisando-q6"
+  "fis-lic-l4-f2-c13-revisando-q6",
+  "fis-lic-l1-f1-c1-revisando-q1",
+  "fis-lic-l1-f1-c1-revisando-q4",
+  "fis-lic-l1-f1-c1-revisando-q5",
+  "fis-lic-l1-f1-c1-revisando-q6",
+  "fis-lic-l1-f1-c1-revisando-q7",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q1",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q6",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q8",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q9",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q10",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q13",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q14",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q15",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q16",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q17",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q18",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q20",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q24",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q4",
+  "fis-lic-l1-f1-c1-exercicios-propostos-q12"
  ]
 };

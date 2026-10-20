@@ -4466,9 +4466,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Um automóvel percorre uma estrada em movimento uniforme, com função horária do espaço dada por s 5 212 1 4t, em unidades do SI. Determine, para o móvel: a) o espaço inicial. b) a velocidade escalar. c) se o movimento é progressivo ou retrógrado. d) o espaço para t 5  s. e) o instante em que passa pela origem dos espaços. f) o instante em que passa por s 5  m.",
-                          "answer":  "Em Mecânica, o movimento e o repouso de um corpo são definidos em relação a um referencial. Para dizer que tanto Heloísa quanto Abelardo estão corretos, devemos interpretar a afirmação de Heloísa como “o passageiro não se move em relação ao ônibus” e a afirmação de Abelardo como “o passageiro está em movimento em relação à Terra (ou à rodovia)”.",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: Em Mecânica, o movimento e o repouso de um corpo são definidos em relação a um referencial. Para dizer que tanto Heloísa quanto Abelardo estão corretos, devemos interpretar a afirmação de Heloísa como “o passageiro não se move em relação ao ônibus” e a afirmação de Abelardo como “o passageiro está em movimento em relação à Terra (ou à rodovia)”.",
+                          "prompt":  "Um automóvel percorre uma estrada em movimento uniforme, com função horária da posição s(t) = −12 + 4t (em unidades do SI). Determine: a) a posição inicial; b) a velocidade escalar; c) se o movimento é progressivo ou retrógrado; d) a posição em t = 5 s; e) o instante em que passa pela origem; f) o instante em que passa por s = 16 m.",
+                          "answer":  "a) −12 m; b) +4 m/s; c) progressivo; d) 8 m; e) 3 s; f) 7 s",
+                          "explanation":  "No movimento uniforme, s(t) = s₀ + vt. Comparando com s(t) = −12 + 4t (SI), obtemos posição inicial s₀ = −12 m e velocidade v = +4 m/s. Como v > 0, o movimento é progressivo. Para t = 5 s: s = −12 + 4×5 = 8 m. Na origem: 0 = −12 + 4t, logo t = 3 s. Para s = 16 m: 16 = −12 + 4t, logo t = 7 s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4607,9 +4607,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "UFMG Dois carros, A e B, movem-se numa estrada retilínea com velocidades constantes, vA 5 20 m/s e vB 5 18 m/s, respectivamente. O carro A está, inicialmente, 500 m atrás do carro B. Quanto tempo o carro A gasta para alcançar o carro B?",
-                          "answer":  "56 3",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 56 3",
+                          "prompt":  "UFMG — Dois carros A e B percorrem uma estrada retilínea com velocidades constantes v_A = 20 m/s e v_B = 18 m/s, respectivamente, no mesmo sentido. O carro A está inicialmente 500 m atrás do carro B. Quanto tempo A leva para alcançar B?",
+                          "answer":  "250 s (4 min 10 s)",
+                          "explanation":  "O carro A alcança B porque tem velocidade maior. A velocidade relativa é v_rel = 20 − 18 = 2 m/s. Para eliminar a distância inicial de 500 m, o tempo é t = 500/2 = 250 s, isto é, 4 min e 10 s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4633,7 +4633,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "non_objective_or_composite"
+
                                             ],
                           "imageAssets":  [
 
@@ -4654,9 +4654,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Dois automóveis partem, simultaneamente, de dois pontos distantes 700 m um do outro, com velocidades, respectivamente, iguais a 108 km/h e 5 m/s, em sentidos opostos. Determine o tempo que esses automóveis levam desde a partida até o encontro.",
-                          "answer":  "1,2 min",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 1,2 min",
+                          "prompt":  "Dois automóveis partem simultaneamente de pontos separados por 700 m e seguem um em direção ao outro, com velocidades constantes de 108 km/h e 5 m/s. Quanto tempo levam até se encontrar?",
+                          "answer":  "20 s",
+                          "explanation":  "Primeiro, converta 108 km/h para 30 m/s, dividindo por 3,6. Como os automóveis se aproximam em sentidos opostos, a velocidade relativa é 30 + 5 = 35 m/s. Assim, t = 700/35 = 20 s. Não são 1,2 min (72 s).",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4680,7 +4680,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "non_objective_or_composite"
+
                                             ],
                           "imageAssets":  [
 
@@ -4701,9 +4701,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "FMABC-SP Dois foguetes espaciais são enviados, da Terra, com 48 horas de intervalo. O primeiro tem velocidade constante de 30000 km/h e o segundo, de 40000 km/h. Ambas as velocidades têm mesmo sentido e mesma direção. O sistema de referência é a Terra. Para que o primeiro foguete seja ultrapassado pelo segundo, durante quantas horas, pelo menos, este último deverá voar?",
-                          "answer":  "20 km/h",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 20 km/h",
+                          "prompt":  "FMABC-SP — Dois foguetes partem da Terra na mesma direção e no mesmo sentido, com intervalo de 48 horas. O primeiro viaja a velocidade constante de 30.000 km/h; o segundo, a 40.000 km/h. Quanto tempo após a própria partida o segundo foguete deverá viajar para alcançar o primeiro?",
+                          "answer":  "144 h (6 dias), contadas a partir da partida do segundo foguete",
+                          "explanation":  "Quando o segundo foguete parte, o primeiro já percorreu d₀ = 30.000 × 48 = 1.440.000 km. O segundo ganha distância a uma velocidade relativa de 40.000 − 30.000 = 10.000 km/h. Portanto, t = 1.440.000/10.000 = 144 h = 6 dias desde o lançamento do segundo foguete.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4727,7 +4727,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "non_objective_or_composite"
+
                                             ],
                           "imageAssets":  [
 
@@ -4748,9 +4748,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Dois trens, A e B, de 300 m de comprimento percorrem trajetórias paralelas com velocidades, respectivamente, iguais a 20 m/s e 10 m/s. Determine: a) o tempo que o trem A leva para passar por uma ponte de  m de comprimento. b) o tempo que o trem A leva para ultrapassar o trem B quando se deslocam no mesmo sentido. c) o tempo que os trens levam para ultrapassar um ao outro quando se deslocam em sentidos opostos.",
-                          "answer":  "15 km/h",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 15 km/h",
+                          "prompt":  "Dois trens, A e B, cada um com 300 m de comprimento, percorrem trilhos paralelos com velocidades constantes de 20 m/s e 10 m/s, respectivamente. Determine: a) o tempo para o trem A atravessar completamente uma ponte de 200 m; b) o tempo para A ultrapassar completamente B, quando viajam no mesmo sentido; c) o tempo para se cruzarem completamente, quando viajam em sentidos opostos.",
+                          "answer":  "a) 25 s; b) 60 s; c) 20 s",
+                          "explanation":  "a) Para passar completamente pela ponte, A deve percorrer seu comprimento (300 m) mais o da ponte (200 m): t = 500/20 = 25 s. b) Na ultrapassagem no mesmo sentido, a distância relativa é a soma dos comprimentos dos trens (600 m), e a velocidade relativa vale 20 − 10 = 10 m/s: t = 600/10 = 60 s. c) Em sentidos opostos, a velocidade relativa vale 20 + 10 = 30 m/s: t = 600/30 = 20 s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4804,7 +4804,7 @@
                                           "é possível um corpo A estar em movimento em relação a dois outros corpos, B e C, e B estar em repouso em relação a C."
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "O movimento depende do referencial. A alternativa D é falsa, pois o mesmo corpo pode estar em movimento em relação à rua e em repouso em relação ao veículo em que viaja. A alternativa A descreve a reciprocidade do repouso relativo; B e E são possíveis; C também é correta no referencial ligado à Terra. Portanto, a incorreta é D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4841,7 +4841,7 @@
                           "estimatedSeconds":  120,
                           "imageClassification":  "no_image_required",
                           "imageStatus":  "no_image_required",
-                          "contentStatus":  "pending",
+                          "contentStatus":  "needs_content_review",
                           "imageReason":  "Questão puramente textual"
                       },
                       {
@@ -4899,15 +4899,15 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unicamp-SP 2017 Em 2016 foi batido o recorde de voo ininterrupto mais longo da história. O avião Solar Impulse 2, movido a energia solar, percorreu quase 6480 km em aproximadamente 5 dias, partindo de Nagoya no Japão até o Havaí nos Estados Unidos da América. A velocidade escalar média desenvolvida pelo avião foi de aproximadamente",
+                          "prompt":  "Unicamp-SP (2017) — Em 2016, o avião Solar Impulse 2, movido a energia solar, percorreu aproximadamente 6.480 km em cinco dias, de Nagoya (Japão) até o Havaí, sem interrupções. Sua velocidade escalar média foi aproximadamente:",
                           "options":  [
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h"
+                                          "54 km/h",
+                                          "15 km/h",
+                                          "1.296 km/h",
+                                          "198 km/h"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "A velocidade escalar média é a distância total dividida pelo tempo total. Cinco dias correspondem a 5 × 24 = 120 h. Logo, v_m = 6.480 km / 120 h = 54 km/h. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4931,7 +4931,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -4952,15 +4952,15 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unicamp-SP 2018 Situado na costa peruana, Chankillo, o mais antigo observatório das Américas, é composto por treze torres que se alinham de norte a sul ao longo da uma colina. Em 21 de dezembro, quando ocorre o solstício de verão no Hemisfério Sul, o Sol nasce à direita da primeira torre (sul), na extrema direita, a partir de um ponto de observação definido. À medida que os dias passam, a posição em que o Sol nasce se desloca entre as torres rumo à esquerda (norte). Pode-se calcular o dia do ano observando-se qual torre coincide com posição do Sol ao amanhecer. Em 21 de junho, solstício de inverno no Hemisfério Sul, o Sol nasce à esquerda da última torre na extrema esquerda e, à medida que os dias passam, vai se movendo rumo à direita, para reiniciar o ciclo no dezembro seguinte. Sabendo que as torres de Chankillo se posicionam ao longo de 300 metros no eixo norte-sul, a velocidade escalar média com a qual a posição do nascer do Sol se desloca através das torres é de aproximadamente: Norte Sul",
+                          "prompt":  "Unicamp-SP (2018) — Em Chankillo, no Peru, treze torres estão alinhadas aproximadamente no eixo norte-sul. Ao longo do ano, a posição aparente do nascer do Sol se desloca do extremo sul, próximo ao solstício de 21 de dezembro, até o extremo norte, próximo ao solstício de 21 de junho. Sabendo que a faixa ocupada pelas torres tem extensão aproximada de 300 m, qual é a velocidade escalar média, em m/dia, desse deslocamento aparente entre os dois solstícios?",
                           "options":  [
-                                          ", m/dia",
-                                          ", m/dia",
-                                          " m/dia",
-                                          " m/dia"
+                                          "0,8 m/dia",
+                                          "1,6 m/dia",
+                                          "25 m/dia",
+                                          "50 m/dia"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "Do solstício de dezembro ao de junho decorrem cerca de seis meses, aproximadamente 182 dias. Nesse intervalo, a posição aparente do nascer do Sol percorre 300 m ao longo das torres. Assim, v_m ≈ 300/182 ≈ 1,65 m/dia, arredondado para 1,6 m/dia. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -4984,7 +4984,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5005,15 +5005,15 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Uerj 2024 O menor tempo medido em laboratório ocorreu na escala de zeptossegundos e corresponde ao intervalo Dt em que uma partícula de luz percorre a distância que separa os centros atômicos de uma única molécula de hidrogênio. Uma unidade de zeptossegundo equivale a 10221 segundo. Admita que a velocidade da luz seja de 3 ? 108 m/s e que a distância entre os centros atômicos de uma molécula de hidrogênio seja de 7,2 ? 10211 metro. Nessas condições, no referencial da partícula de luz, o valor de Dt, em zeptossegundos, é igual a:",
+                          "prompt":  "Uerj (2024) — Um zeptossegundo equivale a 10⁻²¹ s. Considere que a luz se propaga no vácuo com velocidade c = 3,0 × 10⁸ m/s e que a separação entre os centros dos dois átomos de uma molécula de hidrogênio seja 7,2 × 10⁻¹¹ m. No referencial do laboratório, o intervalo Δt para a luz percorrer essa distância, expresso em zeptossegundos, é:",
                           "options":  [
-                                          "",
-                                          "",
-                                          "",
-                                          " 006366_pv_pvv_al_fis_3_vol1_liv_005_022_f1_c1_P3.indd 13 08/08/25 17:27"
+                                          "120",
+                                          "180",
+                                          "240",
+                                          "320"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Um zeptossegundo equivale a 10⁻²¹ s. No referencial do laboratório, o intervalo para a luz percorrer 7,2 × 10⁻¹¹ m é Δt = d/c = (7,2 × 10⁻¹¹)/(3,0 × 10⁸) = 2,4 × 10⁻¹⁹ s. Dividindo por 10⁻²¹ s/zeptossegundo, obtemos 240 zeptossegundos. Alternativa C. Observação: não existe referencial de repouso de um fóton; por isso, a frase original \"no referencial da partícula de luz\" foi substituída pelo referencial do laboratório.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5037,7 +5037,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5058,15 +5058,15 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Unicamp-SP 2021 Recentemente, uma equipe internacional de cientistas detectou a explosão de uma estrela conhecida como SN2016aps, que teria sido a explosão de supernova mais brilhante já registrada. A SN2016aps dista da Terra 4,0 bilhões de anos-luz, enquanto a supernova DES16C2nm, localizada a 10,5 bilhões de anos -luz de distância da Terra, é a mais distante já descoberta. Considere que uma explosão das duas supernovas ocorra simultaneamente. Quando o sinal luminoso da explosão da supernova mais próxima for detectado na Terra, a radiação luminosa da supernova DES16C2nm estará a uma distância da Terra aproximadamente igual a Dados:  ano à , ?  s; velocidade da luz: c 5 , ?  m/s.",
+                          "prompt":  "Unicamp-SP (2021) — A supernova SN2016aps está a cerca de 4,0 bilhões de anos-luz da Terra, enquanto a supernova DES16C2nm está a cerca de 10,5 bilhões de anos-luz. Considere que explosões nessas duas supernovas ocorreram simultaneamente. Quando a luz da explosão da mais próxima chegar à Terra, a que distância aproximada da Terra estará a luz emitida pela mais distante? Dados: 1 ano ≈ 3,0 × 10⁷ s; c = 3,0 × 10⁸ m/s.",
                           "options":  [
-                                          ", ?  km",
-                                          ", ?  km",
-                                          ", ?  km",
-                                          ", ?  km"
+                                          "6,5 × 10⁹ km",
+                                          "9,0 × 10¹⁵ km",
+                                          "3,6 × 10¹⁶ km",
+                                          "5,9 × 10²² km"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A segunda supernova está 10,5 − 4,0 = 6,5 bilhões de anos-luz mais distante da Terra. Quando a luz da primeira chega, faltam à luz da segunda 6,5 × 10⁹ anos de percurso. Um ano-luz vale c × (segundos por ano) = (3,0 × 10⁸ m/s)(3,0 × 10⁷ s) = 9,0 × 10¹⁵ m = 9,0 × 10¹² km. Portanto, a distância restante é 6,5 × 10⁹ × 9,0 × 10¹² = 5,85 × 10²² km, aproximadamente 5,9 × 10²² km. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5090,7 +5090,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5167,14 +5167,14 @@
                           "type":  "choice",
                           "prompt":  "IFSP 2016 Maria foi com seu carro de São Paulo a Campinas e marcou o horário de saída de São Paulo, o horário de chegada em Campinas e quantos quilômetros ela percorreu nesse percurso. Com essas informações, ela chegou à conclusão de que fez esse percurso a uma velocidade média de 100 quilômetros por hora. Se ela percorreu exatos 93 quilômetros e saiu de São Paulo às 10 horas e 15 minutos, a alternativa que apresenta o horário que mais se aproxima daquele em que ela chegou a Campinas é:",
                           "options":  [
-                                          " horas e  minutos",
-                                          " horas e  minutos",
-                                          " horas e  minutos",
-                                          " horas e  minutos",
-                                          " horas e  minutos"
+                                          "11h13",
+                                          "11h11",
+                                          "11h09",
+                                          "11h07",
+                                          "11h05"
                                       ],
                           "answer":  1,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é B.",
+                          "explanation":  "O tempo de viagem é Δt = 93/100 h = 0,93 h. Convertendo para minutos: 0,93 × 60 = 55,8 min, ou 55 min e 48 s. Somando esse tempo à partida às 10h15, chega-se aproximadamente às 11h10min48s, isto é, perto de 11h11. Alternativa B.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5198,7 +5198,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5219,16 +5219,16 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "choice",
-                          "prompt":  "Famema-SP 2019 Uma formiga cortadeira, movendo- -se a 8 cm/s, deixa a entrada do formigueiro em direção a uma folha que está 8 m distante do ponto em que se encontrava. Para cortar essa folha, a formiga necessita de 40 s. Ao retornar à entrada do formigueiro pelo mesmo caminho, a formiga desenvolve uma velocidade de 4 cm/s, por causa do peso da folha e de uma brisa constante contra o seu movimento. O tempo total gasto pela formiga ao realizar a sequência de ações descritas foi",
+                          "prompt":  "Famema-SP (2019) — Uma formiga cortadeira desloca-se a 8 cm/s da entrada do formigueiro até uma folha situada a 8 m. Ela demora 40 s para cortar a folha. No retorno, pelo mesmo caminho, move-se a 4 cm/s. Qual é o tempo total gasto, incluindo a coleta da folha?",
                           "options":  [
-                                          " s",
-                                          " s",
-                                          " s",
-                                          " s",
-                                          " s"
+                                          "340 s",
+                                          "420 s",
+                                          "260 s",
+                                          "240 s",
+                                          "200 s"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "A distância em cada sentido é 8 m = 800 cm. Ida: t₁ = 800/8 = 100 s. Corte da folha: 40 s. Volta: t₂ = 800/4 = 200 s. Tempo total: 100 + 40 + 200 = 340 s. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5252,7 +5252,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5275,14 +5275,14 @@
                           "type":  "choice",
                           "prompt":  "Unesp 2018 Juliana pratica corridas e consegue correr 5,0 km em meia hora. Seu próximo desafio é participar da corrida de São Silvestre, cujo percurso é de 15 km. Como é uma distância maior do que a que está acostumada a correr, seu instrutor orientou que diminuísse sua velocidade média habitual em 40% durante a nova prova. Se seguir a orientação de seu instrutor, Juliana completará a corrida de São Silvestre em:",
                           "options":  [
-                                          "hmin",
-                                          "hmin",
-                                          "hmin",
-                                          "hmin",
-                                          "hmin"
+                                          "2 h 40 min",
+                                          "3 h 00 min",
+                                          "2 h 15 min",
+                                          "2 h 30 min",
+                                          "1 h 52 min"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A velocidade habitual de Juliana é 5,0 km / 0,5 h = 10 km/h. Reduzindo em 40%, ela corre a 60% dessa velocidade: 0,60 × 10 = 6,0 km/h. Para percorrer 15 km, t = 15/6 = 2,5 h = 2 h 30 min. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5306,7 +5306,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5329,14 +5329,14 @@
                           "type":  "choice",
                           "prompt":  "Fuvest -SP 2022 Em virtude do movimento das placas tectônicas, a distância entre a América do Sul e a África aumenta, nos dias atuais, cerca de 2,0 cm a cada ano. Supondo que essa velocidade tivesse sido constante ao longo do tempo, e tomando uma distância atual de cerca de 5000 km entre os limites dessas duas massas continentais, indique a melhor estimativa para quanto tempo teria transcorrido desde quando ambas estavam unidas em um único supercontinente. Note e adote: o valor obtido, embora da ordem de magnitude correta, não é o mesmo calculado por estimativas mais precisas.",
                           "options":  [
-                                          " anos",
-                                          " anos",
-                                          " anos",
-                                          " anos",
-                                          " anos"
+                                          "250.000 anos",
+                                          "2.500.000 anos",
+                                          "25.000.000 anos",
+                                          "250.000.000 anos",
+                                          "2.500.000.000 anos"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A distância de 5.000 km equivale a 5 × 10⁸ cm. Com afastamento de 2,0 cm por ano, o tempo estimado é t = (5 × 10⁸ cm)/(2,0 cm/ano) = 2,5 × 10⁸ anos = 250 milhões de anos. Alternativa D. Trata-se de estimativa simplificada, conforme ressalva do enunciado.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5360,7 +5360,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5383,14 +5383,14 @@
                           "type":  "choice",
                           "prompt":  "UFJF-MG 2020 Uma viagem de ônibus entre Juiz de Fora e o Rio de Janeiro normalmente é realizada com velocidade média de 60 km/h e tem duração de 3 horas, entre suas respectivas rodoviárias. Uma estudante fez esta viagem de ônibus, e relatou que, após 2 horas do início da viagem, devido a obras na pista, o ônibus ficou parado por 30 minutos. Depois disso, a pista foi liberada, e o ônibus seguiu sua viagem, mas, devido ao engarrafamento na entrada da cidade do Rio de Janeiro até a rodoviária, a estudante demorou mais 2 horas. Qual foi a velocidade média do ônibus na viagem relatada pela estudante?",
                           "options":  [
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h"
+                                          "60 km/h",
+                                          "72 km/h",
+                                          "45 km/h",
+                                          "40 km/h",
+                                          "36 km/h"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A distância normal entre as rodoviárias é d = 60 km/h × 3 h = 180 km. Na viagem relatada, o tempo total foi de 2 h de viagem + 0,5 h de parada + 2 h até o destino = 4,5 h. Portanto, v_m = 180/4,5 = 40 km/h. Alternativa D. O tempo parado integra o tempo total da viagem.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5414,7 +5414,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5437,14 +5437,14 @@
                           "type":  "choice",
                           "prompt":  "Cesgranrio-RJ Você faz determinado percurso em 2 horas, de automóvel, se a sua velocidade média for 75 km/h. Se você fizesse essa viagem a uma velocidade média de 100 km/h, você ganharia:",
                           "options":  [
-                                          " min",
-                                          " min",
-                                          " min",
-                                          " min",
-                                          " min"
+                                          "75 min",
+                                          "35 min",
+                                          "50 min",
+                                          "30 min",
+                                          "25 min"
                                       ],
                           "answer":  3,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é D.",
+                          "explanation":  "A distância é a mesma nas duas situações. Inicialmente, d = 75 km/h × 2 h = 150 km. A 100 km/h, o tempo seria t = 150/100 = 1,5 h. A economia é 2 − 1,5 = 0,5 h = 30 min. Alternativa D.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5468,7 +5468,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5545,14 +5545,14 @@
                           "type":  "choice",
                           "prompt":  "Fuvest-SP Dirigindo-se a uma cidade próxima, por uma autoestrada plana, um motorista estima seu tempo de viagem, considerando que consiga manter uma velocidade média de 90 km/h. Ao ser surpreendido pela chuva, decide reduzir sua velocidade média para 60 km/h, permanecendo assim até a chuva parar, quinze minutos mais tarde, quando retoma sua velocidade média inicial. Essa redução temporária aumenta seu tempo de viagem, com relação à estimativa inicial, em:",
                           "options":  [
-                                          " minutos",
-                                          ", minutos",
-                                          " minutos",
-                                          " minutos",
-                                          " minutos"
+                                          "5 minutos",
+                                          "7,5 minutos",
+                                          "10 minutos",
+                                          "15 minutos",
+                                          "30 minutos"
                                       ],
                           "answer":  0,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é A.",
+                          "explanation":  "Em 15 min = 0,25 h a 90 km/h, o motorista teria percorrido 90 × 0,25 = 22,5 km. Sob chuva, a 60 km/h, percorre 60 × 0,25 = 15 km, ficando 7,5 km atrás da distância planejada. Para percorrer esses 7,5 km extras a 90 km/h, necessita de 7,5/90 h = 1/12 h = 5 min. Alternativa A.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5576,7 +5576,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5706,14 +5706,14 @@
                           "type":  "choice",
                           "prompt":  "Mackenzie-SP Um motorista deseja fazer uma viagem de 230 km em 2,5 horas. Se na primeira hora ele viajar com velocidade média de 80 km/h, a velocidade média no restante do percurso deve ser de:",
                           "options":  [
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h",
-                                          " km/h"
+                                          "120 km/h",
+                                          "110 km/h",
+                                          "100 km/h",
+                                          "90 km/h",
+                                          "85 km/h"
                                       ],
                           "answer":  2,
-                          "explanation":  "Conforme o gabarito do próprio material, a alternativa correta é C.",
+                          "explanation":  "Na primeira hora, são percorridos 80 km. Restam 230 − 80 = 150 km para um tempo restante de 2,5 − 1,0 = 1,5 h. A velocidade média necessária nesse trecho é v = 150/1,5 = 100 km/h. Alternativa C.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5737,7 +5737,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "extraction_glyph"
+
                                             ],
                           "imageAssets":  [
 
@@ -5758,9 +5758,9 @@
                           "conceptId":  "fis-lic-l1-f1-c1-introducao-a",
                           "difficulty":  2,
                           "type":  "text",
-                          "prompt":  "Fuvest-SP Um avião vai de São Paulo a Recife em uma hora e 40 minutos. A distância entre essas cidades é de aproximadamente 3000 km. Adote: velocidade do som no ar 5  m/s. a) Qual a velocidade média do avião? b) Prove que o avião é supersônico.",
-                          "answer":  "a) 500 m/s b) A velocidade do avião no ar é maior que a velocidade do som no ar, logo é supersônico.",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: a) 500 m/s b) A velocidade do avião no ar é maior que a velocidade do som no ar, logo é supersônico.",
+                          "prompt":  "Fuvest-SP — Um avião vai de São Paulo a Recife em 1 h 40 min, percorrendo uma distância aproximada de 3.000 km. Despreze o efeito do vento e adote a velocidade do som no ar igual a 340 m/s. a) Calcule a velocidade escalar média do avião. b) Com a hipótese adotada, explique por que o voo pode ser classificado como supersônico.",
+                          "answer":  "a) 500 m/s (1.800 km/h); b) supersônico, desprezando a diferença entre velocidade em relação ao solo e ao ar",
+                          "explanation":  "O tempo de viagem é 1 h 40 min = 100 min = 6.000 s. A distância é 3.000 km = 3.000.000 m. Logo, v_m = 3.000.000/6.000 = 500 m/s = 1.800 km/h. Como 500 m/s > 340 m/s, a velocidade é superior à velocidade do som adotada. Rigor físico: esse confronto caracteriza voo supersônico se desprezarmos vento e tomarmos a velocidade média em relação ao solo como aproximação da velocidade em relação ao ar.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5854,7 +5854,7 @@
                           "type":  "text",
                           "prompt":  "Uerj Um motorista dirige um automóvel em um trecho plano de um viaduto. O movimento é retilíneo e uniforme. A intervalos regulares de 9 segundos, o motorista percebe a passagem do automóvel sobre cada uma das juntas de dilatação do viaduto. Sabendo que a velocidade do carro é 80 km/h, determine a distância entre duas juntas consecutivas.",
                           "answer":  "200 m",
-                          "explanation":  "Resposta registrada no gabarito do próprio material: 200 m",
+                          "explanation":  "Converta a velocidade: 80 km/h = 80/3,6 ≈ 22,22 m/s. Como o carro mantém velocidade constante e encontra uma junta de dilatação a cada 9 s, a distância entre juntas consecutivas é d = vt ≈ 22,22 × 9 = 200 m.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Fundamentos da Cinemática",
@@ -5878,7 +5878,7 @@
                           "licenseBasis":  "Autorização declarada pelo usuário em 2026-09-07",
                           "needsReview":  true,
                           "reviewReasons":  [
-                                                "non_objective_or_composite"
+
                                             ],
                           "imageAssets":  [
 

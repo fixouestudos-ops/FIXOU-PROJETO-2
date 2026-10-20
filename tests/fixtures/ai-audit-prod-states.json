@@ -1,520 +1,743 @@
 {
- "note": "Estados de producao dos 61 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
- "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 61 ids do manifesto",
- "totalRows": 64,
- "rows": [
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q23",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
-   "field": "contentStatus",
-   "value": "pending",
-   "actor_user_id": "owner-teste-local",
-   "created_at": 1790032095533,
-   "updated_at": "2026-09-22 04:41:55"
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
-   "field": "imageStatus",
-   "value": "needs_manual_crop",
-   "actor_user_id": "owner-teste-local",
-   "created_at": 1790040479313,
-   "updated_at": 1790040484068
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
-   "field": "needsReview",
-   "value": "false",
-   "actor_user_id": "owner-teste-local",
-   "created_at": 1790032095533,
-   "updated_at": 1790032099995
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
-   "field": "prompt",
-   "value": "[fixture de teste minimizada] Enunciado de teste do override do q5.",
-   "actor_user_id": "owner-teste-local",
-   "created_at": 1790039897926,
-   "updated_at": 1790040239701
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q32",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  },
-  {
-   "question_id": "fis-lic-l4-f2-c13-revisando-q6",
-   "field": "contentStatus",
-   "value": "needs_content_review",
-   "actor_user_id": "master-release-01-09",
-   "created_at": 1792318228108,
-   "updated_at": 1792318228108
-  }
- ]
+  "note": "Estados de producao dos 81 da aba AI auditing (export somente leitura). Reproduzir localmente sem tocar no D1 de producao.",
+  "source": "wrangler d1 execute fixou-db --remote (SELECT ... FROM question_overrides) filtrado pelos 81 ids do manifesto",
+  "totalRows": 92,
+  "rows": [
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q19",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q20",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q23",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q28",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q3",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-complementares-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
+      "field": "contentStatus",
+      "value": "pending",
+      "actor_user_id": "owner-teste-local",
+      "created_at": 1790032095533,
+      "updated_at": "2026-09-22 04:41:55"
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
+      "field": "imageStatus",
+      "value": "needs_manual_crop",
+      "actor_user_id": "owner-teste-local",
+      "created_at": 1790040479313,
+      "updated_at": 1790040484068
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "owner-teste-local",
+      "created_at": 1790032095533,
+      "updated_at": 1790032099995
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q5",
+      "field": "prompt",
+      "value": "[fixture de teste minimizada] Enunciado de teste do override do q5.",
+      "actor_user_id": "owner-teste-local",
+      "created_at": 1790039897926,
+      "updated_at": 1790040239701
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q19",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q23",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q5",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c2-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q11",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-complementares-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c3-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q2",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q3",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-complementares-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q1",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q11",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q15",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q16",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q18",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q2",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q3",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q7",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c4-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-complementares-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q2",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q3",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q33",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q35",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q5",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-complementares-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q17",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c1-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c2-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c3-exercicios-complementares-q20",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c6-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l2-f1-c8-exercicios-propostos-q36",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l2-f3-c9-exercicios-propostos-q32",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-complementares-q78",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l3-f1-c10-exercicios-propostos-q62",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l4-f1-c11-exercicios-complementares-q22",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l4-f2-c13-revisando-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "master-release-01-09",
+      "created_at": 1792318228108,
+      "updated_at": 1792318228108
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q1",
+      "field": "answer",
+      "value": "a ) -12 m   b ) 4 m/s  c ) movimento progressivo   d ) 8 m   e ) 3 s    f ) 7 s",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789131783580,
+      "updated_at": 1789131783580
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q1",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054034164,
+      "updated_at": 1790054034164
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q1",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054034164,
+      "updated_at": 1790054034164
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q1",
+      "field": "prompt",
+      "value": "Um automóvel percorre uma estrada em movimento uniforme, com função horária do espaço dada por s = -12 + 4t, em unidades do SI. Determine, para o móvel: a) o espaço inicial. b) a velocidade escalar. c) se o movimento é progressivo ou retrógrado. d) o espaço para t = 5s. e) o instante em que passa pela origem dos espaços. f) o instante em que passa por s = 16 m.",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789131594683,
+      "updated_at": 1789131783580
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q4",
+      "field": "answer",
+      "value": "250s",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789132093029,
+      "updated_at": 1789132093029
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q4",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054039779,
+      "updated_at": 1792432653236
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q4",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054039779,
+      "updated_at": 1792432653236
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q4",
+      "field": "prompt",
+      "value": "UFMG) Dois carros, A e B, movem-se numa estrada retilínea com velocidades constantes, vA = 20 m/s e vB = 18 m/s, respectivamente. O carro A está, inicialmente, 500 m atrás do carro B. Quanto tempo o carro A gasta para alcançar o carro B?",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789132093029,
+      "updated_at": 1789132093029
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q5",
+      "field": "answer",
+      "value": "20s",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1789132142587,
+      "updated_at": 1789132142587
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q5",
+      "field": "contentStatus",
+      "value": "validated",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054048145,
+      "updated_at": 1790054048145
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q5",
+      "field": "needsReview",
+      "value": "false",
+      "actor_user_id": "af2254e6-977e-4694-aa39-5dd01bb40303",
+      "created_at": 1790054048145,
+      "updated_at": 1790054048145
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-revisando-q7",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q1",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q6",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q8",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q9",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q10",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q13",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q14",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q15",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q16",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q17",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q18",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q20",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q24",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q4",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    },
+    {
+      "question_id": "fis-lic-l1-f1-c1-exercicios-propostos-q12",
+      "field": "contentStatus",
+      "value": "needs_content_review",
+      "actor_user_id": "ai-lote-01-textual",
+      "created_at": 1792491005746,
+      "updated_at": 1792491005746
+    }
+  ]
 }

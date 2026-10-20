@@ -614,11 +614,11 @@ test('bank.json has 0 validated questions after reset', () => {
  assert.equal(validated.length, 0, 'No questions should be validated in bank.json after reset');
 });
 
-test('bank.json has 558 pending questions after reset', () => {
+test('bank.json has 557 pending questions after reset', () => {
   const pending = bank.questions.filter(q => q.contentStatus === 'pending');
   const physicsPending = pending.filter(q => q.discipline === 'fisica');
   const litPending = pending.filter(q => q.contentTrack === 'literatura-fuvest2027');
-  assert.equal(physicsPending.length, 558, '558 physics questions should be pending after reset');
+  assert.equal(physicsPending.length, 557, '557 physics questions pending: uma entrou na fila de auditoria IA');
   assert.equal(litPending.length, 180, '180 literature questions pending as new content');
 });
 
