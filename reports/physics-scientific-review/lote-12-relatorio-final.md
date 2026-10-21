@@ -24,4 +24,8 @@
 - `npm test`: aprovado — 315 testes, 315 aprovados, 0 falhas.
 - `npm run build`: aprovado — hash de bundle `5d4f8e17`.
 - Controle de escopo: 150 IDs alterados, 0 fora da allowlist, 0 campos não autorizados e 0 flags de moderação alteradas.
-- Commit, push, integração fast-forward, deploy e smoke test: executados na etapa de publicação posterior a este snapshot; os identificadores finais são registrados na entrega da tarefa.
+- Commit científico: `e0916cccd8c17de8fa20bb305e0a99998527418a`.
+- Push da branch `review/fisica-lote-12-150`: concluído.
+- Integração da `main`: fast-forward de `b8abaddf5eb3ec5bc3819485ce3e081c7e90b04e` para `e0916cccd8c17de8fa20bb305e0a99998527418a`, confirmado no remoto.
+- Deploy Cloudflare: **não concluído**. O Wrangler 4.151.3 informou credencial expirada; a renovação automática não alcançou o servidor de autenticação e a tentativa interativa `wrangler login` expirou aguardando o código OAuth.
+- Smoke test do bundle novo: não executado, pois o deploy não foi confirmado. Nenhuma alteração foi feita em D1, migrations, secrets ou bindings.
