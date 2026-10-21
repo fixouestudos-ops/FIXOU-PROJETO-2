@@ -13,27 +13,28 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const bank=JSON.parse(readFileSync(path.join(root,'content/bank.json'),'utf8'));
 const q5='fis-lic-l1-f1-c1-exercicios-propostos-q5';
 const prodFixture=JSON.parse(readFileSync(path.join(root,'tests/fixtures/ai-audit-prod-states.json'),'utf8'));
+const HISTORICAL_IDS=AI_AUDIT_BATCH.historicalIds;
 
-test('lote AI auditing possui exatamente 275 IDs únicos',()=>{
- assert.equal(AI_AUDIT_BATCH.ids.length,275);
- assert.equal(new Set(AI_AUDIT_BATCH.ids).size,275);
- assert.equal(AI_AUDIT_BATCH.total,275);
- assert.equal(AI_AUDIT_BATCH.batchId,'master-release-01-09');
+test('fila histórica AI auditing preserva exatamente 275 IDs únicos',()=>{
+ assert.equal(HISTORICAL_IDS.length,275);
+ assert.equal(new Set(HISTORICAL_IDS).size,275);
+ assert.equal(AI_AUDIT_BATCH.historicalTotal,275);
+ assert.equal(AI_AUDIT_BATCH.historicalBatchId,'master-release-01-09');
 });
 
 test('q5 faz parte do lote com override preservado',()=>{
- assert.ok(AI_AUDIT_BATCH.ids.includes(q5));
+ assert.ok(HISTORICAL_IDS.includes(q5));
  assert.equal(AI_AUDIT_BATCH.preservedOverrideId,q5);
 });
 
 test('nenhuma outra questão pendente entrou no lote por engano',()=>{
- assert.ok(!AI_AUDIT_BATCH.ids.includes('fis-lic-l1-f1-c1-revisando-q3'));
- assert.ok(!AI_AUDIT_BATCH.ids.includes('fis-lic-l1-f1-c5-exercicios-propostos-q7'));
+ assert.ok(!HISTORICAL_IDS.includes('fis-lic-l1-f1-c1-revisando-q3'));
+ assert.ok(!HISTORICAL_IDS.includes('fis-lic-l1-f1-c5-exercicios-propostos-q7'));
 });
 
 test('todos os 275 IDs existem no banco e seguem marcados para revisão',()=>{
  const byId=new Map(bank.questions.map(q=>[q.id,q]));
- for(const id of AI_AUDIT_BATCH.ids){
+ for(const id of HISTORICAL_IDS){
   const q=byId.get(id);
   assert.ok(q,'questão ausente no banco: '+id);
   assert.equal(q.contentStatus,'needs_content_review','status inesperado em '+id);
@@ -43,7 +44,7 @@ test('todos os 275 IDs existem no banco e seguem marcados para revisão',()=>{
 test('baseline cobre os 275 IDs com versão anterior real dos lotes',()=>{
  assert.equal(Object.keys(AI_AUDIT_BASELINE).length,275);
  let l01=0,l08=0,lT=0,l23=0,l456=0,l711=0;
- for(const id of AI_AUDIT_BATCH.ids){
+ for(const id of HISTORICAL_IDS){
   const entry=AI_AUDIT_BASELINE[id];
   assert.ok(entry,'baseline ausente: '+id);
   assert.ok(['349abd2','b4a57e4','87847b1','5a395d0','dbbf63d','cd501da'].includes(entry.commit),'commit inesperado: '+entry.commit);
@@ -63,7 +64,7 @@ test('baseline cobre os 275 IDs com versão anterior real dos lotes',()=>{
 });
 
 function aiBank(mutate){
- const questions=bank.questions.filter(q=>AI_AUDIT_BATCH.ids.includes(q.id)).map(q=>({...q}));
+ const questions=bank.questions.filter(q=>HISTORICAL_IDS.includes(q.id)).map(q=>({...q}));
  if(mutate)mutate(questions);
  return {questions};
 }
@@ -79,7 +80,7 @@ test('painel inicia com 275 aguardando, 0 aprovadas, 0 não aprovadas',()=>{
  const html=renderAi(aiBank());
  assert.deepEqual(panelValues(html),[275,275,0,0]);
  assert.ok(html.includes('AI auditing'));
- assert.ok(html.includes('Total corrigidas por IA'));
+ assert.ok(html.includes('Total no filtro de lote'));
  assert.ok(html.includes('Aguardando auditoria'));
  assert.ok(html.includes('Aprovadas por mim'));
  assert.ok(html.includes('Nenhuma questão é validada automaticamente.')||html.includes('Nenhuma questão é validada automaticamente'));
@@ -87,18 +88,18 @@ test('painel inicia com 275 aguardando, 0 aprovadas, 0 não aprovadas',()=>{
 });
 
 test('aprovação manual atualiza contadores imediatamente',()=>{
- const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);t.contentStatus='validated';}));
+ const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===HISTORICAL_IDS[0]);t.contentStatus='validated';}));
  assert.deepEqual(panelValues(html),[275,274,1,0]);
 });
 
 test('não aprovação atualiza contadores e histórico permanece acessível',()=>{
- const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);t.contentStatus='not_approved';}));
+ const html=renderAi(aiBank(qs=>{const t=qs.find(q=>q.id===HISTORICAL_IDS[0]);t.contentStatus='not_approved';}));
  assert.deepEqual(panelValues(html),[275,274,0,1]);
  assert.equal((html.match(/data-action="ai-audit-open"/g)||[]).length,275);
 });
 
 test('filtros da aba separam aguardando, aprovadas e não aprovadas',()=>{
- const validated=AI_AUDIT_BATCH.ids[0],rejected=AI_AUDIT_BATCH.ids[1];
+ const validated=HISTORICAL_IDS[0],rejected=HISTORICAL_IDS[1];
  const mutated=aiBank(qs=>{
   qs.find(q=>q.id===validated).contentStatus='validated';
   qs.find(q=>q.id===rejected).contentStatus='not_approved';
@@ -114,9 +115,9 @@ test('filtros da aba separam aguardando, aprovadas e não aprovadas',()=>{
 });
 
 test('busca por ID e por palavras do enunciado filtra a lista',()=>{
- const byId=renderAi(aiBank(),{reviewSearch:AI_AUDIT_BATCH.ids[3]});
+ const byId=renderAi(aiBank(),{reviewSearch:HISTORICAL_IDS[3]});
  assert.equal((byId.match(/data-action="ai-audit-open"/g)||[]).length,1);
- const first=bank.questions.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);
+ const first=bank.questions.find(q=>q.id===HISTORICAL_IDS[0]);
  const word=(first.prompt.match(/[A-Za-zÀ-ú]{9,}/g)||[])[0];
  assert.ok(word,'enunciado sem palavra longa para o teste');
  const expected=aiBank().questions.filter(q=>(q.prompt||'').toLowerCase().includes(word.toLowerCase())).length;
@@ -126,13 +127,13 @@ test('busca por ID e por palavras do enunciado filtra a lista',()=>{
 });
 
 test('questões pendentes aparecem primeiro na lista',()=>{
- const validatedId=AI_AUDIT_BATCH.ids[5];
+ const validatedId=HISTORICAL_IDS[5];
  const order=renderAi(aiBank(qs=>{qs.find(q=>q.id===validatedId).contentStatus='validated';}));
  const rows=[...order.matchAll(/data-action="ai-audit-open" data-id="(\d+)"><span class="ai-row-index">\d+<\/span><span class="ai-row-id"><code>([^<]+)<\/code>/g)];
  assert.equal(rows.length,275);
  const posValidated=rows.findIndex(r=>r[2]===validatedId);
  assert.equal(posValidated,274,'validada deve ficar no fim');
- assert.equal(rows[0][2],AI_AUDIT_BATCH.ids[0]);
+ assert.equal(rows[0][2],HISTORICAL_IDS[0]);
 });
 
 test('detalhe exibe enunciado, alternativas, gabarito, explicação e info de auditoria',()=>{
@@ -158,7 +159,7 @@ test('detalhe oferece exatamente as ações do Owner sem aprovação automática
 });
 
 test('aiAuditCompare usa baseline real e sinaliza indisponibilidade',()=>{
- const real=bank.questions.find(q=>q.id===AI_AUDIT_BATCH.ids[0]);
+ const real=bank.questions.find(q=>q.id===HISTORICAL_IDS[0]);
  const cmp=aiAuditCompare({...real});
  assert.equal(cmp.available,true);
  assert.ok(cmp.anyChanged===true);
@@ -289,7 +290,7 @@ test('fixture reproduz os 275 estados da produção capturados por leitura',()=>
  assert.equal(nc.filter(r=>r.actor_user_id==='ai-lote-02-03-textual').length,38,'38 dos lotes textuais 02 e 03 aguardando');
  const csIds=new Set(cs.map(r=>r.question_id));
  assert.equal(csIds.size,275);
- for(const id of AI_AUDIT_BATCH.ids)assert.ok(csIds.has(id),'estado ausente para '+id);
+ for(const id of HISTORICAL_IDS)assert.ok(csIds.has(id),'estado ausente para '+id);
   const q5cs=cs.find(r=>r.question_id===q5);
   assert.equal(q5cs.value,'validated');
   assert.equal(q5cs.actor_user_id,'af2254e6-977e-4694-aa39-5dd01bb40303');
@@ -306,7 +307,7 @@ test('fixture reproduz os 275 estados da produção capturados por leitura',()=>
 });
 
 function aiPool(qs){
- const order=new Map(AI_AUDIT_BATCH.ids.map((id,i)=>[id,i]));
+ const order=new Map(HISTORICAL_IDS.map((id,i)=>[id,i]));
  const rank=q=>{const s=aiAuditStatus(q);return s==='awaiting'?0:s==='rejected'?1:2;};
  return qs.filter(q=>order.has(q.id)).sort((a,b)=>rank(a)-rank(b)||(order.get(a.id)||0)-(order.get(b.id)||0));
 }
@@ -393,7 +394,7 @@ test('hasImagePendency cobre as pendências reais e ignora as resolvidas',()=>{
  assert.equal(hasImagePendency({imageStatus:'approved',imageClassification:'bad_image_association'}),true,'associação incorreta detectada pela classificação');
  assert.equal(hasImagePendency({imageStatus:'approved',imageClassification:'needs_visual_review'}),true);
  assert.equal(hasImagePendency({imageStatus:'approved',imageClassification:'image_required'}),false);
- const inBatch=bank.questions.filter(q=>AI_AUDIT_BATCH.ids.includes(q.id));
+ const inBatch=bank.questions.filter(q=>HISTORICAL_IDS.includes(q.id));
  assert.equal(inBatch.filter(q=>hasImagePendency(q)).length,37,'37 dos 275 têm pendência de imagem no banco');
  assert.equal(inBatch.filter(q=>!hasImagePendency(q)).length,238);
 });
@@ -409,7 +410,7 @@ test('servidor: not_approved cria needsReview=true mesmo sem o campo no payload'
 });
 
 test('aprovada sem pendências é liberada no fluxo real de seleção',()=>{
- const clean={...bank.questions.find(q=>AI_AUDIT_BATCH.ids.includes(q.id)&&!hasImagePendency(q))};
+ const clean={...bank.questions.find(q=>HISTORICAL_IDS.includes(q.id)&&!hasImagePendency(q))};
  const c=bank.concepts.find(x=>x.id===clean.conceptId);
  const state={history:[],errors:{},reviews:{},favorites:[]};
  assert.equal(isBlockedForStudent(clean),true,'lote aguardando auditoria começa bloqueado');
@@ -421,7 +422,7 @@ test('aprovada sem pendências é liberada no fluxo real de seleção',()=>{
 });
 
 test('aprovação com pendência de imagem mantém o bloqueio mesmo com needsReview false',()=>{
- const img={...bank.questions.find(q=>AI_AUDIT_BATCH.ids.includes(q.id)&&hasImagePendency(q))};
+ const img={...bank.questions.find(q=>HISTORICAL_IDS.includes(q.id)&&hasImagePendency(q))};
  const c=bank.concepts.find(x=>x.id===img.conceptId);
  const state={history:[],errors:{},reviews:{},favorites:[]};
  img.contentStatus='validated';
@@ -445,7 +446,7 @@ test('editar não aprova nem libera automaticamente',()=>{
  const saveSlice=ctrl.slice(saveIdx,saveIdx+800);
  assert.ok(!saveSlice.includes('contentStatus'),'editar não pode alterar aprovação');
  assert.ok(!saveSlice.includes('needsReview'),'editar não pode alterar bloqueio');
- const q={...bank.questions.find(x=>AI_AUDIT_BATCH.ids.includes(x.id)&&x.contentStatus==='needs_content_review')};
+ const q={...bank.questions.find(x=>HISTORICAL_IDS.includes(x.id)&&x.contentStatus==='needs_content_review')};
  q.prompt=q.prompt+' (editado)';
  assert.equal(isBlockedForStudent(q),true,'questão editada segue bloqueada');
  q.needsReview=false;
@@ -455,17 +456,17 @@ test('editar não aprova nem libera automaticamente',()=>{
 test('questão com pendência de imagem permanece protegida enquanto não satisfaz os critérios',()=>{
   const raw=bank.questions.find(q=>q.id===q5);
   assert.equal(isBlockedForStudent(raw),true,'q5 no banco do estudante bloqueado');
-  const pendente=bank.questions.find(q=>AI_AUDIT_BATCH.ids.includes(q.id)&&hasImagePendency(q));
+  const pendente=bank.questions.find(q=>HISTORICAL_IDS.includes(q.id)&&hasImagePendency(q));
   assert.ok(pendente,'existe questão do lote com pendência de imagem');
   const hip={...pendente,needsReview:false,contentStatus:'validated'};
   assert.equal(isBlockedForStudent(hip),true,'mesmo validada, o recorte pendente mantém a questão bloqueada');
 });
 
 test('as 275 questões do lote continuam identificadas e protegidas',()=>{
- const batch=bank.questions.filter(q=>AI_AUDIT_BATCH.ids.includes(q.id));
+ const batch=bank.questions.filter(q=>HISTORICAL_IDS.includes(q.id));
  assert.equal(batch.length,275);
  for(const q of batch)assert.equal(isBlockedForStudent(q),true,'lote bloqueado no estado do banco: '+q.id);
- const non=bank.questions.find(q=>!AI_AUDIT_BATCH.ids.includes(q.id)&&q.needsReview===false);
+ const non=bank.questions.find(q=>!HISTORICAL_IDS.includes(q.id)&&q.needsReview===false);
  assert.ok(non,'existe questão fora do lote liberada');
  assert.equal(isBlockedForStudent(non),false,'fora do lote a regra existente é preservada');
 });

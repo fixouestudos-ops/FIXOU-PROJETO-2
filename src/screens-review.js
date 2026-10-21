@@ -1,6 +1,7 @@
 import {escapeHTML} from './utils.js';
 import {AI_AUDIT_BATCH} from './ai-audit-batch.js';
 import {AI_AUDIT_BASELINE} from './ai-audit-baseline.js';
+import {AI_AUDIT_LOTS} from './ai-audit-lots.js';
 
 const IMAGE_CLASSIFICATIONS={
  no_image_required:{label:'Sem imagem',color:'#3cc88d'},
@@ -88,7 +89,31 @@ export function aiAuditStatus(q){
  return 'awaiting';
 }
 
-export function aiAuditCompare(q){
+export function aiAuditMembership(id){
+ const memberships=[];
+ if(AI_AUDIT_BATCH.historicalIds.includes(id))memberships.push('historical');
+ if(AI_AUDIT_LOTS.lot12.ids.includes(id))memberships.push('lot12');
+ if(AI_AUDIT_LOTS.lot13.ids.includes(id))memberships.push('lot13');
+ return memberships;
+}
+
+export function aiAuditScientificResult(id,lotKey='all'){
+ const keys=lotKey==='all'?['lot13','lot12']:lotKey==='historical'?[]:[lotKey];
+ for(const key of keys){
+  const manifest=AI_AUDIT_LOTS[key]?.manifestById[id];
+  if(manifest)return manifest.divergence?'divergencia_documentada':manifest.result||'corrigida';
+ }
+ return 'historical';
+}
+
+export function aiAuditCompare(q,lotKey='all'){
+ const keys=lotKey==='all'?['lot13','lot12']:lotKey==='historical'?[]:[lotKey];
+ for(const key of keys){
+  const lot=AI_AUDIT_LOTS[key],patch=lot?.patchById[q.id];
+  if(!patch)continue;
+  const fields=[...new Set([...Object.keys(patch.before||{}),...Object.keys(patch.after||{})])];
+  return {available:true,kind:'lot',lot:lot.label,lotKey:key,commit:lot.commit,before:patch.before||{},after:patch.after||{},fields,changed:Object.fromEntries(fields.map(field=>[field,JSON.stringify(patch.before?.[field])!==JSON.stringify(patch.after?.[field])])),anyChanged:fields.length>0,justification:patch.justification||''};
+ }
  const entry=AI_AUDIT_BASELINE[q.id];
  if(!entry)return {available:false};
  const before={prompt:entry.before.prompt||'',options:(entry.before.options||[]).slice(),answer:entry.before.answer,explanation:entry.before.explanation||''};
@@ -99,7 +124,7 @@ export function aiAuditCompare(q){
   answer:String(before.answer??'')!==String(after.answer??''),
   explanation:before.explanation!==after.explanation
  };
- return {available:true,lot:entry.lot,commit:entry.commit,before,after,changed,anyChanged:Object.values(changed).some(Boolean)};
+ return {available:true,kind:'historical',lot:entry.lot,lotKey:'historical',commit:entry.commit,before,after,fields:['prompt','options','answer','explanation'],changed,anyChanged:Object.values(changed).some(Boolean)};
 }
 
 function aiAnswerLabel(value,options){
@@ -107,35 +132,53 @@ function aiAnswerLabel(value,options){
  return String(value==null?'?':value);
 }
 
-function aiAuditSections(q){
- const cmp=aiAuditCompare(q);
- const statusLabel=q.contentStatus==='validated'?'Aprovada (validated)':q.contentStatus==='not_approved'?'Não aprovada (not_approved)':'Aguardando auditoria';
+function aiAuditSections(q,lotFilter='all'){
+ const cmp=aiAuditCompare(q,lotFilter);
+ const memberships=aiAuditMembership(q.id);
+ const revisionKeys=lotFilter==='all'?['lot13','lot12']:lotFilter==='historical'?[]:[lotFilter];
+ const revisionKey=revisionKeys.find(key=>AI_AUDIT_LOTS[key]?.manifestById[q.id]);
+ const manifest=revisionKey?AI_AUDIT_LOTS[revisionKey].manifestById[q.id]:null;
+ const result=aiAuditScientificResult(q.id,lotFilter);
+ const resultLabels={corrigida:'Corrigida por IA',verificada_sem_alteracao:'Verificada sem alteração',divergencia_documentada:'Divergência documentada',historical:'Revisão histórica'};
+ const status=aiAuditStatus(q);
+ const statusLabel=status==='approved'?'Aprovada pelo Owner':status==='rejected'?'Não aprovada pelo Owner':'Aguardando auditoria';
  let compare;
  if(cmp.available){
   const row=(label,beforeHtml,afterHtml,changed)=>`<div class="ai-diff-row${changed?' changed':''}"><div class="ai-diff-label">${label}${changed?' <span class="ai-diff-flag">alterado</span>':''}</div><div class="ai-diff-cols"><div class="ai-diff-cell">${beforeHtml}</div><div class="ai-diff-cell">${afterHtml}</div></div></div>`;
-  const opts=list=>(list||[]).map((o,i)=>'ABCDE'[i]+') '+escapeHTML(o)).join('<br>')||'—';
-  compare=`<div class="ai-section ai-compare"><h4>Comparação da correção <span class="ai-compare-meta">lotes ${escapeHTML(cmp.lot)} · commit ${escapeHTML(cmp.commit)}</span></h4>
+  const labels={prompt:'Enunciado',options:'Alternativas',answer:'Gabarito',answerKeyLetter:'Letra do gabarito',answerKeyText:'Texto do gabarito',explanation:'Explicação',type:'Tipo',sourcePage:'Página da fonte',sourceVolume:'Volume da fonte',sourceFront:'Frente da fonte',sourceChapter:'Capítulo da fonte',sourceSection:'Seção da fonte'};
+  const value=(field,input,options)=>{
+   if(input===undefined||input===null||input==='')return '—';
+   if(field==='options')return (input||[]).map((o,i)=>'ABCDE'[i]+') '+escapeHTML(String(o))).join('<br>')||'—';
+   if(field==='answer')return escapeHTML(aiAnswerLabel(input,options));
+   if(Array.isArray(input)||typeof input==='object')return escapeHTML(JSON.stringify(input));
+   return escapeHTML(String(input));
+  };
+  const fields=cmp.kind==='lot'?cmp.fields.filter(field=>cmp.changed[field]):cmp.fields;
+  compare=`<div class="ai-section ai-compare"><h4>Comparação da correção <span class="ai-compare-meta">${escapeHTML(cmp.lot)} · commit ${escapeHTML(cmp.commit)}</span></h4>
   <div class="ai-diff-head"><span>Antes da correção</span><span>Depois da correção</span></div>
-  ${row('Enunciado',escapeHTML(cmp.before.prompt||'—'),escapeHTML(cmp.after.prompt||'—'),cmp.changed.prompt)}
-  ${row('Alternativas',opts(cmp.before.options),opts(cmp.after.options),cmp.changed.options)}
-  ${row('Gabarito',escapeHTML(aiAnswerLabel(cmp.before.answer,cmp.before.options)),escapeHTML(aiAnswerLabel(cmp.after.answer,cmp.after.options)),cmp.changed.answer)}
-  ${row('Explicação',escapeHTML(cmp.before.explanation||'—'),escapeHTML(cmp.after.explanation||'—'),cmp.changed.explanation)}
+  ${fields.map(field=>row(labels[field]||field,value(field,cmp.before[field],cmp.before.options),value(field,cmp.after[field],cmp.after.options),cmp.changed[field])).join('')}
+  ${cmp.justification?`<p class="ai-note"><strong>Justificativa:</strong> ${escapeHTML(cmp.justification)}</p>`:''}
   </div>`;
  }else{
-  compare='<div class="ai-section ai-compare"><h4>Comparação da correção</h4><p class="ai-note">Versão anterior não disponível</p></div>';
+  compare=result==='verificada_sem_alteracao'?'<div class="ai-section ai-compare"><h4>Comparação da revisão</h4><p class="ai-note">Verificada sem alteração: este lote não criou diferenças artificiais. A comparação histórica anterior continua preservada no filtro “Lotes históricos”.</p></div>':'<div class="ai-section ai-compare"><h4>Comparação da correção</h4><p class="ai-note">Versão anterior não disponível</p></div>';
  }
  const explanation=q.explanation?`<div class="ai-section"><h4>Explicação</h4><div class="ai-explanation-text">${escapeHTML(q.explanation)}</div></div>`:'<div class="ai-section"><h4>Explicação</h4><p class="ai-note">Sem explicação registrada.</p></div>';
+ const lotLabels={historical:'Lotes históricos',lot12:'Lote 12',lot13:'Lote 13'};
+ const origin=manifest?`PV Física ${escapeHTML(manifest.sourceVolume||'?')} · Frente ${escapeHTML(manifest.sourceFront??'?')} · Capítulo ${escapeHTML(manifest.sourceChapter??'?')} · ${escapeHTML(manifest.sourceSection||'?')} · p. ${escapeHTML(manifest.sourcePage??'?')} · questão ${escapeHTML(manifest.questionNumber??'?')}`:'Histórico de auditoria preservado';
+ const divergence=manifest?.divergence?`<div class="ai-section ai-divergence"><h4>⚠ Divergência documentada</h4><p>${escapeHTML(manifest.divergence)}</p><p class="ai-note">Requer conferência humana; o gabarito não foi alterado para ocultar a divergência.</p></div>`:'';
  const info=`<div class="ai-section ai-audit-info"><h4>Informações de auditoria</h4><div class="ai-audit-meta">
   <span><strong>ID:</strong> <code>${escapeHTML(q.id)}</code></span>
   <span><strong>Status da auditoria:</strong> ${statusLabel}</span>
-  <span><strong>Lote IA:</strong> ${escapeHTML(AI_AUDIT_BATCH.batchId)}</span>
+  <span><strong>Lotes:</strong> ${memberships.map(key=>escapeHTML(lotLabels[key])).join(' · ')}</span>
+  <span><strong>Resultado científico:</strong> ${escapeHTML(resultLabels[result]||'Divergência documentada')}</span>
+  <span><strong>Origem:</strong> ${origin}</span>
   <span><strong>Pendências de imagem:</strong> ${escapeHTML(q.imageStatus||'sem registro')}</span>
   <span><strong>needsReview:</strong> ${q.needsReview===true?'sim':'não'}</span>
- </div><p class="ai-note">Parte do conjunto de ${AI_AUDIT_BATCH.total} questões corrigidas com auxílio de IA. Aprovação somente manual pelo Owner; a liberação para estudantes respeita imageStatus e demais bloqueios existentes.</p></div>`;
- return explanation+info+compare;
+ </div><p class="ai-note">Parte da fila versionada com ${AI_AUDIT_BATCH.total} IDs únicos. Aprovação somente manual pelo Owner; a liberação para estudantes respeita imageStatus e demais bloqueios existentes.</p></div>`;
+ return explanation+info+divergence+compare;
 }
 
-function reviewQuestionCard(q,index,total,editingQuestion,editingFields={},aiAudit=false){
+function reviewQuestionCard(q,index,total,editingQuestion,editingFields={},aiAudit=false,aiAuditLotFilter='all'){
  const ic=IMAGE_CLASSIFICATIONS[q.imageClassification]||IMAGE_CLASSIFICATIONS.no_image_required;
  const is=IMAGE_STATUSES[q.imageStatus]||IMAGE_STATUSES.no_image_required;
  const cs=CONTENT_STATUSES[q.contentStatus]||CONTENT_STATUSES.pending;
@@ -242,12 +285,12 @@ function reviewQuestionCard(q,index,total,editingQuestion,editingFields={},aiAud
   ${answerSection}
   ${hasImage?`<div class="review-card-image"><img src="${escapeHTML(q.imageAssets[0])}" alt="Imagem da questão" loading="lazy"></div>`:''}
    ${hasDiagram?`<div class="review-card-diagram"><span class="review-badge" style="background:#78b4e520;color:#78b4e5">Diagrama SVG</span></div>`:''}
-   ${aiAudit?aiAuditSections(q):''}
+   ${aiAudit?aiAuditSections(q,aiAuditLotFilter):''}
     <div class="review-card-actions">${actions}${approveContentBtn}${notApprovedBtn}${revertBtn}</div>
  </div>`;
 }
 
-export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={},reviewAiFilter='all'}){
+export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={},reviewAiFilter='all',reviewAiLotFilter='all'}){
  const questions=bank.questions;
 
  const counts={
@@ -271,7 +314,7 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   {key:'ai_audit',label:'AI auditing',count:AI_AUDIT_BATCH.ids.length}
  ];
 
- if(reviewFilter==='ai_audit')return aiAuditView({bank,filterButtons,reviewAiFilter,reviewSearch,reviewIndex,editingQuestion,editingFields});
+ if(reviewFilter==='ai_audit')return aiAuditView({bank,filterButtons,reviewAiFilter,reviewAiLotFilter,reviewSearch,reviewIndex,editingQuestion,editingFields});
 
  const filtered=filterQuestions(questions,reviewFilter);
  const searched=searchQuestions(filtered,reviewSearch);
@@ -301,44 +344,55 @@ export function reviewScreen({bank,reviewFilter='all',reviewSearch='',reviewInde
   </div>`;
 }
 
-function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
+function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewAiLotFilter='all',reviewSearch='',reviewIndex=0,editingQuestion=null,editingFields={}}){
  const order=new Map(AI_AUDIT_BATCH.ids.map((id,i)=>[id,i]));
  const aiQuestions=bank.questions.filter(q=>order.has(q.id));
  const rank=q=>{const s=aiAuditStatus(q);return s==='awaiting'?0:s==='rejected'?1:2;};
  aiQuestions.sort((a,b)=>rank(a)-rank(b)||(order.get(a.id)||0)-(order.get(b.id)||0));
+ const lotIncludes=q=>reviewAiLotFilter==='all'||aiAuditMembership(q.id).includes(reviewAiLotFilter);
+ const lotQuestions=aiQuestions.filter(lotIncludes);
  const counts={
-  all:aiQuestions.length,
-  awaiting:aiQuestions.filter(q=>aiAuditStatus(q)==='awaiting').length,
-  approved:aiQuestions.filter(q=>aiAuditStatus(q)==='approved').length,
-  rejected:aiQuestions.filter(q=>aiAuditStatus(q)==='rejected').length
+  all:lotQuestions.length,
+  awaiting:lotQuestions.filter(q=>aiAuditStatus(q)==='awaiting').length,
+  approved:lotQuestions.filter(q=>aiAuditStatus(q)==='approved').length,
+  rejected:lotQuestions.filter(q=>aiAuditStatus(q)==='rejected').length
  };
+ const lotTabs=[
+  {key:'all',label:'Todos',count:AI_AUDIT_BATCH.ids.length},
+  {key:'historical',label:'Lotes históricos',count:AI_AUDIT_BATCH.historicalIds.length},
+  {key:'lot12',label:'Lote 12',count:AI_AUDIT_LOTS.lot12.ids.length},
+  {key:'lot13',label:'Lote 13',count:AI_AUDIT_LOTS.lot13.ids.length}
+ ];
  const subTabs=[
   {key:'all',label:'Todas',count:counts.all},
   {key:'awaiting',label:'Aguardando auditoria',count:counts.awaiting},
   {key:'approved',label:'Aprovadas',count:counts.approved},
   {key:'rejected',label:'Não aprovadas',count:counts.rejected}
  ];
- const pool=reviewAiFilter==='all'?aiQuestions:aiQuestions.filter(q=>aiAuditStatus(q)===reviewAiFilter);
+ const pool=reviewAiFilter==='all'?lotQuestions:lotQuestions.filter(q=>aiAuditStatus(q)===reviewAiFilter);
  const searched=searchQuestions(pool,reviewSearch);
  const safeIndex=Math.min(reviewIndex,Math.max(0,searched.length-1));
  const current=searched[safeIndex];
  const statusColor={awaiting:'#f0b04e',approved:'#3cc88d',rejected:'#e66a74'};
  const statusLabel={awaiting:'Aguardando',approved:'Aprovada',rejected:'Não aprovada'};
- const listHtml=searched.length?searched.map((q,i)=>{const st=aiAuditStatus(q);return `<button class="ai-row${i===safeIndex?' active':''}" type="button" data-action="ai-audit-open" data-id="${i}"><span class="ai-row-index">${i+1}</span><span class="ai-row-id"><code>${escapeHTML(q.id)}</code></span><span class="ai-row-meta">${escapeHTML(q.topic||'')} · ${escapeHTML(q.subtopic||'')}</span><span class="review-badge" style="background:${statusColor[st]}20;color:${statusColor[st]}">${statusLabel[st]}</span></button>`;}).join(''):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>';
- return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES · AI AUDITING</div><h1>AI auditing</h1><p>${AI_AUDIT_BATCH.ids.length} questões do lote ${escapeHTML(AI_AUDIT_BATCH.batchId)} corrigidas com auxílio de IA, aguardando sua auditoria manual.</p></div></div>
+ const resultLabel={corrigida:'Corrigida por IA',verificada_sem_alteracao:'Verificada sem alteração',divergencia_documentada:'Divergência documentada',historical:'Revisão histórica'};
+ const lotShort={historical:'Histórico',lot12:'Lote 12',lot13:'Lote 13'};
+ const listHtml=searched.length?searched.map((q,i)=>{const st=aiAuditStatus(q),memberships=aiAuditMembership(q.id),result=aiAuditScientificResult(q.id,reviewAiLotFilter);return `<button class="ai-row${i===safeIndex?' active':''}" type="button" data-action="ai-audit-open" data-id="${i}"><span class="ai-row-index">${i+1}</span><span class="ai-row-id"><code>${escapeHTML(q.id)}</code></span><span class="ai-row-meta">${memberships.map(key=>lotShort[key]).join(' · ')} · ${escapeHTML(resultLabel[result]||'Divergência documentada')}</span><span class="review-badge" style="background:${statusColor[st]}20;color:${statusColor[st]}">${statusLabel[st]}</span></button>`;}).join(''):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>';
+ return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES · AI AUDITING</div><h1>AI auditing</h1><p>${AI_AUDIT_BATCH.ids.length} registros únicos: ${AI_AUDIT_BATCH.historicalIds.length} históricos, ${AI_AUDIT_LOTS.lot12.ids.length} do lote 12 e ${AI_AUDIT_LOTS.lot13.ids.length} do lote 13. Aprovação exclusivamente manual.</p></div></div>
  <div class="review-filters">
   <div class="review-filter-tabs">${filterButtons.map(f=>`<button class="review-tab${f.key==='ai_audit'?' active':''}" data-action="review-filter" data-filter="${f.key}">${f.label} <span class="review-tab-count">${f.count}</span></button>`).join('')}</div>
   <div class="review-search"><input type="text" placeholder="Buscar por ID ou palavras do enunciado…" value="${escapeHTML(reviewSearch)}" data-action="review-search-input"></div>
  </div>
  <div class="ai-panel">
   <div class="ai-panel-grid">
-   <div class="ai-stat"><span class="ai-stat-label">Total corrigidas por IA</span><span class="ai-stat-value">${AI_AUDIT_BATCH.ids.length}</span></div>
+   <div class="ai-stat"><span class="ai-stat-label">Total no filtro de lote</span><span class="ai-stat-value">${counts.all}</span></div>
    <div class="ai-stat ai-stat-awaiting"><span class="ai-stat-label">Aguardando auditoria</span><span class="ai-stat-value">${counts.awaiting}</span></div>
    <div class="ai-stat ai-stat-approved"><span class="ai-stat-label">Aprovadas por mim</span><span class="ai-stat-value">${counts.approved}</span></div>
    <div class="ai-stat ai-stat-rejected"><span class="ai-stat-label">Não aprovadas</span><span class="ai-stat-value">${counts.rejected}</span></div>
   </div>
   <p class="ai-note">A IA corrige. O Owner audita. O Owner aprova. Nenhuma questão é validada automaticamente.</p>
  </div>
+ <div class="ai-subtabs ai-lot-tabs" aria-label="Filtrar por lote">${lotTabs.map(s=>`<button class="review-tab${reviewAiLotFilter===s.key?' active':''}" data-action="ai-audit-lot-filter" data-filter="${s.key}">${s.label} <span class="review-tab-count">${s.count}</span></button>`).join('')}</div>
  <div class="ai-subtabs">${subTabs.map(s=>`<button class="review-tab${reviewAiFilter===s.key?' active':''}" data-action="ai-audit-filter" data-filter="${s.key}">${s.label} <span class="review-tab-count">${s.count}</span></button>`).join('')}</div>
  <div class="ai-list">${listHtml}</div>
  <div class="review-nav">
@@ -346,5 +400,5 @@ function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewSearch='',re
   <span class="review-nav-info">${searched.length>0?`${safeIndex+1} de ${searched.length}`:'Nenhuma questão encontrada'}</span>
   <button class="review-nav-btn" data-action="review-next" ${safeIndex>=searched.length-1?'disabled':''}>Próxima →</button>
  </div>
- ${current?reviewQuestionCard(current,safeIndex,searched.length,editingQuestion,editingFields,true):'<div class="review-empty">Selecione uma questão da lista.</div>'}`;
+ ${current?reviewQuestionCard(current,safeIndex,searched.length,editingQuestion,editingFields,true,reviewAiLotFilter):'<div class="review-empty">Selecione uma questão da lista.</div>'}`;
 }

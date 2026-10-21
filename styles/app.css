@@ -330,6 +330,7 @@ html[data-theme="nebula"] .fixou-logo .fixou-logo-fill{display:none}
 .ai-stat-approved .ai-stat-value{color:#3cc88d}
 .ai-stat-rejected .ai-stat-value{color:#e66a74}
 .ai-subtabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.ai-lot-tabs{padding-bottom:12px;border-bottom:1px solid var(--line)}
 .ai-list{display:flex;flex-direction:column;gap:6px;max-height:340px;overflow-y:auto;border:1px solid var(--border);border-radius:12px;padding:8px;background:var(--surface);margin-bottom:20px}
 .ai-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 12px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--ink);transition:background .15s,border-color .15s}
 .ai-row:hover{background:var(--purple-soft);border-color:var(--border)}
@@ -343,6 +344,8 @@ html[data-theme="nebula"] .fixou-logo .fixou-logo-fill{display:none}
 .ai-explanation-text{font-size:.88rem;line-height:1.75;color:var(--ink);white-space:pre-wrap;padding:14px 16px;border:1px solid var(--border);border-radius:10px;background:var(--bg)}
 .ai-audit-meta{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:.8rem;color:var(--muted);margin-bottom:10px}
 .ai-audit-meta code{font-size:.75rem;background:var(--purple-soft);padding:2px 6px;border-radius:4px;color:var(--purple)}
+.ai-divergence{border-color:rgba(240,176,78,.5);background:rgba(240,176,78,.08)}
+.ai-divergence h4{color:#f0b04e}
 .ai-note{font-size:.8rem;color:var(--muted);line-height:1.7}
 .ai-compare-meta{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0;margin-left:8px}
 .ai-diff-head{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:0 4px 6px}

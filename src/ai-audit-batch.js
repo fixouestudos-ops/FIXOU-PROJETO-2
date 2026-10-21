@@ -1,4 +1,6 @@
-export const AI_AUDIT_BATCH={
+import {AI_AUDIT_LOTS} from './ai-audit-lots.js';
+
+const AI_AUDIT_HISTORICAL={
  "version": 1,
  "batchId": "master-release-01-09",
  "total":  275,
@@ -288,4 +290,19 @@ export const AI_AUDIT_BATCH={
     "fis-lic-l2-f3-c7-exercicios-propostos-q13",
     "fis-lic-l1-f1-c5-revisando-q6"
   ],
+};
+
+const historicalIds=AI_AUDIT_HISTORICAL.ids.slice();
+const ids=[...new Set([...historicalIds,...AI_AUDIT_LOTS.lot12.ids,...AI_AUDIT_LOTS.lot13.ids])];
+
+export const AI_AUDIT_BATCH={
+ ...AI_AUDIT_HISTORICAL,
+ version:2,
+ batchId:'master-release-01-13',
+ historicalBatchId:AI_AUDIT_HISTORICAL.batchId,
+ historicalTotal:historicalIds.length,
+ historicalIds,
+ lots:AI_AUDIT_LOTS,
+ ids,
+ total:ids.length
 };
