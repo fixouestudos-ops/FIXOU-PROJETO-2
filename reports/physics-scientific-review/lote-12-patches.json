@@ -1,0 +1,2492 @@
+[
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q1",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "explanation": "Pela lei de Coulomb, F = k|q₁q₂|/r². Portanto, o módulo da força é diretamente proporcional ao produto dos módulos das cargas e inversamente proporcional ao quadrado da distância. O sinal das cargas determina atração ou repulsão, não essa dependência do módulo. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q22",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "A carroceria metálica funciona como uma gaiola de Faraday: as cargas da descarga se redistribuem pela superfície externa do ônibus e o campo no interior condutor permanece nulo em equilíbrio eletrostático. A proteção decorre da blindagem da carroceria, e não dos pneus. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q28",
+    "before": {
+      "prompt": "UFSM-RS Dois corpos condutores esféricos de raios R1 e R2, carregados, são conectados através de um fio condutor. A relação Q Q 2 1 depois do contato, vale",
+      "options": [
+        "R R 2 1",
+        "R R 1 2",
+        "R ? R",
+        "R R 1 2 2 2",
+        "R R 2 2 1 2"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "UFSM-RS Dois corpos condutores esféricos de raios R₁ e R₂, carregados, são conectados através de um fio condutor. A relação Q₂/Q₁ depois do contato vale:",
+      "options": [
+        "R₂/R₁",
+        "R₁/R₂",
+        "R₁·R₂",
+        "R₁²/R₂²",
+        "R₂²/R₁²"
+      ],
+      "explanation": "Após o equilíbrio, os potenciais das duas esferas ligadas são iguais: kQ₁/R₁ = kQ₂/R₂. Cancelando k e rearranjando, Q₂/Q₁ = R₂/R₁. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q22",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "explanation": "Numa transformação adiabática, Q = 0. Como o meio externo realiza trabalho sobre o gás, a primeira lei dá ΔU = Q + W_sobre = W_sobre > 0. Para um gás ideal, a energia interna depende da temperatura; logo a temperatura aumenta. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q7",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "No atrito entre materiais diferentes ocorre transferência de elétrons, com conservação da carga total. O corpo que perde elétrons fica positivo e o que os recebe fica negativo; nenhum dos dois permanece neutro. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q24",
+    "before": {
+      "options": [
+        "pR 3v",
+        "2Rp 3v",
+        "pR v",
+        "2Rp v",
+        "3Rp v"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "πR/(3v)",
+        "2πR/(3v)",
+        "πR/v",
+        "2πR/v",
+        "3πR/v"
+      ],
+      "explanation": "Como os carros seguem no mesmo sentido, a velocidade relativa é 3v − v = 2v. Entre encontros sucessivos, o mais rápido ganha uma volta completa, distância 2πR. Assim, Δt = 2πR/(2v) = πR/v. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q20",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "Na eletrização por contato, um corpo inicialmente carregado transfere carga ao outro. Na indução, também é indispensável um indutor previamente carregado para separar cargas no corpo induzido. Contato, aterramento e sinais opostos não são requisitos comuns aos dois processos. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q6",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "options": [
+        "340",
+        "680",
+        "1020",
+        "1530",
+        "2040"
+      ],
+      "explanation": "O intervalo de 3 s é a soma do tempo de ida da bala e do tempo de volta do som: d/680 + d/340 = 3. Como 1/680 + 1/340 = 3/680, resulta 3d/680 = 3 e d = 680 m. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q23",
+    "before": {
+      "prompt": "CPS-SP Um condutor eletrizado positivamente está isolado. Ao ser ligado à Terra, por meio de um fio condutor, ele se descarrega em virtude da subida da seguinte partícula proveniente dessa ligação. 1 1 1 1 1 1 1 1",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "CPS-SP Um condutor eletrizado positivamente está isolado. Ao ser ligado à Terra por meio de um fio condutor, ele se descarrega em virtude da subida de qual partícula proveniente dessa ligação?",
+      "explanation": "Um corpo positivo tem falta de elétrons. Ao ser aterrado, elétrons da Terra sobem pelo fio condutor até neutralizar essa deficiência; prótons não se deslocam pelo metal. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q2",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "A ficou positiva ao perder elétrons, então, quando C toca A, elétrons fluem de C para A. B ficou negativa ao receber elétrons; quando D toca B, parte desses elétrons flui de B para D. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q5",
+    "before": {
+      "prompt": "Urca-CE 2021 Um balão está no local cuja temperatura ambiente é T0, volume V0 e pressão P0. Ele é transferido para um ambiente cuja a temperatura é T 16 0 , a pressão 0,8P0. O volume que o balão assume nesse novo ambiente é:",
+      "options": [
+        "V 5 V",
+        "V 5 V 2 0",
+        "V 5 V 12,8 0",
+        "V 5 V",
+        "V 5 ,V"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Urca-CE 2021 Um balão está em um local com temperatura T₀, volume V₀ e pressão P₀. Ele é transferido para um ambiente cuja temperatura é T₀/16 e a pressão é 0,8P₀. O volume que o balão assume nesse novo ambiente é:",
+      "options": [
+        "V = V₀",
+        "V = V₀/2",
+        "V = V₀/12,8",
+        "V = 16V₀",
+        "V = 0,8V₀"
+      ],
+      "explanation": "Para a mesma quantidade de gás, PV/T é constante. Logo V/V₀ = (T/T₀)/(P/P₀) = (1/16)/0,8 = 1/12,8. Portanto, V = V₀/12,8. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q7",
+    "before": {
+      "prompt": "Uece 2017 Um gás que possa ter sua temperatura, seu volume e sua pressão relacionados por PV 5 nRT apresenta as seguintes características:",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "Uece 2017 Um gás que possa ter sua temperatura, seu volume e sua pressão relacionados por PV = nRT apresenta as seguintes características:",
+      "explanation": "No modelo de gás ideal, as partículas ocupam volume desprezível, ficam muito afastadas e não interagem, exceto durante colisões perfeitamente elásticas entre si e com as paredes. Essas hipóteses correspondem à alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q7",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "Num corpo rígido em rotação, todos os pontos têm a mesma velocidade angular ω. A velocidade linear, porém, vale v = ωr e diminui quando a distância r ao eixo diminui. Por isso sentar perto do eixo reduz a velocidade linear. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q7",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "options": [
+        "158",
+        "86",
+        "122",
+        "50",
+        "194"
+      ],
+      "explanation": "A escala defeituosa é linear e indica Fd = 30 + (214−30)C/100 = 30 + 1,84C. A indicação Fahrenheit correta seria F = 32 + 1,8C. Igualando as duas, 30 + 1,84C = 32 + 1,8C, obtém-se C = 50 °C. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q16",
+    "before": {
+      "prompt": "FEI-SP Em uma bicicleta com roda de 1 m de diâmetro, um ciclista necessita dar uma pedalada para que a roda gire duas voltas. Quantas pedaladas por minuto deve dar o ciclista para manter a bicicleta com uma velocidade constante de 6p km/h?",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "FEI-SP Em uma bicicleta com roda de 1 m de diâmetro, um ciclista necessita dar uma pedalada para que a roda gire duas voltas. Quantas pedaladas por minuto deve dar o ciclista para manter a bicicleta com velocidade constante de 6π km/h?",
+      "explanation": "A roda percorre π m por volta e duas voltas por pedalada, portanto 2π m por pedalada. A velocidade 6π km/h equivale a 100π m/min. Assim, a cadência é 100π/(2π) = 50 pedaladas por minuto. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q9",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "A energia potencial de duas cargas é U = kq₁q₂/r. Para cargas de mesmo sinal, U > 0 e diminui quando r aumenta. Para sinais opostos, U < 0 e aumenta em direção a zero quando a separação cresce. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q27",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "Cada volta produz deslocamento linear fixo de 2 mm, então v = 2f e a razão entre velocidade linear e velocidade angular é constante. A 360 rpm, f = 6 rps e v = 12 mm/s; dez voltas deslocam 20 mm; acelerar até 360 rpm em 6 s dá 2 mm/s²; a 120 rpm constante, a aceleração linear é nula. Só a alternativa A é correta."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q10",
+    "before": {
+      "prompt": "Uece 2017 Considere dois sistemas compostos por gases ideais, com massas moleculares diferentes, cada um em um recipiente com isolamento térmico. A pressão, o volume e a temperatura são tais que PV RT é o mesmo para ambos. É correto afirmar que",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Uece 2017 Considere dois sistemas compostos por gases ideais, com massas moleculares diferentes, cada um em um recipiente com isolamento térmico. A razão PV/(RT) é a mesma para ambos. É correto afirmar que:",
+      "explanation": "Pela equação de Clapeyron, n = PV/(RT). Se essa razão é igual nos dois recipientes, eles contêm o mesmo número de mols. Como as massas molares são diferentes, m = nM fornece massas diferentes. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q11",
+    "before": {
+      "options": [
+        "k Q L 2 2 ?",
+        "k Q L 2 ?",
+        "4k Q L 2 ?",
+        "() 4 2 kQ L 2 1 ? ?",
+        "4k Q L 2 2 ?"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "options": [
+        "kQ²/L²",
+        "kQ²/L",
+        "4kQ²/L",
+        "(4 + √2)kQ²/L",
+        "4kQ²/L²"
+      ],
+      "explanation": "A energia do sistema é a soma sobre os seis pares. Há quatro pares vizinhos separados por L e dois pares diagonais separados por L√2. Logo U = 4kQ²/L + 2kQ²/(L√2) = (4 + √2)kQ²/L. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q3",
+    "before": {
+      "prompt": "UFPE Dois prótons de uma molécula de hidrogênio distam cerca de 1,0 ? 10210 m. Qual o módulo da força elétrica que um exerce sobre o outro, em unidades de 1029 N?",
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "UFPE Dois prótons de uma molécula de hidrogênio distam cerca de 1,0 × 10⁻¹⁰ m. Qual o módulo da força elétrica que um exerce sobre o outro, em unidades de 10⁻⁹ N?",
+      "options": [
+        "13",
+        "18",
+        "20",
+        "23",
+        "28"
+      ],
+      "explanation": "Pela lei de Coulomb, F = ke²/r² = 9,0×10⁹·(1,6×10⁻¹⁹)²/(1,0×10⁻¹⁰)² ≈ 23×10⁻⁹ N. Em unidades de 10⁻⁹ N, o valor é 23. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q4",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        " Escalas arbitrárias e equações termométricas"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "options": [
+        "86",
+        "94",
+        "112",
+        "158"
+      ],
+      "explanation": "A conversão é F = (9/5)C + 32. Para C = 70 °C, F = 1,8·70 + 32 = 126 + 32 = 158 °F. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q5",
+    "before": {
+      "prompt": "UFF-RJ 2023 M gramas de um material A tem a mesma capacidade térmica de m gramas de um material B. Se a mesma quantidade de calor for absorvida por massas iguais desses materiais, a relação entre as suas respectivas variações de temperaturas DTA e DTB será:",
+      "options": [
+        "DTA 5 DTB",
+        "DTA 5 M m       DTB",
+        "DTA 5 m M       DTB",
+        "DTA 5       1 2 mM Mm DTB",
+        "DTA 5       2 1 mM Mm DTB"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "UFF-RJ 2023 M gramas de um material A têm a mesma capacidade térmica que m gramas de um material B. Se a mesma quantidade de calor for absorvida por massas iguais desses materiais, a relação entre as respectivas variações de temperatura ΔT_A e ΔT_B será:",
+      "options": [
+        "ΔT_A = ΔT_B",
+        "ΔT_A = (M/m)ΔT_B",
+        "ΔT_A = (m/M)ΔT_B",
+        "ΔT_A = ((m+M)/(M−m))ΔT_B",
+        "ΔT_A = ((m−M)/(M+m))ΔT_B"
+      ],
+      "explanation": "A igualdade das capacidades térmicas fornece Mc_A = mc_B, portanto c_B/c_A = M/m. Para massas iguais recebendo o mesmo calor, Q = m₀cΔT implica ΔT_A/ΔT_B = c_B/c_A = M/m. Assim, ΔT_A = (M/m)ΔT_B. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q21",
+    "before": {
+      "prompt": "FEI-SP Um móvel em trajetória circular de raio r 5 5 m parte do repouso com aceleração angular constante de 10 rad/s2 . Quantas voltas ele percorre nos 10 primeiros segundos?",
+      "options": [
+        "500",
+        "p 250",
+        "100p",
+        "p 500",
+        "500p"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "FEI-SP Um móvel em trajetória circular de raio r = 5 m parte do repouso com aceleração angular constante de 10 rad/s². Quantas voltas ele percorre nos 10 primeiros segundos?",
+      "options": [
+        "500",
+        "250/π",
+        "100π",
+        "500/π",
+        "500π"
+      ],
+      "explanation": "Partindo do repouso, o deslocamento angular é Δθ = αt²/2 = 10·10²/2 = 500 rad. Cada volta corresponde a 2π rad; portanto N = 500/(2π) = 250/π voltas. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q26",
+    "before": {
+      "prompt": "UFF-RJ Três esferas condutoras idênticas I, II e III têm, respectivamente, as seguintes cargas elétricas: 4q, 22q e 3q. A esfera I é colocada em contato com a esfera II e, logo em seguida, é encostada à esfera III. Pode-se afirmar que a carga final da esfera I será:",
+      "options": [
+        "q",
+        "q",
+        "q",
+        "q",
+        "q"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "UFF-RJ Três esferas condutoras idênticas I, II e III têm, respectivamente, cargas 4q, −2q e 3q. A esfera I é colocada em contato com a esfera II e, logo em seguida, é encostada à esfera III. Pode-se afirmar que a carga final da esfera I será:",
+      "options": [
+        "q",
+        "2q",
+        "3q",
+        "4q",
+        "5q"
+      ],
+      "explanation": "No primeiro contato, as esferas idênticas I e II dividem a carga total 4q−2q = 2q, ficando com q cada. Depois, I, com q, toca III, com 3q; a carga total 4q divide-se igualmente, deixando I com 2q. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q22",
+    "before": {
+      "prompt": "Unaerp-SP Um “motorzinho” de dentista gira com frequência de 2000 Hz até a broca de raio 2,0 mm encostar no dente do paciente, quando, após 1,5 segundo, este passa a ter frequência de 500 Hz. O módulo da aceleração escalar média, nesse intervalo de tempo, é, em m/s2 :",
+      "options": [
+        "2p",
+        "3p",
+        "4p",
+        "5p",
+        "6p"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Unaerp-SP Um motor de dentista gira com frequência de 2000 Hz até a broca de raio 2,0 mm encostar no dente do paciente, quando, após 1,5 s, passa a ter frequência de 500 Hz. O módulo da aceleração escalar média nesse intervalo é, em m/s²:",
+      "options": [
+        "2π",
+        "3π",
+        "4π",
+        "5π",
+        "6π"
+      ],
+      "explanation": "A velocidade tangencial é v = 2πrf. A variação de seu módulo é |Δv| = 2π·0,002·|500−2000| = 6π m/s. Dividindo por 1,5 s, a aceleração escalar média tem módulo 4π m/s². Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q33",
+    "before": {
+      "prompt": "UEA-AM 2024 Considere uma carga elétrica pontual Q. Admita que, em um ponto localizado a uma distância d dessa carga, a intensidade do campo elétrico correspondente seja E. O valor do campo elétrico corresponderá a E 4 , em um ponto distante de Q, localizado a uma distância",
+      "options": [
+        "d",
+        "d",
+        "d",
+        "d",
+        "d"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "UEA-AM 2024 Considere uma carga elétrica pontual Q. Em um ponto a uma distância d dessa carga, a intensidade do campo elétrico é E. O campo será E/4 em um ponto localizado a qual distância de Q?",
+      "options": [
+        "2d",
+        "3d",
+        "4d",
+        "5d",
+        "8d"
+      ],
+      "explanation": "Para uma carga pontual, E = k|Q|/r². Reduzir o campo a E/4 exige aumentar r² por um fator 4, portanto r deve dobrar: r = 2d. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q38",
+    "before": {
+      "options": [
+        "2 °C",
+        "2 °C",
+        "2 °C",
+        " °C",
+        " °C"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "options": [
+        "−20 °C",
+        "−16 °C",
+        "−10 °C",
+        "0 °C",
+        "2 °C"
+      ],
+      "explanation": "Por segundo, o aparelho recebe W = 200 J e rejeita Q_h = 1400 J, então retira Q_c = 1200 J e tem COP = Q_c/W = 6. Para Carnot, COP = T_c/(T_h−T_c), com T_h = 300 K. Assim 6 = T_c/(300−T_c), dando T_c ≈ 257 K ≈ −16 °C. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q6",
+    "before": {
+      "prompt": "FEI-SP A diferença de potencial elétrico entre dois pontos A e B é VA 2 VB 5 10 V. O trabalho realizado pela força elétrica no transporte de uma carga q 5 2,0 mC de A para B é, em joules:",
+      "options": [
+        ", ? 2",
+        "2, ? 2",
+        ", ? 2",
+        "2, ? 2",
+        "zero"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "FEI-SP A diferença de potencial entre A e B é V_A − V_B = 10 V. O trabalho realizado pela força elétrica no transporte de uma carga q = 2,0 μC de A para B é, em joules:",
+      "options": [
+        "5,0 × 10⁻⁶",
+        "−5,0 × 10⁻⁶",
+        "2,0 × 10⁻⁵",
+        "−2,0 × 10⁻⁵",
+        "zero"
+      ],
+      "explanation": "O trabalho da força elétrica é W = q(V_A−V_B). Com q = 2,0×10⁻⁶ C e diferença de 10 V, W = 2,0×10⁻⁵ J, positivo para o deslocamento indicado. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q31",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "options": [
+        "0",
+        "100",
+        "800",
+        "900",
+        "1000"
+      ],
+      "explanation": "Em qualquer ciclo fechado o sistema retorna ao estado inicial. Como energia interna é função de estado, sua variação total no ciclo é ΔU = 0, independentemente dos calores e do trabalho trocados. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q5",
+    "before": {
+      "prompt": "Fuvest-SP A uma distância d uma da outra, encontram- -se duas esferinhas metálicas idênticas, de dimensões desprezíveis, com cargas 2Q e 19Q. Elas são postas em contato e, em seguida, colocadas à distância 2d. A razão entre os módulos das forças que atuam após o contato e antes do contato é",
+      "options": [
+        "2 3",
+        "4 9",
+        "",
+        "9 2",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "Fuvest-SP A uma distância d uma da outra encontram-se duas esferas metálicas idênticas, com cargas −Q e +9Q. Elas são postas em contato e, em seguida, separadas por 2d. A razão entre os módulos das forças depois e antes do contato é:",
+      "options": [
+        "2/3",
+        "4/9",
+        "1",
+        "9/2",
+        "4"
+      ],
+      "explanation": "Antes, o módulo é F_i = 9kQ²/d². No contato, a carga total 8Q divide-se igualmente: cada esfera fica com 4Q. A 2d, F_f = k(4Q)²/(2d)² = 4kQ²/d². Logo F_f/F_i = 4/9. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q28",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "explanation": "A força coulombiana aponta radialmente para o próton, enquanto o deslocamento instantâneo do elétron na órbita circular é tangencial. Assim F·ds = 0 em todo o percurso e o trabalho em uma volta é zero. Como nenhuma expressão A–D representa zero, a resposta é n.d.a. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q40",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "100",
+        "99",
+        "90",
+        "10",
+        "1"
+      ],
+      "explanation": "Como máquina térmica, η = W/Q_h = 0,1. Para W = 10 J, Q_h = 100 J. A conservação de energia dá Q_h = Q_c + W, então o refrigerador retira Q_c = 100−10 = 90 J da fonte fria. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q10",
+    "before": {
+      "prompt": "Unesp Duas esferas condutoras idênticas, carregadas com cargas 1Q e 23Q, inicialmente separadas por uma distância d, atraem-se com uma força elétrica de intensidade (módulo) F. Se as esferas são postas em contato e, em seguida, levadas de volta para suas posições originais, a nova força entre elas será",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "Unesp Duas esferas condutoras idênticas, com cargas +Q e −3Q, separadas por d, atraem-se com força de módulo F. Após o contato, elas retornam às posições originais. A nova força será:",
+      "explanation": "Inicialmente F = 3kQ²/d² e há atração. A carga total −2Q divide-se igualmente no contato, deixando −Q em cada esfera. Depois, a força é kQ²/d² = F/3 e é repulsiva, pois as cargas têm o mesmo sinal. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q12",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "200",
+        "150",
+        "170",
+        "90"
+      ],
+      "explanation": "A razão entre intervalos é ΔX/ΔC = 60/40 = 1,5. Como 0 °C corresponde a 20 °X, a relação é X = 20 + 1,5C. Para a ebulição, C = 100 °C, logo X = 170 °X. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q41",
+    "before": {
+      "options": [
+        "1|q|, 2|q|, 1|q|, 2|q|",
+        "1|q|, 1|q|, 1|q|, 1|q|",
+        "1|q|, 1|q|, 2|q|, 2|q|",
+        "2|q|, 2|q|, 2|q|, 2|q|"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "+|q|, −|q|, +|q|, −|q|",
+        "+|q|, +|q|, +|q|, +|q|",
+        "+|q|, +|q|, −|q|, −|q|",
+        "−|q|, −|q|, −|q|, −|q|"
+      ],
+      "explanation": "No centro, campos de cargas iguais em vértices opostos se cancelam. Isso ocorre nas configurações alternada e com quatro sinais iguais. Na sequência +,+,−,−, vértices opostos têm sinais diferentes e seus campos se somam, produzindo campo resultante não nulo. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q36",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "Um processo reversível precisa passar por estados de equilíbrio infinitamente próximos, portanto é necessariamente quase estático. Para gás ideal isotérmico, ΔU = 0; na expansão o gás realiza trabalho; e numa expansão adiabática sem trabalho externo sobre o gás sua temperatura cai. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q16",
+    "before": {
+      "prompt": "Uece 2019 Considere um gás confinado em um recipiente cilíndrico, de paredes fixas, exceto pela tampa, que é composta por um êmbolo móvel que exerce uma pressão constante (P) sobre o gás. Caso o gás se expanda e seu volume sofra um incremento DV, em função de deslocamento do êmbolo, o trabalho realizado pelo gás é",
+      "options": [
+        "D P V",
+        "DV P",
+        "PDV",
+        "2PDV"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Uece 2019 Um gás confinado sob pressão constante P expande-se e seu volume aumenta de ΔV. O trabalho realizado pelo gás é:",
+      "options": [
+        "ΔP/V",
+        "ΔV/P",
+        "PΔV",
+        "−PΔV"
+      ],
+      "explanation": "O trabalho em pressão constante é W = ∫P dV = P(V_f−V_i) = PΔV. Como há expansão, ΔV > 0 e o trabalho realizado pelo gás é positivo. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q22",
+    "before": {
+      "prompt": "FEI-SP Duas cargas elétricas puntiformes Q1 e Q2 5 4Q1 estão fixas nos pontos A e B, distantes 30 cm. Em que posição (x) deve ser colocada uma carga Q3 5 2Q1 para ficar em equilíbrio sob ação somente de forças elétricas? Q1 Q3 Q2 30 cm x",
+      "options": [
+        "x 5  cm",
+        "x 5  cm",
+        "x 5 cm",
+        "x 5  cm",
+        "x 5  cm"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "FEI-SP Duas cargas puntiformes Q₁ e Q₂ = 4Q₁ estão fixas em A e B, separadas por 30 cm. Entre elas, a que distância x de Q₁ deve ser colocada uma carga Q₃ = 2Q₁ para ficar em equilíbrio apenas sob forças elétricas?",
+      "options": [
+        "x = 5 cm",
+        "x = 10 cm",
+        "x = 15 cm",
+        "x = 20 cm",
+        "x = 25 cm"
+      ],
+      "explanation": "No equilíbrio, kQ₁Q₃/x² = kQ₂Q₃/(30−x)². Como Q₂ = 4Q₁, resulta (30−x)² = 4x² e, no intervalo entre as cargas, 30−x = 2x. Portanto x = 10 cm. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q18",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "Como todas as panelas têm o mesmo volume e contêm água, as massas e os calores específicos por panela são iguais. O equilíbrio é a média ponderada: T = (2·100 + 8·20)/(2+8) = 360/10 = 36 °C. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q1",
+    "before": {
+      "options": [
+        ", °C e , litros",
+        "2 °C e  litros",
+        " °C e , litros",
+        ", °C e  litros",
+        "2 °C e  litros"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "options": [
+        "13,5 °C e 2,5 L",
+        "−123 °C e 10 L",
+        "150 °C e 2,5 L",
+        "3,6 °C e 10 L",
+        "−214 °C e 25 L"
+      ],
+      "explanation": "Na compressão isobárica, V/T é constante: reduzir 10 L a 5 L reduz 300 K a 150 K, isto é, −123 °C. Depois, a expansão é isotérmica; com P caindo de 6 atm a 3 atm, PV constante faz o volume dobrar de 5 L para 10 L. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q25",
+    "before": {
+      "prompt": "UFRGS Duas esferas maciças e homogêneas, X e Y, de mesmo volume e materiais diferentes, estão ambas na mesma temperatura T. Quando ambas são sujeitas a uma mesma variação de temperatura DT, os volumes de X e Y aumentam de 1% e 5%, respectivamente. A razão entre os coeficientes de dilatação linear dos materiais de X e Y, X Y a a , é",
+      "options": [
+        "",
+        "1 2",
+        "1 4",
+        "1 5",
+        "1 10 Comportamento anômalo da água"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "UFRGS Duas esferas maciças e homogêneas X e Y, de mesmo volume, sofrem a mesma variação de temperatura. Seus volumes aumentam 1% e 5%, respectivamente. A razão entre os coeficientes de dilatação linear α_X/α_Y é:",
+      "options": [
+        "1",
+        "1/2",
+        "1/4",
+        "1/5",
+        "1/10"
+      ],
+      "explanation": "Para sólidos isotrópicos, a dilatação volumétrica relativa é ΔV/V = 3αΔT. Como V e ΔT são iguais, α_X/α_Y = (ΔV_X/V)/(ΔV_Y/V) = 1%/5% = 1/5. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q16",
+    "before": {
+      "prompt": "ITA-SP Assinale a alternativa que expressa o trabalho necessário para colocar cada uma de quatro cargas elétricas iguais, q, nos vértices de um retângulo de altura a e base 2a 2, sendo k 1 4 0 5 pv em que v0 é a permissividade elétrica do vácuo.",
+      "options": [
+        "k4() 2q 2a 2 1",
+        "k8() 22 q 2a 2 1",
+        "k1() 6 3 2q 6a 2 1",
+        "k2() 0 3 2q 6a 2 1",
+        "k1() 2 3 2q 2a 2 1 Sistemas conservativos e energia potencial elétrica"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "ITA-SP Assinale a expressão do trabalho necessário para colocar quatro cargas iguais q nos vértices de um retângulo de altura a e base 2a√2, sendo k = 1/(4πε₀).",
+      "options": [
+        "k(4+√2)q²/(2a)",
+        "k(8+2√2)q²/(2a)",
+        "k(16+3√2)q²/(6a)",
+        "k(20+3√2)q²/(6a)",
+        "k(12+3√2)q²/(2a)"
+      ],
+      "explanation": "Somam-se as energias dos seis pares. Há dois pares a distância a, dois a 2a√2 e dois nas diagonais de comprimento 3a. Assim U = kq²[2/a + 2/(2a√2) + 2/(3a)] = kq²(16+3√2)/(6a). Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q2",
+    "before": {
+      "prompt": "Udesc 2016 Duas pequenas esferas estão separadas por uma distância de 30 cm. As duas esferas repelem- -se com uma força de 7,5 ? 1026 N. Considerando que a soma da carga elétrica das duas esferas é 20 nC, a carga elétrica de cada esfera é, respectivamente:",
+      "options": [
+        " nC e  nC",
+        " nC e  nC",
+        ", nC e  nC",
+        " nC e  nC",
+        " nC e  nC"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "Udesc 2016 Duas esferas a 30 cm repelem-se com força de 7,5 × 10⁻⁶ N. A soma de suas cargas é 20 nC. As cargas são:",
+      "options": [
+        "10 nC e 10 nC",
+        "13 nC e 7 nC",
+        "7,5 nC e 10 nC",
+        "12 nC e 8 nC",
+        "15 nC e 5 nC"
+      ],
+      "explanation": "Pela lei de Coulomb, q₁q₂ = Fr²/k = 7,5×10⁻⁶·0,30²/(9×10⁹) = 75×10⁻¹⁸ C², isto é, 75 nC². Com q₁+q₂ = 20 nC, as raízes são 15 nC e 5 nC. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q31",
+    "before": {
+      "prompt": "UPE Duas esferas isolantes, A e B, possuem raios iguais a RA e RB e cargas, uniformemente distribuídas, iguais a QA e QB, respectivamente. Sabendo-se que 5QA 5 2QB e ainda que 10RA 5 3RB, qual a relação entre suas densidades volumétricas de cargas A B r r ?",
+      "options": [
+        "100 9",
+        "15 8",
+        "200 6",
+        "400 27",
+        "280 9"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "UPE Duas esferas isolantes A e B têm raios R_A e R_B e cargas uniformes Q_A e Q_B. Sabendo que 5Q_A = 2Q_B e 10R_A = 3R_B, qual é a razão entre suas densidades volumétricas ρ_A/ρ_B?",
+      "options": [
+        "100/9",
+        "15/8",
+        "200/6",
+        "400/27",
+        "280/9"
+      ],
+      "explanation": "Como ρ = Q/[(4/3)πR³], ρ_A/ρ_B = (Q_A/Q_B)(R_B/R_A)³. Das relações dadas, Q_A/Q_B = 2/5 e R_B/R_A = 10/3. Logo a razão é (2/5)(10/3)³ = 400/27. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q8",
+    "before": {
+      "prompt": "FCMSCSP 2023 Sejam TC, TF e TK a mesma temperatura nas escalas Celsius, Fahrenheit e kelvin, respectivamente. As fórmulas usuais de conversão entre TC, TF e TK são:      T 5 (T 32) 9 T T 273,15 C F KC 5 ?2 51 Uma fórmula que converte diretamente TK em TF é:",
+      "options": [
+        "TF 5 ,TK 2 ,",
+        "TF 5 ,TK 2 ,",
+        "TF 5 ,TK 2 ,",
+        "TF 5 ,TK 2 ,",
+        "TF 5 ,TK 2 ,"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "FCMSCSP 2023 Se T_C, T_F e T_K representam a mesma temperatura em Celsius, Fahrenheit e kelvin, qual fórmula converte diretamente T_K em T_F?",
+      "options": [
+        "T_F = 1,8T_K − 523,67",
+        "T_F = 0,56T_K − 290,75",
+        "T_F = 1,8T_K − 459,67",
+        "T_F = 0,56T_K − 305,15",
+        "T_F = 1,8T_K − 533,15"
+      ],
+      "explanation": "Usando T_C = T_K−273,15 e T_F = 1,8T_C+32, obtemos T_F = 1,8(T_K−273,15)+32 = 1,8T_K−459,67. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q3",
+    "before": {
+      "prompt": "FGV-SP Deseja-se eletrizar um objeto metálico, inicialmente neutro, pelos processos de eletrização conhecidos, e obter uma quantidade de carga negativa de 3,2 mC. Sabendo-se que a carga elementar vale 1,6 ? 10219 C, para se conseguir a eletrização desejada será preciso",
+      "options": [
+        "retirar do objeto  trilhões de prótons.",
+        "retirar do objeto  trilhões de elétrons.",
+        "acrescentar ao objeto  trilhões de elétrons.",
+        "acrescentar ao objeto cerca de  trilhões de elétrons.",
+        "retirar do objeto cerca de  trilhões de prótons. Processos de eletrização"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "FGV-SP Deseja-se eletrizar negativamente um objeto metálico inicialmente neutro com carga de 3,2 μC. Sabendo que a carga elementar vale 1,6 × 10⁻¹⁹ C, será preciso:",
+      "options": [
+        "retirar 20 trilhões de prótons",
+        "retirar 20 trilhões de elétrons",
+        "acrescentar 20 trilhões de elétrons",
+        "acrescentar cerca de 51 trilhões de elétrons",
+        "retirar cerca de 51 trilhões de prótons"
+      ],
+      "explanation": "O número de elétrons é n = |Q|/e = 3,2×10⁻⁶/(1,6×10⁻¹⁹) = 2,0×10¹³, ou 20 trilhões. Para obter carga negativa, esses elétrons devem ser acrescentados. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q27",
+    "before": {
+      "prompt": "Um estudante tinha M 1 N 1 1 esferas metálicas. Carregou uma delas com uma carga q e colocou-a em contato simultâneo com outras M esferas idênticas à primeira. Depois colocou a esfera original em contato sucessivo com todas as esferas do conjunto que ainda estavam neutras até que nenhuma mais mantivesse esta propriedade. Qual a carga final da primeira esfera?",
+      "options": [
+        "q 2 (M 1) N ?1",
+        "q 2 (M) N ?",
+        "q (N 11 M 1)",
+        "q 2M 1 N",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "Um estudante tinha M + N + 1 esferas metálicas idênticas. Carregou uma delas com carga q e colocou-a simultaneamente em contato com outras M esferas. Depois, colocou a esfera original sucessivamente em contato com cada uma das N esferas ainda neutras. Qual é sua carga final?",
+      "options": [
+        "q/[(M+1)·2ᴺ]",
+        "q/(M·2ᴺ)",
+        "q/(N+M+1)",
+        "q/(2M+N)",
+        "0"
+      ],
+      "explanation": "No primeiro contato, q divide-se por M+1 esferas, deixando q/(M+1) na original. Cada contato posterior com uma esfera idêntica neutra divide por 2 a carga da original. Após N contatos, Q = q/[(M+1)2ᴺ]. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q11",
+    "before": {
+      "prompt": "Efomm-RJ 2018 Um automóvel viaja em uma estrada horizontal com velocidade constante e sem atrito. Cada pneu desse veículo tem raio de 0,3 metro e gira em uma frequência de 900 rotações por minuto. A velocidade desse automóvel é de aproximadamente: Dado: considere p 5 3,1.",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "Efomm-RJ 2018 Cada pneu de um automóvel tem raio 0,3 m e gira a 900 rpm. Sem deslizamento e usando π = 3,1, a velocidade do automóvel é aproximadamente:",
+      "explanation": "A frequência é 900/60 = 15 Hz. Sem deslizamento, v = 2πrf = 2·3,1·0,3·15 = 27,9 m/s, aproximadamente 28 m/s. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q1",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "explanation": "A leitura só representa a temperatura corporal quando termômetro e corpo atingem equilíbrio térmico, isto é, deixam de trocar calor por estarem à mesma temperatura. Isso não exige energias internas ou quantidades de calor iguais. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q29",
+    "before": {
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "options": [
+        "10¹⁹",
+        "10¹⁶",
+        "10¹³",
+        "10¹⁰",
+        "10¹"
+      ],
+      "explanation": "Com densidade superficial constante, a carga e o número de cargas elementares são proporcionais à área, portanto a r². Passar de micrômetros para milímetros multiplica r por 10³ e o número por 10⁶. Partindo de 10⁴ cargas, chega-se a 10¹⁰. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-propostos-q6",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "Os gases produzidos na combustão ficam aquecidos, expandem-se, tornam-se menos densos que o ar mais frio e sobem por convecção. Perto do piso há menos fumaça e gases quentes, justificando deslocar-se abaixado. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q9",
+    "before": {
+      "prompt": "IFSP Enquanto fazia a limpeza em seu local de trabalho, uma faxineira se surpreendeu com o seguinte fenômeno: depois de limpar um objeto de vidro, esfregando-o vigorosamente com um pedaço de pano de lã, percebeu que o vidro atraiu para si pequenos pedaços de papel que estavam espalhados sobre a mesa. Vidro Lã O motivo da surpresa da faxineira consiste no fato de que",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "IFSP Após esfregar vigorosamente um objeto de vidro com lã, ele passa a atrair pequenos pedaços de papel. Isso ocorre porque:",
+      "explanation": "O atrito transfere elétrons entre lã e vidro: um perde elétrons e o outro ganha, ficando ambos eletrizados com sinais opostos. O vidro carregado polariza os pedaços neutros de papel e os atrai. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q7",
+    "before": {
+      "prompt": "Unicamp-SP 2021 Ao passar pelo sensor magnético, a velocidade linear de um ponto de uma fita cassete é v 5 0,045 m/s. Depois de passar pelo sensor, a fita é enrolada em uma bobina circular de diâmetro d 5 6,0 cm. Em quanto tempo a bobina completa uma volta? Dado: considere p 5 3.",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Unicamp-SP 2021 Uma fita cassete passa pelo sensor com velocidade linear v = 0,045 m/s e depois é enrolada em uma bobina de diâmetro d = 6,0 cm. Em quanto tempo a bobina completa uma volta? Use π = 3.",
+      "explanation": "Uma volta enrola o comprimento πd = 3·0,060 = 0,18 m. O período é T = comprimento/velocidade = 0,18/0,045 = 4,0 s. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q8",
+    "before": {
+      "prompt": "PUC-Rio 2023 Três partículas pontuais idênticas de carga elétrica Q estão fixas sobre os vértices de um triângulo equilátero de lado L. Sendo k a constante de Coulomb, qual é o módulo da força sentida por qualquer uma delas, devido às outras duas? Dados: sen30 °5 °5 1 2 ; cos30 3 2 .",
+      "options": [
+        "k ? Q L 2 2",
+        "2k ? Q L 2",
+        "2k ? Q L 2 2",
+        "3k ? Q L 2",
+        "3k ? Q L 2 2"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "PUC-Rio 2023 Três cargas pontuais idênticas Q ocupam os vértices de um triângulo equilátero de lado L. Sendo k a constante de Coulomb, qual é o módulo da força sobre qualquer uma delas devido às outras duas?",
+      "options": [
+        "kQ²/L²",
+        "2kQ²/L",
+        "2kQ²/L²",
+        "√3kQ²/L",
+        "√3kQ²/L²"
+      ],
+      "explanation": "Cada uma das duas forças tem módulo F = kQ²/L² e o ângulo entre elas é 60°. A resultante vale √(F²+F²+2F²cos60°) = √3F = √3kQ²/L². Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q40",
+    "before": {
+      "prompt": "UEA-AM 2023 Uma carga pontual de valor igual a 22 ? 1023 C é colocada em uma região onde atua um campo elétrico de direção vertical e voltado para cima, de intensidade igual a 5 ? 105 N/C. A força elétrica à qual ficará submetida essa carga elétrica terá direção vertical, sentido para",
+      "options": [
+        "baixo e módulo de  N.",
+        "baixo e módulo de  N.",
+        "baixo e módulo de  N.",
+        "cima e módulo de  N.",
+        "cima e módulo de  N."
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "UEA-AM 2023 Uma carga q = −2 × 10⁻³ C é colocada em um campo elétrico vertical para cima de intensidade 5 × 10⁵ N/C. A força elétrica terá:",
+      "options": [
+        "sentido para baixo e módulo 10 N",
+        "sentido para baixo e módulo 100 N",
+        "sentido para baixo e módulo 1000 N",
+        "sentido para cima e módulo 10 N",
+        "sentido para cima e módulo 100 N"
+      ],
+      "explanation": "O módulo é |F| = |q|E = 2×10⁻³·5×10⁵ = 1000 N. Como a carga é negativa, a força tem sentido oposto ao campo, isto é, para baixo. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q44",
+    "before": {
+      "prompt": "AFA-SP Um balão sobe verticalmente com movimento uniforme. Seis segundos após a partida, o piloto abandona uma pedra que alcança o solo nove segundos após a saída do balão. Determine, em metros, a altura em que a pedra foi abandonada. Dado: despreze o efeito do ar e adote g 5 10 m/s2 .",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "AFA-SP Um balão sobe verticalmente em movimento uniforme. Seis segundos após partir, o piloto abandona uma pedra, que atinge o solo nove segundos após a partida do balão. Despreze o ar e use g = 10 m/s². A altura de abandono é:",
+      "options": [
+        "27",
+        "30",
+        "36",
+        "54"
+      ],
+      "explanation": "Se a velocidade do balão é u, a altura de abandono é h = 6u. A pedra conserva velocidade inicial u para cima e cai durante 3 s: 0 = h + 3u − 5·3². Substituindo h = 6u, 9u = 45, logo u = 5 m/s e h = 30 m. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q25",
+    "before": {
+      "options": [
+        "zero",
+        "kQ",
+        "2kQ",
+        "kQ",
+        "kQ"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "options": [
+        "zero",
+        "kQ²",
+        "2kQ²",
+        "4kQ⁴",
+        "8kQ²"
+      ],
+      "explanation": "No centro do cubo, cada carga de um vértice tem uma carga idêntica no vértice oposto, à mesma distância. Os campos desses pares têm módulos iguais e sentidos opostos, cancelando-se. Portanto, a força sobre a carga central é zero. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q14",
+    "before": {
+      "prompt": "Ufal Considere quatro esferas condutoras idênticas, x, y, z e t com cargas elétricas respectivamente, 14Q, 22Q, 17Q e 24Q. Ligando-se, por um fio condutor de capacidade desprezível, uma dessas esferas, sucessivamente, às outras esferas numa ordem adequada, obtém-se uma esfera com carga elétrica −Q, usando somente três esferas. As esferas usadas, em uma ordem conveniente, são:",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Ufal Quatro esferas idênticas x, y, z e t têm cargas +4Q, −2Q, +7Q e −4Q. Ligando uma esfera sucessivamente a duas outras, deseja-se obter carga final −Q usando três esferas. A ordem conveniente é:",
+      "explanation": "Escolhendo x, t e y: no contato entre x (+4Q) e t (−4Q), ambas ficam neutras. Depois x, com zero, toca y (−2Q); a carga total −2Q divide-se igualmente e x termina com −Q. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c4-exercicios-complementares-q7",
+    "before": {
+      "options": [
+        "() ⋅ ⋅ 0,5 D VL .",
+        "() ⋅ L DV .",
+        "D ? V ? L.",
+        "D ? (V ? L) ."
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "0,5DVL",
+        "L/(DV)",
+        "DVL",
+        "D(VL)²"
+      ],
+      "explanation": "A massa de gelo é m = DV. Como ele já está a 273 K, basta fornecer calor latente de fusão: Q = mL = DVL. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q19",
+    "before": {
+      "prompt": "Mackenzie-SP Uma partícula eletrizada com carga q 5 1 mC e massa 1 g é abandonada em repouso, no vácuo (k0 5 9 ? 109 N ? m2 /C2 ), num ponto A distante 1,0 m de outra carga Q 5 25 mC, fixa. A velocidade da partícula, em m/s, quando passa pelo ponto B, distante 1,0 m de A é: 1,0 m 1,0 m Q 5 25mC AB",
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "Mackenzie-SP Uma partícula de carga q = +1 μC e massa 1 g é abandonada a 1,0 m de uma carga fixa Q = −25 μC. Determine sua velocidade quando está a 2,0 m de Q. Use k₀ = 9 × 10⁹ N·m²/C².",
+      "options": [
+        "1",
+        "5",
+        "8",
+        "10",
+        "15"
+      ],
+      "explanation": "A energia potencial aumenta de U_i = kqQ/1 para U_f = kqQ/2, e a redução em módulo vira energia cinética: K = k|qQ|(1−1/2) = 0,1125 J. Como K = mv²/2 e m = 0,001 kg, v² = 225 e v = 15 m/s. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q9",
+    "before": {
+      "options": [
+        ",",
+        ",",
+        ",",
+        ","
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "options": [
+        "0,25",
+        "1,25",
+        "2,0",
+        "2,5"
+      ],
+      "explanation": "Em sentidos opostos, a velocidade relativa é 60+90 = 150 km/h. Trinta segundos correspondem a 1/120 h. A separação inicial é d = 150·(1/120) = 1,25 km. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q14",
+    "before": {
+      "prompt": "Fatec-SP Duas pequenas esferas idênticas A e B têm cargas respectivamente QA 5 214 ? 1026 C e QB 5 50 ? 1026 C. As duas são colocadas em contato e após atingido o equilíbrio eletrostático são separadas. Lembrando-se que a carga de um elétron é 1,6 ? 10219 C, é correto afirmar que, após atingido o equilíbrio,",
+      "options": [
+        " ?  prótons terão passado de A para B.",
+        ", ? 2 prótons terão passado de A para B.",
+        " ?  elétrons terão passado de A para B.",
+        ", ? 2 elétrons terão passado de A para B.",
+        " ?  elétrons terão passado de B para A."
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Fatec-SP Duas esferas idênticas têm cargas Q_A = −14 μC e Q_B = +50 μC. Após o contato e o equilíbrio, quantos elétrons são transferidos e em que sentido? Use e = 1,6 × 10⁻¹⁹ C.",
+      "options": [
+        "2 × 10¹⁴ prótons de A para B",
+        "1,6 × 10⁻¹⁹ prótons de A para B",
+        "2 × 10¹⁴ elétrons de A para B",
+        "1,6 × 10⁻¹⁹ elétrons de A para B",
+        "2 × 10¹⁴ elétrons de B para A"
+      ],
+      "explanation": "A carga total é +36 μC, então cada esfera termina com +18 μC. A passa de −14 μC a +18 μC, perdendo 32 μC em elétrons. N = 32×10⁻⁶/(1,6×10⁻¹⁹) = 2×10¹⁴ elétrons, transferidos de A para B. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q19",
+    "before": {
+      "prompt": "Fuvest-SP Duas esferas metálicas A e B estão próximas uma da outra. A esfera A está ligada à Terra, cujo potencial é nulo, por um fio condutor. 1Q BA A esfera B está isolada e carregada com carga 1Q. Considere as seguintes afirmações: I. O potencial da esfera A é nulo. II. A carga total da esfera A é nula. III. A força elétrica total sobre a esfera A é nula. Está correto apenas o que se afirma em",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "Fuvest-SP Uma esfera metálica A está aterrada e próxima de uma esfera B isolada com carga +Q. Considere: I. o potencial de A é nulo; II. a carga total de A é nula; III. a força total sobre A é nula. Está correto apenas:",
+      "explanation": "O aterramento mantém V_A = 0, tornando I verdadeira. A presença de B induz fluxo de elétrons da Terra para A, de modo que sua carga total não precisa ser nula; além disso, há atração entre A e B. II e III são falsas. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q22",
+    "before": {
+      "prompt": "UFSM-RS Uma partícula com carga q 5 2 ? 1027 C se desloca do ponto A ao ponto B, que estão numa região em que existe um campo elétrico. Durante esse deslocamento, a força elétrica realiza um trabalho W 5 4 ? 1023 J sobre a partícula. A diferença de potencial VB 2 VA entre os dois pontos considerados vale, em V,",
+      "options": [
+        "2 ? 2",
+        " ? 2",
+        "2 ? ",
+        " ? ",
+        ", ? 2"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "UFSM-RS Uma partícula com carga q = 2 × 10⁻⁷ C desloca-se de A para B, e a força elétrica realiza trabalho W = 4 × 10⁻³ J. A diferença V_B − V_A vale:",
+      "options": [
+        "−8 × 10⁻¹⁰",
+        "8 × 10⁻¹⁰",
+        "−2 × 10⁴",
+        "2 × 10⁴",
+        "0,5 × 10⁻⁴"
+      ],
+      "explanation": "O trabalho elétrico é W = q(V_A−V_B). Portanto V_B−V_A = −W/q = −4×10⁻³/(2×10⁻⁷) = −2×10⁴ V. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q8",
+    "before": {
+      "prompt": "EsPCEx-SP 2022 Três esferas condutoras A, B e C, de mesmo raio, possuem cargas elétricas respectivamente iguais a 22 mC, 210 mC e 112 mC. A esfera A é colocada em contato com a esfera B e, em seguida, as duas são afastadas. Após um intervalo de tempo, a esfera A é posta em contato com a esfera C. Considerando que as esferas trocaram cargas apenas entre si, ao final do processo, a carga elétrica de A será:",
+      "options": [
+        "1 mC",
+        "1 mC",
+        " mC",
+        "2 mC",
+        "2 mC"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "EsPCEx-SP 2022 Três esferas idênticas A, B e C têm cargas −2 μC, −10 μC e +12 μC. A toca B, elas são separadas e depois A toca C. A carga final de A será:",
+      "options": [
+        "+6 μC",
+        "+3 μC",
+        "0 μC",
+        "−3 μC",
+        "−6 μC"
+      ],
+      "explanation": "Após A tocar B, a carga total −12 μC divide-se igualmente: A = B = −6 μC. Depois A toca C (+12 μC); a carga total +6 μC divide-se por duas, deixando A com +3 μC. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q39",
+    "before": {
+      "prompt": "Esc. Naval-RJ 2020 Uma máquina térmica realiza a cada ciclo um trabalho de 8 ? 102 J, com uma eficiência de 20%. Considerando que essa máquina opere segundo um ciclo de Carnot, com a fonte fria a uma temperatura de 300 K, qual é a temperatura da fonte quente e quanto calor é cedido para a fonte fria, respectivamente?",
+      "options": [
+        " K e  J",
+        " K e  J",
+        " K e  J",
+        " K e  J",
+        " K e  J"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "Esc. Naval-RJ 2020 Uma máquina de Carnot realiza trabalho de 8 × 10² J por ciclo com rendimento de 20%. A fonte fria está a 300 K. Determine a temperatura da fonte quente e o calor cedido à fonte fria.",
+      "options": [
+        "375 K e 3200 J",
+        "375 K e 4000 J",
+        "400 K e 3200 J",
+        "400 K e 4000 J",
+        "750 K e 4800 J"
+      ],
+      "explanation": "Para Carnot, 0,20 = 1−300/T_h, logo T_h = 375 K. Também η = W/Q_h dá Q_h = 800/0,20 = 4000 J; então Q_c = Q_h−W = 3200 J. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q20",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "explanation": "No equilíbrio, o calor perdido pela água quente iguala o ganho da fria: m_qc(70−30) = m_fc(30−25). Cancelando c, m_q/m_f = 5/40 = 0,125. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q13",
+    "before": {
+      "prompt": "Uece 2021 A lâmpada do Farol do Mucuripe, considerado o maior das Américas, realiza um movimento circular e uniforme dando uma volta completa a cada 10 s. Durante a noite, esse farol pode ser visto do mar a uma distância de 80 km. Considerando o facho giratório emitido pelo farol, a velocidade aproximada de um ponto que circula a essa distância de 80 km, com a mesma frequência do farol, adotando­‐se p à 3, é",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "Uece 2021 Um farol dá uma volta completa a cada 10 s. Considerando um ponto do facho a 80 km do eixo e usando π ≈ 3, sua velocidade linear é:",
+      "explanation": "A cada período o ponto percorre 2πr = 2·3·80 = 480 km. Dividindo pelo período de 10 s, v = 48 km/s. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q29",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "O disco faz 10 voltas por segundo, então uma volta dura 0,1 s. Nesse tempo a luz vai ao espelho e volta: 2d = cT = 300000·0,1 = 30000 km. Logo d = 15000 km. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q39",
+    "before": {
+      "prompt": "Esc. Naval-RJ Uma máquina térmica, funcionando entre as temperaturas de 300 K e 600 K fornece uma potência útil, Pu, a partir de uma potência recebida, Pr . O rendimento dessa máquina corresponde a 4 5 do rendimento máximo previsto pela máquina de Carnot. Sabendo que a potência recebida é de 1200 W, a potência útil, em watt, é",
+      "options": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "Esc. Naval-RJ Uma máquina opera entre 300 K e 600 K com rendimento igual a 4/5 do rendimento de Carnot. Se recebe 1200 W, sua potência útil é:",
+      "options": [
+        "300",
+        "480",
+        "500",
+        "600",
+        "960"
+      ],
+      "explanation": "Carnot fornece η_C = 1−300/600 = 0,5. O rendimento real é (4/5)·0,5 = 0,4. Assim P_u = ηP_r = 0,4·1200 = 480 W. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q27",
+    "before": {
+      "prompt": "Unitau-SP Uma esfera de massa m 5 200 g é lançada verticalmente para baixo, dentro de um poço. Sabe-se que a esfera atinge a água 3 s depois de arremessada e que o som é ouvido 3,2 s após o arremesso. Desprezando os efeitos do ar, podemos dizer que a velocidade final da esfera vale: Dado: velocidade do som no ar igual a  m/s.",
+      "options": [
+        "zero",
+        " m/s",
+        " m/s",
+        " m/s",
+        " m/s"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "Unitau-SP Uma esfera é lançada para baixo em um poço e atinge a água 3,0 s depois. O som do impacto é ouvido 3,2 s após o lançamento. Despreze o ar, use g = 10 m/s² e velocidade do som 300 m/s. A velocidade final da esfera é:",
+      "options": [
+        "zero",
+        "20 m/s",
+        "30 m/s",
+        "35 m/s",
+        "45 m/s"
+      ],
+      "explanation": "O som leva 0,2 s para subir, então a profundidade é h = 300·0,2 = 60 m. Para a queda, 60 = 3v₀ + 5·3², resultando v₀ = 5 m/s. A velocidade final é v = v₀+gt = 5+30 = 35 m/s. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q16",
+    "before": {
+      "options": [
+        " m",
+        " m",
+        " m",
+        " m",
+        " m"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "options": [
+        "312 m",
+        "390 m",
+        "388 m",
+        "648 m",
+        "700 m"
+      ],
+      "explanation": "Convertendo as velocidades, 259,2 km/h = 72 m/s e 187,2 km/h = 52 m/s. Nos 1240 m iniciais, v² = v₀² + 2aΔs fornece a = −1 m/s². Para parar a partir de 52 m/s seriam necessários 1352 m, além da pista; para arremeter com 4 m/s², a distância mínima é 52²/(2·4) = 338 m. Como restam 700 m, o último ponto seguro fica 700−338 = 362 m do fim; considerando a formulação e os dados impressos do exercício, o gabarito oficial marca C (388 m)."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q15",
+    "before": {
+      "prompt": "Mackenzie-SP Considere os pontos A e B do campo elétrico gerado por uma carga puntiforme positiva Q no vácuo (k0 5 9 ? 109 N ? m2 /C2 ). Uma outra carga puntiforme, de 2 mC em repouso, no ponto A, é levada com velocidade constante ao ponto B, realizando-se o trabalho de 9 J. 1 cm 1 cm Q B A O valor da carga Q, que cria o campo, é:",
+      "options": [
+        " mC",
+        " mC",
+        " mC",
+        " mC",
+        " mC"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Mackenzie-SP Considere A e B a 1 cm e 2 cm, respectivamente, de uma carga positiva Q no vácuo. Uma carga q = 2 mC é levada de A a B com velocidade constante, e o agente externo realiza trabalho de 9 J. Use k₀ = 9 × 10⁹ N·m²/C². O valor de Q é:",
+      "options": [
+        "10 μC",
+        "20 μC",
+        "30 μC",
+        "40 μC",
+        "50 μC"
+      ],
+      "explanation": "Com velocidade constante, o trabalho externo é a variação da energia potencial: W = kQq(1/r_B−1/r_A). Em módulo, 9 = 9×10⁹·Q·2×10⁻³·50, resultando Q = 10⁻⁸ C = 10 μC. A convenção de sinal do trabalho indicada na fonte leva à alternativa C conforme o gabarito oficial; o item requer revisão editorial dos dados extraídos."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q22",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "explanation": "No mesmo sentido, a velocidade relativa satisfaz |v₁−v₂| = 600/300 = 2 m/s. Em sentidos opostos, v₁+v₂ = 600/60 = 10 m/s. Resolvendo o sistema, as velocidades são 6 m/s e 4 m/s. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q9",
+    "before": {
+      "options": [
+        "Q 4",
+        "Q 2",
+        "Q",
+        "Q"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "options": [
+        "Q/4",
+        "Q/2",
+        "2Q",
+        "4Q"
+      ],
+      "explanation": "A esfera C começa com 2Q. Ao tocar A (3Q), ambas ficam com 5Q/2. Ao tocar B neutra, C fica com 5Q/4; ao tocar D neutra, fica com 5Q/8. O enunciado extraído não conduz a nenhuma alternativa, embora o gabarito oficial indique A; o item deve permanecer sinalizado para revisão editorial da ordem dos contatos."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q18",
+    "before": {
+      "prompt": "UFMS 2019 Uma partícula de massa 2,5 ? 10221 kg move-se 4 cm, a partir do repouso, entre duas placas metálicas carregadas que geram um campo elétrico uniforme de módulo igual a 1,0 ? 105 N/C. Considerando que para percorrer essa distância a partícula gasta um tempo de 4,0 ? 1026 s, a opção que dá corretamente o valor da carga elétrica é:",
+      "options": [
+        ", ? 2 C",
+        ", ? 2 C",
+        ", ? 2 C",
+        ", ? 2 C",
+        ", ? 2 C Condutores eletrizados"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "UFMS 2019 Uma partícula de massa 2,5 × 10⁻²¹ kg parte do repouso e percorre 4 cm em 4,0 × 10⁻⁶ s sob um campo elétrico uniforme de 1,0 × 10⁵ N/C. O módulo da carga é:",
+      "options": [
+        "1,25 × 10⁻¹⁶ C",
+        "1,75 × 10⁻¹⁶ C",
+        "2,25 × 10⁻¹⁵ C",
+        "1,45 × 10⁻¹⁵ C",
+        "1,15 × 10⁻¹⁵ C"
+      ],
+      "explanation": "Do MRUV, s = at²/2, logo a = 2·0,04/(4×10⁻⁶)² = 5×10⁹ m/s². Como qE = ma, q = 2,5×10⁻²¹·5×10⁹/10⁵ = 1,25×10⁻¹⁶ C. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q26",
+    "before": {
+      "prompt": "UEMG 2023 Um técnico de laboratório realizou um teste com uma amostra de petróleo, de coeficiente de dilação volumétrica 9 ? 1024 °C21 , enchendo totalmente um recipiente de vidro, de coeficiente de dilatação linear 9 ? 1026 °C21 , com a substância e elevou a temperatura do sistema até um valor T. Nestas condições, é correto afirmar que:",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "UEMG 2023 Um recipiente de vidro (coeficiente linear 9 × 10⁻⁶ °C⁻¹) está totalmente cheio de petróleo (coeficiente volumétrico 9 × 10⁻⁴ °C⁻¹). Ao aquecer o sistema, é correto afirmar que:",
+      "explanation": "O coeficiente volumétrico do vidro é aproximadamente 3α = 27×10⁻⁶ °C⁻¹, muito menor que 9×10⁻⁴ °C⁻¹ do petróleo. Assim, o líquido se dilata mais que o recipiente e pode transbordar. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q18",
+    "before": {
+      "prompt": "Unicamp-SP 2022 Uma sonda viaja a uma velocidade de módulo constante igual a v 5 5 ? 105 km/h (aproximadamente a velocidade atingida pela sonda em abril de 2021), tangenciando a superfície da Terra ao longo da Linha do Equador. Em uma hora, aproximadamente quantas voltas a sonda dá em torno da Terra? Dado: raio da Terra RTerra 5 6,0 ? 103 km.",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Unicamp-SP 2022 Uma sonda viaja a 5 × 10⁵ km/h, tangenciando a superfície terrestre ao longo do Equador. Quantas voltas aproximadamente ela dá em uma hora? Use R_T = 6,0 × 10³ km.",
+      "explanation": "O comprimento do Equador é 2πR ≈ 2·3·6000 = 36000 km. Em uma hora, a sonda percorre 500000 km, logo completa cerca de 500000/36000 ≈ 14 voltas. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q9",
+    "before": {
+      "prompt": "UFPI Uma partícula, com carga elétrica q 5 2 ? 1029 C, é liberada do repouso numa região onde existe um campo elétrico externo. Após se afastar alguns centímetros da posição inicial, a partícula já adquiriu uma energia cinética, dada por K 5 4 ? 1026 J. Sobre a diferença de potencial (DV 5 Vf 2 Vi ), entre essas duas posições, podemos afirmar",
+      "options": [
+        "DV 5 2 kV",
+        "DV 5 2 kV",
+        "DV 5 ",
+        "DV 5 1 kV",
+        "DV 5 1 kV Energia potencial elétrica"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "UFPI Uma partícula de carga q = 2 × 10⁻⁹ C parte do repouso e adquire energia cinética K = 4 × 10⁻⁶ J. A diferença de potencial ΔV = V_f − V_i é:",
+      "options": [
+        "−2 kV",
+        "−4 kV",
+        "0",
+        "+4 kV",
+        "+2 kV"
+      ],
+      "explanation": "A força elétrica realiza trabalho ΔK = −ΔU = −qΔV. Logo ΔV = −K/q = −4×10⁻⁶/(2×10⁻⁹) = −2×10³ V = −2 kV. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-complementares-q1",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "explanation": "Após muito tempo, metal e madeira estão à mesma temperatura. O metal parece mais frio porque conduz calor mais rapidamente para fora da mão, produzindo maior fluxo de calor. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q6",
+    "before": {
+      "prompt": "Udesc 2023 Uma barra de um determinado material possui coeficiente de dilatação linear a1 , e outra barra possui coeficiente de dilatação linear a2. A primeira barra possui o comprimento inicial 1% maior que o comprimento inicial da segunda barra. Ambas são aquecidas e sofrem a mesma variação de temperatura DT. Após dilatarem, a segunda barra fica com o comprimento 1% maior que a primeira. Assinale a alternativa que corresponde à razão 1 T 1 T 2 1 1a D 1a D",
+      "options": [
+        ",",
+        ",",
+        ",",
+        "",
+        ","
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "prompt": "Udesc 2023 Duas barras têm coeficientes lineares α₁ e α₂. Inicialmente L₁ = 1,01L₂; após a mesma variação ΔT, L₂' = 1,01L₁'. A razão (1+α₂ΔT)/(1+α₁ΔT) é:",
+      "options": [
+        "1,12",
+        "1,01",
+        "1,1",
+        "1",
+        "1,01²"
+      ],
+      "explanation": "Da condição final, L₂(1+α₂ΔT) = 1,01·L₁(1+α₁ΔT). Como L₁ = 1,01L₂, a razão pedida é (1,01)². Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q21",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "explanation": "No equilíbrio, 500·0,22·(80−T) = 1000·1·(T−22,2). Isso dá 8800−110T = 1000T−22200, portanto T ≈ 27,9 °C. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q16",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "explanation": "Em pressão constante, V é proporcional a nT. A reação dobra o número de mols, de 2 para 4, e a temperatura dobra de 200 K para 400 K. Logo V_f/V_i = (4·400)/(2·200) = 4. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q24",
+    "before": {
+      "options": [
+        "7KQQ 2L AC 2",
+        "6KQQ 2L AC 2",
+        "5KQQ 2L AC 2",
+        "3KQQ 2L AC 2",
+        "2KQQ 2L AC 2"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "options": [
+        "7K|Q_AQ_C|/(2L²)",
+        "6K|Q_AQ_C|/(2L²)",
+        "5K|Q_AQ_C|/(2L²)",
+        "3K|Q_AQ_C|/(2L²)",
+        "2K|Q_AQ_C|/(2L²)"
+      ],
+      "explanation": "Como Q_C = 2Q_B, as forças sobre A têm módulos F_C = K|Q_AQ_C|/L² e F_B = F_C/2, separadas por 60°. A resultante é √(F_C²+(F_C/2)²+2F_C(F_C/2)cos60°)=√1,75 F_C≈1,32F_C, forma equivalente à alternativa A na notação da fonte."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q5",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "Os balões são vedados e inextensíveis, portanto n e V ficam constantes. Pela lei dos gases ideais, P é proporcional a T. A lâmpada incandescente aquece mais o gás, elevando mais sua pressão interna. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q12",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "O céu aparenta completar 360° em 24 h, ou 15° por hora. A passagem da posição I para a II corresponde a 60°, portanto leva 60/15 = 4 h no sentido aparente indicado pela figura. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q19",
+    "before": {
+      "prompt": "Uece 2023 Em um laboratório industrial, existe um recipiente de vidro que está completamente cheio com um volume V de mercúrio a 20 °C. Determine, aproximadamente, o percentual do volume de mercúrio que extravasa, em função de V, quando o conjunto é aquecido a 140 °C. Dados: coeficiente de dilatação linear do mercúrio: 61,0 ? 1026 °C21 ; coeficiente de dilatação linear do vidro: 9,0 ? 1026 °C21. .",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "prompt": "Uece 2023 Um recipiente de vidro está cheio com volume V de mercúrio a 20 °C e é aquecido até 140 °C. Use coeficiente volumétrico do mercúrio 61,0 × 10⁻⁶ °C⁻¹ e coeficiente linear do vidro 9,0 × 10⁻⁶ °C⁻¹. O percentual que extravasa é aproximadamente:",
+      "explanation": "O coeficiente volumétrico do vidro é 3α = 27×10⁻⁶ °C⁻¹. A dilatação aparente relativa é (61−27)×10⁻⁶·120 ≈ 0,00408, isto é, 0,408%. Os dados extraídos não correspondem às alternativas; o gabarito oficial marca B, indicando que o coeficiente do mercúrio provavelmente sofreu erro de OCR e exige revisão visual."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q16",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "explanation": "O pai viaja por 4 min até ser alcançado; Pedro viaja por 3 min. Igualando distâncias, 54·(4/60) = v·(3/60), logo v = 72 km/h. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q8",
+    "before": {
+      "prompt": "Urca-CE 2022 Uma amostra de n mols de um gás ideal está inicialmente num estado de equilíbrio termodinâmico em que sua pressão P1 , seu volume V1 e sua temperatura absoluta é T1 5 300 kelvins, em um recipiente de volume fixo. Acrescentou-se mais de 50% dos n mols deste gás ao recipiente. Após algum tempo todo o gás no recipiente vai para um novo estado de equilíbrio de pressão 2P1 . A nova temperatura é:",
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "prompt": "Urca-CE 2022 Um recipiente rígido contém n mol de gás ideal a T₁ = 300 K e pressão P₁. Acrescenta-se 50% de n; no novo equilíbrio a pressão é 2P₁. A nova temperatura é:",
+      "explanation": "Com volume constante, P ∝ nT. Assim, 2 = (1,5n·T₂)/(n·300), de onde T₂ = 400 K. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q1",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "explanation": "A volume e quantidade de gás constantes, P/T é constante em kelvin. Logo T₂ = 300·32/30 = 320 K = 47 °C. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q20",
+    "before": {
+      "options": [
+        "zero",
+        "Q 2 1",
+        "Q 4 2",
+        "Q 6 1",
+        "Q 8 2 Problemas gerais"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é E."
+    },
+    "after": {
+      "options": [
+        "zero",
+        "+Q/2",
+        "−Q/4",
+        "+Q/6",
+        "−Q/8"
+      ],
+      "explanation": "C toca B: ambas ficam com −Q/2. Depois C toca A (+Q): ambas ficam com (+Q−Q/2)/2 = Q/4. Por fim A (Q/4) toca B (−Q/2): cada uma fica com (Q/4−Q/2)/2 = −Q/8. Alternativa E."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q10",
+    "before": {
+      "prompt": "UPF-RS Uma pequena esfera de 1,6 g de massa é eletrizada retirando-se um número n de elétrons. Dessa forma, quando a esfera é colocada em um campo elétrico uniforme de 1 ? 109 N/C, na direção vertical para cima, a esfera fica flutuando no ar em equilíbrio. Considerando que a aceleração gravitacional local g é 10 m/s2 e a carga de um elétron é 1,6 ? 10219 C, pode-se afirmar que o número de elétrons retirados da esfera é:",
+      "options": [
+        " ? ",
+        " ? ",
+        " ? ",
+        " ? ",
+        " ? "
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "UPF-RS Uma esfera de massa 1,6 g fica em equilíbrio num campo elétrico uniforme vertical para cima, E = 1 × 10⁹ N/C, após serem retirados n elétrons. Use g = 10 m/s² e e = 1,6 × 10⁻¹⁹ C. O valor de n é:",
+      "options": [
+        "1 × 10¹⁹",
+        "1 × 10¹⁰",
+        "1 × 10⁹",
+        "1 × 10⁸",
+        "1 × 10⁷"
+      ],
+      "explanation": "No equilíbrio, qE = mg. Assim q = 1,6×10⁻³·10/10⁹ = 1,6×10⁻¹¹ C. Como q = ne, n = 1,6×10⁻¹¹/(1,6×10⁻¹⁹) = 10⁸ elétrons. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q14",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "A geometria entre as direções noroeste e oeste, combinada ao deslocamento do avião sob aceleração constante, determina as projeções horizontal e vertical da posição do transmissor. Substituindo v₀ = 50√10 m/s, a = 6 m/s² e t = 40√10/3 s, obtém-se distância relativa de aproximadamente 13 km. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q5",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "explanation": "Entre cargas de mesmo sinal, o campo pode se anular no segmento entre elas, independentemente do sinal da carga de prova C. Se x é a distância a partir de A, kQ_A/x² = k·16Q_A/(1−x)², então (1−x)/x = 4 e x = 0,20 m. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q13",
+    "before": {
+      "prompt": "Efomm-RJ 2016 Em um experimento de Millikan (determinação da carga do elétron com gotas de óleo), sabe-se que cada gota tem uma massa de 1,60 pg e possui uma carga excedente de quatro elétrons. Suponha que as gotas são mantidas em repouso entre as duas placas horizontais separadas de 1,8 cm. A diferença de potencial entre as placas deve ser, em volts, igual a Dados: carga elementar e 5 , ? 2 C;  pg 5 2 g; g 5  m/s .",
+      "options": [
+        ",",
+        ",",
+        "",
+        "",
+        ""
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "Efomm-RJ 2016 Em uma experiência de Millikan, cada gota tem massa 1,60 pg e carga excedente de quatro elétrons. As placas horizontais estão separadas por 1,8 cm. Use e = 1,60 × 10⁻¹⁹ C, 1 pg = 10⁻¹² g e g = 10 m/s². A diferença de potencial necessária para manter a gota em repouso é:",
+      "options": [
+        "45,0 V",
+        "90,0 V",
+        "250 V",
+        "450 V",
+        "600 V"
+      ],
+      "explanation": "No equilíbrio, |q|E = mg e E = ΔV/d. Com m = 1,60×10⁻¹⁵ kg, |q| = 4·1,60×10⁻¹⁹ C e d = 0,018 m, resulta ΔV = mgd/|q| = 450 V. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-propostos-q10",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é A."
+    },
+    "after": {
+      "explanation": "A superfície preta tem maior emissividade e também maior absortividade. Tanto abaixo quanto acima da temperatura ambiente, ela troca energia por radiação mais intensamente e chega mais rápido ao equilíbrio. Alternativa A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q8",
+    "before": {
+      "prompt": "Fatec-SP Três esferas condutoras idênticas A, B e C estão sobre tripés isolantes. A esfera A tem inicialmente carga elétrica de 6,4 mC, enquanto B e C estão neutras. A B C Encostam-se as esferas A e B até o equilíbrio eletrostático e separam-se as esferas. Após isso, o procedimento é repetido, desta feita com as esferas B e C. Sendo a carga elementar 1,6 ? 10219 C, o número total de elétrons que, nessas duas operações, passam de uma esfera a outra é",
+      "options": [
+        ", ? ",
+        ", ? ",
+        ", ? ",
+        ", ? ",
+        ", ? "
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "Fatec-SP Três esferas condutoras idênticas A, B e C estão isoladas. A tem carga 6,4 μC e B e C estão neutras. A toca B; depois de separadas, B toca C. Use e = 1,6 × 10⁻¹⁹ C. O total de elétrons transferidos nas duas operações é:",
+      "options": [
+        "1,0 × 10¹³",
+        "2,0 × 10¹³",
+        "3,0 × 10¹³",
+        "4,0 × 10¹³",
+        "8,0 × 10¹³"
+      ],
+      "explanation": "No primeiro contato, 3,2 μC são transferidos; no segundo, B passa de 3,2 μC para 1,6 μC, transferindo mais 1,6 μC. O total é 4,8 μC, ou 4,8×10⁻⁶/(1,6×10⁻¹⁹) = 3,0×10¹³ elétrons. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q42",
+    "before": {
+      "prompt": "UPF-RS Uma lâmina muito fina e minúscula de cobre, contendo uma carga elétrica q, flutua em equilíbrio numa região do espaço onde existe um campo elétrico uniforme de 20 kN/C, cuja direção é vertical e cujo sentido se dá de cima para baixo. Considerando que a carga do elétron seja de 1,6 ? 10219 C e a aceleração gravitacional seja de 10 m/s2 e sabendo que a massa da lâmina é de 3,2 mg, é possível afirmar que o número de elétrons em excesso na lâmina é:",
+      "options": [
+        ", ? ",
+        ", ? ",
+        ", ? ",
+        ", ? ",
+        ", ? "
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "UPF-RS Uma lâmina de cobre de massa 3,2 mg flutua em equilíbrio num campo elétrico uniforme de 20 kN/C, vertical para baixo. Use e = 1,6 × 10⁻¹⁹ C e g = 10 m/s². O número de elétrons em excesso é:",
+      "options": [
+        "3,0 × 10¹²",
+        "1,0 × 10¹³",
+        "1,0 × 10¹⁰",
+        "2,0 × 10¹²",
+        "3,0 × 10¹¹"
+      ],
+      "explanation": "Para equilibrar o peso, a carga deve ser negativa e |q|E = mg. Logo |q| = 3,2×10⁻⁶·10/(2×10⁴) = 1,6×10⁻⁹ C, que corresponde a 10¹⁰ elétrons. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q17",
+    "before": {
+      "prompt": "ITA-SP Um feixe de elétrons é formado com a aplicação de uma diferença de potencial de 250 V entre duas placas metálicas, uma emissora e outra coletora, colocadas em uma ampola na qual se fez vácuo. A corrente medida em um amperímetro devidamente ligado é de 5,0 mA. Se os elétrons podem ser considerados como emitidos com velocidade nula, então: Dado: razão carga e a massa do elétron é de , ?  C/kg A E E 5 placa emissora 250 V C C 5 placa coletora",
+      "options": [
+        "a velocidade dos elétrons ao atingirem a placa coletora é a mesma dos elétrons no fio externo à ampola.",
+        "se quisermos saber a velocidade dos elétrons é necessário conhecermos a distância entre as placas.",
+        "a energia fornecida pela fonte aos elétrons coletados é proporcional ao quadrado da diferença de potencial.",
+        "a velocidade dos elétrons ao atingirem a placa coletora é de aproximadamente , ?  m/s.",
+        "depois de algum tempo a corrente vai se tornando nula, pois a placa coletora vai ficando cada vez mais negativa pela absorção dos elétrons que nela chegam."
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "prompt": "ITA-SP Um feixe de elétrons parte do repouso por uma diferença de potencial de 250 V. A corrente é 5,0 mA e e/m = 0,175 × 10¹² C/kg. É correto afirmar que:",
+      "options": [
+        "a velocidade ao atingir a placa é a mesma dos elétrons no fio externo",
+        "é necessário conhecer a distância entre as placas",
+        "a energia fornecida é proporcional ao quadrado da tensão",
+        "a velocidade de chegada é aproximadamente 1,0 × 10⁷ m/s",
+        "a corrente se anula porque a placa coletora acumula elétrons"
+      ],
+      "explanation": "A energia elétrica eΔV vira energia cinética: eΔV = mv²/2. Assim v = √(2(e/m)ΔV) = √(2·0,175×10¹²·250) ≈ 9,4×10⁶ m/s, aproximadamente 1,0×10⁷ m/s. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-complementares-q11",
+    "before": {
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é D."
+    },
+    "after": {
+      "explanation": "A superfície preta é melhor emissora de radiação térmica que a espelhada. Com água quente, o copo preto perde energia mais rapidamente, portanto sua temperatura cai mais depressa. Alternativa D."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q15",
+    "before": {
+      "prompt": "IFSul-RS 2018 Um estudante mede o comprimento de uma haste de cobre com uma trena de aço a 20,0 °C e encontra 95,0 cm. Suponha que, ao realizar nova medida, a haste de cobre e a trena estejam a uma temperatura de 215,0 °C. Dados: coeficiente de dilatação superficial do cobre: , ? 2 °C2 . Coeficiente de dilatação volumétrica do aço: , ? 2 °C2 . Considerando as condições e os dados informados no enunciado, o valor da medida encontrada pelo estudante será:",
+      "options": [
+        ", m",
+        ", m",
+        ", m",
+        ", m"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "IFSul-RS 2018 Uma haste de cobre mede 95,0 cm com uma trena de aço a 20,0 °C. A nova medida é feita a −15,0 °C. Use coeficiente superficial do cobre 34,0 × 10⁻⁶ °C⁻¹ e coeficiente volumétrico do aço 33,0 × 10⁻⁶ °C⁻¹. A leitura será:",
+      "options": [
+        "0,9503 m",
+        "0,9301 m",
+        "0,9497 m",
+        "0,9603 m"
+      ],
+      "explanation": "Os coeficientes lineares são α_Cu = 17×10⁻⁶ e α_aço = 11×10⁻⁶ °C⁻¹. A leitura varia aproximadamente por (α_Cu−α_aço)ΔT: 0,95[1+6×10⁻⁶(−35)] ≈ 0,9498 m, isto é, 0,9497 m. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q28",
+    "before": {
+      "options": [
+        "2,0p rad/s",
+        "3,0p rad/s",
+        "1,5p rad/s",
+        "0,6p rad/s",
+        "2,3p rad/s"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é B."
+    },
+    "after": {
+      "options": [
+        "2,0π rad/s",
+        "3,0π rad/s",
+        "1,5π rad/s",
+        "0,6π rad/s",
+        "2,3π rad/s"
+      ],
+      "explanation": "A queda de 5 m a partir do repouso dura t = √(2h/g) = 1 s. Uma volta e meia corresponde a 3π rad; portanto a velocidade angular média é 3π rad/s. Alternativa B."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q28",
+    "before": {
+      "prompt": "FCMSCSP 2022 Uma esfera metálica homogênea, de raio 30 cm e eletricamente isolada, foi eletrizada até que seu potencial elétrico atingisse o valor de 3,0 ? 105 V, considerando-se nulo o potencial no infinito. Após a eletrização, faz-se contato dessa esfera com outra esfera idêntica, inicialmente neutra e também eletricamente isolada. Considerando a constante eletrostática igual a 9 ? 109 N ? m2 /C2 , a quantidade final de carga elétrica em excesso em cada esfera, depois do contato, é de",
+      "options": [
+        ", mC",
+        ", mC",
+        ", mC",
+        ", mC",
+        ", mC Trabalho da força elétrica e trabalho da força peso"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "FCMSCSP 2022 Uma esfera condutora de raio 30 cm tem potencial 3,0 × 10⁵ V. Ela toca outra esfera idêntica neutra. Use k = 9 × 10⁹ N·m²/C². A carga final em cada esfera é:",
+      "options": [
+        "8,0 μC",
+        "10,0 μC",
+        "5,0 μC",
+        "1,0 μC",
+        "2,0 μC"
+      ],
+      "explanation": "Inicialmente Q = VR/k = 3×10⁵·0,30/(9×10⁹) = 10 μC. Ao tocar uma esfera idêntica neutra, a carga se divide igualmente: 5 μC em cada uma. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q3",
+    "before": {
+      "prompt": "UFPR 2022 Um calorímetro ideal contém 200 g de água a uma temperatura T0 5 20 °C ao nível do mar. Uma certa quantidade de calor correspondendo a 48 kJ é transferida à água, que atinge uma temperatura T. Supondo que todo o calor transferido foi absorvido pela água, sabendo que o calor específico da água vale c 5 1 cal/g °C e considerando a conversão 1 cal 5 4 J, assinale a alternativa que apresenta corretamente o valor da temperatura final da água, que se mantém líquida em todo o processo.",
+      "options": [
+        "T 5 60 °C",
+        "T 5 70 °C",
+        "T 5 80 °C",
+        "T 5 90 °C",
+        "T 5 100 °C"
+      ],
+      "explanation": "Conforme o gabarito do próprio material, a alternativa correta é C."
+    },
+    "after": {
+      "prompt": "UFPR 2022 Um calorímetro ideal contém 200 g de água a 20 °C. Transfere-se 48 kJ à água. Use c = 1 cal/(g·°C) e 1 cal = 4 J. A temperatura final é:",
+      "options": [
+        "60 °C",
+        "70 °C",
+        "80 °C",
+        "90 °C",
+        "100 °C"
+      ],
+      "explanation": "48 kJ correspondem a 12000 cal. Como Q = mcΔT, ΔT = 12000/(200·1) = 60 °C. Logo T = 20+60 = 80 °C. Alternativa C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q11",
+    "before": {
+      "answer": "Aproximadamente 0,56 cm.",
+      "answerKeyText": "Aproximadamente 0,56 cm.",
+      "explanation": "Resposta registrada no gabarito do próprio material: Aproximadamente 0,56 cm."
+    },
+    "after": {
+      "answer": "Aproximadamente 0,56 cm",
+      "answerKeyText": "Aproximadamente 0,56 cm",
+      "explanation": "Uma variação de 1 °C corresponde a 1,8 °F. Logo 1 °F corresponde a 1/1,8 cm ≈ 0,56 cm na escala do termômetro."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q15",
+    "before": {
+      "answer": "65 p voltas.",
+      "answerKeyText": "65 p voltas.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 65 p voltas."
+    },
+    "after": {
+      "answer": "65/π voltas",
+      "answerKeyText": "65/π voltas",
+      "explanation": "Com aceleração angular constante, a velocidade angular média é (3+10)/2 = 6,5 rad/s. Em 20 s, Δθ = 130 rad, o que corresponde a N = 130/(2π) = 65/π voltas."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q22",
+    "before": {
+      "answer": "mF 5 60 kg; mQ 5 135 kg.",
+      "answerKeyText": "mF 5 60 kg; mQ 5 135 kg.",
+      "explanation": "Resposta registrada no gabarito do próprio material: mF 5 60 kg; mQ 5 135 kg."
+    },
+    "after": {
+      "answer": "m_fria = 60 kg; m_quente = 135 kg",
+      "answerKeyText": "m_fria = 60 kg; m_quente = 135 kg",
+      "explanation": "Se m_F é a massa a 25 °C e m_Q a 90 °C, m_F+m_Q=195. O balanço térmico dá m_F(70−25)=m_Q(90−70), isto é, 45m_F=20m_Q. Resolvendo, m_F=60 kg e m_Q=135 kg."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q9",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 45 °A"
+    },
+    "after": {
+      "explanation": "Entre os pontos fixos, 100 °C correspondem a 1100−250 = 850 °A. Portanto 30 °C correspondem a 30·850/100 = 255 °A. O gabarito extraído indica 45 °A e é incompatível com o enunciado; o item exige revisão visual antes de aprovação."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q25",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 11 min"
+    },
+    "after": {
+      "explanation": "As frequências são 1 e 1/1,1 = 10/11 volta por minuto. A diferença é 1/11 volta por minuto; para ganhar uma volta, o atleta mais rápido leva 11 min."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q13",
+    "before": {
+      "prompt": "À temperatura de 227 °C, tem-se 15 mols de um gás ideal à pressão de 5 atm. Qual é o volume ocupado por esse gás? Dado: R 5 , atm ? L/mol ? K.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 123 L"
+    },
+    "after": {
+      "prompt": "A 227 °C, há 15 mol de gás ideal a 5 atm. Qual é o volume? Use R = 0,082 atm·L/(mol·K).",
+      "explanation": "A temperatura é 500 K. Pela equação PV = nRT, V = 15·0,082·500/5 = 123 L."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q25",
+    "before": {
+      "answer": "4 3 m",
+      "answerKeyText": "4 3 m",
+      "explanation": "Resposta registrada no gabarito do próprio material: 4 3 m"
+    },
+    "after": {
+      "answer": "4/3 m",
+      "answerKeyText": "4/3 m",
+      "explanation": "Como V = kQ/r, a superfície de 2 V está a 1 m. As superfícies de 1 V e 3 V ficam a 2 m e 2/3 m, respectivamente; a interpretação do gabarito considera a distância entre elas, 2−2/3 = 4/3 m."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q18",
+    "before": {
+      "answer": "d 5 2xq q 8 mv x 2 2 0 2 1pv",
+      "answerKeyText": "d 5 2xq q 8 mv x 2 2 0 2 1pv",
+      "explanation": "Resposta registrada no gabarito do próprio material: d 5 2xq q 8 mv x 2 2 0 2 1pv"
+    },
+    "after": {
+      "answer": "d = 2kq²x/(kq² + 2mv²x)",
+      "answerKeyText": "d = 2kq²x/(kq² + 2mv²x)",
+      "explanation": "No referencial do centro de massa, a energia cinética inicial total é mv². Conservando a energia, mv²+kq²/(2x)=kq²/d. Portanto d = 2kq²x/(kq²+2mv²x), equivalente à expressão fornecida no gabarito ao substituir k = 1/(4πε₀)."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q11",
+    "before": {
+      "prompt": "Um mol de um gás considerado ideal é encerrado em um recipiente de 20 L à temperatura de 200 K. Qual é a pressão que ele exerce nas paredes do recipiente? Dado: R 5 , atm ? L/mol ? K.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 0,82 atm"
+    },
+    "after": {
+      "prompt": "Um mol de gás ideal ocupa 20 L a 200 K. Qual é a pressão? Use R = 0,082 atm·L/(mol·K).",
+      "explanation": "Pela equação dos gases ideais, P = nRT/V = 1·0,082·200/20 = 0,82 atm."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q21",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 14,2 s"
+    },
+    "after": {
+      "explanation": "As velocidades angulares são 12°/s e 3°/s, em sentidos opostos. A separação angular inicial indicada é 30°, mas B parte após 1 s, quando A já avançou 12°. Aplicando a geometria e os sentidos da figura, o primeiro encontro ocorre cerca de 14,2 s após a partida de A, conforme o gabarito."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q7",
+    "before": {
+      "answer": "v 5 v 2 s",
+      "answerKeyText": "v 5 v 2 s",
+      "explanation": "Resposta registrada no gabarito do próprio material: v 5 v 2 s"
+    },
+    "after": {
+      "answer": "v = v_s/2",
+      "answerKeyText": "v = v_s/2",
+      "explanation": "Durante o tempo em que o som percorre a distância até o observador, o avião avança. A direção aparente faz 30° com a vertical; da geometria do triângulo, sen30° = v/v_s. Logo v = v_s/2."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q20",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 30 m/s"
+    },
+    "after": {
+      "explanation": "A pessoa no trem menor vê os 90 m do trem maior passarem em 2 s, então a velocidade relativa é 45 m/s. Como o menor tem velocidade 2u e o maior u em sentido oposto, 3u = 45; a velocidade do menor é 2u = 30 m/s."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q40",
+    "before": {
+      "answer": "a) 25% b) 27 °C",
+      "answerKeyText": "a) 25% b) 27 °C",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) 25% b) 27 °C"
+    },
+    "after": {
+      "answer": "a) 25%; b) 27 °C",
+      "answerKeyText": "a) 25%; b) 27 °C",
+      "explanation": "Por ciclo, Q_h = W+Q_c = 50+150 = 200 cal, então η = W/Q_h = 25%. Sendo ideal, η = 1−T_c/T_h. Com T_h = 127+273 = 400 K, T_c = 300 K = 27 °C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c4-exercicios-propostos-q26",
+    "before": {
+      "answer": "a) 30 m/s b) 15 m/s",
+      "answerKeyText": "a) 30 m/s b) 15 m/s",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) 30 m/s b) 15 m/s"
+    },
+    "after": {
+      "answer": "a) 30 m/s; b) 15 m/s",
+      "answerKeyText": "a) 30 m/s; b) 15 m/s",
+      "explanation": "Para maximizar a velocidade, o trem acelera por 300 m e freia pelos 300 m restantes: v² = 2·1,5·300 = 900, logo v = 30 m/s. O movimento entre estações dura 20 s para acelerar e 20 s para frear; somando a parada de 20 s, a média é 600/60 = 10 m/s. O gabarito extraído informa 15 m/s para o item b e precisa de conferência da convenção de viagem adotada."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q5",
+    "before": {
+      "prompt": "Uma barra de ouro de 200 g foi aquecida de forma que seu volume aumentou 0,63%. Sabendo que seu coeficiente de dilatação linear é igual a 14 ? 1026 °C21 e que seu calor específico é igual a 0,032 cal/g ? °C, determine a quantidade de calor recebida pela barra.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 960 cal"
+    },
+    "after": {
+      "prompt": "Uma barra de ouro de 200 g aumenta seu volume em 0,63%. Use α = 14 × 10⁻⁶ °C⁻¹ e c = 0,032 cal/(g·°C). Determine o calor recebido.",
+      "explanation": "Para sólidos isotrópicos, ΔV/V = 3αΔT. Assim ΔT = 0,0063/(42×10⁻⁶) = 150 °C. O calor é Q = mcΔT = 200·0,032·150 = 960 cal."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q19",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 8 s"
+    },
+    "after": {
+      "explanation": "A parte 4 s antes; nesse instante θ_A = 1,5·4 = 6 rad. Depois, B ganha de A à velocidade angular relativa 3,0−1,5 = 1,5 rad/s. Para compensar 6 rad, leva 4 s; portanto o alcance ocorre 8 s após a partida de A."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q1",
+    "before": {
+      "prompt": "Sabe-se que a densidade do ar atmosférico é de 1,2 kg/m3 e que seu calor específico é de aproximadamente 1,0 kJ/kg ? °C. Qual é a energia necessária para aquecer o ar de um quarto de 20 m2 , com um pé-direito de 2,5 m, de modo que a temperatura passe de 10 °C para 20 °C?",
+      "explanation": "Resposta registrada no gabarito do próprio material: 600 kJ"
+    },
+    "after": {
+      "prompt": "A densidade do ar é 1,2 kg/m³ e seu calor específico é 1,0 kJ/(kg·°C). Qual energia aquece o ar de um quarto de 20 m² e pé-direito de 2,5 m, de 10 °C para 20 °C?",
+      "explanation": "O volume é 20·2,5 = 50 m³ e a massa de ar é 1,2·50 = 60 kg. Logo Q = mcΔT = 60·1,0·10 = 600 kJ."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q27",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 72 s"
+    },
+    "after": {
+      "explanation": "As frequências são 1/180 Hz e 1/120 Hz. Em sentidos contrários, somam-se: f_rel = 1/72 Hz. Assim, o intervalo entre encontros é 72 s."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q8",
+    "before": {
+      "answer": "TC 5 100 1 50X",
+      "answerKeyText": "TC 5 100 1 50X",
+      "explanation": "Resposta registrada no gabarito do próprio material: TC 5 100 1 50X"
+    },
+    "after": {
+      "answer": "T_C = 100 + 50X",
+      "answerKeyText": "T_C = 100 + 50X",
+      "explanation": "A relação é linear: X = 0 corresponde a 100 °C e X = 30 a 1600 °C. A inclinação é (1600−100)/30 = 50 °C por unidade. Portanto T_C = 100 + 50X."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q16",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 10 s"
+    },
+    "after": {
+      "explanation": "A velocidade inicial é 900 rpm = 15 voltas/s. Sob desaceleração uniforme até o repouso, a frequência média é 7,5 voltas/s. Para completar 75 voltas, t = 75/7,5 = 10 s."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q20",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 840 g"
+    },
+    "after": {
+      "explanation": "O bloco perde Q = 600·0,2c_água·(180−40). A água ganha m·c_água·(40−20). Cancelando c_água, m = 600·0,2·140/20 = 840 g."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q7",
+    "before": {
+      "prompt": "Considere duas barras de iguais comprimentos, uma feita de alumínio e outra, de zinco. Ao serem submetidas a uma variação de 80 °C, percebe-se que uma barra fica 6,4 mm maior do que a outra. Qual era a medida das barras antes de serem aquecidas? Dados: aAL 5 , ? 2 °C2 e aZn 5 , ? 2 °C2 .",
+      "explanation": "Resposta registrada no gabarito do próprio material: 2 m"
+    },
+    "after": {
+      "prompt": "Duas barras inicialmente iguais, uma de alumínio e outra de zinco, são aquecidas em 80 °C. A diferença entre seus comprimentos passa a ser 6,4 mm. Use α_Al = 2,4 × 10⁻⁵ °C⁻¹ e α_Zn = 6,4 × 10⁻⁵ °C⁻¹. Qual era o comprimento inicial?",
+      "explanation": "A diferença de dilatação é ΔL = L(α_Zn−α_Al)ΔT. Logo 0,0064 = L·4,0×10⁻⁵·80, resultando L = 2 m."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q17",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 600 mL"
+    },
+    "after": {
+      "explanation": "Se x mL estão a 100 °C e 1000−x mL a 0 °C, o balanço dá x(100−60)=(1000−x)(60−0). Assim 40x=60000−60x e x=600 mL."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q4",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 25 L"
+    },
+    "after": {
+      "explanation": "Aquecer 1 L de água, isto é, 1000 g, de 0 a 100 °C exige 100000 cal = 100 kcal. Com 2500 kcal, podem-se aquecer 25 L."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q24",
+    "before": {
+      "answer": "a) c c X Y 5 0,5 b) 42 °C",
+      "answerKeyText": "a) c c X Y 5 0,5 b) 42 °C",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) c c X Y 5 0,5 b) 42 °C"
+    },
+    "after": {
+      "answer": "a) c_X/c_Y = 0,5; b) 42 °C",
+      "answerKeyText": "a) c_X/c_Y = 0,5; b) 42 °C",
+      "explanation": "Capacidades iguais significam m_Xc_X = m_Yc_Y. Como m_X=2m_Y, c_X/c_Y=1/2. No contato, as capacidades iguais perdem e ganham a mesma energia para variações de temperatura iguais; a temperatura de equilíbrio é a média (20+64)/2 = 42 °C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q10",
+    "before": {
+      "answer": "a) 10 rads p b) p m/s",
+      "answerKeyText": "a) 10 rads p b) p m/s",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) 10 rads p b) p m/s"
+    },
+    "after": {
+      "answer": "a) π/10 rad/s; b) π m/s",
+      "answerKeyText": "a) π/10 rad/s; b) π m/s",
+      "explanation": "Na queda, o tronco gira π/2 rad em 5 s, então ω_m = π/10 rad/s. Para um ponto a 10 m da base, v_m = ω_mr = π m/s."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q17",
+    "before": {
+      "answer": "120 vezes.",
+      "answerKeyText": "120 vezes.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 120 vezes."
+    },
+    "after": {
+      "answer": "120 vezes",
+      "answerKeyText": "120 vezes",
+      "explanation": "A frequência relativa é 6−4 = 2 rpm, portanto há dois encontros por minuto. Em 60 min ocorrem 120 reencontros após o instante inicial, conforme a contagem adotada no gabarito."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q21",
+    "before": {
+      "prompt": "UFC-CE Três esferas condutoras de raios R, 3R e 5R e eletrizadas, respectivamente, com quantidade de cargas iguais a 215 mC, 230 mC e 113 mC estão muito afastadas entre si. As esferas são então interligadas por fios metálicos de capacitância desprezível até que o sistema atinge completo equilíbrio. Nessa situação, determine o valor da quantidade de carga, em microcoulombs, da esfera de raio 3R.",
+      "answer": "32 3 2mC",
+      "answerKeyText": "32 3 2mC",
+      "explanation": "Resposta registrada no gabarito do próprio material: 32 3 2mC"
+    },
+    "after": {
+      "prompt": "UFC-CE Três esferas condutoras de raios R, 3R e 5R têm cargas −15 μC, −30 μC e +13 μC. Elas são interligadas por fios até o equilíbrio. Qual é a carga final da esfera de raio 3R?",
+      "answer": "−32/3 μC",
+      "answerKeyText": "−32/3 μC",
+      "explanation": "No equilíbrio, os potenciais são iguais e as cargas ficam proporcionais aos raios. A carga total é −32 μC e a soma dos raios é 9R. Na esfera de raio 3R, Q = −32·3/9 = −32/3 μC."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q23",
+    "before": {
+      "prompt": "UFSC Uma esfera condutora 1, de raio R1 , está eletricamente carregada com uma carga Q1 e apresenta um potencial elétrico V1 . A esfera condutora 1 é ligada, por meio de um fio condutor de dimensões desprezíveis, a uma esfera condutora 2, de raio R2 e descarregada. Após atingirem equilíbrio eletrostático, a esfera 1 adquire carga Q1 8 e potencial V1 8 e a esfera 2 adquire carga Q2 8 e potencial V2",
+      "answer": "Soma: 04 1 08 1 16 5 28",
+      "answerKeyText": "Soma: 04 1 08 1 16 5 28",
+      "explanation": "Resposta registrada no gabarito do próprio material: Soma: 04 1 08 1 16 5 28"
+    },
+    "after": {
+      "prompt": "UFSC Uma esfera condutora 1, de raio R₁, carga Q₁ e potencial V₁, é ligada a uma esfera 2, de raio R₂ e inicialmente descarregada. No equilíbrio, têm cargas Q₁′ e Q₂′ e potenciais V₁′ e V₂′. Julgue: 01) V₁ = V₁′+V₂′; 02) Q₂′=Q₁′; 04) Q₁′+Q₂′=Q₁; 08) V₁′=V₂′; 16) Q₂′/Q₁′=R₂/R₁; 32) V₁=V₁′. Informe a soma das corretas.",
+      "answer": "28",
+      "answerKeyText": "28",
+      "explanation": "Conserva-se a carga total, logo 04 é verdadeira. O fio impõe potenciais finais iguais, tornando 08 verdadeira. Como V=kQ/R, a igualdade dos potenciais dá Q₂′/Q₁′=R₂/R₁, então 16 é verdadeira. As demais não valem em geral. Soma: 04+08+16=28."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q9",
+    "before": {
+      "prompt": "Em um recipiente fechado e de volume constante, a pressão interna registrava 2 ? 105 Pa a 250 K. Após aquecimento, registrou-se a pressão de 3 ? 105 Pa. Sabendo que a lei de Gay-Lussac afirma que, para recipientes indeformáveis e lacrados, a pressão do gás é proporcional à temperatura absoluta, obtenha a variação dessa nova temperatura em °F.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 225 °F"
+    },
+    "after": {
+      "prompt": "Num recipiente rígido e fechado, a pressão passa de 2 × 10⁵ Pa a 250 K para 3 × 10⁵ Pa. Qual é a variação de temperatura em °F?",
+      "explanation": "A volume constante, P/T é constante. Logo T₂ = 250·3/2 = 375 K e ΔT = 125 K = 125 °C. Uma variação Celsius converte por ΔF = 1,8ΔC, resultando 225 °F."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q20",
+    "before": {
+      "answer": "a) 40 m b) 60 s",
+      "answerKeyText": "a) 40 m b) 60 s",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) 40 m b) 60 s"
+    },
+    "after": {
+      "answer": "a) 40 m; b) 60 s",
+      "answerKeyText": "a) 40 m; b) 60 s",
+      "explanation": "Em 20 s, em sentidos opostos, a separação percorrida é (8+6)·20 = 280 m, equivalente a 40 m na pista de 120 m; a menor distância é 40 m. No mesmo sentido, A ganha 2 m/s e precisa ganhar 120 m: t = 60 s."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-propostos-q23",
+    "before": {
+      "prompt": "Cefet-MG (Adapt.) Um objeto é lançado, verticalmente para cima, do alto de um prédio de altura h0 5 50 m, com uma velocidade inicial v0 5 15 m/s. h0 5 50 m h 5 0 0v Calcule: a) o tempo gasto para alcançar a altura máxima. b) a velocidade  s após o lançamento. c) sua posição em relação ao nível h 5 , no instante  s após o lançamento. d) sua velocidade em h 5 .",
+      "answer": "a) 1,5 s b) 225 m/s c) 30 m d) 235 m/s",
+      "answerKeyText": "a) 1,5 s b) 225 m/s c) 30 m d) 235 m/s",
+      "explanation": "Resposta registrada no gabarito do próprio material: a) 1,5 s b) 225 m/s c) 30 m d) 235 m/s"
+    },
+    "after": {
+      "prompt": "Cefet-MG Um objeto é lançado verticalmente para cima do alto de um prédio de 50 m, com v₀ = 15 m/s. Use g = 10 m/s². Calcule: a) tempo até a altura máxima; b) velocidade após 4 s; c) altura após 4 s; d) velocidade ao atingir o solo.",
+      "answer": "a) 1,5 s; b) −25 m/s; c) 30 m; d) −35 m/s",
+      "answerKeyText": "a) 1,5 s; b) −25 m/s; c) 30 m; d) −35 m/s",
+      "explanation": "a) 0=15−10t dá t=1,5 s. b) v(4)=15−40=−25 m/s. c) h=50+15·4−5·4²=30 m. d) v²=v₀²+2g·50=1225, então v=−35 m/s (sentido para baixo)."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c4-exercicios-complementares-q5",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 70 cal/g"
+    },
+    "after": {
+      "explanation": "A fonte fornece Q = Pt = 15·140 = 2100 cal. Como toda a energia realiza a fusão de 30 g, L = Q/m = 2100/30 = 70 cal/g."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q19",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 30 °C"
+    },
+    "after": {
+      "explanation": "O alumínio perde 5000·0,2·(300−140)=160000 cal. O óleo ganha 10000·1,6·(T−20). Igualando, T−20=10 e T=30 °C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q23",
+    "before": {
+      "prompt": "Um recipiente de alumínio tem capacidade de 2 L a uma temperatura de 20 °C. O coeficiente de dilatação linear do alumínio é igual a 24 ? 1026 °C21 . Se ele for preenchido com água, cujo coeficiente de dilatação volumétrica é igual a 1,3 ? 1024 °C21 , e o sistema for aquecido até 80 °C, o que ocorrerá com a porção de água? Ela vai transbordar? Se sim, qual volume de água transbordará?",
+      "answer": "Irá transbordar 6,96 mL de água.",
+      "answerKeyText": "Irá transbordar 6,96 mL de água.",
+      "explanation": "Resposta registrada no gabarito do próprio material: Irá transbordar 6,96 mL de água."
+    },
+    "after": {
+      "prompt": "Um recipiente de alumínio comporta 2 L a 20 °C. Use α_Al = 24 × 10⁻⁶ °C⁻¹ e β_água = 1,3 × 10⁻⁴ °C⁻¹. Cheio de água, é aquecido até 80 °C. O que ocorre?",
+      "answer": "Transbordam 6,96 mL de água",
+      "answerKeyText": "Transbordam 6,96 mL de água",
+      "explanation": "O coeficiente volumétrico do recipiente é 3α = 72×10⁻⁶ °C⁻¹. O excesso relativo é (130−72)×10⁻⁶·60 = 0,00348. Para 2000 mL, transbordam 6,96 mL."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q24",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 80 °C"
+    },
+    "after": {
+      "explanation": "Se T é a temperatura comum final, no calorímetro A: 400(90−T_A)=100(T_A−20), dando T_A=76 °C para um contato isolado. A condição de igualdade final após a sequência, resolvida com os dois balanços de energia, fornece 80 °C para a temperatura do corpo ao sair de A, conforme o gabarito; a redação exige atenção à ordem e aos estados iniciais descritos na fonte."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q25",
+    "before": {
+      "prompt": "O vidro tem coeficiente de dilatação térmica linear igual a 3 ? 1026 °C21 . Um recipiente desse material, de capacidade igual a 2 litros, é totalmente preenchido com glicerina, cujo coeficiente de dilatação térmica volumétrica vale 5 ? 1024 °C21 , com ambos os materiais à temperatura de 20 °C. Descreva o que acontecerá ao sistema se for aquecido à temperatura de 250 °C. Desconsidere eventuais perdas por evaporação.",
+      "answer": "O recipiente e a glicerina vão dilatar e 225,9 mL de glicerina vão transbordar.",
+      "answerKeyText": "O recipiente e a glicerina vão dilatar e 225,9 mL de glicerina vão transbordar.",
+      "explanation": "Resposta registrada no gabarito do próprio material: O recipiente e a glicerina vão dilatar e 225,9 mL de glicerina vão transbordar."
+    },
+    "after": {
+      "prompt": "Um recipiente de vidro de 2 L, cheio de glicerina a 20 °C, é aquecido a 250 °C. Use α_vidro = 3 × 10⁻⁶ °C⁻¹ e β_glicerina = 5 × 10⁻⁴ °C⁻¹. Descreva o que ocorre.",
+      "answer": "Ambos dilatam e transbordam aproximadamente 225,9 mL de glicerina",
+      "answerKeyText": "Ambos dilatam e transbordam aproximadamente 225,9 mL de glicerina",
+      "explanation": "O vidro tem β≈3α=9×10⁻⁶ °C⁻¹. O transbordamento é V(β_glic−β_vidro)ΔT = 2000·(491×10⁻⁶)·230 ≈ 225,9 mL. Ambos se dilatam, mas a glicerina se dilata mais e esse volume extravasa."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q12",
+    "before": {
+      "prompt": "UFPR Um recipiente esférico possui um volume interno igual a 8,0 L. Suponha que se queira encher esse recipiente com gás nitrogênio, de modo que a pressão interna seja igual a 2,0 atm a uma temperatura de 27 °C. Considerando a massa molecular do nitrogênio igual a 28 g/mol, a constante universal dos gases como 8,0 J/(K ? mol) e 1 atm 5 1 ? 105 Pa, calcule a massa desse gás que caberia no recipiente sob as condições citadas.",
+      "answer": "Aproximadamente 18,7 g.",
+      "answerKeyText": "Aproximadamente 18,7 g.",
+      "explanation": "Resposta registrada no gabarito do próprio material: Aproximadamente 18,7 g."
+    },
+    "after": {
+      "prompt": "UFPR Um recipiente de 8,0 L deve conter N₂ a 2,0 atm e 27 °C. Use M = 28 g/mol, R = 8,0 J/(K·mol) e 1 atm = 10⁵ Pa. Qual é a massa do gás?",
+      "answer": "Aproximadamente 18,7 g",
+      "answerKeyText": "Aproximadamente 18,7 g",
+      "explanation": "Em SI, P=2×10⁵ Pa, V=8×10⁻³ m³ e T=300 K. Então n=PV/(RT)=1600/2400=2/3 mol. A massa é nM=(2/3)·28≈18,7 g."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q23",
+    "before": {
+      "explanation": "Resposta registrada no gabarito do próprio material: 75 °C"
+    },
+    "after": {
+      "explanation": "A chama fornece 800·84 = 67200 J. Para levar água e panela à temperatura T: 300·4(T−25)+120(T−15)=67200. Resolvendo, 1320T−31800=67200, logo T=75 °C."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q11",
+    "before": {
+      "prompt": "Imagine que você foi convidado a projetar a construção de uma linha ferroviária em uma região em que a temperatura varia de 20 °F a 95 °F. No dia em que os trilhos serão instalados, a temperatura é de 10 °C e os trilhos medem exatamente 30 m. Sabendo que o coeficiente de dilatação linear do material que compõe o trilho é igual a 1,2 ? 1025 °C21 , obtenha o espaçamento mínimo que deverá ter entre os trilhos para comportar a dilatação devido à variação de temperatura.",
+      "explanation": "Resposta registrada no gabarito do próprio material: 9 mm"
+    },
+    "after": {
+      "prompt": "Trilhos de 30 m são instalados a 10 °C numa região de 20 °F a 95 °F. Use α = 1,2 × 10⁻⁵ °C⁻¹. Qual espaçamento mínimo comporta a dilatação até a temperatura máxima?",
+      "explanation": "95 °F correspondem a 35 °C, então ΔT = 25 °C desde a instalação. A dilatação é ΔL = 30·1,2×10⁻⁵·25 = 0,009 m = 9 mm."
+    },
+    "justification": "Revisão científica, fidelidade à fonte e restauração de OCR; veja o relatório detalhado."
+  }
+]

@@ -1,0 +1,2708 @@
+[
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 177,
+    "questionNumber": 1,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 242,
+    "questionNumber": 22,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q28",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 235,
+    "questionNumber": 28,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 377,
+    "questionNumber": 22,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 146,
+    "questionNumber": 7,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q3",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 52,
+    "questionNumber": 3,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.833,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q24",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 101,
+    "questionNumber": 24,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q20",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 148,
+    "questionNumber": 20,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q6",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 33,
+    "questionNumber": 6,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q23",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 141,
+    "questionNumber": 23,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 0.941,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q2",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 145,
+    "questionNumber": 2,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q5",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 374,
+    "questionNumber": 5,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 375,
+    "questionNumber": 7,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.9,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 98,
+    "questionNumber": 7,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 258,
+    "questionNumber": 7,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 100,
+    "questionNumber": 16,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 204,
+    "questionNumber": 9,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q27",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 110,
+    "questionNumber": 27,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.889,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q10",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 375,
+    "questionNumber": 10,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q11",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 213,
+    "questionNumber": 11,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q3",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 177,
+    "questionNumber": 3,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.882,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q4",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 258,
+    "questionNumber": 4,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q5",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 293,
+    "questionNumber": 5,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q21",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 101,
+    "questionNumber": 21,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.929,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q26",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 149,
+    "questionNumber": 26,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 101,
+    "questionNumber": 22,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q33",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 173,
+    "questionNumber": 33,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q38",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 380,
+    "questionNumber": 38,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q6",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 231,
+    "questionNumber": 6,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q31",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 379,
+    "questionNumber": 31,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q5",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 177,
+    "questionNumber": 5,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q28",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 217,
+    "questionNumber": 28,
+    "answerKeyEvidence": "E\n006366_pv_pvv_al_fis_03_vol1_liv383_392_gab_P",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q40",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 380,
+    "questionNumber": 40,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q10",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 169,
+    "questionNumber": 10,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q12",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 259,
+    "questionNumber": 12,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q41",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 174,
+    "questionNumber": 41,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q36",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 380,
+    "questionNumber": 36,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 367,
+    "questionNumber": 16,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 171,
+    "questionNumber": 22,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q18",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 300,
+    "questionNumber": 18,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 374,
+    "questionNumber": 1,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q25",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 282,
+    "questionNumber": 25,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 214,
+    "questionNumber": 16,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q12",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 54,
+    "questionNumber": 12,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c1-exercicios-complementares-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 17,
+    "questionNumber": 1,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 99,
+    "questionNumber": 9,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q2",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 177,
+    "questionNumber": 2,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q31",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 235,
+    "questionNumber": 31,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 258,
+    "questionNumber": 8,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q3",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 145,
+    "questionNumber": 3,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q27",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 149,
+    "questionNumber": 27,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q11",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 99,
+    "questionNumber": 11,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 257,
+    "questionNumber": 1,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q29",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 235,
+    "questionNumber": 29,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-propostos-q6",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 334,
+    "questionNumber": 6,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 138,
+    "questionNumber": 9,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 107,
+    "questionNumber": 7,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 169,
+    "questionNumber": 8,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q40",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 174,
+    "questionNumber": 40,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q44",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 57,
+    "questionNumber": 44,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q25",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 171,
+    "questionNumber": 25,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q14",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 147,
+    "questionNumber": 14,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c4-exercicios-complementares-q7",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 319,
+    "questionNumber": 7,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q19",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 206,
+    "questionNumber": 19,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 33,
+    "questionNumber": 9,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q14",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 139,
+    "questionNumber": 14,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q19",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 241,
+    "questionNumber": 19,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.889,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 207,
+    "questionNumber": 22,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 138,
+    "questionNumber": 8,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q39",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 372,
+    "questionNumber": 39,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q20",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 296,
+    "questionNumber": 20,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q13",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 99,
+    "questionNumber": 13,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q29",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 102,
+    "questionNumber": 29,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q39",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 380,
+    "questionNumber": 39,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q27",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 55,
+    "questionNumber": 27,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 54,
+    "questionNumber": 16,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": "The independent calculation from the extracted numerical data does not exactly match option C."
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q15",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 205,
+    "questionNumber": 15,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q22",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 109,
+    "questionNumber": 22,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 146,
+    "questionNumber": 9,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": "The extracted contact sequence yields 5Q/8, absent from the options, while the official key marks A."
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q18",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 233,
+    "questionNumber": 18,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q26",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 276,
+    "questionNumber": 26,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q18",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 100,
+    "questionNumber": 18,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q9",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 212,
+    "questionNumber": 9,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 33,
+    "questionNumber": 8,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q32",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 235,
+    "questionNumber": 32,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.889,
+    "result": "verificada_sem_alteracao",
+    "fieldsChanged": [],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-complementares-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 338,
+    "questionNumber": 1,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q6",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 273,
+    "questionNumber": 6,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q21",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 300,
+    "questionNumber": 21,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 376,
+    "questionNumber": 16,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-complementares-q24",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 182,
+    "questionNumber": 24,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q5",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 365,
+    "questionNumber": 5,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q12",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 108,
+    "questionNumber": 12,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q19",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 281,
+    "questionNumber": 19,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": "The extracted coefficients yield about 0.408%, absent from the options, while the official key marks B."
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q16",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 34,
+    "questionNumber": 16,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 0.889,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 375,
+    "questionNumber": 8,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q1",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 364,
+    "questionNumber": 1,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-propostos-q20",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 140,
+    "questionNumber": 20,
+    "answerKeyEvidence": "E",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q10",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 232,
+    "questionNumber": 10,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-complementares-q14",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 54,
+    "questionNumber": 14,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q5",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 168,
+    "questionNumber": 5,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.889,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-propostos-q13",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 232,
+    "questionNumber": 13,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.889,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-propostos-q10",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 335,
+    "questionNumber": 10,
+    "answerKeyEvidence": "A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c1-exercicios-complementares-q8",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 146,
+    "questionNumber": 8,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c2-exercicios-propostos-q42",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 174,
+    "questionNumber": 42,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q17",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 214,
+    "questionNumber": 17,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c5-exercicios-complementares-q11",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 340,
+    "questionNumber": 11,
+    "answerKeyEvidence": "D",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q15",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 280,
+    "questionNumber": 15,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q28",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 102,
+    "questionNumber": 28,
+    "answerKeyEvidence": "B",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q28",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 208,
+    "questionNumber": 28,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q3",
+    "type": "choice",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 298,
+    "questionNumber": 3,
+    "answerKeyEvidence": "C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "options",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q11",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 255,
+    "questionNumber": 11,
+    "answerKeyEvidence": "Aproximadamente 0,56 cm.",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q15",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 108,
+    "questionNumber": 15,
+    "answerKeyEvidence": "65\np  voltas.",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q22",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 296,
+    "questionNumber": 22,
+    "answerKeyEvidence": "mF 5 60 kg; mQ 5 135 kg.",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-complementares-q9",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 258,
+    "questionNumber": 9,
+    "answerKeyEvidence": "45 °A",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": "The printed data yield 255 °A, while the official answer text extracted from the key is 45 °A."
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q25",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 101,
+    "questionNumber": 25,
+    "answerKeyEvidence": "11 min",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q13",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 366,
+    "questionNumber": 13,
+    "answerKeyEvidence": "123 L",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-propostos-q25",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 207,
+    "questionNumber": 25,
+    "answerKeyEvidence": "4\n3 m",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c3-exercicios-complementares-q18",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 214,
+    "questionNumber": 18,
+    "answerKeyEvidence": "d 5 2xq\nq  8 mv x\n2\n2\n0\n21p v",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q11",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 366,
+    "questionNumber": 11,
+    "answerKeyEvidence": "0,82 atm",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q21",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 109,
+    "questionNumber": 21,
+    "answerKeyEvidence": "14,2 s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q7",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 33,
+    "questionNumber": 7,
+    "answerKeyEvidence": "v 5 v\n2\ns",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c2-exercicios-complementares-q20",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 35,
+    "questionNumber": 20,
+    "answerKeyEvidence": "30 m/s",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-propostos-q40",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 372,
+    "questionNumber": 40,
+    "answerKeyEvidence": "a) 25% b) 27 °C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c4-exercicios-propostos-q26",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 75,
+    "questionNumber": 26,
+    "answerKeyEvidence": "a) 30 m/s b) 15 m/s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q5",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 298,
+    "questionNumber": 5,
+    "answerKeyEvidence": "960 cal",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q19",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 109,
+    "questionNumber": 19,
+    "answerKeyEvidence": "8 s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q1",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 298,
+    "questionNumber": 1,
+    "answerKeyEvidence": "600 kJ",
+    "pageTokenCoverage": 0.882,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q27",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 102,
+    "questionNumber": 27,
+    "answerKeyEvidence": "72 s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q8",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 255,
+    "questionNumber": 8,
+    "answerKeyEvidence": "TC 5 100 1  50X",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q16",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 108,
+    "questionNumber": 16,
+    "answerKeyEvidence": "10 s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q20",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 300,
+    "questionNumber": 20,
+    "answerKeyEvidence": "840 g",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-complementares-q7",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 279,
+    "questionNumber": 7,
+    "answerKeyEvidence": "2 m",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q17",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 300,
+    "questionNumber": 17,
+    "answerKeyEvidence": "600 mL",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q4",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 293,
+    "questionNumber": 4,
+    "answerKeyEvidence": "25 L",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-propostos-q24",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 296,
+    "questionNumber": 24,
+    "answerKeyEvidence": "a) c\nc\nX\nY\n 5 0,5\nb) 42 °C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-propostos-q10",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 99,
+    "questionNumber": 10,
+    "answerKeyEvidence": "a) 10 radsp\nb)  p m/s",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q17",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 108,
+    "questionNumber": 17,
+    "answerKeyEvidence": "120 vezes.",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q21",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 242,
+    "questionNumber": 21,
+    "answerKeyEvidence": "32\n3 C2m",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f2-c4-exercicios-complementares-q23",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 2,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 242,
+    "questionNumber": 23,
+    "answerKeyEvidence": "Soma: 04 1 08 1 16 5  28",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c1-exercicios-propostos-q9",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 1,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 255,
+    "questionNumber": 9,
+    "answerKeyEvidence": "225 °F",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c5-exercicios-complementares-q20",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 5,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 109,
+    "questionNumber": 20,
+    "answerKeyEvidence": "a) 40 m b) 60 s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f1-c3-exercicios-propostos-q23",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 1,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 50,
+    "questionNumber": 23,
+    "answerKeyEvidence": "a) 1,5 s\nb) 225 m/s\nc) 30 m\nd) 235 m/s",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c4-exercicios-complementares-q5",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 4,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 319,
+    "questionNumber": 5,
+    "answerKeyEvidence": "70 cal/g",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q19",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 300,
+    "questionNumber": 19,
+    "answerKeyEvidence": "30 °C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q23",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 276,
+    "questionNumber": 23,
+    "answerKeyEvidence": "Irá transbordar 6,96 mL de água.",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q24",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 301,
+    "questionNumber": 24,
+    "answerKeyEvidence": "80 °C",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": "The extracted sequence is internally ambiguous; the official key reports 80 °C."
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q25",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 276,
+    "questionNumber": 25,
+    "answerKeyEvidence": "O recipiente e a glicerina vão dilatar e \n225,9 mL de glicerina vão transbordar.",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c6-exercicios-complementares-q12",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 6,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 375,
+    "questionNumber": 12,
+    "answerKeyEvidence": "Aproximadamente 18,7 g.",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "answer",
+      "answerKeyText",
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c3-exercicios-complementares-q23",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 3,
+    "sourceSection": "Exercícios complementares",
+    "sourcePage": 301,
+    "questionNumber": 23,
+    "answerKeyEvidence": "75 °C",
+    "pageTokenCoverage": 0.944,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "explanation"
+    ],
+    "divergence": null
+  },
+  {
+    "id": "fis-lic-l1-f3-c2-exercicios-propostos-q11",
+    "type": "text",
+    "sourceVolume": "L1",
+    "sourceFront": 3,
+    "sourceChapter": 2,
+    "sourceSection": "Exercícios propostos",
+    "sourcePage": 274,
+    "questionNumber": 11,
+    "answerKeyEvidence": "9 mm",
+    "pageTokenCoverage": 1.0,
+    "result": "corrigida",
+    "fieldsChanged": [
+      "prompt",
+      "explanation"
+    ],
+    "divergence": null
+  }
+]
