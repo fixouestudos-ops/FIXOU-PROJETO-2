@@ -1,0 +1,80 @@
+[
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito de aviação sob enunciado de lançamento oblíquo",
+    "documented_issue": "Conteúdo da questão é lançamento oblíquo, mas o gabarito contém resposta de aviação; seção inteira contém resíduos de resolução/OCR. Bloquear até correção da fonte."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito contém respostas de outra questão",
+    "documented_issue": "Questão é lançamento horizontal com v=6 m/s, mas gabarito contém respostas de outra questão. Bloquear; não alterar gabarito nesta tarefa."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+    "classe": "answer_mismatch",
+    "motivo": "x=t+3, y=5−t implica |v|=√2 m/s; gabarito 2 m/s — conferir OCR da função y",
+    "documented_issue": "Texto x=t+3, y=5−t implica velocidade vetorial (1,−1) m/s, módulo √2 m/s, diferente do gabarito 2 m/s. Conferir OCR da função."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito aponta C (varia linearmente) mas apenas A é verdadeira; v_rel constante",
+    "documented_issue": "Com velocidades 10 m/s em direções ±30° do eixo X, v_rel,y=10 m/s constante. A alternativa A é fisicamente verdadeira, enquanto a C indicada afirma que velocidade relativa varia no tempo. Divergência."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado sobre espelhos; answer de três fontes cromáticas — outra questão",
+    "documented_issue": "Enunciado fala de espelhos e bases no eixo; answer contém resposta sobre três fontes cromáticas não relacionadas. Conteúdo provavelmente mesclado de outro exercício."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado pede traçado de raios; answer discute chama interna — outra questão",
+    "documented_issue": "Enunciado instrui traçado de raios notáveis; answer discute teoria da chama interna aos olhos. Incompatibilidade grave de fonte/gabarito."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito em formato \"Soma: 01+…\" não corresponde à questão de faixas LED (a–e)",
+    "documented_issue": null
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado de eclipses 2023; resposta cadastrada de outro conteúdo",
+    "documented_issue": "Enunciado fala de eclipse solar em 14/10/2023 e eclipse lunar ainda em outubro; resposta cadastrada 17 parece incompatível com data do eclipse lunar 28/10/2023. Conferir prova oficial."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado sobre refutação de refração; answer de tinta branca — outra questão",
+    "documented_issue": "Enunciado pede refutação de tese sobre desvio em toda refração; gabarito fala de tinta branca e aquecimento. É outra questão. Refração normal pode não desviar."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Dados de índice (nA=2, nB=1,5) não explorados pelo gabarito atual",
+    "documented_issue": "Questão sobre índice de refração com dados vA=1,5×10^8 m/s, vB=2×10^8 m/s: nA=2, nB=1,5, nA/B=4/3. Answer cadastrado fala de confeitos coloridos. Incompatível."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q37",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado pede espelho convexo de garagem; gabarito descreve côncavo",
+    "documented_issue": "Enunciado pede vantagem de espelho convexo de garagem; gabarito fala de espelho côncavo com objeto no centro de curvatura. Troca de questões."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito \"planos e côncavos\"; porteiro usa convexo (campo amplo) e dentista côncavo",
+    "documented_issue": "Porteiro precisa de espelho convexo (campo visual amplo), dentista de côncavo (ampliação próxima). Gabarito registra plano e côncavo: divergência."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q47",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito (21 cm; 1,25 mm/s) pertence a outro exercício",
+    "documented_issue": "Pergunta sobre distorções em espelhos esféricos; gabarito responde 21cm e 1,25mm/s, resultados de outro exercício."
+  }
+]

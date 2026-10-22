@@ -1,0 +1,812 @@
+[
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q14",
+    "antes": 873,
+    "depois": 313,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q15",
+    "antes": 1013,
+    "depois": 332,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q14",
+    "antes": 1041,
+    "depois": 284,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q19",
+    "antes": 976,
+    "depois": 338,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q39",
+    "antes": 877,
+    "depois": 348,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q50",
+    "antes": 947,
+    "depois": 351,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q53",
+    "antes": 1022,
+    "depois": 363,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q54",
+    "antes": 850,
+    "depois": 267,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q1",
+    "antes": 957,
+    "depois": 433,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q10",
+    "antes": 827,
+    "depois": 230,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q11",
+    "antes": 841,
+    "depois": 313,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q14",
+    "antes": 846,
+    "depois": 267,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q17",
+    "antes": 834,
+    "depois": 298,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q19",
+    "antes": 854,
+    "depois": 189,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q22",
+    "antes": 840,
+    "depois": 274,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q32",
+    "antes": 867,
+    "depois": 336,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q33",
+    "antes": 873,
+    "depois": 415,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q34",
+    "antes": 950,
+    "depois": 457,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q42",
+    "antes": 878,
+    "depois": 379,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q43",
+    "antes": 854,
+    "depois": 480,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q6",
+    "antes": 886,
+    "depois": 399,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q8",
+    "antes": 943,
+    "depois": 508,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+    "antes": 859,
+    "depois": 262,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q10",
+    "antes": 818,
+    "depois": 283,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q11",
+    "antes": 842,
+    "depois": 173,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q12",
+    "antes": 864,
+    "depois": 310,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q13",
+    "antes": 859,
+    "depois": 235,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q14",
+    "antes": 867,
+    "depois": 252,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q18",
+    "antes": 827,
+    "depois": 210,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q23",
+    "antes": 857,
+    "depois": 313,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q29",
+    "antes": 882,
+    "depois": 504,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q30",
+    "antes": 853,
+    "depois": 237,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q34",
+    "antes": 819,
+    "depois": 360,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q38",
+    "antes": 875,
+    "depois": 370,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q41",
+    "antes": 852,
+    "depois": 538,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q42",
+    "antes": 852,
+    "depois": 273,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q8",
+    "antes": 852,
+    "depois": 619,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-revisando-q1",
+    "antes": 874,
+    "depois": 327,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-revisando-q4",
+    "antes": 830,
+    "depois": 336,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q2",
+    "antes": 805,
+    "depois": 329,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q25",
+    "antes": 847,
+    "depois": 396,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q26",
+    "antes": 872,
+    "depois": 355,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q40",
+    "antes": 793,
+    "depois": 259,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q66",
+    "antes": 887,
+    "depois": 377,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q81",
+    "antes": 813,
+    "depois": 504,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q12",
+    "antes": 923,
+    "depois": 408,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q2",
+    "antes": 765,
+    "depois": 463,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q34",
+    "antes": 764,
+    "depois": 236,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q35",
+    "antes": 781,
+    "depois": 258,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q38",
+    "antes": 790,
+    "depois": 239,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q4",
+    "antes": 792,
+    "depois": 385,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q43",
+    "antes": 770,
+    "depois": 411,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q48",
+    "antes": 769,
+    "depois": 304,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q49",
+    "antes": 845,
+    "depois": 345,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q5",
+    "antes": 804,
+    "depois": 314,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q6",
+    "antes": 779,
+    "depois": 401,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q8",
+    "antes": 770,
+    "depois": 292,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q80",
+    "antes": 784,
+    "depois": 299,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q89",
+    "antes": 772,
+    "depois": 346,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q9",
+    "antes": 776,
+    "depois": 433,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q12",
+    "antes": 813,
+    "depois": 198,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q13",
+    "antes": 793,
+    "depois": 224,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q14",
+    "antes": 790,
+    "depois": 211,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q15",
+    "antes": 791,
+    "depois": 237,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+    "antes": 784,
+    "depois": 207,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q2",
+    "antes": 789,
+    "depois": 185,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q23",
+    "antes": 798,
+    "depois": 284,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q24",
+    "antes": 789,
+    "depois": 269,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q5",
+    "antes": 815,
+    "depois": 199,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q11",
+    "antes": 781,
+    "depois": 241,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q14",
+    "antes": 801,
+    "depois": 201,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q18",
+    "antes": 825,
+    "depois": 216,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q23",
+    "antes": 778,
+    "depois": 131,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q25",
+    "antes": 850,
+    "depois": 592,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q27",
+    "antes": 764,
+    "depois": 194,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q9",
+    "antes": 786,
+    "depois": 130,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q1",
+    "antes": 781,
+    "depois": 320,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q2",
+    "antes": 774,
+    "depois": 143,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q4",
+    "antes": 783,
+    "depois": 265,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q14",
+    "antes": 858,
+    "depois": 290,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q4",
+    "antes": 849,
+    "depois": 242,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q42",
+    "antes": 1038,
+    "depois": 356,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q5",
+    "antes": 878,
+    "depois": 281,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q6",
+    "antes": 829,
+    "depois": 172,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q10",
+    "antes": 859,
+    "depois": 287,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q17",
+    "antes": 898,
+    "depois": 289,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q18",
+    "antes": 834,
+    "depois": 277,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q2",
+    "antes": 852,
+    "depois": 236,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q3",
+    "antes": 853,
+    "depois": 300,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q5",
+    "antes": 844,
+    "depois": 267,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q1",
+    "antes": 862,
+    "depois": 208,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q3",
+    "antes": 858,
+    "depois": 249,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q5",
+    "antes": 849,
+    "depois": 211,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q8",
+    "antes": 856,
+    "depois": 241,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q11",
+    "antes": 801,
+    "depois": 485,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q14",
+    "antes": 815,
+    "depois": 194,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q16",
+    "antes": 831,
+    "depois": 373,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q20",
+    "antes": 1002,
+    "depois": 470,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q27",
+    "antes": 824,
+    "depois": 214,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q29",
+    "antes": 823,
+    "depois": 270,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q4",
+    "antes": 822,
+    "depois": 357,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q55",
+    "antes": 888,
+    "depois": 258,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q6",
+    "antes": 861,
+    "depois": 348,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q10",
+    "antes": 831,
+    "depois": 179,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q12",
+    "antes": 832,
+    "depois": 235,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q21",
+    "antes": 833,
+    "depois": 282,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q27",
+    "antes": 940,
+    "depois": 304,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q32",
+    "antes": 835,
+    "depois": 383,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q51",
+    "antes": 825,
+    "depois": 279,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q52",
+    "antes": 825,
+    "depois": 183,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q54",
+    "antes": 814,
+    "depois": 217,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q61",
+    "antes": 821,
+    "depois": 278,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q62",
+    "antes": 854,
+    "depois": 290,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-revisando-q9",
+    "antes": 872,
+    "depois": 234,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q1",
+    "antes": 888,
+    "depois": 387,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q12",
+    "antes": 890,
+    "depois": 279,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q14",
+    "antes": 822,
+    "depois": 338,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q2",
+    "antes": 800,
+    "depois": 265,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q4",
+    "antes": 798,
+    "depois": 325,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-propostos-q5",
+    "antes": 815,
+    "depois": 221,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q3",
+    "antes": 859,
+    "depois": 375,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q4",
+    "antes": 818,
+    "depois": 281,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q6",
+    "antes": 802,
+    "depois": 341,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q8",
+    "antes": 844,
+    "depois": 341,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q9",
+    "antes": 823,
+    "depois": 241,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-complementares-q1",
+    "antes": 801,
+    "depois": 543,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-complementares-q3",
+    "antes": 741,
+    "depois": 380,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q1",
+    "antes": 828,
+    "depois": 336,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q11",
+    "antes": 819,
+    "depois": 402,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q2",
+    "antes": 758,
+    "depois": 274,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-revisando-q5",
+    "antes": 808,
+    "depois": 374,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q10",
+    "antes": 803,
+    "depois": 464,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q17",
+    "antes": 814,
+    "depois": 229,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q47",
+    "antes": 813,
+    "depois": 289,
+    "eraGenerica": true
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q8",
+    "antes": 836,
+    "depois": 328,
+    "eraGenerica": true
+  }
+]

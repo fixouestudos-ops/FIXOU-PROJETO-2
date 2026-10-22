@@ -1,0 +1,306 @@
+[
+  {
+    "pacote": 1,
+    "subtopic": "Cinemática vetorial",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+      "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q14",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q15",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q37",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+      "fis-lic-l2-f1-c6-exercicios-complementares-q9",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q12",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q14"
+    ]
+  },
+  {
+    "pacote": 2,
+    "subtopic": "Cinemática vetorial",
+    "count": 7,
+    "ids": [
+      "fis-lic-l2-f1-c6-exercicios-propostos-q19",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q39",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q40",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q50",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q53",
+      "fis-lic-l2-f1-c6-exercicios-propostos-q54"
+    ]
+  },
+  {
+    "pacote": 3,
+    "subtopic": "Lançamento oblíquo",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f1-c7-exercicios-complementares-q1",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q10",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q11",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q13",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q14",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q17",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q18",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q19",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q22",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q31",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q32",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q33"
+    ]
+  },
+  {
+    "pacote": 4,
+    "subtopic": "Lançamento oblíquo",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f1-c7-exercicios-complementares-q34",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q42",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q43",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q6",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q8",
+      "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q10",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q11",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q12",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q13",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q14",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q18"
+    ]
+  },
+  {
+    "pacote": 5,
+    "subtopic": "Lançamento oblíquo",
+    "count": 10,
+    "ids": [
+      "fis-lic-l2-f1-c7-exercicios-propostos-q23",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q29",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q30",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q34",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q38",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q41",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q42",
+      "fis-lic-l2-f1-c7-exercicios-propostos-q8",
+      "fis-lic-l2-f1-c7-revisando-q1",
+      "fis-lic-l2-f1-c7-revisando-q4"
+    ]
+  },
+  {
+    "pacote": 6,
+    "subtopic": "Dinâmica",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f1-c8-exercicios-complementares-q15",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q16",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q2",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q25",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q26",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q40",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q52",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q55",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q66",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q72",
+      "fis-lic-l2-f1-c8-exercicios-complementares-q74"
+    ]
+  },
+  {
+    "pacote": 7,
+    "subtopic": "Dinâmica",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f1-c8-exercicios-complementares-q81",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q12",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q2",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q34",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q35",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q38",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q4",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q43",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q48",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q49",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q5",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q56"
+    ]
+  },
+  {
+    "pacote": 8,
+    "subtopic": "Dinâmica",
+    "count": 5,
+    "ids": [
+      "fis-lic-l2-f1-c8-exercicios-propostos-q6",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q8",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q80",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q89",
+      "fis-lic-l2-f1-c8-exercicios-propostos-q9"
+    ]
+  },
+  {
+    "pacote": 9,
+    "subtopic": "Corrente elétrica",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f2-c5-exercicios-complementares-q12",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q13",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q14",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q15",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q2",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q23",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q24",
+      "fis-lic-l2-f2-c5-exercicios-complementares-q5",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q11",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q14",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q18"
+    ]
+  },
+  {
+    "pacote": 10,
+    "subtopic": "Corrente elétrica",
+    "count": 7,
+    "ids": [
+      "fis-lic-l2-f2-c5-exercicios-propostos-q23",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q25",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q27",
+      "fis-lic-l2-f2-c5-exercicios-propostos-q9",
+      "fis-lic-l2-f2-c5-revisando-q1",
+      "fis-lic-l2-f2-c5-revisando-q2",
+      "fis-lic-l2-f2-c5-revisando-q4"
+    ]
+  },
+  {
+    "pacote": 11,
+    "subtopic": "Associação de resistores",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f2-c6-exercicios-complementares-q14",
+      "fis-lic-l2-f2-c6-exercicios-complementares-q4",
+      "fis-lic-l2-f2-c6-exercicios-complementares-q42",
+      "fis-lic-l2-f2-c6-exercicios-complementares-q5",
+      "fis-lic-l2-f2-c6-exercicios-complementares-q6",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q10",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q16",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q17",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q18",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q2",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q3"
+    ]
+  },
+  {
+    "pacote": 12,
+    "subtopic": "Associação de resistores",
+    "count": 8,
+    "ids": [
+      "fis-lic-l2-f2-c6-exercicios-propostos-q5",
+      "fis-lic-l2-f2-c6-exercicios-propostos-q6",
+      "fis-lic-l2-f2-c6-revisando-q1",
+      "fis-lic-l2-f2-c6-revisando-q3",
+      "fis-lic-l2-f2-c6-revisando-q4",
+      "fis-lic-l2-f2-c6-revisando-q5",
+      "fis-lic-l2-f2-c6-revisando-q6",
+      "fis-lic-l2-f2-c6-revisando-q8"
+    ]
+  },
+  {
+    "pacote": 13,
+    "subtopic": "Circuitos elétricos",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f2-c7-exercicios-complementares-q11",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q14",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q16",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q20",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q27",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q29",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q4",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q55",
+      "fis-lic-l2-f2-c7-exercicios-complementares-q6",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q10",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q12"
+    ]
+  },
+  {
+    "pacote": 14,
+    "subtopic": "Circuitos elétricos",
+    "count": 9,
+    "ids": [
+      "fis-lic-l2-f2-c7-exercicios-propostos-q21",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q27",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q32",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q51",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q52",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q54",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q61",
+      "fis-lic-l2-f2-c7-exercicios-propostos-q62",
+      "fis-lic-l2-f2-c7-revisando-q9"
+    ]
+  },
+  {
+    "pacote": 15,
+    "subtopic": "Óptica geométrica",
+    "count": 12,
+    "ids": [
+      "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+      "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q1",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q12",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q14",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q2",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q4",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+      "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+      "fis-lic-l2-f3-c7-exercicios-propostos-q5",
+      "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+      "fis-lic-l2-f3-c7-revisando-q1"
+    ]
+  },
+  {
+    "pacote": 16,
+    "subtopic": "Óptica geométrica",
+    "count": 6,
+    "ids": [
+      "fis-lic-l2-f3-c7-revisando-q3",
+      "fis-lic-l2-f3-c7-revisando-q4",
+      "fis-lic-l2-f3-c7-revisando-q5",
+      "fis-lic-l2-f3-c7-revisando-q6",
+      "fis-lic-l2-f3-c7-revisando-q8",
+      "fis-lic-l2-f3-c7-revisando-q9"
+    ]
+  },
+  {
+    "pacote": 17,
+    "subtopic": "Reflexão da luz",
+    "count": 11,
+    "ids": [
+      "fis-lic-l2-f3-c8-bncc-em-foco-q1",
+      "fis-lic-l2-f3-c8-bncc-em-foco-q2",
+      "fis-lic-l2-f3-c8-exercicios-complementares-q1",
+      "fis-lic-l2-f3-c8-exercicios-complementares-q3",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q1",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q11",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q2",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q37",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+      "fis-lic-l2-f3-c8-exercicios-propostos-q47",
+      "fis-lic-l2-f3-c8-revisando-q5"
+    ]
+  },
+  {
+    "pacote": 18,
+    "subtopic": "Refração da luz",
+    "count": 7,
+    "ids": [
+      "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q10",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q17",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q2",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q4",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q47",
+      "fis-lic-l2-f3-c9-exercicios-complementares-q8"
+    ]
+  }
+]

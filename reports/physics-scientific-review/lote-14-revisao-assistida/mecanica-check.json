@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q14",
+    "status": "pronta",
+    "palavras": 46,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q15",
+    "status": "pronta",
+    "palavras": 50,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q37",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q9",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q12",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q14",
+    "status": "pronta",
+    "palavras": 43,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q19",
+    "status": "pronta",
+    "palavras": 48,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q39",
+    "status": "pronta",
+    "palavras": 52,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q40",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q50",
+    "status": "pronta",
+    "palavras": 63,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q53",
+    "status": "probs",
+    "palavras": 60,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q54",
+    "status": "pronta",
+    "palavras": 53,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q1",
+    "status": "pronta",
+    "palavras": 64,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q10",
+    "status": "pronta",
+    "palavras": 40,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q11",
+    "status": "pronta",
+    "palavras": 52,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q13",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q14",
+    "status": "pronta",
+    "palavras": 40,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q17",
+    "status": "pronta",
+    "palavras": 50,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q18",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q19",
+    "status": "pronta",
+    "palavras": 27,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q22",
+    "status": "pronta",
+    "palavras": 37,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q31",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q32",
+    "status": "pronta",
+    "palavras": 52,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q33",
+    "status": "pronta",
+    "palavras": 73,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q34",
+    "status": "pronta",
+    "palavras": 83,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q42",
+    "status": "pronta",
+    "palavras": 56,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q43",
+    "status": "pronta",
+    "palavras": 72,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q6",
+    "status": "pronta",
+    "palavras": 66,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q8",
+    "status": "pronta",
+    "palavras": 74,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+    "status": "pronta",
+    "palavras": 42,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q10",
+    "status": "pronta",
+    "palavras": 45,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q11",
+    "status": "probs",
+    "palavras": 26,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q12",
+    "status": "pronta",
+    "palavras": 51,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q13",
+    "status": "pronta",
+    "palavras": 30,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q14",
+    "status": "probs",
+    "palavras": 39,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q18",
+    "status": "pronta",
+    "palavras": 39,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q23",
+    "status": "pronta",
+    "palavras": 50,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q29",
+    "status": "pronta",
+    "palavras": 74,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q30",
+    "status": "pronta",
+    "palavras": 39,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q34",
+    "status": "pronta",
+    "palavras": 49,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q38",
+    "status": "pronta",
+    "palavras": 62,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q41",
+    "status": "pronta",
+    "palavras": 82,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q42",
+    "status": "pronta",
+    "palavras": 38,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-propostos-q8",
+    "status": "pronta",
+    "palavras": 96,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-revisando-q1",
+    "status": "pronta",
+    "palavras": 54,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-revisando-q4",
+    "status": "pronta",
+    "palavras": 65,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q15",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q16",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q2",
+    "status": "probs",
+    "palavras": 58,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q25",
+    "status": "pronta",
+    "palavras": 54,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q26",
+    "status": "pronta",
+    "palavras": 68,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q40",
+    "status": "pronta",
+    "palavras": 41,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q52",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q55",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q66",
+    "status": "probs",
+    "palavras": 58,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q72",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q74",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q81",
+    "status": "pronta",
+    "palavras": 85,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q12",
+    "status": "probs",
+    "palavras": 70,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q2",
+    "status": "pronta",
+    "palavras": 78,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q34",
+    "status": "probs",
+    "palavras": 39,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q35",
+    "status": "probs",
+    "palavras": 52,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q38",
+    "status": "probs",
+    "palavras": 43,
+    "letra": "E",
+    "probs": [
+      "letra_E_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q4",
+    "status": "probs",
+    "palavras": 63,
+    "letra": "E",
+    "probs": [
+      "letra_E_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q43",
+    "status": "probs",
+    "palavras": 59,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q48",
+    "status": "probs",
+    "palavras": 53,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q49",
+    "status": "pronta",
+    "palavras": 50,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q5",
+    "status": "pronta",
+    "palavras": 57,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q56",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q6",
+    "status": "pronta",
+    "palavras": 68,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q8",
+    "status": "probs",
+    "palavras": 45,
+    "letra": "B",
+    "probs": [
+      "letra_B_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q80",
+    "status": "pronta",
+    "palavras": 52,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q89",
+    "status": "pronta",
+    "palavras": 56,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q9",
+    "status": "pronta",
+    "palavras": 80,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q12",
+    "status": "pronta",
+    "palavras": 37,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q13",
+    "status": "pronta",
+    "palavras": 40,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q14",
+    "status": "pronta",
+    "palavras": 43,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q15",
+    "status": "probs",
+    "palavras": 39,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+    "status": "pronta",
+    "palavras": 29,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q2",
+    "status": "pronta",
+    "palavras": 31,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q23",
+    "status": "probs",
+    "palavras": 43,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q24",
+    "status": "probs",
+    "palavras": 51,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-complementares-q5",
+    "status": "probs",
+    "palavras": 25,
+    "letra": "B",
+    "probs": [
+      "letra_B_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q11",
+    "status": "pronta",
+    "palavras": 43,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q14",
+    "status": "pronta",
+    "palavras": 36,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q18",
+    "status": "pronta",
+    "palavras": 36,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q23",
+    "status": "pronta",
+    "palavras": 23,
+    "letra": "E",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q25",
+    "status": "probs",
+    "palavras": 110,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q27",
+    "status": "probs",
+    "palavras": 28,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-exercicios-propostos-q9",
+    "status": "pronta",
+    "palavras": 23,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q1",
+    "status": "pronta",
+    "palavras": 55,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q2",
+    "status": "pronta",
+    "palavras": 30,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c5-revisando-q4",
+    "status": "pronta",
+    "palavras": 43,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q14",
+    "status": "probs",
+    "palavras": 63,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q4",
+    "status": "probs",
+    "palavras": 40,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q42",
+    "status": "probs",
+    "palavras": 56,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q5",
+    "status": "probs",
+    "palavras": 49,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-complementares-q6",
+    "status": "probs",
+    "palavras": 30,
+    "letra": "E",
+    "probs": [
+      "letra_E_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q10",
+    "status": "probs",
+    "palavras": 45,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q16",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q17",
+    "status": "pronta",
+    "palavras": 45,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q18",
+    "status": "probs",
+    "palavras": 42,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q2",
+    "status": "probs",
+    "palavras": 43,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q3",
+    "status": "pronta",
+    "palavras": 54,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q5",
+    "status": "pronta",
+    "palavras": 49,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q6",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q1",
+    "status": "pronta",
+    "palavras": 43,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q3",
+    "status": "pronta",
+    "palavras": 45,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q4",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q5",
+    "status": "pronta",
+    "palavras": 35,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q6",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q8",
+    "status": "probs",
+    "palavras": 41,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q11",
+    "status": "pronta",
+    "palavras": 78,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q14",
+    "status": "pronta",
+    "palavras": 34,
+    "letra": "B",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q16",
+    "status": "pronta",
+    "palavras": 61,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q20",
+    "status": "probs",
+    "palavras": 90,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q27",
+    "status": "pronta",
+    "palavras": 35,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q29",
+    "status": "pronta",
+    "palavras": 54,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q4",
+    "status": "pronta",
+    "palavras": 67,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q55",
+    "status": "probs",
+    "palavras": 46,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q6",
+    "status": "pronta",
+    "palavras": 66,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q10",
+    "status": "probs",
+    "palavras": 28,
+    "letra": "B",
+    "probs": [
+      "letra_B_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q12",
+    "status": "probs",
+    "palavras": 42,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q21",
+    "status": "pronta",
+    "palavras": 49,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q27",
+    "status": "pronta",
+    "palavras": 40,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q32",
+    "status": "probs",
+    "palavras": 69,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q51",
+    "status": "probs",
+    "palavras": 43,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q52",
+    "status": "pronta",
+    "palavras": 31,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q54",
+    "status": "pronta",
+    "palavras": 38,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q61",
+    "status": "probs",
+    "palavras": 52,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-propostos-q62",
+    "status": "pronta",
+    "palavras": 45,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-revisando-q9",
+    "status": "probs",
+    "palavras": 38,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q1",
+    "status": "probs",
+    "palavras": 62,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q12",
+    "status": "pronta",
+    "palavras": 44,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q14",
+    "status": "pronta",
+    "palavras": 51,
+    "letra": null,
+    "probs": [],
+    "issue": "O limite angular define a MAIOR distância de resolução dos dois faróis, não a mínima. O resultado nu",
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q2",
+    "status": "pronta",
+    "palavras": 47,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q4",
+    "status": "pronta",
+    "palavras": 57,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-propostos-q5",
+    "status": "pronta",
+    "palavras": 36,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q1",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q3",
+    "status": "probs",
+    "palavras": 67,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q4",
+    "status": "pronta",
+    "palavras": 48,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q5",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q6",
+    "status": "pronta",
+    "palavras": 60,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q8",
+    "status": "probs",
+    "palavras": 59,
+    "letra": "A",
+    "probs": [
+      "letra_A_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q9",
+    "status": "probs",
+    "palavras": 44,
+    "letra": "C",
+    "probs": [
+      "letra_C_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q1",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q2",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-complementares-q1",
+    "status": "probs",
+    "palavras": 93,
+    "letra": "D",
+    "probs": [
+      "letra_D_nao_mencionada"
+    ],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-complementares-q3",
+    "status": "pronta",
+    "palavras": 64,
+    "letra": null,
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q1",
+    "status": "pronta",
+    "palavras": 50,
+    "letra": "D",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q11",
+    "status": "pronta",
+    "palavras": 65,
+    "letra": "E",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q2",
+    "status": "pronta",
+    "palavras": 48,
+    "letra": "A",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q37",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q47",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-revisando-q5",
+    "status": "pronta",
+    "palavras": 66,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "blocked_issue"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q10",
+    "status": "pronta",
+    "palavras": 72,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q17",
+    "status": "pronta",
+    "palavras": 38,
+    "letra": "E",
+    "probs": [],
+    "issue": null,
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q2",
+    "status": "sem_proposta",
+    "motivo": "sem correcao",
+    "classe": "pending_review"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q4",
+    "status": "sem_proposta",
+    "motivo": "issue_documentada",
+    "classe": "missing_visual_evidence"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q47",
+    "status": "pronta",
+    "palavras": 44,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q8",
+    "status": "pronta",
+    "palavras": 54,
+    "letra": "C",
+    "probs": [],
+    "issue": null,
+    "classe": "candidate_correction"
+  }
+]

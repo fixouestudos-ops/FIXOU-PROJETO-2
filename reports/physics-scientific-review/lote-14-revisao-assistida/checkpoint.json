@@ -1,0 +1,24 @@
+{
+  "lote": 14,
+  "total": 200,
+  "resolved_reviewed": 164,
+  "unchanged_correct": 0,
+  "explicacoes_por_origem": {
+    "rodada_anterior_22": 22,
+    "correcoes_owner_135": 135,
+    "resolucoes_individuais_7": 7
+  },
+  "pendentes_total": 36,
+  "pendentes_por_classe": {
+    "answer_mismatch": 13,
+    "missing_visual_evidence": 16,
+    "prompt_corrupt": 6,
+    "source_not_verified": 1
+  },
+  "qa": "0 pendencias (164/164 conferidas, 36 pendentes intactos)",
+  "validacoes": {
+    "validateBank": true,
+    "test": "328/328",
+    "build": "hash 7136f1f3"
+  }
+}

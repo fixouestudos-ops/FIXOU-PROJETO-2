@@ -1,0 +1,15 @@
+{
+  "total": 200,
+  "already_applied": 22,
+  "proposals_total": 135,
+  "proposals_new": 135,
+  "issues_count": 34,
+  "class_counts": {
+    "blocked_issue": 20,
+    "candidate_correction": 112,
+    "pending_review": 17,
+    "resolved_reviewed": 22,
+    "missing_visual_evidence": 29
+  },
+  "generated_at": "2026-10-22T22:14:56.307Z"
+}

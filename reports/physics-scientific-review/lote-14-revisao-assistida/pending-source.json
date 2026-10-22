@@ -1,0 +1,218 @@
+[
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito de aviação sob enunciado de lançamento oblíquo",
+    "documented_issue": "Conteúdo da questão é lançamento oblíquo, mas o gabarito contém resposta de aviação; seção inteira contém resíduos de resolução/OCR. Bloquear até correção da fonte."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito contém respostas de outra questão",
+    "documented_issue": "Questão é lançamento horizontal com v=6 m/s, mas gabarito contém respostas de outra questão. Bloquear; não alterar gabarito nesta tarefa."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+    "classe": "missing_visual_evidence",
+    "motivo": "Depende de três fotografias estroboscópicas ausentes",
+    "documented_issue": "Pergunta depende de três fotografias estroboscópicas; nenhuma imagem consta em imageAssets; conferir fonte e figuras."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+    "classe": "answer_mismatch",
+    "motivo": "x=t+3, y=5−t implica |v|=√2 m/s; gabarito 2 m/s — conferir OCR da função y",
+    "documented_issue": "Texto x=t+3, y=5−t implica velocidade vetorial (1,−1) m/s, módulo √2 m/s, diferente do gabarito 2 m/s. Conferir OCR da função."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito aponta C (varia linearmente) mas apenas A é verdadeira; v_rel constante",
+    "documented_issue": "Com velocidades 10 m/s em direções ±30° do eixo X, v_rel,y=10 m/s constante. A alternativa A é fisicamente verdadeira, enquanto a C indicada afirma que velocidade relativa varia no tempo. Divergência."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-complementares-q9",
+    "classe": "prompt_corrupt",
+    "motivo": "Itens 04 e 16 com expressões corrompidas no OCR",
+    "documented_issue": "Expressões dos itens 04 e 16 estão corrompidas por OCR; não é possível avaliar todas as afirmações."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+    "classe": "prompt_corrupt",
+    "motivo": "Equação vetorial ilegível no OCR (\"c 25 3b 2a 2 3x\")",
+    "documented_issue": null
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+    "classe": "missing_visual_evidence",
+    "motivo": "Representações vetoriais I–IV dependem de diagramas ausentes",
+    "documented_issue": "Representações vetoriais I–IV dependem dos diagramas ausentes; conferência visual obrigatória."
+  },
+  {
+    "id": "fis-lic-l2-f1-c6-exercicios-propostos-q40",
+    "classe": "missing_visual_evidence",
+    "motivo": "Diagrama circular e fórmula da alternativa apontada danificados no OCR",
+    "documented_issue": "Diagrama circular e fórmula da alternativa apontada foram danificados no OCR; conferir material."
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q13",
+    "classe": "source_not_verified",
+    "motivo": "Dependência tan²θ2 vs cot²θ2 incerta; conferir fonte",
+    "documented_issue": "Para ângulos complementares θ1 e θ2, H1/H2=tan²θ1=cot²θ2. Gabarito aponta dependência de tan²θ2, incompatível; verificar fonte/alternativa."
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q18",
+    "classe": "prompt_corrupt",
+    "motivo": "Resposta do gabarito ilegível no OCR (\"tg v 2 g h u5 × ?\")",
+    "documented_issue": null
+  },
+  {
+    "id": "fis-lic-l2-f1-c7-exercicios-complementares-q31",
+    "classe": "missing_visual_evidence",
+    "motivo": "Posição horizontal do prédio não consta no texto; 9 s pressupõe figura com P no trecho de descida",
+    "documented_issue": "Altura 45 m é alcançada em t=1 s na subida e t=9 s na descida; posição horizontal do prédio não consta no texto. Gabarito 9 s exige informação adicional."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q16",
+    "classe": "prompt_corrupt",
+    "motivo": "OCR da massa da Terra como 10^−4 kg; dados incompatíveis",
+    "documented_issue": "OCR da massa da Terra apresenta 10^−4 kg, incompatível com 10^24 kg; gabarito 10^−21 m/s² só é consistente com massa terrestre da ordem de 10^24 kg."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+    "classe": "missing_visual_evidence",
+    "motivo": "Item c (12,5 m/s² = 150/12) pressupõe cenário de A isolado não presente no OCR",
+    "documented_issue": "Enunciado mistura dois blocos sem condições suficientes para justificar item c=12,5 m/s²; verificar diagrama/segmentação."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q52",
+    "classe": "missing_visual_evidence",
+    "motivo": "Sistema de polia homem/elevador depende de geometria do desenho ausente",
+    "documented_issue": "Sistema de polia homem/elevador depende de geometria do desenho, ausente nos anexos; não concluir expressão da normal sem verificar a posição do operador e os vínculos."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q55",
+    "classe": "missing_visual_evidence",
+    "motivo": "Sistema A/B/C e fio depende da representação do apoio ausente",
+    "documented_issue": "Sistema de massas A/B/C e fio f depende da representação do apoio e orientação da corda, não reproduzida por imagem."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-complementares-q72",
+    "classe": "prompt_corrupt",
+    "motivo": "Alternativa corrompida no OCR e geometria do engate a conferir",
+    "documented_issue": "Expressão da alternativa está corrompida pelo OCR e geometria do engate precisa conferência."
+  },
+  {
+    "id": "fis-lic-l2-f1-c8-exercicios-propostos-q56",
+    "classe": "missing_visual_evidence",
+    "motivo": "Roldanas e dinamômetro exigem diagrama para relacionar 40 N às massas",
+    "documented_issue": "Roldanas e dinamômetro exigem conferência do diagrama para relacionar 40 N às massas."
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+    "classe": "missing_visual_evidence",
+    "motivo": "Topologia dos quatro resistores (série/paralelo) depende da figura ausente",
+    "documented_issue": "Quatro resistores ligados a bateria de 12 V, mas faltam conexões da figura. A resistência R não pode ser deduzida de i=12 mA sem topologia."
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-exercicios-propostos-q16",
+    "classe": "missing_visual_evidence",
+    "motivo": "Interruptores/lâmpadas dependem do diagrama ausente",
+    "documented_issue": "Interruptores/lâmpadas dependem do diagrama ausente."
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q4",
+    "classe": "missing_visual_evidence",
+    "motivo": "Tensões 120/100/20 V sem topologia do circuito (figura ausente)",
+    "documented_issue": "Tensões 120V, 100V e 20V sem a topologia do circuito original, bloqueio visual."
+  },
+  {
+    "id": "fis-lic-l2-f2-c6-revisando-q6",
+    "classe": "missing_visual_evidence",
+    "motivo": "Circuito de quatro lâmpadas depende do esquema ausente",
+    "documented_issue": "Questão de circuito de quatro lâmpadas depende do esquema ausente."
+  },
+  {
+    "id": "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+    "classe": "missing_visual_evidence",
+    "motivo": "Potencial do ponto A depende das orientações das fontes na figura ausente",
+    "documented_issue": "Potencial do ponto A depende das orientações das várias fontes de tensão na figura; o OCR não preserva polaridades."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado sobre espelhos; answer de três fontes cromáticas — outra questão",
+    "documented_issue": "Enunciado fala de espelhos e bases no eixo; answer contém resposta sobre três fontes cromáticas não relacionadas. Conteúdo provavelmente mesclado de outro exercício."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado pede traçado de raios; answer discute chama interna — outra questão",
+    "documented_issue": "Enunciado instrui traçado de raios notáveis; answer discute teoria da chama interna aos olhos. Incompatibilidade grave de fonte/gabarito."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+    "classe": "missing_visual_evidence",
+    "motivo": "Penumbra do banco sem dimensões/desenho no texto",
+    "documented_issue": "Pede comprimento de penumbra sem fornecer dimensões e desenho do banco/fonte. Não calcular 1m sem figura."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+    "classe": "missing_visual_evidence",
+    "motivo": "Sombra sem dimensões e configuração óptica (figura ausente)",
+    "documented_issue": "Pede comprimento de sombra sem dimensões e desenho da configuração óptica. Não calcular 75cm sem figura."
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito em formato \"Soma: 01+…\" não corresponde à questão de faixas LED (a–e)",
+    "documented_issue": null
+  },
+  {
+    "id": "fis-lic-l2-f3-c7-revisando-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado de eclipses 2023; resposta cadastrada de outro conteúdo",
+    "documented_issue": "Enunciado fala de eclipse solar em 14/10/2023 e eclipse lunar ainda em outubro; resposta cadastrada 17 parece incompatível com data do eclipse lunar 28/10/2023. Conferir prova oficial."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q1",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado sobre refutação de refração; answer de tinta branca — outra questão",
+    "documented_issue": "Enunciado pede refutação de tese sobre desvio em toda refração; gabarito fala de tinta branca e aquecimento. É outra questão. Refração normal pode não desviar."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-bncc-em-foco-q2",
+    "classe": "answer_mismatch",
+    "motivo": "Dados de índice (nA=2, nB=1,5) não explorados pelo gabarito atual",
+    "documented_issue": "Questão sobre índice de refração com dados vA=1,5×10^8 m/s, vB=2×10^8 m/s: nA=2, nB=1,5, nA/B=4/3. Answer cadastrado fala de confeitos coloridos. Incompatível."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q37",
+    "classe": "answer_mismatch",
+    "motivo": "Enunciado pede espelho convexo de garagem; gabarito descreve côncavo",
+    "documented_issue": "Enunciado pede vantagem de espelho convexo de garagem; gabarito fala de espelho côncavo com objeto no centro de curvatura. Troca de questões."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito \"planos e côncavos\"; porteiro usa convexo (campo amplo) e dentista côncavo",
+    "documented_issue": "Porteiro precisa de espelho convexo (campo visual amplo), dentista de côncavo (ampliação próxima). Gabarito registra plano e côncavo: divergência."
+  },
+  {
+    "id": "fis-lic-l2-f3-c8-exercicios-propostos-q47",
+    "classe": "answer_mismatch",
+    "motivo": "Gabarito (21 cm; 1,25 mm/s) pertence a outro exercício",
+    "documented_issue": "Pergunta sobre distorções em espelhos esféricos; gabarito responde 21cm e 1,25mm/s, resultados de outro exercício."
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+    "classe": "prompt_corrupt",
+    "motivo": "Valores de ESF dos óculos ausentes no OCR",
+    "documented_issue": "Exercício exige receita de óculos com valor ESF, mas os valores não aparecem no OCR. A resposta afirma vergência negativa sem dado verificável."
+  },
+  {
+    "id": "fis-lic-l2-f3-c9-exercicios-complementares-q4",
+    "classe": "missing_visual_evidence",
+    "motivo": "Semicilindro: diagrama indispensável para ângulos no ponto B",
+    "documented_issue": "Óptica no semicilindro: diagrama indispensável para identificar os ângulos de incidência/refração no ponto B."
+  }
+]
