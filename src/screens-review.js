@@ -94,11 +94,12 @@ export function aiAuditMembership(id){
  if(AI_AUDIT_BATCH.historicalIds.includes(id))memberships.push('historical');
  if(AI_AUDIT_LOTS.lot12.ids.includes(id))memberships.push('lot12');
  if(AI_AUDIT_LOTS.lot13.ids.includes(id))memberships.push('lot13');
+ if(AI_AUDIT_LOTS.lot14.ids.includes(id))memberships.push('lot14');
  return memberships;
 }
 
 export function aiAuditScientificResult(id,lotKey='all'){
- const keys=lotKey==='all'?['lot13','lot12']:lotKey==='historical'?[]:[lotKey];
+ const keys=lotKey==='all'?['lot14','lot13','lot12']:lotKey==='historical'?[]:[lotKey];
  for(const key of keys){
   const manifest=AI_AUDIT_LOTS[key]?.manifestById[id];
   if(manifest)return manifest.divergence?'divergencia_documentada':manifest.result||'corrigida';
@@ -107,7 +108,7 @@ export function aiAuditScientificResult(id,lotKey='all'){
 }
 
 export function aiAuditCompare(q,lotKey='all'){
- const keys=lotKey==='all'?['lot13','lot12']:lotKey==='historical'?[]:[lotKey];
+ const keys=lotKey==='all'?['lot14','lot13','lot12']:lotKey==='historical'?[]:[lotKey];
  for(const key of keys){
   const lot=AI_AUDIT_LOTS[key],patch=lot?.patchById[q.id];
   if(!patch)continue;
@@ -135,7 +136,7 @@ function aiAnswerLabel(value,options){
 function aiAuditSections(q,lotFilter='all'){
  const cmp=aiAuditCompare(q,lotFilter);
  const memberships=aiAuditMembership(q.id);
- const revisionKeys=lotFilter==='all'?['lot13','lot12']:lotFilter==='historical'?[]:[lotFilter];
+ const revisionKeys=lotFilter==='all'?['lot14','lot13','lot12']:lotFilter==='historical'?[]:[lotFilter];
  const revisionKey=revisionKeys.find(key=>AI_AUDIT_LOTS[key]?.manifestById[q.id]);
  const manifest=revisionKey?AI_AUDIT_LOTS[revisionKey].manifestById[q.id]:null;
  const result=aiAuditScientificResult(q.id,lotFilter);
@@ -163,7 +164,7 @@ function aiAuditSections(q,lotFilter='all'){
   compare=result==='verificada_sem_alteracao'?'<div class="ai-section ai-compare"><h4>Comparação da revisão</h4><p class="ai-note">Verificada sem alteração: este lote não criou diferenças artificiais. A comparação histórica anterior continua preservada no filtro “Lotes históricos”.</p></div>':'<div class="ai-section ai-compare"><h4>Comparação da correção</h4><p class="ai-note">Versão anterior não disponível</p></div>';
  }
  const explanation=q.explanation?`<div class="ai-section"><h4>Explicação</h4><div class="ai-explanation-text">${escapeHTML(q.explanation)}</div></div>`:'<div class="ai-section"><h4>Explicação</h4><p class="ai-note">Sem explicação registrada.</p></div>';
- const lotLabels={historical:'Lotes históricos',lot12:'Lote 12',lot13:'Lote 13'};
+ const lotLabels={historical:'Lotes históricos',lot12:'Lote 12',lot13:'Lote 13',lot14:'Lote 14'};
  const origin=manifest?`PV Física ${escapeHTML(manifest.sourceVolume||'?')} · Frente ${escapeHTML(manifest.sourceFront??'?')} · Capítulo ${escapeHTML(manifest.sourceChapter??'?')} · ${escapeHTML(manifest.sourceSection||'?')} · p. ${escapeHTML(manifest.sourcePage??'?')} · questão ${escapeHTML(manifest.questionNumber??'?')}`:'Histórico de auditoria preservado';
  const divergence=manifest?.divergence?`<div class="ai-section ai-divergence"><h4>⚠ Divergência documentada</h4><p>${escapeHTML(manifest.divergence)}</p><p class="ai-note">Requer conferência humana; o gabarito não foi alterado para ocultar a divergência.</p></div>`:'';
  const info=`<div class="ai-section ai-audit-info"><h4>Informações de auditoria</h4><div class="ai-audit-meta">
@@ -361,7 +362,8 @@ function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewAiLotFilter=
   {key:'all',label:'Todos',count:AI_AUDIT_BATCH.ids.length},
   {key:'historical',label:'Lotes históricos',count:AI_AUDIT_BATCH.historicalIds.length},
   {key:'lot12',label:'Lote 12',count:AI_AUDIT_LOTS.lot12.ids.length},
-  {key:'lot13',label:'Lote 13',count:AI_AUDIT_LOTS.lot13.ids.length}
+  {key:'lot13',label:'Lote 13',count:AI_AUDIT_LOTS.lot13.ids.length},
+  {key:'lot14',label:'Lote 14',count:AI_AUDIT_LOTS.lot14.ids.length}
  ];
  const subTabs=[
   {key:'all',label:'Todas',count:counts.all},
@@ -376,9 +378,9 @@ function aiAuditView({bank,filterButtons,reviewAiFilter='all',reviewAiLotFilter=
  const statusColor={awaiting:'#f0b04e',approved:'#3cc88d',rejected:'#e66a74'};
  const statusLabel={awaiting:'Aguardando',approved:'Aprovada',rejected:'Não aprovada'};
  const resultLabel={corrigida:'Corrigida por IA',verificada_sem_alteracao:'Verificada sem alteração',divergencia_documentada:'Divergência documentada',historical:'Revisão histórica'};
- const lotShort={historical:'Histórico',lot12:'Lote 12',lot13:'Lote 13'};
+ const lotShort={historical:'Histórico',lot12:'Lote 12',lot13:'Lote 13',lot14:'Lote 14'};
  const listHtml=searched.length?searched.map((q,i)=>{const st=aiAuditStatus(q),memberships=aiAuditMembership(q.id),result=aiAuditScientificResult(q.id,reviewAiLotFilter);return `<button class="ai-row${i===safeIndex?' active':''}" type="button" data-action="ai-audit-open" data-id="${i}"><span class="ai-row-index">${i+1}</span><span class="ai-row-id"><code>${escapeHTML(q.id)}</code></span><span class="ai-row-meta">${memberships.map(key=>lotShort[key]).join(' · ')} · ${escapeHTML(resultLabel[result]||'Divergência documentada')}</span><span class="review-badge" style="background:${statusColor[st]}20;color:${statusColor[st]}">${statusLabel[st]}</span></button>`;}).join(''):'<div class="review-empty">Nenhuma questão encontrada para este filtro.</div>';
- return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES · AI AUDITING</div><h1>AI auditing</h1><p>${AI_AUDIT_BATCH.ids.length} registros únicos: ${AI_AUDIT_BATCH.historicalIds.length} históricos, ${AI_AUDIT_LOTS.lot12.ids.length} do lote 12 e ${AI_AUDIT_LOTS.lot13.ids.length} do lote 13. Aprovação exclusivamente manual.</p></div></div>
+ return `<div class="admin-head"><div><div class="eyebrow">ADMIN · REVISÃO DE QUESTÕES · AI AUDITING</div><h1>AI auditing</h1><p>${AI_AUDIT_BATCH.ids.length} registros únicos: ${AI_AUDIT_BATCH.historicalIds.length} históricos, ${AI_AUDIT_LOTS.lot12.ids.length} do lote 12, ${AI_AUDIT_LOTS.lot13.ids.length} do lote 13 e ${AI_AUDIT_LOTS.lot14.ids.length} do lote 14. Aprovação exclusivamente manual.</p></div></div>
  <div class="review-filters">
   <div class="review-filter-tabs">${filterButtons.map(f=>`<button class="review-tab${f.key==='ai_audit'?' active':''}" data-action="review-filter" data-filter="${f.key}">${f.label} <span class="review-tab-count">${f.count}</span></button>`).join('')}</div>
   <div class="review-search"><input type="text" placeholder="Buscar por ID ou palavras do enunciado…" value="${escapeHTML(reviewSearch)}" data-action="review-search-input"></div>

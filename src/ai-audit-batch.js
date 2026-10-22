@@ -293,12 +293,12 @@ const AI_AUDIT_HISTORICAL={
 };
 
 const historicalIds=AI_AUDIT_HISTORICAL.ids.slice();
-const ids=[...new Set([...historicalIds,...AI_AUDIT_LOTS.lot12.ids,...AI_AUDIT_LOTS.lot13.ids])];
+const ids=[...new Set([...historicalIds,...AI_AUDIT_LOTS.lot12.ids,...AI_AUDIT_LOTS.lot13.ids,...AI_AUDIT_LOTS.lot14.ids])];
 
 export const AI_AUDIT_BATCH={
  ...AI_AUDIT_HISTORICAL,
- version:2,
- batchId:'master-release-01-13',
+ version:3,
+ batchId:'master-release-01-14',
  historicalBatchId:AI_AUDIT_HISTORICAL.batchId,
  historicalTotal:historicalIds.length,
  historicalIds,

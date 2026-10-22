@@ -7,7 +7,8 @@ const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 
 const definitions=[
  {key:'lot12',id:'lote-12',label:'Lote 12',commit:'e0916cc',manifest:'reports/physics-scientific-review/lote-12-manifest.json',patches:'reports/physics-scientific-review/lote-12-patches.json',expectedIds:150,expectedPatches:144},
- {key:'lot13',id:'lote-13',label:'Lote 13',commit:'b008288',manifest:'reports/physics-scientific-review/lote-13-manifest.json',patches:'reports/physics-scientific-review/lote-13-patches.json',expectedIds:200,expectedPatches:200}
+ {key:'lot13',id:'lote-13',label:'Lote 13',commit:'b008288',manifest:'reports/physics-scientific-review/lote-13-manifest.json',patches:'reports/physics-scientific-review/lote-13-patches.json',expectedIds:200,expectedPatches:200},
+ {key:'lot14',id:'lote-14',label:'Lote 14',commit:'a2512c3',manifest:'reports/physics-scientific-review/lote-14-manifest.json',patches:'reports/physics-scientific-review/lote-14-patches.json',expectedIds:200,expectedPatches:200}
 ];
 
 const lots={};
@@ -34,4 +35,4 @@ for(const definition of definitions){
 
 const source=`// Gerado por scripts/generate-ai-audit-lots.mjs a partir dos manifests e patches publicados.\nexport const AI_AUDIT_LOTS=${JSON.stringify(lots)};\n`;
 fs.writeFileSync(path.join(root,'src/ai-audit-lots.js'),source);
-console.log(`AI audit lots generated · lote 12: ${lots.lot12.ids.length} IDs/${Object.keys(lots.lot12.patchById).length} patches · lote 13: ${lots.lot13.ids.length} IDs/${Object.keys(lots.lot13.patchById).length} patches`);
+console.log(Object.values(lots).map(lot=>`${lot.label}: ${lot.ids.length} IDs/${Object.keys(lot.patchById).length} patches`).join(' · '));
