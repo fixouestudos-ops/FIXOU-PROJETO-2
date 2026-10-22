@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "gerado_em": "2026-10-22",
+    "etapa": "investigacao das 36 pendencias do lote 14 (base dc80695)",
+    "regra": "Nenhum item deste arquivo foi aplicado automaticamente ao banco. Correcoes de answer/gabarito/enunciado exigem aprovacao do Owner e conferencia com a fonte oficial.",
+    "origem_global": "Todas as 36 questoes vem do livro 'PV Fisica - L2' (2025). As atribuicoes de vestibular/ENEM nos enunciados (PUC-SP, Uece, Fuvest, UEMG, FCMCSP, Uerj, UFMS, UFPB, UEM, UFSC, FMIt, UEA, Famema, CPS, UFPE, Unesp, UEPG, PUC-Minas, PUC-Rio) NAO foram comprovadas: o repositorio nao contem as provas oficiais. A autenticidade de origem permanece nao verificada para as 36."
+  },
+  "correcoes_de_gabarito_propostas": [
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+      "situacao": "explanation aplicada (resolucao completa); answer continua com valor provavelmente corrompido",
+      "proposta": "answer/answerKeyText: 'a) 2 m/s b) 1 s' -> 'a) sqrt(2) m/s b) 1 s' (o simbolo de raiz provavelmente se perdeu no OCR; a fisica x=t+3, y=5-t exige |v|=sqrt(2) m/s)",
+      "evidencia": "derivacao independente: vx=1, vy=-1, |v|=sqrt(2); item b: t+3=5-t -> t=1"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+      "situacao": "explanation aplicada (apenas A e verdadeira); answer aponta C",
+      "proposta": "answer: 2 -> 0 (alternativa A: v_rel ao longo do Y = 10 m/s constante). C e falsa porque v_rel e constante; B falsa (distancia=10 m em 1 s); D falsa (componente em X = 0)",
+      "evidencia": "vA=(5sqrt(3),5), vB=(5sqrt(3),-5), vrel=(0,10) constante"
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q13",
+      "situacao": "explanation aplicada (razao = tg^2(u1)); answer aponta C (tg^2 do angulo de H2)",
+      "proposta": "answer: 2 -> 3 (alternativa D: tg^2 do angulo referente a H1). H1/H2 = sen^2(u1)/sen^2(u2) = tg^2(u1) pois u2=90-u1",
+      "evidencia": "H = v0^2 sen^2 u /(2g); sen(u2)=cos(u1)"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-revisando-q1",
+      "situacao": "explanation aplicada (eclipse lunar em 28/10); answer aponta 17",
+      "proposta": "answer: 0 -> 1 (alternativa 28). Eclipse solar 14/10 = Lua nova; eclipse lunar na Lua cheia, 14 dias apos: 28/10/2023 (data real confirmada)",
+      "evidencia": "periodo sinodico 28 d; meia rotação = 14 d; eclipse lunar real 28/10/2023"
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+      "situacao": "explanation aplicada (convexos e concavos); answer aponta A (planos e concavos)",
+      "proposta": "answer: 0 -> 3 (alternativa D: convexos e concavos). Porteiro precisa de convexo (campo amplo); dentista de concavo com objeto dentro de f (ampliacao)",
+      "evidencia": "convexo = imagem menor, campo maior; concavo perto = imagem ampliada"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+      "situacao": "explanation aplicada (resolucao completa dos itens a-i); answer pertence a outra questao (aviacao)",
+      "proposta": "substituir answer/answerKeyText pela resolucao dos itens a-i (v0x=15, v0y=20-10t; t_max=2 s; T=4 s; H=20 m; A=60 m; vmin=15 m/s; v(3)=(15,-10); |v|=5sqrt(13)~18,0 m/s). Confirmar com a fonte antes de gravar",
+      "evidencia": "enunciado completo e autocontido (25 m/s, sen u=0,8, g=10)"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+      "situacao": "explanation aplicada (v=6 m/s, constante no gabarito do livro dentro do prompt); answer pertence a outra questao (ordens de grandeza atomicos)",
+      "proposta": "substituir answer/answerKeyText por '6 m/s'. A propria resolucao do livro esta embutida no prompt e confirma 6 m/s",
+      "evidencia": "t=sqrt(2*0,8/10)=0,4 s; v=2,4/0,4=6 m/s"
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-bncc-em-foco-q1",
+      "situacao": "explanation aplicada (incidencia perpendicular nao desvia); answer pertence a outra questao (tinta branca)",
+      "proposta": "substituir answer/answerKeyText pela explicacao da incidencia normal (i=0 -> r=0 pela lei de Snell)",
+      "evidencia": "enunciado completo e conceptualmente autocontido"
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-bncc-em-foco-q2",
+      "situacao": "explanation aplicada (nA=2, nB=1,5, nA/B=4/3); answer pertence a outra questao (confeitos coloridos)",
+      "proposta": "substituir answer/answerKeyText por 'a) nA = 2; nB = 1,5. b) nA/B = 4/3'",
+      "evidencia": "n=c/v; 300000/150000=2; 3e8/2e8=1,5; 2/1,5=4/3"
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-exercicios-propostos-q37",
+      "situacao": "explanation aplicada (vantagem do convexo = campo visual amplo); answer pertence a outra questao (concavo com objeto no centro)",
+      "proposta": "substituir answer/answerKeyText pela resposta sobre campo de visao ampliado do espelho convexo",
+      "evidencia": "enunciado completo; convexo sempre forma imagem virtual, direita e menor"
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-exercicios-propostos-q47",
+      "situacao": "explanation aplicada (convexo estreita; concavo perto amplia); answer pertence a outro exercicio (21 cm; 1,25 mm/s)",
+      "proposta": "substituir answer/answerKeyText pela resposta conceitual sobre distorcao por convexos/concavos",
+      "evidencia": "enunciado completo e conceitual"
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q72",
+      "situacao": "explanation aplicada (a2=(F1-M1*a1)/M2 por eliminacao); texto das alternativas permanece corrompido no OCR",
+      "proposta": "reconstruir o texto da alternativa A na fonte (atualmente aparece como F Ma M 11 2 2)",
+      "evidencia": "derivacao fisica completa: Fmola = F1 - M1*a1 = M2*a2"
+    }
+  ],
+  "bloqueadas_evidencia_faltante": [
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+      "classe": "missing_visual_evidence",
+      "falta": "as tres fotografias estroboscopicas (situacoes A, B, C). Sem elas nao ha como verificar quais afirmacoes descrevem cada situacao (o gabarito aponta E: I e III)"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+      "classe": "missing_visual_evidence",
+      "falta": "os quatro diagramas vetoriais I-IV (disposicoes de A, B e F). A alternativa depende da leitura visual de cada diagrama"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q9",
+      "classe": "prompt_corrupt",
+      "falta": "texto original dos itens 04 e 16 da questao UEM-PR 2018 ('B 15 C D' e 'A 15 C D 222' ilegiveis). Itens 01, 02 e 08 verificaveis (01 e 02 corretos; 08 falso pois A+B=0), mas a soma final depende dos itens corrompidos"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+      "classe": "prompt_corrupt",
+      "falta": "a equacao vetorial original ('c 25 3b 2a 2 3x' ilegivel: sinais e fatores indeterminados) e os sinais dos vetores a, b, c. Multiplas leituras produzem respostas diferentes"
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+      "classe": "missing_visual_evidence",
+      "falta": "a configuracao do item c): 12,5 m/s^2 = 150/12 sugere A isolado sob F, mas o enunciado OCR descreve apenas o movimento conjunto (onde a=7,5 m/s^2). Confirmar na fonte se o item c) pressupoe remocao de B ou segunda situacao"
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q52",
+      "classe": "missing_visual_evidence",
+      "falta": "o desenho do sistema (polia fixa, posicao do operador dentro do elevador, ponto de fixacao da corda) e o gabarito original em formula legivel (answer do banco esta corrompido). T=(M+m)(g+a)/2 e consistente com o padrao visivel no OCR, mas N nao foi determinavel"
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-propostos-q56",
+      "classe": "missing_visual_evidence",
+      "falta": "o diagrama do sistema Uerj (disposicao de A, B, roldanas e dinamometro). O resultado 2,5 kg e exatamente o de uma maquina de Atwood com T=2 mA mB g/(mA+mB)=40 N, mas outras configuracoes com polias moveis tambem podem gerar 2,5 kg; sem a figura a configuracao nao e unica"
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+      "classe": "missing_visual_evidence",
+      "falta": "a figura com a topologia dos quatro resistores. R=4 kohm (paralelo), R=1 kohh (2s2p) e R=0,25 kohm (serie) sao todos numericamente plaveis; o gabarito A so e verificavel com o diagrama"
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-exercicios-propostos-q16",
+      "classe": "missing_visual_evidence",
+      "falta": "o diagrama do circuito UEA (interruptores Ch1-Ch3 e lampadas L1-L4). A alternativa acesa depende da topologia"
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-revisando-q4",
+      "classe": "missing_visual_evidence",
+      "falta": "a figura do circuito Famema (disposicao de 120, 100 e 20 ohm entre X e Y). A=40 ohm e verificavel apenas com a topologia"
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-revisando-q6",
+      "classe": "missing_visual_evidence",
+      "falta": "o esquema do circuito CPS (quatro lampadas e duas pilhas). O comportamento apos rompimento de L4 depende da ligacao"
+    },
+    {
+      "id": "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+      "classe": "missing_visual_evidence",
+      "falta": "a figura UFPE (polaridades e posicoes das baterias 12 V, 6 V, 4 V, 2 V e resistores entre A e B). VA=5 V nao e verificavel sem as orientacoes das fontes"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+      "classe": "answer_mismatch_outra_questao",
+      "falta": "a questao original (o prompt registrado e um fragmento explicativo sobre bases no eixo principal, nao uma pergunta) e o gabarito correto. O answer cadastrado (Fontes A/B/C com cores) pertence a outra questao da secao BNCC em foco"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+      "classe": "answer_mismatch_outra_questao",
+      "falta": "a questao original (o prompt e um fragmento sobre traco de raios notaveis) e o gabarito correto. O answer cadastrado (teoria da chama interna) pertence a outra questao"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+      "classe": "missing_visual_evidence",
+      "falta": "o desenho do banco, da fonte luminosa e as dimensoes (altura, distancias). O texto nao contem nenhum dado numerico; 1 m nao e dedutivel"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+      "classe": "missing_visual_evidence",
+      "falta": "o desenho da configuracao optica e as dimensoes. O texto nao contem dados; 75 cm nao e dedutivel"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+      "classe": "answer_mismatch_outra_questao",
+      "falta": "separacao das duas questoes mescladas pelo OCR: (1) itens 01/02/04/08 de conceitos de optica (gabarito 'Soma 31' pressupoe ainda um item 16 ausente/ilegivel) e (2) a questao de faixas de frequencia do LED (alternativas a-e). Verificar cada uma contra a prova UEPG-PR 2021 oficial"
+    },
+    {
+      "id": "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+      "classe": "prompt_corrupt",
+      "falta": "os valores de ESF da receita (os codigos 'EM13CNT301/307' nao contem a vergencia legivel). A resposta pressupoe ESF negativo (lente divergente); sem o valor nao ha como conferir"
+    },
+    {
+      "id": "fis-lic-l2-f3-c9-exercicios-complementares-q4",
+      "classe": "missing_visual_evidence",
+      "falta": "as figuras do semicilindro (duas situacoes, angulo de 37 graus no ponto correto, direcao do raio emergente). O indice 1,2 so e verificavel com a geometria do diagrama"
+    }
+  ]
+}
