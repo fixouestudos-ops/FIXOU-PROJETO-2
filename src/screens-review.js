@@ -114,7 +114,12 @@ export function aiAuditCompare(q,lotKey='all'){
   const lot=AI_AUDIT_LOTS[key],patch=lot?.patchById[q.id];
   if(!patch)continue;
   const fields=[...new Set([...Object.keys(patch.before||{}),...Object.keys(patch.after||{})])];
-  return {available:true,kind:'lot',lot:lot.label,lotKey:key,commit:lot.commit,before:patch.before||{},after:patch.after||{},fields,changed:Object.fromEntries(fields.map(field=>[field,JSON.stringify(patch.before?.[field])!==JSON.stringify(patch.after?.[field])])),anyChanged:fields.length>0,justification:patch.justification||''};
+  const before=patch.before||{};
+  const historicalAfter=patch.after||{};
+  const after=Object.fromEntries(fields.map(field=>[field,q[field]]));
+  const changed=Object.fromEntries(fields.map(field=>[field,JSON.stringify(before[field])!==JSON.stringify(after[field])]));
+  const historicalChanged=Object.fromEntries(fields.map(field=>[field,JSON.stringify(before[field])!==JSON.stringify(historicalAfter[field])]));
+  return {available:true,kind:'lot',lot:lot.label,lotKey:key,commit:lot.commit,before,after,historicalAfter,fields,changed,historicalChanged,anyChanged:Object.values(changed).some(Boolean),justification:patch.justification||''};
  }
  const entry=AI_AUDIT_BASELINE[q.id];
  if(!entry)return {available:false};
@@ -134,6 +139,10 @@ function aiAnswerLabel(value,options){
  return String(value==null?'?':value);
 }
 
+function aiAuditRichText(value){
+ return escapeHTML(String(value??'')).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+}
+
 function aiAuditSections(q,lotFilter='all'){
  const cmp=aiAuditCompare(q,lotFilter);
  const memberships=aiAuditMembership(q.id);
@@ -146,25 +155,27 @@ function aiAuditSections(q,lotFilter='all'){
  const statusLabel=status==='approved'?'Aprovada pelo Owner':status==='rejected'?'Não aprovada pelo Owner':'Aguardando auditoria';
  let compare;
  if(cmp.available){
-  const row=(label,beforeHtml,afterHtml,changed)=>`<div class="ai-diff-row${changed?' changed':''}"><div class="ai-diff-label">${label}${changed?' <span class="ai-diff-flag">alterado</span>':''}</div><div class="ai-diff-cols"><div class="ai-diff-cell">${beforeHtml}</div><div class="ai-diff-cell">${afterHtml}</div></div></div>`;
+  const row=(label,beforeHtml,afterHtml,changed,beforeLabel='Antes da correção',afterLabel='Depois da correção — versão atual')=>`<div class="ai-diff-row${changed?' changed':''}"><div class="ai-diff-label">${label}${changed?' <span class="ai-diff-flag">alterado</span>':''}</div><div class="ai-diff-cols"><div class="ai-diff-cell" data-column="${beforeLabel}">${beforeHtml}</div><div class="ai-diff-cell" data-column="${afterLabel}">${afterHtml}</div></div></div>`;
   const labels={prompt:'Enunciado',options:'Alternativas',answer:'Gabarito',answerKeyLetter:'Letra do gabarito',answerKeyText:'Texto do gabarito',explanation:'Explicação',type:'Tipo',sourcePage:'Página da fonte',sourceVolume:'Volume da fonte',sourceFront:'Frente da fonte',sourceChapter:'Capítulo da fonte',sourceSection:'Seção da fonte'};
   const value=(field,input,options)=>{
    if(input===undefined||input===null||input==='')return '—';
    if(field==='options')return (input||[]).map((o,i)=>'ABCDE'[i]+') '+escapeHTML(String(o))).join('<br>')||'—';
    if(field==='answer')return escapeHTML(aiAnswerLabel(input,options));
+   if(field==='explanation')return aiAuditRichText(input);
    if(Array.isArray(input)||typeof input==='object')return escapeHTML(JSON.stringify(input));
    return escapeHTML(String(input));
   };
-  const fields=cmp.kind==='lot'?cmp.fields.filter(field=>cmp.changed[field]):cmp.fields;
+  const fields=cmp.fields;
+  const history=cmp.kind==='lot'?`<details class="ai-history"><summary>Histórico da primeira implementação</summary><p class="ai-note">Registro imutável do patch original do ${escapeHTML(cmp.lot)} no commit ${escapeHTML(cmp.commit)}. Este conteúdo é histórico e não representa necessariamente a versão atual do banco.</p><div class="ai-diff-head"><span>Antes registrado no patch</span><span>Depois registrado no patch histórico</span></div>${fields.map(field=>row(labels[field]||field,value(field,cmp.before[field],cmp.before.options),value(field,cmp.historicalAfter[field],cmp.historicalAfter.options),cmp.historicalChanged[field],'Antes registrado no patch','Depois registrado no patch histórico')).join('')}</details>`:'';
   compare=`<div class="ai-section ai-compare"><h4>Comparação da correção <span class="ai-compare-meta">${escapeHTML(cmp.lot)} · commit ${escapeHTML(cmp.commit)}</span></h4>
-  <div class="ai-diff-head"><span>Antes da correção</span><span>Depois da correção</span></div>
+  <div class="ai-diff-head"><span>Antes da correção</span><span>Depois da correção — versão atual</span></div>
   ${fields.map(field=>row(labels[field]||field,value(field,cmp.before[field],cmp.before.options),value(field,cmp.after[field],cmp.after.options),cmp.changed[field])).join('')}
   ${cmp.justification?`<p class="ai-note"><strong>Justificativa:</strong> ${escapeHTML(cmp.justification)}</p>`:''}
-  </div>`;
+  ${history}</div>`;
  }else{
   compare=result==='verificada_sem_alteracao'?'<div class="ai-section ai-compare"><h4>Comparação da revisão</h4><p class="ai-note">Verificada sem alteração: este lote não criou diferenças artificiais. A comparação histórica anterior continua preservada no filtro “Lotes históricos”.</p></div>':'<div class="ai-section ai-compare"><h4>Comparação da correção</h4><p class="ai-note">Versão anterior não disponível</p></div>';
  }
- const explanation=q.explanation?`<div class="ai-section"><h4>Explicação</h4><div class="ai-explanation-text">${escapeHTML(q.explanation)}</div></div>`:'<div class="ai-section"><h4>Explicação</h4><p class="ai-note">Sem explicação registrada.</p></div>';
+ const explanation=q.explanation?`<div class="ai-section"><h4>Explicação</h4><div class="ai-explanation-text">${aiAuditRichText(q.explanation)}</div></div>`:'<div class="ai-section"><h4>Explicação</h4><p class="ai-note">Sem explicação registrada.</p></div>';
  const lotLabels={historical:'Lotes históricos',lot12:'Lote 12',lot13:'Lote 13',lot14:'Lote 14'};
  const origin=manifest?`PV Física ${escapeHTML(manifest.sourceVolume||'?')} · Frente ${escapeHTML(manifest.sourceFront??'?')} · Capítulo ${escapeHTML(manifest.sourceChapter??'?')} · ${escapeHTML(manifest.sourceSection||'?')} · p. ${escapeHTML(manifest.sourcePage??'?')} · questão ${escapeHTML(manifest.questionNumber??'?')}`:'Histórico de auditoria preservado';
  const divergence=manifest?.divergence?`<div class="ai-section ai-divergence"><h4>⚠ Divergência documentada</h4><p>${escapeHTML(manifest.divergence)}</p><p class="ai-note">Requer conferência humana; o gabarito não foi alterado para ocultar a divergência.</p></div>`:'';

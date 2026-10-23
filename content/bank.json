@@ -55333,7 +55333,7 @@
                                           "em movimento uniformemente variado, a velocidade nunca pode ser nula."
                                       ],
                           "answer":  2,
-                          "explanation":  "Movimento uniforme significa rapidez constante, mas não necessariamente velocidade vetorial constante. Em um movimento circular uniforme, a rapidez é constante e a velocidade muda de direção. Surge uma aceleração centrípeta v²/R diferente de zero. Logo, a afirmação correta é a alternativa C: em movimento uniforme, pode haver aceleração.",
+                          "explanation":  "A palavra “uniforme” em Física pode indicar que a rapidez permanece constante, mesmo quando a trajetória não é reta.\n\n1) Se um carro anda em linha reta com velocidade vetorial constante, sua aceleração é zero.\n\n2) Se o carro percorre uma curva com rapidez constante, a direção da velocidade muda continuamente. Portanto, existe aceleração centrípeta, apontada para a região interna da curva.\n\n3) Assim, é possível haver movimento uniforme com aceleração diferente de zero. Já uma trajetória retilínea não possui aceleração centrípeta por curvatura.\n\nResposta: alternativa C — em movimento uniforme, pode haver aceleração. A pegadinha é confundir rapidez constante com vetor velocidade constante.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Cinemática vetorial",
@@ -58083,7 +58083,7 @@
                                           "Tangencial, apontada no sentido contrário à velocidade do carro."
                                       ],
                           "answer":  1,
-                          "explanation":  "Mesmo que o velocímetro indique módulo da velocidade constante, a direção do vetor velocidade muda na curva. Essa mudança exige uma aceleração centrípeta, perpendicular à velocidade instantânea e orientada para o centro de curvatura. Portanto, a aceleração é radial, apontada para dentro da curva (alternativa B).",
+                          "explanation":  "O detalhe mais importante é perceber o que o velocímetro informa: ele mostra a rapidez do carro, isto é, o valor da velocidade, mas não a direção em que o carro está andando.\n\n1) Na curva, mesmo com o velocímetro indicando sempre o mesmo valor, o carro muda continuamente de direção. Portanto, seu vetor velocidade muda e existe aceleração.\n\n2) Essa aceleração é chamada de centrípeta (ou radial). Ela atua perpendicularmente à velocidade instantânea e aponta para o centro da curva naquele trecho. É justamente o que permite ao carro contornar a pista em vez de seguir em linha reta.\n\n3) Como a rapidez permanece constante, a aceleração tangencial é nula: não há aumento nem diminuição da rapidez. Logo, não são corretas as opções que indicam aceleração tangencial ou aceleração zero.\n\nResposta: alternativa B — radial, apontada para dentro da curva.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Cinemática vetorial",
@@ -58137,7 +58137,7 @@
                                           "a velocidade é diretamente proporcional à aceleração em qualquer movimento acelerado."
                                       ],
                           "answer":  1,
-                          "explanation":  "A aceleração mede a variação do vetor velocidade, não apenas de seu módulo. Em um movimento circular uniforme, o módulo da velocidade permanece constante, mas sua direção muda continuamente; existe, portanto, aceleração centrípeta de módulo v²/R. A alternativa correta é B: um corpo pode estar acelerado mesmo com rapidez constante.",
+                          "explanation":  "A velocidade de um corpo é uma grandeza vetorial: possui módulo, direção e sentido. A aceleração existe sempre que alguma dessas características muda ao longo do tempo.\n\n1) Imagine um carro contornando uma pista circular com o velocímetro marcando sempre o mesmo valor. Sua rapidez é constante.\n\n2) Mesmo assim, em cada ponto da curva, o carro aponta para uma direção diferente. Portanto, o vetor velocidade muda.\n\n3) Essa mudança produz uma aceleração centrípeta, dirigida para o centro da curva, de módulo v²/R para movimento circular.\n\n4) Como a rapidez não muda, a aceleração tangencial pode ser zero sem que a aceleração total seja zero.\n\nResposta: alternativa B — um corpo pode estar acelerado mesmo com rapidez constante.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Cinemática vetorial",
@@ -60555,7 +60555,7 @@
                           "type":  "text",
                           "prompt":  "Um corpo é lançado de um plano horizontal com velocidade de 10 m/s, formando um ângulo u com a horizontal. Sabendo que senu 5 0,6, determine: a) o tempo necessário para o corpo atingir a altura máxima. b) a altura máxima atingida pelo corpo. c) o tempo necessário para o corpo voltar ao solo. d) o alcance do lançamento. e) a mínima velocidade, em módulo, durante o lançamento. f) o ângulo com que o corpo deveria ser lançado para atingir o alcance máximo. g) o alcance na situação do item f.",
                           "answer":  "a) 0,6 s b) 1,8 m c) 1,2 s d) 9,6 m e) 8 m/s f) 45° g) 10 m",
-                          "explanation":  "Como senθ=0,6, cosθ=0,8 e v_0=10 m/s, temos v_0y=6 m/s e v_0x=8 m/s. Adotando g=10 m/s²: a) tempo de subida t_s=6/10=0,6 s; b) altura máxima H=6²/(2×10)=1,8 m; c) tempo total T=2t_s=1,2 s; d) alcance R=8×1,2=9,6 m; e) velocidade mínima no ápice, 8 m/s; f) o alcance máximo ocorre em 45°; g) para θ=45°, Rmáx=v_0²/g=100/10=10 m.",
+                          "explanation":  "Decompomos os 10 m/s da velocidade inicial: como sen θ = 0,6, então cos θ = 0,8. Assim, v₀y = 10 × 0,6 = 6 m/s e v₀x = 10 × 0,8 = 8 m/s. Consideramos g = 10 m/s² e saída/chegada na mesma altura.\n\na) Tempo de subida: no topo v_y = 0; portanto t_subida = v₀y/g = 6/10 = 0,6 s.\n\nb) Altura máxima: H = v₀y²/(2g) = 6²/20 = 1,8 m.\n\nc) Tempo total de voo: T = 2 × 0,6 = 1,2 s.\n\nd) Alcance horizontal: A = v₀x × T = 8 × 1,2 = 9,6 m.\n\ne) Velocidade mínima: ocorre no topo, quando a componente vertical é zero; resta v = v₀x = 8 m/s.\n\nf) Para o mesmo módulo de velocidade inicial, o alcance é máximo no ângulo de 45°.\n\ng) Alcance máximo: A_máx = v₀²/g = 10²/10 = 10 m.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -60696,7 +60696,7 @@
                           "type":  "text",
                           "prompt":  "Um menino lança, sobre sua cabeça, uma bola com velocidade 20 m/s, que forma um ângulo a com a horizontal. A bola parte de uma altura de 2 m, e o menino quer que ela ultrapasse um muro que se encontra a 24 m dele. v0 2 m a 24 m Determine a altura máxima que o muro pode ter para que a bola passe por ele, sabendo que sena 5 0,8.",
                           "answer":  "14 m",
-                          "explanation":  "A bola parte de altura inicial 2 m, a 20 m/s e com senα=0,8, de modo que cosα=0,6. Logo, v_x=12 m/s e v_0y=16 m/s. Para alcançar a vertical do muro a 24 m, leva t=24/12=2 s. A altura nessa posição é y=2+16×2−(10/2)×2²=2+32−20=14 m. Portanto, o muro precisa ter menos de 14 m para a bola passar acima dele (14 m é o limite de tangência).",
+                          "explanation":  "O muro está a 24 m do lançamento. A altura limite do muro é exatamente a altura que a bola alcança quando chega à posição horizontal do muro.\n\n1) Como sen α = 0,8 e o ângulo é agudo, cos α = 0,6. A velocidade inicial de 20 m/s tem componentes v₀x = 20 × 0,6 = 12 m/s e v₀y = 20 × 0,8 = 16 m/s.\n\n2) Na horizontal, a bola leva t = distância/velocidade = 24/12 = 2 s para chegar ao muro.\n\n3) A bola começa a 2 m do chão. Sua altura no instante t é y = 2 + 16t − 5t², adotando g = 10 m/s².\n\n4) Para t = 2 s: y = 2 + 32 − 20 = 14 m.\n\nResposta: altura limite de 14 m. Para ultrapassar o muro com folga, ele deve ser menor que 14 m.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -61062,7 +61062,7 @@
                                           "H (g cos) 2 g 2 5 ?a ?"
                                       ],
                           "answer":  2,
-                          "explanation":  "A altura máxima é obtida quando a velocidade vertical se anula. Como v_0y=v senα e v_y²=v_0y²−2gH, segue que 0=v²sen²α−2gH. Isolando H, a expressão correta é H=v²sen²α/(2g).",
+                          "explanation":  "Para encontrar a altura máxima de um lançamento oblíquo, basta estudar a parte vertical do movimento. A componente horizontal não interfere na subida ou na altura máxima.\n\n1) A velocidade inicial faz ângulo α com a horizontal. Sua componente vertical é v₀y = v × sen α.\n\n2) Durante a subida, a gravidade reduz a velocidade vertical. No ponto mais alto, a velocidade vertical vale zero, embora o projétil continue se movendo horizontalmente.\n\n3) Aplicamos Torricelli na vertical: v_y² = v₀y² − 2gH. No topo, 0 = (v sen α)² − 2gH.\n\n4) Isolando a altura: H = v² sen²α/(2g).\n\nResposta: alternativa C. Cuidado: o seno precisa estar ao quadrado, e o denominador é 2g.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -61116,7 +61116,7 @@
                                           "210 m 55"
                                       ],
                           "answer":  1,
-                          "explanation":  "A maior distância horizontal para um projétil que parte e chega ao mesmo nível ocorre com ângulo de lançamento de 45°, quando Rmáx=v_0²/g. A velocidade máxima possível de um fragmento é 108 km/h=30 m/s. Portanto, Rmáx=30²/10=90 m. Esse é o raio mínimo de isolamento considerando o modelo sem resistência do ar.",
+                          "explanation":  "Para decidir a distância de isolamento, devemos considerar o fragmento que pode atingir o maior alcance horizontal. No modelo de lançamento oblíquo sem resistência do ar, com saída e chegada na mesma altura, esse alcance máximo ocorre a 45°.\n\n1) Convertemos a velocidade máxima para m/s: 108 km/h ÷ 3,6 = 30 m/s.\n\n2) O alcance máximo é R_máx = v₀²/g.\n\n3) Considerando g = 10 m/s²: R_máx = 30²/10 = 900/10 = 90 m.\n\nResposta: alternativa B — 90 m. Essa é a distância mínima calculada pelo modelo idealizado; na prática, uma operação de demolição exige margens e critérios de segurança próprios.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -61170,7 +61170,7 @@
                                           "10,0 e 5,0"
                                       ],
                           "answer":  0,
-                          "explanation":  "A bola percorre horizontalmente 9,0 m em 0,20 s; portanto v_0x=9,0/0,20=45 m/s. Na vertical, sai da altura 2,60 m e chega à altura do solo: 0=2,60+v_0y(0,20)−(10/2)(0,20)². Assim, 0=2,60+0,20v_0y−0,20 e v_0y=−12 m/s. Os módulos são 45,0 m/s e 12,0 m/s.",
+                          "explanation":  "O movimento horizontal e o vertical podem ser analisados separadamente. A bola percorre 9,0 m horizontalmente em 0,20 s e cai de 2,60 m de altura até o chão.\n\n1) Horizontalmente não há aceleração: v₀x = Δx/t = 9,0/0,20 = 45,0 m/s.\n\n2) No eixo vertical, escolhemos para cima como sentido positivo. A equação da posição é y = y₀ + v₀y t − gt²/2.\n\n3) Ao tocar o solo, y = 0. Substituindo y₀ = 2,60 m, g = 10,0 m/s² e t = 0,20 s: 0 = 2,60 + 0,20v₀y − 0,20.\n\n4) Assim 0,20v₀y = −2,40, logo v₀y = −12,0 m/s. O sinal negativo indica lançamento inicialmente para baixo.\n\nResposta: alternativa A — os módulos são 45,0 m/s e 12,0 m/s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -61332,7 +61332,7 @@
                                           "indeterminado, pois a velocidade horizontal de arremesso da bola não foi fornecida."
                                       ],
                           "answer":  2,
-                          "explanation":  "A bola é lançada horizontalmente e leva cerca de 2 s para atingir o solo. Sua velocidade vertical inicial é nula, então a altura é h=gt²/2=10×4/2=20 m. Se cada andar tem 2,5 m, o número de andares é n=20/2,5=8.",
+                          "explanation":  "Em um lançamento horizontal, a velocidade horizontal inicial não altera o tempo de queda. Para encontrar a altura do edifício, analisamos apenas o movimento vertical.\n\n1) A bola sai horizontalmente, então sua velocidade vertical inicial é zero.\n\n2) Durante os 2 s de queda, a distância vertical é h = gt²/2. Considerando g aproximadamente igual a 10 m/s², h = 10 × 2²/2 = 20 m.\n\n3) Cada andar tem altura de 2,5 m. Dividimos a altura total pela altura de um andar: n = 20/2,5 = 8.\n\nResposta: alternativa C — 8 andares. A opção que diz ser indeterminado não procede: o cálculo da altura depende do tempo e da gravidade, não da velocidade horizontal.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -61601,7 +61601,7 @@
                                           "2,0"
                                       ],
                           "answer":  1,
-                          "explanation":  "Para lançamento e chegada no mesmo nível, o alcance máximo é Rmáx=v_0²/g, obtido com ângulo de 45°. Como Rmáx=20 m e v_0=4,0 m/s, resulta g=v_0²/Rmáx=16/20=0,8 m/s², ou 8,0×10⁻¹ m/s². Portanto, em unidades de 10⁻¹ m/s², a resposta é 8,0.",
+                          "explanation":  "Em um lançamento oblíquo que parte e termina no mesmo nível, o maior alcance é obtido com ângulo de 45° quando desprezamos a resistência do ar.\n\n1) A fórmula do alcance máximo é A_máx = v₀²/g.\n\n2) Sabemos que a pessoa consegue atingir 20,0 m com velocidade inicial de 4,0 m/s. Então 20 = 4²/g = 16/g.\n\n3) Isolando a gravidade do planeta: g = 16/20 = 0,8 m/s².\n\n4) A prova pede a resposta em unidades de 10⁻¹ m/s². Como 0,8 = 8,0 × 10⁻¹, o número solicitado é 8,0.\n\nResposta: alternativa B — 8,0. A gravidade desse planeta é muito menor que a da Terra.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -62256,7 +62256,7 @@
                           "type":  "text",
                           "prompt":  "FEI-SP Um projétil é lançado do solo numa direção que forma um ângulo u com a horizontal. Sabe-se que ele atinge uma altura máxima Hmáx 5 15 m e que sua velocidade no ponto de altura máxima é v 5 10 m/s. Dado: adote g 5 10 m/s² . Determine: a) a sua velocidade inicial. b) o ângulo u de lançamento. c) o tempo de permanência no ar. d) o alcance.",
                           "answer":  "a) 20 m/s b) 60° c) 23 s d) 20 3 m",
-                          "explanation":  "Na altura máxima, a velocidade restante é apenas a horizontal: v_x=10 m/s. Pela relação v_0y²=2gH, v_0y=√(2×10×15)=10√3 m/s. a) v_0=√[(10)²+(10√3)²]=20 m/s. b) tanθ=v_0y/v_x=√3, então θ=60°. c) T=2v_0y/g=2√3 s. d) R=v_xT=10×2√3=20√3 m.",
+                          "explanation":  "No ponto mais alto do lançamento oblíquo, a componente vertical da velocidade se anula. A velocidade de 10 m/s que ainda existe nesse ponto é toda horizontal.\n\n1) Componente horizontal: v₀x = 10 m/s. Para achar a vertical inicial, usamos v₀y² = 2gH = 2 × 10 × 15 = 300, então v₀y = 10√3 m/s.\n\n2) Velocidade inicial: v₀ = √(v₀x² + v₀y²) = √(100 + 300) = 20 m/s.\n\n3) Ângulo: tg θ = v₀y/v₀x = √3, daí θ = 60°.\n\n4) Como o projétil parte do solo e retorna ao mesmo nível, tempo total T = 2v₀y/g = 2√3 s, aproximadamente 3,46 s.\n\n5) Alcance: A = v₀x × T = 10 × 2√3 = 20√3 m, aproximadamente 34,6 m.\n\nRespostas: a) 20 m/s; b) 60°; c) 2√3 s; d) 20√3 m.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -62444,7 +62444,7 @@
                           "type":  "text",
                           "prompt":  "FCC-SP Um avião precisa soltar um saco com mantimentos a um grupo de sobreviventes que está numa balsa. A velocidade horizontal do avião é constante e igual a 100 m/s com relação à balsa e sua altitude é 2000 m. Desprezando os efeitos do ar e supondo g 5 10 m/s² , determine: a) o tempo que o saco leva para alcançar os sobreviventes. b) a distância horizontal que separa o avião dos sobreviventes. c) o módulo da velocidade do saco, no momento em que atinge a balsa.",
                           "answer":  "a) 20 s b) 2000 m c) 1005 m/s",
-                          "explanation":  "a) O saco é abandonado com velocidade vertical inicial nula a 2000 m. Pelo movimento de queda, 2000=gt²/2=5t², então t=20 s. b) A velocidade horizontal relativa é 100 m/s, logo d=100×20=2000 m. c) No impacto, v_x=100 m/s e v_y=gt=200 m/s. O módulo da velocidade é √(100²+200²)=100√5 m/s (aproximadamente 224 m/s).",
+                          "explanation":  "Ao soltar o saco, o avião lhe transmite sua velocidade horizontal de 100 m/s, mas a velocidade vertical inicial do saco é zero. A gravidade atua verticalmente durante a queda.\n\n1) Tempo de queda: h = gt²/2. Como h = 2000 m e g = 10 m/s², 2000 = 5t²; assim t² = 400 e t = 20 s.\n\n2) Distância horizontal percorrida até atingir a balsa: x = v₀x t = 100 × 20 = 2000 m. O saco deve ser solto com essa antecedência horizontal.\n\n3) No impacto, v_x = 100 m/s e v_y = gt = 10 × 20 = 200 m/s para baixo.\n\n4) Como são componentes perpendiculares, o módulo da velocidade é v = √(100² + 200²) = 100√5 m/s ≈ 224 m/s.\n\nRespostas: a) 20 s; b) 2000 m; c) 100√5 m/s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -63545,7 +63545,7 @@
                                           "3,6 m/s"
                                       ],
                           "answer":  3,
-                          "explanation":  "A bola sai horizontalmente da bancada e cai 1,25 m. No eixo vertical, h=gt²/2; logo t=√(2×1,25/10)=0,50 s. Na horizontal, a velocidade é constante: v_0=Δx/t=2,4/0,50=4,8 m/s, alternativa D.",
+                          "explanation":  "Quando a bola sai da bancada, ela conserva a velocidade horizontal que tinha naquele momento, mas passa a acelerar verticalmente por causa da gravidade. Os dois movimentos podem ser analisados separadamente.\n\n1) Na vertical, a bola parte sem velocidade vertical. Com altura h = 1,25 m e g = 10 m/s²: h = gt²/2, então 1,25 = 5t².\n\n2) Daí t² = 0,25 e o tempo de queda é t = 0,50 s.\n\n3) Na horizontal não existe aceleração, desprezando o ar. A distância percorrida é 2,4 m; logo v₀ = Δx/t = 2,4/0,50 = 4,8 m/s.\n\nResposta: alternativa D — 4,8 m/s. A velocidade horizontal não modifica o tempo de queda.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -63760,7 +63760,7 @@
                                           "140 m"
                                       ],
                           "answer":  1,
-                          "explanation":  "A pedra mantém a velocidade ascendente de 14 m/s do balão e recebe uma componente vertical adicional 10sen37°=6 m/s; então v_0y=20 m/s. A componente horizontal é v_x=10cos37°=8 m/s. Sua altura obedece y(t)=25+20t−5t². Ao tocar o solo, 0=25+20t−5t², o que fornece t=5 s (raiz positiva). O alcance horizontal é x=8×5=40 m (alternativa B).",
+                          "explanation":  "Quando a pedra é lançada, sua velocidade em relação ao chão é a soma da velocidade do balão (14 m/s para cima) com a velocidade do lançamento em relação ao balão (10 m/s a 37°).\n\n1) Componente vertical: v₀y = 14 + 10 sen 37° = 14 + 6 = 20 m/s, para cima.\n\n2) Componente horizontal: v₀x = 10 cos 37° = 8 m/s.\n\n3) A pedra sai da altura de 25 m. Sua posição vertical é y(t) = 25 + 20t − 5t², considerando g = 10 m/s².\n\n4) Ao atingir o solo, y = 0: 25 + 20t − 5t² = 0. Dividindo por −5: t² − 4t − 5 = 0 = (t−5)(t+1). O tempo físico é t = 5 s.\n\n5) Alcance horizontal: x = 8 × 5 = 40 m.\n\nResposta: alternativa B — 40 m. É essencial somar a velocidade vertical do balão à do arremesso.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -64111,7 +64111,7 @@
                           "type":  "text",
                           "prompt":  "UFPE Numa partida de futebol, uma falta é cobrada de modo que a bola é lançada segundo um ângulo de 30° com o gramado. A bola alcança uma altura máxima de 5,0 m. Qual é o módulo da velocidade inicial da bola em km/h? Despreze a resistência do ar.",
                           "answer":  "72 km/h (20 m/s)",
-                          "explanation":  "Na altura máxima, a velocidade vertical se anula. Pela relação v_0y²=2gH, com g=10 m/s² e H=5,0 m, temos v_0y = √(2×10×5)=10 m/s. Como o lançamento foi a 30° e sen30°=0,5, v_0 = 10/0,5=20 m/s. Convertendo por 3,6, obtemos 72 km/h.",
+                          "explanation":  "O movimento da bola é um lançamento oblíquo. No ponto mais alto ela ainda tem velocidade horizontal, mas sua velocidade vertical é zero. É essa informação que permite calcular a velocidade inicial.\n\n1) Na direção vertical, usamos v_y² = v₀y² − 2gH. No topo, v_y = 0 e H = 5,0 m. Considerando g = 10 m/s², resulta v₀y² = 2 × 10 × 5 = 100.\n\n2) Assim, a componente vertical inicial vale v₀y = 10 m/s.\n\n3) O lançamento fez 30° com o gramado: v₀y = v₀ sen 30° = v₀ × 0,5. Logo, v₀ = 10/0,5 = 20 m/s.\n\n4) Convertendo para km/h, multiplicamos por 3,6: 20 × 3,6 = 72 km/h.\n\nResposta: 72 km/h.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -64158,7 +64158,7 @@
                           "type":  "text",
                           "prompt":  "Fuvest-SP Um gato, de 1 kg, dá um pulo, atingindo uma altura de 1,25 m e caindo a uma distância de 1,5 m do local do pulo. a) Calcule a componente vertical de sua velocidade inicial. b) Calcule a velocidade horizontal do gato.",
                           "answer":  "a) 5,0 m/s b) 1,5 m/s",
-                          "explanation":  "a) No ponto mais alto, a velocidade vertical é zero. Com H=1,25 m e g=10 m/s², 0=v_0y²−2gH, portanto v_0y=√(2×10×1,25)=5,0 m/s. b) O tempo total de voo, retornando à altura de partida, é T=2v_0y/g=1,0 s. Como o deslocamento horizontal foi de 1,5 m, v_0x=1,5/1,0=1,5 m/s. A massa do gato não entra nesses cálculos.",
+                          "explanation":  "A massa do gato não importa para calcular seu salto quando desprezamos a resistência do ar. Separaremos o movimento vertical, responsável pela altura, do horizontal, responsável pelo alcance.\n\n1) No ponto mais alto, a velocidade vertical do gato se torna zero. Pela relação de Torricelli: 0 = v₀y² − 2gH.\n\n2) Com g = 10 m/s² e H = 1,25 m: v₀y = √(2 × 10 × 1,25) = √25 = 5,0 m/s.\n\n3) O tempo até o topo é 5/10 = 0,5 s. Como o gato cai à altura de onde saltou, o tempo total de voo é o dobro: T = 1,0 s.\n\n4) Ele percorreu 1,5 m horizontalmente. Logo v₀x = 1,5/1,0 = 1,5 m/s.\n\nRespostas: a) componente vertical inicial de 5,0 m/s; b) componente horizontal inicial de 1,5 m/s.",
                           "discipline":  "fisica",
                           "topic":  "Cinemática",
                           "subtopic":  "Lançamento oblíquo",
@@ -66248,7 +66248,7 @@
                                           "o atrito sobre a caixa é estático."
                                       ],
                           "answer":  1,
-                          "explanation":  "Se a caixa permanece em repouso sobre a mesa, sua aceleração é nula. Pela segunda lei de Newton, a soma vetorial das forças externas deve ser zero: o peso, dirigido para baixo, é equilibrado pela força normal, para cima. Assim, a alternativa correta é a que afirma que a resultante das forças sobre a caixa é nula.",
+                          "explanation":  "Um objeto pode estar sujeito a várias forças e ainda permanecer em repouso. O que determina a mudança de movimento não é a existência de uma força isolada, mas a soma de todas as forças.\n\n1) A caixa recebe seu peso para baixo, devido à gravidade, e a força normal da mesa para cima.\n\n2) Como a caixa continua parada, sua aceleração é zero.\n\n3) Pela segunda lei de Newton, força resultante = massa × aceleração. Portanto, F_resultante = m × 0 = 0.\n\nResposta: alternativa B — a resultante das forças sobre a caixa é nula. A inércia não é zero, e dizer que não existe nenhuma força sobre a caixa seria incorreto.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -67058,7 +67058,7 @@
                                           "FN"
                                       ],
                           "answer":  2,
-                          "explanation":  "Se cada carrinho tem massa m e todos os N carrinhos são empurrados sem atrito por uma força horizontal F, a aceleração comum é a=F/(Nm). O último carrinho recebe força de contato apenas do penúltimo, de modo que F_último=ma=mF/(Nm)=F/N.",
+                          "explanation":  "Todos os N carrinhos têm a mesma massa m e se deslocam juntos. Desprezando o atrito, a única força horizontal externa sobre a fila inteira é F.\n\n1) A massa total da fila é M_total = Nm.\n\n2) Aplicando a segunda lei de Newton ao conjunto: F = Nm × a, logo a = F/(Nm).\n\n3) Agora isolamos mentalmente apenas o último carrinho. Ele é empurrado somente pelo carrinho anterior, e a força de contato deve produzir nele a mesma aceleração a.\n\n4) Portanto, F_último = m × a = m × F/(Nm) = F/N.\n\nResposta: alternativa C — F/N. O primeiro carrinho transmite a força necessária para acelerar vários carrinhos; o último recebe apenas o que acelera sua própria massa.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -67111,7 +67111,7 @@
                                           "8 13"
                                       ],
                           "answer":  2,
-                          "explanation":  "A massa total é 10+6=16 kg e a aceleração comum é a=64/16=4 m/s². Quando F age no bloco I (10 kg), o fio acelera apenas o bloco II (6 kg), logo T_A=6×4=24 N. Quando F age no bloco II, o fio acelera o bloco I, então T_B=10×4=40 N. A razão é T_A/T_B=24/40=3/5.",
+                          "explanation":  "Os blocos de massas 10 kg e 6 kg movem-se juntos sobre uma superfície sem atrito. A força aplicada é a mesma (64 N) nas duas situações; o que muda é qual bloco o fio precisa puxar.\n\n1) A massa total é 10 + 6 = 16 kg. Pela segunda lei, a aceleração comum é a = 64/16 = 4 m/s².\n\n2) Na primeira situação, F age sobre o bloco I (10 kg). A tração no fio acelera apenas o bloco II (6 kg): T_A = 6 × 4 = 24 N.\n\n3) Na segunda, F age sobre o bloco II. A tração precisa acelerar o bloco I (10 kg): T_B = 10 × 4 = 40 N.\n\n4) Razão solicitada: T_A/T_B = 24/40 = 3/5.\n\nResposta: alternativa C — 3/5. A tração depende da massa do bloco que está sendo puxado pelo fio.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -67218,7 +67218,7 @@
                                           "(M m) F 2M m 1? 1"
                                       ],
                           "answer":  4,
-                          "explanation":  "Os dois vagões aceleram juntos sem atrito. O vagão 01 tem massa M e o vagão 02 ocupado tem massa M+m. A massa total é 2M+m, portanto a=F/(2M+m). O engate deve puxar o vagão 02 e os turistas nele, exercendo T=(M+m)a. Assim, T=(M+m)F/(2M+m).",
+                          "explanation":  "O trator aplica a força F para acelerar os dois vagões juntos. Queremos a força no engate entre os vagões: é a força que acelera apenas o segundo vagão e seus ocupantes.\n\n1) Vagão 01 vazio: massa M. Vagão 02 com turistas: massa M + m.\n\n2) Massa total puxada: M_total = M + (M+m) = 2M + m.\n\n3) Pela segunda lei de Newton, a aceleração comum é a = F/(2M+m).\n\n4) Considerando somente o vagão 02 e os passageiros, a força horizontal que o acelera é a tração T no engate: T = (M+m) × a.\n\n5) Substituindo a aceleração: T = (M+m)F/(2M+m).\n\nResposta: alternativa E. O engate não precisa acelerar o primeiro vagão: ele transmite força ao segundo conjunto.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -70966,7 +70966,7 @@
                                           "é maior e o carro furado tem maior aceleração."
                                       ],
                           "answer":  3,
-                          "explanation":  "Os carros sofrem a mesma força horizontal F, mas o carro que perde areia tem massa progressivamente menor. Pela segunda lei de Newton, a=F/m; logo, sua aceleração é maior que a do carro que mantém a massa. Como ambos partem do repouso, a velocidade acumulada pelo carro que vazou areia será maior após o mesmo intervalo de tempo.",
+                          "explanation":  "A situação compara dois carros submetidos à mesma força horizontal, mas um deles perde areia pelo caminho e fica mais leve.\n\n1) Pela segunda lei de Newton, a aceleração é a = F/m quando a força resultante é F e a massa de cada carro é m naquele instante.\n\n2) No carro que perde areia, a massa diminui. Para a mesma força, a aceleração fica maior. O outro carro mantém a massa e acelera menos.\n\n3) Como os dois partiram do repouso e o carro furado passa a ter aceleração maior, ele ganha velocidade mais rapidamente e, após o mesmo tempo, terá maior velocidade.\n\nResposta: alternativa D — o carro furado tem aceleração e velocidade maiores. Essa comparação considera que a areia simplesmente cai, sem criar propulsão horizontal adicional.",
                           "discipline":  "fisica",
                           "topic":  "Mecânica",
                           "subtopic":  "Dinâmica",
@@ -75345,7 +75345,7 @@
                                           "volt e ohm."
                                       ],
                           "answer":  0,
-                          "explanation":  "A intensidade de corrente elétrica é a quantidade de carga que atravessa uma seção do condutor por unidade de tempo: i=ΔQ/Δt. A carga elétrica é medida em coulomb (C), e o tempo em segundo (s). Portanto, a unidade SI de corrente é C/s, denominada ampère (A); as grandezas fundamentais da definição são coulomb e segundo.",
+                          "explanation":  "A unidade ampère mede a intensidade da corrente elétrica. Corrente é uma medida da quantidade de carga elétrica que atravessa uma seção de um fio a cada unidade de tempo.\n\n1) A definição é I = ΔQ/Δt.\n\n2) A carga elétrica ΔQ é medida em coulomb (C).\n\n3) O intervalo de tempo Δt é medido em segundo (s).\n\n4) Portanto, 1 A = 1 C/s. Por exemplo, se 4 C passam em 2 s, a corrente média é de 2 A.\n\nResposta: alternativa A — coulomb e segundo.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -75399,7 +75399,7 @@
                                           "5400000"
                                       ],
                           "answer":  2,
-                          "explanation":  "Uma capacidade de 1500 mAh equivale a 1,5 Ah. A definição de corrente fornece 1 A = 1 C/s; portanto 1 Ah = 3600 C. A carga é Q=1,5×3600=5400 C.",
+                          "explanation":  "mAh é uma unidade de capacidade elétrica: corresponde à corrente multiplicada pelo tempo. A pergunta quer transformar essa capacidade em carga elétrica, medida em coulombs (C).\n\n1) Dividimos por 1000 para passar de miliampère-hora para ampère-hora: 1500 mAh = 1,5 Ah.\n\n2) Pela definição de ampère, 1 A significa 1 coulomb por segundo. Como 1 hora tem 3600 segundos, 1 Ah corresponde a 3600 C.\n\n3) Então Q = 1,5 × 3600 = 5400 C.\n\nAtenção: não basta retirar a letra h de mAh. É necessário converter as horas para segundos.\n\nResposta: alternativa C — 5400 C.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -75868,7 +75868,7 @@
                                           "1,5 kWh"
                                       ],
                           "answer":  2,
-                          "explanation":  "A potência da lâmpada UV é 100 W=0,1 kW, e o funcionamento dura 15 minutos=0,25 h. O consumo de energia é E=Pt=0,1×0,25=0,025 kWh.",
+                          "explanation":  "A questão pede energia consumida, não potência. A potência informa quanto de energia é usada a cada unidade de tempo.\n\n1) Convertemos as unidades para obter o resultado em kWh: 100 W = 0,100 kW e 15 minutos = 15/60 = 0,25 hora.\n\n2) Aplicamos a relação energia = potência × tempo: E = 0,100 × 0,25 = 0,025 kWh.\n\n3) Para conferir, em joules: E = 100 × (15 × 60) = 90.000 J. Como 1 kWh = 3,6 milhões de joules, 90.000/3.600.000 = 0,025 kWh.\n\nResposta: alternativa C — 0,025 kWh.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -75974,7 +75974,7 @@
                                           "20"
                                       ],
                           "answer":  3,
-                          "explanation":  "A energia fornecida pelo raio é 360 kWh. A lâmpada considerada tem potência de 25 W = 0,025 kW. Em um mês de 30 dias, ela fica acesa 30×24=720 h e consome 0,025×720=18 kWh. Portanto, para consumir 360 kWh, seriam necessários 360/18=20 meses.",
+                          "explanation":  "A energia elétrica equivalente à fração do raio descrita no texto é 360 kWh. A lâmpada da pergunta consome 25 W continuamente. Precisamos saber quanto ela consome em um mês para encontrar o número de meses.\n\n1) Potência da lâmpada: 25 W = 0,025 kW.\n\n2) Um mês tem 30 × 24 = 720 horas. Mantida ligada durante todo esse tempo, a lâmpada consome E_mês = 0,025 × 720 = 18 kWh.\n\n3) Número de meses para consumir 360 kWh: 360/18 = 20 meses.\n\nResposta: alternativa D — 20 meses. Atenção: os 100 W citados no texto são uma comparação contextual; a lâmpada que deve ser calculada tem 25 W.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -76135,7 +76135,7 @@
                                           "R$ 1,25 151"
                                       ],
                           "answer":  2,
-                          "explanation":  "O chuveiro tem potência de 5000 W=5 kW e fica ligado durante 15 min = 0,25 h. O consumo de um banho é E=5×0,25=1,25 kWh. A tarifa é R$ 0,70/kWh; logo, custo=1,25×0,70=R$ 0,875, aproximadamente R$ 0,88.",
+                          "explanation":  "O custo na conta de luz depende da energia elétrica consumida em kWh, e não apenas da potência do chuveiro.\n\n1) Potência do chuveiro: 5000 W = 5,0 kW.\n\n2) Duração de cada banho: 15 minutos = 15/60 = 0,25 hora.\n\n3) Energia consumida: E = P × t = 5,0 × 0,25 = 1,25 kWh.\n\n4) Como cada kWh custa R$ 0,70, o preço do banho é 1,25 × 0,70 = R$ 0,875, aproximadamente R$ 0,88.\n\nResposta: alternativa C — R$ 0,88. O valor de 127 V serve para caracterizar as condições de funcionamento, mas não é necessário recalcular a potência, que já foi dada.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -76296,7 +76296,7 @@
                                           "6,1 W e 4,8 C Leis de Ohm e resistência elétrica"
                                       ],
                           "answer":  3,
-                          "explanation":  "Pela etiqueta da saída DC do carregador, a potência máxima fornecida é P=Ui=5 V×1,3 A=6,5 W. A capacidade máxima da bateria é 1650 mAh=1,65 Ah. Convertendo para coulombs, Q=1,65×3600=5940 C. Resposta: 6,5 W e 5940 C.",
+                          "explanation":  "O carregador possui informações de entrada e de saída. A pergunta pede a potência máxima que ele pode fornecer, portanto devemos usar os valores da saída, não a corrente indicada na entrada da rede elétrica.\n\n1) Saída do carregador: 5 V e 1,3 A. Potência fornecida: P = U × I = 5 × 1,3 = 6,5 W.\n\n2) A capacidade da bateria é 1650 mAh = 1,65 Ah. Essa é uma quantidade de carga, e não energia.\n\n3) Como 1 A = 1 C/s e 1 h = 3600 s, a carga máxima é Q = 1,65 × 3600 = 5940 C.\n\nResposta: alternativa D — 6,5 W e 5940 C. O valor 127 V da rede não deve ser multiplicado pela corrente máxima da saída.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -76511,7 +76511,7 @@
                                           "8 mW"
                                       ],
                           "answer":  4,
-                          "explanation":  "O resistor tem resistência de 20 Ω e está submetido a 0,4 V. Sua potência dissipada é P=U²/R=0,4²/20=0,16/20=0,008 W, isto é, 8 mW.",
+                          "explanation":  "A tensão de 0,4 V aplicada ao resistor faz circular corrente elétrica, e parte da energia elétrica é transformada em calor. Essa taxa de transformação é a potência dissipada.\n\n1) A resistência é R = 20 Ω ; a tensão é U = 0,4 V.\n\n2) Pela lei de Ohm, I = U/R = 0,4/20 = 0,02 A.\n\n3) Calculamos a potência: P = U × I = 0,4 × 0,02 = 0,008 W. Também poderíamos usar diretamente P = U²/R.\n\n4) Convertendo para miliwatts: 0,008 W × 1000 = 8 mW.\n\nResposta: alternativa E — 8 mW.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -76670,7 +76670,7 @@
                                           "3"
                                       ],
                           "answer":  2,
-                          "explanation":  "A resistência de um cilindro homogêneo é R=ρL/A. O novo resistor tem comprimento 2L e área transversal 3A, com mesma resistividade. Logo, Rnovo=ρ(2L)/(3A)=(2/3)Rantigo. A razão solicitada é 2/3.",
+                          "explanation":  "A resistência de um fio ou cilindro condutor homogêneo depende do material, do comprimento e da área de seção transversal: R = ρL/A, em que ρ é a resistividade.\n\n1) Como o novo resistor é feito do mesmo material, sua resistividade ρ não muda.\n\n2) O comprimento dobra: L_novo = 2L. A área da seção transversal triplica: A_nova = 3A.\n\n3) Substituindo: R_nova = ρ(2L)/(3A) = (2/3)(ρL/A) = (2/3)R_antiga.\n\nLogo, R_nova/R_antiga = 2/3.\n\nResposta: alternativa C — 2/3. Mais comprimento aumenta a resistência; maior área reduz a resistência.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77408,7 +77408,7 @@
                                           "0,6 A"
                                       ],
                           "answer":  3,
-                          "explanation":  "A bateria passa de 100% para 10%, fornecendo 90% da carga nominal de 6000 mAh. Assim, ΔQ=0,90×6000=5400 mAh. Dividindo pelas 6 horas de uso, a corrente média vale i=5400/6=900 mA=0,9 A.",
+                          "explanation":  "A carga nominal da bateria é 6000 mAh, mas o celular não consome tudo: a bateria vai de 100% para 10%, utilizando 90% da capacidade.\n\n1) Carga fornecida no período: ΔQ = 0,90 × 6000 = 5400 mAh.\n\n2) Essa carga foi fornecida durante 6 horas. Pela definição de corrente média, I_média = ΔQ/Δt.\n\n3) Substituindo: I_média = 5400 mAh/6 h = 900 mA.\n\n4) Convertendo: 900 mA = 0,90 A.\n\nResposta: alternativa D — 0,9 A. A pegadinha é usar 6000 mAh em vez dos 90% efetivamente consumidos.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77515,7 +77515,7 @@
                                           "16 × 1019"
                                       ],
                           "answer":  1,
-                          "explanation":  "O tempo que os elétrons levam para completar uma volta é T=2πR/v=2π×32/(3×10⁸) s. A corrente é a carga transportada por período: I=Ne/T, então N=IT/e=0,12×(2π×32)/(3×10⁸×1,6×10⁻¹⁹)≈5,0×10¹¹ elétrons.",
+                          "explanation":  "A corrente elétrica mede a carga que passa por uma seção do tubo a cada segundo. Como os elétrons circulam continuamente em uma órbita fechada, em cada volta passa por um ponto do tubo a carga total dos N elétrons que estão na órbita.\n\n1) Tempo de uma volta: T = comprimento da circunferência/velocidade = 2πR/v = (2π × 32)/(3 × 10⁸) s.\n\n2) A carga total dos N elétrons, em módulo, é Q = N × e, com e = 1,6 × 10⁻¹⁹ C.\n\n3) Como I = Q/T, temos N = I × T/e. Substituindo I = 0,12 A: N = [0,12 × (2π × 32)]/[(3 × 10⁸)(1,6 × 10⁻¹⁹)] ≈ 5,0 × 10¹¹.\n\nResposta: alternativa B — cerca de 5 × 10¹¹ elétrons. Não confunda o número total de elétrons na órbita com o número que atravessa um ponto por segundo.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77677,7 +77677,7 @@
                                           "100 horas."
                                       ],
                           "answer":  1,
-                          "explanation":  "O chuveiro de 7500 W funciona durante 12 min = 0,2 h e consome E=7,5 kW×0,2 h=1,5 kWh. A lâmpada tem potência 20 W = 0,020 kW. Para consumir a mesma energia, deve funcionar por t=1,5/0,020=75 horas.",
+                          "explanation":  "Para comparar o consumo de dois aparelhos, usamos energia = potência × tempo. Primeiro calculamos quanta energia o chuveiro usa em um banho; depois descobrimos quanto tempo a lâmpada levaria para gastar o mesmo valor.\n\n1) Chuveiro: 7500 W = 7,5 kW. O banho dura 12 minutos = 0,20 h. Assim, E = 7,5 × 0,20 = 1,5 kWh.\n\n2) Lâmpada: 20 W = 0,020 kW.\n\n3) Para gastar 1,5 kWh, seu tempo será t = E/P = 1,5/0,020 = 75 horas.\n\nResposta: alternativa B — 75 horas. É importante converter minutos em horas antes de trabalhar com kWh.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77731,7 +77731,7 @@
                                           "8,0"
                                       ],
                           "answer":  3,
-                          "explanation":  "O carro percorreu 110 km à razão de 5,0 km por kWh. A energia consumida foi E=110/5=22 kWh. A potência do carregador ideal é P=Ui=220 V×20 A=4400 W=4,4 kW. Portanto, o tempo necessário para repor 22 kWh é t=E/P=22/4,4=5,0 h.",
+                          "explanation":  "O consumo do carro é informado em quilômetros por kWh. Para saber quanto tempo o carregador precisa funcionar, primeiro encontramos a energia gasta na viagem e depois a potência de recarga.\n\n1) Energia consumida nos 110 km: E = distância/rendimento = 110 km ÷ (5,0 km/kWh) = 22 kWh.\n\n2) Potência elétrica do carregador ideal: P = U × I = 220 V × 20 A = 4400 W = 4,4 kW.\n\n3) Tempo necessário: t = E/P = 22 kWh/4,4 kW = 5,0 h.\n\nResposta: alternativa D — 5 horas. Observe que o carregador é ideal; por isso não é necessário aplicar nenhuma perda adicional de rendimento.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77784,7 +77784,7 @@
                                           "12"
                                       ],
                           "answer":  1,
-                          "explanation":  "Em 5 horas, a fonte de 2 kW transfere E=2×5=10 kWh. Como apenas 80% fica armazenado na bateria, a energia útil é 0,80×10=8 kWh. O consumo é de 1 kWh a cada 6 km; logo, a autonomia com carga completa é 8×6=48 km.",
+                          "explanation":  "O carregador fornece energia à bateria, mas nem toda a energia recebida fica armazenada. O rendimento de 80% significa que somente 80% da energia fornecida é aproveitada.\n\n1) Energia fornecida pela tomada: E = P × t = 2 kW × 5 h = 10 kWh.\n\n2) Energia armazenada: E_útil = 0,80 × 10 = 8 kWh.\n\n3) O carro percorre 6 km por kWh consumido. Portanto, sua autonomia é 8 × 6 = 48 km.\n\nResposta: alternativa B — 48 km. O erro mais comum é ignorar a perda de 20% no carregamento e responder 60 km.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -77838,7 +77838,7 @@
                                           "20"
                                       ],
                           "answer":  0,
-                          "explanation":  "Cada painel de 300 W perde 20% na conversão, fornecendo 300×0,80=240 W=0,24 kW em condições de insolação. Com 6 h de insolação por dia, gera 0,24×6=1,44 kWh/dia; em 30 dias, 43,2 kWh. Para 216 kWh/mês, são necessários 216/43,2=5 painéis.",
+                          "explanation":  "A ideia é encontrar quanta energia cada painel entrega ao longo de um mês e depois comparar com o consumo mensal da residência.\n\n1) Cada painel tem potência nominal de 300 W, mas apenas 80% é aproveitado: P_útil = 0,80 × 300 = 240 W = 0,24 kW.\n\n2) Com 6 horas equivalentes de insolação por dia, cada painel fornece E_dia = 0,24 × 6 = 1,44 kWh.\n\n3) Em 30 dias, um painel fornece E_mês = 1,44 × 30 = 43,2 kWh.\n\n4) Para uma residência que consome 216 kWh por mês: número de painéis = 216/43,2 = 5.\n\nResposta: alternativa A — 5 painéis. A redução de 20% precisa ser considerada antes de calcular a energia gerada.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Corrente elétrica",
@@ -79134,7 +79134,7 @@
                                           "1,2 A e 1,4 V"
                                       ],
                           "answer":  3,
-                          "explanation":  "Como R1=10 Ω e R2=35 Ω estão em série, sua resistência total é 45 Ω. A corrente no circuito e no resistor R1 é i=9 V/45 Ω=0,20 A. A queda de tensão sobre R2 vale U2=iR2=0,20×35=7,0 V. Resposta: 0,2 A e 7,0 V.",
+                          "explanation":  "Como os resistores estão em série, a corrente elétrica que atravessa um é exatamente a mesma que atravessa o outro. Já a tensão se divide entre eles.\n\n1) Resistência equivalente: R_eq = R₁ + R₂ = 10 Ω + 35 Ω = 45 Ω.\n\n2) Corrente total pela lei de Ohm: I = U/R_eq = 9 V/45 Ω = 0,20 A. Portanto, a corrente no resistor R₁ também é 0,20 A.\n\n3) Tensão sobre R₂: U₂ = R₂ × I = 35 × 0,20 = 7,0 V.\n\n4) Conferência: em R₁ a queda é U₁ = 10 × 0,20 = 2,0 V; 2,0 + 7,0 = 9,0 V.\n\nResposta: alternativa D — 0,2 A e 7,0 V.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -79241,7 +79241,7 @@
                                           "6 A e 6 V"
                                       ],
                           "answer":  2,
-                          "explanation":  "A resistência equivalente dos resistores em paralelo satisfaz 1/Req=1/2+1/4+1/4=1 Ω⁻¹, logo Req=1 Ω. Com corrente total de 12 A, a tensão da fonte é U=IReq=12 V, comum a todos os resistores. Em R1=2 Ω, a corrente é i1=12/2=6 A. Resposta: 6 A e 12 V.",
+                          "explanation":  "Os três resistores estão em paralelo. Isso significa que todos têm a mesma tensão nos seus terminais, embora as correntes de cada ramo possam ser diferentes.\n\n1) A resistência equivalente satisfaz 1/R_eq = 1/2 + 1/4 + 1/4 = 1. Portanto, R_eq = 1 Ω.\n\n2) A fonte fornece corrente total I = 12 A. Pela lei de Ohm, sua tensão é U = I × R_eq = 12 × 1 = 12 V.\n\n3) Essa tensão de 12 V está presente em cada ramo paralelo.\n\n4) Como R₁ = 2 Ω, a corrente nele é I₁ = U/R₁ = 12/2 = 6 A.\n\nResposta: alternativa C — 6 A e 12 V. Não confunda corrente total com corrente de um ramo.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -79349,7 +79349,7 @@
                                           "2,4"
                                       ],
                           "answer":  3,
-                          "explanation":  "Os dois resistores em paralelo equivalem a R/2, e o terceiro em série acrescenta R. Assim, Req=3R/2. Como a fonte fornece 12 V sob corrente total de 5,0 mA, Req=12/0,005=2400 Ω. Portanto, R=2Req/3=1600 Ω=1,6 kΩ.",
+                          "explanation":  "Dois resistores iguais estão em paralelo e esse conjunto está em série com um terceiro resistor, também igual.\n\n1) Dois resistores R em paralelo equivalem a R_paralelo = R/2.\n\n2) Somando o terceiro resistor em série: R_eq = R + R/2 = 3R/2.\n\n3) A fonte fornece 12 V e a corrente total é 5,0 mA = 0,005 A. Pela lei de Ohm, R_eq = 12/0,005 = 2400 Ω.\n\n4) Assim, 3R/2 = 2400; multiplicando por 2/3, R = 1600 Ω = 1,6 kΩ.\n\nResposta: alternativa D — 1,6 kΩ. Para associações em paralelo, não some simplesmente as resistências.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -79510,7 +79510,7 @@
                                           "4,5 V e 1,5 V"
                                       ],
                           "answer":  2,
-                          "explanation":  "Com os resistores em série, a resistência total é RA+RB=U/i=12/2=6 Ω. Em paralelo, a resistência equivalente é Rp=12/9=4/3 Ω, logo RARB=Rp(RA+RB)=(4/3)×6=8 Ω². Os valores são raízes de x²−6x+8=0: 4 Ω e 2 Ω. Como RA>RB, temos RA=4 Ω e RB=2 Ω.",
+                          "explanation":  "Na primeira montagem, os resistores são ligados em série; na segunda, em paralelo. Usamos as duas informações para descobrir cada resistência.\n\n1) Em série, a corrente é 2 A com tensão de 12 V. Logo R_A + R_B = 12/2 = 6 Ω.\n\n2) Em paralelo, a corrente total é 9 A. A resistência equivalente é R_p = 12/9 = 4/3 Ω.\n\n3) Pela fórmula do paralelo, R_p = R_A R_B/(R_A + R_B). Como a soma é 6, temos R_A R_B = (4/3) × 6 = 8 Ω².\n\n4) Procuramos dois números com soma 6 e produto 8: 4 e 2.\n\n5) O enunciado diz que R_A é maior que R_B; portanto R_A = 4 Ω e R_B = 2 Ω.\n\nResposta: alternativa C — 4,0 Ω e 2,0 Ω.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -79617,7 +79617,7 @@
                                           "120 V"
                                       ],
                           "answer":  0,
-                          "explanation":  "O LED deve receber, no máximo, 4 V com corrente de 20 mA, quando a fonte fornece 12 V. O resistor em série precisa absorver 12−4=8 V. Pela lei de Ohm, R=U_R/i=8/0,020=400 Ω. Essa é a resistência mínima para respeitar a corrente nominal.",
+                          "explanation":  "O LED suporta no máximo 20 mA quando recebe uma tensão de 4 V. Como a fonte tem 12 V, o resistor em série precisa limitar a corrente e ficar com a tensão que sobra.\n\n1) Tensão no resistor: U_R = 12 − 4 = 8 V.\n\n2) A corrente limite é I = 20 mA = 0,020 A. Por estarem em série, LED e resistor são atravessados pela mesma corrente.\n\n3) Pela lei de Ohm, R = U_R/I = 8/0,020 = 400 Ω.\n\n4) Esse é o menor valor admissível: resistência menor permitiria corrente superior à máxima indicada para o LED.\n\nResposta: alternativa A — 400 Ω.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -82028,7 +82028,7 @@
                                           "200 V"
                                       ],
                           "answer":  3,
-                          "explanation":  "Os cinco resistores de 1000 Ω estão ligados entre os mesmos dois clipes, portanto em paralelo. Sua resistência equivalente é 1000/5=200 Ω. Há ainda um resistor de 200 Ω em série com o conjunto em cada extremidade. Logo, Req=200+200+200=600 Ω.",
+                          "explanation":  "Os cinco resistores de 1000 Ω estão presos entre os mesmos dois clipes metálicos. Como cada resistor liga exatamente os mesmos dois pontos, eles estão em paralelo. Os resistores de 200 Ω conectados às extremidades ficam em série com essa associação.\n\n1) Para cinco resistores iguais de 1000 Ω em paralelo: R_paralelo = 1000/5 = 200 Ω.\n\n2) Na trajetória entre A e B, a corrente passa por um resistor de 200 Ω, depois pelo grupo paralelo equivalente a 200 Ω e, finalmente, pelo outro resistor de 200 Ω.\n\n3) Em série as resistências se somam: R_eq = 200 + 200 + 200 = 600 Ω.\n\nResposta: alternativa D — 600 Ω.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -82135,7 +82135,7 @@
                                           "3 V"
                                       ],
                           "answer":  4,
-                          "explanation":  "Dois resistores iguais R em série equivalem a 2R. Essa associação está em paralelo com o terceiro R, de modo que Req=(2R×R)/(2R+R)=2R/3. Como Req=2 Ω, temos 2R/3=2 e R=3 Ω.",
+                          "explanation":  "Precisamos descobrir a resistência R de cada um dos três resistores iguais.\n\n1) Dois resistores estão em série. Na associação em série, as resistências se somam: R_série = R + R = 2R.\n\n2) Esse conjunto de resistência 2R está em paralelo com o terceiro resistor, de resistência R. Para duas resistências em paralelo: R_eq = (R₁ × R₂)/(R₁ + R₂).\n\n3) Substituímos: R_eq = (2R × R)/(2R + R) = 2R/3.\n\n4) Como o enunciado informa R_eq = 2 Ω, temos 2R/3 = 2; multiplicando por 3 e dividindo por 2, R = 3 Ω.\n\nResposta: alternativa E — cada resistor possui 3 Ω.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Associação de resistores",
@@ -84629,7 +84629,7 @@
                                           "capacitor de maior carga armazenada possui capacitância duas vezes maior."
                                       ],
                           "answer":  3,
-                          "explanation":  "Pela definição de capacitância, Q=CU. Os dois capacitores foram testados sucessivamente com o mesmo gerador, portanto sob a mesma tensão U. Se um armazenou o dobro da carga do outro, a sua capacitância também é o dobro: C1/C2=Q1/Q2=2.",
+                          "explanation":  "Capacitância é a capacidade de armazenar carga elétrica para certa tensão. Ela é definida pela relação Q = C × U.\n\n1) Os capacitores foram ligados sucessivamente ao mesmo gerador; portanto, cada um recebeu a mesma tensão U.\n\n2) Se o primeiro armazena o dobro da carga do segundo, temos Q₁ = 2Q₂.\n\n3) Como Q₁ = C₁U e Q₂ = C₂U, resulta C₁U = 2C₂U. Cancelando a tensão comum, C₁ = 2C₂.\n\nLogo, o capacitor que armazenou mais carga tem o dobro da capacitância.\n\nResposta: alternativa D. A relação é proporcional, não inversa nem quadrática.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -85025,7 +85025,7 @@
                                           "0,50 V"
                                       ],
                           "answer":  1,
-                          "explanation":  "A tensão nos terminais do resistor externo é U=Ri=5,8×2,0=11,6 V. Para um gerador real, U=E−ri, com E=12 V. Assim, ri=12−11,6=0,4 V, e a resistência interna vale r=0,4/2,0=0,20 Ω.",
+                          "explanation":  "Um gerador real tem resistência interna. Por isso, parte de sua força eletromotriz se perde dentro do próprio gerador, e a tensão fornecida ao resistor externo é menor que 12 V.\n\n1) Calculamos a tensão no resistor externo: U = R × I = 5,8 Ω × 2,0 A = 11,6 V.\n\n2) A diferença entre a força eletromotriz e a tensão externa é a queda de tensão interna: 12 − 11,6 = 0,4 V.\n\n3) Essa queda satisfaz U_interna = r × I. Portanto, r = 0,4/2,0 = 0,20 Ω.\n\nResposta: alternativa B — resistência interna de 0,20 Ω.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -85079,7 +85079,7 @@
                                           "20 V e 10 V"
                                       ],
                           "answer":  0,
-                          "explanation":  "A diferença de potencial nos terminais externos do gerador é U=16 V, e a corrente vale 2 A. Como sua resistência interna é r=2 Ω, a força eletromotriz é E=U+ir=16+2×2=20 V. No resistor externo, R=U/i=16/2=8 Ω. Resposta: E=20 V e R=8 Ω.",
+                          "explanation":  "A bateria é um gerador real: sua resistência interna faz parte da tensão produzida ser perdida dentro do gerador. A tensão externa entre os terminais é 16 V, e a corrente vale 2 A.\n\n1) A queda de tensão interna é rI = 2 Ω × 2 A = 4 V.\n\n2) A força eletromotriz total deve fornecer a tensão externa e a queda interna: E = U + rI = 16 + 4 = 20 V.\n\n3) O resistor externo é submetido aos 16 V e recebe corrente de 2 A. Pela lei de Ohm, R = U/I = 16/2 = 8 Ω.\n\nResposta: alternativa A — E = 20 V e R = 8 Ω. Note que a unidade da resistência é ohm (Ω), não volt (V).",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -86264,7 +86264,7 @@
                                           "11,4"
                                       ],
                           "answer":  2,
-                          "explanation":  "A carga de um capacitor é Q=CU. Com C=70 µF=70×10⁻⁶ F e U=2500 V, obtemos Q=70×10⁻⁶×2500=0,175 C. A energia armazenada pode ser conferida por E=CU²/2≈219 J, próxima aos 220 J citados.",
+                          "explanation":  "O capacitor do desfibrilador armazena cargas elétricas. Para um capacitor, a relação básica entre carga, capacitância e tensão é Q = C × U.\n\n1) A capacitância é 70 microfarads. O prefixo micro significa 10⁻⁶: C = 70 × 10⁻⁶ F.\n\n2) A tensão aplicada é U = 2500 V.\n\n3) Calculamos a carga: Q = 70 × 10⁻⁶ × 2500 = 0,175 C.\n\n4) Conferência com a energia informada: E = CU²/2 = (70 × 10⁻⁶ × 2500²)/2 ≈ 219 J, coerente com os 220 J do enunciado.\n\nResposta: alternativa C — 0,175 C. Não é necessário usar os 220 J para encontrar Q, pois C e U já são conhecidos.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -86371,7 +86371,7 @@
                                           "12"
                                       ],
                           "answer":  2,
-                          "explanation":  "A capacitância original é 100 µF e o técnico acrescentou 20 µF em paralelo, aumentando-a para 120 µF. Para que a combinação final tenha 20 µF, ligamos um capacitor C em série: 1/20=1/120+1/C, logo 1/C=5/120 e C=24 µF.",
+                          "explanation":  "Primeiro é preciso lembrar como a capacitância equivalente muda nas associações: em paralelo, as capacitâncias se somam; em série, a capacitância equivalente fica menor que a menor capacitância do conjunto.\n\n1) O trecho original tinha 100 µF. O técnico adicionou 20 µF em paralelo, portanto a capacitância passou a 100 + 20 = 120 µF.\n\n2) Precisamos reduzir os 120 µF a 20 µF colocando um novo capacitor C em série. A fórmula é 1/C_eq = 1/C₁ + 1/C.\n\n3) Substituindo: 1/20 = 1/120 + 1/C. Logo 1/C = 6/120 − 1/120 = 5/120 = 1/24.\n\n4) Portanto C = 24 µF.\n\nResposta: alternativa C — 24 µF.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -88440,7 +88440,7 @@
                                           "0,2"
                                       ],
                           "answer":  1,
-                          "explanation":  "Duas pilhas ideais iguais de 1,5 V ligadas em paralelo com polaridade concordante mantêm tensão equivalente de 1,5 V, não 3,0 V. Aplicando U=Ri ao resistor de 15 Ω, a corrente é i=1,5/15=0,10 A.",
+                          "explanation":  "Duas pilhas iguais de 1,5 V, ligadas em paralelo com polos de mesmo sinal unidos, funcionam como uma fonte de tensão de 1,5 V, supondo pilhas ideais.\n\n1) Atenção à diferença: em série, tensões de pilhas concordantes se somam; em paralelo, a tensão continua a ser a de uma pilha, ou seja, 1,5 V.\n\n2) A resistência do circuito é 15 Ω. Aplicamos a primeira lei de Ohm: U = R × I.\n\n3) Isolando a corrente: I = U/R = 1,5/15 = 0,10 A.\n\nResposta: alternativa B — 0,1 A. Somar 1,5 + 1,5 e obter 3 V seria confundir associação em paralelo com série.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -88710,7 +88710,7 @@
                                           "24"
                                       ],
                           "answer":  0,
-                          "explanation":  "Com as baterias em série no mesmo sentido, (E1+24)/R=6 A. Invertendo E1, a corrente é (24−E1)/R=2 A e mantém o sentido. Somando as equações, 48/R=8, logo R=6 Ω. Substituindo na primeira: E1+24=36, portanto E1=12 V.",
+                          "explanation":  "A questão compara duas situações: baterias somando suas tensões e uma delas invertida. Em cada situação aplicamos a lei de Ohm à resistência total R do circuito.\n\n1) Baterias concordantes: (E₁ + 24)/R = 6, então E₁ + 24 = 6R.\n\n2) Ao inverter E₁, a corrente cai para 2 A mas mantém o sentido; logo a bateria de 24 V ainda predomina: (24 − E₁)/R = 2, então 24 − E₁ = 2R.\n\n3) Somando as duas equações, eliminamos E₁: 48 = 8R; portanto R = 6 Ω.\n\n4) Substituindo na primeira: E₁ + 24 = 6 × 6 = 36; logo E₁ = 12 V.\n\nResposta: alternativa A — 12 V. Inverter uma bateria faz subtrair sua tensão da outra, não alterar a resistência externa.",
                           "discipline":  "fisica",
                           "topic":  "Eletromagnetismo",
                           "subtopic":  "Circuitos elétricos",
@@ -91716,7 +91716,7 @@
                                           "exatamente 379000 km."
                                       ],
                           "answer":  0,
-                          "explanation":  "Num eclipse solar total, para a Lua encobrir inteiramente o Sol, seu diâmetro angular deve ser ao menos igual ao diâmetro angular solar. Como o diâmetro real do Sol é 400 vezes o lunar e a distância até o Sol é 151.600.000 km, a distância da Lua deve obedecer D_lua≤151.600.000/400=379.000 km. Portanto, a distância era no máximo 379.000 km.",
+                          "explanation":  "Em um eclipse solar total, a Lua precisa parecer no céu pelo menos tão grande quanto o Sol para encobrir seu disco. O tamanho aparente de um astro depende de seu diâmetro real dividido pela distância até o observador.\n\n1) O diâmetro real do Sol é 400 vezes o da Lua.\n\n2) No limite em que ambos têm o mesmo diâmetro angular, a Lua precisa estar 400 vezes mais perto: D_Lua = D_Sol/400.\n\n3) Usando D_Sol = 151.600.000 km, temos D_Lua = 151.600.000/400 = 379.000 km.\n\n4) Para um eclipse total, a Lua pode estar ainda mais próxima e parecer maior que o Sol. Por isso a desigualdade correta é D_Lua ≤ 379.000 km.\n\nResposta: alternativa A — no máximo 379.000 km.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Óptica geométrica",
@@ -91769,7 +91769,7 @@
                                           "Minguante"
                                       ],
                           "answer":  2,
-                          "explanation":  "Um eclipse lunar ocorre quando a Terra fica entre o Sol e a Lua, projetando sombra sobre a Lua. Essa configuração exige que a Lua esteja aproximadamente oposta ao Sol no céu terrestre, isto é, na fase cheia. Portanto, a resposta é Lua cheia.",
+                          "explanation":  "Um eclipse lunar acontece quando a Terra fica entre o Sol e a Lua. Nessa configuração, a Lua passa pela região de sombra projetada pela Terra.\n\n1) Para a Terra ficar entre o Sol e a Lua, observados aproximadamente na mesma linha, a Lua deve estar no lado do céu oposto ao Sol.\n\n2) Essa é a configuração característica da Lua cheia: a face lunar voltada para a Terra normalmente está totalmente iluminada.\n\n3) Quando há alinhamento suficientemente preciso, a sombra da Terra cobre a Lua e ocorre o eclipse lunar. Na Lua nova acontece a configuração típica dos eclipses solares, não lunares.\n\nResposta: alternativa C — Lua cheia.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Óptica geométrica",
@@ -91964,7 +91964,7 @@
                                           "80"
                                       ],
                           "answer":  3,
-                          "explanation":  "Como o menino e o prédio são iluminados pelo Sol no mesmo instante, os raios formam o mesmo ângulo e originam triângulos semelhantes. Portanto, altura/sombra é constante: H/20=1,5/0,5=3. Logo, a altura do prédio é H=60 m.",
+                          "explanation":  "Como o menino e o prédio estão sob a luz do Sol no mesmo instante, os raios solares chegam praticamente paralelos e fazem o mesmo ângulo com o chão. Assim, os triângulos formados pelas alturas e pelas sombras são semelhantes.\n\n1) Menino: altura de 1,5 m e sombra de 50 cm = 0,50 m. A razão altura/sombra é 1,5/0,50 = 3.\n\n2) Prédio: sombra de 20 m. A mesma razão vale para ele: H/20 = 3.\n\n3) Multiplicando por 20, H = 3 × 20 = 60 m.\n\nResposta: alternativa D — 60 m. O segredo é manter as duas sombras na mesma unidade e aplicar a proporcionalidade.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Óptica geométrica",
@@ -92904,7 +92904,7 @@
                           "type":  "text",
                           "prompt":  "Um garoto cujos olhos encontram-se a uma altura de 1,6 m se aproxima de uma piscina vazia. Sabendo que a piscina tem profundidade de 2 m e largura de 5 m, a que distância, a partir da beirada da piscina, ele poderá enxergar o fundo?",
                           "answer":  "4 m",
-                          "explanation":  "Para começar a enxergar o fundo no lado oposto da piscina vazia, o raio visual limite passa rente à borda próxima. Formam-se triângulos semelhantes: o pequeno tem altura dos olhos 1,6 m e base x (distância da borda); o maior tem profundidade 2,0 m e base 5,0 m (largura da piscina). Assim, 1,6/x=2/5, de onde x=1,6×5/2=4,0 m.",
+                          "explanation":  "A piscina está vazia e a visão se propaga em linha reta. O garoto começará a ver a parte mais distante do fundo quando sua linha de visão passar exatamente pela borda próxima da piscina.\n\n1) A borda cria dois triângulos retângulos semelhantes: o triângulo de fora possui altura de 1,6 m (olhos) e base x; o triângulo de dentro possui altura de 2,0 m (profundidade) e base 5,0 m (largura).\n\n2) Em triângulos semelhantes, as razões entre lados correspondentes são iguais: 1,6/x = 2,0/5,0.\n\n3) Multiplicando em cruz, 2x = 1,6 × 5,0 = 8,0. Logo x = 4,0 m.\n\nResposta: 4,0 m da beirada. Esse é o limite geométrico para a linha de visão alcançar o fundo distante.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Óptica geométrica",
@@ -93186,7 +93186,7 @@
                           "type":  "text",
                           "prompt":  "A acuidade visual humana, ou seja, o menor ângulo visual que o ser humano enxerga, é da ordem de 3 × 10^−4 rad. Considere a distância entre os faróis dianteiros de um carro de 2 m. Qual é a mínima distância necessária para que o olho humano distinga entre uma moto e um carro que se encontra no sentido oposto da estrada? Dado: para ângulos muito pequenos, utilizar tgu à u. 271",
                           "answer":  "Aproximadamente 6,7 km.",
-                          "explanation":  "Para ângulos pequenos, a separação angular é θ≈d/D, com d=2 m entre os faróis. O limite de resolução visual é θmín=3×10⁻⁴ rad. Igualando 3×10⁻⁴=2/D, obtemos D≈2/(3×10⁻⁴)=6,67×10³ m, ou aproximadamente 6,7 km. Esse valor corresponde à maior distância em que os faróis ainda podem ser distinguidos; a redação 'mínima distância' é imprecisa.",
+                          "explanation":  "Para distinguir os dois faróis de um carro, o olho precisa enxergá-los separados por pelo menos seu ângulo mínimo de resolução. Quanto mais longe o carro estiver, menor será o ângulo que os faróis formam no olho.\n\n1) Distância entre os faróis: d = 2 m. Ângulo mínimo de resolução: θ = 3 × 10⁻⁴ rad.\n\n2) Para ângulos pequenos, podemos aproximar tan θ ≈ θ ≈ d/D, em que D é a distância até o carro.\n\n3) No limite da resolução: 3 × 10⁻⁴ = 2/D, logo D = 2/(3 × 10⁻⁴) ≈ 6667 m.\n\n4) Convertendo: D ≈ 6,7 km.\n\nResposta: cerca de 6,7 km. Esse valor representa o maior afastamento aproximado em que os dois faróis ainda podem ser distinguidos.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Óptica geométrica",
@@ -93870,7 +93870,7 @@
                                           "preta e azul."
                                       ],
                           "answer":  3,
-                          "explanation":  "A região vermelha da almofada reflete principalmente luz vermelha e absorve a maior parte da luz azul. Iluminada apenas com luz azul, ela aparece praticamente preta. A região branca reflete as diversas componentes incidentes e, sob iluminação monocromática azul, reflete azul. Logo, as listras são vistas, respectivamente, preta e azul.",
+                          "explanation":  "A cor percebida de uma superfície depende da luz que chega até ela e das cores que ela consegue refletir.\n\n1) A luz do ambiente é monocromática azul: só há luz azul incidindo sobre a almofada.\n\n2) A listra vermelha reflete bem a luz vermelha, mas não encontra luz vermelha para refletir. Como absorve quase toda a luz azul, fica escura, aparecendo preta.\n\n3) A listra branca normalmente reflete todas as cores incidentes. Como neste ambiente só recebe azul, reflete azul e é vista azul.\n\nResposta: alternativa D — preta e azul, respectivamente. Um objeto branco não parece necessariamente branco sob luz colorida.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Reflexão da luz",
@@ -100161,7 +100161,7 @@
                                           "1,47"
                                       ],
                           "answer":  4,
-                          "explanation":  "Em um líquido de índice n observado a partir do ar, na aproximação para raios quase verticais, a profundidade aparente é h_ap=h_real/n. O fundo está a 5,0 m, mas a lanterna parece estar a 3,4 m. Assim, n=h_real/h_ap=5,0/3,4≈1,47.",
+                          "explanation":  "Quando observamos um objeto dentro de um líquido, olhando quase perpendicularmente para sua superfície, a refração faz o objeto parecer mais próximo da superfície do que realmente está. Por isso a lanterna parece estar a apenas 3,4 m de profundidade, embora esteja no fundo de um tanque de 5,0 m.\n\n1) Para pequenos ângulos e observação do ar, a relação entre profundidade real e aparente é h_aparente = h_real/n, considerando índice de refração do ar aproximadamente igual a 1.\n\n2) Isolando o índice: n = h_real/h_aparente.\n\n3) Substituindo os dados: n = 5,0/3,4 ≈ 1,47.\n\nResposta: alternativa E — 1,47. O índice é maior que 1, como se espera para esse líquido em relação ao ar.",
                           "discipline":  "fisica",
                           "topic":  "Óptica",
                           "subtopic":  "Refração da luz",

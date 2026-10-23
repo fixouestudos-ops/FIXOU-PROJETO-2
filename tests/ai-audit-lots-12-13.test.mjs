@@ -67,14 +67,16 @@ test('144 correções do lote 12 e 200 dos lotes 13 e 14 ficam acessíveis para 
  assert.equal(new Set([...AI_AUDIT_LOTS.lot12.correctedIds,...AI_AUDIT_LOTS.lot13.correctedIds,...AI_AUDIT_LOTS.lot14.correctedIds]).size,544);
 });
 
-test('comparações usam os valores before e after verdadeiros dos 544 patches',()=>{
+test('comparações usam o before histórico, a versão atual do banco e preservam o after original dos 544 patches',()=>{
  for(const key of ['lot12','lot13','lot14'])for(const [id,patch] of Object.entries(AI_AUDIT_LOTS[key].patchById)){
-  const comparison=aiAuditCompare(byId.get(id),key);
+  const question=byId.get(id);
+  const comparison=aiAuditCompare(question,key);
   assert.equal(comparison.available,true,id);
   assert.equal(comparison.kind,'lot',id);
   assert.deepEqual(comparison.before,patch.before,id+' before');
-  assert.deepEqual(comparison.after,patch.after,id+' after');
+  assert.deepEqual(comparison.historicalAfter,patch.after,id+' historical after');
   assert.deepEqual(new Set(comparison.fields),new Set([...Object.keys(patch.before),...Object.keys(patch.after)]),id+' fields');
+  for(const field of comparison.fields)assert.deepEqual(comparison.after[field],question[field],id+' current '+field);
  }
 });
 
