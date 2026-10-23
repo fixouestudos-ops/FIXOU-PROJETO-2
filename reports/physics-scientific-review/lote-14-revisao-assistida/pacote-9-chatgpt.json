@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "project": "FIXOU",
+  "lot": 14,
+  "branch": "review/ia-auditoria-explanations-only",
+  "purpose": "Stage precisely authored ChatGPT Physics resolutions for owner review in AI Auditoria; DO NOT publish, merge, deploy or auto-approve",
+  "authoritative_editor": "ChatGPT Victor Elias",
+  "executor": "OpenCode no scientific authoring allowed",
+  "corrections": [
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q9",
+      "answer_expected": "03 (01+02)",
+      "review_status": "source_verified",
+      "origin": "UEM, Vestibular de Verão 2017, Prova 1, questão 26",
+      "source_url": "https://www.vestibular.uem.br/provas/ve17/P1G1.pdf",
+      "explanation": "Considere que todos os vetores tenham módulo a. Escolhendo +x para a direita e +y para cima: A=(0,a), B=(0,−a), C=(−a,0) e D=(−a/√2,a/√2). Avaliando cada afirmação: 01 é verdadeira, pois a força peso aponta verticalmente para baixo, na direção e no sentido de B. 02 é verdadeira, porque aceleração possui módulo, direção e sentido. 04 é falsa: B+C=(−a,−a), vetor dirigido para baixo e para a esquerda, diferente de D, que aponta para cima e para a esquerda. 08 é falsa: A+B=0, logo seu módulo é zero, não 2a. 16 é falsa: |A|²+|C|²=2a², ao passo que |D|²=a². Portanto, somente 01 e 02 são corretas e a soma é 01+02=03.",
+      "pending_before_student_release": "OCR dos itens 04 e 16 e ano atribuído (2018) não coincidem com a prova oficial de 2017: restaurar enunciado antes de publicar."
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-propostos-q7",
+      "answer_expected": "31 (01+02+04+08+16)",
+      "review_status": "source_verified",
+      "origin": "UEPG, Vestibular de Outono (prova aplicada em março de 2022), grupo 5, questão 38",
+      "source_url": "https://cps.uepg.br/vestibular/documentos/2021/outono/provas/Grupo_5.pdf",
+      "explanation": "A questão da UEPG é do tipo somatório. 01 é correta: meios opacos à luz visível podem refletir e absorver luz, mas não a transmitem por refração como meios transparentes. 02 é correta: em meio transparente, homogêneo e isotrópico, a propagação dos raios luminosos é retilínea. 04 é correta: sob iluminação exclusivamente azul, regiões que refletem azul podem ser vistas azuis, a camiseta branca reflete o azul incidente e fica azul, e a capa vermelha, que absorve a luz azul no modelo ideal, parece preta. 08 é correta: espelhos convexos produzem imagens virtuais, direitas e reduzidas de objetos reais, ampliando o campo de visão. 16 é correta: na figura original, o campo de visão delimitado pelos raios extremos refletidos pelo espelho plano inclui A e C, mas não B e D. Somam-se, portanto, 01+02+04+08+16=31.",
+      "pending_before_student_release": "O campo prompt contém uma SEGUNDA questão sobre luz LED e falta a figura do item 16. NÃO divulgar até retirar a mescla de OCR e restaurar o diagrama da prova."
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q52",
+      "answer_expected": "T=(M+m)(g+a)/2; N=(m−M)(g+a)/2",
+      "review_status": "conditional_figure",
+      "origin": "Exercício de elevador e operador; procedência UFSC não comprovada",
+      "source_url": "",
+      "explanation": "O sistema é formado por um elevador de massa M e uma pessoa de massa m, que puxa a extremidade livre de uma corda ideal passada por uma polia fixa. Elevador e pessoa sobem juntos com aceleração a. Seja T a tração e N a normal da plataforma sobre a pessoa. Para o conjunto pessoa+elevador, as duas extremidades tracionadas sustentam o sistema, de modo que 2T−(M+m)g=(M+m)a. Assim, T=(M+m)(g+a)/2. Para a pessoa isolada, as forças verticais são T para cima, N para cima e mg para baixo: T+N−mg=ma. Portanto, N=m(g+a)−T=[(m−M)/2](g+a). Respostas: a) T=(M+m)(g+a)/2; b) N=(m−M)(g+a)/2. A hipótese de contato exige N≥0; se a expressão resultar negativa, o movimento solidário descrito seria fisicamente impossível sem outra força.",
+      "pending_before_student_release": "Conferir o diagrama e a instituição de origem antes de aceitar como verificada: livro indica UFSC, reprodução externa possivelmente UFSCar."
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-propostos-q56",
+      "answer_expected": "2,5 kg (considerando g=10 m/s²)",
+      "review_status": "source_located",
+      "origin": "UERJ, Vestibular Estadual 2008, 2º Exame Discursivo, Física, questão 6",
+      "source_url": "https://sistema.vestibular.uerj.br/portal_vestibular_uerj/arquivos/arquivos2008/2008ed_fis.pdf",
+      "explanation": "Os fios e roldanas ideais transmitem a mesma tração indicada pelo dinamômetro: T=40 N. No arranjo de dois corpos ligados pelo fio, o corpo A, de massa 10 kg, desce enquanto B sobe, ambos com aceleração de mesmo módulo a. Admitindo g=10 m/s², aplica-se a segunda lei a A: 10g−T=10a; 100−40=10a; a=6 m/s². Para B, em subida, T−mBg=mBa. Logo 40−10mB=6mB, ou 40=16mB. Portanto mB=2,5 kg. A verificação mostra que a tração permanece 40 N nos dois lados da corda ideal.",
+      "pending_before_student_release": "A imagem do arranjo ainda precisa ser associada ao cadastro antes da liberação; a resolução pressupõe g=10 m/s²."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+      "answer_expected": "A — 4 kΩ",
+      "review_status": "source_verified",
+      "origin": "PUC-Rio, Vestibular de Inverno 2017, Grupo 2, questão 8",
+      "source_url": "https://www.puc-rio.br/vestibular/repositorio/provas/2017-2/download/provas/VEST2017-2_PUCRioProva_G2_20170709.pdf",
+      "explanation": "A figura original mostra quatro resistores idênticos R em paralelo com a bateria de 12 V. A corrente total fornecida pela bateria é I=12 mA=0,012 A. Pela primeira lei de Ohm, a resistência equivalente é Req=U/I=12/0,012=1000 Ω=1 kΩ. Como quatro resistores iguais estão em paralelo, 1/Req=4/R, isto é, Req=R/4. Logo R=4Req=4000 Ω=4 kΩ. Resposta: alternativa A.",
+      "pending_before_student_release": "A imagem do circuito, ausente nos imageAssets do cadastro, é necessária para o aluno ver as quatro ligações em paralelo."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-exercicios-propostos-q16",
+      "answer_expected": "D — L1, L2 e L3",
+      "review_status": "source_verified",
+      "origin": "UEA, SIS-I, Prova de Acompanhamento I de 2024, questão 52",
+      "source_url": "https://souvetor.com/wp-content/uploads/2025/05/UEA-PROVA-SIS-I-2024.pdf",
+      "explanation": "Com Ch1, Ch2 e Ch3 fechados, examine os nós e os caminhos disponíveis para a corrente. O fechamento de Ch3 cria um caminho de resistência desprezível em paralelo com L4, curto-circuitando essa lâmpada. Assim, a diferença de potencial sobre L4 é nula e ela permanece apagada. Já L1, L2 e L3 pertencem a caminhos efetivamente alimentados pela fonte e recebem corrente elétrica, permanecendo acesas. Logo, ficam acesas somente L1, L2 e L3, correspondendo à alternativa D.",
+      "pending_before_student_release": "Anexar ou restaurar o desenho do circuito na questão; a resolução depende da topologia confirmada na prova."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-revisando-q4",
+      "answer_expected": "A — 40 Ω",
+      "review_status": "source_reproduced",
+      "origin": "FAMEMA, vestibular 2023 (prova realizada novembro de 2022), questão 40",
+      "source_url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famema/2023/famema2023.pdf",
+      "explanation": "O desenho mostra uma fonte ideal de 100 V, um resistor de 20 Ω em série com um conjunto paralelo formado por 120 Ω e pelo resistor desconhecido R conectado entre X e Y. Para que a corrente no resistor de 20 Ω seja 2 A, ela deve ser também a corrente total do circuito. Assim, Req=U/I=100/2=50 Ω. A associação paralela precisa ter resistência equivalente Rp=50−20=30 Ω. Como Rp=(120R)/(120+R), segue 30(120+R)=120R; 3600+30R=120R; 90R=3600; R=40 Ω. A alternativa correta é A.",
+      "pending_before_student_release": "O OCR confundiu Ω com V no enunciado e nas alternativas; restaurar figura e símbolos antes de publicar."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-revisando-q6",
+      "answer_expected": "B — somente L1 e L2",
+      "review_status": "source_reproduced",
+      "origin": "CPS/ETEC, Vestibulinho 2019/1, questão 32",
+      "source_url": "https://app.estuda.com/questoes/?id=1350853",
+      "explanation": "O circuito é formado por dois ramos em paralelo com a fonte. Em um ramo, L1 e L2 estão em série. No outro, L3 e L4 estão em série. Quando o filamento de L4 se rompe, esse segundo ramo fica aberto: não há corrente em L4 nem em L3, de modo que ambas se apagam. O ramo L1–L2 continua fechado e alimentado pelas pilhas, portanto as duas lâmpadas continuam acesas. Resposta: alternativa B, somente L1 e L2.",
+      "pending_before_student_release": "Resta anexar o diagrama original e verificar se o Vestibulinho ETEC integra os vestibulares contemplados pela política editorial do FIXOU."
+    },
+    {
+      "id": "fis-lic-l2-f3-c9-exercicios-complementares-q4",
+      "answer_expected": "A — n=1,2",
+      "review_status": "source_reproduced",
+      "origin": "UNESP, Vestibular 2021, segunda fase, questão 53",
+      "source_url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unesp/2021/2fase/UNESP2021_2fase_prova.pdf",
+      "explanation": "Na entrada pela face plana em A, o raio incide perpendicularmente à interface, de modo que segue sem desvio. Na saída pela superfície circular, a normal ao ponto B coincide com o raio da circunferência que liga seu centro a B. Pela geometria do triângulo do desenho original, a razão entre a projeção indicada R/2 e o raio R é 1/2, o que leva ao ângulo interno de incidência i=30°. O raio refratado no ar faz r=37° com a normal. Aplicando a lei de Snell-Descartes, n_material·sen30°=n_ar·sen37°. Com sen30°=0,5, n_ar=1 e sen37°=0,6, tem-se n_material=0,6/0,5=1,2. Resposta: alternativa A.",
+      "pending_before_student_release": "Obrigatório recuperar os dois diagramas do semicilindro no item exibido ao aluno."
+    }
+  ],
+  "still_blocked": [
+    "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+    "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+    "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+    "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+    "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+    "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+    "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+    "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+    "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+    "fis-lic-l2-f3-c7-bncc-em-foco-q2"
+  ],
+  "prior_recovered_discrepancies": [
+    {
+      "id": "fis-lic-l2-f1-c6-bncc-em-foco-q1",
+      "issue": "Gabarito atual é de aviação, incompatível com o lançamento oblíquo; a resolução já recuperada foi calculada independentemente."
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-bncc-em-foco-q2",
+      "issue": "Gabarito é de outra questão; a resposta correta do lançamento horizontal é 6 m/s."
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q36",
+      "issue": "Gabarito 2 m/s contradiz x=t+3, y=5−t, cujas derivadas dão velocidade de módulo √2 m/s."
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q48",
+      "issue": "Gabarito C (índice 2) contradiz o cálculo; alternativa correta A (índice 0)."
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q13",
+      "issue": "Gabarito C (índice 2) contradiz H1/H2=tan²θ1; correta D (índice 3)."
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-revisando-q1",
+      "issue": "Gabarito A (índice 0) discorda do eclipse lunar de 28/10/2023; correta B (índice 1)."
+    },
+    {
+      "id": "fis-lic-l2-f3-c8-exercicios-propostos-q42",
+      "issue": "Gabarito A (índice 0) contradiz o espelho convexo para porteiro e côncavo para dentista; correta D (índice 3)."
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q16",
+      "issue": "Enunciado traz massa terrestre 10^−4 kg, impossível; resultado 10^−21 m/s² exige ordem de 10^24 kg; não corrigir enunciado automaticamente."
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q31",
+      "issue": "A equação da altura y=45m fornece t=1s e t=9s; 9s vale somente para interceptação no ramo descendente, a posição do prédio não consta claramente no texto."
+    }
+  ],
+  "safety": [
+    "Write review proposals in IA Auditoria only; do not bypass review",
+    "Do not modify answer, answerKeyText, prompt, options, images or status without explicit Owner approval",
+    "Keep prior 181 explanations intact unless exact correction present",
+    "For corrected questions that lack diagrams, keep pending visual review",
+    "Never conclude the 200 question lot is scientifically fully verified from this limited evidence"
+  ]
+}
