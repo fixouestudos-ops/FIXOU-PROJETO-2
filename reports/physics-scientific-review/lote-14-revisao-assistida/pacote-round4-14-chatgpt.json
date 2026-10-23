@@ -1,0 +1,96 @@
+{
+  "project": "FIXOU",
+  "lot": 14,
+  "round": "04",
+  "based_on_commit": "8c31de185a227125fc49515d8c17de14678488f2",
+  "role": "ChatGPT realiza revisão científica; OpenCode aplica literalmente",
+  "scope": "only explanation for listed ids",
+  "source_evidence": "Confronto com registros de enunciado, alternativas e gabarito presentes em reports/physics-scientific-review/lote-14-revisao-assistida/manifest-full.json. A origem oficial dos vestibulares não foi comprovada nesta rodada.",
+  "approval_policy": "Manter aguardando auditoria; não alterar gabaritos, nem liberar ao aluno automaticamente.",
+  "corrections": {
+    "fis-lic-l2-f1-c6-exercicios-propostos-q39": {
+      "explanation": "A questão compara duas situações diferentes: uma pedra caindo livremente e uma criança em um carrossel de rotação uniforme.\n\n1) Na queda livre, desprezando o ar, a pedra sofre a aceleração da gravidade. Perto da superfície terrestre, seu módulo g é praticamente constante e aponta para baixo.\n\n2) No carrossel, a rapidez da criança é constante, mas ela muda continuamente de direção. Por isso, há aceleração centrípeta, com módulo a_c = ω²R. Como ω e R não mudam, esse módulo é constante. A direção da aceleração, porém, muda à medida que a criança gira, sempre apontando para o centro.\n\n3) Portanto, ambas apresentam acelerações de MÓDULO constante. Isso não significa que os dois vetores aceleração sejam constantes: o vetor da criança muda de direção.\n\nResposta: alternativa C.",
+      "expected_answer": "C",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q53": {
+      "explanation": "O segredo da travessia é separar dois movimentos que acontecem ao mesmo tempo: o barco avança de uma margem para a outra, enquanto a correnteza o carrega rio abaixo.\n\n1) A velocidade do barco em relação à água, v_B, é perpendicular às margens. Essa componente determina quanto tempo ele leva para percorrer a largura d do rio: t = d/v_B.\n\n2) A correnteza, v_C, é paralela às margens. Ela altera o local onde o barco chega, mas não a componente perpendicular v_B. Por isso, não altera o tempo de travessia nas condições descritas.\n\n3) Se retirarmos a correnteza, o barco chega diretamente em frente ao ponto de partida, porém leva o MESMO tempo. Duplicar a correnteza aumentaria apenas o desvio rio abaixo.\n\nResposta: alternativa A, pois a questão pede a afirmação FALSA: não é correto dizer que, sem correnteza, a travessia seria mais rápida.",
+      "expected_answer": "A",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q33": {
+      "explanation": "Em um lançamento oblíquo sem resistência do ar, a velocidade horizontal é constante, a aceleração é g para baixo e a trajetória é uma parábola. Vamos conferir cada item com v₀ = 20 m/s e g = 10 m/s².\n\n01) FALSO. A trajetória não é uma elipse; é uma parábola.\n\n02) VERDADEIRO. Para 30°, v₀y = 20·sen30° = 10 m/s. No topo, v_y = 0; portanto 0 = 10 − 10t e t = 1 s.\n\n04) FALSO. Para 45°, v₀x = 20·cos45° = 10√2 m/s. Para chegar ao muro a 20 m, t = 20/(10√2) = √2 s ≈ 1,41 s, não 1 s.\n\n08) FALSO. No ponto mais alto, só a componente vertical da velocidade é zero. A componente horizontal continua diferente de zero.\n\n16) VERDADEIRO. Na subida, a gravidade diminui o módulo da velocidade vertical até ele chegar a zero no ápice.\n\nSoma dos itens corretos: 02 + 16 = 18.",
+      "expected_answer": "18 (02+16)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q42": {
+      "explanation": "Para acertar um alvo que se move horizontalmente, o projétil precisa alcançar a MESMA posição horizontal e a MESMA altura do alvo no mesmo instante.\n\n1) Movimento horizontal: ambos começam na mesma vertical. O objeto move-se a 200 m/s e o projétil é lançado a 60°. Para suas posições horizontais coincidirem em um instante t > 0, v₀cos60°·t = 200t. Como cos60° = 0,5, obtemos v₀ = 400 m/s.\n\n2) Movimento vertical: o objeto permanece a 1500 m. A componente vertical inicial do projétil é v₀y = 400sen60° = 200√3 ≈ 346,4 m/s. Assim, sua altura será y(t) = 200√3·t − 5t².\n\n3) Igualando à altura do alvo: 1500 = 200√3·t − 5t². Reorganizando, 5t² − 200√3·t + 1500 = 0. Essa equação tem dois instantes possíveis de encontro; usando a menor raiz positiva, obtemos t ≈ 4,64 s.\n\nRespostas: a) 400 m/s; b) aproximadamente 4,6 s (primeiro encontro).",
+      "expected_answer": "a) 400 m/s; b) 4,6 s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q26": {
+      "explanation": "Os dois blocos têm massas de 4 kg e 2 kg e estão ligados por um fio frágil. Precisamos escolher onde aplicar a força de 3 N para que a tração nesse fio seja MENOR.\n\n1) A aceleração do conjunto não depende de qual bloco recebe a força, pois não há atrito: a = F/(m₁ + m₂) = 3/(4 + 2) = 0,5 m/s².\n\n2) Se puxarmos o bloco de 4 kg, o fio só precisa acelerar o bloco de 2 kg. Pela segunda lei de Newton, a tração é T = 2·0,5 = 1 N.\n\n3) Se puxarmos o bloco de 2 kg, o fio precisa acelerar o de 4 kg: T = 4·0,5 = 2 N.\n\nA segunda montagem exige o dobro da tração e aumenta o risco de rompimento. Resposta: puxar o conjunto pelo bloco MAIOR, de 4 kg, para que a tração no fio seja de apenas 1 N.",
+      "expected_answer": "Puxar pelo bloco de 4 kg",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q66": {
+      "explanation": "As duas pessoas têm a mesma massa, portanto exercem aproximadamente o mesmo peso sobre o colchão. A diferença está em quantas molas sustentam cada pessoa.\n\n1) A pessoa deitada distribui seu peso por uma área maior. Assim, mais molas verticais participam da sustentação em paralelo.\n\n2) Em paralelo, as constantes elásticas das molas se somam: k_equivalente = k₁ + k₂ + ... . Quanto maior o número de molas trabalhando juntas, mais rígido é o apoio.\n\n3) Pela lei de Hooke, F = k_equivalente·x. Para a mesma força peso, a deformação x é maior quando k_equivalente é menor.\n\nA pessoa de pé aciona menos molas em paralelo; por isso, afunda mais o colchão.\n\nResposta: alternativa D — mais deformação porque há menos molas associadas em paralelo.",
+      "expected_answer": "D",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q12": {
+      "explanation": "A questão envolve o movimento da bola visto de dentro de um avião que passa a acelerar para BAIXO com módulo a maior que g.\n\n1) No referencial da Terra, assim que perde o contato com a poltrona, a bola fica sujeita essencialmente à gravidade e acelera para baixo com módulo g.\n\n2) O avião, entretanto, desce com aceleração a > g. Isso significa que a cabine desce cada vez mais rápido do que a bola.\n\n3) A aceleração da bola em relação à cabine é a_rel = a_bola − a_avião. Tomando o sentido para cima como positivo, a_bola = −g e a_avião = −a, portanto a_rel = −g − (−a) = a − g > 0: a bola acelera para CIMA em relação ao avião.\n\nSe esse movimento relativo durar tempo suficiente e houver espaço, a bola pode atingir o teto. Ela não é acelerada para cima em relação ao solo; esse efeito só aparece no referencial acelerado da cabine.\n\nResposta: alternativa D.",
+      "expected_answer": "D",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q43": {
+      "explanation": "O parafuso se desprende do teto e cai com aceleração g para baixo. A cabine do elevador pode ter aceleração diferente, por isso o parafuso se move em relação à cabine.\n\n1) Adote para cima como sentido positivo. A aceleração do parafuso em relação à Terra é −g. Se a aceleração da cabine é a_e, então a aceleração relativa é a_rel = −g − a_e.\n\n2) O problema informa que o módulo da aceleração relativa é 4g/5. Como o parafuso cai em relação à cabine, a_rel = −4g/5. Então: −g − a_e = −4g/5, de onde a_e = −g/5. A cabine tem aceleração para baixo, ainda que possa estar momentaneamente subindo e desacelerando.\n\n3) Aplicando a segunda lei de Newton à cabine: T − Mg = Ma_e = −Mg/5. Logo T = Mg − Mg/5 = 4Mg/5.\n\nComo o peso da cabine é P = Mg, temos T/P = 4/5.\n\nResposta: alternativa D — 4/5.",
+      "expected_answer": "D",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q48": {
+      "explanation": "A caixa está sendo ERGUIDA e o módulo de sua velocidade aumenta de maneira linear com o tempo. Isso significa que sua aceleração para cima é constante.\n\n1) Se v(t) cresce linearmente, a aceleração é a taxa de variação da velocidade: a = Δv/Δt. Essa taxa é constante durante o intervalo mencionado.\n\n2) Sobre a caixa atuam duas forças verticais: tração T da corda, para cima, e peso P = mg, para baixo.\n\n3) Pela segunda lei de Newton no sentido vertical: T − mg = ma. Isolando a tração, T = m(g + a).\n\nComo a massa da caixa, a gravidade e a aceleração não mudam nesse intervalo, o valor de T também não muda.\n\nResposta: alternativa D — a tensão na corda é constante.",
+      "expected_answer": "D",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q49": {
+      "explanation": "A balança não mede diretamente a massa do homem: ela mede a força normal exercida sobre seus pés, chamada de peso aparente. Sua massa é de 60 kg.\n\n1) Quando o elevador acelera para cima, a normal é maior: N₁ = m(g + a) = 720 N. Dividindo por 60, temos g + a = 12 m/s².\n\n2) Quando a aceleração é para baixo, a normal é menor: N₂ = m(g − a) = 456 N. Logo, g − a = 456/60 = 7,6 m/s².\n\n3) Somando as duas equações: 2g = 19,6, então g = 9,8 m/s². Subtraindo: 2a = 4,4, então a = 2,2 m/s².\n\n4) Com velocidade constante, a = 0 e a balança indica o peso usual: N = mg = 60·9,8 = 588 N.\n\n5) Se a balança indicar zero, a normal é nula: homem e elevador estarão em queda livre, acelerando juntos para baixo com g.\n\nRespostas: a) g = 9,8 m/s² e |a| = 2,2 m/s²; b) 588 N; c) queda livre.",
+      "expected_answer": "g = 9,8; a = 2,2; N = 588 N; queda livre",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q6": {
+      "explanation": "O foguete sobe porque seu motor lança gases para baixo. Essa situação é um exemplo da terceira lei de Newton: toda interação envolve duas forças de mesma intensidade e sentidos contrários, aplicadas em corpos DIFERENTES.\n\n1) O foguete exerce uma força para baixo sobre os gases que são expelidos.\n\n2) Ao mesmo tempo, os gases exercem uma força para cima sobre o foguete, impulsionando-o.\n\n3) Portanto, quando a questão pergunta onde atua a reação à força que impulsiona o foguete, essa reação atua nos GASES EXPELIDOS, e não no ar, na Terra ou na torre de lançamento.\n\nResposta: alternativa B — nos gases expelidos. O foguete funciona até no vácuo, pois a propulsão não depende de empurrar o ar atmosférico.",
+      "expected_answer": "B",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-propostos-q3": {
+      "explanation": "O conjunto tem 30 lâmpadas, ligado a 120 V, com corrente total de 4,5 A. A pista decisiva é que, ao retirar uma lâmpada, um terço das lâmpadas apaga.\n\n1) Isso é compatível com três ramos iguais ligados em paralelo. Cada ramo possui dez lâmpadas em série: 30 ÷ 3 = 10. Retirar uma lâmpada interrompe apenas seu ramo, apagando aquelas dez lâmpadas.\n\n2) Como os três ramos são iguais e ligados em paralelo, cada um recebe os mesmos 120 V e conduz um terço da corrente total: i_ramo = 4,5/3 = 1,5 A.\n\n3) Dentro de cada ramo, as dez lâmpadas idênticas estão em série. Assim, a tensão se divide igualmente: U_lâmpada = 120/10 = 12 V. Todas conduzem a mesma corrente de 1,5 A.\n\n4) A potência nominal de uma lâmpada é P = Ui = 12·1,5 = 18 W.\n\nResposta: alternativa B — 18 W por lâmpada.",
+      "expected_answer": "B",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-complementares-q42": {
+      "explanation": "Um amperímetro é utilizado para medir a corrente elétrica que passa por um trecho do circuito. Para medir essa corrente corretamente, ele precisa ser colocado em SÉRIE com o componente ou ramo analisado.\n\n1) A corrente depende da resistência total do circuito. Se o amperímetro acrescentar uma resistência significativa ao ramo, a própria medição modificará a corrente que desejamos descobrir.\n\n2) Por isso, a resistência interna de um amperímetro ideal é zero; nos aparelhos reais, deve ser muito pequena.\n\n3) As outras afirmações confundem as funções dos componentes: fusíveis interrompem correntes excessivas, resistores dissipam energia elétrica, e receptores podem transformar energia elétrica em trabalho mecânico ou outras formas de energia.\n\nResposta: alternativa A — a resistência interna do amperímetro deve ser muito pequena.",
+      "expected_answer": "A",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q4": {
+      "explanation": "Vamos aplicar as leis de Newton às três afirmações, lembrando que velocidade zero em um instante não significa aceleração zero.\n\nI) FALSA. No ponto mais alto do salto, a velocidade vertical é instantaneamente nula, mas a pessoa continua sujeita à gravidade. Sua aceleração permanece g para baixo.\n\nII) FALSA. O carro está em linha reta e com velocidade constante, logo sua aceleração é nula. Pela segunda lei de Newton, a resultante das forças também deve ser zero.\n\nIII) FALSA. Peso e normal atuam sobre o mesmo livro e se equilibram, mas NÃO formam um par de ação e reação. Um par ação-reação envolve forças em corpos diferentes: por exemplo, mesa sobre livro e livro sobre mesa.\n\nComo I, II e III são falsas, nenhuma das afirmações está correta.\n\nResposta: alternativa E.",
+      "expected_answer": "E",
+      "source_verified": false
+    }
+  },
+  "known_pending": {
+    "still_blocked_count": 6,
+    "remaining_not_deeply_reviewed_from_prior_138": 124,
+    "notes": "Os 14 IDs foram selecionados dentre os 138 ainda não reescritos no Round 3. 124 IDs restantes não devem ser alterados automaticamente. Independência da matemática não equivale a comprovação de origem no vestibular."
+  },
+  "guardrails": [
+    "explanation only",
+    "No approval",
+    "No D1",
+    "No merge",
+    "No deploy",
+    "No prompt/options/answer edits",
+    "No autonomous physics solving"
+  ]
+}
