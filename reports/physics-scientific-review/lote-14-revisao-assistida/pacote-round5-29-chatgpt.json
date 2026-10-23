@@ -1,0 +1,189 @@
+{
+  "project": "FIXOU",
+  "lot": 14,
+  "round": 5,
+  "base_commit": "caf93221cf8d5366d003aad3f26280cacea4b024",
+  "branch": "review/ia-auditoria-explanations-only",
+  "author_role": "ChatGPT — responsible for scientific explanations",
+  "executor_role": "OpenCode — literal application only, no solution or scientific editing",
+  "corrections": {
+    "fis-lic-l2-f1-c8-exercicios-propostos-q21": {
+      "explanation": "A mesma força F age primeiro em cada corpo separadamente e, depois, nos dois juntos. A ideia é descobrir as massas em função de F, sem precisar conhecer o valor dessa força.\n\n1) Pela segunda lei de Newton, F = ma, logo m = F/a. Para o primeiro corpo: m₁ = F/5. Para o segundo: m₂ = F/20.\n\n2) Reunindo os corpos, a massa total será M = F/5 + F/20 = 4F/20 + F/20 = F/4.\n\n3) Quando a mesma força atua sobre o conjunto, sua aceleração é a = F/M = F/(F/4) = 4 m/s².\n\nResposta: 4 m/s². É menor do que as acelerações individuais porque a força passa a acelerar uma massa total maior.",
+      "expected_answer": "4 m/s²",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c5-exercicios-propostos-q20": {
+      "explanation": "A questão apresenta a tensão elétrica entre as faces da membrana do neurônio e a corrente que atravessa essa região. Queremos encontrar a resistência.\n\n1) Use a lei de Ohm: R = U/i.\n\n2) Dados: U = 0,07 V = 7 × 10⁻² V e i = 7,0 × 10⁻⁶ A.\n\n3) Substituindo: R = (7 × 10⁻²)/(7 × 10⁻⁶) = 10⁴ Ω = 10.000 Ω.\n\n4) Como o resultado já é uma potência exata de dez, sua ordem de grandeza é 10⁴ Ω.\n\nResposta: alternativa C. Atenção às potências de dez: dividir por 10⁻⁶ faz o expoente aumentar em seis unidades.",
+      "expected_answer": "C — 10⁴ Ω",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c5-exercicios-propostos-q10": {
+      "explanation": "A lâmpada UV opera com potência de 60 W quando recebe uma tensão de 100 V. A pergunta é qual corrente elétrica deve atravessá-la.\n\n1) Para potência elétrica, utilizamos P = U × i, em que P está em watts, U em volts e i em ampères.\n\n2) Isolando a corrente: i = P/U.\n\n3) Substituindo os valores: i = 60/100 = 0,60 A.\n\n4) Conferência: uma corrente de 0,60 A sob 100 V fornece P = 100 × 0,60 = 60 W, exatamente a potência informada.\n\nResposta: alternativa B — 0,60 A. Não é necessário converter para kVA, pois potência e tensão já estão em unidades compatíveis.",
+      "expected_answer": "B — 0,60 A",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q55": {
+      "explanation": "Os dois capacitores estão ligados em série. Nessa associação, há uma regra essencial: depois do carregamento, as cargas armazenadas nos dois capacitores têm o mesmo módulo, ainda que suas capacitâncias sejam diferentes.\n\n1) Portanto, Q₁ = Q₂ = Q.\n\n2) Pela definição de capacitância, C = Q/U, ou seja, U = Q/C. Mantendo a mesma carga, a tensão é maior no capacitor de menor capacitância.\n\n3) Como C₁ = 2 e C₂ = 3 nas unidades indicadas, temos U₁/U₂ = C₂/C₁ = 3/2. Portanto, U₁ é maior que U₂.\n\nResposta: alternativa C — cargas iguais nos dois capacitores e tensão maior em C₁. A associação em série não obriga as tensões a serem iguais; obriga as cargas a terem o mesmo módulo.",
+      "expected_answer": "C — cargas iguais; maior tensão em C1",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Conferir no PDF se a unidade de capacitância é µF: o OCR registra mF."
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q40": {
+      "explanation": "O dinamômetro mede a tração que sustenta o corpo, também chamada de peso aparente. Essa leitura pode ser diferente do peso real quando o elevador acelera.\n\n1) Com aceleração para cima, aplicamos T − mg = ma, então T = m(g + a). Dados T = 960 N, g = 10 m/s² e a = 2 m/s²: 960 = m(10 + 2), logo m = 80 kg.\n\n2) O peso real do corpo na Terra é P = mg = 80 × 10 = 800 N. Essa é a resposta do item a.\n\n3) Na descida com aceleração de 5 m/s² para baixo, a tração diminui: mg − T = ma. Portanto, T = m(g − a) = 80(10 − 5) = 400 N.\n\nRespostas: a) peso real de 800 N; b) leitura de 400 N. O peso real não mudou: quem mudou foi a indicação do dinamômetro.",
+      "expected_answer": "a) 800 N; b) 400 N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c5-revisando-q4": {
+      "explanation": "O enunciado permite estimar a potência média do raio a partir do campo elétrico, da carga deslocada e do tempo da descarga.\n\n1) Primeiro, encontre a diferença de potencial ao longo de 100 m. Como E = 10 kV/m = 10.000 V/m, temos U = E × d = 10.000 × 100 = 1.000.000 V.\n\n2) A corrente média é a carga dividida pelo tempo: i = Q/Δt = 30/(0,001) = 30.000 A.\n\n3) A potência média é P = U × i = 1.000.000 × 30.000 = 3 × 10¹⁰ W.\n\n4) Como 1 GW = 10⁹ W, resulta P = 30 GW.\n\nResposta: alternativa A — 30 GW. A grande potência ocorre porque uma carga elevada é deslocada em um intervalo de tempo muito pequeno.",
+      "expected_answer": "A — 30 GW",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q54": {
+      "explanation": "Na travessia do rio, separamos a velocidade do barco em duas direções perpendiculares: uma atravessa o rio e a outra acompanha a correnteza.\n\n1) A largura é de 4 km, e a velocidade perpendicular às margens vale 2 km/h. É essa componente que determina o tempo de travessia: t = distância/velocidade = 4/2 = 2 h.\n\n2) Durante essas duas horas, a correnteza leva o barco paralelamente às margens, com velocidade de 0,5 km/h. O deslocamento lateral é Δx = 0,5 × 2 = 1 km.\n\nRespostas: a) 2 h para atravessar; b) 1 km de deslocamento ao longo das margens. A correnteza causa deriva, mas não altera o tempo de travessia quando a componente perpendicular da velocidade permanece a mesma.",
+      "expected_answer": "a) 2 h; b) 1 km",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q14": {
+      "explanation": "Como a tartaruga está a 300 m horizontalmente e a flecha permanece 30 s no ar, podemos descobrir separadamente as componentes horizontal e vertical da velocidade inicial.\n\n1) Na horizontal não há aceleração, desprezando o ar. Logo, v₀x = 300/30 = 10 m/s.\n\n2) Considerando lançamento e chegada na mesma altura, o movimento vertical é simétrico: a flecha sobe durante 15 s e desce durante outros 15 s.\n\n3) Na altura máxima, vᵧ = 0. Pela relação vᵧ = v₀y − gt: 0 = v₀y − 10 × 15, então v₀y = 150 m/s.\n\n4) O ângulo de lançamento satisfaz tan θ = v₀y/v₀x = 150/10 = 15.\n\nResposta: alternativa A — θ = arctan(15). O ângulo fica próximo de 86,2°, pois a componente vertical inicial é muito maior que a horizontal.",
+      "expected_answer": "A — θ = arctan(15)",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Os dados pressupõem que tartaruga e lançamento estão à mesma altura; checar expressão da alternativa no OCR."
+    },
+    "fis-lic-l2-f2-c6-exercicios-propostos-q5": {
+      "explanation": "Os dois resistores são idênticos e estão ligados em paralelo a uma bateria ideal. Em paralelo, cada resistor recebe toda a tensão da bateria; não é necessário somar as tensões.\n\n1) Cada resistor tem resistência de 5,0 kΩ = 5.000 Ω.\n\n2) A corrente medida em cada resistor é 2,0 mA = 0,002 A.\n\n3) Pela lei de Ohm, a tensão em um resistor é U = R × i = 5.000 × 0,002 = 10 V.\n\n4) Como os resistores estão em paralelo, essa também é a diferença de potencial da bateria.\n\nResposta: alternativa B — 10 V. Se quiséssemos a corrente TOTAL fornecida pela bateria, somaríamos as correntes dos ramos: 2 + 2 = 4 mA. Mas a pergunta é sobre a tensão.",
+      "expected_answer": "B — 10 V",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Confirmar no enunciado a substituição OCR de kV por kΩ."
+    },
+    "fis-lic-l2-f2-c5-exercicios-complementares-q24": {
+      "explanation": "A chave do chuveiro muda a resistência elétrica, mas a rede continua fornecendo a mesma tensão de 220 V. Por isso, devemos comparar as potências elétricas em cada posição.\n\n1) A potência de um resistor alimentado com tensão constante é P = U²/R. Portanto, diminuir a resistência aumenta a potência.\n\n2) No verão, R = 22 Ω. No inverno, R = 11 Ω, metade da resistência inicial.\n\n3) Assim, P_inverno/P_verão = R_verão/R_inverno = 22/11 = 2. A potência do chuveiro dobra.\n\n4) Como a vazão de água é a mesma, admitindo perdas térmicas desprezíveis, o aumento de temperatura da água também dobra: de 5 °C para 10 °C.\n\nResposta: alternativa C — 10 °C. O importante é comparar a VARIAÇÃO de temperatura, e não a temperatura absoluta da água.",
+      "expected_answer": "C — 10 °C",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "OCR registrou resistências em V, mas a unidade fisicamente correta é Ω."
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q29": {
+      "explanation": "A corrente passa primeiro pelo resistor de 10 kΩ entre X e Y e depois pelo resistor de 30 kΩ entre Y e Z. Como não há ramificações entre os pontos indicados, esses resistores estão em série.\n\n1) Pelos valores de potencial, X está a +12 V e Z a −12 V. Logo, a diferença total é 12 − (−12) = 24 V.\n\n2) A resistência total é 10 + 30 = 40 kΩ. Pela lei de Ohm, i = 24/40.000 = 0,0006 A = 0,6 mA.\n\n3) A queda de potencial de X até Y é U_XY = i × R_XY = 0,0006 × 10.000 = 6 V.\n\n4) Como V_X = 12 V, segue V_Y = 12 − 6 = 6 V.\n\nResposta: alternativa C — 6 V. Atenção ao sinal de V_Z: o banco o registrou como '212 V', indicando provável perda do sinal negativo no OCR.",
+      "expected_answer": "C — 6 V",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Restaurar -12 V no prompt antes de liberar: OCR exibe 212 V."
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q42": {
+      "explanation": "O projétil percorre 24 m na horizontal e encontra o prato 2 s após o disparo, a uma altura de 12 m. Vamos obter as duas componentes da velocidade inicial.\n\n1) Movimento horizontal: v₀x = Δx/t = 24/2 = 12 m/s.\n\n2) Movimento vertical: y = v₀y t − gt²/2. Substituindo y = 12 m, t = 2 s e g = 10 m/s²: 12 = 2v₀y − 5 × 4, então 2v₀y = 32 e v₀y = 16 m/s.\n\n3) Módulo da velocidade inicial: v₀ = √(v₀x² + v₀y²) = √(12² + 16²) = √400 = 20 m/s.\n\n4) Como sen θ = v₀y/v₀ = 16/20 = 0,8, temos θ = arcsen(0,8), aproximadamente 53,1°.\n\nRespostas: a) 20 m/s; b) θ = arcsen(0,8). O movimento vertical do prato não precisa ser calculado, pois o instante e a altura de encontro já foram fornecidos.",
+      "expected_answer": "a) 20 m/s; b) θ = arcsen(0,8)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q22": {
+      "explanation": "A altura máxima de um lançamento depende apenas da componente VERTICAL da velocidade inicial. Como a gravidade é a mesma nos dois experimentos, podemos comparar diretamente as fórmulas.\n\n1) No lançamento totalmente vertical, toda a velocidade v₀ aponta para cima. A altura máxima é H₁ = v₀²/(2g).\n\n2) No lançamento inclinado de θ em relação à horizontal, a componente vertical é v₀senθ. A nova altura é H₂ = (v₀senθ)²/(2g) = v₀²sen²θ/(2g).\n\n3) Subtraindo as alturas: H₁ − H₂ = v₀²(1 − sen²θ)/(2g).\n\n4) Pela identidade trigonométrica sen²θ + cos²θ = 1, obtemos H₁ − H₂ = v₀²cos²θ/(2g).\n\nResposta: alternativa A. A diferença é não negativa: com a mesma rapidez inicial, o lançamento vertical atinge altura maior ou igual à do inclinado.",
+      "expected_answer": "A — v₀²cos²θ/(2g)",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Confirmar a legibilidade das alternativas, corrompidas no OCR."
+    },
+    "fis-lic-l2-f3-c8-exercicios-propostos-q2": {
+      "explanation": "O espelho plano forma imagens porque devolve a luz que chega à sua superfície. Esse fenômeno se chama REFLEXÃO.\n\n1) Um raio luminoso chega ao espelho: é o raio incidente.\n\n2) A luz retorna ao mesmo meio: é o raio refletido. Em relação à linha perpendicular ao espelho (normal), vale a lei da reflexão: ângulo de incidência = ângulo de reflexão.\n\n3) A imagem vista atrás do espelho é virtual e resulta do prolongamento geométrico dos raios refletidos.\n\nResposta: alternativa A — reflexão. Refração é a passagem da luz de um meio para outro, enquanto difração e interferência são fenômenos ondulatórios diferentes.",
+      "expected_answer": "A — reflexão",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-propostos-q18": {
+      "explanation": "Os mesmos três resistores R são ligados primeiro em paralelo e depois em série, sempre à mesma tensão da bateria. A corrente total depende da resistência equivalente.\n\n1) No paralelo, três resistores idênticos equivalem a R_p = R/3. Pela lei de Ohm, a corrente inicial é i₀ = V/(R/3) = 3V/R.\n\n2) Na série, a resistência total será R_s = 3R. A nova corrente é i = V/(3R).\n\n3) Compare as correntes: i/i₀ = [V/(3R)]/[3V/R] = 1/9.\n\nLogo, i = i₀/9.\n\nResposta: alternativa A. A mudança de paralelo para série aumenta a resistência equivalente por um fator 9 (de R/3 para 3R); mantendo a tensão, a corrente total fica nove vezes menor.",
+      "expected_answer": "A — i₀/9",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-propostos-q61": {
+      "explanation": "A pergunta descreve o estado FINAL do carregamento do capacitor em um circuito de corrente contínua com resistor em série.\n\n1) Enquanto o capacitor está carregando, existe corrente pelo resistor e parte da tensão da bateria aparece sobre ele.\n\n2) Quando o capacitor está completamente carregado, deixa de haver corrente contínua no circuito ideal: i = 0.\n\n3) A tensão no resistor é U_R = R × i = 0. Como os dois elementos estão em série com a bateria de 12 V, toda a diferença de potencial fica sobre o capacitor: U_C = 12 V.\n\nResposta: alternativa A — 12 V no capacitor e 0 V no resistor. Não confunda o instante inicial de carregamento com a situação estacionária solicitada.",
+      "expected_answer": "A — 12 V e 0 V",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "O enunciado apresenta 3 V e 4 mF para componentes cujas unidades de resistência/capacitância devem ser restauradas."
+    },
+    "fis-lic-l2-f2-c7-exercicios-propostos-q51": {
+      "explanation": "A professora carrega um capacitor conhecido e depois o conecta em paralelo com outro, inicialmente descarregado. Desligados da fonte, os capacitores compartilham a carga total, e ambos terminam com a mesma tensão.\n\n1) Capacitor conhecido: C₁ = 150 µF e tensão inicial U₁ = 100 V. Sua carga inicial é Q_inicial = C₁U₁.\n\n2) Após a conexão em paralelo, a tensão comum é U_final = 60 V. Pela conservação da carga: C₁U₁ = (C₁ + C₂)U_final.\n\n3) Substituindo: 150 × 100 = (150 + C₂) × 60.\n\n4) Dividindo por 60: 250 = 150 + C₂. Logo, C₂ = 100 µF.\n\nResposta: alternativa C — 100 µF. Usamos o mesmo prefixo de capacitância nos dois lados, por isso ele não interfere na álgebra.",
+      "expected_answer": "C — 100 µF",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Conferir no documento original o símbolo de unidade, transcrito como rF no OCR, e a condição de capacitor desconhecido inicialmente descarregado."
+    },
+    "fis-lic-l2-f3-c7-exercicios-complementares-q12": {
+      "explanation": "A formação de um eclipse mostra o que acontece quando a luz se propaga em linhas aproximadamente retas e encontra um corpo opaco.\n\n1) A luz do Sol viaja até a Terra e a Lua. Quando um desses corpos fica no caminho dos raios que chegariam a determinada região, parte da luz é bloqueada.\n\n2) Surgem, assim, regiões de sombra e, pela extensão da fonte luminosa, de penumbra.\n\n3) Esse bloqueio geométrico explica tanto o eclipse solar quanto o lunar, respeitando a propagação retilínea nos meios adequados.\n\nResposta: alternativa D — formação de eclipses. Difração, polarização e interferência não são a explicação principal para a sombra geométrica produzida por um eclipse.",
+      "expected_answer": "D — formação de eclipses",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-complementares-q5": {
+      "explanation": "As duas lâmpadas estão em paralelo na mesma rede de 220 V. Portanto, cada uma recebe a MESMA tensão. O que muda é a resistência de seus filamentos.\n\n1) Para um fio condutor, R = ρL/A, em que ρ é a resistividade, L o comprimento e A a área da seção transversal.\n\n2) Os filamentos têm mesmo material e comprimento. O filamento de L2 é mais grosso, ou seja, tem maior área A. Portanto, apresenta menor resistência.\n\n3) Sob a mesma tensão, a potência é P = U²/R. Quanto menor R, maior a potência dissipada, no modelo usado pela questão.\n\n4) Assim, L2 dissipa mais potência e apresenta maior brilho. Desligar L1 não altera a tensão em L2 numa fonte ideal.\n\nResposta: alternativa D — L2 brilha mais que L1.",
+      "expected_answer": "D — lâmpada L2 brilha mais",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-propostos-q21": {
+      "explanation": "Uma das três pilhas da lanterna foi colocada ao contrário. Isso diminui a força eletromotriz resultante, mas as resistências internas continuam somando, pois as três pilhas permanecem em série.\n\n1) A lâmpada é especificada para 4,5 V e 4,5 W. Pela relação P = U²/R, sua resistência nominal é R_lâmpada = 4,5²/4,5 = 4,5 Ω.\n\n2) Duas pilhas contribuem com +1,5 V cada, e a invertida com −1,5 V. A força eletromotriz resultante é E = 1,5 + 1,5 − 1,5 = 1,5 V.\n\n3) As resistências internas somam r = 3 × 0,5 = 1,5 Ω. A resistência total é R_total = 4,5 + 1,5 = 6 Ω.\n\n4) A corrente é i = E/R_total = 1,5/6 = 0,25 A.\n\nResposta: alternativa A — 0,25 A. Consideramos a lâmpada como resistor de resistência nominal constante, como pressupõe o exercício.",
+      "expected_answer": "A — 0,25 A",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "No prompt, 0,5 V de resistência interna é erro de OCR; a unidade correta é Ω."
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q10": {
+      "explanation": "No ponto mais alto de um lançamento oblíquo, a gravidade reduziu a componente vertical da velocidade a zero, mas a componente horizontal continua existindo.\n\n1) Portanto, os 30 m/s medidos no ponto mais alto são a velocidade horizontal: v₀x = 30 m/s.\n\n2) Essa componente vale v₀cos60°. Assim, 30 = v₀ × 0,5 e v₀ = 60 m/s.\n\n3) Sem resistência do ar, a energia mecânica se conserva. Como o projétil retorna à mesma altura do lançamento, seu módulo de velocidade no impacto é igual ao módulo inicial.\n\nResposta: 60 m/s. O sentido da componente vertical se inverte no retorno, mas a rapidez total mantém o mesmo valor.",
+      "expected_answer": "60 m/s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q25": {
+      "explanation": "Para calcular a tração no cabo, analise apenas o REBOQUE, que tem massa de 16 toneladas. O caminhão exerce nele uma força horizontal por meio do cabo.\n\n1) Converta a massa para quilogramas: 16 toneladas = 16.000 kg.\n\n2) Converta a aceleração: 200 cm/s² = 2,0 m/s².\n\n3) Desprezando as forças resistivas horizontais, a tração é a força resultante que acelera o reboque. Pela segunda lei de Newton, T = ma.\n\n4) Substituindo: T = 16.000 × 2,0 = 32.000 N = 3,2 × 10⁴ N.\n\nResposta: 3,2 × 10⁴ N. Não é necessário conhecer a massa do caminhão, porque a força pedida atua sobre o reboque.",
+      "expected_answer": "3,2 × 10⁴ N",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "A igualdade T=ma pressupõe resistências ao deslocamento desprezíveis, hipótese não explicitada com clareza no texto extraído."
+    },
+    "fis-lic-l2-f2-c6-exercicios-propostos-q10": {
+      "explanation": "O experimento permite descobrir as duas resistências sem conhecer antecipadamente cada valor.\n\n1) Ligados em série, os resistores são percorridos por 0,300 A sob tensão de 12 V. Assim, R₁ + R₂ = U/i = 12/0,300 = 40 Ω.\n\n2) Ligados em paralelo, a fonte registra 6 V e 0,800 A. A resistência equivalente é R_eq = 6/0,800 = 7,5 Ω.\n\n3) Para dois resistores em paralelo: R_eq = R₁R₂/(R₁ + R₂). Portanto, R₁R₂ = 7,5 × 40 = 300 Ω².\n\n4) Procuramos dois números com soma 40 e produto 300: 10 e 30. Logo, os resistores são de 10 Ω e 30 Ω.\n\n5) Razão entre o menor e o maior: 10/30 = 1/3.\n\nResposta: alternativa C. É importante usar 12 V na ligação em série e 6 V na ligação em paralelo; o enunciado informa tensões diferentes nos dois ensaios.",
+      "expected_answer": "C — 1/3",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-propostos-q17": {
+      "explanation": "O ponto-chave é que uma lâmpada LED defeituosa apresenta circuito interno interrompido, equivalente a uma abertura no fio.\n\n1) Em uma associação em SÉRIE, existe um único caminho para a corrente elétrica atravessar todas as lâmpadas.\n\n2) Se uma única lâmpada desse caminho está aberta, a corrente fica interrompida no circuito inteiro.\n\n3) Sem corrente elétrica, nenhuma das 100 lâmpadas acende.\n\n4) Em PARALELO, porém, cada ramo pode funcionar independentemente: uma lâmpada aberta não impede a passagem de corrente pelos outros ramos ligados à fonte.\n\nResposta: alternativa A — o enfeite não acenderá caso as lâmpadas sejam ligadas em série. A afirmação não significa que qualquer ligação das 100 lâmpadas deixará o enfeite apagado.",
+      "expected_answer": "A — em série, nenhuma lâmpada acende",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c9-exercicios-complementares-q47": {
+      "explanation": "A hipermetropia dificulta enxergar objetos próximos. A lente corretiva deve permitir que um livro a 25 cm seja visto como se estivesse no ponto próximo que o olho consegue focalizar, situado a 200 cm.\n\n1) A distância do objeto à lente é p = +25 cm. Como a imagem deve ser virtual e do mesmo lado do objeto, sua distância é p′ = −200 cm.\n\n2) Pela equação das lentes delgadas, 1/f = 1/p + 1/p′.\n\n3) Substituindo: 1/f = 1/25 − 1/200 = (8 − 1)/200 = 7/200 cm⁻¹.\n\n4) Portanto, f = 200/7 ≈ 28,6 cm.\n\nResposta: alternativa C — cerca de 29 cm. O foco positivo corresponde a uma lente convergente, adequada à correção indicada.",
+      "expected_answer": "C — aproximadamente 29 cm",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c6-exercicios-complementares-q14": {
+      "explanation": "A fonte mantém 18 V. O resistor R₁ tem resistência de 6 Ω e é percorrido por 1 A; os outros resistores conduzem 2 A e 3 A. Esses valores permitem identificar a associação de correntes.\n\n1) Pela lei de Ohm, a tensão em R₁ é U₁ = 6 Ω × 1 A = 6 V.\n\n2) Como a corrente em R₃ é 3 A, igual à soma das correntes em R₁ e R₂ (1 + 2 A), R₃ está no trecho comum em série com os dois ramos paralelos R₁ e R₂.\n\n3) Os dois ramos paralelos têm a mesma tensão de 6 V. Da tensão total de 18 V, restam U₃ = 18 − 6 = 12 V sobre R₃.\n\n4) Pela lei de Ohm, R₃ = U₃/i₃ = 12/3 = 4 Ω.\n\nResposta: alternativa D — 4 Ω. A chave é conservar a corrente no ponto de bifurcação e lembrar que tensões em paralelo são iguais.",
+      "expected_answer": "D — 4 Ω",
+      "source_verified": false,
+      "pending_source_or_ocr_review": "Corrigir no enunciado o símbolo V aplicado a resistências, que deve ser Ω."
+    },
+    "fis-lic-l2-f2-c7-exercicios-propostos-q62": {
+      "explanation": "Em uma ligação em série, a capacitância equivalente sempre fica menor que qualquer uma das capacitâncias individuais positivas.\n\n1) Para dois capacitores em série, usamos 1/C_eq = 1/C₁ + 1/C₂.\n\n2) Reorganizando a expressão, C_eq = C₁C₂/(C₁ + C₂).\n\n3) Como C₁ + C₂ é maior que C₁ e também maior que C₂, o quociente C₁C₂/(C₁ + C₂) fica menor que cada capacitância separada.\n\n4) Por exemplo, se C₁ = 2 µF e C₂ = 3 µF, a associação terá C_eq = 6/5 = 1,2 µF, menor que 2 e que 3 µF.\n\nResposta: alternativa A. Ao contrário dos capacitores em paralelo, os capacitores em série têm capacitância equivalente REDUZIDA.",
+      "expected_answer": "A — menor que as duas capacitâncias",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q8": {
+      "explanation": "O foguete desce, mas os retropropulsores fazem a velocidade de queda diminuir. Isso significa que a aceleração resultante deve apontar para cima, mesmo que o movimento ainda seja para baixo.\n\n1) Atuam principalmente o peso P = mg, para baixo, e a força de retropropulsão F, para cima.\n\n2) Para reduzir o módulo da velocidade de queda, a força resultante deve apontar para cima: F − mg > 0. Portanto, F precisa ser MAIOR que o peso.\n\n3) Quando o propulsor fica pairando, sua velocidade e sua aceleração são nulas. As forças se equilibram: F − mg = 0, logo F = mg.\n\nResposta: alternativa B — maior que o peso durante a frenagem e igual ao peso enquanto paira. Dica: sentido da velocidade e sentido da aceleração não precisam ser iguais.",
+      "expected_answer": "B — maior; igual",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q17": {
+      "explanation": "O projétil é disparado horizontalmente na direção do centro de um alvo vertical de 1,0 m de altura. Para ainda acertar o alvo, pode cair até a borda inferior, ou seja, no máximo 0,50 m.\n\n1) A velocidade vertical inicial é nula. A queda vertical é Δy = gt²/2.\n\n2) Usando Δy = 0,50 m e g = 10 m/s²: 0,50 = 5t², então t² = 0,10 e t = √0,10 = 1/√10 s.\n\n3) Horizontalmente, a velocidade permanece 500 m/s. Logo, a distância máxima é x = v₀x t = 500/√10.\n\n4) Racionalizando: x = 50√10 m, aproximadamente 158 m.\n\nResposta: 50√10 m. Quanto mais distante estiver o alvo, maior o tempo de queda; após esse limite, o projétil passará abaixo dele.",
+      "expected_answer": "50√10 m (aprox. 158 m)",
+      "source_verified": false
+    }
+  },
+  "blocked_or_unresolved_examples": [
+    {
+      "id": "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+      "reason": "Potência de motor de 500 W não diz inequivocamente se potência é fornecida ou útil; resultado de energia perdida depende dessa distinção. Conferir documento-fonte antes de alterar."
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+      "reason": "O enunciado afirma sen60° = 0,8, valor trigonométrico incorreto. A alternativa atual segue a aproximação inconsistente. Preservar para auditoria de enunciado e gabarito."
+    }
+  ],
+  "guardrails": {
+    "editable_fields": [
+      "explanation"
+    ],
+    "approval": "manual_only",
+    "no_merge": true,
+    "no_deploy": true,
+    "no_d1": true,
+    "no_source_claims": true,
+    "do_not_modify_enunciado_answers_images": true
+  },
+  "review_note": "Correções feitas por leitura do enunciado/alternativas disponíveis e dedução independente. Autenticidade das provas oficiais não foi comprovada neste pacote."
+}

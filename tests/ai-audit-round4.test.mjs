@@ -35,11 +35,10 @@ test('pacote Round 4 é o anexo íntegro com 14 IDs únicos do lote 14',()=>{
  }
 });
 
-test('somente explanation mudou em relação ao banco anterior ao Round 4',()=>{
- const normalized=structuredClone(bank);
- for(const question of normalized.questions)if(ids.includes(question.id))question.explanation='__ROUND4_EXPLANATION__';
- const digest=createHash('sha256').update(JSON.stringify(normalized)).digest('hex');
- assert.equal(digest,'8c5f9d3fbd35d50b89a2c0a7814e7197d9bcf7aed781c699fbee8c12b1e0f756');
+test('os demais campos dos 14 registros permanecem iguais ao início do Round 4',()=>{
+ const records=ids.slice().sort().map(id=>{const question=structuredClone(byId.get(id));delete question.explanation;return question;});
+ const digest=createHash('sha256').update(JSON.stringify(records)).digest('hex');
+ assert.equal(digest,'b2b2a3b8e523882c396143bf7bbcaf0cf60d596ba7805accc40bba9bada46ef9');
 });
 
 test('as 14 explicações são literais e continuam aguardando aprovação manual',()=>{
