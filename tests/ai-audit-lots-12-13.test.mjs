@@ -6,6 +6,7 @@ import path from 'node:path';
 import {AI_AUDIT_BATCH} from '../src/ai-audit-batch.js';
 import {AI_AUDIT_LOTS} from '../src/ai-audit-lots.js';
 import {aiAuditCompare,aiAuditMembership,aiAuditScientificResult,aiAuditStatus,reviewScreen} from '../src/screens-review.js';
+import {escapeHTML} from '../src/utils.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const bank=JSON.parse(readFileSync(path.join(root,'content/bank.json'),'utf8'));
@@ -16,6 +17,17 @@ const lot12=new Set(AI_AUDIT_LOTS.lot12.ids);
 const lot13=new Set(AI_AUDIT_LOTS.lot13.ids);
 const lot14=new Set(AI_AUDIT_LOTS.lot14.ids);
 const overlap12=[...lot12].filter(id=>historical.has(id));
+const DIVERG_LOT14=[
+ 'fis-lic-l2-f1-c6-bncc-em-foco-q1',
+ 'fis-lic-l2-f1-c6-bncc-em-foco-q2',
+ 'fis-lic-l2-f1-c6-exercicios-complementares-q36',
+ 'fis-lic-l2-f1-c6-exercicios-complementares-q48',
+ 'fis-lic-l2-f1-c7-exercicios-complementares-q13',
+ 'fis-lic-l2-f3-c7-revisando-q1',
+ 'fis-lic-l2-f3-c8-exercicios-propostos-q42',
+ 'fis-lic-l2-f1-c8-exercicios-complementares-q16',
+ 'fis-lic-l2-f1-c7-exercicios-complementares-q31'
+];
 
 function render(extra={}){
  return reviewScreen({bank,reviewFilter:'ai_audit',reviewSearch:'',reviewIndex:0,editingQuestion:null,editingFields:{},reviewAiFilter:'all',reviewAiLotFilter:'all',...extra});
@@ -94,19 +106,23 @@ test('filtros por decisão continuam combináveis com o filtro de lote',()=>{
  assert.equal(rows(reviewScreen({...base,reviewAiFilter:'awaiting'})),198);
 });
 
-test('cinco divergências reais do lote 12 recebem destaque e lotes 13 e 14 têm zero',()=>{
+test('divergências documentadas recebem destaque: 5 no lote 12, 9 no lote 14 e zero no lote 13',()=>{
  assert.equal(AI_AUDIT_LOTS.lot12.divergenceIds.length,5);
  assert.equal(AI_AUDIT_LOTS.lot13.divergenceIds.length,0);
- assert.equal(AI_AUDIT_LOTS.lot14.divergenceIds.length,0);
- for(const id of AI_AUDIT_LOTS.lot12.divergenceIds){
-  const html=render({reviewAiLotFilter:'lot12',reviewSearch:id});
-  assert.ok(html.includes('Divergência documentada'),id);
-  assert.ok(html.includes(AI_AUDIT_LOTS.lot12.manifestById[id].divergence),id);
+ assert.deepEqual([...AI_AUDIT_LOTS.lot14.divergenceIds].sort(),[...DIVERG_LOT14].sort());
+ for(const id of DIVERG_LOT14)assert.equal(aiAuditScientificResult(id,'lot14'),'divergencia_documentada',id);
+ for(const key of ['lot12','lot14']){
+  for(const id of AI_AUDIT_LOTS[key].divergenceIds){
+   const html=render({reviewAiLotFilter:key,reviewSearch:id});
+   assert.ok(html.includes('Divergência documentada'),id);
+   assert.ok(html.includes(escapeHTML(AI_AUDIT_LOTS[key].manifestById[id].divergence)),id);
+   assert.ok(html.includes('o gabarito não foi alterado'),id);
+  }
  }
 });
 
 test('lista e detalhe identificam lote, resultado científico, status e origem',()=>{
- const corrected=AI_AUDIT_LOTS.lot14.ids[0];
+ const corrected=AI_AUDIT_LOTS.lot14.ids.find(id=>!AI_AUDIT_LOTS.lot14.divergenceIds.includes(id));
  const correctedHtml=render({reviewAiLotFilter:'lot14',reviewSearch:corrected});
  assert.ok(correctedHtml.includes('Lote 14'));
  assert.ok(correctedHtml.includes('Corrigida por IA'));

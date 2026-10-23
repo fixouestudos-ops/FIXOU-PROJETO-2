@@ -149,3 +149,54 @@ Notas do pacote mantidas como proposta de metadados (sem edição no banco): UEM
 - `validate-bank` ✓ (3513 questões · 203 conceitos) · `npm test` **328/328** ✓ · `npm run build` ✓ hash **`75432fad`**.
 
 **Saldo do lote 14:** 190/200 com resolução aplicada (181 + 9 do pacote ChatGPT); 10 permanecem bloqueadas. O lote **não está cientificamente concluído** (regra de segurança do pacote: não declarar conclusão com esta evidência limitada). Aprovação de gabaritos divergentes e liberação das 9 dependem de etapa separada do Owner/ChatGPT.
+
+## Etapa 4 — Pacote round2 (4 resoluções + 6 bloqueios + interface + teste de divergências)
+
+**Pacote:** `FIXOU_lote14_pendencias10_ChatGPT_2026-10-22.json` (artefato: `pacote-round2-10-chatgpt.json`). Editor: ChatGPT. Executor: OpenCode. Branch inicial: `6a1d11a`.
+
+### 4 correções aplicadas (somente explanation, literal)
+
+| ID | Resultado esperado | Alerta de imagem | Situação da fonte |
+|---|---|---|---|
+| `f1-c6-exercicios-complementares-q17` | E (apenas afirmações I e III) | figuras A, B, C ainda precisam ser anexadas no cadastro | atribuída à PUC-Minas; gabarito corroborado por material didático, prova oficial não localizada |
+| `f1-c6-exercicios-propostos-q3` | B (diagramas II e IV) | anexar diagramas I–IV ao cadastro antes de publicar | atribuída à UFPB 2007; diagramas recuperados em material de estudo, prova oficial não localizada |
+| `f1-c8-exercicios-complementares-q33` | a) 7,5 m/s²; b) 60 N; c) 12,5 m/s² | figura da prova/material precisa ser vinculada ao cadastro | PUC-Rio 1999 identificada em material Fundação Cecierj; esquema recuperado |
+| `f2-c7-exercicios-complementares-q23` | 5 V | vincular circuito original ao cadastro | UFPE 2007, 2ª etapa de Física; enunciado, valores e justificativa localizados em prova com solução |
+
+- Inserção literal em `content/bank.json` + `after.explanation` em `lote-14-patches.json` + regeneração de `ai-audit-lots.js`. QA: 4/4 texto idêntico ao pacote, somente `explanation`, 3509 restantes byte-idênticas (190 anteriores + 6 bloqueadas + divergências intactas).
+- Exibição na IA Auditoria: 4/4 visíveis no lote 14 com resolução, meta do pacote, alerta de imagem, link da fonte e status “Aguardando auditoria”; 0 aprovações automáticas.
+
+### 6 bloqueios preservados (pendências documentadas na IA Auditoria)
+
+- `f3-c7-exercicios-complementares-q7` (not_ready_source_and_visual): Problema autoral do livro, sem vestibular atribuído; falta extensão da fonte luminosa no cadastro e a figura; gabarito indica penumbra total de 1 m, mas não se deve fabricar dimensões a partir do resultado.
+- `f3-c7-exercicios-complementares-q8` (not_ready_source_and_visual): Problema autoral do livro, sem vestibular atribuído; figura e largura da fonte luminosa são imprescindíveis; gabarito indica sombra de 75 cm, mas os dados textuais não bastam para derivação independente.
+- `f1-c6-exercicios-propostos-q11` (not_ready_corrupt_prompt): A, B, C e equação vetorial estão corrompidos pelo OCR, sem transcrição inequívoca; enunciado não tem vestibular comprovado; não se deve inferir os sinais pelo gabarito.
+- `f3-c9-bncc-em-foco-q3` (not_ready_missing_data): Valores de ESF/vergência da receita não foram preservados, e o enunciado contém fragmentos de páginas não relacionadas. O resultado qualitativo (lente divergente para vergência negativa) não comprova a receita original. Não há vestibular atribuído.
+- `f3-c7-bncc-em-foco-q1` (not_a_complete_question): Enunciado é orientação procedimental de traçado de imagens, não uma pergunta completa; gabarito fala de fontes coloridas de outra questão. Não possui origem de vestibular demonstrada.
+- `f3-c7-bncc-em-foco-q2` (not_a_complete_question): Enunciado é orientação procedimental de traçado de raios, sem objeto/espelho/posição; gabarito discute teoria da chama nos olhos, de outra questão. Não possui origem de vestibular demonstrada.
+
+- Byte-idênticas ao baseline `dc80695`; sem resoluções novas; seção “Dados do pacote científico” exibe o motivo do bloqueio no painel; nenhuma aprovada ou liberada (todas “Aguardando auditoria”).
+
+### Cobertura
+
+- 194/200 resoluções aplicadas = 164 (etapa 1) + 17 (etapa 2) + 9 (etapa 3) + 4 (etapa 4); 6 bloqueadas = resto das 36 pendências originais (verificado por conjunto em `qa-round2.mjs`). Cobertura, **não** aprovação científica.
+
+### Interface da IA Auditoria (seção 3 — melhoria autorizada)
+
+- Novo módulo gerado `src/ai-audit-meta.js` (19 IDs) a partir dos artefatos dos dois pacotes; render em `src/screens-review.js` (seção condicional “Dados do pacote científico”).
+- Exibidos apenas campos existentes: resultado calculado pelo ChatGPT, classificação da revisão, origem declarada, situação da fonte, links da prova/documento (somente http/https), alerta de imagem obrigatória, pendência de liberação e motivo de bloqueio. Nenhum metadado ausente é exibido; nota do painel registra que são dados do pacote sujeitos a conferência manual e que não configuram aprovação/liberação automática.
+- Resolução anterior/proposta (diff before/after), gabarito atual, divergências documentadas e aprovação manual já existentes permanecem inalterados; lógica de aprovação intocada.
+
+### Divergências no lote 14 (seção 4 — atualização pontual autorizada)
+
+- `reports/physics-scientific-review/lote-14-manifest.json`: campo `divergence` preenchido nas 9 questões com divergência documentada no pacote 9 (somente onde era `null`; registros originais preservados). Nenhum gabarito/enunciado alterado.
+- `src/ai-audit-lots.js` regenerado (derived `divergenceIds` = 9).
+- `tests/ai-audit-lots-12-13.test.mjs`: teste de divergências **ampliado** (mantidas as verificações de lot12=5 e lot13=0; adicionadas: lista exata das 9 do lote 14, rótulo `divergencia_documentada` via `aiAuditScientificResult` e render do bloco com texto escapado + nota “gabarito não foi alterado”); ajuste pontual em “lista e detalhe…” para escolher um ID não divergente (`ids.find(...)`) mantendo a asserção de rótulo. Nenhuma cobertura removida.
+
+### Validações da etapa 4
+
+- `scripts/validar-round2.mjs`: 0 pendências (estrutura/IDs/banco/lote14).
+- `scripts/qa-round2.mjs`: 0 pendências (banco/patches/manifest/lots/meta/render/arquivos).
+- `validate-bank` ✓ · `npm test` ✓ · `npm run build` ✓ (hash registrado no commit).
+
+**Saldo do lote 14:** 194/200 com resolução aplicada; 6 bloqueadas documentadas. Lote **não** declarado cientificamente concluído; aprovação segue 100% manual.

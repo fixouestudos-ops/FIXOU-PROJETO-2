@@ -20,7 +20,7 @@
       "prompt"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito atual é de aviação, incompatível com o lançamento oblíquo; a resolução já recuperada foi calculada independentemente.",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -44,7 +44,7 @@
       "prompt"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito é de outra questão; a resposta correta do lançamento horizontal é 6 m/s.",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -131,7 +131,7 @@
       "prompt"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito 2 m/s contradiz x=t+3, y=5−t, cujas derivadas dão velocidade de módulo √2 m/s.",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -201,7 +201,7 @@
       "options"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito C (índice 2) contradiz o cálculo; alternativa correta A (índice 0).",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -599,7 +599,7 @@
       "explanation"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito C (índice 2) contradiz H1/H2=tan²θ1; correta D (índice 3).",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -756,7 +756,7 @@
       "prompt"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "A equação da altura y=45m fornece t=1s e t=9s; 9s vale somente para interceptação no ramo descendente, a posição do prédio não consta claramente no texto.",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -1412,7 +1412,7 @@
       "prompt"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Enunciado traz massa terrestre 10^−4 kg, impossível; resultado 10^−21 m/s² exige ordem de 10^24 kg; não corrigir enunciado automaticamente.",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -3843,7 +3843,7 @@
       "explanation"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito A (índice 0) discorda do eclipse lunar de 28/10/2023; correta B (índice 1).",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {
@@ -4163,7 +4163,7 @@
       "explanation"
     ],
     "sourceReconstructed": false,
-    "divergence": null,
+    "divergence": "Gabarito A (índice 0) contradiz o espelho convexo para porteiro e côncavo para dentista; correta D (índice 3).",
     "administrativeStatus": "awaiting_ai_audit"
   },
   {

@@ -1,0 +1,110 @@
+{
+  "project": "FIXOU",
+  "lot": 14,
+  "created_by": "ChatGPT - projeto Victor Elias",
+  "version": "2026-10-22-round2",
+  "policy": "OpenCode apenas implementa conteúdo pronto; nenhuma geração, reescrita ou solução por OpenCode",
+  "git_ref": "review/ia-auditoria-explanations-only",
+  "decision": "registrar na IA Auditoria como propostas de explicação e problemas de origem; não aprovar nem liberar automaticamente",
+  "count_total": 10,
+  "count_explanation_proposals": 4,
+  "count_blocked": 6,
+  "corrections": [
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-complementares-q17",
+      "decision": "explanation_review_proposal",
+      "answer_expected": "E (apenas afirmações I e III)",
+      "source_status": "atribuída à PUC-Minas; gabarito corroborado por material didático, prova oficial não localizada",
+      "visual_status": "figuras A, B, C ainda precisam ser anexadas no cadastro",
+      "source_urls": [
+        "https://pdfcoffee.com/fisica-em-contextos-1-professor-pdf-free.html",
+        "https://www.passeidireto.com/arquivo/133813708/fisica-livro-2-037-040"
+      ],
+      "explanation": "Em fotografias estroboscópicas, posições sucessivas são registradas em intervalos de tempo iguais (aqui, 0,1 s). Assim, trechos de trajetória com espaçamentos iguais representam rapidez constante; quando os espaçamentos variam, existe aceleração tangencial. Já em uma trajetória curva, mesmo com rapidez constante, a direção da velocidade muda, caracterizando aceleração normal (centrípeta). Pela classificação das três situações do exercício, a afirmação I é verdadeira: há aceleração centrípeta em B e C, cujas trajetórias são curvas. A II é falsa: não há aceleração tangencial nas duas situações simultaneamente, pois não há mudança de rapidez em ambas. A III é verdadeira: em uma das situações o movimento é retilíneo uniforme, sem variação de módulo nem de direção da velocidade, logo a aceleração resultante é nula. Portanto, apenas I e III são verdadeiras: alternativa E. Para disponibilização ao aluno, as três imagens estroboscópicas originais precisam acompanhar o enunciado."
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-propostos-q3",
+      "decision": "explanation_review_proposal",
+      "answer_expected": "B (diagramas II e IV)",
+      "source_status": "atribuída à UFPB 2007; diagramas recuperados em material de estudo, prova oficial não localizada",
+      "visual_status": "anexar diagramas I–IV ao cadastro antes de publicar",
+      "source_urls": [
+        "https://www.csj.g12.br/csj_www2/em/2017/salaestudo/1tri/Fis_3ano_1tri_Vetores_Lucas.pdf"
+      ],
+      "explanation": "A condição vetorial pedida é F = A − B, isto é, F = A + (−B). O vetor −B possui o mesmo módulo e a mesma direção de B, mas sentido oposto. Também podemos reescrever a igualdade como A = F + B: o vetor A deve coincidir com a resultante da soma de F e B, que pode ser feita pela regra da ponta com a cauda. Analisando as orientações das setas nos quatro diagramas originais, I e III representam F = A + B, portanto não satisfazem a subtração. Em II e IV, ao somar F e B, obtemos A; equivalentemente, F = A − B. Logo, os únicos diagramas corretos são II e IV: alternativa B. A imagem com os diagramas deve estar visível na questão, pois a direção das setas é indispensável para resolvê-la."
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q33",
+      "decision": "explanation_review_proposal",
+      "answer_expected": "a) 7,5 m/s²; b) 60 N; c) 12,5 m/s²",
+      "source_status": "PUC-Rio 1999 identificada em material Fundação Cecierj; esquema recuperado",
+      "visual_status": "figura da prova/material precisa ser vinculada ao cadastro",
+      "source_urls": [
+        "https://canal.cecierj.edu.br/122016/d582e72bc964830cba8ecd1d8938bc96.pdf"
+      ],
+      "explanation": "Os blocos A e B estão em contato lateral sobre uma superfície horizontal sem atrito; F = 150 N empurra A contra B. As massas são mA = 12 kg e mB = 8 kg. (a) Na direção horizontal, os dois blocos compartilham a mesma aceleração enquanto permanecem em contato. Pela segunda lei aplicada ao conjunto: F = (mA + mB)ax. Então ax = 150/(12 + 8) = 150/20 = 7,5 m/s². A aceleração horizontal de B é, portanto, 7,5 m/s². (b) Em B, a única força horizontal é a força de contato exercida por A; sua intensidade é FB = mB ax = 8 × 7,5 = 60 N. (c) O esquema mostra A sem sustentação vertical pela base, de modo que, sem atrito com B, A também sofre aceleração gravitacional vertical de módulo ay = g = 10 m/s². As componentes horizontal e vertical de sua aceleração são perpendiculares, e o módulo da aceleração total é aA = √(ax² + ay²) = √(7,5² + 10²) = √156,25 = 12,5 m/s². Respostas: (a) 7,5 m/s², (b) 60 N e (c) 12,5 m/s²."
+    },
+    {
+      "id": "fis-lic-l2-f2-c7-exercicios-complementares-q23",
+      "decision": "explanation_review_proposal",
+      "answer_expected": "5 V",
+      "source_status": "UFPE 2007, 2ª etapa de Física; enunciado, valores e justificativa localizados em prova com solução",
+      "visual_status": "vincular circuito original ao cadastro",
+      "source_urls": [
+        "https://download.uol.com.br/vestibular/provas/2007/pe_2etapa_fis.pdf"
+      ],
+      "explanation": "As duas fontes ideais de 12 V e 6 V estão em oposição no circuito, formado por resistores em série de 4,0 Ω e 2,0 Ω. A força eletromotriz resultante em módulo é εeq = 12 − 6 = 6 V. A resistência equivalente é Req = 4 + 2 = 6 Ω. Portanto, pela lei das malhas e pela lei de Ohm, a corrente de circulação tem módulo i = εeq/Req = 6/6 = 1,0 A. Para calcular o potencial em A, partimos do ponto B, cujo potencial é VB = 15 V, e percorremos o trecho indicado no diagrama original no sentido que corresponde a uma queda de 6 V na bateria e de 4 Ω × 1 A = 4 V no resistor. Assim, VB − VA = 6 + 4 = 10 V. Logo, VA = 15 − 10 = 5 V. Resposta: potencial elétrico em A igual a 5 V. A figura original é indispensável para verificar os polos e a orientação dos elementos."
+    }
+  ],
+  "blocked": [
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-complementares-q7",
+      "reason": "Problema autoral do livro, sem vestibular atribuído; falta extensão da fonte luminosa no cadastro e a figura; gabarito indica penumbra total de 1 m, mas não se deve fabricar dimensões a partir do resultado.",
+      "status": "not_ready_source_and_visual"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-exercicios-complementares-q8",
+      "reason": "Problema autoral do livro, sem vestibular atribuído; figura e largura da fonte luminosa são imprescindíveis; gabarito indica sombra de 75 cm, mas os dados textuais não bastam para derivação independente.",
+      "status": "not_ready_source_and_visual"
+    },
+    {
+      "id": "fis-lic-l2-f1-c6-exercicios-propostos-q11",
+      "reason": "A, B, C e equação vetorial estão corrompidos pelo OCR, sem transcrição inequívoca; enunciado não tem vestibular comprovado; não se deve inferir os sinais pelo gabarito.",
+      "status": "not_ready_corrupt_prompt"
+    },
+    {
+      "id": "fis-lic-l2-f3-c9-bncc-em-foco-q3",
+      "reason": "Valores de ESF/vergência da receita não foram preservados, e o enunciado contém fragmentos de páginas não relacionadas. O resultado qualitativo (lente divergente para vergência negativa) não comprova a receita original. Não há vestibular atribuído.",
+      "status": "not_ready_missing_data"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-bncc-em-foco-q1",
+      "reason": "Enunciado é orientação procedimental de traçado de imagens, não uma pergunta completa; gabarito fala de fontes coloridas de outra questão. Não possui origem de vestibular demonstrada.",
+      "status": "not_a_complete_question"
+    },
+    {
+      "id": "fis-lic-l2-f3-c7-bncc-em-foco-q2",
+      "reason": "Enunciado é orientação procedimental de traçado de raios, sem objeto/espelho/posição; gabarito discute teoria da chama nos olhos, de outra questão. Não possui origem de vestibular demonstrada.",
+      "status": "not_a_complete_question"
+    }
+  ],
+  "constraints": {
+    "modify_fields_if_needed": [
+      "explanation"
+    ],
+    "prohibit": [
+      "answer",
+      "answerKeyText",
+      "prompt",
+      "options",
+      "id",
+      "administrative_status",
+      "approval",
+      "needsReview",
+      "imageAssets"
+    ],
+    "no_auto_approve": true,
+    "no_merge": true,
+    "no_deploy": true
+  }
+}

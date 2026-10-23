@@ -2,6 +2,7 @@ import {escapeHTML} from './utils.js';
 import {AI_AUDIT_BATCH} from './ai-audit-batch.js';
 import {AI_AUDIT_BASELINE} from './ai-audit-baseline.js';
 import {AI_AUDIT_LOTS} from './ai-audit-lots.js';
+import {AI_AUDIT_META} from './ai-audit-meta.js';
 
 const IMAGE_CLASSIFICATIONS={
  no_image_required:{label:'Sem imagem',color:'#3cc88d'},
@@ -176,7 +177,20 @@ function aiAuditSections(q,lotFilter='all'){
   <span><strong>Pendências de imagem:</strong> ${escapeHTML(q.imageStatus||'sem registro')}</span>
   <span><strong>needsReview:</strong> ${q.needsReview===true?'sim':'não'}</span>
  </div><p class="ai-note">Parte da fila versionada com ${AI_AUDIT_BATCH.total} IDs únicos. Aprovação somente manual pelo Owner; a liberação para estudantes respeita imageStatus e demais bloqueios existentes.</p></div>`;
- return explanation+info+divergence+compare;
+ const meta=AI_AUDIT_META[q.id];
+ const metaRows=[];
+ if(meta){
+  if(meta.answerExpected)metaRows.push(['Resultado calculado pelo ChatGPT',escapeHTML(meta.answerExpected)]);
+  if(meta.reviewStatus)metaRows.push(['Classificação da revisão',escapeHTML(meta.reviewStatus)]);
+  if(meta.origin)metaRows.push(['Origem declarada',escapeHTML(meta.origin)]);
+  if(meta.sourceStatus)metaRows.push(['Situação da fonte',escapeHTML(meta.sourceStatus)]);
+  if(meta.sourceUrls&&meta.sourceUrls.length)metaRows.push(['Prova/documento original',meta.sourceUrls.filter(u=>/^https?:\/\//.test(u)).map(u=>`<a href="${escapeHTML(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(u)}</a>`).join('<br>')]);
+  if(meta.visualStatus)metaRows.push(['Alerta de imagem obrigatória',escapeHTML(meta.visualStatus)]);
+  if(meta.pendingRelease)metaRows.push(['Pendência que impede a liberação ao estudante',escapeHTML(meta.pendingRelease)]);
+  if(meta.blockedReason)metaRows.push(['Questão bloqueada — pendência documentada',escapeHTML(meta.blockedReason)+(meta.blockedStatus?` <code>${escapeHTML(meta.blockedStatus)}</code>`:'')]);
+ }
+ const pkgMeta=metaRows.length?`<div class="ai-section ai-pkg-meta"><h4>Dados do pacote científico</h4><div class="ai-audit-meta">${metaRows.map(([k,v])=>`<span><strong>${k}:</strong> ${v}</span>`).join('')}</div><p class="ai-note">Metadados fornecidos pelo pacote científico do ChatGPT, exibidos apenas quando presentes; conferência manual pelo Owner. Não configuram aprovação nem liberação automática.</p></div>`:'';
+ return explanation+info+divergence+pkgMeta+compare;
 }
 
 function reviewQuestionCard(q,index,total,editingQuestion,editingFields={},aiAudit=false,aiAuditLotFilter='all'){
