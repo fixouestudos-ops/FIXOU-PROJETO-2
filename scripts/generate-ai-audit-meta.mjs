@@ -6,6 +6,7 @@ const readJson = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
 const pacote9 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-9-chatgpt.json');
 const round2 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round2-10-chatgpt.json');
 const round5 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round5-29-chatgpt.json');
+const round6 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round6-26-chatgpt.json');
 const meta = {};
 const set = (id, campos) => {
   if (!meta[id]) meta[id] = {};
@@ -51,7 +52,14 @@ for (const [id, correction] of Object.entries(round5.corrections)) {
 for (const pending of round5.blocked_or_unresolved_examples || []) {
   set(pending.id, { pendingRelease: pending.reason });
 }
-const source = '// Gerado por scripts/generate-ai-audit-meta.mjs a partir dos artefatos dos pacotes do ChatGPT (pacote-9-chatgpt.json, pacote-round2-10-chatgpt.json, pacote-round5-29-chatgpt.json).\nexport const AI_AUDIT_META=' + JSON.stringify(meta) + ';\n';
+// Round 6: quatro registros não autorizados permanecem sem mudança e com alerta visível.
+for (const pending of round6.not_authorized_to_change || []) {
+  const previous = meta[pending.id]?.pendingRelease;
+  set(pending.id, previous && previous !== pending.reason
+    ? { additionalPendingRelease: pending.reason }
+    : { pendingRelease: pending.reason });
+}
+const source = '// Gerado por scripts/generate-ai-audit-meta.mjs a partir dos artefatos dos pacotes do ChatGPT (pacote-9-chatgpt.json, pacote-round2-10-chatgpt.json, pacote-round5-29-chatgpt.json, pacote-round6-26-chatgpt.json).\nexport const AI_AUDIT_META=' + JSON.stringify(meta) + ';\n';
 fs.writeFileSync(path.join(root, 'src', 'ai-audit-meta.js'), source, 'utf8');
 const ids = Object.keys(meta);
 console.log('AI_AUDIT_META:', ids.length, 'IDs | com bloqueio:', ids.filter(i => meta[i].blockedReason).length, '| com fonte/link:', ids.filter(i => (meta[i].sourceUrls || []).length).length);

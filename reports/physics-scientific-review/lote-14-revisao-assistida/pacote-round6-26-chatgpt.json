@@ -1,0 +1,173 @@
+{
+  "project": "FIXOU",
+  "lot": 14,
+  "round": 6,
+  "base_commit": "f414a18eebb63e709fa57ed49262197f84beb806",
+  "branch": "review/ia-auditoria-explanations-only",
+  "scientific_author": "ChatGPT — projeto Victor Elias",
+  "executor_role": "OpenCode — somente aplicação literal e QA técnico",
+  "purpose": "Aprofundar didática de questões ainda não revistas nos Rounds 3–5; não altera aprovação nem procedência",
+  "corrections": {
+    "fis-lic-l2-f2-c5-exercicios-complementares-q23": {
+      "explanation": "O objetivo é escolher, entre lâmpadas ligadas à mesma tensão, aquela que dissipa mais potência e por isso emite mais luz no modelo do enunciado.\n\n1) Sob tensão constante U, a potência elétrica é P = U²/R. Isso significa que diminuir a resistência R aumenta a potência dissipada.\n\n2) Para filamentos de tungstênio com a mesma área transversal e temperatura de referência, a resistência é R = ρL/A, em que ρ é a resistividade do material e L é o comprimento. Um filamento mais curto tem resistência menor.\n\n3) A resistividade ρ não diminui simplesmente por encurtar o fio: ela é propriedade do material e depende também da temperatura. O que muda diretamente é o comprimento do condutor.\n\nResposta: alternativa A — filamento curto, pois terá a menor resistência. A ideia-chave é combinar P = U²/R com R = ρL/A.",
+      "expected_answer": "A — filamento curto, com menor resistência",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q30": {
+      "explanation": "Para achar o módulo da velocidade depois de 5 s, precisamos calcular separadamente suas componentes horizontal e vertical.\n\n1) No instante inicial, v₀ = 80 m/s e θ = 30°. Assim, v₀x = 80 cos30° = 40√3 m/s e v₀y = 80 sen30° = 40 m/s.\n\n2) Sem resistência do ar, a componente horizontal não muda: vₓ = 40√3 m/s. Na vertical, a gravidade reduz a velocidade em 10 m/s a cada segundo: vᵧ = 40 − 10t.\n\n3) Em t = 5 s, vᵧ = 40 − 50 = −10 m/s. O sinal negativo indica movimento descendente, mas o módulo da velocidade não pode ser obtido simplesmente somando as componentes.\n\n4) Aplicamos Pitágoras: |v| = √[(40√3)² + (−10)²] = √(4800 + 100) = √4900 = 70 m/s.\n\nResposta: alternativa C — 70 m/s. A direção da velocidade já mudou para baixo, mas sua componente horizontal permanece constante.",
+      "expected_answer": "C — 70 m/s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q50": {
+      "explanation": "A correnteza empurra o barco ao longo do rio, enquanto o motor produz o movimento necessário para atravessar de uma margem à outra.\n\n1) A largura do rio é 50 m. A componente da velocidade perpendicular às margens é a do barco em relação à água: 2,0 m/s.\n\n2) O tempo de travessia depende apenas dessa componente perpendicular: t = distância/velocidade perpendicular = 50/2,0 = 25 s.\n\n3) Os 4,0 m/s da correnteza agem paralelamente às margens. Durante os 25 s, ela arrasta o barco 4,0 × 25 = 100 m rio abaixo, mas não altera o tempo necessário para atravessar a largura.\n\n4) A rapidez resultante em relação ao solo é maior, √(2² + 4²) m/s, porém esse aumento se dá na direção diagonal, não na componente de travessia.\n\nResposta: alternativa B. A correnteza muda o ponto de chegada, mas não o tempo de travessia nas condições descritas.",
+      "expected_answer": "B — tempo de travessia de 25 s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q25": {
+      "explanation": "O corpo foi lançado horizontalmente; portanto, sua velocidade vertical inicial era zero. A componente vertical da velocidade de impacto permite descobrir a altura percorrida.\n\n1) No impacto, a rapidez vale 37,5 m/s e a velocidade faz ângulo de 53° com a horizontal. A componente vertical em módulo é |vᵧ| = 37,5 sen53° = 37,5 × 0,8 = 30 m/s.\n\n2) Na queda, a componente vertical aumenta por causa da gravidade. Como v₀y = 0, podemos usar a equação de Torricelli na vertical: vᵧ² = v₀y² + 2gh.\n\n3) Substituindo: 30² = 0 + 2 × 10 × h, isto é, 900 = 20h. Logo, h = 45 m.\n\nResposta: alternativa D — 45 m. Não precisamos descobrir o tempo de queda nem a componente horizontal para obter a altura.",
+      "expected_answer": "D — 45 m",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q4": {
+      "explanation": "A tensão real sobre a lâmpada é menor do que a soma das forças eletromotrizes das pilhas, porque parte da tensão é perdida nas resistências internas.\n\n1) Pela especificação da lâmpada, 0,6 W a 3,0 V, obtemos sua resistência nominal: R = U²/P = 3²/0,6 = 15 Ω. Usamos o modelo de resistência constante adotado no exercício.\n\n2) Funcionando sob 2,5 V, a corrente na lâmpada vale i = U/R = 2,5/15 = 1/6 A.\n\n3) Duas pilhas de 1,5 V em série fornecem força eletromotriz total de 3,0 V. A queda de tensão interna total é 3,0 − 2,5 = 0,5 V.\n\n4) Pela lei de Ohm, a resistência interna das duas pilhas juntas é r_total = 0,5/(1/6) = 3 Ω. Como são iguais e estão em série, r = 3/2 = 1,5 Ω para cada pilha.\n\nResposta: alternativa A — 1,5 Ω por pilha. Atenção: não confunda a resistência da lâmpada com a resistência interna das pilhas.",
+      "expected_answer": "A — 1,5 Ω por pilha",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q37": {
+      "explanation": "A partícula começa na origem e em repouso. Suas acelerações nos eixos são constantes: aₓ = 3,0 m/s² e aᵧ = 4,0 m/s².\n\n1) Como a velocidade inicial é nula, as velocidades depois de t segundos são vₓ = aₓt = 3t e vᵧ = aᵧt = 4t.\n\n2) A velocidade total é a soma vetorial dessas componentes. Seu módulo é |v| = √[(3t)² + (4t)²] = √(9t² + 16t²) = 5t, considerando t ≥ 0.\n\n3) No item (a), a rapidez pedida é 40 m/s: 5t = 40, portanto t = 8,0 s.\n\n4) No item (b), utilizamos a função da posição em cada direção: x = x₀ + v₀xt + aₓt²/2 e y = y₀ + v₀yt + aᵧt²/2. Como as posições e velocidades iniciais são zero, x = 3 × 8²/2 = 96 m e y = 4 × 8²/2 = 128 m.\n\nRespostas: (a) 8,0 s; (b) x = 96 m e y = 128 m. As duas coordenadas são positivas, coerentes com as acelerações dadas.",
+      "expected_answer": "a) 8,0 s; b) (96 m, 128 m)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q12": {
+      "explanation": "O fio se rompe quando a tração ultrapassa uma determinada força, e não quando a massa suspensa ultrapassa um valor fixo. Por isso, a massa máxima pode mudar entre a Terra e a Lua.\n\n1) Na Terra, a maior massa suportada é 60 kg, com g = 10 m/s². Em repouso, a tração iguala o peso: T_máx = mg = 60 × 10 = 600 N.\n\n2) Essa força-limite de 600 N é uma característica da resistência mecânica do fio, admitida constante nas condições do problema. Portanto, o fio também suporta até 600 N na Lua.\n\n3) Na Lua, g = 1,5 m/s². Para não romper o fio, m × 1,5 ≤ 600. O maior valor admissível é m = 600/1,5 = 400 kg.\n\nRespostas: (a) força máxima de 600 N; (b) massa máxima de 400 kg. A gravidade menor permite sustentar uma massa maior sem aumentar a tração.",
+      "expected_answer": "a) 600 N; b) 400 kg",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q27": {
+      "explanation": "Primeiro vamos calcular a distância necessária para frear totalmente; depois, a força resultante sobre o conjunto automóvel–motorista.\n\n1) Convertemos a velocidade: 90 km/h ÷ 3,6 = 25 m/s. A desaceleração é a = −2,5 m/s².\n\n2) Como a velocidade final será zero, a equação de Torricelli dá v² = v₀² + 2aΔs. Assim, 0 = 25² + 2(−2,5)Δs, ou 0 = 625 − 5Δs. Portanto, Δs = 125 m.\n\n3) O semáforo está a somente 100 m. O carro precisa de 125 m para parar, então ultrapassa o sinal em 125 − 100 = 25 m.\n\n4) Para a força resultante, somamos as massas: m = 720 + 80 = 800 kg. Pela segunda lei de Newton, |F_resultante| = m|a| = 800 × 2,5 = 2.000 N.\n\nRespostas: (a) o carro só para 25 m depois de ultrapassar o sinal; (b) força resultante de módulo 2.000 N, oposta ao movimento.",
+      "expected_answer": "a) para 25 m após o sinal; b) 2.000 N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c7-revisando-q3": {
+      "explanation": "O erro da brincadeira é imaginar que enxergar depende de emitir luz pelos próprios olhos. Na realidade, para enxergarmos um objeto, luz precisa chegar aos nossos olhos.\n\n1) Uma fonte luminosa, como o Sol ou uma lâmpada, emite luz que ilumina os objetos.\n\n2) Um objeto iluminado espalha ou reflete parte dessa luz. Alguns dos fótons refletidos chegam aos olhos de um observador e permitem a formação da imagem.\n\n3) Quando uma criança cobre os próprios olhos, ela impede que a luz entre neles e, portanto, deixa de ver o ambiente. Entretanto, a luz refletida pelo corpo da criança continua chegando aos olhos de outras pessoas.\n\n4) As opções que sugerem fótons emitidos pelos olhos confundem a direção real do processo de visão.\n\nResposta: alternativa A — os objetos refletem fótons que atingem os olhos. O olho recebe luz; não precisa emiti-la para ver.",
+      "expected_answer": "A — a luz refletida pelos objetos chega aos olhos",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-propostos-q32": {
+      "explanation": "O sistema capta energia durante 8 horas, mas a empresa usa essa energia ao longo de 12 horas. A questão pede a corrente média nos dois lados do inversor.\n\n1) As 15 placas fornecem juntas P = 15 × 150 = 2.250 W = 2,25 kW.\n\n2) Em 8 h de captação, a energia armazenada é E = 2,25 × 8 = 18 kWh, conforme o modelo ideal de armazenamento usado no exercício.\n\n3) Distribuída pelas 12 h de funcionamento, a potência média na entrada do inversor é P_entrada = 18/12 = 1,5 kW = 1.500 W. Como a bateria fornece 12 V, i_entrada = P/U = 1.500/12 = 125 A.\n\n4) O rendimento do inversor é 80%, então P_saída = 0,8 × 1.500 = 1.200 W. Sua saída é de 120 V, logo i_saída = 1.200/120 = 10 A.\n\nResposta: alternativa C — 125 A na entrada e 10 A na saída. Não se deve calcular a corrente de entrada usando diretamente as 8 horas de captação.",
+      "expected_answer": "C — 125 A na entrada e 10 A na saída",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c7-exercicios-complementares-q1": {
+      "explanation": "Eratóstenes observou que o Sol produzia sombras diferentes em duas cidades no mesmo horário. Seu raciocínio depende de como a luz do Sol se propaga.\n\n1) Os raios solares viajam praticamente em linhas retas pelo meio considerado no experimento. Como o Sol está muito distante, os raios que chegam às duas cidades podem ser tratados como aproximadamente paralelos.\n\n2) Uma estaca vertical em uma cidade não produz sombra, enquanto, na outra, forma uma sombra porque a superfície terrestre possui orientação diferente em cada local devido à curvatura da Terra.\n\n3) A diferença entre os ângulos observados permite relacionar um arco da superfície terrestre ao ângulo no centro do planeta e, a partir disso, estimar seu raio.\n\n4) Não é necessário usar reflexão, interferência nem reversibilidade dos raios para explicar essa comparação.\n\nResposta: alternativa D — princípio da propagação retilínea da luz em meio homogêneo e transparente.",
+      "expected_answer": "D — propagação retilínea da luz",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q25": {
+      "explanation": "A questão tem duas partes: movimento oblíquo sem resistência do ar e força resultante no ponto mais alto quando há resistência do ar.\n\n1) No item (a), a velocidade horizontal inicial é 300 m/s e, sem arrasto, não muda. Em 2,0 s, o deslocamento horizontal é Δx = v₀xt = 300 × 2 = 600 m.\n\n2) No mesmo intervalo, o deslocamento vertical é Δy = v₀yt − gt²/2 = 120 × 2 − 10 × (2²)/2 = 240 − 20 = 220 m.\n\n3) No item (b), no ponto mais alto, a velocidade vertical é nula e a velocidade horizontal tem módulo 100 m/s. A resistência do ar é F_ar = 6,0 × 10⁻⁶ × v² = 6,0 × 10⁻⁶ × 100² = 0,060 N, horizontal e contrária ao movimento.\n\n4) A massa é 8,0 g = 0,008 kg. O peso vale P = mg = 0,008 × 10 = 0,080 N e aponta verticalmente para baixo.\n\n5) Como peso e resistência do ar são perpendiculares nesse instante, o módulo da força resultante é F = √(0,060² + 0,080²) = √0,0100 = 0,10 N.\n\nRespostas: (a) 600 m na horizontal e 220 m na vertical; (b) força resultante de 0,10 N.",
+      "expected_answer": "a) 600 m e 220 m; b) 0,10 N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q6": {
+      "explanation": "Depois que o jogador chuta a bola, ela segue uma trajetória de lançamento oblíquo. O que a questão pede é a aceleração em dois instantes, não a velocidade.\n\n1) Desprezando a resistência do ar, a única força sobre a bola durante o voo é seu peso, sempre dirigido verticalmente para baixo.\n\n2) Pela segunda lei de Newton, a aceleração é a gravidade: a = F_resultante/m = mg/m = g. O módulo g permanece o mesmo durante toda a trajetória, inclusive no ponto mais alto.\n\n3) Portanto, logo após perder contato com o pé e imediatamente antes de tocar o chão, a bola possui a mesma aceleração de módulo g. A velocidade muda durante o movimento, mas isso não torna a aceleração variável nesse modelo.\n\nResposta: alternativa A — o módulo da aceleração é o mesmo nos dois instantes.",
+      "expected_answer": "A — módulo da aceleração igual ao inicial",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c8-exercicios-propostos-q11": {
+      "explanation": "Cada superfície interage com a luz de maneira diferente. Vamos associar cada elemento ao fenômeno principal citado no exercício.\n\n1) Lente convergente: faz os raios mudarem de direção ao atravessar superfícies entre meios diferentes. Esse desvio é refração.\n\n2) Prisma: diferentes cores sofrem refração com intensidades diferentes, podendo separar a luz branca nas cores do espectro. O nome do fenômeno é dispersão.\n\n3) Espelho: sua superfície polida devolve os raios de maneira ordenada, segundo a lei da reflexão. É a reflexão especular.\n\n4) Superfície negra: absorve grande parte da luz visível incidente, transformando parte dessa energia em outras formas, como energia térmica.\n\n5) Superfície branca opaca: reflete a luz em diversas direções devido à estrutura da superfície. É a reflexão difusa.\n\nResposta: alternativa E — refração, dispersão, reflexão especular, absorção e reflexão difusa, nessa ordem.",
+      "expected_answer": "E — refração, dispersão, reflexão especular, absorção e reflexão difusa",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c9-exercicios-complementares-q9": {
+      "explanation": "Na mesma fibra, as duas cores têm índices de refração diferentes. Como a velocidade da luz no meio é v = c/n, a cor com menor índice percorre a fibra mais rapidamente.\n\n1) Para o vermelho, n = 1,513. Para o azul, n = 1,528. Como 1,513 é menor que 1,528, a luz vermelha tem maior velocidade e chega primeiro.\n\n2) O tempo para percorrer uma distância L é t = L/v. Substituindo v = c/n, obtemos t = Ln/c.\n\n3) A diferença entre os tempos é Δt = L(n_azul − n_vermelho)/c. A distância é 300 km = 3,0 × 10⁵ m e a diferença dos índices vale 1,528 − 1,513 = 0,015.\n\n4) Calculando: Δt = (3,0 × 10⁵ × 0,015)/(3,0 × 10⁸) = 1,5 × 10⁻⁵ s. Isso corresponde a 15 microssegundos.\n\nRespostas: (a) a luz vermelha chega primeiro; (b) a azul chega 1,5 × 10⁻⁵ s depois, no modelo de percurso óptico informado.",
+      "expected_answer": "a) luz vermelha; b) 1,5 × 10⁻⁵ s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q42": {
+      "explanation": "Para resolver, analisamos separadamente a caixa e a empilhadeira, identificando as forças verticais em cada uma.\n\n1) A caixa tem massa 0,5 tonelada = 500 kg e sobe com aceleração a = 0,5 m/s². Sobre ela atuam o peso mg para baixo e a força F da empilhadeira para cima.\n\n2) Pela segunda lei de Newton na caixa: F − mg = ma. Assim, F = m(g + a) = 500(10 + 0,5) = 5.250 N.\n\n3) Pela terceira lei de Newton, a caixa exerce na empilhadeira uma força de 5.250 N para baixo, de mesmo módulo que a força recebida.\n\n4) A empilhadeira tem massa 1,0 tonelada = 1.000 kg, portanto peso 10.000 N. Admitindo a empilhadeira sem aceleração vertical, o chão exerce força normal que equilibra seu peso e a força da caixa: N = 10.000 + 5.250 = 15.250 N.\n\nRespostas: (a) 5.250 N sobre a caixa; (b) 15.250 N de força normal do chão sobre a empilhadeira.",
+      "expected_answer": "a) 5.250 N; b) 15.250 N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q9": {
+      "explanation": "A confusão da afirmação de Monteiro Lobato está em supor que, depois de lançada, a laranja continua recebendo uma força para cima. A força da mão só atua enquanto a mão está em contato com a fruta.\n\n01 — Falsa. Depois do lançamento e desprezando o ar, a única força que atua é a gravitacional, dirigida para baixo.\n\n02 — Falsa. Na altura máxima, a velocidade vertical é instantaneamente zero, mas o peso continua atuando e a aceleração é g para baixo.\n\n04 — Verdadeira. Durante o voo livre sem resistência do ar, atua apenas a força peso.\n\n08 — Falsa. A laranja começa a desacelerar verticalmente desde o instante em que é solta; não há força de subida que a gravidade precise superar.\n\n16 — Verdadeira. Pela segunda lei de Newton, ma = mg, então a = g, independentemente da massa da laranja.\n\nResposta: itens 04 e 16; soma 04 + 16 = 20.",
+      "expected_answer": "Soma 20 = 04 + 16",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q44": {
+      "explanation": "A Terra gira de oeste para leste. Para o avião permanecer parado em relação ao Sol no modelo que despreza a translação terrestre, ele precisa cancelar, com seu movimento em relação à superfície, a velocidade de rotação naquele paralelo.\n\n1) O raio da Terra é R = 6.000 km. Na latitude 60°, o raio da circunferência percorrida por um ponto da superfície não é 6.000 km: é r = R cos60° = 6.000 × 0,5 = 3.000 km.\n\n2) O comprimento desse paralelo é C = 2πr = 6.000π km.\n\n3) Em uma rotação de aproximadamente 24 h, a rapidez da superfície nesse paralelo é v = C/24 = 6.000π/24 = 250π km/h.\n\n4) Para compensar essa velocidade da superfície, o avião deve voar em sentido contrário ao giro terrestre, isto é, para oeste.\n\nResposta: 250π km/h para oeste, em relação à superfície terrestre. O fator cos60° é fundamental: o paralelo de 60° é menor que o equador.",
+      "expected_answer": "250π km/h para oeste",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q19": {
+      "explanation": "Cada objeto acrescentado aumenta o peso total que o fio precisa sustentar. O segmento superior do fio sustenta todos os objetos e, por isso, fica sujeito à maior tração.\n\n1) Cada massa vale 50 g = 0,050 kg. Com g = 10 m/s², o peso de cada objeto é P = mg = 0,050 × 10 = 0,50 N.\n\n2) O fio suporta tração máxima de 5,80 N. Com 11 objetos, a tração no topo seria T₁₁ = 11 × 0,50 = 5,50 N, ainda abaixo do limite.\n\n3) Ao acrescentar o 12º objeto, a tração passa para T₁₂ = 12 × 0,50 = 6,0 N, valor que ultrapassa os 5,80 N suportados.\n\n4) A ruptura ocorre na parte mais próxima do suporte, porque ali a tração reúne os pesos de todos os objetos pendurados. Nos trechos inferiores do fio, a carga sustentada é menor.\n\nRespostas: (a) o rompimento ocorre ao pendurar o 12º objeto; (b) o fio se rompe junto ao suporte.",
+      "expected_answer": "a) 12 objetos; b) junto ao suporte",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q38": {
+      "explanation": "O movimento é circular, começa do repouso e tem aceleração escalar (tangencial) constante de 1 m/s². A aceleração tangencial e a centrípeta são componentes diferentes da aceleração total.\n\n1) Após 10 s, a rapidez é v = v₀ + aₜt = 0 + 1 × 10 = 10 m/s.\n\n2) A aceleração tangencial permanece aₜ = 1 m/s². Já a centrípeta é a_c = v²/R = 10²/100 = 1 m/s².\n\n3) Item I: as componentes tangencial e centrípeta valem, respectivamente, 1 m/s² e 1 m/s². Alternativa E.\n\n4) Item II: a aceleração centrípeta aponta radialmente para o centro da curva, enquanto a tangencial aponta no sentido da velocidade. Elas são perpendiculares.\n\n5) Como ambas têm o mesmo módulo, a aceleração resultante fica na bissetriz do ângulo entre elas. Logo, faz 45° com o raio dirigido para o centro.\n\nRespostas: I — alternativa E; II — alternativa D (45°). Atenção: o módulo da aceleração resultante seria √2 m/s², mas não é isso que o item II pede.",
+      "expected_answer": "I — E; II — D (45°)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-revisando-q15": {
+      "explanation": "Quando o trem começa a acelerar horizontalmente, o prumo se inclina para trás em relação ao sentido da aceleração. O fio forma um ângulo de 36,87° com a vertical.\n\n1) Na direção vertical, não há aceleração: T cosθ = mg. Na horizontal, a componente da tração acelera a massa: T senθ = ma.\n\n2) Dividindo as equações, encontramos tanθ = a/g. O enunciado informa senθ = 0,6; como o ângulo é agudo, cosθ = 0,8 e tanθ = 0,6/0,8 = 0,75.\n\n3) A aceleração máxima do trem é a = g tanθ = 10 × 0,75 = 7,5 m/s². O sentido da aceleração na partida é contrário ao desvio do prumo observado de dentro do trem.\n\n4) Quando o trem está em repouso, T = mg = 5 × 10 = 50 N.\n\n5) Com aceleração máxima, T cosθ = mg, então T = 50/0,8 = 62,5 N.\n\nRespostas: (a) movimento inicial oposto à inclinação do prumo; (b) 7,5 m/s²; (c) 50 N; (d) 62,5 N.",
+      "expected_answer": "a) sentido oposto à inclinação do fio; b) 7,5 m/s²; c) 50 N; d) 62,5 N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q2": {
+      "explanation": "Vamos verificar cada afirmação com base nas leis de Newton.\n\nI — Falsa. Desprezando a resistência do ar, todos os corpos próximos à superfície terrestre caem com a mesma aceleração g, independentemente da massa.\n\nII — Falsa. Ação e reação têm mesmo módulo e sentidos opostos, mas atuam em corpos diferentes, nunca sobre um mesmo corpo.\n\nIII — Verdadeira. A massa é propriedade intrínseca do corpo e mede sua inércia; não muda simplesmente porque o corpo foi transportado a outro planeta.\n\nIV — Verdadeira. As leis de Newton na forma usual são válidas diretamente em referenciais inerciais. Em referenciais acelerados é necessário introduzir forças fictícias para aplicar a formulação usual.\n\nV — Verdadeira. Quanto maior a massa, maior a resistência do corpo a alterações de sua velocidade, ou seja, maior sua inércia.\n\nVI — Falsa. Para manter movimento retilíneo uniforme, basta que a força resultante seja zero; não é necessário aplicar uma força resultante na direção do movimento.\n\nResposta: F – F – V – V – V – F.",
+      "expected_answer": "F – F – V – V – V – F",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q16": {
+      "explanation": "A associação apresenta dois níveis: eletroplacas em série dentro de cada coluna e diversas colunas em paralelo. Precisamos primeiro encontrar a tensão de uma coluna da raia.\n\n1) No poraquê, 5.000 eletroplacas iguais em série produzem 600 V. Portanto, cada eletroplaca gera E_placa = 600/5.000 = 0,12 V.\n\n2) Cada coluna da raia contém 750 eletroplacas iguais em série. A tensão da coluna é E_coluna = 750 × 0,12 = 90 V.\n\n3) Colunas conectadas em paralelo mantêm a mesma tensão nos terminais: U = 90 V. Essa associação permite maior corrente total, mas não soma as tensões das colunas.\n\n4) A corrente total da descarga é 50 A. A potência elétrica gerada vale P = Ui = 90 × 50 = 4.500 W.\n\nResposta: alternativa D — 4.500 W. A diferença crucial é que as tensões somam em série, enquanto a corrente disponível pode somar em paralelo.",
+      "expected_answer": "D — 4.500 W",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q22": {
+      "explanation": "O avião possui massa de 100 toneladas, isto é, 100.000 kg. Ele parte do repouso e atinge 360 km/h após percorrer 2.000 m na pista.\n\n1) Item (a): no instante idealizado em que o avião começa a se sustentar no ar sem aceleração vertical apreciável, a força de sustentação iguala seu peso: L = mg = 100.000 × 10 = 1,0 × 10⁶ N.\n\n2) Item (b): primeiro convertemos 360 km/h para 100 m/s. A variação da energia cinética durante a corrida é ΔK = mv²/2, pois o avião parte do repouso.\n\n3) A força horizontal média ao longo do deslocamento de 2.000 m realiza trabalho F_média × 2.000 = ΔK. Logo, F_média = [100.000 × (100)²/2]/2.000 = 2,5 × 10⁵ N.\n\n4) O mesmo resultado seria obtido por v² = 2aΔs: a = 100²/(2 × 2.000) = 2,5 m/s² e F = ma = 2,5 × 10⁵ N, no modelo de aceleração constante.\n\nRespostas: (a) sustentação de 1,0 × 10⁶ N; (b) força horizontal média de 2,5 × 10⁵ N.",
+      "expected_answer": "a) 1,0 × 10⁶ N; b) 2,5 × 10⁵ N",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q1": {
+      "explanation": "A mesma queda pode ter trajetórias diferentes dependendo do referencial, sem mudar o tempo que a câmera leva para chegar ao chão.\n\n1) O trem se move horizontalmente com velocidade constante. No referencial de um passageiro dentro dele, a câmera tinha a mesma velocidade horizontal que o vagão antes de ser solta. Logo, sua velocidade horizontal relativa ao trem é zero.\n\n2) Desprezando o ar, a câmera acelera apenas para baixo. Para quem está no trem, ela cai verticalmente, em trajetória retilínea.\n\n3) Para quem está parado na estação, a câmera mantém a velocidade horizontal que possuía ao ser solta e adquire velocidade vertical devido à gravidade. A combinação gera trajetória parabólica.\n\n4) O movimento vertical obedece às mesmas condições nos dois referenciais que se deslocam com velocidade constante relativa. O tempo de queda é determinado pela altura e por g, sendo igual para os dois observadores.\n\nResposta: alternativa D — retilínea no trem, parabólica no solo e tempo de queda igual.",
+      "expected_answer": "D — retilínea; parabólica; igual",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q29": {
+      "explanation": "O alcance horizontal permite calcular o tempo total de voo em cada ambiente, porque a componente horizontal da velocidade é a mesma e vale 2 m/s.\n\n1) Na Terra, T₁ = A₁/vₓ = 2,4/2 = 1,2 s. Na estação, T₂ = A₂/vₓ = 6,2/2 = 3,1 s.\n\n2) Como o lançamento e a chegada ocorrem à mesma altura, a velocidade vertical inicial na Terra é v₀y = gT₁/2 = 9,8 × 1,2/2 = 5,88 m/s. As condições iniciais são iguais nos dois experimentos.\n\n3) Na estação, a aceleração gravitacional tem módulo a = 2v₀y/T₂ = 11,76/3,1 ≈ 3,79 m/s².\n\n4) Item 01 — Falso. Em t = 1 s, na Terra vᵧ₁ = 5,88 − 9,8 = −3,92 m/s; na estação vᵧ₂ ≈ 5,88 − 3,79 = +2,09 m/s. O item afirma os sinais ao contrário.\n\n5) Item 02 — Verdadeiro. No ponto mais alto, a componente vertical é zero nos dois experimentos, mas a horizontal continua 2 m/s; os vetores velocidade são iguais.\n\n6) Item 04 — Verdadeiro. T₁ + T₂ = 1,2 + 3,1 = 4,3 s.\n\n7) Item 08 — Verdadeiro. A componente vertical inicial de 5,88 m/s é menor que 6 m/s.\n\n8) Item 16 — Verdadeiro. Na estação, a ≈ 3,79 m/s², menor que 4 m/s².\n\nResposta: 02 + 04 + 08 + 16 = 30.",
+      "expected_answer": "Soma 30 = 02 + 04 + 08 + 16",
+      "source_verified": false
+    }
+  },
+  "not_authorized_to_change": [
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+      "reason": "Enunciado apresenta sen60° = 0,8, matematicamente incorreto; conferir prova original e OCR; não editar."
+    },
+    {
+      "id": "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+      "reason": "Potência de 500 W do motor não qualificada de modo inequívoco como consumida ou útil; conferir fonte; não editar."
+    },
+    {
+      "id": "fis-lic-l2-f2-c7-exercicios-complementares-q20",
+      "reason": "A resolução pressupõe rede de 220 V, mas o enunciado recuperado não apresenta explicitamente esse dado; conferir prova e figura antes de aplicar."
+    },
+    {
+      "id": "fis-lic-l2-f1-c8-exercicios-complementares-q81",
+      "reason": "Itens 01 e 04 da UEPG apresentam radicais corrompidos pelo OCR; não garantir gabarito nem editar antes de ver a prova."
+    }
+  ],
+  "blockers_unchanged": 6,
+  "provenance_note": "Nenhum ID foi autenticado individualmente contra prova oficial nesta rodada. As siglas nas questões e o material PV Física não comprovam origem.",
+  "policy": {
+    "allowed_bank_fields": [
+      "explanation"
+    ],
+    "manual_approval_required": true,
+    "merge": false,
+    "deploy": false,
+    "d1_writes": false,
+    "no_scientific_edit_by_executor": true,
+    "answer_and_ocr_changes": false
+  }
+}

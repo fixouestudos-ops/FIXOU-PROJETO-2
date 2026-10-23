@@ -198,6 +198,7 @@ function aiAuditSections(q,lotFilter='all'){
   if(meta.sourceUrls&&meta.sourceUrls.length)metaRows.push(['Prova/documento original',meta.sourceUrls.filter(u=>/^https?:\/\//.test(u)).map(u=>`<a href="${escapeHTML(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(u)}</a>`).join('<br>')]);
   if(meta.visualStatus)metaRows.push(['Alerta de imagem obrigatória',escapeHTML(meta.visualStatus)]);
   if(meta.pendingRelease)metaRows.push(['Pendência que impede a liberação ao estudante',escapeHTML(meta.pendingRelease)]);
+  if(meta.additionalPendingRelease)metaRows.push(['Alerta adicional de fonte/OCR',escapeHTML(meta.additionalPendingRelease)]);
   if(meta.blockedReason)metaRows.push(['Questão bloqueada — pendência documentada',escapeHTML(meta.blockedReason)+(meta.blockedStatus?` <code>${escapeHTML(meta.blockedStatus)}</code>`:'')]);
  }
  const pkgMeta=metaRows.length?`<div class="ai-section ai-pkg-meta"><h4>Dados do pacote científico</h4><div class="ai-audit-meta">${metaRows.map(([k,v])=>`<span><strong>${k}:</strong> ${v}</span>`).join('')}</div><p class="ai-note">Metadados fornecidos pelo pacote científico do ChatGPT, exibidos apenas quando presentes; conferência manual pelo Owner. Não configuram aprovação nem liberação automática.</p></div>`:'';
