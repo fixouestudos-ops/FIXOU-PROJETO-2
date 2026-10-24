@@ -13,6 +13,7 @@ const bank=JSON.parse(readFileSync(path.join(root,'content/bank.json'),'utf8'));
 const packagePath=path.join(root,'reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round6-26-chatgpt.json');
 const packageBytes=readFileSync(packagePath);
 const pkg=JSON.parse(packageBytes.toString('utf8'));
+const round7=JSON.parse(readFileSync(path.join(root,'reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round7-19-chatgpt.json'),'utf8'));
 const corrections=pkg.corrections;
 const ids=Object.keys(corrections);
 const byId=new Map(bank.questions.map(question=>[question.id,question]));
@@ -47,9 +48,10 @@ test('os demais campos dos 26 registros permanecem iguais ao início do Round 6'
 test('as 26 explicações são literais e continuam aguardando aprovação manual',()=>{
  for(const id of ids){
   const question=byId.get(id);
+  const expected=round7.corrections[id]?.explanation??corrections[id].explanation;
   assert.ok(question,'ID ausente no banco: '+id);
-  assert.equal(question.explanation,corrections[id].explanation,id);
-  assert.equal(aiAuditCompare(question,'lot14').after.explanation,corrections[id].explanation,id);
+  assert.equal(question.explanation,expected,id);
+  assert.equal(aiAuditCompare(question,'lot14').after.explanation,expected,id);
   assert.equal(aiAuditStatus(question),'awaiting',id);
  }
 });

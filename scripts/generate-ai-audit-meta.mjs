@@ -7,6 +7,7 @@ const pacote9 = readJson('reports/physics-scientific-review/lote-14-revisao-assi
 const round2 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round2-10-chatgpt.json');
 const round5 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round5-29-chatgpt.json');
 const round6 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round6-26-chatgpt.json');
+const round7 = readJson('reports/physics-scientific-review/lote-14-revisao-assistida/pacote-round7-19-chatgpt.json');
 const meta = {};
 const set = (id, campos) => {
   if (!meta[id]) meta[id] = {};
@@ -15,6 +16,16 @@ const set = (id, campos) => {
     if (Array.isArray(v) && !v.length) continue;
     meta[id][k] = v;
   }
+};
+const addPendingRelease = (id, reason) => {
+  if (!reason) return;
+  const entry = meta[id] || (meta[id] = {});
+  const additional = Array.isArray(entry.additionalPendingReleases) ? entry.additionalPendingReleases : [];
+  const existing = [entry.pendingRelease, entry.additionalPendingRelease, ...additional].filter(Boolean);
+  if (existing.includes(reason)) return;
+  if (!entry.pendingRelease) entry.pendingRelease = reason;
+  else if (!entry.additionalPendingRelease) entry.additionalPendingRelease = reason;
+  else entry.additionalPendingReleases = [...additional, reason];
 };
 // Pacote 1 (9 correcoes): metadados exibidos no painel
 for (const c of pacote9.corrections) {
@@ -54,12 +65,13 @@ for (const pending of round5.blocked_or_unresolved_examples || []) {
 }
 // Round 6: quatro registros não autorizados permanecem sem mudança e com alerta visível.
 for (const pending of round6.not_authorized_to_change || []) {
-  const previous = meta[pending.id]?.pendingRelease;
-  set(pending.id, previous && previous !== pending.reason
-    ? { additionalPendingRelease: pending.reason }
-    : { pendingRelease: pending.reason });
+  addPendingRelease(pending.id, pending.reason);
 }
-const source = '// Gerado por scripts/generate-ai-audit-meta.mjs a partir dos artefatos dos pacotes do ChatGPT (pacote-9-chatgpt.json, pacote-round2-10-chatgpt.json, pacote-round5-29-chatgpt.json, pacote-round6-26-chatgpt.json).\nexport const AI_AUDIT_META=' + JSON.stringify(meta) + ';\n';
+// Round 7: novas pendências documentais/científicas, sem alteração dos cinco registros.
+for (const pending of round7.not_authorized_to_change || []) {
+  addPendingRelease(pending.id, pending.reason);
+}
+const source = '// Gerado por scripts/generate-ai-audit-meta.mjs a partir dos artefatos dos pacotes do ChatGPT (pacote-9-chatgpt.json, pacote-round2-10-chatgpt.json, pacote-round5-29-chatgpt.json, pacote-round6-26-chatgpt.json, pacote-round7-19-chatgpt.json).\nexport const AI_AUDIT_META=' + JSON.stringify(meta) + ';\n';
 fs.writeFileSync(path.join(root, 'src', 'ai-audit-meta.js'), source, 'utf8');
 const ids = Object.keys(meta);
 console.log('AI_AUDIT_META:', ids.length, 'IDs | com bloqueio:', ids.filter(i => meta[i].blockedReason).length, '| com fonte/link:', ids.filter(i => (meta[i].sourceUrls || []).length).length);

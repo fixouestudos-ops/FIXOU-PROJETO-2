@@ -1,0 +1,136 @@
+{
+  "project": "FIXOU",
+  "lot": 14,
+  "round": 7,
+  "base_branch": "review/ia-auditoria-explanations-only",
+  "base_commit": "daf764ba96ccc46acc5cec1420851ae8e2c9b5cf",
+  "author_role": "ChatGPT Victor Elias — elaboração científica e didática",
+  "executor_role": "OpenCode — inserção literal no GitHub, sem resolução por conta própria",
+  "scope": "Somente explanation de IDs expressamente presentes em corrections; manter revisão manual na IA Auditoria",
+  "scientific_source_note": "Enunciados, opções e respostas foram consultados nos registros do lote 14 no repositório; atribuições a provas oficiais não são consideradas comprovadas até comparação documental individual.",
+  "corrections": {
+    "fis-lic-l2-f1-c7-exercicios-propostos-q34": {
+      "explanation": "O enunciado informa que os dois corpos percorrem o mesmo deslocamento horizontal, embora tenham sido lançados com ângulos diferentes. A dica é usar apenas o movimento horizontal, no qual não há aceleração se desprezarmos o ar.\n\n1) Para cada corpo, o deslocamento horizontal é Δx = v₀ cos(θ) · t. Como o módulo v₀ é o mesmo para ambos e eles alcançam o mesmo ponto, temos v₀ cos30° · tA = v₀ cos45° · tB.\n\n2) Cancelando v₀ e isolando a razão, tA/tB = cos45°/cos30°.\n\n3) Usando cos45° = √2/2 e cos30° = √3/2: tA/tB = √2/√3 = √(2/3) ≈ 0,816.\n\nResposta: o tempo do corpo A é cerca de 81,6% do tempo do corpo B. Não é necessário determinar a altura da torre, pois a igualdade dos alcances já fornece a relação pedida.",
+      "expected_answer": "√(2/3), aproximadamente 0,816",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q38": {
+      "explanation": "O avião e o alvo se deslocam horizontalmente no mesmo sentido. A bomba, quando é solta, conserva a velocidade horizontal do avião e passa a cair sob a ação da gravidade.\n\n1) A velocidade do avião é 432/3,6 = 120 m/s. A do alvo é 10 m/s. A altura de queda é 2.000 m.\n\n2) Na vertical, a bomba começa sem velocidade vertical: h = gt²/2. Portanto, 2.000 = 5t², t² = 400 e t = 20 s.\n\n3) Na horizontal, a bomba se aproxima do alvo à velocidade relativa 120 − 10 = 110 m/s. Em 20 s, ela fecha uma distância d = 110 · 20 = 2.200 m. Essa deve ser a separação horizontal no instante da soltura.\n\n4) Naquele instante, a linha de visada até o alvo faz um ângulo θ com a horizontal. Pelo triângulo retângulo, tanθ = 2.000/2.200 = 10/11; assim, θ = arctan(10/11) ≈ 42,3° abaixo da horizontal.\n\nRespostas: a) d = 2.200 m; b) θ = arctan(10/11). Não se deve usar 120 m/s isoladamente para calcular d, pois o alvo também está se movendo.",
+      "expected_answer": "a) 2.200 m; b) arctan(10/11) ≈ 42,3°",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q43": {
+      "explanation": "Parte a — bomba lançada pelo avião:\n\n1) Ao ser abandonada, a bomba conserva a velocidade horizontal de 100 m/s do avião e tem velocidade vertical inicial nula.\n\n2) Para cair de 500 m: h = gt²/2, ou 500 = 5t². Logo, t = 10 s.\n\n3) Nesse tempo a bomba avança x = 100 · 10 = 1.000 m. Portanto, deve ser solta 1.000 m antes de o avião passar sobre o canhão.\n\nParte b — menor velocidade de disparo do canhão:\n\n4) Tomando t = 0 quando o avião está sobre o canhão, a posição horizontal do avião é xA = 100t e sua altura é sempre 500 m. O projétil sai do canhão com componentes vx e vy; para encontrar o avião em algum instante t > 0, precisa ter vx = 100 m/s.\n\n5) Na vertical, a condição de encontro é 500 = vy·t − 5t², isto é, vy = 500/t + 5t. Essa expressão é mínima em t = 10 s (equivalentemente, quando o projétil chega à altura máxima de 500 m). Assim, vy mínimo = 100 m/s.\n\n6) As componentes iniciais são perpendiculares; o menor módulo é v₀ = √(100² + 100²) = 100√2 m/s ≈ 141 m/s.\n\nRespostas: a) 1.000 m; b) 100√2 m/s. O canhão precisa acompanhar horizontalmente o avião, além de alcançar seus 500 m de altitude.",
+      "expected_answer": "a) 1.000 m; b) 100√2 m/s ≈ 141 m/s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q81": {
+      "explanation": "O fio da lâmpada está inclinado 60° em relação ao teto horizontal, portanto faz 30° com a vertical. A inclinação indica que o vagão tem aceleração horizontal: para a lâmpada acompanhar essa aceleração, a tração no fio tem componente horizontal.\n\n1) A massa é m = 100 g = 0,10 kg; o peso vale P = mg = 1 N. No eixo vertical, T cos30° = mg, porque a lâmpada não acelera verticalmente.\n\n2) Assim, T = 1/cos30° = 1/(√3/2) = 2√3/3 N. A componente horizontal da tração produz aceleração a, de modo que T sen30° = ma. Dividindo as equações: tan30° = a/g; logo a = 10/√3 = 10√3/3 m/s².\n\n3) A afirmação 01 é verdadeira com a expressão 10√3/3 m/s². A 02 é falsa, pois a tração também atua na lâmpada. A 04 é verdadeira: T = 2√3/3 N. A 08 é falsa: mudar de observador não torna o fio vertical. A 16 é falsa: o vagão acelerado não constitui referencial inercial.\n\nResposta: 01 + 04 = 05. Atenção: as expressões com radicais precisam ser conferidas no enunciado original, pois o OCR não as reproduz corretamente.",
+      "expected_answer": "Somatório 05 (01 + 04)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-complementares-q8": {
+      "explanation": "Essa situação ilustra o princípio da relatividade de Galileu: dentro de um vagão fechado, uma experiência mecânica não distingue repouso de movimento retilíneo uniforme em relação ao solo.\n\nI) Verdadeira. Se o vagão está parado ou mantém velocidade constante, a moeda lançada verticalmente conserva a velocidade horizontal do vagão. Para o passageiro, sobe e desce em linha vertical, sem revelar qual das duas situações ocorre.\n\nII) Verdadeira. Sem referências externas e com velocidade constante, não é possível descobrir pelo lançamento da moeda para que lado o vagão se move em relação à estrada.\n\nIII) Verdadeira. Se o vagão acelera, a moeda, depois de deixar a mão, não recebe a mesma aceleração horizontal do vagão. Em relação ao passageiro, sua trajetória se desvia, permitindo detectar a aceleração.\n\nConclusão: as três sentenças são verdadeiras. O ponto principal é distinguir um referencial inercial, de velocidade constante, de um referencial acelerado.",
+      "expected_answer": "I, II e III verdadeiras",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-complementares-q43": {
+      "explanation": "Antes do lançamento, a bola gira junto com a criança. Depois do lançamento, sua velocidade em relação ao solo é a soma vetorial da velocidade do gira-gira e da velocidade de arremesso em relação à criança.\n\n1) O gira-gira tem frequência f = 0,25 Hz. A velocidade angular é ω = 2πf = 2 · 3 · 0,25 = 1,5 rad/s, usando π = 3 como pede o enunciado.\n\n2) A bola está a R = 2 m do centro. Sua rapidez tangencial é vT = ωR = 1,5 · 2 = 3 m/s. Sua aceleração centrípeta antes de ser solta é ac = ω²R = (1,5)² · 2 = 4,5 m/s².\n\n3) No instante do lançamento, a criança arremessa a bola radialmente para o centro, com rapidez vR = 4 m/s em relação a ela. A velocidade tangencial de 3 m/s é perpendicular à radial de 4 m/s. Portanto, a rapidez inicial em relação ao chão é U = √(3² + 4²) = 5 m/s.\n\n4) Para o ângulo θ entre U e a direção radial vR, tanθ = 3/4. Daí θ ≈ 36,9°, aproximadamente 37°.\n\nRespostas: a) 3 m/s e 4,5 m/s²; b) 5 m/s; c) 37°. A soma das velocidades é vetorial, não 3 + 4 = 7 m/s.",
+      "expected_answer": "a) 3 m/s e 4,5 m/s²; b) 5 m/s; c) aproximadamente 37°",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-propostos-q14": {
+      "explanation": "Para julgar as afirmações, é preciso diferenciar equilíbrio, resultante de forças e pares de ação e reação.\n\nI) Verdadeira. Um corpo em equilíbrio pode estar parado (equilíbrio estático) ou em movimento retilíneo com velocidade constante (equilíbrio dinâmico). Nas duas situações, a aceleração é nula e, pela segunda lei de Newton, a força resultante também é zero.\n\nII) Falsa. O módulo da soma de duas forças depende do ângulo entre elas. Se apontam no mesmo sentido, os módulos se somam; em sentidos opostos, subtraem-se; se são perpendiculares, aplica-se Pitágoras. Portanto, não é sempre o mesmo valor.\n\nIII) Falsa. Ação e reação têm módulos iguais e sentidos contrários, mas atuam em corpos diferentes. Por isso, não se anulam como forças aplicadas ao mesmo corpo.\n\nResposta: alternativa A, apenas a afirmativa I. A pegadinha é confundir força resultante nula com ausência de forças individuais.",
+      "expected_answer": "Alternativa A — somente I",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q41": {
+      "explanation": "O projétil caça-míssil é lançado verticalmente a partir de um ponto situado 12 km à frente. Para ocorrer colisão, ele e o míssil devem ocupar a mesma posição horizontal e a mesma altura no mesmo instante.\n\n1) A velocidade horizontal do míssil é vx = 800 cos30° = 400√3 m/s. Sua componente vertical inicial é vy = 800 sen30° = 400 m/s.\n\n2) Para alcançar a vertical da base de lançamento do caça-míssil, o míssil percorre 12.000 m. O instante é t = 12.000/(400√3) = 30/√3 = 10√3 s.\n\n3) Como os dois projéteis sofrem a mesma aceleração gravitacional, suas alturas no tempo t são ym = 400t − gt²/2 e yc = vc·t − gt²/2. Igualando ym = yc, os termos gravitacionais cancelam: 400t = vc·t.\n\n4) Como t > 0, vc = 400 m/s. Essa é a velocidade inicial vertical necessária para interceptar o míssil.\n\nResposta: alternativa C — 400 m/s. O segredo é que a gravidade age igualmente nos dois objetos e, por isso, cancela na comparação vertical.",
+      "expected_answer": "Alternativa C — 400 m/s",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c8-exercicios-complementares-q1": {
+      "explanation": "A questão pede quais afirmações descrevem corretamente a dispersão da luz e a formação de arco-íris.\n\nI) Falsa. Para ver um arco-íris comum à frente, o observador deve ter o Sol atrás de si: a luz solar entra nas gotas de chuva diante dele e parte dela retorna em sua direção.\n\nII) Verdadeira. O índice de refração de um meio como a água depende da frequência (ou comprimento de onda) da luz. Por isso, cores diferentes sofrem desvios diferentes ao serem refratadas.\n\nIII) Verdadeira. Na formação do arco-íris primário, a luz sofre refração ao entrar na gota, reflexão interna e nova refração ao sair.\n\nIV) Verdadeira. Na dispersão usual da luz visível em água, o violeta tem índice de refração maior que o vermelho. Ao entrar obliquamente do ar na água, o violeta se desvia mais em direção à normal.\n\nResposta: alternativa D — somente II, III e IV. É importante lembrar a posição do Sol em relação ao observador para não marcar a afirmativa I.",
+      "expected_answer": "Alternativa D — II, III e IV",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q24": {
+      "explanation": "Primeiro descobrimos a rapidez da pessoa após cair 80 m: ela sai do repouso a 81 m de altura e é interceptada 1 m antes do chão.\n\n1) Sem resistência do ar, v² = 2gΔh = 2·10·80 = 1.600. Portanto, imediatamente antes do resgate, a rapidez vertical é 40 m/s para baixo.\n\n2) O herói a faz parar em Δt = 0,05 s. O módulo da aceleração média necessária é |a| = |Δv|/Δt = 40/0,05 = 800 m/s², dirigido para cima.\n\n3) A força do herói não só desacelera a pessoa, mas precisa também vencer o peso. Com sentido positivo para cima, Fherói − mg = ma. Logo Fherói = m(a + g) = 50·(800 + 10) = 40.500 N.\n\n4) O limite citado é 8g = 80 m/s². A razão entre a aceleração média sofrida e esse valor é 800/80 = 10.\n\nRespostas: a) força média de 4,05·10⁴ N; b) aceleração média 10 vezes o limite letal citado. Note que a força e a aceleração não são a mesma grandeza.",
+      "expected_answer": "a) 40.500 N; b) 10 vezes a aceleração letal",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c5-exercicios-propostos-q25": {
+      "explanation": "O aparelho foi projetado para 750 W em 220 V. Ao ligá-lo a 110 V mantendo o mesmo resistor, a tensão cai à metade, mas a potência cai a um quarto, porque P = U²/R.\n\n1) Com o resistor original, Pnova = (110/220)²·750 = 187,5 W. Para aquecer o mesmo litro de água até o mesmo ponto, a energia necessária é a mesma, então o tempo torna-se quatro vezes maior.\n\n2) Estimando a energia de aquecimento: 1 litro de água tem massa de aproximadamente 1 kg; ΔT = 100 − 25 = 75 °C e c ≈ 4.200 J/(kg·°C). Assim, Q ≈ 1·4.200·75 = 315.000 J.\n\n3) O tempo nominal seria Q/750 = 420 s = 7 min. A 110 V, com o resistor antigo, seria Q/187,5 = 1.680 s = 28 min. O aumento é cerca de 21 min, arredondado para 20 min nas alternativas.\n\n4) Para recuperar a potência de 750 W em 110 V, a nova resistência precisa ser Rnova = Roriginal/4. Para resistores do mesmo material e mesma seção, R = ρL/A, portanto Lnova = Loriginal/4: redução de 75% do comprimento.\n\nResposta: alternativa A. O cálculo é aproximado porque desconsidera perdas térmicas para o ambiente.",
+      "expected_answer": "Alternativa A — aumento de cerca de 20 minutos e redução do comprimento em 75%",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q19": {
+      "explanation": "Parte a — soltura da massa em Marte:\n\n1) A massa é liberada a 8,0 m de altura com velocidade horizontal inicial de 6,0 m/s; no eixo vertical, parte do repouso. Como gMarte = 4 m/s², a queda obedece h = gt²/2: 8 = 2t², portanto t = 2 s.\n\n2) Na horizontal, a velocidade se mantém constante (sem resistência do ar), então Δx = vx·t = 6,0·2 = 12 m.\n\nParte b — sustentação na atmosfera marciana:\n\n3) Na Terra, o helicóptero sustenta 800 g = 0,800 kg em voo horizontal uniforme, exigindo força vertical FT = mT gT ≈ 0,800·10 = 8 N.\n\n4) Na mesma condição de operação, a diferença de pressão e a sustentação são proporcionais à pressão atmosférica. Como PTerra = 160 PMarte, a força sustentadora cai a FM = 8/160 = 0,050 N.\n\n5) Em Marte, essa força equilibra o peso mM gMarte; logo mM = 0,050/4 = 0,0125 kg = 12,5 g.\n\nRespostas: a) 12 m; b) 12,5 g. Atenção: 800 g é massa, enquanto a força de sustentação é medida em newtons.",
+      "expected_answer": "a) 12 m; b) 12,5 g",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c7-exercicios-propostos-q8": {
+      "explanation": "Na ausência de resistência do ar, a gravidade tem módulo aproximadamente constante próximo à superfície terrestre e não depende da massa dos corpos. Vamos julgar as afirmações.\n\n01) Falsa. Na queda a partir do repouso, d = gt²/2. Se o tempo dobrar, o deslocamento será 4d, não 2d.\n\n02) Falsa. A velocidade adquirida na queda é v = gt. Um corpo de massa 2m adquire a mesma velocidade após o mesmo tempo, pois g é independente da massa.\n\n04) Verdadeira. Como v = gt, dobrar o tempo a partir do repouso dobra a velocidade: v(2t) = 2gt = 2v.\n\n08) Verdadeira. No lançamento horizontal ou oblíquo, o movimento pode ser decomposto em movimento uniforme horizontal (vx constante) e uniformemente variado vertical (aceleração g).\n\n16) Falsa. Dois corpos saindo da mesma altura com velocidade vertical inicial nula, um solto e outro lançado horizontalmente, têm o mesmo tempo de queda. A velocidade horizontal não altera a aceleração vertical.\n\nSomatório correto: 04 + 08 = 12.",
+      "expected_answer": "Somatório 12 (04 + 08)",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q11": {
+      "explanation": "Embora o desenho seja um octaedro, o enunciado especifica que cada par de seus seis vértices está unido por um capacitor C, inclusive os vértices não vizinhos. Assim, a rede é eletricamente uma associação completa de seis nós.\n\n1) Escolha os dois vértices A e B entre os quais queremos a capacitância equivalente. Existe um capacitor C diretamente entre A e B.\n\n2) Por simetria, os outros quatro vértices têm o mesmo potencial. Os capacitores que ligam esses quatro vértices entre si não apresentam diferença de potencial e não influenciam a capacitância vista entre A e B.\n\n3) Os quatro capacitores que ligam A aos quatro nós intermediários estão em paralelo, equivalendo a 4C. Da mesma forma, entre esses nós e B existe outra associação equivalente de 4C.\n\n4) Esses dois conjuntos 4C ficam em série: Csérie = (4C·4C)/(4C + 4C) = 2C. O ramo direto C fica em paralelo com esse caminho, logo Ceq = C + 2C = 3C.\n\nResposta: alternativa C — 3C. Não considerar apenas as arestas do sólido: o enunciado inclui ligações entre todos os pares de vértices.",
+      "expected_answer": "Alternativa C — 3C",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c6-exercicios-propostos-q38": {
+      "explanation": "O corpo começa do repouso e aumenta sua rapidez uniformemente ao percorrer uma circunferência de raio R = 100 m. Existe aceleração tangencial, responsável por aumentar a rapidez, e aceleração centrípeta, responsável por mudar a direção do movimento.\n\nParte I:\n\n1) A aceleração tangencial é constante: at = 1 m/s².\n\n2) Após 10 s, a rapidez vale v = v₀ + at t = 0 + 1·10 = 10 m/s.\n\n3) A aceleração centrípeta é ac = v²/R = 10²/100 = 1 m/s². Logo, as componentes são 1 m/s² e 1 m/s²: alternativa E.\n\nParte II:\n\n4) A aceleração tangencial é perpendicular à aceleração centrípeta (radial para o centro). Como ambas têm o mesmo módulo, a resultante forma um triângulo retângulo isósceles. O ângulo entre a aceleração total e o raio apontando para o centro é 45°.\n\nRespostas: I) E; II) D. Não confunda aceleração escalar constante com aceleração vetorial constante: a direção da aceleração centrípeta muda ao longo da trajetória.",
+      "expected_answer": "I) E; II) D",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c9-exercicios-complementares-q10": {
+      "explanation": "O prisma tem seção transversal de triângulo retângulo isósceles, cuja hipotenusa mede L. O feixe entra perpendicularmente por essa face, sofre duas reflexões internas nas faces associadas aos catetos e volta a sair pela hipotenusa, agora em sentido oposto.\n\n1) Como a incidência na hipotenusa é perpendicular, o raio entra sem mudar de direção por refração. Dentro do prisma, cada reflexão obedece à igualdade entre os ângulos de incidência e reflexão.\n\n2) Podemos imaginar as duas faces refletoras como espelhos e desdobrar a trajetória: em vez de fazer duas mudanças de direção, prolongamos os três segmentos percorridos pelo raio em cópias espelhadas do triângulo.\n\n3) Como os catetos formam 90° e os dois ângulos agudos são 45°, os segmentos desdobrados se alinham num percurso total igual à hipotenusa da seção, L. Isso também pode ser verificado decompondo os trechos em projeções sobre a direção de entrada.\n\nResposta: alternativa C — o caminho óptico geométrico percorrido dentro do prisma tem comprimento L. A pergunta é sobre distância percorrida, não sobre índice de refração ou velocidade da luz.",
+      "expected_answer": "Alternativa C — L",
+      "source_verified": false
+    },
+    "fis-lic-l2-f1-c8-exercicios-complementares-q15": {
+      "explanation": "Há duas interações importantes: a gravidade atua sobre os dois corpos e a força magnética surge entre o ímã e o bloco, obedecendo à terceira lei de Newton.\n\n1) O bloco, sustentado pelo ímã sob a mesa, recebe força magnética F2 para cima e peso P2 para baixo. Como está em repouso e encostado no tampo, a condição de equilíbrio fornece F2 = P2 + N2, portanto N2 = F2 − P2.\n\n2) O ímã recebe o peso P1 para baixo e a força magnética F1 de atração pelo bloco, também para baixo. A mesa exerce a normal N1 para cima. Seu equilíbrio exige N1 = P1 + F1.\n\n3) Ação e reação magnéticas têm mesmo módulo: F1 = F2. Somando as duas normais: N1 + N2 = (P1 + F1) + (F2 − P2) = (P1 − P2) + 2F1.\n\n4) O enunciado estabelece P1 = P2, então N1 + N2 = 2F1.\n\nResposta: alternativa A. As forças magnéticas são iguais em módulo, mas atuam em corpos diferentes; não se cancelam quando analisamos cada corpo separadamente.",
+      "expected_answer": "Alternativa A — N1 + N2 = 2F1",
+      "source_verified": false
+    },
+    "fis-lic-l2-f2-c7-exercicios-complementares-q20": {
+      "explanation": "Para que as três lâmpadas de 110 V funcionem normalmente numa rede de 220 V, é preciso organizar a associação para que cada uma receba exatamente 110 V.\n\n1) Pela relação P = U²/R, uma lâmpada de 40 W tem resistência nominal R40 = 110²/40 = 302,5 Ω. A lâmpada de 80 W tem R80 = 110²/80 = 151,25 Ω.\n\n2) As duas lâmpadas de 40 W, ligadas em paralelo, têm resistência equivalente Rp = 302,5/2 = 151,25 Ω, exatamente igual à resistência da lâmpada de 80 W.\n\n3) Ao conectar esse paralelo em série com a lâmpada de 80 W, as duas partes iguais recebem metade da tensão da rede: 110 V para o paralelo e 110 V para a lâmpada de 80 W.\n\n4) Em cada lâmpada de 40 W: I40 = P/U = 40/110 ≈ 0,36 A. Na de 80 W: I80 = 80/110 ≈ 0,73 A. As correntes das duas lâmpadas pequenas se somam no ramo principal, como esperado.\n\nResposta: alternativa A, interpretada como as DUAS lâmpadas de 40 W em paralelo e esse conjunto em série com a de 80 W. Conferir a redação da alternativa no original, pois o texto digitalizado está truncado.",
+      "expected_answer": "Alternativa A — duas lâmpadas de 40 W em paralelo, em série com a de 80 W",
+      "source_verified": false
+    },
+    "fis-lic-l2-f3-c8-revisando-q5": {
+      "explanation": "A imagem da árvore em um espelho plano aparece virtualmente atrás do espelho, à mesma distância em que a árvore está à sua frente. Isso permite substituir o caminho refletido por uma linha reta da imagem virtual até o observador.\n\n1) O observador está 2,0 m à frente do espelho. A árvore está 18,0 m atrás do observador, ou seja, a 20,0 m do espelho.\n\n2) A imagem virtual do topo da árvore fica 20,0 m atrás do espelho. A separação horizontal entre o olho e essa imagem virtual é, portanto, 2,0 + 20,0 = 22,0 m.\n\n3) O raio refletido faz 10° com a normal ao espelho, que é horizontal, porque o espelho é vertical. Assim, para a diferença de altura entre o topo visto e o olho, temos tan10° = (H − 1,50)/22,0.\n\n4) Com tan10° ≈ 0,18: H − 1,50 = 22,0·0,18 = 3,96 m; logo H ≈ 5,46 m, aproximadamente 5,5 m.\n\nResposta: alternativa C — 5,5 m. O percurso de 22 m inclui os 2 m entre o observador e o espelho mais os 20 m da árvore à superfície refletora.",
+      "expected_answer": "Alternativa C — aproximadamente 5,5 m",
+      "source_verified": false
+    }
+  },
+  "not_authorized_to_change": [
+    {
+      "id": "fis-lic-l2-f2-c5-exercicios-complementares-q18",
+      "reason": "A potência de 500 W do motor não é identificada inequivocamente como elétrica consumida ou potência útil; resolução depende dessa distinção."
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q9",
+      "reason": "Enunciado fornece sen60° = 0,8, dado trigonométrico incorreto; a solução atual usa o dado fornecido. Comparar com prova oficial antes de atualizar."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-exercicios-propostos-q12",
+      "reason": "Topologia de quatro resistores não recuperada do diagrama; não deduzir resistência individual somente de 12 V e 12 mA."
+    },
+    {
+      "id": "fis-lic-l2-f1-c7-exercicios-complementares-q31",
+      "reason": "Altura de 45 m é atingida na subida e descida; posição horizontal do prédio não está no texto, então t=9 s não é único."
+    },
+    {
+      "id": "fis-lic-l2-f2-c6-revisando-q6",
+      "reason": "Associação de lâmpadas requer figura; preservar alerta de diagrama."
+    }
+  ],
+  "warnings": [
+    "Conferir redação original e simbologia com OCR dos IDs f1-c8-exercicios-complementares-q81 e f2-c7-exercicios-complementares-q20 antes de publicar ao estudante.",
+    "Não converter status source_verified:false em vestibular autenticado.",
+    "Preservar seis questões originais bloqueadas e todos os alertas existentes.",
+    "Não alterar answer, prompt, options, IDs, imagens, aprovação, D1 ou deploy."
+  ]
+}
